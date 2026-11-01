@@ -28,9 +28,9 @@ import {
   type StreamTargetChunk,
 } from 'mediabunny';
 import { duckingEnvelope, envelopeAt } from '../engine/audio-analysis';
-import type { Range } from '../engine/model';
+import { TimeStretcher } from '../engine/time-stretch';
 import { drawCaptions, drawFrame, framingAt, loadCaptionFont, outputSize, zoomBeats } from '../engine/render';
-import { buildCaptionPages, outputToSource, projectSegments, totalDuration } from '../engine/timeline-math';
+import { type Segment, buildCaptionPages, outputToSource, projectSegments, totalDuration } from '../engine/timeline-math';
 import { decodableAudioTrack } from './tracks';
 import type { ExportClip, ExportProgress, ExportRequest, ExportResult, ExportWorkerApi } from './worker-types';
 
@@ -183,28 +183,37 @@ interface OpenClip {
   audio: InputAudioTrack | null;
 }
 
-/** A kept stretch of one clip, with its place on the output timeline (seconds). */
+/** A kept stretch of one clip, with its place on the output timeline (seconds) and its speed. */
 interface AudioPiece {
   clip: number;
   start: number;
   end: number;
   outStart: number;
   outEnd: number;
+  rate: number;
 }
 
 /** Splits kept segments (sequence time) at clip boundaries. */
-function audioPieces(segments: Range[], clips: ExportClip[]): AudioPiece[] {
+function audioPieces(segments: Segment[], clips: ExportClip[]): AudioPiece[] {
   const pieces: AudioPiece[] = [];
   let out = 0;
   for (const seg of segments) {
+    const rate = seg.rate ?? 1;
     clips.forEach((clip, i) => {
       const a = Math.max(seg.start, clip.start);
       const b = Math.min(seg.end, clip.start + clip.duration);
       if (b - a > 1e-4) {
-        pieces.push({ clip: i, start: a - clip.start, end: b - clip.start, outStart: out + (a - seg.start), outEnd: out + (b - seg.start) });
+        pieces.push({
+          clip: i,
+          start: a - clip.start,
+          end: b - clip.start,
+          outStart: out + (a - seg.start) / rate,
+          outEnd: out + (b - seg.start) / rate,
+          rate,
+        });
       }
     });
-    out += seg.end - seg.start;
+    out += (seg.end - seg.start) / rate;
   }
   return pieces;
 }
@@ -220,8 +229,23 @@ async function renderAudio(clips: OpenClip[], gains: number[], pieces: AudioPiec
     if (track && sink) {
       const rate = track.sampleRate;
       const resamplers = [new LinearResampler(rate / OUT_RATE), new LinearResampler(rate / OUT_RATE)];
+      // Faster or slower parts are time-stretched, keeping the pitch of the voices.
+      const stretcher = piece.rate !== 1 ? new TimeStretcher(piece.rate) : null;
       const startF = Math.round(piece.start * rate);
       const endF = Math.round(piece.end * rate);
+      const gain = gains[piece.clip];
+      const emit = async (l: Float32Array, r: Float32Array) => {
+        const take = Math.min(l.length, pieceFrames - produced);
+        // Tiny fades at every cut and clip boundary remove the clicks of jump cuts.
+        for (let i = 0; i < take; i++) {
+          const pos = produced + i;
+          const g = Math.min(1, pos / FADE, (pieceFrames - 1 - pos) / FADE) * gain;
+          l[i] *= g;
+          r[i] *= g;
+        }
+        if (take > 0) await writer.write(l.subarray(0, take), r.subarray(0, take));
+        produced += Math.max(0, take);
+      };
       for await (const sample of sink.samples(piece.start, piece.end)) {
         if (cancelled || produced >= pieceFrames) {
           sample.close();
@@ -234,19 +258,18 @@ async function renderAudio(clips: OpenClip[], gains: number[], pieces: AudioPiec
           const [rawL, rawR] = readStereo(sample, a - first, b - a);
           const l = resamplers[0].process(rawL).slice();
           const r = resamplers[1].process(rawR).slice();
-          const take = Math.min(l.length, pieceFrames - produced);
-          const gain = gains[piece.clip];
-          // Tiny fades at every cut and clip boundary remove the clicks of jump cuts.
-          for (let i = 0; i < take; i++) {
-            const pos = produced + i;
-            const g = Math.min(1, pos / FADE, (pieceFrames - 1 - pos) / FADE) * gain;
-            l[i] *= g;
-            r[i] *= g;
+          if (stretcher) {
+            const [sl, sr] = stretcher.push([l, r]);
+            await emit(sl, sr);
+          } else {
+            await emit(l, r);
           }
-          await writer.write(l.subarray(0, take), r.subarray(0, take));
-          produced += take;
         }
         sample.close();
+      }
+      if (stretcher && produced < pieceFrames && !cancelled) {
+        const [sl, sr] = stretcher.flush();
+        await emit(sl, sr);
       }
     }
     // Pad with silence so audio and video stay in sync (clip without audio, shorter audio track).

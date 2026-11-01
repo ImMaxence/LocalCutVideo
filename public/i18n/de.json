@@ -316,7 +316,12 @@
       "selectedCut": "Ausgewählter Schnitt",
       "earlier": "Früher",
       "later": "Später",
-      "listen": "Schnitt anhören"
+      "listen": "Schnitt anhören",
+      "speed": "Tempo",
+      "speedHint": "Den Teil zwischen Start und Ende beschleunigen oder verlangsamen",
+      "selectedSpeed": "Tempoänderung",
+      "removeSpeed": "Zurück zum normalen Tempo",
+      "listenSpeed": "Tempoänderung abspielen"
     },
     "transcript": {
       "title": "Transkript",

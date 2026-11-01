@@ -316,7 +316,12 @@
       "selectedCut": "Taglio selezionato",
       "earlier": "Prima",
       "later": "Dopo",
-      "listen": "Ascolta il taglio"
+      "listen": "Ascolta il taglio",
+      "speed": "Velocità",
+      "speedHint": "Accelera o rallenta la parte tra inizio e fine",
+      "selectedSpeed": "Cambio di velocità",
+      "removeSpeed": "Torna alla velocità normale",
+      "listenSpeed": "Riproduci il cambio di velocità"
     },
     "transcript": {
       "title": "Trascrizione",

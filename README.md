@@ -34,6 +34,7 @@
 | **Auto-cut silences** | From the loudness (smoothed, with hysteresis) or from the transcript (robust to background noise). Rhythm presets; cuts follow the settings live. |
 | **Text-based editing** | Whisper word timestamps: delete words in the transcript to cut the video. Correct misheard words or sentences. Filler-word removal. |
 | **Manual cuts** | Start / End / Cut buttons on the playhead (keys I, O, X), or drag on the waveform. |
+| **Speed changes** | Speed up or slow down the part between Start and End (0.25× to 4×). Voices keep their pitch (WSOLA time stretch in the export). |
 | **Language detection** | The spoken language is detected automatically (Whisper language ID), or chosen by hand. |
 | **Karaoke subtitles** | Word-by-word animated captions burned into the video (karaoke, clean, boxed). |
 | **Output formats** | 16:9 (YouTube), 9:16 (TikTok, Reels, Shorts), 1:1, in 720p or 1080p. |

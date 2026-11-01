@@ -316,7 +316,12 @@
       "selectedCut": "Selected cut",
       "earlier": "Earlier",
       "later": "Later",
-      "listen": "Listen to the cut"
+      "listen": "Listen to the cut",
+      "speed": "Speed",
+      "speedHint": "Speed up or slow down the part between start and end",
+      "selectedSpeed": "Speed change",
+      "removeSpeed": "Back to normal speed",
+      "listenSpeed": "Play the speed change"
     },
     "transcript": {
       "title": "Transcript",

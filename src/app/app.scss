@@ -31,7 +31,7 @@ main {
 .bar {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   height: 64px;
 }
 
@@ -60,9 +60,10 @@ main {
   gap: 2px;
   a {
     position: relative;
-    padding: 6px 12px;
+    padding: 6px 10px;
     border-radius: 8px;
     color: var(--text-muted);
+    white-space: nowrap;
     font-weight: 550;
     font-size: 14px;
     text-decoration: none;
@@ -325,13 +326,8 @@ main {
 
 /* Responsive ---------------------------------------------------------------------------- */
 
-@media (max-width: 1080px) {
-  .tools .btn.icon.desktop-only {
-    display: none;
-  }
-}
-
-@media (max-width: 920px) {
+/* The full header needs about 1100 px in French: below 1200 px, the burger menu takes over. */
+@media (max-width: 1199px) {
   .nav,
   .desktop-only {
     display: none !important;
@@ -341,7 +337,7 @@ main {
   }
 }
 
-@media (min-width: 921px) {
+@media (min-width: 1200px) {
   .drawer,
   .drawer-backdrop {
     display: none;

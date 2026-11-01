@@ -15,6 +15,7 @@ import { TranslocoPipe } from '@jsverse/transloco';
 import type WaveSurfer from 'wavesurfer.js';
 import type { Region } from 'wavesurfer.js/dist/plugins/regions.js';
 import { ThemeService } from '../../core/theme.service';
+import { SPEED_RATES } from '../../engine/model';
 import { deletedWordRanges, formatTime } from '../../engine/timeline-math';
 import { Icon } from '../../shared/icon';
 import { EditorStore, MIN_CUT, type SequenceAnalysis } from '../editor.store';
@@ -50,8 +51,9 @@ function cssColor(host: HTMLElement, variable: string): string {
 /**
  * Waveform timeline of the whole sequence (Wavesurfer.js). The cursor follows the preview and
  * clicking on the waveform seeks. Cuts are regions: drag on the waveform to create one, click
- * it to select it, drag its edges or nudge them to adjust, double-click to remove. Words deleted
- * in the transcript appear as locked regions, and markers show where each clip starts.
+ * it to select it, drag its edges or nudge them to adjust, double-click to remove. Speed changes
+ * are made from the Start / End part and shown as labelled regions edited the same way. Words
+ * deleted in the transcript appear as locked regions, and markers show where each clip starts.
  */
 @Component({
   selector: 'app-timeline',
@@ -59,6 +61,7 @@ function cssColor(host: HTMLElement, variable: string): string {
   templateUrl: './timeline.html',
   styleUrl: './timeline.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: { '(document:pointerdown)': 'onOutside($event)' },
 })
 export class Timeline {
   protected readonly store = inject(EditorStore);
@@ -73,6 +76,13 @@ export class Timeline {
     const id = this.store.selectedCut();
     return (id && this.store.project()?.cuts.find((c) => c.id === id)) || null;
   });
+  /** The selected speed change, for the rate editor in the toolbar. */
+  protected readonly selectedSpeed = computed(() => {
+    const id = this.store.selectedSpeed();
+    return (id && this.store.project()?.speeds.find((s) => s.id === id)) || null;
+  });
+  protected readonly rates = SPEED_RATES;
+  protected readonly speedMenu = signal(false);
   protected readonly nudgeStep = 0.1;
   protected readonly edges = [
     { id: 'start', label: 'editor.timeline.markIn' },
@@ -102,6 +112,7 @@ export class Timeline {
       this.store.markIn();
       this.store.markOut();
       this.store.selectedCut();
+      this.store.selectedSpeed();
       const ready = this.ready();
       if (p && ready) untracked(() => this.syncRegions());
     });
@@ -167,6 +178,7 @@ export class Timeline {
     ws.on('interaction', (t: number) => {
       this.store.seek(t);
       this.store.selectedCut.set(null);
+      this.store.selectedSpeed.set(null);
     });
     this.regions.enableDragSelection({ color: 'var(--cut-new)' });
     this.regions.on('region-created', ((region: Region) => {
@@ -177,6 +189,7 @@ export class Timeline {
     }) as never);
     this.regions.on('region-updated', ((region: Region) => {
       if (region.id.startsWith('cut-')) this.store.updateCut(region.id.slice(4), region.start, region.end);
+      if (region.id.startsWith('speed-')) this.store.updateSpeed(region.id.slice(6), region.start, region.end);
       if (region.id === 'mark') {
         this.store.markIn.set(region.start);
         this.store.markOut.set(region.end);
@@ -184,11 +197,19 @@ export class Timeline {
     }) as never);
     this.regions.on('region-clicked', ((region: Region, e: MouseEvent) => {
       e.stopPropagation();
-      if (region.id.startsWith('cut-')) this.store.selectedCut.set(region.id.slice(4));
+      if (region.id.startsWith('cut-')) {
+        this.store.selectedSpeed.set(null);
+        this.store.selectedCut.set(region.id.slice(4));
+      }
+      if (region.id.startsWith('speed-')) {
+        this.store.selectedCut.set(null);
+        this.store.selectedSpeed.set(region.id.slice(6));
+      }
     }) as never);
     this.regions.on('region-double-clicked', ((region: Region, e: MouseEvent) => {
       e.stopPropagation();
       if (region.id.startsWith('cut-')) this.store.removeCut(region.id.slice(4));
+      if (region.id.startsWith('speed-')) this.store.removeSpeed(region.id.slice(6));
     }) as never);
     ws.on('ready', () => {
       this.applyColors();
@@ -210,6 +231,16 @@ export class Timeline {
         end: c.end,
         color: c.id === selected ? 'var(--cut-selected)' : c.reason === 'silence' ? 'var(--cut-silence)' : 'var(--cut-manual)',
         drag: true,
+      });
+    }
+    const speedSelected = this.store.selectedSpeed();
+    for (const s of p.speeds ?? []) {
+      wanted.set(`speed-${s.id}`, {
+        start: s.start,
+        end: s.end,
+        color: s.id === speedSelected ? 'var(--speed-selected)' : 'var(--speed)',
+        drag: true,
+        content: `${s.rate}×`,
       });
     }
     deletedWordRanges(p.words).forEach((r, i) => {
@@ -239,6 +270,7 @@ export class Timeline {
         if (Math.abs(region.start - w.start) > 1e-4 || Math.abs(region.end - end) > 1e-4 || region.color !== w.color) {
           region.setOptions({ start: w.start, end, color: w.color });
         }
+        if (w.content !== undefined && region.content?.textContent !== w.content) region.setContent(w.content);
         wanted.delete(region.id);
       }
     }
@@ -247,6 +279,7 @@ export class Timeline {
     }
     this.syncing = false;
     if (selected && !p.cuts.some((c) => c.id === selected)) this.store.selectedCut.set(null);
+    if (speedSelected && !p.speeds?.some((s) => s.id === speedSelected)) this.store.selectedSpeed.set(null);
   }
 
   private applyColors(): void {
@@ -298,6 +331,16 @@ export class Timeline {
   private fitPxPerSec(): number {
     const width = this.container().nativeElement.clientWidth || 1;
     return width / Math.max(1, this.store.duration());
+  }
+
+  protected applySpeed(rate: number): void {
+    this.speedMenu.set(false);
+    this.store.speedMarked(rate);
+  }
+
+  /** Closes the speed menu on a click elsewhere. */
+  protected onOutside(e: PointerEvent): void {
+    if (this.speedMenu() && !(e.target as HTMLElement).closest?.('.speed-wrap')) this.speedMenu.set(false);
   }
 
   protected nudge(edge: 'start' | 'end', direction: 1 | -1): void {

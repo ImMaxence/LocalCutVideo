@@ -15,6 +15,7 @@ import { Icon } from './icon';
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     '[class.list]': "variant() === 'list'",
+    '[class.compact]': 'compact()',
     '(document:pointerdown)': 'onOutside($event)',
   },
   template: `
@@ -176,10 +177,15 @@ import { Icon } from './icon';
         display: none;
       }
     }
+    :host(.compact) .label {
+      display: none;
+    }
   `,
 })
 export class LangPicker {
   readonly variant = input<'menu' | 'list'>('menu');
+  /** Flag only: the language names stay in the menu (crowded headers). */
+  readonly compact = input(false);
   private readonly language = inject(LanguageService);
   private readonly host = inject<ElementRef<HTMLElement>>(ElementRef);
   protected readonly languages = LANGUAGES;

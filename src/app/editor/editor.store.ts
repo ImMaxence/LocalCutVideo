@@ -52,7 +52,15 @@ import {
 } from '../engine/model';
 import { moveItem, placeClips, remapTimeline } from '../engine/sequence';
 import { aspectRatio, rotatedSize, zoomBeats } from '../engine/render';
-import { buildCaptionPages, keptSegments, nextKeptTime, removedRanges, totalDuration } from '../engine/timeline-math';
+import {
+  applySpeeds,
+  buildCaptionPages,
+  keptSegments,
+  nextKeptTime,
+  removedRanges,
+  totalDuration,
+  withoutRange,
+} from '../engine/timeline-math';
 import type { AiDevice, RawWord } from '../workers/worker-types';
 
 /** Shortest cut, in seconds (also the minimum length of a timeline region). */
@@ -172,6 +180,8 @@ export class EditorStore {
   readonly markOut = signal<number | null>(null);
   /** Cut picked on the timeline, adjusted with its edges or the start / end nudges. */
   readonly selectedCut = signal<string | null>(null);
+  /** Speed change picked on the timeline. */
+  readonly selectedSpeed = signal<string | null>(null);
   readonly whisperModel = signal<WhisperModel>('base');
   readonly whisperLanguage = signal<string | null>(null);
   readonly notice = signal<{ key: string; params?: Record<string, unknown>; tone: 'info' | 'error' } | null>(null);
@@ -210,7 +220,7 @@ export class EditorStore {
     const p = this.project();
     return p ? removedRanges(this.duration(), p.cuts, p.words) : [];
   });
-  readonly segments = computed(() => keptSegments(this.duration(), this.removed()));
+  readonly segments = computed(() => applySpeeds(keptSegments(this.duration(), this.removed()), this.project()?.speeds ?? []));
   readonly outputDuration = computed(() => totalDuration(this.segments()));
   readonly captionPages = computed(() => {
     const p = this.project();
@@ -717,6 +727,64 @@ export class EditorStore {
   removeCut(id: string): void {
     this.update((d) => (d.cuts = d.cuts.filter((c) => c.id !== id)));
     if (this.selectedCut() === id) this.selectedCut.set(null);
+  }
+
+  /**
+   * Plays a part of the sequence faster or slower. A speed change already there is replaced
+   * where they overlap; rate 1 brings the part back to normal speed. Returns the new range id.
+   */
+  setSpeed(start: number, end: number, rate: number): string | null {
+    const from = Math.max(0, Math.min(start, end));
+    const to = Math.min(this.duration(), Math.max(start, end));
+    if (to - from < MIN_CUT) return null;
+    const id = uid();
+    this.update((d) => {
+      d.speeds = withoutRange(d.speeds ?? [], from, to);
+      if (rate !== 1) d.speeds.push({ id, start: from, end: to, rate });
+      d.speeds.sort((a, b) => a.start - b.start);
+    });
+    return rate !== 1 ? id : null;
+  }
+
+  /** Speed change between the in and out points. */
+  speedMarked(rate: number): boolean {
+    const a = this.markIn();
+    const b = this.markOut();
+    if (a === null || b === null) return false;
+    const id = this.setSpeed(a, b, rate);
+    this.clearMarks();
+    this.selectedCut.set(null);
+    this.selectedSpeed.set(id);
+    return true;
+  }
+
+  /** Moves the edges of a speed change (dragged on the timeline). */
+  updateSpeed(id: string, start: number, end: number): void {
+    const from = Math.max(0, Math.min(start, end));
+    const to = Math.min(this.duration(), Math.max(start, end));
+    if (to - from < MIN_CUT) return;
+    this.update((d) => {
+      const speed = d.speeds.find((s) => s.id === id);
+      if (!speed) return;
+      d.speeds = withoutRange(
+        d.speeds.filter((s) => s.id !== id),
+        from,
+        to,
+      ).concat({ ...speed, start: from, end: to });
+      d.speeds.sort((a, b) => a.start - b.start);
+    });
+  }
+
+  setSpeedRate(id: string, rate: number): void {
+    this.update((d) => {
+      const speed = d.speeds.find((s) => s.id === id);
+      if (speed) speed.rate = rate;
+    });
+  }
+
+  removeSpeed(id: string): void {
+    this.update((d) => (d.speeds = d.speeds.filter((s) => s.id !== id)));
+    if (this.selectedSpeed() === id) this.selectedSpeed.set(null);
   }
 
   /** In / out points placed on the playhead, to cut a part of the video by hand. */

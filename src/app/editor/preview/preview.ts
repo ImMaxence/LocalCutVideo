@@ -185,6 +185,10 @@ export class Preview implements PlayerApi {
         else if (next > t + 0.02) this.seek(next);
       }
       if (this.isPlaying) {
+        // Sped-up or slowed-down parts: the browser keeps the pitch of the voice.
+        const segment = this.store.segments()[segmentIndexAt(this.store.segments(), this.sequenceTime())];
+        const rate = segment?.rate ?? 1;
+        if (video.playbackRate !== rate) video.playbackRate = rate;
         // The rest of the UI (transcript, timeline, clock) only needs ~25 updates per second.
         const now = performance.now();
         if (now - this.lastSync > 40) {

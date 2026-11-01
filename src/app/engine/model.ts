@@ -28,6 +28,15 @@ export interface Cut extends Range {
   reason: CutReason;
 }
 
+/** A part of the sequence played faster or slower (2 = twice as fast, 0.5 = slow motion). */
+export interface SpeedRange extends Range {
+  id: string;
+  rate: number;
+}
+
+/** Speeds offered in the editor. */
+export const SPEED_RATES = [0.25, 0.5, 0.75, 1.5, 2, 3, 4];
+
 export interface Word extends Range {
   id: string;
   text: string;
@@ -129,6 +138,7 @@ export interface Project {
   clips: Clip[];
   format: AspectFormat;
   cuts: Cut[];
+  speeds: SpeedRange[];
   words: Word[];
   transcript: TranscriptMeta | null;
   captions: CaptionSettings;
@@ -166,6 +176,7 @@ export function createProject(name: string): Project {
     clips: [],
     format: '9:16',
     cuts: [],
+    speeds: [],
     words: [],
     transcript: null,
     captions: {

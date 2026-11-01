@@ -31,7 +31,7 @@ export function clipIndexAt(placed: PlacedClip[], t: number): number {
   return Math.max(0, placed.length - 1);
 }
 
-/** Rewrites cuts, words and face track after the clip list changed from `before` to `after`. */
+/** Rewrites cuts, speeds, words and face track after the clip list changed from `before` to `after`. */
 export function remapTimeline(draft: Project, before: Clip[], after: Clip[]): void {
   const oldPlaced = placeClips(before);
   const newPlaced = new Map(placeClips(after).map((c) => [c.id, c]));
@@ -51,19 +51,22 @@ export function remapTimeline(draft: Project, before: Clip[], after: Clip[]): vo
     })
     .sort((a, b) => a.start - b.start);
 
-  // A cut spanning a clip boundary is split so each piece follows its own clip.
-  draft.cuts = draft.cuts
-    .flatMap((cut) =>
-      oldPlaced
-        .filter((c) => c.end > cut.start && c.start < cut.end)
-        .flatMap((clip, piece) => {
-          const start = map(Math.max(cut.start, clip.start), clip);
-          const end = map(Math.min(cut.end, clip.end), clip);
-          if (start == null || end == null || end - start < 0.01) return [];
-          return [{ ...cut, id: piece === 0 ? cut.id : uid(), start, end }];
-        }),
-    )
-    .sort((a, b) => a.start - b.start);
+  // A cut or speed change spanning a clip boundary is split so each piece follows its own clip.
+  const follow = <T extends { id: string; start: number; end: number }>(ranges: T[]): T[] =>
+    ranges
+      .flatMap((range) =>
+        oldPlaced
+          .filter((c) => c.end > range.start && c.start < range.end)
+          .flatMap((clip, piece) => {
+            const start = map(Math.max(range.start, clip.start), clip);
+            const end = map(Math.min(range.end, clip.end), clip);
+            if (start == null || end == null || end - start < 0.01) return [];
+            return [{ ...range, id: piece === 0 ? range.id : uid(), start, end }];
+          }),
+      )
+      .sort((a, b) => a.start - b.start);
+  draft.cuts = follow(draft.cuts);
+  draft.speeds = follow(draft.speeds ?? []);
 
   if (draft.faces) {
     const faces = draft.faces

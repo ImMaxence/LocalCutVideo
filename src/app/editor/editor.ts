@@ -183,12 +183,16 @@ export class Editor {
     } else if ((e.key === 'Delete' || e.key === 'Backspace') && this.store.selectedCut()) {
       e.preventDefault();
       this.store.removeCut(this.store.selectedCut()!);
+    } else if ((e.key === 'Delete' || e.key === 'Backspace') && this.store.selectedSpeed()) {
+      e.preventDefault();
+      this.store.removeSpeed(this.store.selectedSpeed()!);
     } else if (e.key === 'Escape') {
       if (this.autoOpen()) this.closeAutoEdit();
       else if (this.exportOpen()) this.closeExport();
       else {
         this.store.selection.set(new Set());
         this.store.selectedCut.set(null);
+        this.store.selectedSpeed.set(null);
       }
     } else if (mod || e.altKey) {
       return;

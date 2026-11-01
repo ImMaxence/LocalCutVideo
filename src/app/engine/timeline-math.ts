@@ -1,8 +1,15 @@
-import type { Cut, Project, Range, Word } from './model';
+import { type Cut, type Project, type Range, type SpeedRange, type Word, uid } from './model';
 import { sequenceDuration } from './sequence';
 
 /** Segments shorter than this are dropped: they would only produce a flash on screen. */
 const MIN_SEGMENT = 1 / 30;
+
+/** A kept part of the sequence and its playback rate (1 when absent). */
+export interface Segment extends Range {
+  rate?: number;
+}
+
+const rateOf = (s: Segment) => s.rate ?? 1;
 
 export function mergeRanges(ranges: Range[], gap = 0): Range[] {
   const sorted = ranges
@@ -58,13 +65,44 @@ export function keptSegments(duration: number, removed: Range[]): Range[] {
   return kept;
 }
 
-export function projectSegments(project: Project): Range[] {
-  const duration = sequenceDuration(project.clips);
-  return keptSegments(duration, removedRanges(duration, project.cuts, project.words));
+/** Splits the kept segments where the speed changes, each piece carrying its rate. */
+export function applySpeeds(kept: Range[], speeds: SpeedRange[]): Segment[] {
+  const sorted = speeds.filter((s) => s.end > s.start && s.rate !== 1).sort((a, b) => a.start - b.start);
+  if (!sorted.length) return kept;
+  const out: Segment[] = [];
+  for (const k of kept) {
+    let cursor = k.start;
+    for (const s of sorted) {
+      if (s.end <= cursor || s.start >= k.end) continue;
+      if (s.start > cursor) out.push({ start: cursor, end: s.start });
+      const end = Math.min(s.end, k.end);
+      out.push({ start: Math.max(cursor, s.start), end, rate: s.rate });
+      cursor = end;
+    }
+    if (cursor < k.end) out.push({ start: cursor, end: k.end });
+  }
+  return out.filter((s) => s.end - s.start > 1e-4);
 }
 
-export function totalDuration(segments: Range[]): number {
-  return segments.reduce((sum, s) => sum + (s.end - s.start), 0);
+/** Speed ranges with [start, end) taken out: overlapping ones are trimmed or split in two. */
+export function withoutRange(speeds: SpeedRange[], start: number, end: number): SpeedRange[] {
+  return speeds.flatMap((s) => {
+    if (s.end <= start || s.start >= end) return [s];
+    const parts: SpeedRange[] = [];
+    if (start - s.start >= MIN_SEGMENT) parts.push({ ...s, end: start });
+    if (s.end - end >= MIN_SEGMENT) parts.push({ ...s, id: parts.length ? uid() : s.id, start: end });
+    return parts;
+  });
+}
+
+export function projectSegments(project: Project): Segment[] {
+  const duration = sequenceDuration(project.clips);
+  return applySpeeds(keptSegments(duration, removedRanges(duration, project.cuts, project.words)), project.speeds ?? []);
+}
+
+/** Length of the edited video: kept parts, shortened or stretched by their speed. */
+export function totalDuration(segments: Segment[]): number {
+  return segments.reduce((sum, s) => sum + (s.end - s.start) / rateOf(s), 0);
 }
 
 /** Index of the kept segment containing a source time, or -1 when the time is cut. */
@@ -82,21 +120,21 @@ export function segmentIndexAt(segments: Range[], t: number): number {
 }
 
 /** Source time to output time. Times inside a cut snap to the start of the next segment. */
-export function sourceToOutput(segments: Range[], t: number): number {
+export function sourceToOutput(segments: Segment[], t: number): number {
   let out = 0;
   for (const s of segments) {
     if (t < s.start) return out;
-    if (t < s.end) return out + (t - s.start);
-    out += s.end - s.start;
+    if (t < s.end) return out + (t - s.start) / rateOf(s);
+    out += (s.end - s.start) / rateOf(s);
   }
   return out;
 }
 
-export function outputToSource(segments: Range[], outT: number): number {
+export function outputToSource(segments: Segment[], outT: number): number {
   let acc = 0;
   for (const s of segments) {
-    const len = s.end - s.start;
-    if (outT < acc + len) return s.start + (outT - acc);
+    const len = (s.end - s.start) / rateOf(s);
+    if (outT < acc + len) return s.start + (outT - acc) * rateOf(s);
     acc += len;
   }
   const last = segments[segments.length - 1];

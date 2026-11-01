@@ -78,6 +78,7 @@ function seekTo(video: HTMLVideoElement, t: number): Promise<void> {
   templateUrl: './thumbnail.html',
   styleUrl: './thumbnail.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: { '(document:keydown)': 'onKey($event)' },
 })
 export class Thumbnail {
   /** Project to take the video from (/thumbnail/:id) and its sequence time (?t=). */
@@ -136,6 +137,7 @@ export class Thumbnail {
   private scanToken = 0;
   private drag: { x: number; y: number; sx: number; sy: number } | null = null;
   private savedTimer = 0;
+  private holdTimer = 0;
 
   constructor() {
     void loadCaptionFont(document.fonts, location.origin).then(() => this.fontReady.set(true));
@@ -164,6 +166,7 @@ export class Thumbnail {
     inject(DestroyRef).onDestroy(() => {
       this.scanToken++;
       clearTimeout(this.savedTimer);
+      clearTimeout(this.holdTimer);
       const url = this.source()?.url;
       if (url) URL.revokeObjectURL(url);
     });
@@ -269,6 +272,40 @@ export class Thumbnail {
     const time = clamp(t, 0, Math.max(0, this.duration() - 0.05));
     this.time.set(time);
     video.currentTime = time;
+  }
+
+  /** Press and hold ‹ › to scroll through the frames: one by one, then faster and faster. */
+  protected startHold(direction: 1 | -1, e: PointerEvent): void {
+    if (e.button !== 0) return;
+    e.preventDefault();
+    this.stopHold();
+    let steps = 0;
+    const tick = () => {
+      steps++;
+      const frames = steps < 12 ? 1 : steps < 30 ? 3 : 8;
+      this.seek(this.time() + (direction * frames) / 30);
+      this.holdTimer = window.setTimeout(tick, steps === 1 ? 400 : 70);
+    };
+    tick();
+  }
+
+  protected stopHold(): void {
+    clearTimeout(this.holdTimer);
+    this.holdTimer = 0;
+  }
+
+  /** Enter / Space on the buttons (a pointer press is already handled by the hold). */
+  protected stepFromKeyboard(direction: 1 | -1, e: MouseEvent): void {
+    if (e.detail === 0) this.seek(this.time() + direction / 30);
+  }
+
+  /** ← → move one frame, with Shift one second (outside of text fields). */
+  protected onKey(e: KeyboardEvent): void {
+    if (this.source()?.kind !== 'video' || (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight')) return;
+    const target = e.target as HTMLElement;
+    if (target.closest('input, textarea, select, [contenteditable]')) return;
+    e.preventDefault();
+    this.seek(this.time() + (e.key === 'ArrowRight' ? 1 : -1) * (e.shiftKey ? 1 : 1 / 30));
   }
 
   protected isCurrent(t: number): boolean {

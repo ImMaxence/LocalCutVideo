@@ -316,7 +316,12 @@
       "selectedCut": "Coupe sélectionnée",
       "earlier": "Plus tôt",
       "later": "Plus tard",
-      "listen": "Écouter la coupe"
+      "listen": "Écouter la coupe",
+      "speed": "Vitesse",
+      "speedHint": "Accélérer ou ralentir la partie entre le début et la fin",
+      "selectedSpeed": "Changement de vitesse",
+      "removeSpeed": "Revenir à la vitesse normale",
+      "listenSpeed": "Écouter le changement de vitesse"
     },
     "transcript": {
       "title": "Transcription",

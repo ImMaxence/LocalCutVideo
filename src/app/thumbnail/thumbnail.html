@@ -48,11 +48,31 @@
         @if (source()!.kind === 'video') {
           <video #video class="source" [src]="source()!.url" muted playsinline preload="auto" (loadedmetadata)="onMetadata()" (seeked)="capture()" (loadeddata)="capture()"></video>
           <div class="scrub">
-            <button class="btn ghost icon sm" type="button" (click)="seek(time() - 1 / 30)" [title]="'thumbnail.prevFrame' | transloco" [attr.aria-label]="'thumbnail.prevFrame' | transloco">
+            <button
+              class="btn ghost icon sm step"
+              type="button"
+              (pointerdown)="startHold(-1, $event)"
+              (pointerup)="stopHold()"
+              (pointerleave)="stopHold()"
+              (pointercancel)="stopHold()"
+              (click)="stepFromKeyboard(-1, $event)"
+              [title]="'thumbnail.prevFrame' | transloco"
+              [attr.aria-label]="'thumbnail.prevFrame' | transloco"
+            >
               <app-icon name="chevron-left" [size]="16" />
             </button>
             <input type="range" min="0" [max]="duration()" step="0.04" [value]="time()" (input)="onScrub($event)" [attr.aria-label]="'thumbnail.frame' | transloco" />
-            <button class="btn ghost icon sm" type="button" (click)="seek(time() + 1 / 30)" [title]="'thumbnail.nextFrame' | transloco" [attr.aria-label]="'thumbnail.nextFrame' | transloco">
+            <button
+              class="btn ghost icon sm step"
+              type="button"
+              (pointerdown)="startHold(1, $event)"
+              (pointerup)="stopHold()"
+              (pointerleave)="stopHold()"
+              (pointercancel)="stopHold()"
+              (click)="stepFromKeyboard(1, $event)"
+              [title]="'thumbnail.nextFrame' | transloco"
+              [attr.aria-label]="'thumbnail.nextFrame' | transloco"
+            >
               <app-icon name="chevron-right" [size]="16" />
             </button>
             <span class="time">{{ formatTime(time(), true) }}</span>

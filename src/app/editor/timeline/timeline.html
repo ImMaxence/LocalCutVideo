@@ -4,6 +4,7 @@
     <i class="silence"></i>{{ 'editor.timeline.silence' | transloco }}
     <i class="manual"></i>{{ 'editor.timeline.manual' | transloco }}
     <i class="text"></i>{{ 'editor.timeline.text' | transloco }}
+    <i class="speed"></i>{{ 'editor.timeline.speed' | transloco }}
   </span>
   <span class="hint faint">{{ 'editor.timeline.hint' | transloco }}</span>
   @if (selected(); as cut) {
@@ -31,6 +32,25 @@
         <app-icon name="x" [size]="14" />
       </button>
     </div>
+  } @else if (selectedSpeed(); as speed) {
+    <div class="cut-edit speed-edit" role="group" [attr.aria-label]="'editor.timeline.selectedSpeed' | transloco" animate.enter="pop-in">
+      <span class="edge-label"><app-icon name="gauge" [size]="14" /> {{ 'editor.timeline.speed' | transloco }}</span>
+      <span class="rates">
+        @for (r of rates; track r) {
+          <button class="rate" type="button" [class.active]="speed.rate === r" (click)="store.setSpeedRate(speed.id, r)">{{ r }}×</button>
+        }
+      </span>
+      <span class="faint length">{{ formatTime(speed.end - speed.start, true) }} → {{ formatTime((speed.end - speed.start) / speed.rate, true) }}</span>
+      <button class="btn ghost icon sm" type="button" (click)="store.playAround(speed.start)" [title]="'editor.timeline.listenSpeed' | transloco" [attr.aria-label]="'editor.timeline.listenSpeed' | transloco">
+        <app-icon name="play" [size]="14" />
+      </button>
+      <button class="btn ghost icon sm danger" type="button" (click)="store.removeSpeed(speed.id)" [title]="('editor.timeline.removeSpeed' | transloco) + ' (Del)'" [attr.aria-label]="'editor.timeline.removeSpeed' | transloco">
+        <app-icon name="trash" [size]="14" />
+      </button>
+      <button class="btn ghost icon sm" type="button" (click)="store.selectedSpeed.set(null)" [title]="('common.close' | transloco) + ' (Esc)'" [attr.aria-label]="'common.close' | transloco">
+        <app-icon name="x" [size]="14" />
+      </button>
+    </div>
   } @else {
     <div class="marks" role="group" [attr.aria-label]="'editor.timeline.manualCut' | transloco">
       <button class="btn sm mark" type="button" [class.set]="store.markIn() !== null" (click)="store.setMark('in')" [title]="'editor.timeline.markInHint' | transloco">
@@ -42,6 +62,26 @@
       <button class="btn sm primary" type="button" [disabled]="!canCut()" (click)="store.cutMarked()" [title]="'editor.timeline.cutHint' | transloco">
         <app-icon name="scissors" [size]="14" /> {{ 'editor.timeline.cutMarked' | transloco }}
       </button>
+      <span class="speed-wrap">
+        <button
+          class="btn sm"
+          type="button"
+          [disabled]="!canCut()"
+          [attr.aria-expanded]="speedMenu()"
+          aria-haspopup="menu"
+          (click)="speedMenu.set(!speedMenu())"
+          [title]="'editor.timeline.speedHint' | transloco"
+        >
+          <app-icon name="gauge" [size]="14" /> {{ 'editor.timeline.speed' | transloco }}
+        </button>
+        @if (speedMenu() && canCut()) {
+          <span class="speed-menu" role="menu" animate.enter="pop-in">
+            @for (r of rates; track r) {
+              <button class="rate" type="button" role="menuitem" (click)="applySpeed(r)">{{ r }}×</button>
+            }
+          </span>
+        }
+      </span>
       @if (store.markIn() !== null || store.markOut() !== null) {
         <button class="btn ghost icon sm" type="button" (click)="store.clearMarks()" [attr.aria-label]="'editor.timeline.clearMarks' | transloco" [title]="'editor.timeline.clearMarks' | transloco">
           <app-icon name="x" [size]="14" />

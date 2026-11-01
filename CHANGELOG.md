@@ -2,6 +2,16 @@
 
 All notable changes to LocalCutVideo. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning: [SemVer](https://semver.org/).
 
+## [0.12.0] - 2026-11-01
+
+### Added
+- Speed changes: speed up or slow down a part (0.25× to 4×) from the Start / End marks, pitch kept in preview and export
+- Thumbnail maker: hold ‹ › to scroll through the frames, ← → keys (Shift: 1 s)
+- Auto edit button in the landing page mockup
+
+### Fixed
+- Site header overflowing (flag-only language picker, icon install button, menu below 1200 px)
+
 ## [0.11.0] - 2026-11-01
 
 ### Added
