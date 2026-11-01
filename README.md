@@ -38,7 +38,7 @@
 | **Auto-framing** | MediaPipe face tracking keeps the speaker in frame when going from 16:9 to 9:16. |
 | **Smart zoom** | Alternating punch-in zoom on every cut (or every sentence when there is no cut). |
 | **Auto-ducking** | Background music is lowered automatically while someone speaks. |
-| **Timeline** | Wavesurfer.js waveform with draggable, resizable cut regions, zoom (buttons, Ctrl + wheel); undo / redo. |
+| **Timeline** | Wavesurfer.js waveform with draggable, resizable cut regions; select a cut to nudge its start / end (±0.1 s) or listen to it; zoom (buttons, Ctrl + wheel); undo / redo. |
 | **Light preview** | The preview renders at 360p, 540p or 720p to keep the editor smooth; the export is always full quality. |
 | **Mobile editor** | A dedicated phone layout with the tools in a bottom tab bar. |
 | **Fast export** | Hardware encoding with WebCodecs, MP4 muxing with Mediabunny, streamed straight to disk. |

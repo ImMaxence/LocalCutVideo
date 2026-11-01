@@ -41,8 +41,8 @@
         <button class="btn sm" type="button" (click)="startCorrection()" [title]="('editor.transcript.correct' | transloco) + ' (Enter)'">
           <app-icon name="pencil" [size]="14" /> {{ 'editor.transcript.correct' | transloco }}
         </button>
-        <button class="btn sm primary" type="button" (click)="store.toggleDeleteSelection()">
-          <app-icon name="scissors" [size]="14" /> {{ 'editor.transcript.cut' | transloco }} <kbd>Del</kbd>
+        <button class="btn sm primary" type="button" (click)="store.toggleDeleteSelection()" [title]="('editor.transcript.cut' | transloco) + ' (Del)'">
+          <app-icon name="scissors" [size]="14" /> {{ 'editor.transcript.cut' | transloco }}
         </button>
       </span>
     </div>

@@ -280,7 +280,7 @@
       "silence": "Pause",
       "manual": "Manuell",
       "text": "Text",
-      "hint": "Auf der Wellenform ziehen oder Start / Ende nutzen zum Schneiden · Ränder ziehen zum Anpassen · Doppelklick zum Entfernen",
+      "hint": "Auf der Wellenform ziehen oder Start / Ende nutzen zum Schneiden · Schnitt anklicken, um die Ränder anzupassen · Doppelklick zum Entfernen",
       "removeCut": "Schnitt entfernen",
       "zoom": "Zeitleisten-Zoom",
       "analyzing": "Audio wird analysiert…",
@@ -297,7 +297,11 @@
       "cutHint": "Den Teil zwischen Start und Ende entfernen (X)",
       "clearMarks": "Start und Ende löschen",
       "marksMissing": "Setze zuerst einen Start (I) und ein Ende (O)",
-      "analysisError": "Das Audio konnte nicht analysiert werden"
+      "analysisError": "Das Audio konnte nicht analysiert werden",
+      "selectedCut": "Ausgewählter Schnitt",
+      "earlier": "Früher",
+      "later": "Später",
+      "listen": "Schnitt anhören"
     },
     "transcript": {
       "title": "Transkript",

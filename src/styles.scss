@@ -163,11 +163,13 @@ textarea {
   /* The "magic" call to action (auto edit). */
   &.auto {
     border-color: transparent;
-    background: var(--gradient);
+    /* border-box: otherwise the gradient repeats under the transparent border (colored edges). */
+    background: var(--gradient) border-box;
     color: #fff;
     box-shadow: 0 6px 22px light-dark(rgb(177 77 255 / 0.3), rgb(177 77 255 / 0.25));
     &:hover:not(:disabled) {
-      background: var(--gradient);
+      background: var(--gradient) border-box;
+      border-color: transparent;
       filter: brightness(1.08);
     }
   }

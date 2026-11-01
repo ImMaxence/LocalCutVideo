@@ -4,6 +4,7 @@ import {
   DestroyRef,
   ElementRef,
   afterNextRender,
+  computed,
   effect,
   inject,
   signal,
@@ -16,7 +17,7 @@ import type { Region } from 'wavesurfer.js/dist/plugins/regions.js';
 import { ThemeService } from '../../core/theme.service';
 import { deletedWordRanges, formatTime } from '../../engine/timeline-math';
 import { Icon } from '../../shared/icon';
-import { EditorStore, type SequenceAnalysis } from '../editor.store';
+import { EditorStore, MIN_CUT, type SequenceAnalysis } from '../editor.store';
 
 type RegionsApi = {
   getRegions(): Region[];
@@ -48,9 +49,9 @@ function cssColor(host: HTMLElement, variable: string): string {
 
 /**
  * Waveform timeline of the whole sequence (Wavesurfer.js). The cursor follows the preview and
- * clicking or dragging on the waveform seeks. Cuts are regions: drag on the waveform to create
- * one, drag its edges to adjust, double-click to remove. Words deleted in the transcript
- * appear as locked regions, and markers show where each clip starts.
+ * clicking on the waveform seeks. Cuts are regions: drag on the waveform to create one, click
+ * it to select it, drag its edges or nudge them to adjust, double-click to remove. Words deleted
+ * in the transcript appear as locked regions, and markers show where each clip starts.
  */
 @Component({
   selector: 'app-timeline',
@@ -66,8 +67,17 @@ export class Timeline {
   private readonly host = inject<ElementRef<HTMLElement>>(ElementRef);
 
   protected readonly zoom = signal(0);
-  protected readonly selectedCut = signal<string | null>(null);
   protected readonly ready = signal(false);
+  /** The selected cut, for the start / end editor in the toolbar. */
+  protected readonly selected = computed(() => {
+    const id = this.store.selectedCut();
+    return (id && this.store.project()?.cuts.find((c) => c.id === id)) || null;
+  });
+  protected readonly nudgeStep = 0.1;
+  protected readonly edges = [
+    { id: 'start', label: 'editor.timeline.markIn' },
+    { id: 'end', label: 'editor.timeline.markOut' },
+  ] as const;
   protected readonly formatTime = formatTime;
 
   private ws: WaveSurfer | null = null;
@@ -91,6 +101,7 @@ export class Timeline {
       this.store.clips();
       this.store.markIn();
       this.store.markOut();
+      this.store.selectedCut();
       const ready = this.ready();
       if (p && ready) untracked(() => this.syncRegions());
     });
@@ -136,7 +147,6 @@ export class Timeline {
       barGap: 1,
       barRadius: 2,
       cursorWidth: 2,
-      dragToSeek: true,
       autoScroll: true,
       autoCenter: false,
       minPxPerSec: this.zoom(),
@@ -153,7 +163,11 @@ export class Timeline {
     this.regions = regions as unknown as RegionsApi;
 
     // No media element is attached: the preview plays the clips, the waveform only seeks.
-    ws.on('interaction', (t: number) => this.store.seek(t));
+    // (No dragToSeek: it swallows the drag that draws a new cut.)
+    ws.on('interaction', (t: number) => {
+      this.store.seek(t);
+      this.store.selectedCut.set(null);
+    });
     this.regions.enableDragSelection({ color: 'var(--cut-new)' });
     this.regions.on('region-created', ((region: Region) => {
       if (this.syncing) return;
@@ -170,14 +184,11 @@ export class Timeline {
     }) as never);
     this.regions.on('region-clicked', ((region: Region, e: MouseEvent) => {
       e.stopPropagation();
-      if (region.id.startsWith('cut-')) this.selectedCut.set(region.id.slice(4));
+      if (region.id.startsWith('cut-')) this.store.selectedCut.set(region.id.slice(4));
     }) as never);
     this.regions.on('region-double-clicked', ((region: Region, e: MouseEvent) => {
       e.stopPropagation();
-      if (region.id.startsWith('cut-')) {
-        this.store.removeCut(region.id.slice(4));
-        this.selectedCut.set(null);
-      }
+      if (region.id.startsWith('cut-')) this.store.removeCut(region.id.slice(4));
     }) as never);
     ws.on('ready', () => {
       this.applyColors();
@@ -192,11 +203,12 @@ export class Timeline {
     if (!p || !regions) return;
     this.syncing = true;
     const wanted = new Map<string, { start: number; end?: number; color: string; drag: boolean; content?: string }>();
+    const selected = this.store.selectedCut();
     for (const c of p.cuts) {
       wanted.set(`cut-${c.id}`, {
         start: c.start,
         end: c.end,
-        color: c.reason === 'silence' ? 'var(--cut-silence)' : 'var(--cut-manual)',
+        color: c.id === selected ? 'var(--cut-selected)' : c.reason === 'silence' ? 'var(--cut-silence)' : 'var(--cut-manual)',
         drag: true,
       });
     }
@@ -231,11 +243,10 @@ export class Timeline {
       }
     }
     for (const [id, w] of wanted) {
-      regions.addRegion({ id, start: w.start, end: w.end, color: w.color, drag: w.drag, resize: w.drag, minLength: 0.05, content: w.content });
+      regions.addRegion({ id, start: w.start, end: w.end, color: w.color, drag: w.drag, resize: w.drag, minLength: MIN_CUT, content: w.content });
     }
     this.syncing = false;
-    const selected = this.selectedCut();
-    if (selected && !p.cuts.some((c) => c.id === selected)) this.selectedCut.set(null);
+    if (selected && !p.cuts.some((c) => c.id === selected)) this.store.selectedCut.set(null);
   }
 
   private applyColors(): void {
@@ -289,11 +300,9 @@ export class Timeline {
     return width / Math.max(1, this.store.duration());
   }
 
-  protected deleteSelected(): void {
-    const id = this.selectedCut();
-    if (!id) return;
-    this.store.removeCut(id);
-    this.selectedCut.set(null);
+  protected nudge(edge: 'start' | 'end', direction: 1 | -1): void {
+    const id = this.store.selectedCut();
+    if (id) this.store.nudgeCut(id, edge, direction * this.nudgeStep);
   }
 
   protected canCut(): boolean {

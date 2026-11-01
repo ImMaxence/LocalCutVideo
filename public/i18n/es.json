@@ -280,7 +280,7 @@
       "silence": "Silencio",
       "manual": "Manual",
       "text": "Texto",
-      "hint": "Arrastra sobre la forma de onda o usa Inicio / Fin para cortar · arrastra los bordes para ajustar · doble clic para quitar",
+      "hint": "Arrastra sobre la forma de onda o usa Inicio / Fin para cortar · haz clic en un corte para ajustar sus bordes · doble clic para quitar",
       "removeCut": "Quitar corte",
       "zoom": "Zoom de la línea de tiempo",
       "analyzing": "Analizando el audio…",
@@ -297,7 +297,11 @@
       "cutHint": "Quitar la parte entre el inicio y el fin (X)",
       "clearMarks": "Borrar inicio y fin",
       "marksMissing": "Primero marca un inicio (I) y un fin (O)",
-      "analysisError": "No se pudo analizar el audio"
+      "analysisError": "No se pudo analizar el audio",
+      "selectedCut": "Corte seleccionado",
+      "earlier": "Antes",
+      "later": "Después",
+      "listen": "Escuchar el corte"
     },
     "transcript": {
       "title": "Transcripción",

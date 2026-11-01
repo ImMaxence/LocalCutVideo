@@ -78,7 +78,8 @@
 .workspace {
   display: grid;
   grid-template-columns: minmax(260px, 320px) minmax(0, 1fr) minmax(300px, 340px);
-  grid-template-rows: minmax(0, 1fr) auto;
+  /* max-content: panels have min-height 0, an auto row would let a short window crush the timeline. */
+  grid-template-rows: minmax(0, 1fr) max-content;
   grid-template-areas:
     'transcript preview inspector'
     'timeline timeline timeline';
@@ -347,7 +348,7 @@
 @media (max-width: 1180px) {
   .workspace {
     grid-template-columns: minmax(0, 1fr) minmax(300px, 340px);
-    grid-template-rows: minmax(320px, 1fr) auto minmax(220px, 300px);
+    grid-template-rows: minmax(320px, 1fr) max-content minmax(220px, 300px);
     grid-template-areas:
       'preview inspector'
       'timeline timeline'

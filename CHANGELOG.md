@@ -2,6 +2,23 @@
 
 All notable changes to LocalCutVideo. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning: [SemVer](https://semver.org/).
 
+## [0.10.0] - 2026-11-01
+
+### Added
+- Selected cut editor on the timeline: start / end nudges (±0.1 s), listen, remove
+- Delete removes the selected cut, Escape deselects it
+
+### Changed
+- Wider, visible cut edge handles
+- An adjusted silence cut becomes manual and is kept by live re-detection
+
+### Fixed
+- Drawing a cut on the waveform did nothing (drag-to-seek swallowed the drag)
+- Inspector content clipped on the right (face tracking row)
+- Transcript selection buttons cut off in a narrow panel
+- Timeline crushed in short windows and the two-column layout
+- Colored edges on the auto edit button
+
 ## [0.9.0] - 2026-11-01
 
 ### Added

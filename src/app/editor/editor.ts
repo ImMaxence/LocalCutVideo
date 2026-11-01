@@ -179,10 +179,16 @@ export class Editor {
     } else if ((e.key === 'Delete' || e.key === 'Backspace') && this.store.selection().size) {
       e.preventDefault();
       this.store.toggleDeleteSelection();
+    } else if ((e.key === 'Delete' || e.key === 'Backspace') && this.store.selectedCut()) {
+      e.preventDefault();
+      this.store.removeCut(this.store.selectedCut()!);
     } else if (e.key === 'Escape') {
       if (this.autoOpen()) this.closeAutoEdit();
       else if (this.exportOpen()) this.closeExport();
-      else this.store.selection.set(new Set());
+      else {
+        this.store.selection.set(new Set());
+        this.store.selectedCut.set(null);
+      }
     } else if (mod || e.altKey) {
       return;
     } else if (e.key === 'i' || e.key === 'o') {

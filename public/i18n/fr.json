@@ -280,7 +280,7 @@
       "silence": "Silence",
       "manual": "Manuel",
       "text": "Texte",
-      "hint": "Glissez sur la forme d'onde ou utilisez Début / Fin pour couper · tirez les bords pour ajuster · double-clic pour retirer",
+      "hint": "Glissez sur la forme d'onde ou utilisez Début / Fin pour couper · cliquez une coupe pour régler ses bords · double-clic pour retirer",
       "removeCut": "Retirer la coupe",
       "zoom": "Zoom de la timeline",
       "analyzing": "Analyse de l'audio…",
@@ -297,7 +297,11 @@
       "cutHint": "Retirer la partie entre le début et la fin (X)",
       "clearMarks": "Effacer début et fin",
       "marksMissing": "Placez d'abord un début (I) et une fin (O)",
-      "analysisError": "L'audio n'a pas pu être analysé"
+      "analysisError": "L'audio n'a pas pu être analysé",
+      "selectedCut": "Coupe sélectionnée",
+      "earlier": "Plus tôt",
+      "later": "Plus tard",
+      "listen": "Écouter la coupe"
     },
     "transcript": {
       "title": "Transcription",

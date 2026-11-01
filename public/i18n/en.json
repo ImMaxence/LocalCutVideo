@@ -280,7 +280,7 @@
       "silence": "Silence",
       "manual": "Manual",
       "text": "Text",
-      "hint": "Drag on the waveform or use Start / End to cut · drag edges to adjust · double-click to remove",
+      "hint": "Drag on the waveform or use Start / End to cut · click a cut to adjust its edges · double-click to remove",
       "removeCut": "Remove cut",
       "zoom": "Timeline zoom",
       "analyzing": "Analyzing audio…",
@@ -297,7 +297,11 @@
       "cutHint": "Remove the part between start and end (X)",
       "clearMarks": "Clear start and end",
       "marksMissing": "Set a start (I) and an end (O) first",
-      "analysisError": "The audio could not be analyzed"
+      "analysisError": "The audio could not be analyzed",
+      "selectedCut": "Selected cut",
+      "earlier": "Earlier",
+      "later": "Later",
+      "listen": "Listen to the cut"
     },
     "transcript": {
       "title": "Transcript",

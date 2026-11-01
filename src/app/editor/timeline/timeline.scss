@@ -5,6 +5,8 @@
   --cut-manual: light-dark(rgb(183 110 0 / 0.22), rgb(251 191 36 / 0.22));
   --cut-text: light-dark(rgb(91 61 245 / 0.18), rgb(143 125 255 / 0.22));
   --cut-new: light-dark(rgb(183 110 0 / 0.25), rgb(251 191 36 / 0.25));
+  --cut-selected: light-dark(rgb(91 61 245 / 0.34), rgb(143 125 255 / 0.42));
+  --handle: light-dark(#12141a, #fff);
   --clip-marker: light-dark(#12141a, #eceef4);
   --mark-region: light-dark(rgb(15 159 110 / 0.22), rgb(52 211 153 / 0.22));
   --mark-line: light-dark(#0f9f6e, #34d399);
@@ -71,6 +73,47 @@
   }
 }
 
+/* Start / end editor of the selected cut, in place of the manual cut buttons. */
+.cut-edit {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 4px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  .edge {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 6px;
+  }
+  .edge-label {
+    margin: 0 2px 0 6px;
+    color: var(--accent);
+    font-weight: 650;
+  }
+  .time {
+    min-width: 48px;
+    text-align: center;
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+  }
+  .length {
+    margin-right: 4px;
+    font-family: var(--mono);
+  }
+}
+
+.pop-in {
+  animation: pop-in 0.18s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
 .right {
   margin-left: auto;
   display: flex;
@@ -122,9 +165,29 @@
   font: 700 11px/18px var(--font);
 }
 
+/* Edge handles: a wide grab area centered on the edge, with a visible grip bar. */
 .wave ::ng-deep div::part(region-handle) {
-  border-color: var(--pink) !important;
-  width: 4px !important;
+  width: 12px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: linear-gradient(var(--handle), var(--handle)) center / 3px 46% no-repeat;
+  opacity: 0.55;
+  transition:
+    opacity 0.15s,
+    background-size 0.15s;
+}
+
+.wave ::ng-deep div::part(region-handle):hover {
+  opacity: 1;
+  background-size: 4px 70%;
+}
+
+.wave ::ng-deep div::part(region-handle-left) {
+  left: -6px !important;
+}
+
+.wave ::ng-deep div::part(region-handle-right) {
+  right: -6px !important;
 }
 
 .loading {

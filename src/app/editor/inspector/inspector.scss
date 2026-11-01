@@ -63,12 +63,15 @@
   overflow-x: hidden;
   padding: 14px 2px 8px;
   display: grid;
+  /* minmax(0, …): a wide row must wrap, not widen the column past the panel (clipped content). */
+  grid-template-columns: minmax(0, 1fr);
   align-content: start;
   gap: 18px;
 }
 
 section {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 12px;
   & + section {
     padding-top: 18px;
@@ -335,6 +338,7 @@ h3 {
 
 .row-between {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 8px;

@@ -50,6 +50,9 @@ import { aspectRatio, zoomBeats } from '../engine/render';
 import { buildCaptionPages, keptSegments, nextKeptTime, removedRanges, totalDuration } from '../engine/timeline-math';
 import type { AiDevice, RawWord } from '../workers/worker-types';
 
+/** Shortest cut, in seconds (also the minimum length of a timeline region). */
+export const MIN_CUT = 0.05;
+
 /** Per clip: `missing` = no stored handle (browser without File System Access), `moved` = handle broken. */
 export type ClipStatus = 'loading' | 'ready' | 'permission' | 'missing' | 'moved' | 'error';
 export type FileState = 'loading' | 'ready' | 'reconnect' | 'missing-project';
@@ -157,6 +160,8 @@ export class EditorStore {
   readonly selection = signal<ReadonlySet<string>>(new Set());
   readonly markIn = signal<number | null>(null);
   readonly markOut = signal<number | null>(null);
+  /** Cut picked on the timeline, adjusted with its edges or the start / end nudges. */
+  readonly selectedCut = signal<string | null>(null);
   readonly whisperModel = signal<WhisperModel>('base');
   readonly whisperLanguage = signal<string | null>(null);
   readonly notice = signal<{ key: string; params?: Record<string, unknown>; tone: 'info' | 'error' } | null>(null);
@@ -565,6 +570,12 @@ export class EditorStore {
     this.player?.toggle();
   }
 
+  /** Plays from a little before `t`, to hear how a cut sounds. */
+  playAround(t: number): void {
+    this.seek(t - 2);
+    if (!this.playing()) this.player?.toggle();
+  }
+
   // ---------------------------------------------------------------------------------------
   // Auto-cut
 
@@ -580,9 +591,8 @@ export class EditorStore {
     if (!p || !this.analysis()) return 0;
     let count = 0;
     this.update((d) => {
-      const cuts = this.silenceCuts(d);
-      count = cuts.length;
-      d.cuts = d.cuts.filter((c) => c.reason !== 'silence').concat(cuts);
+      d.cuts = this.withSilenceCuts(d);
+      count = d.cuts.filter((c) => c.reason === 'silence').length;
       d.silence.live = true;
     });
     return count;
@@ -593,10 +603,17 @@ export class EditorStore {
     this.update(
       (d) => {
         Object.assign(d.silence, patch);
-        if (d.silence.live) d.cuts = d.cuts.filter((c) => c.reason !== 'silence').concat(this.silenceCuts(d));
+        if (d.silence.live) d.cuts = this.withSilenceCuts(d);
       },
       { coalesce },
     );
+  }
+
+  /** Replaces the silence cuts. A detected silence that overlaps a manual cut gives way to it. */
+  private withSilenceCuts(d: Project): Cut[] {
+    const kept = d.cuts.filter((c) => c.reason !== 'silence');
+    const fresh = this.silenceCuts(d).filter((s) => !kept.some((c) => c.start < s.end && s.start < c.end));
+    return kept.concat(fresh);
   }
 
   clearCuts(): void {
@@ -607,22 +624,42 @@ export class EditorStore {
   }
 
   addCut(start: number, end: number): void {
-    if (end - start < 0.05) return;
+    if (end - start < MIN_CUT) return;
     this.update((d) => d.cuts.push({ id: uid(), start, end, reason: 'manual' }));
   }
 
-  updateCut(id: string, start: number, end: number): void {
-    this.update((d) => {
-      const cut = d.cuts.find((c) => c.id === id);
-      if (cut) {
-        cut.start = start;
-        cut.end = end;
-      }
-    });
+  /** Moves the edges of a cut. An adjusted silence cut becomes manual, so live re-detection keeps it. */
+  updateCut(id: string, start: number, end: number, coalesce?: string): void {
+    const from = Math.max(0, Math.min(start, end));
+    const to = Math.min(this.duration(), Math.max(start, end));
+    if (to - from < MIN_CUT) return;
+    this.update(
+      (d) => {
+        const cut = d.cuts.find((c) => c.id === id);
+        if (cut) {
+          cut.start = from;
+          cut.end = to;
+          cut.reason = 'manual';
+        }
+      },
+      { coalesce },
+    );
+  }
+
+  /** Moves one edge of a cut by `delta` seconds, keeping the cut at least MIN_CUT long. */
+  nudgeCut(id: string, edge: 'start' | 'end', delta: number): void {
+    const cut = this.project()?.cuts.find((c) => c.id === id);
+    if (!cut) return;
+    const start = edge === 'start' ? Math.min(cut.start + delta, cut.end - MIN_CUT) : cut.start;
+    const end = edge === 'end' ? Math.max(cut.end + delta, cut.start + MIN_CUT) : cut.end;
+    this.updateCut(id, start, end, `nudge-${id}-${edge}`);
+    // Show the kept frame on the edited edge: just before the cut, or right after it.
+    this.seek(edge === 'start' ? start - 0.04 : end);
   }
 
   removeCut(id: string): void {
     this.update((d) => (d.cuts = d.cuts.filter((c) => c.id !== id)));
+    if (this.selectedCut() === id) this.selectedCut.set(null);
   }
 
   /** In / out points placed on the playhead, to cut a part of the video by hand. */
