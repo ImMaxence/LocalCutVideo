@@ -2,6 +2,24 @@
 
 All notable changes to LocalCutVideo. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning: [SemVer](https://semver.org/).
 
+## [0.11.0] - 2026-11-01
+
+### Added
+- Thumbnail maker: best moments suggested, big title with highlighted words, 4 styles, JPG / PNG for YouTube, Shorts and square
+- Video volume up to 300 % with a limiter, mute, clip leveling
+- Project rotation in 90° steps (preview, export, face tracking)
+- Auto edit asks whether someone speaks in each clip, with automatic voice detection
+- Clips without voice: no transcription or subtitles, only real dead air is cut
+
+### Changed
+- "Music" tab renamed "Sound"
+- Silence cuts computed clip by clip
+- Music ducking ignores clips without voice
+- Export uses a peak limiter instead of hard clipping
+
+### Fixed
+- Auto cut chopped videos without speech (street, nature) into pieces
+
 ## [0.10.0] - 2026-11-01
 
 ### Added

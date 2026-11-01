@@ -15,6 +15,8 @@ export type CaptionStyle = 'karaoke' | 'clean' | 'boxed';
 export type CaptionPosition = 'top' | 'center' | 'bottom';
 export type FramingMode = 'center' | 'face';
 export type WhisperModel = 'tiny' | 'base' | 'small';
+/** Clockwise turn applied to every clip, for videos filmed sideways. */
+export type Rotation = 0 | 90 | 180 | 270;
 
 export interface Range {
   start: number;
@@ -49,6 +51,10 @@ export interface SourceInfo {
 export interface Clip {
   id: string;
   source: SourceInfo;
+  /** Does someone speak in it? Chosen by the user; null or absent lets the detection decide. */
+  voice?: boolean | null;
+  /** What the automatic voice detection found (Whisper's "no speech" probability). */
+  voiceDetected?: boolean;
 }
 
 /** Normalized face center (0..1 of the source frame) at a source time. */
@@ -72,6 +78,14 @@ export interface FramingSettings {
   mode: FramingMode;
   punchIn: boolean;
   zoom: number;
+}
+
+/** Sound of the clips themselves: overall volume and per-clip leveling. */
+export interface AudioSettings {
+  /** Linear gain on the clips' sound (1 = unchanged, up to 3). */
+  volume: number;
+  /** Brings every clip to the same loudness (recordings made at different levels). */
+  normalize: boolean;
 }
 
 export interface MusicSettings {
@@ -120,9 +134,16 @@ export interface Project {
   captions: CaptionSettings;
   framing: FramingSettings;
   faces: FacePoint[] | null;
+  rotation: Rotation;
+  audio: AudioSettings;
   music: MusicSettings;
   silence: SilenceSettings;
   export: ExportSettings;
+}
+
+/** Whether someone speaks in a clip: the user's answer, else the detection, else yes. */
+export function clipHasVoice(clip: Clip): boolean {
+  return clip.voice ?? clip.voiceDetected ?? true;
 }
 
 /** Words per caption that read well for each output shape. */
@@ -158,6 +179,8 @@ export function createProject(name: string): Project {
     },
     framing: { mode: 'center', punchIn: false, zoom: 1.15 },
     faces: null,
+    rotation: 0,
+    audio: { volume: 1, normalize: false },
     music: { enabled: false, name: null, volume: 0.35, ducking: 0.25 },
     silence: { thresholdDb: -40, minSilence: 0.5, padding: 0.12, mode: 'audio', live: false },
     export: { resolution: 1080, fps: 30 },
@@ -178,6 +201,7 @@ export function migrateProject(raw: Project & { source?: SourceInfo | null }): P
     clips,
     captions: { ...base.captions, ...raw.captions },
     framing: { ...base.framing, ...raw.framing },
+    audio: { ...base.audio, ...raw.audio },
     music: { ...base.music, ...raw.music },
     silence: { ...base.silence, ...raw.silence },
     export: { ...base.export, ...raw.export },

@@ -28,6 +28,11 @@
     <button class="btn ghost icon" type="button" (click)="store.redo()" [disabled]="!store.canRedo()" [title]="('editor.redo' | transloco) + ' (Ctrl+Shift+Z)'">
       <app-icon name="redo" />
     </button>
+    @if (store.project(); as p) {
+      <a class="btn ghost thumb-btn" [routerLink]="['/thumbnail', p.id]" [queryParams]="{ t: store.currentTime().toFixed(2) }" [title]="'editor.thumbnail' | transloco" [attr.aria-label]="'editor.thumbnail' | transloco">
+        <app-icon name="image" [size]="17" /> <span>{{ 'editor.thumbnail' | transloco }}</span>
+      </a>
+    }
     <button class="btn auto auto-btn" type="button" (click)="openAutoEdit()" [disabled]="store.fileState() !== 'ready'" [title]="'editor.auto.lead' | transloco">
       <app-icon name="sparkles" [size]="16" /> <span>{{ 'editor.auto.button' | transloco }}</span>
     </button>
@@ -257,6 +262,9 @@
                 <div><b>−{{ formatTime(s.removed) }}</b><span>{{ 'editor.auto.summary.removed' | transloco }}</span></div>
                 <div><b>{{ s.words }}</b><span>{{ 'editor.auto.summary.words' | transloco }}</span></div>
               </div>
+              @if (s.silentClips) {
+                <p class="note-line"><app-icon name="mic-off" [size]="14" /> {{ 'editor.auto.summary.silent' | transloco: { count: s.silentClips } }}</p>
+              }
             }
           } @else {
             <h2>{{ 'editor.auto.running' | transloco }}</h2>
@@ -326,6 +334,35 @@
               }
             </div>
           </div>
+          @if (store.project(); as project) {
+            <div class="auto-field">
+              <span class="label">{{ 'editor.auto.voice.title' | transloco }}</span>
+              <ul class="auto-voices">
+                @for (c of project.clips; track c.id; let i = $index) {
+                  <li>
+                    @if (project.clips.length > 1) {
+                      <span class="voice-clip" [title]="c.source.name"><span class="voice-num">{{ i + 1 }}</span>{{ c.source.name }}</span>
+                    }
+                    <div class="segmented" role="radiogroup" [attr.aria-label]="'editor.auto.voice.title' | transloco">
+                      <button type="button" role="radio" [class.active]="c.voice == null" [attr.aria-checked]="c.voice == null" (click)="store.setClipVoice(c.id, null)">
+                        <app-icon name="sparkles" [size]="13" /> {{ 'editor.auto.voice.auto' | transloco }}
+                      </button>
+                      <button type="button" role="radio" [class.active]="c.voice === true" [attr.aria-checked]="c.voice === true" (click)="store.setClipVoice(c.id, true)">
+                        <app-icon name="mic" [size]="13" /> {{ 'editor.auto.voice.yes' | transloco }}
+                      </button>
+                      <button type="button" role="radio" [class.active]="c.voice === false" [attr.aria-checked]="c.voice === false" (click)="store.setClipVoice(c.id, false)">
+                        <app-icon name="mic-off" [size]="13" /> {{ 'editor.auto.voice.no' | transloco }}
+                      </button>
+                    </div>
+                    @if (c.voice == null && c.voiceDetected !== undefined) {
+                      <small class="faint">{{ (c.voiceDetected ? 'editor.auto.voice.detectedYes' : 'editor.auto.voice.detectedNo') | transloco }}</small>
+                    }
+                  </li>
+                }
+              </ul>
+              <small class="faint">{{ 'editor.auto.voice.hint' | transloco }}</small>
+            </div>
+          }
           <div class="auto-options">
             @for (key of autoToggles; track key) {
               <label class="switch">

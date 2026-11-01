@@ -4,7 +4,7 @@
  * punch-in zoom and burned-in captions.
  */
 import { faceAt } from './framing';
-import type { AspectFormat, CaptionSettings, ExportSettings, Project, Range, Word } from './model';
+import type { AspectFormat, CaptionSettings, ExportSettings, Project, Range, Rotation, Word } from './model';
 import { type CaptionPage, pageAt } from './timeline-math';
 
 /** Both CanvasRenderingContext2D and OffscreenCanvasRenderingContext2D satisfy this. */
@@ -86,6 +86,20 @@ export function cropRect(srcW: number, srcH: number, outAspect: number, f: Frami
   return { sx, sy, sw, sh };
 }
 
+/** Size of a w×h frame once turned by `rotation` degrees clockwise. */
+export function rotatedSize(w: number, h: number, rotation: Rotation): { width: number; height: number } {
+  return rotation % 180 ? { width: h, height: w } : { width: w, height: h };
+}
+
+/** Canvas transform [a, b, c, d, e, f] mapping a w×h image onto its turned frame (clockwise). */
+export function rotationMatrix(w: number, h: number, rotation: Rotation): [number, number, number, number, number, number] {
+  if (rotation === 90) return [0, 1, -1, 0, h, 0];
+  if (rotation === 180) return [-1, 0, 0, -1, w, h];
+  if (rotation === 270) return [0, -1, 1, 0, 0, w];
+  return [1, 0, 0, 1, 0, 0];
+}
+
+/** Draws the source frame cropped for the output, after turning it by `rotation`. */
 export function drawFrame(
   ctx: Ctx2D,
   image: CanvasImageSource,
@@ -94,10 +108,22 @@ export function drawFrame(
   outW: number,
   outH: number,
   framing: Framing,
+  rotation: Rotation = 0,
 ): void {
-  const { sx, sy, sw, sh } = cropRect(srcW, srcH, outW / outH, framing);
   ctx.imageSmoothingQuality = 'high';
-  ctx.drawImage(image, sx, sy, sw, sh, 0, 0, outW, outH);
+  if (!rotation) {
+    const { sx, sy, sw, sh } = cropRect(srcW, srcH, outW / outH, framing);
+    ctx.drawImage(image, sx, sy, sw, sh, 0, 0, outW, outH);
+    return;
+  }
+  // The crop is chosen in the turned frame; one transform then turns, crops and scales at once.
+  const turned = rotatedSize(srcW, srcH, rotation);
+  const { sx, sy, sw } = cropRect(turned.width, turned.height, outW / outH, framing);
+  const k = outW / sw;
+  const [a, b, c, d, e, f] = rotationMatrix(srcW, srcH, rotation);
+  ctx.setTransform(k * a, k * b, k * c, k * d, k * (e - sx), k * (f - sy));
+  ctx.drawImage(image, 0, 0, srcW, srcH);
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
 }
 
 interface LaidOutWord {

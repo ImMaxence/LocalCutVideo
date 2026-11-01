@@ -35,8 +35,21 @@ export interface RawWord {
 
 export type WhisperChunk = Range & { silent: boolean };
 
+/** What Whisper makes of a sample of a clip, to tell whether someone speaks in it. */
+export interface SpeechSample {
+  /** Probability of the "no speech" token. */
+  noSpeech: number;
+  /** Average log-probability of a short greedy transcription (close to 0 = confident). */
+  logprob: number;
+  /** Words in that transcription. */
+  words: number;
+  /** Known hallucination (subtitle credits) or a word repeated over and over. */
+  invented: boolean;
+}
+
 export interface AiWorkerApi {
   detectDevice(): Promise<{ device: AiDevice; fp16: boolean }>;
+  detectSpeech(samples: Float32Array[], model: WhisperModel, onProgress: (p: TranscribeProgress) => void): Promise<{ device: AiDevice; samples: SpeechSample[] }>;
   transcribe(
     pcm: Float32Array,
     chunks: WhisperChunk[],
@@ -53,6 +66,8 @@ export interface ExportClip {
   start: number;
   duration: number;
   hasAudio: boolean;
+  /** Volume of this clip's sound (overall volume × leveling). */
+  gain: number;
 }
 
 export interface ExportRequest {

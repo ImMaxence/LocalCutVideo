@@ -7,7 +7,7 @@
 import * as Comlink from 'comlink';
 import { env, pipeline, type AutomaticSpeechRecognitionPipeline } from '@huggingface/transformers';
 import type { WhisperModel } from '../engine/model';
-import type { AiDevice, AiWorkerApi, RawWord, TranscribeProgress, WhisperChunk } from './worker-types';
+import type { AiDevice, AiWorkerApi, RawWord, SpeechSample, TranscribeProgress, WhisperChunk } from './worker-types';
 
 env.allowLocalModels = false;
 env.useBrowserCache = true;
@@ -76,34 +76,114 @@ const HALLUCINATIONS = [/amara\.org/i, /sous-titr/i, /subtitles by/i, /merci d'a
 
 interface WhisperInternals {
   processor: (audio: Float32Array) => Promise<{ input_features: unknown }>;
+  tokenizer: { decode: (ids: number[], options: { skip_special_tokens: boolean }) => string };
   model: {
-    generation_config: { decoder_start_token_id: number; lang_to_id: Record<string, number> };
-    generate: (options: Record<string, unknown>) => Promise<{ data: ArrayLike<number | bigint> }>;
+    generation_config: { decoder_start_token_id: number; no_timestamps_token_id: number; lang_to_id: Record<string, number> };
+    generate: (options: Record<string, unknown>) => Promise<unknown>;
   };
 }
 
 /**
- * Spoken language detection. Transformers.js silently falls back to English when no language
- * is given (which then *translates* other languages), so we ask Whisper ourselves: after the
- * start-of-transcript token, the model's first prediction is the language token.
+ * One decoding step after the start-of-transcript token, reading the raw scores Whisper gives
+ * to every token there:
+ * - the most likely language token. Transformers.js silently falls back to English when no
+ *   language is given (which then *translates* other languages), so we detect it ourselves;
+ * - the probability of the "no speech" token, computed like OpenAI's no_speech_prob, before
+ *   any token suppression (that token sits just before <|notimestamps|> in every vocabulary).
  */
-async function detectLanguage(audio: Float32Array): Promise<string | null> {
+async function probe(audio: Float32Array, features?: unknown): Promise<{ language: string | null; noSpeech: number }> {
   const { processor, model } = transcriber as unknown as WhisperInternals;
-  const { input_features } = await processor(audio);
+  const input_features = features ?? (await processor(audio)).input_features;
   const config = model.generation_config;
-  const output = await model.generate({
+  let logits: Float32Array | null = null;
+  await model.generate({
     inputs: input_features,
     decoder_input_ids: [config.decoder_start_token_id],
     max_new_tokens: 1,
     return_timestamps: false,
+    suppress_tokens: null,
+    begin_suppress_tokens: null,
+    logits_processor: [
+      (_ids: unknown, scores: { data: Float32Array }) => {
+        logits ??= Float32Array.from(scores.data);
+        return scores;
+      },
+    ],
   });
-  const token = Number(output.data[output.data.length - 1]);
-  const entry = Object.entries(config.lang_to_id).find(([, id]) => id === token);
-  return entry ? entry[0].replace(/[<|>]/g, '') : null;
+  if (!logits) return { language: null, noSpeech: 1 };
+  const scores: Float32Array = logits;
+  let language: string | null = null;
+  let best = -Infinity;
+  for (const [token, id] of Object.entries(config.lang_to_id)) {
+    if (scores[id] > best) {
+      best = scores[id];
+      language = token.replace(/[<|>]/g, '');
+    }
+  }
+  let max = -Infinity;
+  for (const v of scores) if (v > max) max = v;
+  let sum = 0;
+  for (const v of scores) sum += Math.exp(v - max);
+  const noSpeech = Math.exp(scores[config.no_timestamps_token_id - 1] - max) / sum;
+  return { language, noSpeech };
+}
+
+/**
+ * How much a sample sounds like speech. Besides the "no speech" probability, Whisper writes a
+ * short greedy transcription in the detected language: on real words it is confident (high
+ * average log-probability), on noise it hesitates or makes up its usual subtitle credits.
+ */
+async function speechSample(audio: Float32Array): Promise<SpeechSample> {
+  const { processor, model, tokenizer } = transcriber as unknown as WhisperInternals;
+  const { input_features } = await processor(audio);
+  const { language, noSpeech } = await probe(audio, input_features);
+  let total = 0;
+  let steps = 0;
+  const output = (await model.generate({
+    inputs: input_features,
+    language: language ?? undefined,
+    task: 'transcribe',
+    max_new_tokens: 32,
+    return_timestamps: false,
+    begin_suppress_tokens: null,
+    logits_processor: [
+      (_ids: unknown, scores: { data: Float32Array }) => {
+        // Log-probability of the token greedy decoding picks (the most likely one).
+        let max = -Infinity;
+        for (const v of scores.data) if (v > max) max = v;
+        let sum = 0;
+        for (const v of scores.data) sum += Math.exp(v - max);
+        total -= Math.log(sum);
+        steps++;
+        return scores;
+      },
+    ],
+  })) as { data: ArrayLike<number | bigint> };
+  const text = tokenizer.decode(Array.from(output.data, Number), { skip_special_tokens: true }).trim();
+  const words = text.toLowerCase().match(/[\p{L}\p{N}']+/gu) ?? [];
+  const invented = HALLUCINATIONS.some((re) => re.test(text)) || (words.length >= 4 && new Set(words).size <= words.length / 3);
+  return { noSpeech, logprob: steps ? total / steps : -10, words: words.length, invented };
 }
 
 const api: AiWorkerApi = {
   detectDevice,
+
+  /** Speech clues of each sample (up to 30 s of 16 kHz audio taken from a clip). */
+  async detectSpeech(
+    samples: Float32Array[],
+    model: WhisperModel,
+    onProgress: (p: TranscribeProgress) => void,
+  ): Promise<{ device: AiDevice; samples: SpeechSample[] }> {
+    cancelled = false;
+    const device = await load(model, onProgress);
+    const results: SpeechSample[] = [];
+    for (const sample of samples) {
+      if (cancelled) throw new Error('CANCELLED');
+      results.push(await speechSample(sample));
+      onProgress({ stage: 'transcribe', progress: results.length / samples.length });
+    }
+    return { device, samples: results };
+  },
 
   async transcribe(
     pcm: Float32Array,
@@ -130,7 +210,7 @@ const api: AiWorkerApi = {
         .slice(0, 3);
       const votes = new Map<string, number>();
       for (const s of samples) {
-        const guess = await detectLanguage(pcm.subarray(Math.floor(s.start * sampleRate), Math.floor(s.end * sampleRate)));
+        const guess = (await probe(pcm.subarray(Math.floor(s.start * sampleRate), Math.floor(s.end * sampleRate)))).language;
         if (guess) votes.set(guess, (votes.get(guess) ?? 0) + 1);
       }
       language = [...votes.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ?? null;

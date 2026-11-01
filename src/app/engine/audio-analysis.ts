@@ -147,6 +147,61 @@ export function detectSilencesFromWords(words: { start: number; end: number }[],
 }
 
 /**
+ * Cuts for a clip without voice (street, nature, ambience): only real dead air is removed,
+ * i.e. long stretches close to the noise floor. A recording that is silent from start to end
+ * has nothing to compare with and is left alone (the picture is what matters there).
+ */
+export function detectDeadAir(frameDb: Float32Array, duration: number, s: SilenceSettings): Cut[] {
+  if (!frameDb.length) return [];
+  const db = smoothDb(frameDb, 5);
+  const loud = percentile(db, 0.95);
+  if (loud < -55) return [];
+  const threshold = Math.min(percentile(db, 0.05) + 6, loud - 25);
+  const pauses: Range[] = [];
+  let start = -1;
+  for (let f = 0; f <= db.length; f++) {
+    const quiet = f < db.length && db[f] < threshold;
+    if (quiet && start < 0) start = f;
+    if (!quiet && start >= 0) {
+      pauses.push({ start: start / FRAME_RATE, end: Math.min(duration, f / FRAME_RATE) });
+      start = -1;
+    }
+  }
+  // Ambience needs longer pauses and more room than speech before a cut feels right.
+  return pausesToCuts(pauses, duration, { ...s, minSilence: Math.max(1, s.minSilence * 3), padding: Math.max(0.25, s.padding * 2) });
+}
+
+/** Loudness the leveling brings each clip to (95th percentile of the 20 ms loudness). */
+export const LEVEL_TARGET_DB = -20;
+
+/** Gain that brings the loud parts of a recording to LEVEL_TARGET_DB (between ×0.25 and ×4). */
+export function levelingGain(frameDb: Float32Array): number {
+  if (!frameDb.length) return 1;
+  const loud = percentile(smoothDb(frameDb), 0.95);
+  if (loud < -70) return 1;
+  return Math.min(4, Math.max(0.25, 10 ** ((LEVEL_TARGET_DB - loud) / 20)));
+}
+
+/**
+ * A sample where Whisper confidently heard real words. Measured on speech: −0.5 to −0.85 on
+ * average per token; on street or nature ambience: below −1.2, or one or two words only.
+ */
+export function isSpoken(s: { noSpeech: number; logprob: number; words: number; invented: boolean }): boolean {
+  return !s.invented && s.words >= 3 && s.logprob > -1 && s.noSpeech < 0.6;
+}
+
+/**
+ * Decides whether a clip has speech from a few samples of it: someone speaks when Whisper
+ * confidently hears words in at least a quarter of them, so a single distant voice in a long
+ * ambience does not turn it into a talking clip.
+ */
+export function hasVoice(samples: { noSpeech: number; logprob: number; words: number; invented: boolean }[]): boolean {
+  if (!samples.length) return false;
+  const spoken = samples.filter(isSpoken).length;
+  return spoken >= Math.max(1, Math.ceil(samples.length * 0.25));
+}
+
+/**
  * Splits the recording into chunks of at most 30 s for Whisper, cutting at the quietest
  * frame near each boundary so no word is split in half. Silent chunks are flagged so they
  * can be skipped (Whisper tends to hallucinate text on silence).

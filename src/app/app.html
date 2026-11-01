@@ -10,6 +10,7 @@
         @for (l of navLinks; track l.fragment) {
           <a routerLink="/" [fragment]="l.fragment">{{ l.key | transloco }}</a>
         }
+        <a routerLink="/thumbnail" routerLinkActive="active">{{ 'nav.thumbnail' | transloco }}</a>
         <a routerLink="/changelog" routerLinkActive="active">{{ 'nav.changelog' | transloco }}</a>
       </nav>
 
@@ -54,7 +55,11 @@
             <app-icon name="arrow-right" [size]="16" />
           </a>
         }
-        <a routerLink="/changelog" (click)="menuOpen.set(false)" [style.--i]="3">
+        <a routerLink="/thumbnail" (click)="menuOpen.set(false)" [style.--i]="3">
+          {{ 'nav.thumbnail' | transloco }}
+          <app-icon name="arrow-right" [size]="16" />
+        </a>
+        <a routerLink="/changelog" (click)="menuOpen.set(false)" [style.--i]="4">
           {{ 'nav.changelog' | transloco }}
           <app-icon name="arrow-right" [size]="16" />
         </a>
@@ -102,6 +107,7 @@
         <div>
           <b>{{ 'footer.product' | transloco }}</b>
           <a routerLink="/app">{{ 'nav.open' | transloco }}</a>
+          <a routerLink="/thumbnail">{{ 'nav.thumbnail' | transloco }}</a>
           <a routerLink="/changelog">{{ 'nav.changelog' | transloco }}</a>
           <a [href]="repoUrl" target="_blank" rel="noopener">GitHub</a>
           <a [href]="repoUrl + '/issues'" target="_blank" rel="noopener">{{ 'footer.issues' | transloco }}</a>

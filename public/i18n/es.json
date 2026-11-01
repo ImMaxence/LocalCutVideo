@@ -17,7 +17,8 @@
     "install": "Instalar app",
     "open": "Abrir el editor",
     "menu": "Abrir el menú",
-    "close": "Cerrar el menú"
+    "close": "Cerrar el menú",
+    "thumbnail": "Miniaturas"
   },
   "theme": {
     "system": "Sistema",
@@ -104,8 +105,8 @@
         "text": "Un ligero zoom alterno en cada corte hace que los jump cuts parezcan intencionados y mantiene la atención"
       },
       "ducking": {
-        "title": "Auto-ducking",
-        "text": "Añade música de fondo: baja sola cuando alguien habla y vuelve a subir en las pausas"
+        "title": "Sonido y música",
+        "text": "Sube el volumen, iguala tus clips y añade una música de fondo que baja sola cuando alguien habla"
       },
       "recovery": {
         "title": "Recuperación tras un fallo",
@@ -189,6 +190,20 @@
     "final": {
       "title": "Tu próximo vídeo, editado en minutos",
       "text": "Sin registro, sin subidas, sin marca de agua. Abre un archivo y empieza"
+    },
+    "thumbnail": {
+      "eyebrow": "Nuevo · Miniaturas",
+      "title": "Y la miniatura a juego",
+      "text": "El creador de miniaturas encuentra los momentos más nítidos de tu vídeo. Añade un título grande con palabras en color y descárgala al tamaño correcto",
+      "points": {
+        "moments": "Sugerencia de los mejores momentos",
+        "title": "Título con palabras destacadas, 4 estilos",
+        "formats": "YouTube 1280×720, Shorts y cuadrado",
+        "local": "Creada en tu dispositivo, no se sube nada"
+      },
+      "cta": "Crear una miniatura",
+      "mockTitle": "Mi primer",
+      "mockAccent": "vlog"
     }
   },
   "changelog": {
@@ -349,7 +364,7 @@
       "cuts": "Cortes",
       "captions": "Subtítulos",
       "framing": "Encuadre",
-      "audio": "Música",
+      "audio": "Sonido",
       "clips": "Clips"
     },
     "format": {
@@ -361,7 +376,12 @@
       "source": "Origen:",
       "resolution": "Resolución",
       "fps": "Fotogramas por segundo",
-      "exportNote": "La resolución y los fotogramas por segundo se eligen al exportar"
+      "exportNote": "La resolución y los fotogramas por segundo se eligen al exportar",
+      "rotation": "Rotación",
+      "rotateLeft": "Girar a la izquierda",
+      "rotateRight": "Girar a la derecha",
+      "rotationHint": "Para un vídeo grabado de lado. Se aplica a todos los clips",
+      "rotatedFaces": "Vídeo girado: vuelve a activar «Seguir la cara» en Encuadre"
     },
     "cuts": {
       "title": "Detección de silencios",
@@ -389,7 +409,8 @@
         "normal": "Equilibrado",
         "tight": "Dinámico"
       },
-      "live": "Los cortes se actualizan en directo al cambiar los ajustes"
+      "live": "Los cortes se actualizan en directo al cambiar los ajustes",
+      "silentClips": "{{ count }} clip(s) sin voz: solo se cortan los silencios reales"
     },
     "captions": {
       "title": "Subtítulos incrustados",
@@ -464,7 +485,10 @@
       "summary": "{{ count }} clip(s) · {{ time }} en total",
       "confirmRemove": "¿Quitar «{{ name }}» del proyecto? También se quitan sus cortes y palabras (Ctrl+Z para deshacer)",
       "added": "{{ count }} clip(s) añadido(s)",
-      "addedTranscribe": "{{ count }} clip(s) añadido(s). Vuelve a transcribir para subtitularlos: los clips ya transcritos se conservan"
+      "addedTranscribe": "{{ count }} clip(s) añadido(s). Vuelve a transcribir para subtitularlos: los clips ya transcritos se conservan",
+      "noVoice": "sin voz",
+      "voiceOn": "Con voz · haz clic si nadie habla",
+      "voiceOff": "Sin voz · haz clic si alguien habla"
     },
     "auto": {
       "button": "Montaje automático",
@@ -491,7 +515,8 @@
       "summary": {
         "cuts": "cortes",
         "removed": "eliminados",
-        "words": "palabras subtituladas"
+        "words": "palabras subtituladas",
+        "silent": "{{ count }} clip(s) sin voz: solo se cortaron los silencios reales"
       },
       "steps": {
         "analyze": "Analizando el audio",
@@ -499,13 +524,35 @@
         "fillers": "Quitando titubeos",
         "silences": "Cortando los silencios",
         "framing": "Siguiendo la cara",
-        "style": "Subtítulos y zoom inteligente"
+        "style": "Subtítulos y zoom inteligente",
+        "voice": "Detección de voz"
       },
       "status": {
         "skipped": "omitido",
         "error": "error"
+      },
+      "voice": {
+        "title": "¿Alguien habla en el vídeo?",
+        "auto": "Auto",
+        "yes": "Sí",
+        "no": "No",
+        "detectedYes": "Detectado: alguien habla",
+        "detectedNo": "Detectado: sin voz",
+        "hint": "Sin voz: ni transcripción ni subtítulos, solo se cortan los silencios reales"
       }
-    }
+    },
+    "mix": {
+      "title": "Sonido del vídeo",
+      "hint": "Sube o baja el sonido de tus clips",
+      "volume": "Volumen",
+      "mute": "Silenciar",
+      "unmute": "Activar el sonido",
+      "volumeHint": "Se aplica a la vista previa y a la exportación",
+      "boostHint": "Por encima del 100 %, un limitador evita la saturación",
+      "normalize": "Igualar el volumen de los clips",
+      "normalizeHint": "Cada clip al mismo nivel, grabado de cerca o de lejos"
+    },
+    "thumbnail": "Miniatura"
   },
   "legal": {
     "updated": "Última actualización: 1 de noviembre de 2026",
@@ -657,5 +704,67 @@
         }
       ]
     }
+  },
+  "thumbnail": {
+    "eyebrow": "Creador de miniaturas",
+    "title": "Miniaturas que dan ganas de hacer clic",
+    "lead": "Elige el mejor momento de tu vídeo, añade un título llamativo y descarga una imagen lista para YouTube, Shorts o Instagram. Todo ocurre en tu dispositivo",
+    "pick": "Suelta un vídeo o una imagen",
+    "pickHint": "MP4, MOV, WebM, JPG, PNG… el archivo se queda en tu dispositivo",
+    "choose": "Elegir un archivo",
+    "local": "No se sube nada: la imagen se crea en tu navegador",
+    "permissionTitle": "Permitir el acceso al vídeo del proyecto",
+    "permissionText": "Tu navegador pide una confirmación antes de volver a leer el archivo de tu dispositivo",
+    "permission": "Permitir el acceso",
+    "back": "Volver al editor",
+    "dragHint": "Arrastra la imagen para reencuadrarla",
+    "frame": "Fotograma del vídeo",
+    "prevFrame": "Fotograma anterior",
+    "nextFrame": "Fotograma siguiente",
+    "moments": "Mejores momentos",
+    "other": "Elegir otro archivo",
+    "format": "Formato",
+    "formats": {
+      "landscape": "YouTube",
+      "vertical": "Shorts · TikTok",
+      "square": "Instagram"
+    },
+    "text": "Título",
+    "textPlaceholder": "Tu título llamativo",
+    "defaultText": "Tu *título* aquí",
+    "accentHint": "Pon palabras entre asteriscos para colorearlas: *así*",
+    "size": "Tamaño del texto",
+    "position": "Posición",
+    "positions": {
+      "top": "Arriba",
+      "center": "Centro",
+      "bottom": "Abajo"
+    },
+    "alignCenter": "Centrado",
+    "alignLeft": "A la izquierda",
+    "uppercase": "Mayúsculas",
+    "tilt": "Texto inclinado",
+    "style": "Estilo del título",
+    "styles": {
+      "outline": "Contorno",
+      "shadow": "Sombra",
+      "box": "Banda",
+      "highlight": "Marcador"
+    },
+    "color": "Color del texto",
+    "accent": "Color de las palabras destacadas",
+    "image": "Imagen",
+    "zoom": "Zoom",
+    "brightness": "Brillo",
+    "contrast": "Contraste",
+    "saturation": "Saturación",
+    "shade": "Oscurecer los bordes",
+    "reset": "Restablecer",
+    "downloadJpg": "Descargar en JPG",
+    "downloadPng": "Descargar en PNG",
+    "sizeInfo": "{{ width }} × {{ height }} px · JPG recomendado para YouTube (menos de 2 MB)",
+    "saved": "Guardada: {{ name }}",
+    "loadError": "No se pudo abrir este proyecto",
+    "readError": "No se pudo leer este archivo"
   }
 }

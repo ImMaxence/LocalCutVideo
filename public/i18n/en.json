@@ -17,7 +17,8 @@
     "install": "Install app",
     "open": "Open the editor",
     "menu": "Open menu",
-    "close": "Close menu"
+    "close": "Close menu",
+    "thumbnail": "Thumbnails"
   },
   "theme": {
     "system": "System",
@@ -104,8 +105,8 @@
         "text": "Alternating punch-in zooms on every cut make jump cuts look intentional and keep viewers watching"
       },
       "ducking": {
-        "title": "Auto-ducking",
-        "text": "Add background music: it lowers automatically when someone speaks and comes back up during pauses"
+        "title": "Sound and music",
+        "text": "Turn the volume up, level your clips and add background music that lowers itself whenever someone speaks"
       },
       "recovery": {
         "title": "Crash recovery",
@@ -189,6 +190,20 @@
     "final": {
       "title": "Your next video, edited in minutes",
       "text": "No sign-up, no upload, no watermark. Open a file and start editing"
+    },
+    "thumbnail": {
+      "eyebrow": "New · Thumbnails",
+      "title": "And the thumbnail to go with it",
+      "text": "The thumbnail maker finds the sharpest moments of your video. Add a big title with colored words and download it in the right size",
+      "points": {
+        "moments": "Best moments suggested",
+        "title": "Title with highlighted words, 4 styles",
+        "formats": "YouTube 1280×720, Shorts and square",
+        "local": "Made on your device, nothing is uploaded"
+      },
+      "cta": "Make a thumbnail",
+      "mockTitle": "My first",
+      "mockAccent": "vlog"
     }
   },
   "changelog": {
@@ -349,7 +364,7 @@
       "cuts": "Cuts",
       "captions": "Subtitles",
       "framing": "Framing",
-      "audio": "Music",
+      "audio": "Sound",
       "clips": "Clips"
     },
     "format": {
@@ -361,7 +376,12 @@
       "source": "Source:",
       "resolution": "Resolution",
       "fps": "Frames per second",
-      "exportNote": "Resolution and frame rate are chosen when exporting"
+      "exportNote": "Resolution and frame rate are chosen when exporting",
+      "rotation": "Rotation",
+      "rotateLeft": "Rotate left",
+      "rotateRight": "Rotate right",
+      "rotationHint": "For a video filmed sideways. Applies to every clip",
+      "rotatedFaces": "Video rotated: turn on “Follow the face” again in Framing"
     },
     "cuts": {
       "title": "Silence detection",
@@ -389,7 +409,8 @@
         "normal": "Balanced",
         "tight": "Dynamic"
       },
-      "live": "Cuts update live as you change the settings"
+      "live": "Cuts update live as you change the settings",
+      "silentClips": "{{ count }} clip(s) without voice: only real dead air is cut there"
     },
     "captions": {
       "title": "Burned-in subtitles",
@@ -464,7 +485,10 @@
       "summary": "{{ count }} clip(s) · {{ time }} in total",
       "confirmRemove": "Remove “{{ name }}” from the project? Its cuts and words are removed too (Ctrl+Z to undo)",
       "added": "{{ count }} clip(s) added",
-      "addedTranscribe": "{{ count }} clip(s) added. Transcribe again to subtitle them: clips already transcribed are kept"
+      "addedTranscribe": "{{ count }} clip(s) added. Transcribe again to subtitle them: clips already transcribed are kept",
+      "noVoice": "no voice",
+      "voiceOn": "Voice · click if nobody speaks",
+      "voiceOff": "No voice · click if someone speaks"
     },
     "auto": {
       "button": "Auto edit",
@@ -491,7 +515,8 @@
       "summary": {
         "cuts": "cuts",
         "removed": "removed",
-        "words": "words subtitled"
+        "words": "words subtitled",
+        "silent": "{{ count }} clip(s) without voice: only real dead air was cut"
       },
       "steps": {
         "analyze": "Analyzing the audio",
@@ -499,13 +524,35 @@
         "fillers": "Removing hesitations",
         "silences": "Cutting the silences",
         "framing": "Following the face",
-        "style": "Subtitles and smart zoom"
+        "style": "Subtitles and smart zoom",
+        "voice": "Detecting voices"
       },
       "status": {
         "skipped": "skipped",
         "error": "failed"
+      },
+      "voice": {
+        "title": "Does someone speak in the video?",
+        "auto": "Auto",
+        "yes": "Yes",
+        "no": "No",
+        "detectedYes": "Detected: someone speaks",
+        "detectedNo": "Detected: no voice",
+        "hint": "No voice: no transcript or subtitles, only real dead air is cut"
       }
-    }
+    },
+    "mix": {
+      "title": "Video sound",
+      "hint": "Turn your clips' sound up or down",
+      "volume": "Volume",
+      "mute": "Mute",
+      "unmute": "Unmute",
+      "volumeHint": "Applies to the preview and the export",
+      "boostHint": "Above 100 %, a limiter prevents distortion",
+      "normalize": "Level the clips",
+      "normalizeHint": "Every clip at the same loudness, filmed close or far"
+    },
+    "thumbnail": "Thumbnail"
   },
   "legal": {
     "updated": "Last updated: November 1, 2026",
@@ -657,5 +704,67 @@
         }
       ]
     }
+  },
+  "thumbnail": {
+    "eyebrow": "Thumbnail maker",
+    "title": "Thumbnails people want to click",
+    "lead": "Pick the best moment of your video, add a punchy title and download an image ready for YouTube, Shorts or Instagram. Everything happens on your device",
+    "pick": "Drop a video or an image",
+    "pickHint": "MP4, MOV, WebM, JPG, PNG… the file stays on your device",
+    "choose": "Choose a file",
+    "local": "Nothing is uploaded: the image is made in your browser",
+    "permissionTitle": "Allow access to the project's video",
+    "permissionText": "Your browser asks for a confirmation before reading the file from your device again",
+    "permission": "Allow access",
+    "back": "Back to the editor",
+    "dragHint": "Drag the picture to reframe it",
+    "frame": "Video frame",
+    "prevFrame": "Previous frame",
+    "nextFrame": "Next frame",
+    "moments": "Best moments",
+    "other": "Choose another file",
+    "format": "Format",
+    "formats": {
+      "landscape": "YouTube",
+      "vertical": "Shorts · TikTok",
+      "square": "Instagram"
+    },
+    "text": "Title",
+    "textPlaceholder": "Your catchy title",
+    "defaultText": "Your *title* here",
+    "accentHint": "Put words between asterisks to color them: *like this*",
+    "size": "Text size",
+    "position": "Position",
+    "positions": {
+      "top": "Top",
+      "center": "Center",
+      "bottom": "Bottom"
+    },
+    "alignCenter": "Centered",
+    "alignLeft": "Left",
+    "uppercase": "Capital letters",
+    "tilt": "Tilted text",
+    "style": "Title style",
+    "styles": {
+      "outline": "Outline",
+      "shadow": "Shadow",
+      "box": "Banner",
+      "highlight": "Marker"
+    },
+    "color": "Text color",
+    "accent": "Highlighted words color",
+    "image": "Picture",
+    "zoom": "Zoom",
+    "brightness": "Brightness",
+    "contrast": "Contrast",
+    "saturation": "Saturation",
+    "shade": "Darken the edges",
+    "reset": "Reset",
+    "downloadJpg": "Download JPG",
+    "downloadPng": "Download PNG",
+    "sizeInfo": "{{ width }} × {{ height }} px · JPG is best for YouTube (under 2 MB)",
+    "saved": "Saved: {{ name }}",
+    "loadError": "This project could not be opened",
+    "readError": "This file could not be read"
   }
 }

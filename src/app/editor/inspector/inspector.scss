@@ -348,6 +348,70 @@ h3 {
   flex: none;
 }
 
+.rotate-row,
+.volume-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rotate-row .rotation {
+  min-width: 44px;
+  text-align: center;
+  font-family: var(--mono);
+}
+
+.volume-row input {
+  flex: 1;
+  min-width: 0;
+}
+
+.switch-text {
+  display: grid;
+  gap: 2px;
+  small {
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+
+.levels {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+  font-size: 12.5px;
+  li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+  }
+  .num {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    font-size: 11px;
+  }
+  .name {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--text-muted);
+  }
+  b {
+    font-family: var(--mono);
+    font-weight: 600;
+  }
+}
+
+.clip-actions .voice.off {
+  color: var(--text-faint);
+}
+
 .music-file {
   display: flex;
   align-items: center;

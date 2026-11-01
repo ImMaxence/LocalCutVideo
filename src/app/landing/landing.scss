@@ -688,3 +688,112 @@ details {
     }
   }
 }
+
+/* Thumbnail maker promo ------------------------------------------------------------------- */
+
+.promo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: 40px;
+  align-items: center;
+  padding: 40px;
+  h2 {
+    font-size: clamp(28px, 3.6vw, 40px);
+    font-weight: 780;
+    margin: 12px 0 14px;
+  }
+  .btn {
+    margin-top: 22px;
+  }
+}
+
+.promo-points {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 550;
+  }
+  app-icon {
+    flex: none;
+    color: var(--success);
+  }
+}
+
+/* A thumbnail drawn in CSS: sunset, hill and a big outlined title with an accent word. */
+.mock-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #2a1b6b 0%, #b14dff 48%, #ff8a5c 78%, #ffd166 100%);
+  box-shadow: var(--shadow-lg);
+  transform: rotate(-1.5deg);
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 45%, transparent 45%, rgb(0 0 0 / 0.45));
+  }
+  .sun {
+    position: absolute;
+    left: 58%;
+    top: 34%;
+    width: 22%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle, #fff6c9, #ffd166 60%, transparent 72%);
+  }
+  .hill {
+    position: absolute;
+    left: -10%;
+    right: -10%;
+    bottom: -38%;
+    height: 70%;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #1f1147, #0b0620);
+  }
+  .mock-title {
+    position: absolute;
+    z-index: 1;
+    left: 6%;
+    right: 6%;
+    bottom: 10%;
+    font: 800 clamp(26px, 4.4vw, 54px) / 1.02 var(--font);
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    color: #fff;
+    -webkit-text-stroke: 0.08em #000;
+    paint-order: stroke fill;
+    text-shadow: 0 0.06em 0.15em rgb(0 0 0 / 0.5);
+    transform: rotate(-3deg);
+    em {
+      font-style: normal;
+      color: #ffd60a;
+    }
+  }
+  .mock-time {
+    position: absolute;
+    z-index: 1;
+    right: 3%;
+    bottom: 5%;
+    padding: 1px 6px;
+    border-radius: 4px;
+    background: rgb(0 0 0 / 0.8);
+    color: #fff;
+    font: 600 12px/18px var(--mono);
+  }
+}
+
+@media (max-width: 900px) {
+  .promo {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 24px;
+    gap: 28px;
+  }
+}

@@ -22,9 +22,12 @@ import {
   SILENCE_PRESETS,
   type SilencePreset,
   concatAligned,
+  detectDeadAir,
   detectSilences,
   detectSilencesFromWords,
   duckingEnvelope,
+  hasVoice,
+  levelingGain,
   suggestThreshold,
   whisperChunks,
 } from '../engine/audio-analysis';
@@ -37,21 +40,26 @@ import {
   type FacePoint,
   type FramingMode,
   type Project,
+  type Rotation,
   type SilenceSettings,
   type WhisperModel,
   type Word,
+  clipHasVoice,
   defaultCaptionWords,
   fingerprint,
   migrateProject,
   uid,
 } from '../engine/model';
 import { moveItem, placeClips, remapTimeline } from '../engine/sequence';
-import { aspectRatio, zoomBeats } from '../engine/render';
+import { aspectRatio, rotatedSize, zoomBeats } from '../engine/render';
 import { buildCaptionPages, keptSegments, nextKeptTime, removedRanges, totalDuration } from '../engine/timeline-math';
 import type { AiDevice, RawWord } from '../workers/worker-types';
 
 /** Shortest cut, in seconds (also the minimum length of a timeline region). */
 export const MIN_CUT = 0.05;
+
+/** Samples of a clip rated by Whisper to tell whether someone speaks in it. */
+const VOICE_SAMPLES = 6;
 
 /** Per clip: `missing` = no stored handle (browser without File System Access), `moved` = handle broken. */
 export type ClipStatus = 'loading' | 'ready' | 'permission' | 'missing' | 'moved' | 'error';
@@ -87,7 +95,7 @@ export interface PlayerApi {
 }
 
 /** Auto edit: one click that chains every automatic tool with good defaults. */
-export type AutoStepId = 'analyze' | 'transcribe' | 'fillers' | 'silences' | 'framing' | 'style';
+export type AutoStepId = 'analyze' | 'voice' | 'transcribe' | 'fillers' | 'silences' | 'framing' | 'style';
 export type AutoStepStatus = 'pending' | 'running' | 'done' | 'skipped' | 'error';
 
 export interface AutoEditOptions {
@@ -103,7 +111,7 @@ export interface AutoEditOptions {
 export interface AutoEditRun {
   steps: { id: AutoStepId; status: AutoStepStatus }[];
   done: boolean;
-  summary?: { removed: number; cuts: number; words: number; faces: boolean };
+  summary?: { removed: number; cuts: number; words: number; faces: boolean; silentClips: number };
 }
 
 export type PreviewQuality = 360 | 540 | 720;
@@ -149,6 +157,8 @@ export class EditorStore {
   readonly transcribedWords = signal(0);
   readonly aiDevice = signal<AiDevice | null>(null);
   readonly faceProgress = signal<number | null>(null);
+  /** Progress of the voice detection (0..1), null when idle. */
+  readonly voiceProgress = signal<number | null>(null);
   readonly exportState = signal<ExportState>({ status: 'idle' });
   readonly saveState = signal<SaveState>('saved');
   readonly savedAt = signal<number | null>(null);
@@ -212,11 +222,40 @@ export class EditorStore {
   });
   /** Preview resolution (short side). Lower is lighter for the browser; the export is not affected. */
   readonly previewQuality = signal<PreviewQuality>(readPreviewQuality());
+  /** Loudness that drives the music ducking: clips without voice never push the music down. */
+  readonly duckingDb = computed(() => {
+    const a = this.analysis();
+    const p = this.project();
+    if (!a || !p) return null;
+    const quiet = this.clips().filter((c) => !clipHasVoice(p.clips.find((x) => x.id === c.id) ?? c));
+    if (!quiet.length) return a.frameDb;
+    const db = a.frameDb.slice();
+    for (const c of quiet) db.fill(-90, Math.round(c.start * FRAME_RATE), Math.round(c.end * FRAME_RATE));
+    return db;
+  });
   readonly musicEnvelope = computed(() => {
     const p = this.project();
-    const a = this.analysis();
-    if (!p?.music.enabled || !a || !this.musicFile()) return null;
-    return duckingEnvelope(a.frameDb, this.segments(), this.outputDuration(), p.silence.thresholdDb, p.music.volume, p.music.ducking);
+    const db = this.duckingDb();
+    if (!p?.music.enabled || !db || !this.musicFile()) return null;
+    return duckingEnvelope(db, this.segments(), this.outputDuration(), p.silence.thresholdDb, p.music.volume, p.music.ducking);
+  });
+  private readonly levels = new WeakMap<AudioAnalysis, number>();
+  /** Volume of each clip's sound: the overall volume, times the leveling gain when enabled. */
+  readonly clipGains = computed(() => {
+    const p = this.project();
+    const gains = new Map<string, number>();
+    for (const c of p?.clips ?? []) {
+      let gain = p!.audio.volume;
+      const a = this.clipAnalyses().get(c.id);
+      if (p!.audio.normalize && a) {
+        let level = this.levels.get(a);
+        if (level === undefined) this.levels.set(a, (level = levelingGain(a.frameDb)));
+        // Leveling never boosts the room noise of a clip without voice.
+        gain *= clipHasVoice(c) ? level : Math.min(1, level);
+      }
+      gains.set(c.id, gain);
+    }
+    return gains;
   });
 
   private player: PlayerApi | null = null;
@@ -579,11 +618,29 @@ export class EditorStore {
   // ---------------------------------------------------------------------------------------
   // Auto-cut
 
-  /** Silence cuts for the current settings: from the transcript when chosen and available. */
+  /**
+   * Silence cuts for the current settings, clip by clip: from the transcript when chosen and
+   * available, from the loudness otherwise, and only real dead air in clips without voice.
+   */
   private silenceCuts(p: Project): Cut[] {
-    const a = this.analysis();
-    if (p.silence.mode === 'transcript' && p.words.length) return detectSilencesFromWords(p.words, this.duration(), p.silence);
-    return a ? detectSilences(a.frameDb, this.duration(), p.silence) : [];
+    const analyses = this.clipAnalyses();
+    const cuts: Cut[] = [];
+    for (const clip of placeClips(p.clips)) {
+      const analysis = analyses.get(clip.id);
+      const length = clip.end - clip.start;
+      const local = (list: Cut[]) => list.map((c) => ({ ...c, start: c.start + clip.start, end: c.end + clip.start }));
+      const words = p.words
+        .filter((w) => (w.start + w.end) / 2 >= clip.start && (w.start + w.end) / 2 < clip.end)
+        .map((w) => ({ start: w.start - clip.start, end: w.end - clip.start }));
+      if (!clipHasVoice(clip)) {
+        if (analysis) cuts.push(...local(detectDeadAir(analysis.frameDb, length, p.silence)));
+      } else if (p.silence.mode === 'transcript' && words.length) {
+        cuts.push(...local(detectSilencesFromWords(words, length, p.silence)));
+      } else if (analysis) {
+        cuts.push(...local(detectSilences(analysis.frameDb, length, p.silence)));
+      }
+    }
+    return cuts;
   }
 
   detectSilences(): number {
@@ -689,7 +746,8 @@ export class EditorStore {
   readonly untranscribedClips = computed(() => {
     const p = this.project();
     if (!p?.transcript) return 0;
-    return this.clips().filter((c) => !p.words.some((w) => (w.start + w.end) / 2 >= c.start && (w.start + w.end) / 2 < c.end)).length;
+    const voiced = new Set(p.clips.filter(clipHasVoice).map((c) => c.id));
+    return this.clips().filter((c) => voiced.has(c.id) && !p.words.some((w) => (w.start + w.end) / 2 >= c.start && (w.start + w.end) / 2 < c.end)).length;
   });
 
   /**
@@ -706,13 +764,16 @@ export class EditorStore {
       if (!this.analysis()) throw new Error('NO_ANALYSIS');
       const clips = this.clips();
       const wordsOf = (c: (typeof clips)[number]) => p.words.filter((w) => (w.start + w.end) / 2 >= c.start && (w.start + w.end) / 2 < c.end);
-      const todo = scope === 'all' ? clips : clips.filter((c) => !wordsOf(c).length);
+      // Clips without voice are never transcribed: Whisper would invent text on the ambience.
+      const voiced = new Set(p.clips.filter(clipHasVoice).map((c) => c.id));
+      const todo = (scope === 'all' ? clips : clips.filter((c) => !wordsOf(c).length)).filter((c) => voiced.has(c.id));
       const totalSeconds = todo.reduce((n, c) => n + (c.end - c.start), 0) || 1;
       let doneSeconds = 0;
       const result: Word[] = [];
       let detected: string | null = null;
 
       for (const clip of clips) {
+        if (!voiced.has(clip.id)) continue;
         if (!todo.includes(clip)) {
           result.push(...wordsOf(clip));
           continue;
@@ -825,6 +886,7 @@ export class EditorStore {
     if (!clips.length) return false;
     this.faceCancelled = false;
     this.faceProgress.set(0);
+    const rotation = this.project()?.rotation ?? 0;
     try {
       const total = this.duration() || 1;
       const points: FacePoint[] = [];
@@ -833,7 +895,7 @@ export class EditorStore {
         const file = this.clipFiles().get(clip.id);
         if (!file || this.faceCancelled) break;
         const length = clip.end - clip.start;
-        const samples = await analyzeFaces(file, length, (p) => this.faceProgress.set((clip.start + p * length) / total), () => this.faceCancelled);
+        const samples = await analyzeFaces(file, length, (p) => this.faceProgress.set((clip.start + p * length) / total), () => this.faceCancelled, rotation);
         const track = smoothFaceTrack(samples);
         found ||= !!track;
         const local = track ?? [
@@ -845,6 +907,8 @@ export class EditorStore {
         const last = local[local.length - 1];
         points.push({ t: clip.end - 0.001, x: last.x, y: last.y });
       }
+      // Turned in the meantime: these positions belong to the old orientation.
+      if (this.project()?.rotation !== rotation) return false;
       this.update((d) => {
         d.faces = found ? points : null;
         d.framing.mode = found ? 'face' : 'center';
@@ -880,6 +944,81 @@ export class EditorStore {
     this.faceCancelled = true;
   }
 
+  /** Turns the whole project by a quarter turn. The face track no longer matches and is dropped. */
+  rotate(direction: 1 | -1): void {
+    const p = this.project();
+    if (!p) return;
+    const following = p.framing.mode === 'face' || this.faceProgress() !== null;
+    this.faceCancelled = true;
+    this.update((d) => {
+      d.rotation = ((((d.rotation + direction * 90) % 360) + 360) % 360) as Rotation;
+      d.faces = null;
+      d.framing.mode = 'center';
+    });
+    if (following) this.notify('editor.format.rotatedFaces');
+  }
+
+  // ---------------------------------------------------------------------------------------
+  // Voice: does someone speak in each clip?
+
+  /** Says whether someone speaks in a clip (null lets the detection decide). */
+  setClipVoice(clipId: string, voice: boolean | null): void {
+    this.update((d) => {
+      const clip = d.clips.find((c) => c.id === clipId);
+      if (clip) clip.voice = voice;
+      if (d.silence.live) d.cuts = this.withSilenceCuts(d);
+    });
+  }
+
+  /**
+   * Finds out whether someone speaks in the clips left on "auto": Whisper rates a few samples
+   * spread over each clip. A clip without any audible sound has no voice.
+   */
+  async detectVoices(): Promise<void> {
+    const pending = this.project()?.clips.filter((c) => c.voice == null && c.voiceDetected === undefined) ?? [];
+    if (!pending.length) return;
+    this.voiceProgress.set(0);
+    try {
+      const found = new Map<string, boolean>();
+      for (const [i, clip] of pending.entries()) {
+        const placed = this.clips().find((c) => c.id === clip.id);
+        const file = this.clipFiles().get(clip.id);
+        const analysis = this.clipAnalyses().get(clip.id);
+        if (!placed || !file || !analysis) continue;
+        const chunks = whisperChunks(analysis.frameDb, placed.end - placed.start, this.project()!.silence.thresholdDb).filter((c) => !c.silent);
+        if (!chunks.length) {
+          found.set(clip.id, false);
+          continue;
+        }
+        const pcm = this.clipPcm.get(clip.id) ?? (await this.extractClipAudio(clip.id, file, () => undefined));
+        const picks =
+          chunks.length <= VOICE_SAMPLES ? chunks : Array.from({ length: VOICE_SAMPLES }, (_, k) => chunks[Math.floor((k * chunks.length) / VOICE_SAMPLES)]);
+        const samples = picks.map((c) => pcm.slice(Math.floor(c.start * ANALYSIS_SAMPLE_RATE), Math.floor(c.end * ANALYSIS_SAMPLE_RATE)));
+        const res = await this.workers.ai.detectSpeech(
+          samples,
+          this.whisperModel(),
+          proxy((p: { stage: 'download' | 'transcribe'; progress: number }) =>
+            this.voiceProgress.set(p.stage === 'download' ? p.progress : (i + p.progress) / pending.length),
+          ),
+        );
+        this.aiDevice.set(res.device);
+        found.set(clip.id, hasVoice(res.samples));
+      }
+      this.update((d) => d.clips.forEach((c) => found.has(c.id) && (c.voiceDetected = found.get(c.id))), { history: false });
+    } finally {
+      this.voiceProgress.set(null);
+    }
+  }
+
+  /** Drops the words heard in clips without voice (text Whisper invented on the ambience). */
+  private dropWordsWithoutVoice(): void {
+    const p = this.project();
+    if (!p) return;
+    const quiet = this.clips().filter((c) => !clipHasVoice(p.clips.find((x) => x.id === c.id) ?? c));
+    const inQuiet = (w: Word) => quiet.some((c) => (w.start + w.end) / 2 >= c.start && (w.start + w.end) / 2 < c.end);
+    if (p.words.some(inQuiet)) this.update((d) => (d.words = d.words.filter((w) => !inQuiet(w))));
+  }
+
   // ---------------------------------------------------------------------------------------
   // Auto edit
 
@@ -888,10 +1027,12 @@ export class EditorStore {
 
   /** Whether the output shape crops the source, i.e. whether following the face matters. */
   needsCrop(format: AspectFormat): boolean {
-    const source = this.project()?.clips[0]?.source;
-    if (!source) return false;
+    const p = this.project();
+    const source = p?.clips[0]?.source;
+    if (!p || !source) return false;
+    const { width, height } = rotatedSize(source.width, source.height, p.rotation);
     const target = aspectRatio(format);
-    return Math.abs(source.width / source.height - target) / target > 0.05;
+    return Math.abs(width / height - target) / target > 0.05;
   }
 
   /**
@@ -904,7 +1045,7 @@ export class EditorStore {
     const current = this.autoEdit();
     if (!p || (current && !current.done)) return;
     this.autoEditBackup = structuredClone(p);
-    const ids: AutoStepId[] = ['analyze', 'transcribe', 'fillers', 'silences', 'framing', 'style'];
+    const ids: AutoStepId[] = ['analyze', 'voice', 'transcribe', 'fillers', 'silences', 'framing', 'style'];
     this.autoEdit.set({ steps: ids.map((id) => ({ id, status: 'pending' })), done: false });
     const mark = (id: AutoStepId, status: AutoStepStatus) =>
       this.autoEdit.update((r) => r && { ...r, steps: r.steps.map((s) => (s.id === id ? { ...s, status } : s)) });
@@ -925,7 +1066,12 @@ export class EditorStore {
         await this.ensureAnalyses();
         if (!this.analysis()) throw new Error('NO_ANALYSIS');
       });
-      await step('transcribe', o.captions || o.fillers || o.silences, async () => {
+      const needsWords = o.captions || o.fillers || o.silences;
+      const undecided = () => this.project()?.clips.some((c) => c.voice == null && c.voiceDetected === undefined) ?? false;
+      await step('voice', needsWords && undecided(), () => this.detectVoices());
+      await step('transcribe', needsWords, async () => {
+        this.dropWordsWithoutVoice();
+        if (!this.project()?.clips.some(clipHasVoice)) return false;
         if (words() && !this.untranscribedClips()) return false;
         await this.transcribe(this.whisperModel(), this.whisperLanguage(), words() ? 'missing' : 'all');
         return true;
@@ -971,6 +1117,7 @@ export class EditorStore {
               cuts: result.cuts.length,
               words: result.words.filter((w) => !w.deleted).length,
               faces: result.framing.mode === 'face',
+              silentClips: result.clips.filter((c) => !clipHasVoice(c)).length,
             },
           },
       );
@@ -1072,10 +1219,16 @@ export class EditorStore {
     try {
       const result = await this.workers.exporter.run(
         {
-          clips: this.clips().map((c) => ({ file: files.get(c.id)!, start: c.start, duration: c.end - c.start, hasAudio: c.source.hasAudio })),
+          clips: this.clips().map((c) => ({
+            file: files.get(c.id)!,
+            start: c.start,
+            duration: c.end - c.start,
+            hasAudio: c.source.hasAudio,
+            gain: this.clipGains().get(c.id) ?? 1,
+          })),
           project: p,
           music: p.music.enabled ? this.musicFile() : null,
-          frameDb: this.analysis()?.frameDb ?? null,
+          frameDb: this.duckingDb(),
           target: target === 'unsupported' ? null : target,
         },
         proxy((progress: { progress: number }) => this.exportState.set({ status: 'running', progress: progress.progress, startedAt })),

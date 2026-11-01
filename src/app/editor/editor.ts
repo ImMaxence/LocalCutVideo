@@ -142,6 +142,7 @@ export class Editor {
   /** Live progress of the running step, when the underlying task reports one. */
   protected stepProgress(id: AutoStepId): number | null {
     if (id === 'analyze') return this.store.audioProgress();
+    if (id === 'voice') return this.store.voiceProgress();
     if (id === 'transcribe') return this.store.transcription()?.progress ?? null;
     if (id === 'framing') return this.store.faceProgress();
     return null;

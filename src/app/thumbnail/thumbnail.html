@@ -1,0 +1,199 @@
+<section class="container thumb">
+  <header class="head">
+    @if (project(); as p) {
+      <a class="btn ghost sm back" [routerLink]="['/app', p.id]"><app-icon name="arrow-left" [size]="15" /> {{ 'thumbnail.back' | transloco }}</a>
+    }
+    <span class="eyebrow"><app-icon name="image" [size]="14" /> {{ 'thumbnail.eyebrow' | transloco }}</span>
+    <h1>{{ 'thumbnail.title' | transloco }}</h1>
+    <p class="muted lead">{{ 'thumbnail.lead' | transloco }}</p>
+  </header>
+
+  @if (permission()) {
+    <div class="card state">
+      <span class="state-icon"><app-icon name="lock" [size]="24" /></span>
+      <b>{{ 'thumbnail.permissionTitle' | transloco }}</b>
+      <p class="muted">{{ 'thumbnail.permissionText' | transloco }}</p>
+      <button class="btn primary" type="button" (click)="grant()"><app-icon name="link" [size]="16" /> {{ 'thumbnail.permission' | transloco }}</button>
+    </div>
+  } @else if (loadingProject()) {
+    <div class="card state"><div class="spinner" aria-hidden="true"></div></div>
+  } @else if (!source()) {
+    <label class="drop" [class.over]="dragging()" (dragover)="onDragOver($event)" (dragleave)="dragging.set(false)" (drop)="onDrop($event)">
+      <input type="file" accept="video/*,image/*,.mov,.mkv" (change)="onFile($event)" data-testid="thumb-input" />
+      <span class="drop-icon"><app-icon name="image" [size]="28" /></span>
+      <b>{{ 'thumbnail.pick' | transloco }}</b>
+      <span class="muted">{{ 'thumbnail.pickHint' | transloco }}</span>
+      <span class="btn primary">{{ 'thumbnail.choose' | transloco }}</span>
+    </label>
+    <p class="local muted"><app-icon name="lock" [size]="14" /> {{ 'thumbnail.local' | transloco }}</p>
+  } @else {
+    <div class="workspace">
+      <div class="stage card">
+        <div class="canvas-wrap" [class.portrait]="settings().format === '9:16'">
+          <!-- Sized by the render effect: a width binding applied after a draw would clear it. -->
+          <canvas
+            #canvas
+            [title]="'thumbnail.dragHint' | transloco"
+            (pointerdown)="onPointerDown($event)"
+            (pointermove)="onPointerMove($event)"
+            (pointerup)="onPointerUp()"
+            (pointercancel)="onPointerUp()"
+          ></canvas>
+          @if (!still()) {
+            <div class="canvas-loading"><div class="spinner" aria-hidden="true"></div></div>
+          }
+        </div>
+        <p class="faint small center"><app-icon name="grip" [size]="13" /> {{ 'thumbnail.dragHint' | transloco }}</p>
+
+        @if (source()!.kind === 'video') {
+          <video #video class="source" [src]="source()!.url" muted playsinline preload="auto" (loadedmetadata)="onMetadata()" (seeked)="capture()" (loadeddata)="capture()"></video>
+          <div class="scrub">
+            <button class="btn ghost icon sm" type="button" (click)="seek(time() - 1 / 30)" [title]="'thumbnail.prevFrame' | transloco" [attr.aria-label]="'thumbnail.prevFrame' | transloco">
+              <app-icon name="chevron-left" [size]="16" />
+            </button>
+            <input type="range" min="0" [max]="duration()" step="0.04" [value]="time()" (input)="onScrub($event)" [attr.aria-label]="'thumbnail.frame' | transloco" />
+            <button class="btn ghost icon sm" type="button" (click)="seek(time() + 1 / 30)" [title]="'thumbnail.nextFrame' | transloco" [attr.aria-label]="'thumbnail.nextFrame' | transloco">
+              <app-icon name="chevron-right" [size]="16" />
+            </button>
+            <span class="time">{{ formatTime(time(), true) }}</span>
+          </div>
+          <div class="moments">
+            <span class="label"><app-icon name="sparkles" [size]="14" /> {{ 'thumbnail.moments' | transloco }}</span>
+            <div class="strip">
+              @for (m of momentUrls(); track m.t) {
+                <button type="button" class="moment" [class.active]="isCurrent(m.t)" (click)="seek(m.t)" [title]="formatTime(m.t)">
+                  <img [src]="m.url" alt="" />
+                  <span>{{ formatTime(m.t) }}</span>
+                </button>
+              }
+              @if (scanning()) {
+                @for (i of skeletons(); track i) {
+                  <span class="moment skeleton"></span>
+                }
+              }
+            </div>
+          </div>
+        }
+        <div class="stage-actions">
+          <button class="btn ghost sm" type="button" (click)="startOver()"><app-icon name="folder" [size]="15" /> {{ 'thumbnail.other' | transloco }}</button>
+        </div>
+      </div>
+
+      <aside class="panel card">
+        <section>
+          <h3>{{ 'thumbnail.format' | transloco }}</h3>
+          <div class="formats">
+            @for (f of formats; track f.id) {
+              <button type="button" class="format" [class.active]="settings().format === f.id" (click)="patch({ format: f.id })">
+                <app-icon [name]="f.icon" [size]="22" />
+                <b>{{ f.id }}</b>
+                <small>{{ 'thumbnail.formats.' + f.key | transloco }}</small>
+              </button>
+            }
+          </div>
+        </section>
+
+        <section>
+          <h3><label for="thumb-title">{{ 'thumbnail.text' | transloco }}</label></h3>
+          <textarea id="thumb-title" rows="3" [value]="settings().text" (input)="setText($event)" [placeholder]="'thumbnail.textPlaceholder' | transloco"></textarea>
+          <small class="faint">{{ 'thumbnail.accentHint' | transloco }}</small>
+          <div class="field">
+            <label>{{ 'thumbnail.size' | transloco }} <span class="value">{{ (settings().size * 100).toFixed(0) }}%</span></label>
+            <input type="range" min="0.5" max="1.6" step="0.05" [value]="settings().size" (input)="patch({ size: num($event) })" />
+          </div>
+          <div class="field">
+            <span class="label">{{ 'thumbnail.position' | transloco }}</span>
+            <div class="segmented">
+              @for (pos of positions; track pos) {
+                <button type="button" [class.active]="settings().position === pos" (click)="patch({ position: pos })">{{ 'thumbnail.positions.' + pos | transloco }}</button>
+              }
+            </div>
+          </div>
+          <div class="segmented">
+            <button type="button" [class.active]="settings().align === 'center'" (click)="patch({ align: 'center' })">{{ 'thumbnail.alignCenter' | transloco }}</button>
+            <button type="button" [class.active]="settings().align === 'left'" (click)="patch({ align: 'left' })">{{ 'thumbnail.alignLeft' | transloco }}</button>
+          </div>
+          <label class="switch">
+            {{ 'thumbnail.uppercase' | transloco }}
+            <input type="checkbox" [checked]="settings().uppercase" (change)="patch({ uppercase: checked($event) })" />
+          </label>
+          <label class="switch">
+            {{ 'thumbnail.tilt' | transloco }}
+            <input type="checkbox" [checked]="settings().tilt" (change)="patch({ tilt: checked($event) })" />
+          </label>
+        </section>
+
+        <section>
+          <h3>{{ 'thumbnail.style' | transloco }}</h3>
+          <div class="styles">
+            @for (st of styles; track st) {
+              <button type="button" class="style" [attr.data-style]="st" [class.active]="settings().style === st" (click)="patch({ style: st })">
+                <span class="sample">Aa <i [style.background]="st === 'highlight' ? settings().accent : null" [style.color]="st === 'highlight' ? '#111' : settings().accent">!</i></span>
+                <small>{{ 'thumbnail.styles.' + st | transloco }}</small>
+              </button>
+            }
+          </div>
+          <div class="field">
+            <span class="label">{{ 'thumbnail.color' | transloco }}</span>
+            <div class="swatches">
+              @for (c of colors; track c) {
+                <button type="button" class="swatch" [style.background]="c" [class.active]="settings().color === c" (click)="patch({ color: c })" [attr.aria-label]="c"></button>
+              }
+            </div>
+          </div>
+          <div class="field">
+            <span class="label">{{ 'thumbnail.accent' | transloco }}</span>
+            <div class="swatches">
+              @for (c of accents; track c) {
+                <button type="button" class="swatch" [style.background]="c" [class.active]="settings().accent === c" (click)="patch({ accent: c })" [attr.aria-label]="c"></button>
+              }
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>{{ 'thumbnail.image' | transloco }}</h3>
+          <div class="field">
+            <label>{{ 'thumbnail.zoom' | transloco }} <span class="value">{{ settings().zoom.toFixed(2) }}×</span></label>
+            <input type="range" min="1" max="3" step="0.01" [value]="settings().zoom" (input)="patch({ zoom: num($event) })" />
+          </div>
+          <div class="field">
+            <label>{{ 'thumbnail.brightness' | transloco }} <span class="value">{{ (settings().brightness * 100).toFixed(0) }}%</span></label>
+            <input type="range" min="0.6" max="1.6" step="0.01" [value]="settings().brightness" (input)="patch({ brightness: num($event) })" />
+          </div>
+          <div class="field">
+            <label>{{ 'thumbnail.contrast' | transloco }} <span class="value">{{ (settings().contrast * 100).toFixed(0) }}%</span></label>
+            <input type="range" min="0.6" max="1.8" step="0.01" [value]="settings().contrast" (input)="patch({ contrast: num($event) })" />
+          </div>
+          <div class="field">
+            <label>{{ 'thumbnail.saturation' | transloco }} <span class="value">{{ (settings().saturation * 100).toFixed(0) }}%</span></label>
+            <input type="range" min="0" max="2" step="0.01" [value]="settings().saturation" (input)="patch({ saturation: num($event) })" />
+          </div>
+          <div class="field">
+            <label>{{ 'thumbnail.shade' | transloco }} <span class="value">{{ (settings().shade * 100).toFixed(0) }}%</span></label>
+            <input type="range" min="0" max="1" step="0.01" [value]="settings().shade" (input)="patch({ shade: num($event) })" />
+          </div>
+          <div class="row">
+            <button class="btn sm" type="button" (click)="rotate(-1)" [title]="'editor.format.rotateLeft' | transloco"><app-icon name="rotate-ccw" [size]="15" /> 90°</button>
+            <button class="btn sm" type="button" (click)="rotate(1)" [title]="'editor.format.rotateRight' | transloco">90° <app-icon name="rotate-cw" [size]="15" /></button>
+            <button class="btn ghost sm" type="button" (click)="resetImage()"><app-icon name="restore" [size]="15" /> {{ 'thumbnail.reset' | transloco }}</button>
+          </div>
+        </section>
+
+        <section class="download">
+          <button class="btn primary lg block" type="button" [disabled]="!still()" (click)="download('jpg')">
+            <app-icon name="download" [size]="18" /> {{ 'thumbnail.downloadJpg' | transloco }}
+          </button>
+          <button class="btn block" type="button" [disabled]="!still()" (click)="download('png')">{{ 'thumbnail.downloadPng' | transloco }}</button>
+          <small class="faint">{{ 'thumbnail.sizeInfo' | transloco: { width: sizes[settings().format].width, height: sizes[settings().format].height } }}</small>
+          @if (saved(); as name) {
+            <p class="saved" role="status"><app-icon name="check" [size]="15" /> {{ 'thumbnail.saved' | transloco: { name } }}</p>
+          }
+        </section>
+      </aside>
+    </div>
+  }
+  @if (error(); as e) {
+    <p class="error" role="alert"><app-icon name="alert" [size]="15" /> {{ e | transloco }}</p>
+  }
+</section>

@@ -17,7 +17,8 @@
     "install": "App installieren",
     "open": "Editor öffnen",
     "menu": "Menü öffnen",
-    "close": "Menü schließen"
+    "close": "Menü schließen",
+    "thumbnail": "Thumbnails"
   },
   "theme": {
     "system": "System",
@@ -104,8 +105,8 @@
         "text": "Ein leichter, abwechselnder Zoom bei jedem Schnitt lässt Jump Cuts gewollt wirken und hält die Aufmerksamkeit"
       },
       "ducking": {
-        "title": "Auto-Ducking",
-        "text": "Füge Hintergrundmusik hinzu: Sie wird automatisch leiser, wenn jemand spricht, und in Pausen wieder lauter"
+        "title": "Ton und Musik",
+        "text": "Lautstärke anheben, Clips angleichen und Hintergrundmusik hinzufügen, die von selbst leiser wird, wenn jemand spricht"
       },
       "recovery": {
         "title": "Wiederherstellung nach Absturz",
@@ -189,6 +190,20 @@
     "final": {
       "title": "Dein nächstes Video, in Minuten geschnitten",
       "text": "Keine Anmeldung, kein Upload, kein Wasserzeichen. Datei öffnen und loslegen"
+    },
+    "thumbnail": {
+      "eyebrow": "Neu · Thumbnails",
+      "title": "Und das passende Thumbnail dazu",
+      "text": "Der Thumbnail-Generator findet die schärfsten Momente deines Videos. Füge einen großen Titel mit farbigen Wörtern hinzu und lade es im richtigen Format herunter",
+      "points": {
+        "moments": "Vorschläge der besten Momente",
+        "title": "Titel mit hervorgehobenen Wörtern, 4 Stile",
+        "formats": "YouTube 1280×720, Shorts und quadratisch",
+        "local": "Auf deinem Gerät erstellt, nichts wird hochgeladen"
+      },
+      "cta": "Thumbnail erstellen",
+      "mockTitle": "Mein erster",
+      "mockAccent": "Vlog"
     }
   },
   "changelog": {
@@ -349,7 +364,7 @@
       "cuts": "Schnitte",
       "captions": "Untertitel",
       "framing": "Bildausschnitt",
-      "audio": "Musik",
+      "audio": "Ton",
       "clips": "Clips"
     },
     "format": {
@@ -361,7 +376,12 @@
       "source": "Quelle:",
       "resolution": "Auflösung",
       "fps": "Bilder pro Sekunde",
-      "exportNote": "Auflösung und Bildrate wählst du beim Export"
+      "exportNote": "Auflösung und Bildrate wählst du beim Export",
+      "rotation": "Drehung",
+      "rotateLeft": "Nach links drehen",
+      "rotateRight": "Nach rechts drehen",
+      "rotationHint": "Für ein seitlich gefilmtes Video. Gilt für alle Clips",
+      "rotatedFaces": "Video gedreht: „Gesicht folgen“ unter Bildausschnitt erneut aktivieren"
     },
     "cuts": {
       "title": "Pausenerkennung",
@@ -389,7 +409,8 @@
         "normal": "Ausgewogen",
         "tight": "Dynamisch"
       },
-      "live": "Die Schnitte passen sich live an, wenn du die Einstellungen änderst"
+      "live": "Die Schnitte passen sich live an, wenn du die Einstellungen änderst",
+      "silentClips": "{{ count }} Clip(s) ohne Stimme: dort wird nur echte Stille geschnitten"
     },
     "captions": {
       "title": "Eingebrannte Untertitel",
@@ -464,7 +485,10 @@
       "summary": "{{ count }} Clip(s) · {{ time }} insgesamt",
       "confirmRemove": "„{{ name }}“ aus dem Projekt entfernen? Seine Schnitte und Wörter werden ebenfalls entfernt (Strg+Z macht es rückgängig)",
       "added": "{{ count }} Clip(s) hinzugefügt",
-      "addedTranscribe": "{{ count }} Clip(s) hinzugefügt. Transkribiere erneut, um sie zu untertiteln: bereits transkribierte Clips bleiben erhalten"
+      "addedTranscribe": "{{ count }} Clip(s) hinzugefügt. Transkribiere erneut, um sie zu untertiteln: bereits transkribierte Clips bleiben erhalten",
+      "noVoice": "ohne Stimme",
+      "voiceOn": "Mit Stimme · klicken, wenn niemand spricht",
+      "voiceOff": "Ohne Stimme · klicken, wenn jemand spricht"
     },
     "auto": {
       "button": "Auto-Schnitt",
@@ -491,7 +515,8 @@
       "summary": {
         "cuts": "Schnitte",
         "removed": "entfernt",
-        "words": "Wörter untertitelt"
+        "words": "Wörter untertitelt",
+        "silent": "{{ count }} Clip(s) ohne Stimme: nur echte Stille wurde geschnitten"
       },
       "steps": {
         "analyze": "Audio wird analysiert",
@@ -499,13 +524,35 @@
         "fillers": "Zögern wird entfernt",
         "silences": "Pausen werden geschnitten",
         "framing": "Gesicht wird verfolgt",
-        "style": "Untertitel und Smart Zoom"
+        "style": "Untertitel und Smart Zoom",
+        "voice": "Stimmerkennung"
       },
       "status": {
         "skipped": "übersprungen",
         "error": "fehlgeschlagen"
+      },
+      "voice": {
+        "title": "Spricht jemand im Video?",
+        "auto": "Auto",
+        "yes": "Ja",
+        "no": "Nein",
+        "detectedYes": "Erkannt: jemand spricht",
+        "detectedNo": "Erkannt: keine Stimme",
+        "hint": "Ohne Stimme: keine Transkription, keine Untertitel, nur echte Stille wird geschnitten"
       }
-    }
+    },
+    "mix": {
+      "title": "Ton des Videos",
+      "hint": "Den Ton deiner Clips lauter oder leiser stellen",
+      "volume": "Lautstärke",
+      "mute": "Stummschalten",
+      "unmute": "Ton einschalten",
+      "volumeHint": "Gilt für Vorschau und Export",
+      "boostHint": "Über 100 % verhindert ein Limiter Übersteuerung",
+      "normalize": "Clip-Lautstärke angleichen",
+      "normalizeHint": "Jeder Clip gleich laut, ob nah oder fern gefilmt"
+    },
+    "thumbnail": "Thumbnail"
   },
   "legal": {
     "updated": "Zuletzt aktualisiert: 1. November 2026",
@@ -657,5 +704,67 @@
         }
       ]
     }
+  },
+  "thumbnail": {
+    "eyebrow": "Thumbnail-Generator",
+    "title": "Thumbnails, die zum Klicken einladen",
+    "lead": "Wähle den besten Moment deines Videos, füge einen starken Titel hinzu und lade ein Bild herunter, das bereit ist für YouTube, Shorts oder Instagram. Alles passiert auf deinem Gerät",
+    "pick": "Video oder Bild hier ablegen",
+    "pickHint": "MP4, MOV, WebM, JPG, PNG… die Datei bleibt auf deinem Gerät",
+    "choose": "Datei auswählen",
+    "local": "Nichts wird hochgeladen: Das Bild entsteht in deinem Browser",
+    "permissionTitle": "Zugriff auf das Video des Projekts erlauben",
+    "permissionText": "Dein Browser fragt nach einer Bestätigung, bevor er die Datei erneut von deinem Gerät liest",
+    "permission": "Zugriff erlauben",
+    "back": "Zurück zum Editor",
+    "dragHint": "Bild ziehen, um den Ausschnitt zu ändern",
+    "frame": "Videobild",
+    "prevFrame": "Vorheriges Bild",
+    "nextFrame": "Nächstes Bild",
+    "moments": "Beste Momente",
+    "other": "Andere Datei wählen",
+    "format": "Format",
+    "formats": {
+      "landscape": "YouTube",
+      "vertical": "Shorts · TikTok",
+      "square": "Instagram"
+    },
+    "text": "Titel",
+    "textPlaceholder": "Dein packender Titel",
+    "defaultText": "Dein *Titel* hier",
+    "accentHint": "Wörter zwischen Sternchen werden farbig: *so*",
+    "size": "Textgröße",
+    "position": "Position",
+    "positions": {
+      "top": "Oben",
+      "center": "Mitte",
+      "bottom": "Unten"
+    },
+    "alignCenter": "Zentriert",
+    "alignLeft": "Links",
+    "uppercase": "Großbuchstaben",
+    "tilt": "Schräger Text",
+    "style": "Titelstil",
+    "styles": {
+      "outline": "Kontur",
+      "shadow": "Schatten",
+      "box": "Banner",
+      "highlight": "Marker"
+    },
+    "color": "Textfarbe",
+    "accent": "Farbe der hervorgehobenen Wörter",
+    "image": "Bild",
+    "zoom": "Zoom",
+    "brightness": "Helligkeit",
+    "contrast": "Kontrast",
+    "saturation": "Sättigung",
+    "shade": "Ränder abdunkeln",
+    "reset": "Zurücksetzen",
+    "downloadJpg": "Als JPG herunterladen",
+    "downloadPng": "Als PNG herunterladen",
+    "sizeInfo": "{{ width }} × {{ height }} px · JPG empfohlen für YouTube (unter 2 MB)",
+    "saved": "Gespeichert: {{ name }}",
+    "loadError": "Dieses Projekt konnte nicht geöffnet werden",
+    "readError": "Diese Datei konnte nicht gelesen werden"
   }
 }

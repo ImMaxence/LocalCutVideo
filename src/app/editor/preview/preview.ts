@@ -28,6 +28,8 @@ interface VideoSource {
  * Live preview. One hidden <video> per clip plays the sequence back to back; every animation
  * frame is composed on a canvas with the same render functions as the export worker (crop,
  * framing, zoom, captions). Playback jumps over cuts, and the music follows the ducking curve.
+ * The clips' sound goes through Web Audio (volume per clip, then a limiter), so the volume can
+ * be raised above 100 % without clipping, like in the export.
  */
 @Component({
   selector: 'app-preview',
@@ -61,6 +63,7 @@ export class Preview implements PlayerApi {
   private raf = 0;
   private lastSync = 0;
   private lastFrameTime = -1;
+  private audio: { ctx: AudioContext; out: AudioNode; gains: WeakMap<HTMLVideoElement, GainNode> } | null = null;
 
   constructor() {
     // One object URL per clip file, revoked when the clip goes away.
@@ -101,6 +104,7 @@ export class Preview implements PlayerApi {
 
     inject(DestroyRef).onDestroy(() => {
       cancelAnimationFrame(this.raf);
+      void this.audio?.ctx.close();
       this.store.registerPlayer(null);
       this.urls.forEach((entry) => URL.revokeObjectURL(entry.url));
     });
@@ -129,7 +133,10 @@ export class Preview implements PlayerApi {
     const video = this.element(index);
     if (video) {
       video.currentTime = Math.max(0, t - clips[index].start);
-      if (this.isPlaying) void video.play().catch(() => undefined);
+      if (this.isPlaying) {
+        this.syncVolume();
+        void video.play().catch(() => undefined);
+      }
     }
     this.store.currentTime.set(t);
     this.dirty = true;
@@ -185,6 +192,7 @@ export class Preview implements PlayerApi {
           this.store.currentTime.set(this.sequenceTime());
         }
         this.syncMusic();
+        this.syncVolume();
       }
       // Only redraw when the video actually shows a new frame (not on every screen refresh).
       if (video.currentTime !== this.lastFrameTime) this.dirty = true;
@@ -194,6 +202,47 @@ export class Preview implements PlayerApi {
       this.lastFrameTime = video?.currentTime ?? -1;
       this.draw(this.isPlaying ? this.sequenceTime() : this.store.currentTime());
     }
+  }
+
+  /**
+   * Routes a clip's <video> through its gain node. The audio context is created on the first
+   * play (a user gesture), and an element can only be routed once, so the nodes are kept.
+   */
+  private route(video: HTMLVideoElement): GainNode | null {
+    try {
+      if (!this.audio) {
+        const ctx = new AudioContext();
+        const limiter = ctx.createDynamicsCompressor();
+        limiter.threshold.value = -1;
+        limiter.knee.value = 0;
+        limiter.ratio.value = 20;
+        limiter.attack.value = 0.002;
+        limiter.release.value = 0.12;
+        limiter.connect(ctx.destination);
+        this.audio = { ctx, out: limiter, gains: new WeakMap() };
+      }
+      let gain = this.audio.gains.get(video);
+      if (!gain) {
+        gain = this.audio.ctx.createGain();
+        this.audio.ctx.createMediaElementSource(video).connect(gain).connect(this.audio.out);
+        this.audio.gains.set(video, gain);
+      }
+      if (this.audio.ctx.state === 'suspended') void this.audio.ctx.resume();
+      return gain;
+    } catch {
+      return null;
+    }
+  }
+
+  /** Applies the volume of the playing clip (overall volume × leveling). */
+  private syncVolume(): void {
+    const video = this.element(this.active);
+    const clip = this.store.clips()[this.active];
+    if (!video || !clip) return;
+    const gain = this.store.clipGains().get(clip.id) ?? 1;
+    const node = this.route(video);
+    if (!node) video.volume = Math.min(1, gain);
+    else if (node.gain.value !== gain) node.gain.value = gain;
   }
 
   private syncMusic(): void {
@@ -225,7 +274,7 @@ export class Preview implements PlayerApi {
     const segments = this.store.segments();
     const video = this.element(this.active);
     if (video && video.readyState >= 2 && video.videoWidth) {
-      drawFrame(ctx, video, video.videoWidth, video.videoHeight, width, height, framingAt(p, this.store.zoomBeats(), t));
+      drawFrame(ctx, video, video.videoWidth, video.videoHeight, width, height, framingAt(p, this.store.zoomBeats(), t), p.rotation);
     }
     drawCaptions(ctx, this.store.captionPages(), t, p.captions, width, height);
 

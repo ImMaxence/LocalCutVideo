@@ -39,10 +39,26 @@
                 <span class="num">{{ c.index + 1 }}</span>
                 <span class="meta">
                   <b>{{ c.source.name }}</b>
-                  <small>{{ formatTime(c.end - c.start) }} · {{ c.source.width }}×{{ c.source.height }}</small>
+                  <small>
+                    {{ formatTime(c.end - c.start) }} · {{ c.source.width }}×{{ c.source.height }}
+                    @if (!voiceOf(c.id)) {
+                      · {{ 'editor.clips.noVoice' | transloco }}
+                    }
+                  </small>
                 </span>
               </button>
               <span class="clip-actions">
+                <button
+                  class="btn ghost icon sm voice"
+                  type="button"
+                  [class.off]="!voiceOf(c.id)"
+                  [attr.aria-pressed]="voiceOf(c.id)"
+                  (click)="store.setClipVoice(c.id, !voiceOf(c.id))"
+                  [title]="(voiceOf(c.id) ? 'editor.clips.voiceOn' : 'editor.clips.voiceOff') | transloco"
+                  [attr.aria-label]="(voiceOf(c.id) ? 'editor.clips.voiceOn' : 'editor.clips.voiceOff') | transloco"
+                >
+                  <app-icon [name]="voiceOf(c.id) ? 'mic' : 'mic-off'" [size]="14" />
+                </button>
                 <button class="btn ghost icon sm" type="button" [disabled]="c.index === 0" (click)="store.moveClip(c.id, c.index - 1)" [attr.aria-label]="'editor.clips.up' | transloco">
                   <app-icon name="chevron-up" [size]="15" />
                 </button>
@@ -76,6 +92,19 @@
             </button>
           }
         </div>
+        <div class="field">
+          <span class="label">{{ 'editor.format.rotation' | transloco }}</span>
+          <div class="rotate-row">
+            <button class="btn sm" type="button" (click)="store.rotate(-1)" [title]="'editor.format.rotateLeft' | transloco">
+              <app-icon name="rotate-ccw" [size]="15" /> 90°
+            </button>
+            <b class="rotation">{{ p().rotation }}°</b>
+            <button class="btn sm" type="button" (click)="store.rotate(1)" [title]="'editor.format.rotateRight' | transloco">
+              90° <app-icon name="rotate-cw" [size]="15" />
+            </button>
+          </div>
+          <small class="faint">{{ 'editor.format.rotationHint' | transloco }}</small>
+        </div>
         <p class="source faint"><app-icon name="film" [size]="13" /> {{ 'editor.format.source' | transloco }} {{ sourceLabel() }}</p>
         <p class="note"><app-icon name="info" [size]="14" /> {{ 'editor.format.exportNote' | transloco }}</p>
       </section>
@@ -85,6 +114,9 @@
       <section>
         <h3>{{ 'editor.cuts.title' | transloco }}</h3>
         <p class="hint">{{ 'editor.cuts.hint' | transloco }}</p>
+        @if (silentClips(); as count) {
+          <p class="note"><app-icon name="mic-off" [size]="14" /> {{ 'editor.cuts.silentClips' | transloco: { count } }}</p>
+        }
         <div class="field">
           <span class="label">{{ 'editor.cuts.mode' | transloco }}</span>
           <div class="segmented">
@@ -318,6 +350,48 @@
     }
 
     @case ('audio') {
+      <section>
+        <h3>{{ 'editor.mix.title' | transloco }}</h3>
+        <p class="hint">{{ 'editor.mix.hint' | transloco }}</p>
+        <div class="field">
+          <label>
+            {{ 'editor.mix.volume' | transloco }}
+            <span class="value">{{ (p().audio.volume * 100).toFixed(0) }}%</span>
+          </label>
+          <div class="volume-row">
+            <button
+              class="btn ghost icon sm"
+              type="button"
+              (click)="toggleMute()"
+              [title]="(p().audio.volume ? 'editor.mix.mute' : 'editor.mix.unmute') | transloco"
+              [attr.aria-label]="(p().audio.volume ? 'editor.mix.mute' : 'editor.mix.unmute') | transloco"
+            >
+              <app-icon [name]="p().audio.volume ? 'volume' : 'volume-x'" [size]="16" />
+            </button>
+            <input type="range" min="0" max="3" step="0.05" [value]="p().audio.volume" (input)="patch('audio.volume', num($event), 'volume')" [attr.aria-label]="'editor.mix.volume' | transloco" />
+            <button class="btn ghost sm" type="button" [disabled]="p().audio.volume === 1" (click)="patch('audio.volume', 1)">100%</button>
+          </div>
+          <small class="faint">{{ (p().audio.volume > 1 ? 'editor.mix.boostHint' : 'editor.mix.volumeHint') | transloco }}</small>
+        </div>
+        <label class="switch">
+          <span class="switch-text">
+            {{ 'editor.mix.normalize' | transloco }}
+            <small class="faint">{{ 'editor.mix.normalizeHint' | transloco }}</small>
+          </span>
+          <input type="checkbox" [checked]="p().audio.normalize" (change)="patch('audio.normalize', checked($event))" />
+        </label>
+        @if (p().audio.normalize) {
+          <ul class="levels">
+            @for (c of store.clips(); track c.id) {
+              <li>
+                <span class="num">{{ c.index + 1 }}</span>
+                <span class="name">{{ c.source.name }}</span>
+                <b>{{ levelDb(c.id) }}</b>
+              </li>
+            }
+          </ul>
+        }
+      </section>
       <section>
         <h3>{{ 'editor.audio.title' | transloco }}</h3>
         <p class="hint">{{ 'editor.audio.hint' | transloco }}</p>

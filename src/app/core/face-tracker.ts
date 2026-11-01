@@ -5,6 +5,8 @@
  */
 import { ALL_FORMATS, BlobSource, CanvasSink, Input } from 'mediabunny';
 import type { FaceSample } from '../engine/framing';
+import type { Rotation } from '../engine/model';
+import { rotatedSize, rotationMatrix } from '../engine/render';
 
 const SAMPLES_PER_SECOND = 3;
 const MEDIAPIPE_METRICS = 'https://odml.pa.googleapis.com/';
@@ -30,6 +32,7 @@ export async function analyzeFaces(
   duration: number,
   onProgress: (p: number) => void,
   isCancelled: () => boolean,
+  rotation: Rotation = 0,
 ): Promise<FaceSample[]> {
   dropMediaPipeMetrics();
   const { FaceDetector, FilesetResolver } = await import('@mediapipe/tasks-vision');
@@ -47,9 +50,16 @@ export async function analyzeFaces(
   try {
     const track = await input.getPrimaryVideoTrack();
     if (!track) return samples;
-    const width = 640;
-    const height = Math.round((width * track.displayHeight) / track.displayWidth);
-    const sink = new CanvasSink(track, { width, height, fit: 'fill', poolSize: 2 });
+    const frameW = 640;
+    const frameH = Math.round((frameW * track.displayHeight) / track.displayWidth);
+    const sink = new CanvasSink(track, { width: frameW, height: frameH, fit: 'fill', poolSize: 2 });
+    // Faces are searched in the turned frame, so their positions match what the preview shows.
+    const { width, height } = rotatedSize(frameW, frameH, rotation);
+    const turned = document.createElement('canvas');
+    turned.width = width;
+    turned.height = height;
+    const tc = turned.getContext('2d')!;
+    tc.setTransform(...rotationMatrix(frameW, frameH, rotation));
     const times: number[] = [];
     for (let t = 0; t < duration; t += 1 / SAMPLES_PER_SECOND) times.push(t);
 
@@ -70,12 +80,17 @@ export async function analyzeFaces(
         samples.push({ t, face: null });
         continue;
       }
+      let image: CanvasImageSource = frame.canvas;
+      if (rotation) {
+        tc.drawImage(frame.canvas, 0, 0);
+        image = turned;
+      }
       let best: FaceSample['face'] = null;
       let bestScore = 0;
       for (const offset of offsets) {
         const ox = width >= height ? offset : 0;
         const oy = width >= height ? 0 : offset;
-        sq.drawImage(frame.canvas, ox, oy, side, side, 0, 0, 256, 256);
+        sq.drawImage(image, ox, oy, side, side, 0, 0, 256, 256);
         for (const d of detector.detect(square).detections) {
           const box = d.boundingBox;
           const score = d.categories[0]?.score ?? 0;

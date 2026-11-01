@@ -107,6 +107,30 @@
   </div>
 </section>
 
+<section class="section" id="thumbnail">
+  <div class="container promo card" appReveal>
+    <div class="promo-text">
+      <span class="eyebrow">{{ 'landing.thumbnail.eyebrow' | transloco }}</span>
+      <h2>{{ 'landing.thumbnail.title' | transloco }}</h2>
+      <p class="muted lead-sm">{{ 'landing.thumbnail.text' | transloco }}</p>
+      <ul class="promo-points">
+        @for (k of promoPoints; track k) {
+          <li><app-icon name="check" [size]="16" /> {{ 'landing.thumbnail.points.' + k | transloco }}</li>
+        }
+      </ul>
+      <a class="btn primary lg" routerLink="/thumbnail">{{ 'landing.thumbnail.cta' | transloco }} <app-icon name="arrow-right" [size]="17" /></a>
+    </div>
+    <div class="promo-visual" aria-hidden="true">
+      <div class="mock-thumb">
+        <span class="sun"></span>
+        <span class="hill"></span>
+        <span class="mock-title">{{ 'landing.thumbnail.mockTitle' | transloco }} <em>{{ 'landing.thumbnail.mockAccent' | transloco }}</em></span>
+        <span class="mock-time">12:34</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="privacy">
   <div class="container privacy">
     <div appReveal>

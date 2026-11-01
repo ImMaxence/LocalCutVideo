@@ -9,6 +9,7 @@ import {
   type Project,
   type SilenceSettings,
   type WhisperModel,
+  clipHasVoice,
   defaultCaptionWords,
 } from '../../engine/model';
 import type { PlacedClip } from '../../engine/sequence';
@@ -25,7 +26,7 @@ export const INSPECTOR_TABS: { id: InspectorTab; icon: string }[] = [
   { id: 'cuts', icon: 'scissors' },
   { id: 'captions', icon: 'captions' },
   { id: 'framing', icon: 'face' },
-  { id: 'audio', icon: 'music' },
+  { id: 'audio', icon: 'volume' },
 ];
 
 /** Approximate one-time download per model (WASM / WebGPU variants differ slightly). */
@@ -66,6 +67,10 @@ export class Inspector {
 
   protected readonly p = computed(() => this.store.project()!);
   protected readonly removedSeconds = computed(() => this.store.duration() - this.store.outputDuration());
+  /** Clips where nobody speaks: only real dead air is cut there. */
+  protected readonly silentClips = computed(() => this.p().clips.filter((c) => !clipHasVoice(c)).length);
+  private lastVolume = 1;
+
   protected readonly preset = computed(() => {
     const s = this.p().silence;
     return SILENCE_PRESETS.find((x) => Math.abs(x.minSilence - s.minSilence) < 0.01 && Math.abs(x.padding - s.padding) < 0.005)?.id ?? null;
@@ -118,6 +123,25 @@ export class Inspector {
 
   protected value(e: Event): string {
     return (e.target as HTMLInputElement).value;
+  }
+
+  /** Read from the project (the placed clips do not follow voice changes). */
+  protected voiceOf(clipId: string): boolean {
+    const clip = this.p().clips.find((c) => c.id === clipId);
+    return clip ? clipHasVoice(clip) : true;
+  }
+
+  protected toggleMute(): void {
+    const volume = this.p().audio.volume;
+    if (volume > 0) this.lastVolume = volume;
+    this.patch('audio.volume', volume > 0 ? 0 : this.lastVolume || 1);
+  }
+
+  /** Leveling correction of a clip, in dB. */
+  protected levelDb(clipId: string): string {
+    const volume = this.p().audio.volume || 1;
+    const db = 20 * Math.log10((this.store.clipGains().get(clipId) ?? volume) / volume);
+    return `${db >= 0 ? '+' : '−'}${Math.abs(db).toFixed(1)} dB`;
   }
 
   protected detect(): void {

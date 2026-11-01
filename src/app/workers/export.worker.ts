@@ -37,6 +37,9 @@ import type { ExportClip, ExportProgress, ExportRequest, ExportResult, ExportWor
 const OUT_RATE = 48000;
 const BLOCK = 4800;
 const FADE = Math.round(OUT_RATE * 0.004);
+/** Peak limiter: ceiling just under full scale, ~80 ms release. */
+const CEILING = 0.97;
+const RELEASE = 1 - Math.exp(-1 / (0.08 * OUT_RATE));
 
 let cancelled = false;
 let fontReady: Promise<void> | null = null;
@@ -107,12 +110,16 @@ async function decodeMusic(file: File, maxFrames: number): Promise<[Float32Array
   }
 }
 
-/** Accumulates output audio in 100 ms blocks, mixes the music in and hands blocks to the encoder. */
+/**
+ * Accumulates output audio in 100 ms blocks, mixes the music in, limits the peaks (so a raised
+ * volume never clips) and hands blocks to the encoder.
+ */
 class AudioWriter {
   private left = new Float32Array(BLOCK);
   private right = new Float32Array(BLOCK);
   private filled = 0;
   private written = 0;
+  private limiter = 1;
 
   constructor(
     private readonly source: AudioSampleSource,
@@ -149,8 +156,11 @@ class AudioWriter {
         l += this.music[0][m] * gain;
         r += this.music[1][m] * gain;
       }
-      data[j] = Math.max(-1, Math.min(1, l));
-      data[n + j] = Math.max(-1, Math.min(1, r));
+      // Instant attack, smooth release: the gain drops on a peak and comes back slowly.
+      const peak = Math.max(Math.abs(l), Math.abs(r));
+      this.limiter = Math.min(peak > CEILING ? CEILING / peak : 1, this.limiter + (1 - this.limiter) * RELEASE);
+      data[j] = l * this.limiter;
+      data[n + j] = r * this.limiter;
     }
     const sample = new AudioSample({
       data,
@@ -199,7 +209,7 @@ function audioPieces(segments: Range[], clips: ExportClip[]): AudioPiece[] {
   return pieces;
 }
 
-async function renderAudio(clips: OpenClip[], pieces: AudioPiece[], writer: AudioWriter): Promise<void> {
+async function renderAudio(clips: OpenClip[], gains: number[], pieces: AudioPiece[], writer: AudioWriter): Promise<void> {
   const sinks = clips.map((c) => (c.audio ? new AudioSampleSink(c.audio) : null));
   for (const piece of pieces) {
     // Frame counts come from the absolute output position, so rounding never drifts.
@@ -225,10 +235,11 @@ async function renderAudio(clips: OpenClip[], pieces: AudioPiece[], writer: Audi
           const l = resamplers[0].process(rawL).slice();
           const r = resamplers[1].process(rawR).slice();
           const take = Math.min(l.length, pieceFrames - produced);
+          const gain = gains[piece.clip];
           // Tiny fades at every cut and clip boundary remove the clicks of jump cuts.
           for (let i = 0; i < take; i++) {
             const pos = produced + i;
-            const g = Math.min(1, pos / FADE, (pieceFrames - 1 - pos) / FADE);
+            const g = Math.min(1, pos / FADE, (pieceFrames - 1 - pos) / FADE) * gain;
             l[i] *= g;
             r[i] *= g;
           }
@@ -340,7 +351,7 @@ const api: ExportWorkerApi = {
             if (cancelled) break;
             const srcT = times[k];
             if (wrapped) {
-              drawFrame(ctx, wrapped.canvas, wrapped.canvas.width, wrapped.canvas.height, width, height, framingAt(project, beats, srcT));
+              drawFrame(ctx, wrapped.canvas, wrapped.canvas.width, wrapped.canvas.height, width, height, framingAt(project, beats, srcT), project.rotation);
             }
             drawCaptions(ctx, pages, srcT, project.captions, width, height);
             await videoSource.add(k / fps, 1 / fps);
@@ -361,7 +372,7 @@ const api: ExportWorkerApi = {
             : new Float32Array(Math.ceil(outDuration * 100) + 1).fill(project.music.volume);
         }
         const writer = new AudioWriter(audioSource, Math.round(outDuration * OUT_RATE), music, envelope);
-        tasks.push(renderAudio(clips, audioPieces(segments, req.clips), writer));
+        tasks.push(renderAudio(clips, req.clips.map((c) => c.gain), audioPieces(segments, req.clips), writer));
       }
       await Promise.all(tasks);
       if (cancelled) throw new Error('CANCELLED');

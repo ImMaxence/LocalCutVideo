@@ -26,6 +26,8 @@
 | | |
 | --- | --- |
 | **Auto edit** | One click: transcription, filler removal, silence cuts, face framing, smart zoom and karaoke subtitles, with good defaults. Undo in one step. |
+| **Voice detection** | The auto edit asks whether someone speaks in each clip (or detects it with Whisper). Clips without voice get no subtitles and only real dead air is cut. |
+| **Thumbnail maker** | Suggests the sharpest moments of the video, adds a big title with highlighted words (4 styles), color boost and reframing; downloads JPG / PNG for YouTube, Shorts or a square post. |
 | **Zero upload** | The video is read in place from your disk (File System Access API). Nothing is sent anywhere. |
 | **Multi-clip** | Import several takes at once: they play back to back in one project. Reorder, add or remove clips; cuts and words follow their clip. |
 | **Input formats** | MP4, MOV, WebM, MKV. H.264 everywhere; HEVC (iPhone) when the browser can decode it (Chrome, or Edge with the HEVC extension). |
@@ -37,7 +39,8 @@
 | **Output formats** | 16:9 (YouTube), 9:16 (TikTok, Reels, Shorts), 1:1, in 720p or 1080p. |
 | **Auto-framing** | MediaPipe face tracking keeps the speaker in frame when going from 16:9 to 9:16. |
 | **Smart zoom** | Alternating punch-in zoom on every cut (or every sentence when there is no cut). |
-| **Auto-ducking** | Background music is lowered automatically while someone speaks. |
+| **Sound** | Video volume up to 300 % with a limiter, mute, clip leveling; background music lowered automatically while someone speaks. |
+| **Rotation** | Turn a video filmed sideways by 90° steps; preview, export and face tracking follow. |
 | **Timeline** | Wavesurfer.js waveform with draggable, resizable cut regions; select a cut to nudge its start / end (±0.1 s) or listen to it; zoom (buttons, Ctrl + wheel); undo / redo. |
 | **Light preview** | The preview renders at 360p, 540p or 720p to keep the editor smooth; the export is always full quality. |
 | **Mobile editor** | A dedicated phone layout with the tools in a bottom tab bar. |
@@ -56,6 +59,10 @@
 | Auto edit | Silence detection and cuts |
 | --- | --- |
 | ![Auto edit dialog](docs/screenshots/auto-edit.png) | ![Cuts tab with silence detection settings](docs/screenshots/editor-cuts.png) |
+
+| Thumbnail maker | Sound |
+| --- | --- |
+| ![Thumbnail maker with suggested moments and a highlighted title](docs/screenshots/thumbnail.png) | ![Sound tab with volume and clip leveling](docs/screenshots/sound.png) |
 
 | Export | Changelog |
 | --- | --- |

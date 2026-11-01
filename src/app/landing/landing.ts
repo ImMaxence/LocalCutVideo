@@ -27,7 +27,7 @@ export class Landing {
     { key: 'captions', icon: 'captions' },
     { key: 'framing', icon: 'face' },
     { key: 'zoom', icon: 'zoom' },
-    { key: 'ducking', icon: 'music' },
+    { key: 'ducking', icon: 'volume' },
     { key: 'recovery', icon: 'save' },
     { key: 'offline', icon: 'offline' },
     { key: 'export', icon: 'zap' },
@@ -36,6 +36,7 @@ export class Landing {
   ];
 
   protected readonly steps = ['open', 'edit', 'export'];
+  protected readonly promoPoints = ['moments', 'title', 'formats', 'local'];
   protected readonly privacyPoints = ['upload', 'account', 'csp', 'storage'];
   protected readonly faq = ['free', 'formats', 'browsers', 'size', 'offline', 'ai'];
   protected readonly browsers = [
