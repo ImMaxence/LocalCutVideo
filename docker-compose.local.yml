@@ -1,0 +1,6 @@
+# Local run on http://localhost:4280 :
+#   docker compose -f docker-compose.yml -f docker-compose.local.yml up --build
+services:
+  web:
+    ports:
+      - '4280:80'

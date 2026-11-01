@@ -1,0 +1,171 @@
+:host {
+  --wave: light-dark(#b9b0f7, #4b4290);
+  --wave-progress: light-dark(#5b3df5, #8f7dff);
+  --cut-silence: light-dark(rgb(232 51 107 / 0.2), rgb(255 107 147 / 0.24));
+  --cut-manual: light-dark(rgb(183 110 0 / 0.22), rgb(251 191 36 / 0.22));
+  --cut-text: light-dark(rgb(91 61 245 / 0.18), rgb(143 125 255 / 0.22));
+  --cut-new: light-dark(rgb(183 110 0 / 0.25), rgb(251 191 36 / 0.25));
+  --clip-marker: light-dark(#12141a, #eceef4);
+  --mark-region: light-dark(rgb(15 159 110 / 0.22), rgb(52 211 153 / 0.22));
+  --mark-line: light-dark(#0f9f6e, #34d399);
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 6px;
+  min-width: 0;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 12.5px;
+  min-height: 30px;
+}
+
+.title {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 650;
+}
+
+.legend {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  i {
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    margin-left: 6px;
+    &.silence {
+      background: var(--pink);
+    }
+    &.manual {
+      background: var(--warning);
+    }
+    &.text {
+      background: var(--accent);
+    }
+  }
+}
+
+.marks {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  .mark {
+    b {
+      font-family: var(--mono);
+      color: var(--text-faint);
+    }
+    &.set {
+      border-color: var(--success);
+      color: var(--success);
+      b {
+        color: inherit;
+      }
+    }
+  }
+}
+
+.right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.zoom {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--text-muted);
+  input {
+    width: 110px;
+    margin: 0 4px;
+  }
+  .fit {
+    margin-left: 4px;
+    font-size: 12px;
+  }
+}
+
+.wave-wrap {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--bg-sunken);
+  border: 1px solid var(--border);
+  padding: 6px 8px 0;
+  min-height: 124px;
+}
+
+/* Wavesurfer renders in a shadow root and exposes its regions as CSS parts. */
+.wave ::ng-deep div::part(region) {
+  border-radius: 4px;
+}
+
+.wave ::ng-deep div::part(marker) {
+  border-left: 2px dashed var(--clip-marker);
+}
+
+.wave ::ng-deep div::part(region-content) {
+  margin: 2px 0 0 4px;
+  padding: 0 6px;
+  border-radius: 6px;
+  background: var(--clip-marker);
+  color: var(--bg);
+  font: 700 11px/18px var(--font);
+}
+
+.wave ::ng-deep div::part(region-handle) {
+  border-color: var(--pink) !important;
+  width: 4px !important;
+}
+
+.loading {
+  position: absolute;
+  justify-items: center;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 10px;
+  min-width: 240px;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+  .progress {
+    width: 240px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .hint {
+    display: none;
+  }
+}
+
+.loading .error {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--danger);
+}
+
+@media (max-width: 760px) {
+  .toolbar {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .zoom input,
+  .zoom .fit {
+    display: none;
+  }
+  .right {
+    margin-left: auto;
+  }
+}

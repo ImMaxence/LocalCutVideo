@@ -1,0 +1,201 @@
+<section class="hero">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="pills">
+        <span class="badge"><app-icon name="lock" [size]="14" /> {{ 'landing.hero.badgeLocal' | transloco }}</span>
+        <span class="badge"><app-icon name="github" [size]="14" /> {{ 'landing.hero.badgeOpen' | transloco }}</span>
+      </div>
+      <h1>
+        {{ 'landing.hero.title1' | transloco }}
+        <span class="gradient">{{ 'landing.hero.title2' | transloco }}</span>
+      </h1>
+      <p class="lead">{{ 'landing.hero.lead' | transloco }}</p>
+      <div class="ctas">
+        <a class="btn primary lg" routerLink="/app">
+          {{ 'landing.hero.cta' | transloco }}
+          <app-icon name="arrow-right" [size]="18" />
+        </a>
+        <a class="btn lg" [href]="repoUrl" target="_blank" rel="noopener">
+          <app-icon name="github" [size]="18" />
+          {{ 'landing.hero.github' | transloco }}
+        </a>
+      </div>
+      <p class="hint faint">{{ 'landing.hero.hint' | transloco }}</p>
+    </div>
+
+    <div class="mockup" aria-hidden="true">
+      <div class="window">
+        <div class="window-bar"><i></i><i></i><i></i><span>LocalCutVideo</span></div>
+        <div class="window-body">
+          <div class="transcript">
+            <p>
+              <span>{{ 'landing.mock.w1' | transloco }}</span>
+              <span class="del">{{ 'landing.mock.filler' | transloco }}</span>
+              <span class="on">{{ 'landing.mock.w2' | transloco }}</span>
+              <span>{{ 'landing.mock.w3' | transloco }}</span>
+            </p>
+            <p class="faint">{{ 'landing.mock.line2' | transloco }}</p>
+            <p class="faint short">{{ 'landing.mock.line3' | transloco }}</p>
+          </div>
+          <div class="phone">
+            <div class="scene">
+              <div class="sun"></div>
+              <div class="person"><div class="head"></div><div class="body"></div></div>
+            </div>
+            <div class="caption">
+              {{ 'landing.mock.cap1' | transloco }} <b>{{ 'landing.mock.cap2' | transloco }}</b>
+            </div>
+          </div>
+        </div>
+        <div class="wave">
+          @for (bar of bars; track $index) {
+            <i [style.height.%]="bar.h" [class.cut]="bar.cut"></i>
+          }
+          <div class="cut-zone a"><app-icon name="scissors" [size]="12" /></div>
+          <div class="cut-zone b"><app-icon name="scissors" [size]="12" /></div>
+          <div class="cursor"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="stats" [appReveal]="3">
+      <div><b>0</b><span>{{ 'landing.stats.upload' | transloco }}</span></div>
+      <div><b>100%</b><span>{{ 'landing.stats.local' | transloco }}</span></div>
+      <div><b>5</b><span>{{ 'landing.stats.languages' | transloco }}</span></div>
+      <div><b>GPU</b><span>{{ 'landing.stats.gpu' | transloco }}</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <span class="eyebrow">{{ 'landing.how.eyebrow' | transloco }}</span>
+      <h2>{{ 'landing.how.title' | transloco }}</h2>
+    </div>
+    <ol class="steps">
+      @for (step of steps; track step; let i = $index) {
+        <li class="card" [appReveal]="i">
+          <span class="num">{{ i + 1 }}</span>
+          <h3>{{ 'landing.how.' + step + '.title' | transloco }}</h3>
+          <p class="muted">{{ 'landing.how.' + step + '.text' | transloco }}</p>
+        </li>
+      }
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <span class="eyebrow">{{ 'landing.features.eyebrow' | transloco }}</span>
+      <h2>{{ 'landing.features.title' | transloco }}</h2>
+      <p class="muted">{{ 'landing.features.lead' | transloco }}</p>
+    </div>
+    <div class="features">
+      @for (f of features; track f.key) {
+        <article class="card feature" [appReveal]="$index % 3">
+          <span class="ficon"><app-icon [name]="f.icon" [size]="20" /></span>
+          <h3>{{ 'landing.features.' + f.key + '.title' | transloco }}</h3>
+          <p class="muted">{{ 'landing.features.' + f.key + '.text' | transloco }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section" id="privacy">
+  <div class="container privacy">
+    <div appReveal>
+      <span class="eyebrow">{{ 'landing.privacy.eyebrow' | transloco }}</span>
+      <h2>{{ 'landing.privacy.title' | transloco }}</h2>
+      <p class="muted lead-sm">{{ 'landing.privacy.lead' | transloco }}</p>
+      <ul class="checks">
+        @for (p of privacyPoints; track p) {
+          <li>
+            <app-icon name="check" [size]="16" />
+            <span>{{ 'landing.privacy.' + p | transloco }}</span>
+          </li>
+        }
+      </ul>
+    </div>
+    <div class="card diagram" aria-hidden="true" [appReveal]="2">
+      <div class="machine">
+        <span class="tag">{{ 'landing.privacy.diagram.machine' | transloco }}</span>
+        <div class="flow">
+          <div class="node"><app-icon name="film" /> {{ 'landing.privacy.diagram.file' | transloco }}</div>
+          <app-icon name="arrow-right" class="arrow" />
+          <div class="node browser">
+            <b>{{ 'landing.privacy.diagram.browser' | transloco }}</b>
+            <small>WebCodecs · Whisper · MediaPipe</small>
+          </div>
+          <app-icon name="arrow-right" class="arrow" />
+          <div class="node"><app-icon name="download" /> MP4</div>
+        </div>
+      </div>
+      <div class="internet">
+        <div class="blocked"><app-icon name="x" [size]="14" /> {{ 'landing.privacy.diagram.upload' | transloco }}</div>
+        <div class="model"><app-icon name="cpu" [size]="14" /> {{ 'landing.privacy.diagram.model' | transloco }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container support">
+    <div class="section-head" appReveal>
+      <span class="eyebrow">{{ 'landing.support.eyebrow' | transloco }}</span>
+      <h2>{{ 'landing.support.title' | transloco }}</h2>
+    </div>
+    <div class="card table" appReveal>
+      @for (b of browsers; track b.name) {
+        <div class="row">
+          <b>{{ b.name }}</b>
+          <span class="level" [class]="b.level">{{ 'landing.support.' + b.level | transloco }}</span>
+          <span class="muted">{{ 'landing.support.' + b.key | transloco }}</span>
+        </div>
+      }
+      <div class="row">
+        <b>{{ 'landing.support.mobile' | transloco }}</b>
+        <span class="level partial">{{ 'landing.support.partial' | transloco }}</span>
+        <span class="muted">{{ 'landing.support.mobileText' | transloco }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container faq">
+    <div class="section-head" appReveal>
+      <span class="eyebrow">FAQ</span>
+      <h2>{{ 'landing.faq.title' | transloco }}</h2>
+    </div>
+    <div class="questions">
+      @for (q of faq; track q) {
+        <details class="card" [appReveal]="$index">
+          <summary>
+            {{ 'landing.faq.' + q + '.q' | transloco }}
+            <app-icon name="chevron" [size]="18" />
+          </summary>
+          <p class="muted">{{ 'landing.faq.' + q + '.a' | transloco }}</p>
+        </details>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="final" appReveal>
+      <h2>{{ 'landing.final.title' | transloco }}</h2>
+      <p>{{ 'landing.final.text' | transloco }}</p>
+      <a class="btn lg" routerLink="/app">
+        {{ 'landing.hero.cta' | transloco }}
+        <app-icon name="arrow-right" [size]="18" />
+      </a>
+    </div>
+  </div>
+</section>

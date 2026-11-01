@@ -1,0 +1,10 @@
+/* Web workers (media analysis, Whisper, export) are type-checked with the worker lib. */
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/worker",
+    "lib": ["es2024", "webworker"],
+    "types": []
+  },
+  "include": ["src/**/*.worker.ts"]
+}

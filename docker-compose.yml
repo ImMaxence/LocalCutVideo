@@ -1,0 +1,24 @@
+# Production stack, used as-is by Coolify (Docker Compose build pack).
+# In Coolify, set the domain of the "web" service to https://localcutvideo.mbonnici.fr
+# Coolify's proxy terminates TLS and forwards to port 80 of the container.
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: localcutvideo:latest
+    restart: unless-stopped
+    expose:
+      - '80'
+    # Only nginx warnings/errors are logged (access logs are off); keep them small.
+    logging:
+      driver: json-file
+      options:
+        max-size: '5m'
+        max-file: '2'
+    healthcheck:
+      test: ['CMD', 'wget', '-qO-', 'http://127.0.0.1/healthz']
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s

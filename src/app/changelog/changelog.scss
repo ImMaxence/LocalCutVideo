@@ -1,0 +1,134 @@
+.page {
+  max-width: 820px;
+  padding-top: 56px;
+}
+
+.head {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 40px;
+  h1 {
+    font-size: clamp(32px, 4.4vw, 46px);
+    font-weight: 800;
+  }
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.current {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: transparent;
+  code {
+    font-family: var(--mono);
+    font-weight: 700;
+  }
+}
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 28px;
+  position: relative;
+  display: grid;
+  gap: 18px;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: var(--border);
+  }
+  > li {
+    position: relative;
+  }
+}
+
+.dot {
+  position: absolute;
+  left: -27px;
+  top: 24px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 3px solid var(--border-strong);
+  .latest & {
+    border-color: var(--accent);
+    background: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-soft);
+  }
+}
+
+article {
+  padding: 20px 24px;
+  header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  h2 {
+    font-size: 20px;
+    font-family: var(--mono);
+    letter-spacing: -0.01em;
+  }
+  time {
+    margin-left: auto;
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
+  }
+  h3 {
+    margin: 16px 0 6px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    &.added {
+      color: var(--success);
+    }
+    &.fixed {
+      color: var(--warning);
+    }
+    &.changed {
+      color: var(--accent);
+    }
+  }
+  ul {
+    margin: 0;
+    padding-left: 18px;
+    display: grid;
+    gap: 4px;
+    font-size: 14.5px;
+  }
+  code {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    padding: 1px 5px;
+    border-radius: 5px;
+    background: var(--surface);
+  }
+}
+
+.latest-badge {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: transparent;
+  height: 22px;
+}

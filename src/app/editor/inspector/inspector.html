@@ -1,0 +1,365 @@
+@if (showTabs()) {
+  <nav class="tabs" role="tablist">
+    @for (t of tabs; track t.id) {
+      <button
+        type="button"
+        role="tab"
+        [class.active]="tab() === t.id"
+        [attr.aria-selected]="tab() === t.id"
+        (click)="tab.set(t.id)"
+        [title]="'editor.tabs.' + t.id | transloco"
+      >
+        <app-icon [name]="t.icon" [size]="17" />
+        <span class="tab-label">{{ 'editor.tabs.' + t.id | transloco }}</span>
+      </button>
+    }
+  </nav>
+}
+
+<div class="body">
+  @switch (tab()) {
+    @case ('clips') {
+      <section>
+        <h3>{{ 'editor.clips.title' | transloco }}</h3>
+        <p class="hint">{{ 'editor.clips.hint' | transloco }}</p>
+        <ol class="clips">
+          @for (c of store.clips(); track c.id) {
+            <li
+              class="clip"
+              draggable="true"
+              [class.dragging]="dragIndex() === c.index"
+              [class.over]="overIndex() === c.index && dragIndex() !== c.index"
+              (dragstart)="onDragStart(c.index, $event)"
+              (dragover)="onDragOver(c.index, $event)"
+              (drop)="onDrop(c.index, $event)"
+              (dragend)="onDragEnd()"
+            >
+              <span class="grip" aria-hidden="true"><app-icon name="grip" [size]="16" /></span>
+              <button type="button" class="clip-main" (click)="jumpTo(c)" [title]="'editor.clips.jump' | transloco">
+                <span class="num">{{ c.index + 1 }}</span>
+                <span class="meta">
+                  <b>{{ c.source.name }}</b>
+                  <small>{{ formatTime(c.end - c.start) }} · {{ c.source.width }}×{{ c.source.height }}</small>
+                </span>
+              </button>
+              <span class="clip-actions">
+                <button class="btn ghost icon sm" type="button" [disabled]="c.index === 0" (click)="store.moveClip(c.id, c.index - 1)" [attr.aria-label]="'editor.clips.up' | transloco">
+                  <app-icon name="chevron-up" [size]="15" />
+                </button>
+                <button class="btn ghost icon sm" type="button" [disabled]="c.index === store.clips().length - 1" (click)="store.moveClip(c.id, c.index + 1)" [attr.aria-label]="'editor.clips.down' | transloco">
+                  <app-icon name="chevron" [size]="15" />
+                </button>
+                <button class="btn ghost icon sm danger" type="button" [disabled]="store.clips().length < 2" (click)="removeClip(c)" [attr.aria-label]="'editor.clips.remove' | transloco">
+                  <app-icon name="trash" [size]="14" />
+                </button>
+              </span>
+            </li>
+          }
+        </ol>
+        <button class="btn block" type="button" (click)="store.addClips()">
+          <app-icon name="plus" [size]="16" /> {{ 'editor.clips.add' | transloco }}
+        </button>
+        <small class="faint">{{ 'editor.clips.summary' | transloco: { count: store.clips().length, time: formatTime(store.duration()) } }}</small>
+      </section>
+    }
+
+    @case ('format') {
+      <section>
+        <h3>{{ 'editor.format.title' | transloco }}</h3>
+        <p class="hint">{{ 'editor.format.hint' | transloco }}</p>
+        <div class="formats">
+          @for (f of formats; track f.id) {
+            <button type="button" class="format" [class.active]="p().format === f.id" (click)="setFormat(f.id)">
+              <app-icon [name]="f.icon" [size]="26" />
+              <b>{{ f.id }}</b>
+              <small>{{ 'editor.format.' + f.key | transloco }}</small>
+            </button>
+          }
+        </div>
+        <p class="source faint"><app-icon name="film" [size]="13" /> {{ 'editor.format.source' | transloco }} {{ sourceLabel() }}</p>
+        <p class="note"><app-icon name="info" [size]="14" /> {{ 'editor.format.exportNote' | transloco }}</p>
+      </section>
+    }
+
+    @case ('cuts') {
+      <section>
+        <h3>{{ 'editor.cuts.title' | transloco }}</h3>
+        <p class="hint">{{ 'editor.cuts.hint' | transloco }}</p>
+        <div class="field">
+          <span class="label">{{ 'editor.cuts.mode' | transloco }}</span>
+          <div class="segmented">
+            <button type="button" [class.active]="p().silence.mode === 'audio'" (click)="silence({ mode: 'audio' })">
+              <app-icon name="wave" [size]="14" /> {{ 'editor.cuts.modes.audio' | transloco }}
+            </button>
+            <button type="button" [class.active]="p().silence.mode === 'transcript'" [disabled]="!p().words.length" (click)="silence({ mode: 'transcript' })">
+              <app-icon name="text" [size]="14" /> {{ 'editor.cuts.modes.transcript' | transloco }}
+            </button>
+          </div>
+          <small class="faint">{{ (p().words.length ? 'editor.cuts.modeHint' : 'editor.cuts.modeNeedsTranscript') | transloco }}</small>
+        </div>
+        <div class="field">
+          <span class="label">{{ 'editor.cuts.preset' | transloco }}</span>
+          <div class="segmented">
+            @for (pr of presets; track pr.id) {
+              <button type="button" [class.active]="preset() === pr.id" (click)="silence({ minSilence: pr.minSilence, padding: pr.padding })">
+                {{ 'editor.cuts.presets.' + pr.id | transloco }}
+              </button>
+            }
+          </div>
+        </div>
+        @if (p().silence.mode === 'audio') {
+          <div class="field">
+            <label>
+              {{ 'editor.cuts.threshold' | transloco }}
+              <span class="value">{{ p().silence.thresholdDb }} dB</span>
+            </label>
+            <input type="range" min="-65" max="-15" step="1" [value]="p().silence.thresholdDb" (input)="silence({ thresholdDb: num($event) }, 'threshold')" />
+            @if (store.analysis(); as a) {
+              <small class="faint">{{ 'editor.cuts.suggested' | transloco: { value: a.suggestedThresholdDb } }}</small>
+            }
+          </div>
+        }
+        <div class="field">
+          <label>
+            {{ 'editor.cuts.minSilence' | transloco }}
+            <span class="value">{{ p().silence.minSilence.toFixed(2) }} s</span>
+          </label>
+          <input type="range" min="0.2" max="2" step="0.05" [value]="p().silence.minSilence" (input)="silence({ minSilence: num($event) }, 'minSilence')" />
+        </div>
+        <div class="field">
+          <label>
+            {{ 'editor.cuts.padding' | transloco }}
+            <span class="value">{{ (p().silence.padding * 1000).toFixed(0) }} ms</span>
+          </label>
+          <input type="range" min="0" max="0.4" step="0.01" [value]="p().silence.padding" (input)="silence({ padding: num($event) }, 'padding')" />
+        </div>
+        @if (p().silence.live) {
+          <p class="live"><span class="dot"></span> {{ 'editor.cuts.live' | transloco }}</p>
+        } @else {
+          <button class="btn primary block" type="button" (click)="detect()" [disabled]="!store.analysis()">
+            <app-icon name="scissors" [size]="16" /> {{ 'editor.cuts.detect' | transloco }}
+          </button>
+        }
+      </section>
+      <section class="stats">
+        <div><b>{{ p().cuts.length }}</b><span>{{ 'editor.cuts.count' | transloco }}</span></div>
+        <div><b>−{{ formatTime(removedSeconds()) }}</b><span>{{ 'editor.cuts.removed' | transloco }}</span></div>
+        <div><b>{{ formatTime(store.outputDuration()) }}</b><span>{{ 'editor.cuts.final' | transloco }}</span></div>
+      </section>
+      @if (p().cuts.length) {
+        <button class="btn ghost danger block" type="button" (click)="store.clearCuts()">
+          <app-icon name="trash" [size]="15" /> {{ 'editor.cuts.clear' | transloco }}
+        </button>
+      }
+    }
+
+    @case ('captions') {
+      <section>
+        <h3>{{ 'editor.transcribe.title' | transloco }}</h3>
+        <p class="hint">{{ 'editor.transcribe.hint' | transloco }}</p>
+        <div class="field">
+          <span class="label">{{ 'editor.transcribe.model' | transloco }}</span>
+          <div class="segmented">
+            @for (m of models; track m) {
+              <button type="button" [class.active]="store.whisperModel() === m" (click)="store.whisperModel.set(m)">
+                {{ 'editor.transcribe.models.' + m | transloco }}
+              </button>
+            }
+          </div>
+          <small class="faint">{{ 'editor.transcribe.download' | transloco: { size: modelSizes[store.whisperModel()] } }}</small>
+        </div>
+        <div class="field">
+          <span class="label">{{ 'editor.transcribe.language' | transloco }}</span>
+          <app-select
+            [options]="languageOptions()"
+            [value]="spokenLanguage()"
+            (valueChange)="setSpokenLanguage($event)"
+            [label]="'editor.transcribe.language' | transloco"
+          />
+          @if (!store.whisperLanguage() && p().transcript?.detected; as detected) {
+            <small class="detected"><app-icon name="check" [size]="13" /> {{ 'editor.transcribe.detected' | transloco: { language: languageName(detected) } }}</small>
+          }
+        </div>
+        @if (store.transcription(); as task) {
+          <div class="task">
+            <div class="task-head">
+              <span>{{ 'editor.transcribe.stage.' + task.stage | transloco }}</span>
+              <span class="value">{{ (task.progress * 100).toFixed(0) }}%</span>
+            </div>
+            <div class="progress"><div [style.width.%]="task.progress * 100"></div></div>
+            <button class="btn sm ghost" type="button" (click)="store.cancelTranscription()">{{ 'common.cancel' | transloco }}</button>
+          </div>
+        } @else if (!p().words.length) {
+          <button class="btn primary block" type="button" (click)="transcribe.emit('all')" [disabled]="!store.analysis()">
+            <app-icon name="sparkles" [size]="16" /> {{ 'editor.transcribe.run' | transloco }}
+          </button>
+        } @else {
+          @if (store.untranscribedClips()) {
+            <button class="btn primary block" type="button" (click)="transcribe.emit('missing')">
+              <app-icon name="plus" [size]="16" /> {{ 'editor.transcribe.missing' | transloco: { count: store.untranscribedClips() } }}
+            </button>
+          }
+          <button class="btn block" type="button" (click)="retranscribe()" [disabled]="!store.analysis()">
+            <app-icon name="refresh" [size]="16" /> {{ 'editor.transcribe.rerun' | transloco }}
+          </button>
+          <small class="faint">{{ 'editor.transcribe.rerunHint' | transloco }}</small>
+        }
+        @if (store.aiDevice(); as device) {
+          <span class="badge device"><app-icon name="cpu" [size]="13" /> {{ device === 'webgpu' ? 'WebGPU' : 'WASM (CPU)' }}</span>
+        }
+      </section>
+
+      <section>
+        <label class="switch">
+          <h3>{{ 'editor.captions.title' | transloco }}</h3>
+          <input type="checkbox" [checked]="p().captions.enabled" (change)="patch('captions.enabled', checked($event))" />
+        </label>
+        @if (p().captions.enabled) {
+          <div class="field">
+            <span class="label">{{ 'editor.captions.style' | transloco }}</span>
+            <div class="segmented">
+              @for (s of styles; track s) {
+                <button type="button" [class.active]="p().captions.style === s" (click)="patch('captions.style', s)">
+                  {{ 'editor.captions.styles.' + s | transloco }}
+                </button>
+              }
+            </div>
+          </div>
+          <div class="field">
+            <span class="label">{{ 'editor.captions.position' | transloco }}</span>
+            <div class="segmented">
+              @for (pos of positions; track pos) {
+                <button type="button" [class.active]="p().captions.position === pos" (click)="patch('captions.position', pos)">
+                  {{ 'editor.captions.positions.' + pos | transloco }}
+                </button>
+              }
+            </div>
+          </div>
+          <div class="field">
+            <label>{{ 'editor.captions.size' | transloco }} <span class="value">{{ (p().captions.size * 100).toFixed(0) }}%</span></label>
+            <input type="range" min="0.6" max="1.6" step="0.05" [value]="p().captions.size" (input)="patch('captions.size', num($event), 'capSize')" />
+          </div>
+          <div class="field">
+            <label>{{ 'editor.captions.words' | transloco }} <span class="value">{{ p().captions.maxWords }}</span></label>
+            <input type="range" min="1" max="10" step="1" [value]="p().captions.maxWords" (input)="patch('captions.maxWords', num($event), 'capWords')" />
+          </div>
+          <label class="switch">
+            {{ 'editor.captions.uppercase' | transloco }}
+            <input type="checkbox" [checked]="p().captions.uppercase" (change)="patch('captions.uppercase', checked($event))" />
+          </label>
+          @if (p().captions.style !== 'clean') {
+            <div class="field">
+              <span class="label">{{ 'editor.captions.highlight' | transloco }}</span>
+              <div class="swatches">
+                @for (c of swatches; track c) {
+                  <button
+                    type="button"
+                    class="swatch"
+                    [style.background]="c"
+                    [class.active]="p().captions.highlight === c"
+                    (click)="patch('captions.highlight', c)"
+                    [attr.aria-label]="c"
+                  ></button>
+                }
+                <input type="color" [value]="p().captions.highlight" (input)="patch('captions.highlight', value($event), 'capColor')" />
+              </div>
+            </div>
+          }
+        }
+      </section>
+    }
+
+    @case ('framing') {
+      <section>
+        <h3>{{ 'editor.framing.title' | transloco }}</h3>
+        <p class="hint">{{ 'editor.framing.hint' | transloco }}</p>
+        <div class="segmented">
+          <button type="button" [class.active]="p().framing.mode === 'center'" (click)="store.setFramingMode('center')">
+            <app-icon name="crop" [size]="14" /> {{ 'editor.framing.center' | transloco }}
+          </button>
+          <button type="button" [class.active]="p().framing.mode === 'face'" [disabled]="store.faceProgress() !== null" (click)="store.setFramingMode('face')">
+            <app-icon name="face" [size]="14" /> {{ 'editor.framing.face' | transloco }}
+          </button>
+        </div>
+        @if (store.faceProgress() !== null) {
+          <div class="task">
+            <div class="task-head">
+              <span>{{ 'editor.framing.analyzing' | transloco }}</span>
+              <span class="value">{{ ((store.faceProgress() ?? 0) * 100).toFixed(0) }}%</span>
+            </div>
+            <div class="progress"><div [style.width.%]="(store.faceProgress() ?? 0) * 100"></div></div>
+            <button class="btn sm ghost" type="button" (click)="store.cancelFaces()">{{ 'common.cancel' | transloco }}</button>
+          </div>
+        } @else if (p().faces; as faces) {
+          <div class="row-between">
+            <span class="badge ok"><app-icon name="check" [size]="13" /> {{ 'editor.framing.tracked' | transloco: { count: faces.length } }}</span>
+            <button class="btn sm ghost" type="button" (click)="store.analyzeFaces()">
+              <app-icon name="refresh" [size]="14" /> {{ 'editor.framing.reanalyze' | transloco }}
+            </button>
+          </div>
+        } @else {
+          <small class="faint">{{ 'editor.framing.firstTime' | transloco }}</small>
+        }
+      </section>
+      <section>
+        <label class="switch">
+          <h3>{{ 'editor.framing.punch' | transloco }}</h3>
+          <input type="checkbox" [checked]="p().framing.punchIn" (change)="patch('framing.punchIn', checked($event))" />
+        </label>
+        <p class="hint">{{ 'editor.framing.punchHint' | transloco }}</p>
+        @if (p().framing.punchIn) {
+          <div class="field">
+            <label>{{ 'editor.framing.zoom' | transloco }} <span class="value">{{ p().framing.zoom.toFixed(2) }}×</span></label>
+            <input type="range" min="1.05" max="1.5" step="0.01" [value]="p().framing.zoom" (input)="patch('framing.zoom', num($event), 'zoom')" />
+          </div>
+          <small class="faint">{{ (store.segments().length > 1 ? 'editor.framing.beatsCuts' : 'editor.framing.beatsAuto') | transloco: { count: store.zoomBeats().length } }}</small>
+        }
+      </section>
+    }
+
+    @case ('audio') {
+      <section>
+        <h3>{{ 'editor.audio.title' | transloco }}</h3>
+        <p class="hint">{{ 'editor.audio.hint' | transloco }}</p>
+        @switch (store.musicState()) {
+          @case ('ready') {
+            <div class="music-file">
+              <app-icon name="music" [size]="16" />
+              <span>{{ p().music.name }}</span>
+              <button class="btn ghost icon sm" type="button" (click)="store.removeMusic()" [attr.aria-label]="'common.remove' | transloco">
+                <app-icon name="x" [size]="15" />
+              </button>
+            </div>
+          }
+          @case ('permission') {
+            <button class="btn block" type="button" (click)="store.restoreMusic(true)">
+              <app-icon name="link" [size]="15" /> {{ 'editor.audio.reconnect' | transloco: { name: p().music.name } }}
+            </button>
+          }
+          @default {
+            <button class="btn block" type="button" (click)="store.pickMusic()">
+              <app-icon name="folder" [size]="15" /> {{ 'editor.audio.pick' | transloco }}
+            </button>
+          }
+        }
+      </section>
+      @if (store.musicState() === 'ready') {
+        <section>
+          <label class="switch">
+            {{ 'editor.audio.enabled' | transloco }}
+            <input type="checkbox" [checked]="p().music.enabled" (change)="patch('music.enabled', checked($event))" />
+          </label>
+          <div class="field">
+            <label>{{ 'editor.audio.volume' | transloco }} <span class="value">{{ (p().music.volume * 100).toFixed(0) }}%</span></label>
+            <input type="range" min="0" max="1" step="0.01" [value]="p().music.volume" (input)="patch('music.volume', num($event), 'musicVol')" />
+          </div>
+          <div class="field">
+            <label>{{ 'editor.audio.ducking' | transloco }} <span class="value">−{{ ((1 - p().music.ducking) * 100).toFixed(0) }}%</span></label>
+            <input type="range" min="0" max="1" step="0.01" [value]="1 - p().music.ducking" (input)="patch('music.ducking', 1 - num($event), 'duck')" />
+            <small class="faint">{{ 'editor.audio.duckingHint' | transloco }}</small>
+          </div>
+        </section>
+      }
+    }
+  }
+</div>

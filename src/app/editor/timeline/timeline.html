@@ -1,0 +1,60 @@
+<div class="toolbar">
+  <span class="title"><app-icon name="wave" [size]="16" /> {{ 'editor.timeline.title' | transloco }}</span>
+  <span class="legend">
+    <i class="silence"></i>{{ 'editor.timeline.silence' | transloco }}
+    <i class="manual"></i>{{ 'editor.timeline.manual' | transloco }}
+    <i class="text"></i>{{ 'editor.timeline.text' | transloco }}
+  </span>
+  <span class="hint faint">{{ 'editor.timeline.hint' | transloco }}</span>
+  <div class="marks" role="group" [attr.aria-label]="'editor.timeline.manualCut' | transloco">
+    <button class="btn sm mark" type="button" [class.set]="store.markIn() !== null" (click)="store.setMark('in')" [title]="'editor.timeline.markInHint' | transloco">
+      <b>[</b> {{ 'editor.timeline.markIn' | transloco }}
+    </button>
+    <button class="btn sm mark" type="button" [class.set]="store.markOut() !== null" (click)="store.setMark('out')" [title]="'editor.timeline.markOutHint' | transloco">
+      {{ 'editor.timeline.markOut' | transloco }} <b>]</b>
+    </button>
+    <button class="btn sm primary" type="button" [disabled]="!canCut()" (click)="store.cutMarked()" [title]="'editor.timeline.cutHint' | transloco">
+      <app-icon name="scissors" [size]="14" /> {{ 'editor.timeline.cutMarked' | transloco }}
+    </button>
+    @if (store.markIn() !== null || store.markOut() !== null) {
+      <button class="btn ghost icon sm" type="button" (click)="store.clearMarks()" [attr.aria-label]="'editor.timeline.clearMarks' | transloco" [title]="'editor.timeline.clearMarks' | transloco">
+        <app-icon name="x" [size]="14" />
+      </button>
+    }
+  </div>
+  <div class="right">
+    @if (selectedCut()) {
+      <button class="btn sm danger" type="button" (click)="deleteSelected()">
+        <app-icon name="trash" [size]="14" /> {{ 'editor.timeline.removeCut' | transloco }}
+      </button>
+    }
+    <div class="zoom" role="group" [attr.aria-label]="'editor.timeline.zoom' | transloco">
+      <button class="btn ghost icon sm" type="button" (click)="zoomBy(-1)" [disabled]="zoom() === 0" [title]="'editor.timeline.zoomOut' | transloco">
+        <app-icon name="zoom-out" [size]="16" />
+      </button>
+      <input type="range" min="0" [max]="maxZoom" step="1" [value]="zoom()" (input)="setZoom($event)" [attr.aria-label]="'editor.timeline.zoom' | transloco" />
+      <button class="btn ghost icon sm" type="button" (click)="zoomBy(1)" [disabled]="zoom() >= maxZoom" [title]="'editor.timeline.zoomIn' | transloco">
+        <app-icon name="zoom" [size]="16" />
+      </button>
+      <button class="btn ghost sm fit" type="button" (click)="applyZoom(0)" [disabled]="zoom() === 0" [title]="'editor.timeline.fitHint' | transloco">
+        {{ 'editor.timeline.fit' | transloco }}
+      </button>
+    </div>
+  </div>
+</div>
+<div class="wave-wrap" (wheel)="onWheel($event)">
+  <div #wave class="wave"></div>
+  @if (!ready()) {
+    <div class="loading">
+      @if (store.analysisError(); as error) {
+        <span class="error"><app-icon name="alert" [size]="15" /> {{ 'editor.timeline.analysisError' | transloco }} · {{ error | transloco }}</span>
+        <button class="btn sm" type="button" (click)="store.ensureAnalyses()"><app-icon name="refresh" [size]="14" /> {{ 'common.retry' | transloco }}</button>
+      } @else if (store.audioProgress() !== null) {
+        <span>{{ 'editor.timeline.analyzing' | transloco }} {{ ((store.audioProgress() ?? 0) * 100).toFixed(0) }}%</span>
+        <div class="progress"><div [style.width.%]="(store.audioProgress() ?? 0) * 100"></div></div>
+      } @else {
+        <div class="progress indeterminate"><div></div></div>
+      }
+    </div>
+  }
+</div>

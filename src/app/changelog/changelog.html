@@ -1,0 +1,59 @@
+<div class="container page">
+  <header class="head">
+    <span class="eyebrow">{{ 'changelog.eyebrow' | transloco }}</span>
+    <h1>{{ 'changelog.title' | transloco }}</h1>
+    <p class="muted">{{ 'changelog.lead' | transloco }}</p>
+    <div class="meta">
+      <span class="badge current"><app-icon name="sparkles" [size]="14" /> {{ 'changelog.current' | transloco }} <code>v{{ version }}</code></span>
+      <a class="btn sm" [href]="changelogUrl" target="_blank" rel="noopener">
+        <app-icon name="github" [size]="15" /> {{ 'changelog.github' | transloco }}
+      </a>
+      <a class="btn sm ghost" [href]="repoUrl + '/releases'" target="_blank" rel="noopener">
+        {{ 'changelog.releases' | transloco }} <app-icon name="external" [size]="14" />
+      </a>
+    </div>
+  </header>
+
+  @switch (releases()) {
+    @case (undefined) {
+      <div class="progress indeterminate"><div></div></div>
+    }
+    @case (null) {
+      <p class="muted">{{ 'changelog.error' | transloco }}</p>
+    }
+    @default {
+      <ol class="timeline">
+        @for (r of releases(); track r.version; let first = $first) {
+          <li [class.latest]="first">
+            <div class="dot"></div>
+            <article class="card">
+              <header>
+                <h2>v{{ r.version }}</h2>
+                @if (first) {
+                  <span class="badge latest-badge">{{ 'changelog.latest' | transloco }}</span>
+                }
+                <time class="faint">{{ r.date }}</time>
+              </header>
+              @for (s of r.sections; track s.title) {
+                <h3 [class]="s.title.toLowerCase()">{{ s.title }}</h3>
+                <ul>
+                  @for (item of s.items; track $index) {
+                    <li>
+                      @for (seg of item; track $index) {
+                        @if (seg.code) {
+                          <code>{{ seg.text }}</code>
+                        } @else {
+                          {{ seg.text }}
+                        }
+                      }
+                    </li>
+                  }
+                </ul>
+              }
+            </article>
+          </li>
+        }
+      </ol>
+    }
+  }
+</div>

@@ -1,0 +1,94 @@
+<header class="panel-head">
+  <span class="title"><app-icon name="text" [size]="16" /> {{ 'editor.transcript.title' | transloco }}</span>
+  @if (words().length) {
+    <span class="faint count">{{ 'editor.transcript.words' | transloco: { count: words().length } }}</span>
+  }
+</header>
+
+@if (words().length) {
+  <div class="actions">
+    <button class="btn sm" type="button" (click)="removeFillers()" [disabled]="!fillerCount()">
+      <app-icon name="sparkles" [size]="14" /> {{ 'editor.transcript.fillers' | transloco: { count: fillerCount() } }}
+    </button>
+    @if (deletedCount()) {
+      <button class="btn sm ghost" type="button" (click)="store.restoreAllWords()">
+        <app-icon name="restore" [size]="14" /> {{ 'editor.transcript.restore' | transloco }}
+      </button>
+    }
+  </div>
+  @if (correcting()) {
+    <div class="correction" animate.enter="slide-in">
+      <label for="lcv-correction">{{ 'editor.transcript.correctTitle' | transloco }}</label>
+      <textarea
+        id="lcv-correction"
+        rows="3"
+        [value]="draft()"
+        (input)="draft.set(value($event))"
+        (keydown)="onCorrectionKey($event)"
+      ></textarea>
+      <small class="faint">{{ 'editor.transcript.correctHint' | transloco }}</small>
+      <div class="correction-actions">
+        <button class="btn sm ghost" type="button" (click)="correcting.set(false)">{{ 'common.cancel' | transloco }}</button>
+        <button class="btn sm primary" type="button" (click)="applyCorrection()" [disabled]="!draft().trim()">
+          <app-icon name="check" [size]="14" /> {{ 'editor.transcript.apply' | transloco }}
+        </button>
+      </div>
+    </div>
+  } @else if (selectionSize()) {
+    <div class="selection-bar">
+      <span>{{ 'editor.transcript.selected' | transloco: { count: selectionSize() } }}</span>
+      <span class="selection-actions">
+        <button class="btn sm" type="button" (click)="startCorrection()" [title]="('editor.transcript.correct' | transloco) + ' (Enter)'">
+          <app-icon name="pencil" [size]="14" /> {{ 'editor.transcript.correct' | transloco }}
+        </button>
+        <button class="btn sm primary" type="button" (click)="store.toggleDeleteSelection()">
+          <app-icon name="scissors" [size]="14" /> {{ 'editor.transcript.cut' | transloco }} <kbd>Del</kbd>
+        </button>
+      </span>
+    </div>
+  }
+  <div class="text" (mousedown)="clearSelection($event)">
+    @for (para of paragraphs(); track para.start) {
+      <p>
+        <span class="stamp faint">{{ formatTime(para.start) }}</span>
+        @for (item of para.words; track item.word.id) {
+          <span
+            class="w"
+            [attr.data-id]="item.word.id"
+            [class.deleted]="item.word.deleted"
+            [class.filler]="item.filler"
+            [class.active]="activeId() === item.word.id"
+            [class.selected]="store.selection().has(item.word.id)"
+            (mousedown)="onMouseDown(item.index, $event)"
+            (mouseenter)="onMouseEnter(item.index)"
+            (click)="onClick(item.word, $event)"
+            (dblclick)="startCorrection()"
+            >{{ item.word.text }}</span
+          >{{ ' ' }}
+        }
+      </p>
+    }
+  </div>
+  <p class="tip faint">{{ 'editor.transcript.tip' | transloco }}</p>
+} @else {
+  <div class="empty">
+    @if (store.transcription(); as task) {
+      <div class="spinner" aria-hidden="true"></div>
+      <b>{{ 'editor.transcribe.stage.' + task.stage | transloco }}</b>
+      <div class="progress"><div [style.width.%]="task.progress * 100"></div></div>
+      @if (store.transcribedWords()) {
+        <span class="faint">{{ 'editor.transcript.words' | transloco: { count: store.transcribedWords() } }}</span>
+      }
+    } @else {
+      <span class="empty-icon"><app-icon name="captions" [size]="26" /></span>
+      <b>{{ 'editor.transcript.emptyTitle' | transloco }}</b>
+      <p class="muted">{{ 'editor.transcript.emptyText' | transloco }}</p>
+      <button class="btn auto" type="button" (click)="autoEdit.emit()">
+        <app-icon name="sparkles" [size]="16" /> {{ 'editor.auto.cta' | transloco }}
+      </button>
+      <button class="btn ghost sm" type="button" (click)="transcribe.emit()" [disabled]="!store.analysis()">
+        {{ 'editor.auto.transcribeOnly' | transloco }}
+      </button>
+    }
+  </div>
+}

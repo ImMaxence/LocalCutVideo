@@ -1,0 +1,15 @@
+node_modules
+dist
+.angular
+.git
+.github
+.vscode
+.idea
+docs
+out-tsc
+coverage
+*.log
+Dockerfile
+docker-compose*.yml
+.dockerignore
+local-video-test

@@ -1,0 +1,47 @@
+<div class="container page">
+  <nav class="tabs" aria-label="Legal">
+    @for (d of docs; track d.id) {
+      <a [routerLink]="d.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <app-icon [name]="d.icon" [size]="16" />
+        {{ 'legal.nav.' + d.id | transloco }}
+      </a>
+    }
+  </nav>
+
+  @if (content(); as c) {
+    <article class="doc">
+      <header>
+        <h1>{{ c.title }}</h1>
+        <p class="faint updated">{{ 'legal.updated' | transloco }}</p>
+        <p class="intro">{{ c.intro }}</p>
+      </header>
+      @for (section of c.sections; track $index) {
+        <section>
+          <h2>{{ section.title }}</h2>
+          @for (paragraph of section.body; track $index) {
+            <p>
+              @for (seg of linkify(paragraph); track $index) {
+                @if (seg.href) {
+                  @if (seg.internal) {
+                    <a [routerLink]="seg.href">{{ seg.text }}</a>
+                  } @else {
+                    <a [href]="seg.href" target="_blank" rel="noopener">{{ seg.text }}</a>
+                  }
+                } @else {
+                  {{ seg.text }}
+                }
+              }
+            </p>
+          }
+        </section>
+      }
+      <aside class="contact card">
+        <app-icon name="mail" [size]="20" />
+        <div>
+          <b>{{ 'legal.contact' | transloco }}</b>
+          <a [href]="'mailto:' + email">{{ email }}</a>
+        </div>
+      </aside>
+    </article>
+  }
+</div>

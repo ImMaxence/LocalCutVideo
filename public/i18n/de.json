@@ -1,0 +1,657 @@
+{
+  "common": {
+    "videoFiles": "Videodateien",
+    "audioFiles": "Audiodateien",
+    "cancel": "Abbrechen",
+    "close": "Schließen",
+    "retry": "Erneut versuchen",
+    "none": "Keine",
+    "remove": "Entfernen"
+  },
+  "nav": {
+    "features": "Funktionen",
+    "privacy": "Datenschutz",
+    "faq": "FAQ",
+    "changelog": "Änderungen",
+    "language": "Sprache",
+    "install": "App installieren",
+    "open": "Editor öffnen",
+    "menu": "Menü öffnen",
+    "close": "Menü schließen"
+  },
+  "theme": {
+    "system": "System",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "label": "Design"
+  },
+  "footer": {
+    "tagline": "Ein kostenloser Open-Source-Videoeditor, der komplett in deinem Browser läuft. Deine Dateien verlassen nie deinen Computer",
+    "issues": "Problem melden",
+    "noTracking": "Keine Cookies, kein Tracking",
+    "product": "Produkt",
+    "legal": "Rechtliches"
+  },
+  "pwa": {
+    "update": "Eine neue Version ist verfügbar",
+    "reload": "Neu laden"
+  },
+  "landing": {
+    "hero": {
+      "badgeLocal": "100 % lokal, kein Upload",
+      "badgeOpen": "Kostenlos & Open Source",
+      "title1": "Schneide deine Videos",
+      "title2": "Nichts verlässt deinen Computer",
+      "lead": "LocalCutVideo schneidet Pausen heraus, transkribiert mit Whisper, brennt Karaoke-Untertitel ein und macht aus 16:9 ein 9:16, komplett in deinem Browser. Kein Upload, kein Konto, kein Server",
+      "cta": "Editor öffnen",
+      "github": "Auf GitHub ansehen",
+      "hint": "Funktioniert am besten mit Chrome oder Edge am Computer"
+    },
+    "mock": {
+      "w1": "Also heute",
+      "filler": "äh,",
+      "w2": "zeige ich dir,",
+      "w3": "wie es funktioniert",
+      "line2": "Alles läuft auf deinem eigenen Rechner, sogar die KI",
+      "line3": "Lösche ein Wort, und das Video wird geschnitten",
+      "cap1": "Das bleibt auf deinem",
+      "cap2": "Computer"
+    },
+    "stats": {
+      "upload": "Bytes hochgeladen",
+      "local": "auf deinem Gerät verarbeitet",
+      "languages": "Sprachen der Oberfläche",
+      "gpu": "beschleunigte KI & Kodierung"
+    },
+    "how": {
+      "eyebrow": "So funktioniert's",
+      "title": "Vom Rohmaterial zum fertigen Video in drei Schritten",
+      "open": {
+        "title": "Video öffnen",
+        "text": "Wähle eine Datei auf deiner Festplatte. Sie wird an Ort und Stelle gelesen: keine Kopie, kein Upload, auch bei mehreren Gigabyte"
+      },
+      "edit": {
+        "title": "Den Editor arbeiten lassen",
+        "text": "Pausen werden erkannt, Sprache Wort für Wort transkribiert und Gesichter verfolgt, alles lokal. Korrigiere, was du willst, indem du den Text bearbeitest"
+      },
+      "export": {
+        "title": "MP4 exportieren",
+        "text": "Wähle 16:9, 9:16 oder 1:1. Das Video wird von deiner Grafikkarte kodiert und direkt auf die Festplatte geschrieben"
+      }
+    },
+    "features": {
+      "eyebrow": "Funktionen",
+      "title": "Alles, was du für Videos vor der Kamera brauchst",
+      "lead": "Gemacht für Creator auf YouTube, TikTok, Reels und Shorts, die ihr Rohmaterial lieber nirgendwo hochladen",
+      "silences": {
+        "title": "Pausen automatisch schneiden",
+        "text": "Erkennt Pausen anhand der Lautstärke und entfernt sie, mit einstellbarem Schwellenwert, Mindestlänge und Puffer"
+      },
+      "textEdit": {
+        "title": "Schnitt per Text",
+        "text": "Whisper versieht jedes Wort mit einem Zeitstempel. Lösche Wörter im Transkript, und die passende Stelle im Video wird geschnitten"
+      },
+      "captions": {
+        "title": "Karaoke-Untertitel",
+        "text": "Wort für Wort animierte Untertitel, ins Video eingebrannt, im Karaoke-, schlichten oder Box-Stil, mit deiner Hervorhebungsfarbe"
+      },
+      "framing": {
+        "title": "Auto-Framing 16:9 → 9:16",
+        "text": "Die Gesichtsverfolgung hält die sprechende Person im Bild, wenn du ein Querformat-Video ins Hochformat bringst"
+      },
+      "zoom": {
+        "title": "Smart Zoom",
+        "text": "Ein leichter, abwechselnder Zoom bei jedem Schnitt lässt Jump Cuts gewollt wirken und hält die Aufmerksamkeit"
+      },
+      "ducking": {
+        "title": "Auto-Ducking",
+        "text": "Füge Hintergrundmusik hinzu: Sie wird automatisch leiser, wenn jemand spricht, und in Pausen wieder lauter"
+      },
+      "recovery": {
+        "title": "Wiederherstellung nach Absturz",
+        "text": "Jede Änderung wird in Echtzeit in deinem Browser gespeichert. Öffne den Tab erneut und mach genau dort weiter, wo du aufgehört hast"
+      },
+      "offline": {
+        "title": "Funktioniert offline",
+        "text": "Installiere ihn als App. Sobald das KI-Modell heruntergeladen ist, läuft der ganze Editor ohne Internetverbindung"
+      },
+      "export": {
+        "title": "Schneller Hardware-Export",
+        "text": "Die Kodierung nutzt WebCodecs, den in Browser und Grafikkarte eingebauten Video-Encoder, statt langsamer Software-Kodierung"
+      },
+      "clips": {
+        "title": "Mehrere Clips zusammenfügen",
+        "text": "Lege mehrere Takes auf einmal ab: Sie werden in der gewünschten Reihenfolge zu einem Video verbunden, mit gemeinsamer Zeitleiste und gemeinsamem Transkript"
+      },
+      "inputs": {
+        "title": "MP4, MOV, WebM, MKV",
+        "text": "Öffnet die Dateien deines Smartphones und deiner Kamera, auch HEVC-Videos vom iPhone, wenn dein Browser sie dekodieren kann"
+      },
+      "languages": {
+        "title": "Mehrsprachig",
+        "text": "Die Oberfläche spricht 5 Sprachen, und Whisper transkribiert Dutzende weitere, mit automatischer Spracherkennung"
+      }
+    },
+    "privacy": {
+      "eyebrow": "Datenschutz",
+      "title": "Kein Upload, by Design",
+      "lead": "Dein Video wird direkt von deiner Festplatte gelesen. Audioanalyse, Transkription, Gesichtsverfolgung und Kodierung laufen in Hintergrund-Threads (Web Workers) auf deinem Rechner. Es gibt schlicht keinen Server, an den dein Material gehen könnte",
+      "upload": "Niemals ein Upload: Die Datei verlässt deinen Computer nicht",
+      "account": "Kein Konto, keine Cookies, keine Analytics",
+      "csp": "Eine strenge Content-Security-Policy erlaubt der Seite nur die Verbindung zu dieser Website und zu Hugging Face, um das KI-Modell einmalig herunterzuladen",
+      "storage": "Projekte werden in der lokalen Datenbank deines Browsers (IndexedDB) gespeichert und lassen sich jederzeit löschen",
+      "diagram": {
+        "machine": "Dein Computer",
+        "file": "Videodatei",
+        "browser": "Dein Browser",
+        "upload": "Upload auf einen Server",
+        "model": "Download des KI-Modells (einmalig, im Cache)"
+      }
+    },
+    "support": {
+      "eyebrow": "Kompatibilität",
+      "title": "Browser-Unterstützung",
+      "ok": "Vollständig",
+      "partial": "Teilweise",
+      "full": "Alles, inklusive Wiederherstellung nach Absturz und direktem Schreiben des Exports auf die Festplatte",
+      "firefox": "Schnitt und Export funktionieren. Nach dem Schließen des Tabs musst du das Video erneut auswählen",
+      "safari": "Nur aktuelle Versionen. Wähle das Video nach dem Neuladen erneut aus; der Export wird heruntergeladen",
+      "mobile": "Smartphones & Tablets",
+      "mobileText": "Funktioniert für kurze Clips, aber der begrenzte Speicher macht lange Videos unzuverlässig"
+    },
+    "faq": {
+      "title": "Häufige Fragen",
+      "free": {
+        "q": "Ist das wirklich kostenlos? Wo ist der Haken?",
+        "a": "Es ist kostenlos und Open Source. Da die ganze Arbeit auf deinem Computer passiert, fallen keine Serverkosten an: nichts, was man dir verkaufen müsste, und keine Daten, die gesammelt würden"
+      },
+      "formats": {
+        "q": "Welche Videoformate kann ich öffnen?",
+        "a": "MP4, MOV, WebM und MKV, solange dein Browser den Codec dekodieren kann (H.264, HEVC, VP9, AV1 je nach Browser und System). Exportiert wird eine MP4-Datei"
+      },
+      "browsers": {
+        "q": "Warum Chrome oder Edge?",
+        "a": "Sie unterstützen die File System Access API, mit der der Editor dein Video nach dem Neuladen wieder öffnen und den Export direkt auf die Festplatte schreiben kann. Andere Browser funktionieren auch, mit ein paar Klicks mehr"
+      },
+      "size": {
+        "q": "Gibt es eine Größenbegrenzung?",
+        "a": "Es gibt kein Upload-Limit, da nichts hochgeladen wird. Das Video wird stückweise von der Festplatte gelesen; die praktische Grenze ist der Arbeitsspeicher deines Computers bei sehr langen Videos"
+      },
+      "offline": {
+        "q": "Funktioniert es ohne Internet?",
+        "a": "Ja, sobald es geladen ist. Installiere es als App (PWA) und transkribiere einmal online: Das Whisper-Modell liegt dann im Cache und alles funktioniert offline"
+      },
+      "ai": {
+        "q": "Wo läuft die KI?",
+        "a": "In deinem Browser. Whisper läuft mit Transformers.js auf deiner Grafikkarte (WebGPU) oder deinem Prozessor (WebAssembly), die Gesichtserkennung nutzt MediaPipe. Die Modelle werden einmal heruntergeladen, dein Audio nie hochgeladen"
+      }
+    },
+    "final": {
+      "title": "Dein nächstes Video, in Minuten geschnitten",
+      "text": "Keine Anmeldung, kein Upload, kein Wasserzeichen. Datei öffnen und loslegen"
+    }
+  },
+  "changelog": {
+    "eyebrow": "Versionen",
+    "title": "Änderungen",
+    "lead": "Alle Versionen von LocalCutVideo, die neueste zuerst",
+    "current": "Du nutzt",
+    "github": "Auf GitHub ansehen",
+    "releases": "GitHub-Releases",
+    "latest": "Neueste",
+    "error": "Das Änderungsprotokoll konnte nicht geladen werden"
+  },
+  "projects": {
+    "title": "Deine Projekte",
+    "lead": "Projekte werden automatisch in diesem Browser gespeichert. Deine Videos bleiben, wo sie auf deiner Festplatte liegen",
+    "resume": "Dort weitermachen, wo du aufgehört hast",
+    "reading": "Video wird gelesen…",
+    "drop": "Videos hier ablegen",
+    "or": "oder",
+    "open": "Videos öffnen",
+    "private": "Die Datei wird lokal gelesen, nichts wird hochgeladen",
+    "noFsAccess": "Dein Browser kann sich Dateien nicht über Sitzungen hinweg merken: Nach dem Schließen des Tabs musst du das Video erneut auswählen. Mit Chrome oder Edge entfällt das",
+    "recent": "Letzte Projekte",
+    "empty": "Noch keine Projekte. Öffne ein Video, um loszulegen",
+    "delete": "Projekt löschen",
+    "confirmDelete": "Projekt „{{ name }}“ löschen? Die Videodatei auf deiner Festplatte bleibt unverändert",
+    "multi": "Mehrere Dateien? Sie werden nach Namen sortiert zu einem Video zusammengefügt"
+  },
+  "errors": {
+    "notVideo": "Diese Datei sieht nicht nach einem Video aus",
+    "codec": "Dein Browser kann den Codec dieses Videos nicht dekodieren (HEVC/H.265 braucht Chrome oder die HEVC-Erweiterung in Edge). Versuche, es in ein H.264-MP4 umzuwandeln",
+    "noVideo": "In dieser Datei wurde keine Videospur gefunden",
+    "generic": "Beim Lesen dieser Datei ist ein Fehler aufgetreten",
+    "transcribe": "Die Transkription ist fehlgeschlagen. Versuche ein kleineres Modell oder prüfe deine Verbindung für den ersten Download",
+    "export": "Der Export ist fehlgeschlagen",
+    "faces": "Die Gesichtsverfolgung ist bei diesem Video fehlgeschlagen",
+    "skipped": "Übersprungen, nicht lesbar: {{ names }}",
+    "skippedCodec": "Übersprungen, Codec von diesem Browser nicht unterstützt: {{ names }}. Versuche Chrome oder wandle in H.264-MP4 um"
+  },
+  "languages": {
+    "en": "Englisch",
+    "fr": "Französisch",
+    "es": "Spanisch",
+    "it": "Italienisch",
+    "de": "Deutsch",
+    "pt": "Portugiesisch",
+    "nl": "Niederländisch"
+  },
+  "editor": {
+    "back": "Zurück zu den Projekten",
+    "name": "Projektname",
+    "undo": "Rückgängig",
+    "redo": "Wiederholen",
+    "missing": "Dieses Projekt existiert nicht mehr",
+    "save": {
+      "saving": "Wird gespeichert…",
+      "saved": "Lokal gespeichert",
+      "error": "Nicht gespeichert"
+    },
+    "reconnect": {
+      "loading": "Video wird geöffnet…",
+      "title": "Videos wieder verbinden",
+      "allow": "Zugriff auf alle erlauben",
+      "select": "Auswählen",
+      "mismatch": "Diese Datei scheint nicht das Original zu sein („{{ name }}“). Trotzdem verwenden?",
+      "intro": "Das Projekt ist sicher. Zum Schutz deiner Privatsphäre fragt der Browser erneut, bevor der Editor deine Dateien lesen darf",
+      "allowOne": "Erlauben",
+      "privacy": "Deine Videos werden dort gelesen, wo sie auf deiner Festplatte liegen, nie kopiert oder hochgeladen",
+      "status": {
+        "ready": "Verbunden",
+        "permission": "Wartet auf deine Erlaubnis",
+        "moved": "Nicht gefunden: verschoben oder umbenannt?",
+        "missing": "Erneut auswählen (dein Browser behält den Dateizugriff nicht)",
+        "loading": "Wird geöffnet…"
+      }
+    },
+    "preview": {
+      "cut": "Geschnitten",
+      "back": "5 s zurück",
+      "play": "Abspielen",
+      "pause": "Pause",
+      "savedHint": "Durch Schnitte entfernte Zeit",
+      "badge": "Leichte Vorschau · {{ q }}p",
+      "quality": "Vorschauqualität",
+      "qualityHint": "Eine leichte Vorschau hält den Editor flüssig. Der Export nutzt immer die volle Qualität"
+    },
+    "timeline": {
+      "title": "Zeitleiste",
+      "silence": "Pause",
+      "manual": "Manuell",
+      "text": "Text",
+      "hint": "Auf der Wellenform ziehen oder Start / Ende nutzen zum Schneiden · Ränder ziehen zum Anpassen · Doppelklick zum Entfernen",
+      "removeCut": "Schnitt entfernen",
+      "zoom": "Zeitleisten-Zoom",
+      "analyzing": "Audio wird analysiert…",
+      "zoomIn": "Vergrößern",
+      "zoomOut": "Verkleinern",
+      "fit": "Einpassen",
+      "fitHint": "Ganzes Video zeigen (Tipp: Strg + Mausrad zum Zoomen)",
+      "manualCut": "Von Hand schneiden",
+      "markIn": "Start",
+      "markOut": "Ende",
+      "markInHint": "Anfang des zu schneidenden Teils, am Abspielkopf (I)",
+      "markOutHint": "Ende des zu schneidenden Teils, am Abspielkopf (O)",
+      "cutMarked": "Schneiden",
+      "cutHint": "Den Teil zwischen Start und Ende entfernen (X)",
+      "clearMarks": "Start und Ende löschen",
+      "marksMissing": "Setze zuerst einen Start (I) und ein Ende (O)",
+      "analysisError": "Das Audio konnte nicht analysiert werden"
+    },
+    "transcript": {
+      "title": "Transkript",
+      "words": "{{ count }} Wörter",
+      "fillers": "Füllwörter entfernen ({{ count }})",
+      "restore": "Alles wiederherstellen",
+      "selected": "{{ count }} ausgewählt",
+      "cut": "Schneiden / wiederherstellen",
+      "tip": "Klicke auf ein Wort, um dorthin zu springen. Ziehen oder Umschalt+Klick zum Auswählen, dann Entf zum Schneiden oder Korrigieren (Enter), um zu berichtigen, was Whisper falsch verstanden hat",
+      "emptyTitle": "Noch kein Transkript",
+      "emptyText": "Transkribiere das Video, um es per Text zu schneiden und Wort-für-Wort-Untertitel zu erhalten",
+      "correct": "Korrigieren",
+      "correctTitle": "Was wurde wirklich gesagt?",
+      "correctHint": "Tippe ein Wort oder einen ganzen Satz neu. Timing und Untertitel passen sich automatisch an",
+      "apply": "Übernehmen"
+    },
+    "transcribe": {
+      "title": "Transkription (Whisper)",
+      "hint": "Läuft auf deinem Gerät. Das Modell wird einmal heruntergeladen und dann zwischengespeichert",
+      "model": "Modell",
+      "models": {
+        "tiny": "Schnell",
+        "base": "Ausgewogen",
+        "small": "Genau"
+      },
+      "download": "Einmaliger Download {{ size }}",
+      "language": "Gesprochene Sprache",
+      "auto": "Automatisch erkennen",
+      "run": "Transkribieren",
+      "rerun": "Alles neu transkribieren",
+      "done": "{{ count }} Wörter transkribiert",
+      "empty": "In diesem Video wurde keine Sprache gefunden",
+      "stage": {
+        "audio": "Audio wird extrahiert…",
+        "download": "Modell wird heruntergeladen…",
+        "transcribe": "Wird transkribiert…"
+      },
+      "missing": "Neue Clips transkribieren ({{ count }})",
+      "rerunHint": "Beginnt neu mit dem Modell und der Sprache oben",
+      "confirmAll": "Alles neu transkribieren? Die Wörter, die du geschnitten oder korrigiert hast, gehen verloren",
+      "detected": "Erkannte Sprache: {{ language }}"
+    },
+    "tabs": {
+      "format": "Format",
+      "cuts": "Schnitte",
+      "captions": "Untertitel",
+      "framing": "Bildausschnitt",
+      "audio": "Musik",
+      "clips": "Clips"
+    },
+    "format": {
+      "title": "Ausgabeformat",
+      "hint": "Das Video wird zugeschnitten, um das Bild zu füllen. Mit „Bildausschnitt“ folgst du der sprechenden Person",
+      "landscape": "YouTube",
+      "vertical": "TikTok · Reels",
+      "square": "Feed",
+      "source": "Quelle:",
+      "resolution": "Auflösung",
+      "fps": "Bilder pro Sekunde",
+      "exportNote": "Auflösung und Bildrate wählst du beim Export"
+    },
+    "cuts": {
+      "title": "Pausenerkennung",
+      "hint": "Entfernt Pausen. Senke den Schwellenwert, wenn Wörter abgeschnitten werden",
+      "threshold": "Schwellenwert",
+      "suggested": "Empfohlen für diese Aufnahme: {{ value }} dB",
+      "minSilence": "Minimale Pause",
+      "padding": "Atempuffer",
+      "detect": "Pausen erkennen und schneiden",
+      "detected": "{{ count }} Pausen geschnitten",
+      "count": "Schnitte",
+      "removed": "entfernt",
+      "final": "Endlänge",
+      "clear": "Alle Schnitte entfernen",
+      "mode": "Pausen finden über",
+      "modes": {
+        "audio": "Lautstärke",
+        "transcript": "Transkript"
+      },
+      "modeHint": "Der Transkript-Modus bleibt auch bei Hintergrundgeräuschen oder Musik genau",
+      "modeNeedsTranscript": "Transkribiere das Video, um Pausen anhand der Wörter zu finden: genauer in lauter Umgebung",
+      "preset": "Tempo",
+      "presets": {
+        "gentle": "Natürlich",
+        "normal": "Ausgewogen",
+        "tight": "Dynamisch"
+      },
+      "live": "Die Schnitte passen sich live an, wenn du die Einstellungen änderst"
+    },
+    "captions": {
+      "title": "Eingebrannte Untertitel",
+      "style": "Stil",
+      "styles": {
+        "karaoke": "Karaoke",
+        "clean": "Schlicht",
+        "boxed": "Box"
+      },
+      "position": "Position",
+      "positions": {
+        "top": "Oben",
+        "center": "Mitte",
+        "bottom": "Unten"
+      },
+      "size": "Größe",
+      "words": "Wörter pro Untertitel",
+      "uppercase": "Großbuchstaben",
+      "highlight": "Hervorhebungsfarbe"
+    },
+    "framing": {
+      "title": "Auto-Framing",
+      "hint": "Verfolgt Gesichter, damit die sprechende Person im Bild bleibt, ideal für 16:9 → 9:16",
+      "center": "Zentriert",
+      "face": "Gesicht folgen",
+      "analyzing": "Gesichter werden verfolgt…",
+      "analyze": "Gesichter verfolgen",
+      "reanalyze": "Erneut verfolgen",
+      "tracked": "{{ count }} Positionen verfolgt",
+      "found": "Gesicht verfolgt: Der Bildausschnitt folgt der Person",
+      "notFound": "In diesem Video wurde kein Gesicht zuverlässig gefunden",
+      "punch": "Smart Zoom",
+      "punchHint": "Wechselt bei jedem Schnitt, oder ohne Schnitte bei jedem Satz, einen leichten Zoom ab, damit das Video dynamisch bleibt",
+      "zoom": "Zoomstärke",
+      "firstTime": "„Gesicht folgen“ analysiert das Video einmalig und lokal",
+      "beatsCuts": "Der Zoom wechselt {{ count }}-mal, an deinen Schnitten",
+      "beatsAuto": "Noch keine Schnitte: Der Zoom wechselt {{ count }}-mal, bei Sätzen oder alle 4 s"
+    },
+    "audio": {
+      "title": "Hintergrundmusik",
+      "hint": "Die Musik wird automatisch leiser, wenn jemand spricht (Auto-Ducking)",
+      "reconnect": "„{{ name }}“ wieder verbinden",
+      "pick": "Musikdatei wählen",
+      "enabled": "Ins Video aufnehmen",
+      "volume": "Musiklautstärke",
+      "ducking": "Absenkung beim Sprechen",
+      "duckingHint": "Wie stark die Musik abgesenkt wird, wenn jemand spricht"
+    },
+    "export": {
+      "button": "Exportieren",
+      "title": "Video exportieren",
+      "running": "Export läuft…",
+      "eta": "Noch etwa {{ time }}",
+      "keepOpen": "Lass diesen Tab geöffnet. Die Kodierung nutzt wenn möglich deine Grafikkarte",
+      "done": "Export abgeschlossen",
+      "saved": "„{{ name }}“ wurde in {{ seconds }} s auf deiner Festplatte gespeichert",
+      "downloaded": "„{{ name }}“ wurde in {{ seconds }} s heruntergeladen",
+      "duration": "Dauer",
+      "from": "statt {{ time }}",
+      "streamHint": "Du wählst, wo die MP4 gespeichert wird. Sie wird direkt auf die Festplatte geschrieben",
+      "downloadHint": "Die MP4 wird lokal erstellt und dann heruntergeladen",
+      "start": "Als MP4 exportieren"
+    },
+    "clips": {
+      "title": "Clips der Sequenz",
+      "hint": "Die Videos laufen in dieser Reihenfolge nacheinander. Ziehen zum Umsortieren: Schnitte und Wörter bleiben bei ihrem Clip",
+      "jump": "Zu diesem Clip springen",
+      "up": "Nach oben",
+      "down": "Nach unten",
+      "remove": "Clip entfernen",
+      "add": "Videos hinzufügen",
+      "summary": "{{ count }} Clip(s) · {{ time }} insgesamt",
+      "confirmRemove": "„{{ name }}“ aus dem Projekt entfernen? Seine Schnitte und Wörter werden ebenfalls entfernt (Strg+Z macht es rückgängig)",
+      "added": "{{ count }} Clip(s) hinzugefügt",
+      "addedTranscribe": "{{ count }} Clip(s) hinzugefügt. Transkribiere erneut, um sie zu untertiteln: bereits transkribierte Clips bleiben erhalten"
+    },
+    "auto": {
+      "button": "Auto-Schnitt",
+      "cta": "Video automatisch schneiden",
+      "transcribeOnly": "oder nur transkribieren",
+      "heading": "Lass LocalCutVideo dein Video schneiden",
+      "lead": "Mit einem Klick: Pausen und Zögern entfernt, Untertitel, Bildausschnitt auf die sprechende Person und Smart Zoom. Du kannst danach alles ändern",
+      "target": "Wo wirst du es veröffentlichen?",
+      "options": {
+        "silences": "Pausen schneiden",
+        "fillers": "Zögern entfernen (äh, ähm…)",
+        "captions": "Karaoke-Untertitel",
+        "framing": "Gesicht folgen",
+        "framingNoCrop": "Nicht nötig: Dieses Format zeigt das ganze Bild",
+        "zoom": "Smart Zoom"
+      },
+      "local": "Alles läuft auf deinem Gerät. Das Video wird nie hochgeladen",
+      "start": "Auto-Schnitt starten",
+      "running": "Dein Video wird geschnitten…",
+      "done": "Dein Video ist geschnitten!",
+      "view": "Ergebnis ansehen",
+      "undo": "Auto-Schnitt rückgängig",
+      "undone": "Das Projekt ist wieder wie vor dem Auto-Schnitt",
+      "summary": {
+        "cuts": "Schnitte",
+        "removed": "entfernt",
+        "words": "Wörter untertitelt"
+      },
+      "steps": {
+        "analyze": "Audio wird analysiert",
+        "transcribe": "Sprache wird transkribiert",
+        "fillers": "Zögern wird entfernt",
+        "silences": "Pausen werden geschnitten",
+        "framing": "Gesicht wird verfolgt",
+        "style": "Untertitel und Smart Zoom"
+      },
+      "status": {
+        "skipped": "übersprungen",
+        "error": "fehlgeschlagen"
+      }
+    }
+  },
+  "legal": {
+    "updated": "Zuletzt aktualisiert: 1. November 2026",
+    "contact": "Kontakt",
+    "nav": {
+      "notice": "Impressum",
+      "privacy": "Datenschutz",
+      "terms": "Nutzungsbedingungen"
+    },
+    "notice": {
+      "title": "Impressum",
+      "intro": "Nach französischem Recht (Artikel 6 des LCEN, Gesetz Nr. 2004-575 vom 21. Juni 2004) vorgeschriebene Angaben zum Herausgeber und zum Hosting dieser Website.",
+      "sections": [
+        {
+          "title": "Herausgeber",
+          "body": [
+            "Die Website localcutvideo.mbonnici.fr („LocalCutVideo“) wird von Maxence Bonnici als Privatperson ohne kommerzielle Absicht herausgegeben.",
+            "Verantwortlich für den Inhalt: Maxence Bonnici.",
+            "Kontakt: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Hosting",
+          "body": [
+            "Die Website wird von ihrem Herausgeber, Maxence Bonnici, selbst auf einem privaten Server gehostet und mit der Plattform Coolify bereitgestellt.",
+            "Kontakt: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Geistiges Eigentum",
+          "body": [
+            "Der Quellcode von LocalCutVideo ist Open Source und unter der MIT-Lizenz auf [GitHub](https://github.com/ImMaxence/LocalCutVideo) veröffentlicht.",
+            "Die von der Anwendung genutzten Fremdkomponenten, KI-Modelle und Schriftarten bleiben Eigentum ihrer Urheber und werden gemäß ihren eigenen Lizenzen verwendet, die in den [Nutzungsbedingungen](/terms) aufgeführt sind. Genannte Marken (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) gehören ihren Inhabern."
+          ]
+        },
+        {
+          "title": "Haftung",
+          "body": [
+            "Der Herausgeber bemüht sich, die Website verfügbar und ihre Informationen korrekt zu halten, kann dies jedoch nicht garantieren. Die Nutzung der Anwendung richtet sich nach den [Nutzungsbedingungen](/terms)."
+          ]
+        },
+        {
+          "title": "Personenbezogene Daten",
+          "body": [
+            "LocalCutVideo erhebt keine personenbezogenen Daten: Videos werden ausschließlich auf deinem Gerät verarbeitet. Einzelheiten findest du in der [Datenschutzerklärung](/privacy)."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "intro": "LocalCutVideo ist so gebaut, dass deine Videos dein Gerät nie verlassen. Diese Seite erklärt klar, was wo verarbeitet wird.",
+      "sections": [
+        {
+          "title": "Kurz gesagt",
+          "body": [
+            "Kein Upload: Deine Videos, dein Audio und deine Transkripte werden in deinem Browser verarbeitet und nie an den Herausgeber oder an Dritte übertragen.",
+            "Kein Konto, keine Cookies, keine Analyse, keine Werbung."
+          ]
+        },
+        {
+          "title": "Was auf deinem Gerät bleibt",
+          "body": [
+            "Die Video- und Audiodateien, die du öffnest, werden direkt von deiner Festplatte gelesen. Analyse, Transkription (Whisper), Gesichtsverfolgung und Export werden lokal in deinem Browser berechnet.",
+            "Deine Projekte (Schnitte, Transkript, Einstellungen) werden in der lokalen Datenbank deines Browsers (IndexedDB) gespeichert, zusammen mit einer Vorschau und einem Analyse-Cache. Der Herausgeber hat keinen Zugriff darauf. Du kannst ein Projekt auf der Projektseite löschen oder alles entfernen, indem du die Daten dieser Website in den Browsereinstellungen löschst."
+          ]
+        },
+        {
+          "title": "Lokaler Speicher",
+          "body": [
+            "Die Anwendung speichert deine Oberflächen-Einstellungen (Sprache, Design, zuletzt geöffnetes Projekt) im lokalen Speicher deines Browsers und legt ihre eigenen Dateien sowie die heruntergeladenen KI-Modelle im Browser-Cache ab, um offline zu funktionieren. Diese sind für den Dienst unbedingt erforderlich, werden nie zur Nachverfolgung genutzt und erfordern daher kein Einwilligungsbanner."
+          ]
+        },
+        {
+          "title": "Server",
+          "body": [
+            "Der Server liefert ausschließlich die Dateien der Anwendung aus und führt keine Zugriffsprotokolle. Wie jeder Webserver empfängt er technisch deine IP-Adresse, um Anfragen zu beantworten, speichert sie aber nicht."
+          ]
+        },
+        {
+          "title": "Dritte",
+          "body": [
+            "Hugging Face: Beim ersten Start einer Transkription wird das Whisper-Modell von huggingface.co heruntergeladen. Wie bei jedem Download erhält Hugging Face deine IP-Adresse und die üblichen Browserinformationen, aber nie dein Audio. Siehe deren [Datenschutzerklärung](https://huggingface.co/privacy).",
+            "GitHub: nur wenn du einem Link zum Quellcode-Repository folgst.",
+            "Keine weiteren Dritten werden kontaktiert: Eine strenge Content-Security-Policy verhindert technisch, dass sich die Seite anderswohin verbindet."
+          ]
+        },
+        {
+          "title": "Deine Rechte",
+          "body": [
+            "Nach der DSGVO hast du das Recht auf Auskunft, Berichtigung, Löschung und Widerspruch. Da der Herausgeber keine Daten über dich besitzt, gibt es in der Regel nichts einzusehen, aber du kannst jede Frage an maxence.bonnici@outlook.fr richten. Du kannst außerdem Beschwerde bei der CNIL ([cnil.fr](https://www.cnil.fr)) oder der Datenschutzbehörde deines Landes einlegen."
+          ]
+        },
+        {
+          "title": "Änderungen",
+          "body": [
+            "Diese Erklärung kann aktualisiert werden, wenn sich die Anwendung weiterentwickelt. Das Datum der letzten Aktualisierung steht oben auf dieser Seite."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Nutzungsbedingungen",
+      "intro": "Mit der Nutzung von LocalCutVideo akzeptierst du diese Bedingungen. Sie sind kurz, weil der Dienst einfach ist: ein kostenloses Werkzeug, das in deinem Browser läuft.",
+      "sections": [
+        {
+          "title": "Dienst",
+          "body": [
+            "LocalCutVideo ist eine kostenlose Videoschnitt-Anwendung, die vollständig in deinem Webbrowser läuft. Sie wird kostenlos und ohne Konto bereitgestellt und kann sich jederzeit ohne Vorankündigung ändern, unterbrochen oder eingestellt werden."
+          ]
+        },
+        {
+          "title": "Deine Inhalte",
+          "body": [
+            "Du bleibst alleiniger Eigentümer und allein verantwortlich für die Videos, Töne und Musik, die du schneidest und veröffentlichst. Du musst über die nötigen Rechte verfügen (Urheberrecht, Musiklizenzen, Recht am eigenen Bild der gefilmten Personen).",
+            "Die Anwendung darf nicht für rechtswidrige Zwecke genutzt werden."
+          ]
+        },
+        {
+          "title": "Automatische Funktionen",
+          "body": [
+            "Transkription, Untertitel, Pausenerkennung und automatischer Bildausschnitt werden automatisch erzeugt und können Fehler enthalten. Prüfe das Ergebnis vor der Veröffentlichung."
+          ]
+        },
+        {
+          "title": "Deine Dateien und Projekte",
+          "body": [
+            "Die Anwendung verändert nie deine Originaldateien. Projekte werden in deinem Browser gespeichert und können verloren gehen, wenn dessen Daten gelöscht werden oder er Speicher freigibt: Bewahre deine Originaldateien immer auf."
+          ]
+        },
+        {
+          "title": "Gewährleistung und Haftung",
+          "body": [
+            "Die Software wird „wie besehen“ ohne jegliche Gewährleistung unter der MIT-Lizenz bereitgestellt. Soweit gesetzlich zulässig, haftet der Herausgeber nicht für Schäden, die aus der Nutzung oder der Unmöglichkeit der Nutzung der Anwendung entstehen (Datenverlust, Exportfehler, Nichtverfügbarkeit…)."
+          ]
+        },
+        {
+          "title": "Open Source und Fremdkomponenten",
+          "body": [
+            "Der Quellcode ist unter der MIT-Lizenz auf [GitHub](https://github.com/ImMaxence/LocalCutVideo) verfügbar.",
+            "LocalCutVideo nutzt: Mediabunny (MPL-2.0), Transformers.js und ONNX Runtime (Apache-2.0 und MIT), die Whisper-Modelle von OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) sowie die Schriftarten Inter und Montserrat (SIL Open Font License)."
+          ]
+        },
+        {
+          "title": "Anwendbares Recht",
+          "body": [
+            "Diese Bedingungen unterliegen französischem Recht. Fragen: maxence.bonnici@outlook.fr."
+          ]
+        }
+      ]
+    }
+  }
+}

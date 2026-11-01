@@ -1,0 +1,353 @@
+<div class="editor">
+  <header class="topbar">
+    <a class="btn ghost icon" routerLink="/app" [attr.aria-label]="'editor.back' | transloco" [title]="'editor.back' | transloco">
+      <app-icon name="arrow-left" />
+    </a>
+    <a routerLink="/" class="logo" aria-label="LocalCutVideo"><app-logo [size]="26" /></a>
+    @if (store.project(); as p) {
+      <input class="name" [value]="p.name" (change)="rename($event)" [attr.aria-label]="'editor.name' | transloco" spellcheck="false" />
+      <span class="save" [class]="store.saveState()">
+        @switch (store.saveState()) {
+          @case ('saving') {
+            <span class="dot"></span>{{ 'editor.save.saving' | transloco }}
+          }
+          @case ('error') {
+            <app-icon name="alert" [size]="14" />{{ 'editor.save.error' | transloco }}
+          }
+          @default {
+            <app-icon name="check" [size]="14" />{{ 'editor.save.saved' | transloco }}
+          }
+        }
+      </span>
+    }
+    <div class="spacer"></div>
+    <app-lang-picker class="lang" />
+    <button class="btn ghost icon" type="button" (click)="store.undo()" [disabled]="!store.canUndo()" [title]="('editor.undo' | transloco) + ' (Ctrl+Z)'">
+      <app-icon name="undo" />
+    </button>
+    <button class="btn ghost icon" type="button" (click)="store.redo()" [disabled]="!store.canRedo()" [title]="('editor.redo' | transloco) + ' (Ctrl+Shift+Z)'">
+      <app-icon name="redo" />
+    </button>
+    <button class="btn auto auto-btn" type="button" (click)="openAutoEdit()" [disabled]="store.fileState() !== 'ready'" [title]="'editor.auto.lead' | transloco">
+      <app-icon name="sparkles" [size]="16" /> <span>{{ 'editor.auto.button' | transloco }}</span>
+    </button>
+    <button class="btn primary export-btn" type="button" (click)="openExport()" [disabled]="store.fileState() !== 'ready' || !store.outputDuration()">
+      <app-icon name="download" [size]="17" /> <span>{{ 'editor.export.button' | transloco }}</span>
+    </button>
+  </header>
+
+  @switch (store.fileState()) {
+    @case ('ready') {
+      @if (mobile()) {
+        <div class="mobile-workspace">
+          <section class="m-preview"><app-preview /></section>
+          <section class="m-timeline"><app-timeline /></section>
+          <section class="m-panel">
+            @if (mobileTab() === 'transcript') {
+              <app-transcript (transcribe)="transcribe('all')" (autoEdit)="openAutoEdit()" />
+            } @else {
+              <app-inspector [(tab)]="inspectorTab" [showTabs]="false" (transcribe)="transcribe($event)" />
+            }
+          </section>
+          <nav class="m-tabs" role="tablist">
+            @for (t of mobileTabs; track t.id) {
+              <button type="button" role="tab" [class.active]="mobileTab() === t.id" [attr.aria-selected]="mobileTab() === t.id" (click)="selectMobileTab(t.id)">
+                <app-icon [name]="t.icon" [size]="19" />
+                <span>{{ t.key | transloco }}</span>
+              </button>
+            }
+          </nav>
+        </div>
+      } @else {
+        <div class="workspace">
+          <aside class="panel transcript-panel">
+            <app-transcript (transcribe)="transcribe('all')" (autoEdit)="openAutoEdit()" />
+          </aside>
+          <section class="preview-panel">
+            <app-preview />
+          </section>
+          <aside class="panel inspector-panel">
+            <app-inspector [(tab)]="inspectorTab" (transcribe)="transcribe($event)" />
+          </aside>
+          <section class="panel timeline-panel">
+            <app-timeline />
+          </section>
+        </div>
+      }
+    }
+    @default {
+      <div class="state">
+        <div class="card state-card">
+          @switch (store.fileState()) {
+            @case ('loading') {
+              <div class="spinner" aria-hidden="true"></div>
+              <b>{{ 'editor.reconnect.loading' | transloco }}</b>
+            }
+            @case ('reconnect') {
+              <span class="state-icon"><app-icon name="link" [size]="26" /></span>
+              <h2>{{ 'editor.reconnect.title' | transloco }}</h2>
+              <p class="muted">{{ 'editor.reconnect.intro' | transloco }}</p>
+              @if (needsPermission()) {
+                <button class="btn primary lg" type="button" (click)="store.reconnectAll()">
+                  <app-icon name="lock" [size]="17" /> {{ 'editor.reconnect.allow' | transloco }}
+                </button>
+              }
+              <ul class="reconnect-list">
+                @for (c of store.clips(); track c.id) {
+                  <li>
+                    <span class="num">{{ c.index + 1 }}</span>
+                    <span class="meta">
+                      <b>{{ c.source.name }}</b>
+                      <small>
+                        @switch (store.clipStatus()[c.id]) {
+                          @case ('ready') { {{ 'editor.reconnect.status.ready' | transloco }} }
+                          @case ('permission') { {{ 'editor.reconnect.status.permission' | transloco }} }
+                          @case ('moved') { {{ 'editor.reconnect.status.moved' | transloco }} }
+                          @case ('missing') { {{ 'editor.reconnect.status.missing' | transloco }} }
+                          @case ('error') { {{ (store.clipErrors()[c.id] ?? 'errors.generic') | transloco }} }
+                          @default { {{ 'editor.reconnect.status.loading' | transloco }} }
+                        }
+                      </small>
+                    </span>
+                    @switch (store.clipStatus()[c.id]) {
+                      @case ('ready') {
+                        <app-icon name="check" class="ok" [size]="18" />
+                      }
+                      @case ('permission') {
+                        <button class="btn sm" type="button" (click)="store.reconnectClip(c.id, true)">{{ 'editor.reconnect.allowOne' | transloco }}</button>
+                      }
+                      @case ('loading') {
+                        <span class="mini-spinner" aria-hidden="true"></span>
+                      }
+                      @default {
+                        <button class="btn sm" type="button" (click)="store.relocateClip(c.id)">{{ 'editor.reconnect.select' | transloco }}</button>
+                        @if (store.clips().length > 1) {
+                          <button class="btn sm ghost icon" type="button" (click)="store.removeClip(c.id)" [attr.aria-label]="'editor.clips.remove' | transloco">
+                            <app-icon name="trash" [size]="14" />
+                          </button>
+                        }
+                      }
+                    }
+                  </li>
+                }
+              </ul>
+              <p class="faint small-note">{{ 'editor.reconnect.privacy' | transloco }}</p>
+            }
+            @case ('missing-project') {
+              <span class="state-icon"><app-icon name="alert" [size]="26" /></span>
+              <h2>{{ 'editor.missing' | transloco }}</h2>
+              <a class="btn" routerLink="/app">{{ 'editor.back' | transloco }}</a>
+            }
+          }
+        </div>
+      </div>
+    }
+  }
+
+  @if (store.notice(); as n) {
+    <div class="notice" [class.error]="n.tone === 'error'" role="status">
+      <app-icon [name]="n.tone === 'error' ? 'alert' : 'check'" [size]="16" />
+      {{ n.key | transloco: n.params }}
+    </div>
+  }
+
+  @if (exportOpen()) {
+    <div class="backdrop" (click)="closeExport()">
+      <div class="card dialog" role="dialog" aria-modal="true" (click)="$event.stopPropagation()">
+        @switch (store.exportState().status) {
+          @case ('running') {
+            <h2>{{ 'editor.export.running' | transloco }}</h2>
+            @if (store.exportState(); as s) {
+              @if (s.status === 'running') {
+                <div class="big-progress">
+                  <b>{{ (s.progress * 100).toFixed(0) }}%</b>
+                  <div class="progress"><div [style.width.%]="s.progress * 100"></div></div>
+                  @if (eta(); as left) {
+                    <span class="faint">{{ 'editor.export.eta' | transloco: { time: formatTime(left) } }}</span>
+                  }
+                </div>
+              }
+            }
+            <p class="muted small">{{ 'editor.export.keepOpen' | transloco }}</p>
+            <div class="actions">
+              <button class="btn" type="button" (click)="store.cancelExport()">{{ 'common.cancel' | transloco }}</button>
+            </div>
+          }
+          @case ('done') {
+            @if (store.exportState(); as s) {
+              @if (s.status === 'done') {
+                <span class="state-icon ok"><app-icon name="check" [size]="26" /></span>
+                <h2>{{ 'editor.export.done' | transloco }}</h2>
+                <p class="muted">
+                  {{ (s.streamed ? 'editor.export.saved' : 'editor.export.downloaded') | transloco: { name: s.name, seconds: s.seconds.toFixed(0) } }}
+                </p>
+              }
+            }
+            <div class="actions">
+              <button class="btn primary" type="button" (click)="closeExport()">{{ 'common.close' | transloco }}</button>
+            </div>
+          }
+          @case ('error') {
+            <span class="state-icon error"><app-icon name="alert" [size]="26" /></span>
+            <h2>{{ 'errors.export' | transloco }}</h2>
+            @if (store.exportState(); as s) {
+              @if (s.status === 'error') {
+                <code class="err">{{ s.message }}</code>
+              }
+            }
+            <div class="actions">
+              <button class="btn" type="button" (click)="closeExport()">{{ 'common.close' | transloco }}</button>
+              <button class="btn primary" type="button" (click)="store.exportVideo()">{{ 'common.retry' | transloco }}</button>
+            </div>
+          }
+          @default {
+            <h2>{{ 'editor.export.title' | transloco }}</h2>
+            @if (store.project(); as p) {
+              <div class="export-settings">
+                <div class="field">
+                  <span class="label">{{ 'editor.format.resolution' | transloco }}</span>
+                  <div class="segmented">
+                    @for (r of resolutions; track r) {
+                      <button type="button" [class.active]="p.export.resolution === r" (click)="setExport({ resolution: r })">{{ r }}p</button>
+                    }
+                  </div>
+                </div>
+                <div class="field">
+                  <span class="label">{{ 'editor.format.fps' | transloco }}</span>
+                  <div class="segmented">
+                    @for (f of frameRates; track f) {
+                      <button type="button" [class.active]="p.export.fps === f" (click)="setExport({ fps: f })">{{ f }}</button>
+                    }
+                  </div>
+                </div>
+              </div>
+              <dl class="summary">
+                <div><dt>{{ 'editor.tabs.format' | transloco }}</dt><dd>{{ p.format }} · {{ exportSize()?.width }}×{{ exportSize()?.height }} · {{ p.export.fps }} fps</dd></div>
+                <div><dt>{{ 'editor.export.duration' | transloco }}</dt><dd>{{ formatTime(store.outputDuration()) }} <span class="faint">({{ 'editor.export.from' | transloco: { time: formatTime(store.duration()) } }})</span></dd></div>
+                <div><dt>{{ 'editor.tabs.captions' | transloco }}</dt><dd>{{ (p.captions.enabled && p.words.length ? 'editor.captions.styles.' + p.captions.style : 'common.none') | transloco }}</dd></div>
+                <div><dt>{{ 'editor.tabs.framing' | transloco }}</dt><dd>{{ (p.framing.mode === 'face' ? 'editor.framing.face' : 'editor.framing.center') | transloco }}{{ p.framing.punchIn ? ' · zoom ' + p.framing.zoom.toFixed(2) + '×' : '' }}</dd></div>
+                <div><dt>{{ 'editor.tabs.audio' | transloco }}</dt><dd>{{ p.music.enabled && store.musicFile() ? p.music.name : ('common.none' | transloco) }}</dd></div>
+              </dl>
+            }
+            <p class="muted small">
+              <app-icon name="lock" [size]="13" />
+              {{ (savePicker ? 'editor.export.streamHint' : 'editor.export.downloadHint') | transloco }}
+            </p>
+            <div class="actions">
+              <button class="btn" type="button" (click)="closeExport()">{{ 'common.cancel' | transloco }}</button>
+              <button class="btn primary" type="button" (click)="store.exportVideo()">
+                <app-icon name="download" [size]="16" /> {{ 'editor.export.start' | transloco }}
+              </button>
+            </div>
+          }
+        }
+      </div>
+    </div>
+  }
+  @if (autoOpen()) {
+    <div class="backdrop" (click)="closeAutoEdit()">
+      <div class="card dialog auto-dialog" role="dialog" aria-modal="true" (click)="$event.stopPropagation()">
+        @if (store.autoEdit(); as run) {
+          @if (run.done) {
+            <span class="state-icon ok"><app-icon name="sparkles" [size]="26" /></span>
+            <h2>{{ 'editor.auto.done' | transloco }}</h2>
+            @if (run.summary; as s) {
+              <div class="auto-summary">
+                <div><b>{{ s.cuts }}</b><span>{{ 'editor.auto.summary.cuts' | transloco }}</span></div>
+                <div><b>−{{ formatTime(s.removed) }}</b><span>{{ 'editor.auto.summary.removed' | transloco }}</span></div>
+                <div><b>{{ s.words }}</b><span>{{ 'editor.auto.summary.words' | transloco }}</span></div>
+              </div>
+            }
+          } @else {
+            <h2>{{ 'editor.auto.running' | transloco }}</h2>
+          }
+          <ul class="auto-steps">
+            @for (s of run.steps; track s.id) {
+              <li [class]="s.status">
+                <span class="step-icon">
+                  @switch (s.status) {
+                    @case ('running') {
+                      <span class="mini-spinner"></span>
+                    }
+                    @case ('done') {
+                      <app-icon name="check" [size]="15" />
+                    }
+                    @case ('error') {
+                      <app-icon name="alert" [size]="15" />
+                    }
+                    @case ('skipped') {
+                      <app-icon name="arrow-right" [size]="14" />
+                    }
+                    @default {
+                      <span class="dot"></span>
+                    }
+                  }
+                </span>
+                <span class="step-label">{{ 'editor.auto.steps.' + s.id | transloco }}</span>
+                @if (s.status === 'running' && stepProgress(s.id) !== null) {
+                  <span class="step-value">{{ ((stepProgress(s.id) ?? 0) * 100).toFixed(0) }}%</span>
+                } @else if (s.status === 'skipped' || s.status === 'error') {
+                  <small>{{ 'editor.auto.status.' + s.status | transloco }}</small>
+                }
+              </li>
+            }
+          </ul>
+          @if (run.done) {
+            <div class="actions">
+              <button class="btn ghost" type="button" (click)="undoAutoEdit()"><app-icon name="undo" [size]="15" /> {{ 'editor.auto.undo' | transloco }}</button>
+              <button class="btn primary" type="button" (click)="closeAutoEdit()">{{ 'editor.auto.view' | transloco }}</button>
+            </div>
+          } @else {
+            <p class="muted small"><app-icon name="lock" [size]="13" /> {{ 'editor.auto.local' | transloco }}</p>
+          }
+        } @else {
+          <span class="auto-badge"><app-icon name="sparkles" [size]="14" /> {{ 'editor.auto.button' | transloco }}</span>
+          <h2>{{ 'editor.auto.heading' | transloco }}</h2>
+          <p class="muted">{{ 'editor.auto.lead' | transloco }}</p>
+          <div class="auto-field">
+            <span class="label">{{ 'editor.auto.target' | transloco }}</span>
+            <div class="auto-formats">
+              @for (f of formats; track f.id) {
+                <button type="button" [class.active]="autoOptions().format === f.id" (click)="setAuto({ format: f.id })">
+                  <app-icon [name]="f.icon" [size]="22" />
+                  <b>{{ f.id }}</b>
+                  <small>{{ 'editor.format.' + f.key | transloco }}</small>
+                </button>
+              }
+            </div>
+          </div>
+          <div class="auto-field">
+            <span class="label">{{ 'editor.cuts.preset' | transloco }}</span>
+            <div class="segmented">
+              @for (pr of presets; track pr.id) {
+                <button type="button" [class.active]="autoOptions().rhythm === pr.id" (click)="setAuto({ rhythm: pr.id })">
+                  {{ 'editor.cuts.presets.' + pr.id | transloco }}
+                </button>
+              }
+            </div>
+          </div>
+          <div class="auto-options">
+            @for (key of autoToggles; track key) {
+              <label class="switch">
+                <span>
+                  {{ 'editor.auto.options.' + key | transloco }}
+                  @if (key === 'framing' && !store.needsCrop(autoOptions().format)) {
+                    <small class="faint">{{ 'editor.auto.options.framingNoCrop' | transloco }}</small>
+                  }
+                </span>
+                <input type="checkbox" [checked]="autoOptions()[key]" (change)="toggleAuto(key, $event)" />
+              </label>
+            }
+          </div>
+          <p class="muted small"><app-icon name="lock" [size]="13" /> {{ 'editor.auto.local' | transloco }}</p>
+          <div class="actions">
+            <button class="btn" type="button" (click)="closeAutoEdit()">{{ 'common.cancel' | transloco }}</button>
+            <button class="btn auto" type="button" (click)="runAutoEdit()">
+              <app-icon name="sparkles" [size]="16" /> {{ 'editor.auto.start' | transloco }}
+            </button>
+          </div>
+        }
+      </div>
+    </div>
+  }
+</div>

@@ -1,0 +1,94 @@
+<div class="container page">
+  <header class="head">
+    <h1>{{ 'projects.title' | transloco }}</h1>
+    <p class="muted">{{ 'projects.lead' | transloco }}</p>
+  </header>
+
+  @if (lastProject(); as last) {
+    <a class="resume card" [routerLink]="['/app', last.id]">
+      <app-icon name="history" [size]="20" />
+      <div>
+        <b>{{ 'projects.resume' | transloco }}</b>
+        <span class="muted">{{ last.name }} · {{ relative(last.updatedAt) }}</span>
+      </div>
+      <app-icon name="arrow-right" [size]="18" class="go" />
+    </a>
+  }
+
+  <div
+    class="drop"
+    [class.dragging]="dragging()"
+    [class.busy]="busy()"
+    (dragover)="onDragOver($event)"
+    (dragleave)="dragging.set(false)"
+    (drop)="onDrop($event)"
+  >
+    @if (busy()) {
+      <div class="spinner" aria-hidden="true"></div>
+      <b>{{ 'projects.reading' | transloco }}</b>
+    } @else {
+      <span class="drop-icon"><app-icon name="film" [size]="28" /></span>
+      <b>{{ 'projects.drop' | transloco }}</b>
+      <span class="muted">{{ 'projects.multi' | transloco }}</span>
+      <span class="muted">{{ 'projects.or' | transloco }}</span>
+      <button class="btn primary lg" type="button" (click)="open()">
+        <app-icon name="folder" [size]="18" /> {{ 'projects.open' | transloco }}
+      </button>
+      <span class="faint small"><app-icon name="lock" [size]="13" /> {{ 'projects.private' | transloco }}</span>
+    }
+    <input class="sr-only" type="file" accept="video/*,.mov,.mkv" multiple data-testid="file-input" (change)="onInput($event)" />
+  </div>
+
+  @if (errorKey(); as key) {
+    <p class="error" role="alert"><app-icon name="alert" [size]="16" /> {{ key | transloco }}</p>
+  }
+
+  @if (!fsAccess) {
+    <p class="note">
+      <app-icon name="info" [size]="16" />
+      <span>{{ 'projects.noFsAccess' | transloco }}</span>
+    </p>
+  }
+
+  @if (cards(); as list) {
+    @if (list.length) {
+      <h2 class="list-title">{{ 'projects.recent' | transloco }}</h2>
+      <div class="grid">
+        @for (c of list; track c.project.id) {
+          <a class="card project" [routerLink]="['/app', c.project.id]">
+            <div class="thumb">
+              @if (c.thumb) {
+                <img [src]="c.thumb" alt="" />
+              } @else {
+                <app-icon name="film" [size]="28" />
+              }
+              <span class="badge format">{{ c.project.format }}</span>
+            </div>
+            <div class="info">
+              <b>{{ c.project.name }}</b>
+              <span class="faint">
+                {{ formatTime(sequenceDuration(c.project.clips)) }} · {{ relative(c.project.updatedAt) }}
+                @if (c.project.clips.length > 1) {
+                  · <app-icon name="layers" [size]="13" /> {{ c.project.clips.length }}
+                }
+                @if (c.project.words.length) {
+                  · <app-icon name="captions" [size]="13" />
+                }
+              </span>
+            </div>
+            <button
+              class="btn ghost icon sm delete"
+              type="button"
+              (click)="remove(c.project, $event)"
+              [attr.aria-label]="'projects.delete' | transloco"
+            >
+              <app-icon name="trash" [size]="15" />
+            </button>
+          </a>
+        }
+      </div>
+    } @else {
+      <p class="empty faint">{{ 'projects.empty' | transloco }}</p>
+    }
+  }
+</div>
