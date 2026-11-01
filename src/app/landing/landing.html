@@ -16,9 +16,12 @@
           {{ 'landing.hero.cta' | transloco }}
           <app-icon name="arrow-right" [size]="18" />
         </a>
-        <a class="btn lg" [href]="repoUrl" target="_blank" rel="noopener">
-          <app-icon name="github" [size]="18" />
-          {{ 'landing.hero.github' | transloco }}
+        <a class="btn lg" routerLink="/app" [queryParams]="{ demo: 1 }">
+          <app-icon name="play" [size]="17" />
+          {{ 'landing.hero.demo' | transloco }}
+        </a>
+        <a class="btn ghost icon lg" [href]="repoUrl" target="_blank" rel="noopener" [title]="'landing.hero.github' | transloco" [attr.aria-label]="'landing.hero.github' | transloco">
+          <app-icon name="github" [size]="20" />
         </a>
       </div>
       <p class="hint faint">{{ 'landing.hero.hint' | transloco }}</p>
@@ -121,7 +124,7 @@
           <li><app-icon name="check" [size]="16" /> {{ 'landing.thumbnail.points.' + k | transloco }}</li>
         }
       </ul>
-      <a class="btn primary lg" routerLink="/thumbnail">{{ 'landing.thumbnail.cta' | transloco }} <app-icon name="arrow-right" [size]="17" /></a>
+      <a class="btn primary lg" [routerLink]="'/thumbnail' | localize">{{ 'landing.thumbnail.cta' | transloco }} <app-icon name="arrow-right" [size]="17" /></a>
     </div>
     <div class="promo-visual" aria-hidden="true">
       <div class="mock-thumb">

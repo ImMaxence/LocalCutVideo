@@ -2,6 +2,7 @@ import { DestroyRef, Injectable, computed, inject, signal } from '@angular/core'
 import { TranslocoService } from '@jsverse/transloco';
 import { Subject, debounceTime, from, switchMap, tap } from 'rxjs';
 import { db, getClipFile, musicKey, storeClipFile } from '../core/db';
+import { fetchDemoVideo, isDemoSource } from '../core/demo';
 import { analyzeFaces } from '../core/face-tracker';
 import {
   AUDIO_ACCEPT,
@@ -42,6 +43,7 @@ import {
   type Project,
   type Rotation,
   type SilenceSettings,
+  type TextOverlay,
   type WhisperModel,
   type Word,
   clipHasVoice,
@@ -55,13 +57,15 @@ import { aspectRatio, rotatedSize, zoomBeats } from '../engine/render';
 import {
   applySpeeds,
   buildCaptionPages,
+  cutPoints,
+  sourceToOutput,
   keptSegments,
   nextKeptTime,
   removedRanges,
   totalDuration,
   withoutRange,
 } from '../engine/timeline-math';
-import type { AiDevice, RawWord } from '../workers/worker-types';
+import type { AiDevice, ExportRequest, RawWord } from '../workers/worker-types';
 
 /** Shortest cut, in seconds (also the minimum length of a timeline region). */
 export const MIN_CUT = 0.05;
@@ -182,6 +186,8 @@ export class EditorStore {
   readonly selectedCut = signal<string | null>(null);
   /** Speed change picked on the timeline. */
   readonly selectedSpeed = signal<string | null>(null);
+  /** Text over the video being edited in the inspector. */
+  readonly selectedText = signal<string | null>(null);
   readonly whisperModel = signal<WhisperModel>('base');
   readonly whisperLanguage = signal<string | null>(null);
   readonly notice = signal<{ key: string; params?: Record<string, unknown>; tone: 'info' | 'error' } | null>(null);
@@ -222,6 +228,13 @@ export class EditorStore {
   });
   readonly segments = computed(() => applySpeeds(keptSegments(this.duration(), this.removed()), this.project()?.speeds ?? []));
   readonly outputDuration = computed(() => totalDuration(this.segments()));
+  /** Output times of the transitions; the slow fade also opens and closes the video. */
+  readonly transitionPoints = computed(() => {
+    const p = this.project();
+    if (!p || p.transition === 'none') return [];
+    const points = cutPoints(this.segments(), this.clips().slice(1).map((c) => c.start));
+    return p.transition === 'black' ? [0, ...points, this.outputDuration()] : points;
+  });
   readonly captionPages = computed(() => {
     const p = this.project();
     return p ? buildCaptionPages(p.words, this.segments(), p.captions.maxWords) : [];
@@ -401,7 +414,7 @@ export class EditorStore {
     void this.ensureAnalyses();
     void this.restoreMusic(false);
     const flash = this.projects.takeFlash();
-    if (flash) this.notify(flash.key, flash.params, 'error');
+    if (flash && (!flash.onlyToReconnect || this.fileState() === 'reconnect')) this.notify(flash.key, flash.params, flash.tone ?? 'error');
   }
 
   /** Re-opens a clip's stored handle. With `fromGesture`, the browser may show its permission prompt. */
@@ -410,6 +423,16 @@ export class EditorStore {
     if (!p) return;
     const stored = await getClipFile(p.id, clipId);
     if (!stored?.handle) {
+      // The demo video is served by the site: no need to ask the user for it.
+      const clip = p.clips.find((c) => c.id === clipId);
+      if (clip && isDemoSource(clip.source)) {
+        try {
+          await this.attachClip(clipId, await fetchDemoVideo());
+          return;
+        } catch {
+          // Offline before the demo was ever cached: fall back to asking for the file.
+        }
+      }
       this.setClipStatus(clipId, 'missing');
       return;
     }
@@ -447,7 +470,8 @@ export class EditorStore {
     if (!p || !clip) return;
     const picked = await pickFile(VIDEO_ACCEPT, this.transloco.translate('common.videoFiles'));
     if (!picked) return;
-    if (fingerprint(picked.file) !== fingerprint(clip.source)) {
+    // Same name and size: the same video, even copied to another computer (other date).
+    if (picked.file.name !== clip.source.name || picked.file.size !== clip.source.size) {
       const ok = confirm(this.transloco.translate('editor.reconnect.mismatch', { name: clip.source.name }));
       if (!ok) return;
     }
@@ -795,6 +819,47 @@ export class EditorStore {
   removeSpeed(id: string): void {
     this.update((d) => (d.speeds = d.speeds.filter((s) => s.id !== id)));
     if (this.selectedSpeed() === id) this.selectedSpeed.set(null);
+  }
+
+  /** Adds a text over the video at the playhead, shown for 3 s, and selects it. */
+  addText(): void {
+    const start = Math.min(this.currentTime(), Math.max(0, this.duration() - 0.5));
+    const text: TextOverlay = {
+      id: uid(),
+      start,
+      end: Math.min(this.duration(), start + 3),
+      text: this.transloco.translate('editor.texts.default'),
+      style: 'outline',
+      size: 0.6,
+      position: 'top',
+      align: 'center',
+      color: '#ffffff',
+      accent: '#ffd60a',
+      uppercase: true,
+      tilt: false,
+    };
+    this.update((d) => (d.texts = [...(d.texts ?? []), text].sort((a, b) => a.start - b.start)));
+    this.selectedText.set(text.id);
+  }
+
+  /** Changes a text; a start moved past its end gives it 3 s again. */
+  updateText(id: string, patch: Partial<TextOverlay>, coalesce?: string): void {
+    this.update(
+      (d) => {
+        const text = d.texts.find((t) => t.id === id);
+        if (!text) return;
+        Object.assign(text, patch);
+        text.start = Math.max(0, Math.min(text.start, this.duration() - 0.2));
+        if (text.end - text.start < 0.2) text.end = Math.min(this.duration(), text.start + (patch.start !== undefined ? 3 : 0.2));
+        d.texts.sort((a, b) => a.start - b.start);
+      },
+      { coalesce },
+    );
+  }
+
+  removeText(id: string): void {
+    this.update((d) => (d.texts = d.texts.filter((t) => t.id !== id)));
+    if (this.selectedText() === id) this.selectedText.set(null);
   }
 
   /** In / out points placed on the playhead, to cut a part of the video by hand. */
@@ -1296,19 +1361,7 @@ export class EditorStore {
     this.exportState.set({ status: 'running', progress: 0, startedAt });
     try {
       const result = await this.workers.exporter.run(
-        {
-          clips: this.clips().map((c) => ({
-            file: files.get(c.id)!,
-            start: c.start,
-            duration: c.end - c.start,
-            hasAudio: c.source.hasAudio,
-            gain: this.clipGains().get(c.id) ?? 1,
-          })),
-          project: p,
-          music: p.music.enabled ? this.musicFile() : null,
-          frameDb: this.duckingDb(),
-          target: target === 'unsupported' ? null : target,
-        },
+        { ...this.exportRequest(p), target: target === 'unsupported' ? null : target },
         proxy((progress: { progress: number }) => this.exportState.set({ status: 'running', progress: progress.progress, startedAt })),
       );
       if (result.buffer) downloadBlob(new Blob([result.buffer], { type: 'video/mp4' }), name);
@@ -1317,6 +1370,81 @@ export class EditorStore {
       if (String((e as Error)?.message).includes('CANCELLED')) this.exportState.set({ status: 'idle' });
       else this.exportState.set({ status: 'error', message: String((e as Error)?.message ?? e) });
     }
+  }
+
+  /** What the export worker needs, besides where to write the file. */
+  private exportRequest(p: Project): ExportRequest {
+    const files = this.clipFiles();
+    return {
+      transitionPoints: this.transitionPoints(),
+      clips: this.clips().map((c) => ({
+        file: files.get(c.id)!,
+        start: c.start,
+        duration: c.end - c.start,
+        hasAudio: c.source.hasAudio,
+        gain: this.clipGains().get(c.id) ?? 1,
+        denoise: p.audio.denoise && clipHasVoice(p.clips.find((x) => x.id === c.id) ?? c),
+      })),
+      project: p,
+      music: p.music.enabled ? this.musicFile() : null,
+      frameDb: this.duckingDb(),
+      target: null,
+    };
+  }
+
+  /** Sound preview: idle, being prepared by the export worker, or playing. */
+  readonly soundPreview = signal<'idle' | 'loading' | 'playing'>('idle');
+  private soundPlayer: { ctx: AudioContext; source: AudioBufferSourceNode | null } | null = null;
+
+  /**
+   * Plays 8 s of the exported sound from the playhead (noise reduction included, which the live
+   * preview cannot do). Pressed again, it stops.
+   */
+  async listenSound(): Promise<void> {
+    const p = this.project();
+    if (!p || this.fileState() !== 'ready' || this.exportState().status === 'running') return;
+    if (this.soundPreview() !== 'idle') {
+      this.stopSound();
+      return;
+    }
+    if (this.playing()) this.togglePlay();
+    // Created during the click, so the browser lets it play.
+    this.soundPlayer ??= { ctx: new AudioContext(), source: null };
+    this.soundPreview.set('loading');
+    try {
+      const from = sourceToOutput(this.segments(), this.currentTime());
+      const sound = await this.workers.exporter.previewSound(this.exportRequest(p), from, 8);
+      if (this.soundPreview() !== 'loading') return;
+      const ctx = this.soundPlayer.ctx;
+      const buffer = ctx.createBuffer(2, Math.max(1, sound.left.length), sound.sampleRate);
+      buffer.copyToChannel(sound.left as Float32Array<ArrayBuffer>, 0);
+      buffer.copyToChannel(sound.right as Float32Array<ArrayBuffer>, 1);
+      const source = ctx.createBufferSource();
+      source.buffer = buffer;
+      source.connect(ctx.destination);
+      source.onended = () => this.stopSound();
+      await ctx.resume();
+      source.start();
+      this.soundPlayer.source = source;
+      this.soundPreview.set('playing');
+    } catch (e) {
+      this.soundPreview.set('idle');
+      this.notify(errorKey(e), undefined, 'error');
+    }
+  }
+
+  stopSound(): void {
+    const source = this.soundPlayer?.source;
+    if (source) {
+      source.onended = null;
+      try {
+        source.stop();
+      } catch {
+        // already stopped
+      }
+      this.soundPlayer!.source = null;
+    }
+    this.soundPreview.set('idle');
   }
 
   cancelExport(): void {

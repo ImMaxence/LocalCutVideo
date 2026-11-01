@@ -1,10 +1,11 @@
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { type ApplicationConfig, isDevMode, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { provideClientHydration, withNoIncrementalHydration } from '@angular/platform-browser';
 import { provideRouter, withComponentInputBinding, withInMemoryScrolling, withViewTransitions } from '@angular/router';
 import { provideServiceWorker } from '@angular/service-worker';
 import { provideTransloco } from '@jsverse/transloco';
 import { routes } from './app.routes';
-import { LANGUAGES, TranslocoHttpLoader, detectLanguage } from './core/i18n';
+import { LANGUAGES, TranslocoHttpLoader, initialLanguage } from './core/i18n';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -16,10 +17,12 @@ export const appConfig: ApplicationConfig = {
       withViewTransitions({ skipInitialTransition: true }),
     ),
     provideHttpClient(withFetch()),
+    // Without incremental hydration there is no event replay, whose inline scripts the strict CSP blocks.
+    provideClientHydration(withNoIncrementalHydration()),
     provideTransloco({
       config: {
         availableLangs: LANGUAGES.map((l) => l.code),
-        defaultLang: detectLanguage(),
+        defaultLang: initialLanguage(),
         fallbackLang: 'en',
         missingHandler: { useFallbackTranslation: true },
         reRenderOnLangChange: true,

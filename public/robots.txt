@@ -1,0 +1,7 @@
+# The public pages can be indexed, by search engines and AI assistants alike (see /llms.txt);
+# the app itself (projects, editor) is personal.
+User-agent: *
+Allow: /
+Disallow: /app
+
+Sitemap: https://localcutvideo.mbonnici.fr/sitemap.xml

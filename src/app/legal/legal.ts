@@ -5,6 +5,7 @@ import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
 import { switchMap } from 'rxjs';
 import { CONTACT_EMAIL } from '../core/version';
 import { Icon } from '../shared/icon';
+import { LocalizePipe } from '../shared/localize';
 
 export type LegalDoc = 'notice' | 'privacy' | 'terms';
 
@@ -36,7 +37,7 @@ export function linkify(text: string): Segment[] {
 
 @Component({
   selector: 'app-legal',
-  imports: [RouterLink, RouterLinkActive, TranslocoPipe, Icon],
+  imports: [RouterLink, RouterLinkActive, TranslocoPipe, Icon, LocalizePipe],
   templateUrl: './legal.html',
   styleUrl: './legal.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

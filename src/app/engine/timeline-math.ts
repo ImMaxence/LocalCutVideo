@@ -141,6 +141,38 @@ export function outputToSource(segments: Segment[], outT: number): number {
   return last ? last.end : 0;
 }
 
+/**
+ * Output times where the picture jumps: between kept parts that do not follow each other, and
+ * where a new clip starts. Speed changes are not jumps.
+ */
+export function cutPoints(segments: Segment[], clipStarts: number[]): number[] {
+  const points: number[] = [];
+  let out = 0;
+  segments.forEach((s, i) => {
+    const prev = segments[i - 1];
+    const contiguous = !!prev && s.start - prev.end <= 1e-4;
+    if (prev && (!contiguous || clipStarts.some((c) => Math.abs(c - s.start) < 1e-4))) points.push(out);
+    for (const c of clipStarts) if (c > s.start + 1e-4 && c < s.end - 1e-4) points.push(out + (c - s.start) / rateOf(s));
+    out += (s.end - s.start) / rateOf(s);
+  });
+  return points.sort((a, b) => a - b);
+}
+
+/** How dark the picture is at output time `t` (0 = untouched, 1 = black) for transitions of `half` seconds. */
+export function transitionShade(points: number[], t: number, half: number): number {
+  if (half <= 0 || !points.length) return 0;
+  let lo = 0;
+  let hi = points.length - 1;
+  while (lo < hi) {
+    const mid = (lo + hi) >> 1;
+    if (points[mid] < t) lo = mid + 1;
+    else hi = mid;
+  }
+  let distance = Math.abs(points[lo] - t);
+  if (lo > 0) distance = Math.min(distance, Math.abs(points[lo - 1] - t));
+  return distance >= half ? 0 : 1 - distance / half;
+}
+
 /** Where playback should jump when it enters a cut, or null at the end of the edit. */
 export function nextKeptTime(segments: Range[], t: number): number | null {
   for (const s of segments) {

@@ -1,15 +1,31 @@
 /**
  * Thumbnail composition (YouTube, Shorts, square post): a still of the video, cropped and
  * zoomed, color-boosted, with a big title whose *starred* words stand out. Plain canvas code,
- * so the preview and the downloaded image are the very same drawing.
+ * so the preview and the downloaded image are the very same drawing. The same titles are used
+ * for the free texts shown over the video.
  */
-import type { AspectFormat, Rotation } from './model';
+import type { AspectFormat, Rotation, TextOverlay } from './model';
 import { CAPTION_FONT, type Ctx2D, rotatedSize, rotationMatrix } from './render';
 
 export type ThumbStyle = 'outline' | 'shadow' | 'box' | 'highlight';
 export type ThumbPosition = 'top' | 'center' | 'bottom';
 
-export interface ThumbnailSettings {
+/** Look of a title: on thumbnails and for texts over the video. */
+export interface TitleStyle {
+  text: string;
+  style: ThumbStyle;
+  /** Title size, 1 = thumbnail size. It shrinks by itself when the title is long. */
+  size: number;
+  position: ThumbPosition;
+  align: 'left' | 'center';
+  color: string;
+  accent: string;
+  uppercase: boolean;
+  /** Slight slant of the title, a classic of video thumbnails. */
+  tilt: boolean;
+}
+
+export interface ThumbnailSettings extends TitleStyle {
   format: AspectFormat;
   /** Point of the picture kept in the middle of the frame (0..1 of the turned picture). */
   x: number;
@@ -23,17 +39,6 @@ export interface ThumbnailSettings {
   saturation: number;
   /** Darkens the edges and the side of the title so it stays readable (0..1). */
   shade: number;
-  text: string;
-  style: ThumbStyle;
-  /** Title size, 1 = default. It shrinks by itself when the title is long. */
-  size: number;
-  position: ThumbPosition;
-  align: 'left' | 'center';
-  color: string;
-  accent: string;
-  uppercase: boolean;
-  /** Slight slant of the title, a classic of video thumbnails. */
-  tilt: boolean;
 }
 
 /** Recommended upload sizes: YouTube (1280×720), Shorts / TikTok / Reels cover, square post. */
@@ -132,14 +137,14 @@ export function drawThumbnail(ctx: Ctx2D, image: CanvasImageSource, imgW: number
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.filter = 'none';
 
-  const words = parseTitle(s.uppercase ? s.text.toLocaleUpperCase() : s.text);
+  const hasTitle = parseTitle(s.text).length > 0;
   if (s.shade > 0) {
     const vignette = ctx.createRadialGradient(outW / 2, outH / 2, Math.min(outW, outH) * 0.3, outW / 2, outH / 2, Math.hypot(outW, outH) / 2);
     vignette.addColorStop(0, 'rgba(0, 0, 0, 0)');
     vignette.addColorStop(1, `rgba(0, 0, 0, ${0.6 * s.shade})`);
     ctx.fillStyle = vignette;
     ctx.fillRect(0, 0, outW, outH);
-    if (words.length && s.position !== 'center') {
+    if (hasTitle && s.position !== 'center') {
       const top = s.position === 'top';
       const side = ctx.createLinearGradient(0, top ? 0 : outH, 0, top ? outH * 0.65 : outH * 0.35);
       side.addColorStop(0, `rgba(0, 0, 0, ${0.7 * s.shade})`);
@@ -148,7 +153,7 @@ export function drawThumbnail(ctx: Ctx2D, image: CanvasImageSource, imgW: number
       ctx.fillRect(0, 0, outW, outH);
     }
   }
-  if (words.length) drawTitle(ctx, words, s, outW, outH);
+  drawTitle(ctx, s, outW, outH);
   ctx.restore();
 }
 
@@ -156,7 +161,21 @@ interface PlacedWord extends TitleWord {
   width: number;
 }
 
-function drawTitle(ctx: Ctx2D, words: TitleWord[], s: ThumbnailSettings, outW: number, outH: number): void {
+/** Free texts shown at source time `t`; with `fade`, they fade in and out over 0.2 s. */
+export function drawTexts(ctx: Ctx2D, texts: TextOverlay[], t: number, outW: number, outH: number, fade = true): void {
+  for (const text of texts) {
+    if (t < text.start || t >= text.end) continue;
+    ctx.save();
+    if (fade) ctx.globalAlpha = Math.max(0, Math.min(1, (t - text.start) / 0.2, (text.end - t) / 0.2));
+    drawTitle(ctx, text, outW, outH);
+    ctx.restore();
+  }
+}
+
+/** Draws a title (its *starred* words in the accent color), shrinking it until it fits. */
+export function drawTitle(ctx: Ctx2D, s: TitleStyle, outW: number, outH: number): void {
+  const words = parseTitle(s.uppercase ? s.text.toLocaleUpperCase() : s.text);
+  if (!words.length) return;
   const maxWidth = outW * (s.align === 'center' ? 0.88 : 0.84);
   const maxHeight = outH * (s.position === 'center' ? 0.7 : 0.5);
   const font = (px: number) => `800 ${px}px "${CAPTION_FONT}", "Arial Black", system-ui, sans-serif`;

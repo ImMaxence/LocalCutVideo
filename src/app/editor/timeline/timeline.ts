@@ -62,6 +62,8 @@ function cssColor(host: HTMLElement, variable: string): string {
   templateUrl: './timeline.html',
   styleUrl: './timeline.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  // Lets automated tests wait for the waveform and its regions to be usable.
+  host: { '[attr.data-ready]': 'ready() || null' },
 })
 export class Timeline {
   protected readonly store = inject(EditorStore);

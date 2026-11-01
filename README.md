@@ -27,6 +27,10 @@
 | --- | --- |
 | **Auto edit** | One click: transcription, filler removal, silence cuts, face framing, smart zoom and karaoke subtitles, with good defaults. Undo in one step. |
 | **Voice detection** | The auto edit asks whether someone speaks in each clip (or detects it with Whisper). Clips without voice get no subtitles and only real dead air is cut. |
+| **Try it** | "Try with a demo video" on the landing page opens the editor with a sample video, no file needed. |
+| **Texts and transitions** | Titles and notes over the video (same styles as the thumbnails); quick fade or fade to black at every cut. |
+| **Background blur** | The background behind the person is blurred, the person stays sharp (MediaPipe selfie segmentation). |
+| **Project files** | Save a project as a `.lcv.json` file (the edit, without the video) and open it on another computer. |
 | **Thumbnail maker** | Suggests the sharpest moments of the video, adds a big title with highlighted words (4 styles), color boost and reframing; downloads JPG / PNG for YouTube, Shorts or a square post. |
 | **Zero upload** | The video is read in place from your disk (File System Access API). Nothing is sent anywhere. |
 | **Multi-clip** | Import several takes at once: they play back to back in one project. Reorder, add or remove clips; cuts and words follow their clip. |
@@ -40,7 +44,7 @@
 | **Output formats** | 16:9 (YouTube), 9:16 (TikTok, Reels, Shorts), 1:1, in 720p or 1080p. |
 | **Auto-framing** | MediaPipe face tracking keeps the speaker in frame when going from 16:9 to 9:16. |
 | **Smart zoom** | Alternating punch-in zoom on every cut (or every sentence when there is no cut). |
-| **Sound** | Video volume up to 300 % with a limiter, mute, clip leveling; background music lowered automatically while someone speaks. |
+| **Sound** | Video volume up to 300 % with a limiter, mute, clip leveling, voice noise reduction (RNNoise) with a "listen to the result" preview; background music lowered automatically while someone speaks. |
 | **Rotation** | Turn a video filmed sideways by 90° steps; preview, export and face tracking follow. |
 | **Timeline** | Wavesurfer.js waveform with draggable, resizable cut regions; select a cut to nudge its start / end (±0.1 s) or listen to it; zoom (buttons, Ctrl + wheel); undo / redo. |
 | **Light preview** | The preview renders at 360p, 540p or 720p to keep the editor smooth; the export is always full quality. |
@@ -48,7 +52,8 @@
 | **Fast export** | Hardware encoding with WebCodecs, MP4 muxing with Mediabunny, streamed straight to disk. |
 | **Crash recovery** | Every change is auto-saved to IndexedDB; the video file is reconnected on reopen. |
 | **PWA** | Installable, works offline, "Open with LocalCutVideo" for video files. |
-| **5 languages** | English, French, Spanish, Italian, German. Light / dark / system theme. |
+| **5 languages** | English, French, Spanish, Italian, German, each public page with its own URL (`/fr`, `/es`…). Light / dark / system theme. |
+| **SEO** | Public pages prerendered at build time (Angular SSG) with titles, descriptions, canonical and `hreflang` links, schema.org data, `sitemap.xml`, `robots.txt` and `llms.txt` for AI assistants. |
 | **Legal pages** | Legal notice, privacy policy and terms of use, in the 5 languages. |
 
 ## Screenshots
@@ -103,6 +108,7 @@ flowchart LR
 - **Clips form one sequence**: every time in the project is a sequence time. Reordering or removing a clip remaps cuts, words and the face track so they stay attached to their clip (`src/app/engine/sequence.ts`).
 - **The preview and the export share the same render code** (`src/app/engine/render.ts`), so what you see is what gets encoded.
 - **Heavy work runs in Web Workers** so the interface never freezes: audio extraction, transcription and encoding.
+- **Public pages are prerendered** in every language at build time (`src/app/app.routes.server.ts`), then hydrated; the app itself (`/app`) renders in the browser only.
 - **Audio for Whisper** is decoded with WebCodecs and resampled to 16 kHz mono directly in RAM; silences are cut before transcription to avoid Whisper hallucinations.
 
 ## Privacy
@@ -126,14 +132,15 @@ flowchart LR
 
 | Area | Choice |
 | --- | --- |
-| UI | Angular 22 (standalone components, zoneless, signals), SCSS with `light-dark()` |
+| UI | Angular 22 (standalone components, zoneless, signals, prerendering with hydration), SCSS with `light-dark()` |
 | i18n | Transloco (runtime language switch), JSON files in `public/i18n` |
 | Storage | Dexie.js (IndexedDB), RxJS `debounceTime` auto-save |
 | Media | Mediabunny (demux / mux), WebCodecs (hardware decode / encode) |
-| AI | Transformers.js + Whisper `onnx-community/whisper-*_timestamped`, MediaPipe Tasks Vision (BlazeFace) |
+| AI | Transformers.js + Whisper `onnx-community/whisper-*_timestamped`, MediaPipe Tasks Vision (BlazeFace, selfie segmenter), RNNoise (WebAssembly) |
 | Timeline | Wavesurfer.js 8 (regions + timeline plugins) |
 | Workers | Comlink |
 | PWA | `@angular/service-worker`, web app manifest with file handlers |
+| Tests | Vitest (engine), Playwright (key flows in Chrome) |
 | Hosting | nginx (COOP/COEP, CSP, caching) in Docker, deployed with Coolify |
 
 ## Development
@@ -143,21 +150,28 @@ Requirements: Node.js 22.22+ or 24.15+, and Chrome or Edge to test every feature
 ```bash
 npm install
 npm start            # http://localhost:4200 (COOP/COEP headers are set by the dev server)
-npm run build        # production build in dist/localcutvideo/browser
-npm run typecheck    # app + workers
+npm run build        # production build in dist/localcutvideo/browser (public pages prerendered)
+npm run typecheck    # app + workers + tests
+npm test             # unit tests of the engine (Vitest)
+npm run test:e2e     # end-to-end tests (Playwright) against http://localhost:4280
+npm run sitemap      # regenerate public/sitemap.xml after adding a public page
 ```
+
+The end-to-end tests run against a build (`docker compose -f docker-compose.yml -f docker-compose.local.yml up -d`, or `E2E_BASE_URL=http://localhost:4200` with `npm start`) in Chrome. `E2E_AI=1` adds the Whisper tests, which download a model the first time.
 
 ```text
 src/app/
 ├── core/        services: Dexie DB, file access, workers, face tracking, theme, i18n, PWA
 ├── engine/      framework-free logic shared with workers: project model, timeline math,
 │                silence detection, ducking, framing, rendering
-├── workers/     media.worker, ai.worker (Whisper), export.worker
+├── workers/     media.worker, ai.worker (Whisper), export.worker, noise reduction, person mask
 ├── editor/      editor page, store (state, auto-save, undo), preview, timeline, transcript, inspector
 ├── landing/     landing page
 ├── projects/    project list, multi-file import, crash-recovery entry point
 ├── changelog/   renders CHANGELOG.md
+├── thumbnail/   thumbnail maker
 └── legal/       legal notice, privacy policy, terms of use (content in public/i18n)
+e2e/             Playwright tests of the key flows
 ```
 
 ## Deployment

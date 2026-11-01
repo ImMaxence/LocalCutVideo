@@ -1,4 +1,5 @@
-import { Injectable, inject, signal } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Injectable, PLATFORM_ID, inject, signal } from '@angular/core';
 import { SwUpdate, type VersionReadyEvent } from '@angular/service-worker';
 import { filter } from 'rxjs';
 
@@ -22,6 +23,7 @@ export class PwaService {
         .pipe(filter((e): e is VersionReadyEvent => e.type === 'VERSION_READY'))
         .subscribe(() => this.updateReady.set(true));
     }
+    if (!isPlatformBrowser(inject(PLATFORM_ID))) return;
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       this.deferredPrompt = e as BeforeInstallPromptEvent;

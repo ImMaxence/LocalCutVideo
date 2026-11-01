@@ -1,17 +1,17 @@
 @if (!fullscreen()) {
   <header class="site-header" [class.open]="menuOpen()">
     <div class="container bar">
-      <a class="brand" routerLink="/" aria-label="LocalCutVideo">
+      <a class="brand" [routerLink]="'/' | localize" aria-label="LocalCutVideo">
         <app-logo [size]="30" />
         <span class="name">LocalCut<span>Video</span></span>
       </a>
 
       <nav class="nav" aria-label="Main">
         @for (l of navLinks; track l.fragment) {
-          <a routerLink="/" [fragment]="l.fragment">{{ l.key | transloco }}</a>
+          <a [routerLink]="'/' | localize" [fragment]="l.fragment">{{ l.key | transloco }}</a>
         }
-        <a routerLink="/thumbnail" routerLinkActive="active">{{ 'nav.thumbnail' | transloco }}</a>
-        <a routerLink="/changelog" routerLinkActive="active">{{ 'nav.changelog' | transloco }}</a>
+        <a [routerLink]="'/thumbnail' | localize" routerLinkActive="active">{{ 'nav.thumbnail' | transloco }}</a>
+        <a [routerLink]="'/changelog' | localize" routerLinkActive="active">{{ 'nav.changelog' | transloco }}</a>
       </nav>
 
       <div class="tools">
@@ -52,16 +52,16 @@
     <nav id="mobile-menu" class="drawer" animate.enter="drawer-in" animate.leave="drawer-out" aria-label="Mobile">
       <div class="drawer-links">
         @for (l of navLinks; track l.fragment; let i = $index) {
-          <a routerLink="/" [fragment]="l.fragment" (click)="menuOpen.set(false)" [style.--i]="i">
+          <a [routerLink]="'/' | localize" [fragment]="l.fragment" (click)="menuOpen.set(false)" [style.--i]="i">
             {{ l.key | transloco }}
             <app-icon name="arrow-right" [size]="16" />
           </a>
         }
-        <a routerLink="/thumbnail" (click)="menuOpen.set(false)" [style.--i]="3">
+        <a [routerLink]="'/thumbnail' | localize" (click)="menuOpen.set(false)" [style.--i]="3">
           {{ 'nav.thumbnail' | transloco }}
           <app-icon name="arrow-right" [size]="16" />
         </a>
-        <a routerLink="/changelog" (click)="menuOpen.set(false)" [style.--i]="4">
+        <a [routerLink]="'/changelog' | localize" (click)="menuOpen.set(false)" [style.--i]="4">
           {{ 'nav.changelog' | transloco }}
           <app-icon name="arrow-right" [size]="16" />
         </a>
@@ -99,7 +99,7 @@
   <footer class="site-footer">
     <div class="container cols">
       <div class="about">
-        <a class="brand" routerLink="/">
+        <a class="brand" [routerLink]="'/' | localize">
           <app-logo [size]="26" />
           <span class="name">LocalCut<span>Video</span></span>
         </a>
@@ -109,22 +109,22 @@
         <div>
           <b>{{ 'footer.product' | transloco }}</b>
           <a routerLink="/app">{{ 'nav.open' | transloco }}</a>
-          <a routerLink="/thumbnail">{{ 'nav.thumbnail' | transloco }}</a>
-          <a routerLink="/changelog">{{ 'nav.changelog' | transloco }}</a>
+          <a [routerLink]="'/thumbnail' | localize">{{ 'nav.thumbnail' | transloco }}</a>
+          <a [routerLink]="'/changelog' | localize">{{ 'nav.changelog' | transloco }}</a>
           <a [href]="repoUrl" target="_blank" rel="noopener">GitHub</a>
           <a [href]="repoUrl + '/issues'" target="_blank" rel="noopener">{{ 'footer.issues' | transloco }}</a>
         </div>
         <div>
           <b>{{ 'footer.legal' | transloco }}</b>
-          <a routerLink="/legal">{{ 'legal.nav.notice' | transloco }}</a>
-          <a routerLink="/privacy">{{ 'legal.nav.privacy' | transloco }}</a>
-          <a routerLink="/terms">{{ 'legal.nav.terms' | transloco }}</a>
+          <a [routerLink]="'/legal' | localize">{{ 'legal.nav.notice' | transloco }}</a>
+          <a [routerLink]="'/privacy' | localize">{{ 'legal.nav.privacy' | transloco }}</a>
+          <a [routerLink]="'/terms' | localize">{{ 'legal.nav.terms' | transloco }}</a>
         </div>
       </nav>
     </div>
     <div class="container legal">
       <span>© {{ year }} LocalCutVideo · {{ 'footer.noTracking' | transloco }}</span>
-      <a class="version" routerLink="/changelog" [title]="'nav.changelog' | transloco">v{{ version }}</a>
+      <a class="version" [routerLink]="'/changelog' | localize" [title]="'nav.changelog' | transloco">v{{ version }}</a>
     </div>
   </footer>
 }

@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { TranslocoPipe } from '@jsverse/transloco';
 import { REPO_URL } from '../core/version';
 import { Icon } from '../shared/icon';
+import { LocalizePipe } from '../shared/localize';
 import { Reveal } from '../shared/reveal';
 
 interface Feature {
@@ -12,7 +13,7 @@ interface Feature {
 
 @Component({
   selector: 'app-landing',
-  imports: [RouterLink, TranslocoPipe, Icon, Reveal],
+  imports: [RouterLink, TranslocoPipe, Icon, Reveal, LocalizePipe],
   templateUrl: './landing.html',
   styleUrl: './landing.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -46,7 +46,8 @@
       "lead": "LocalCutVideo cuts silences, transcribes with Whisper, burns karaoke subtitles and reframes 16:9 into 9:16, entirely in your browser. No upload, no account, no server",
       "cta": "Open the editor",
       "github": "View on GitHub",
-      "hint": "Works best in Chrome or Edge on a computer"
+      "hint": "Works best in Chrome or Edge on a computer",
+      "demo": "Try with a demo video"
     },
     "mock": {
       "w1": "So today",
@@ -230,7 +231,10 @@
     "empty": "No project yet. Open a video to get started",
     "delete": "Delete project",
     "confirmDelete": "Delete the project “{{ name }}”? The video file on your disk is not affected",
-    "multi": "Several files? They are assembled into one video, in name order"
+    "multi": "Several files? They are assembled into one video, in name order",
+    "importFile": "Open a project file (.lcv.json)",
+    "saveFile": "Save the project as a file",
+    "imported": "Project opened: select its videos to continue"
   },
   "errors": {
     "notVideo": "This file does not look like a video",
@@ -241,7 +245,9 @@
     "export": "The export failed",
     "faces": "Face tracking failed on this video",
     "skipped": "Skipped (could not be read): {{ names }}",
-    "skippedCodec": "Skipped, codec not supported by this browser: {{ names }}. Try Chrome, or convert to H.264 MP4"
+    "skippedCodec": "Skipped, codec not supported by this browser: {{ names }}. Try Chrome, or convert to H.264 MP4",
+    "notProject": "This file is not a LocalCutVideo project",
+    "demo": "The demo video could not be loaded"
   },
   "languages": {
     "en": "English",
@@ -371,7 +377,8 @@
       "captions": "Subtitles",
       "framing": "Framing",
       "audio": "Sound",
-      "clips": "Clips"
+      "clips": "Clips",
+      "texts": "Texts"
     },
     "format": {
       "title": "Output format",
@@ -478,7 +485,10 @@
       "from": "from {{ time }}",
       "streamHint": "You will choose where to save the MP4. It is written directly to disk",
       "downloadHint": "The MP4 is assembled locally, then downloaded",
-      "start": "Export MP4"
+      "start": "Export MP4",
+      "saveProject": "Save the project",
+      "saveProjectHint": "A .lcv.json file with your edit (no video inside), to continue on another computer",
+      "projectSaved": "Project saved as a .lcv.json file"
     },
     "clips": {
       "title": "Clips",
@@ -556,9 +566,39 @@
       "volumeHint": "Applies to the preview and the export",
       "boostHint": "Above 100 %, a limiter prevents distortion",
       "normalize": "Level the clips",
-      "normalizeHint": "Every clip at the same loudness, filmed close or far"
+      "normalizeHint": "Every clip at the same loudness, filmed close or far",
+      "denoise": "Reduce background noise",
+      "denoiseHint": "Clearer voice (wind, hiss, fans). Applied at export, on clips with voice. Listen first",
+      "listen": "Listen to 8 s of the result",
+      "stopListening": "Stop listening",
+      "preparing": "Preparing…"
     },
-    "thumbnail": "Thumbnail"
+    "thumbnail": "Thumbnail",
+    "transition": {
+      "title": "Transition at cuts",
+      "none": "Hard cut",
+      "dip": "Quick fade",
+      "black": "Fade to black",
+      "hint": "Plays at every cut and clip change (and at the start and end with the fade to black). Visible while playing"
+    },
+    "texts": {
+      "title": "Texts over the video",
+      "hint": "Titles and notes shown at the playhead. Put words between asterisks to color them",
+      "add": "Add a text at the playhead",
+      "default": "Your *text*",
+      "timing": "Shown",
+      "startHere": "Start here",
+      "endHere": "End here",
+      "remove": "Remove this text"
+    },
+    "background": {
+      "title": "Background",
+      "hint": "Blurs the background behind the person, who stays sharp. Computed on your device",
+      "none": "Sharp",
+      "blur": "Blurred",
+      "strength": "Blur strength",
+      "error": "The background blur could not start on this device"
+    }
   },
   "legal": {
     "updated": "Last updated: November 1, 2026",
@@ -772,5 +812,39 @@
     "saved": "Saved: {{ name }}",
     "loadError": "This project could not be opened",
     "readError": "This file could not be read"
+  },
+  "seo": {
+    "home": {
+      "title": "LocalCutVideo — Free video editor in your browser, nothing is uploaded",
+      "description": "Edit your videos in the browser: silences cut automatically, AI subtitles, face framing for TikTok and Shorts, thumbnails. Free and open source, your videos never leave your computer"
+    },
+    "thumbnail": {
+      "title": "Free YouTube thumbnail maker — LocalCutVideo",
+      "description": "Make a YouTube, Shorts or Instagram thumbnail from your video: best moments suggested, big title with colored words, JPG or PNG. Free, in your browser, nothing uploaded"
+    },
+    "changelog": {
+      "title": "Changelog — LocalCutVideo",
+      "description": "What's new in LocalCutVideo, version by version"
+    },
+    "legal": {
+      "title": "Legal notice — LocalCutVideo",
+      "description": "Publisher and hosting of LocalCutVideo"
+    },
+    "privacy": {
+      "title": "Privacy policy — LocalCutVideo",
+      "description": "LocalCutVideo uploads nothing: your videos, transcripts and projects stay on your device"
+    },
+    "terms": {
+      "title": "Terms of use — LocalCutVideo",
+      "description": "Terms of use of LocalCutVideo, a free and open source video editor"
+    },
+    "app": {
+      "title": "Projects — LocalCutVideo",
+      "description": "Your video projects, saved in your browser"
+    },
+    "editor": {
+      "title": "Editor — LocalCutVideo",
+      "description": "LocalCutVideo editor"
+    }
   }
 }

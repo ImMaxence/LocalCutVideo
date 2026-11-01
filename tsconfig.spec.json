@@ -1,0 +1,9 @@
+/* Unit tests (Vitest) of the engine. */
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/spec",
+    "types": []
+  },
+  "include": ["src/**/*.spec.ts"]
+}

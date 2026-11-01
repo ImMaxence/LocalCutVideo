@@ -7,6 +7,8 @@
  * SEQUENCE time in seconds (clip 2 starts where clip 1 ends) unless stated otherwise.
  */
 
+import type { TitleStyle } from './thumbnail';
+
 export const SCHEMA_VERSION = 2;
 
 export type AspectFormat = '16:9' | '9:16' | '1:1';
@@ -15,6 +17,12 @@ export type CaptionStyle = 'karaoke' | 'clean' | 'boxed';
 export type CaptionPosition = 'top' | 'center' | 'bottom';
 export type FramingMode = 'center' | 'face';
 export type WhisperModel = 'tiny' | 'base' | 'small';
+/** What happens where the video jumps (cuts, clip changes): nothing, a quick or a slow dip to black. */
+export type TransitionStyle = 'none' | 'dip' | 'black';
+
+/** Half the length of each transition, in seconds (darkening before the cut, brightening after). */
+export const TRANSITION_HALF: Record<TransitionStyle, number> = { none: 0, dip: 0.12, black: 0.35 };
+
 /** Clockwise turn applied to every clip, for videos filmed sideways. */
 export type Rotation = 0 | 90 | 180 | 270;
 
@@ -41,6 +49,13 @@ export interface Word extends Range {
   id: string;
   text: string;
   deleted: boolean;
+}
+
+/** Text shown over the video between two sequence times, styled like thumbnail titles. */
+export interface TextOverlay extends TitleStyle {
+  id: string;
+  start: number;
+  end: number;
 }
 
 export interface SourceInfo {
@@ -89,12 +104,21 @@ export interface FramingSettings {
   zoom: number;
 }
 
+/** Background behind the person: untouched, or blurred (the person stays sharp). */
+export interface BackgroundSettings {
+  mode: 'none' | 'blur';
+  /** 0..1 */
+  strength: number;
+}
+
 /** Sound of the clips themselves: overall volume and per-clip leveling. */
 export interface AudioSettings {
   /** Linear gain on the clips' sound (1 = unchanged, up to 3). */
   volume: number;
   /** Brings every clip to the same loudness (recordings made at different levels). */
   normalize: boolean;
+  /** Removes background noise from the voice (RNNoise), on clips with voice, at export. */
+  denoise: boolean;
 }
 
 export interface MusicSettings {
@@ -139,12 +163,15 @@ export interface Project {
   format: AspectFormat;
   cuts: Cut[];
   speeds: SpeedRange[];
+  texts: TextOverlay[];
   words: Word[];
   transcript: TranscriptMeta | null;
   captions: CaptionSettings;
   framing: FramingSettings;
   faces: FacePoint[] | null;
   rotation: Rotation;
+  transition: TransitionStyle;
+  background: BackgroundSettings;
   audio: AudioSettings;
   music: MusicSettings;
   silence: SilenceSettings;
@@ -177,6 +204,7 @@ export function createProject(name: string): Project {
     format: '9:16',
     cuts: [],
     speeds: [],
+    texts: [],
     words: [],
     transcript: null,
     captions: {
@@ -191,7 +219,9 @@ export function createProject(name: string): Project {
     framing: { mode: 'center', punchIn: false, zoom: 1.15 },
     faces: null,
     rotation: 0,
-    audio: { volume: 1, normalize: false },
+    transition: 'none',
+    background: { mode: 'none', strength: 0.6 },
+    audio: { volume: 1, normalize: false, denoise: false },
     music: { enabled: false, name: null, volume: 0.35, ducking: 0.25 },
     silence: { thresholdDb: -40, minSilence: 0.5, padding: 0.12, mode: 'audio', live: false },
     export: { resolution: 1080, fps: 30 },
@@ -213,6 +243,7 @@ export function migrateProject(raw: Project & { source?: SourceInfo | null }): P
     captions: { ...base.captions, ...raw.captions },
     framing: { ...base.framing, ...raw.framing },
     audio: { ...base.audio, ...raw.audio },
+    background: { ...base.background, ...raw.background },
     music: { ...base.music, ...raw.music },
     silence: { ...base.silence, ...raw.silence },
     export: { ...base.export, ...raw.export },

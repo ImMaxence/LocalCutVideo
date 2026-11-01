@@ -46,7 +46,8 @@
       "lead": "LocalCutVideo schneidet Pausen heraus, transkribiert mit Whisper, brennt Karaoke-Untertitel ein und macht aus 16:9 ein 9:16, komplett in deinem Browser. Kein Upload, kein Konto, kein Server",
       "cta": "Editor öffnen",
       "github": "Auf GitHub ansehen",
-      "hint": "Funktioniert am besten mit Chrome oder Edge am Computer"
+      "hint": "Funktioniert am besten mit Chrome oder Edge am Computer",
+      "demo": "Mit einem Demo-Video testen"
     },
     "mock": {
       "w1": "Also heute",
@@ -230,7 +231,10 @@
     "empty": "Noch keine Projekte. Öffne ein Video, um loszulegen",
     "delete": "Projekt löschen",
     "confirmDelete": "Projekt „{{ name }}“ löschen? Die Videodatei auf deiner Festplatte bleibt unverändert",
-    "multi": "Mehrere Dateien? Sie werden nach Namen sortiert zu einem Video zusammengefügt"
+    "multi": "Mehrere Dateien? Sie werden nach Namen sortiert zu einem Video zusammengefügt",
+    "importFile": "Projektdatei öffnen (.lcv.json)",
+    "saveFile": "Projekt als Datei speichern",
+    "imported": "Projekt geöffnet: Wähle seine Videos aus, um weiterzumachen"
   },
   "errors": {
     "notVideo": "Diese Datei sieht nicht nach einem Video aus",
@@ -241,7 +245,9 @@
     "export": "Der Export ist fehlgeschlagen",
     "faces": "Die Gesichtsverfolgung ist bei diesem Video fehlgeschlagen",
     "skipped": "Übersprungen, nicht lesbar: {{ names }}",
-    "skippedCodec": "Übersprungen, Codec von diesem Browser nicht unterstützt: {{ names }}. Versuche Chrome oder wandle in H.264-MP4 um"
+    "skippedCodec": "Übersprungen, Codec von diesem Browser nicht unterstützt: {{ names }}. Versuche Chrome oder wandle in H.264-MP4 um",
+    "notProject": "Diese Datei ist kein LocalCutVideo-Projekt",
+    "demo": "Das Demo-Video konnte nicht geladen werden"
   },
   "languages": {
     "en": "Englisch",
@@ -371,7 +377,8 @@
       "captions": "Untertitel",
       "framing": "Bildausschnitt",
       "audio": "Ton",
-      "clips": "Clips"
+      "clips": "Clips",
+      "texts": "Texte"
     },
     "format": {
       "title": "Ausgabeformat",
@@ -478,7 +485,10 @@
       "from": "statt {{ time }}",
       "streamHint": "Du wählst, wo die MP4 gespeichert wird. Sie wird direkt auf die Festplatte geschrieben",
       "downloadHint": "Die MP4 wird lokal erstellt und dann heruntergeladen",
-      "start": "Als MP4 exportieren"
+      "start": "Als MP4 exportieren",
+      "saveProject": "Projekt speichern",
+      "saveProjectHint": "Eine .lcv.json-Datei mit deinem Schnitt (ohne Video), um auf einem anderen Computer weiterzumachen",
+      "projectSaved": "Projekt als .lcv.json-Datei gespeichert"
     },
     "clips": {
       "title": "Clips der Sequenz",
@@ -556,9 +566,39 @@
       "volumeHint": "Gilt für Vorschau und Export",
       "boostHint": "Über 100 % verhindert ein Limiter Übersteuerung",
       "normalize": "Clip-Lautstärke angleichen",
-      "normalizeHint": "Jeder Clip gleich laut, ob nah oder fern gefilmt"
+      "normalizeHint": "Jeder Clip gleich laut, ob nah oder fern gefilmt",
+      "denoise": "Hintergrundrauschen reduzieren",
+      "denoiseHint": "Klarere Stimme (Wind, Rauschen, Lüfter). Beim Export angewendet, auf Clips mit Stimme. Vorher anhören",
+      "listen": "8 s des Ergebnisses anhören",
+      "stopListening": "Anhören beenden",
+      "preparing": "Wird vorbereitet…"
     },
-    "thumbnail": "Thumbnail"
+    "thumbnail": "Thumbnail",
+    "transition": {
+      "title": "Übergang an Schnitten",
+      "none": "Harter Schnitt",
+      "dip": "Kurze Blende",
+      "black": "Schwarzblende",
+      "hint": "An jedem Schnitt und Clipwechsel (bei der Schwarzblende auch am Anfang und Ende). Sichtbar bei der Wiedergabe"
+    },
+    "texts": {
+      "title": "Texte im Video",
+      "hint": "Titel und Notizen ab dem Abspielkopf. Wörter zwischen Sternchen werden farbig",
+      "add": "Text am Abspielkopf hinzufügen",
+      "default": "Dein *Text*",
+      "timing": "Sichtbar",
+      "startHere": "Hier beginnen",
+      "endHere": "Hier enden",
+      "remove": "Diesen Text löschen"
+    },
+    "background": {
+      "title": "Hintergrund",
+      "hint": "Zeichnet den Hintergrund hinter der Person weich, die Person bleibt scharf. Auf deinem Gerät berechnet",
+      "none": "Scharf",
+      "blur": "Unscharf",
+      "strength": "Stärke der Unschärfe",
+      "error": "Die Hintergrundunschärfe konnte auf diesem Gerät nicht starten"
+    }
   },
   "legal": {
     "updated": "Zuletzt aktualisiert: 1. November 2026",
@@ -772,5 +812,39 @@
     "saved": "Gespeichert: {{ name }}",
     "loadError": "Dieses Projekt konnte nicht geöffnet werden",
     "readError": "Diese Datei konnte nicht gelesen werden"
+  },
+  "seo": {
+    "home": {
+      "title": "LocalCutVideo — Kostenloser Videoeditor im Browser, ohne Upload",
+      "description": "Schneide deine Videos im Browser: Pausen automatisch entfernt, KI-Untertitel, Gesichtsausschnitt für TikTok und Shorts, Thumbnails. Kostenlos und Open Source, deine Videos verlassen nie deinen Computer"
+    },
+    "thumbnail": {
+      "title": "Kostenloser YouTube-Thumbnail-Generator — LocalCutVideo",
+      "description": "Erstelle ein Thumbnail für YouTube, Shorts oder Instagram aus deinem Video: beste Momente vorgeschlagen, großer Titel mit farbigen Wörtern, JPG oder PNG. Kostenlos, im Browser, ohne Upload"
+    },
+    "changelog": {
+      "title": "Änderungen — LocalCutVideo",
+      "description": "Die Neuerungen von LocalCutVideo, Version für Version"
+    },
+    "legal": {
+      "title": "Impressum — LocalCutVideo",
+      "description": "Anbieter und Hosting von LocalCutVideo"
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung — LocalCutVideo",
+      "description": "LocalCutVideo lädt nichts hoch: Deine Videos, Transkripte und Projekte bleiben auf deinem Gerät"
+    },
+    "terms": {
+      "title": "Nutzungsbedingungen — LocalCutVideo",
+      "description": "Nutzungsbedingungen von LocalCutVideo, einem kostenlosen Open-Source-Videoeditor"
+    },
+    "app": {
+      "title": "Projekte — LocalCutVideo",
+      "description": "Deine Videoprojekte, in deinem Browser gespeichert"
+    },
+    "editor": {
+      "title": "Editor — LocalCutVideo",
+      "description": "LocalCutVideo-Editor"
+    }
   }
 }

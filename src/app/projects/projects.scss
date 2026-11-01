@@ -139,7 +139,7 @@
   &:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow);
-    .delete {
+    .card-actions {
       opacity: 1;
     }
   }
@@ -186,13 +186,33 @@
   }
 }
 
-.delete {
+/* Shown on hover (always on touch screens): save as a file, delete. */
+.card-actions {
   position: absolute;
   top: 8px;
   right: 8px;
+  display: flex;
+  gap: 4px;
   opacity: 0;
-  background: var(--bg-elev) !important;
+  transition: opacity 0.15s;
+  .btn {
+    background: var(--bg-elev) !important;
+  }
+}
+
+.delete {
   color: var(--danger);
+}
+
+.import {
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+@media (hover: none) {
+  .card-actions {
+    opacity: 1;
+  }
 }
 
 .empty {

@@ -29,10 +29,14 @@ import {
 } from 'mediabunny';
 import { duckingEnvelope, envelopeAt } from '../engine/audio-analysis';
 import { TimeStretcher } from '../engine/time-stretch';
-import { drawCaptions, drawFrame, framingAt, loadCaptionFont, outputSize, zoomBeats } from '../engine/render';
-import { type Segment, buildCaptionPages, outputToSource, projectSegments, totalDuration } from '../engine/timeline-math';
+import { drawBlurredBackground, drawCaptions, drawFrame, framingAt, loadCaptionFont, outputSize, zoomBeats } from '../engine/render';
+import { PersonMask } from './person-mask';
+import { TRANSITION_HALF } from '../engine/model';
+import { drawTexts } from '../engine/thumbnail';
+import { type Segment, buildCaptionPages, outputToSource, projectSegments, totalDuration, transitionShade } from '../engine/timeline-math';
+import { Denoiser, loadRnnoise } from './denoise';
 import { decodableAudioTrack } from './tracks';
-import type { ExportClip, ExportProgress, ExportRequest, ExportResult, ExportWorkerApi } from './worker-types';
+import type { ExportClip, ExportProgress, ExportRequest, ExportResult, ExportWorkerApi, SoundPreview } from './worker-types';
 
 const OUT_RATE = 48000;
 const BLOCK = 4800;
@@ -112,7 +116,7 @@ async function decodeMusic(file: File, maxFrames: number): Promise<[Float32Array
 
 /**
  * Accumulates output audio in 100 ms blocks, mixes the music in, limits the peaks (so a raised
- * volume never clips) and hands blocks to the encoder.
+ * volume never clips) and hands blocks to the encoder, or keeps them (sound preview).
  */
 class AudioWriter {
   private left = new Float32Array(BLOCK);
@@ -120,9 +124,10 @@ class AudioWriter {
   private filled = 0;
   private written = 0;
   private limiter = 1;
+  readonly kept: [Float32Array[], Float32Array[]] = [[], []];
 
   constructor(
-    private readonly source: AudioSampleSource,
+    private readonly source: AudioSampleSource | null,
     private readonly totalFrames: number,
     private readonly music: [Float32Array, Float32Array] | null,
     private readonly envelope: Float32Array | null,
@@ -162,15 +167,20 @@ class AudioWriter {
       data[j] = l * this.limiter;
       data[n + j] = r * this.limiter;
     }
-    const sample = new AudioSample({
-      data,
-      format: 'f32-planar',
-      numberOfChannels: 2,
-      sampleRate: OUT_RATE,
-      timestamp: this.written / OUT_RATE,
-    });
-    await this.source.add(sample);
-    sample.close();
+    if (this.source) {
+      const sample = new AudioSample({
+        data,
+        format: 'f32-planar',
+        numberOfChannels: 2,
+        sampleRate: OUT_RATE,
+        timestamp: this.written / OUT_RATE,
+      });
+      await this.source.add(sample);
+      sample.close();
+    } else {
+      this.kept[0].push(data.slice(0, n));
+      this.kept[1].push(data.slice(n));
+    }
     this.written += n;
     this.filled = 0;
   }
@@ -218,8 +228,18 @@ function audioPieces(segments: Segment[], clips: ExportClip[]): AudioPiece[] {
   return pieces;
 }
 
-async function renderAudio(clips: OpenClip[], gains: number[], pieces: AudioPiece[], writer: AudioWriter): Promise<void> {
+/** Volume of the clips' sound at an output time: lowered with the picture at transitions. */
+type Fade = (outT: number) => number;
+
+async function renderAudio(
+  clips: OpenClip[],
+  settings: ExportClip[],
+  pieces: AudioPiece[],
+  writer: AudioWriter,
+  fade: Fade,
+): Promise<void> {
   const sinks = clips.map((c) => (c.audio ? new AudioSampleSink(c.audio) : null));
+  const rnnoise = settings.some((c) => c.denoise) ? await loadRnnoise() : null;
   for (const piece of pieces) {
     // Frame counts come from the absolute output position, so rounding never drifts.
     const pieceFrames = Math.round(piece.outEnd * OUT_RATE) - Math.round(piece.outStart * OUT_RATE);
@@ -231,15 +251,18 @@ async function renderAudio(clips: OpenClip[], gains: number[], pieces: AudioPiec
       const resamplers = [new LinearResampler(rate / OUT_RATE), new LinearResampler(rate / OUT_RATE)];
       // Faster or slower parts are time-stretched, keeping the pitch of the voices.
       const stretcher = piece.rate !== 1 ? new TimeStretcher(piece.rate) : null;
+      // The voice is cleaned before any time stretch, on the original sound.
+      const denoiser = rnnoise && settings[piece.clip].denoise ? new Denoiser(rnnoise) : null;
       const startF = Math.round(piece.start * rate);
       const endF = Math.round(piece.end * rate);
-      const gain = gains[piece.clip];
+      const gain = settings[piece.clip].gain;
+      const firstFrame = Math.round(piece.outStart * OUT_RATE);
       const emit = async (l: Float32Array, r: Float32Array) => {
         const take = Math.min(l.length, pieceFrames - produced);
         // Tiny fades at every cut and clip boundary remove the clicks of jump cuts.
         for (let i = 0; i < take; i++) {
           const pos = produced + i;
-          const g = Math.min(1, pos / FADE, (pieceFrames - 1 - pos) / FADE) * gain;
+          const g = Math.min(1, pos / FADE, (pieceFrames - 1 - pos) / FADE) * gain * fade((firstFrame + pos) / OUT_RATE);
           l[i] *= g;
           r[i] *= g;
         }
@@ -256,17 +279,19 @@ async function renderAudio(clips: OpenClip[], gains: number[], pieces: AudioPiec
         const b = Math.min(first + sample.numberOfFrames, endF);
         if (b > a) {
           const [rawL, rawR] = readStereo(sample, a - first, b - a);
-          const l = resamplers[0].process(rawL).slice();
-          const r = resamplers[1].process(rawR).slice();
-          if (stretcher) {
-            const [sl, sr] = stretcher.push([l, r]);
-            await emit(sl, sr);
-          } else {
-            await emit(l, r);
-          }
+          let chunk: Float32Array[] = [resamplers[0].process(rawL).slice(), resamplers[1].process(rawR).slice()];
+          if (denoiser) chunk = denoiser.push(chunk);
+          if (stretcher) chunk = stretcher.push(chunk);
+          await emit(chunk[0], chunk[1]);
         }
         sample.close();
       }
+      if (denoiser && produced < pieceFrames && !cancelled) {
+        let rest = denoiser.flush();
+        if (stretcher) rest = stretcher.push(rest);
+        await emit(rest[0], rest[1]);
+      }
+      denoiser?.destroy();
       if (stretcher && produced < pieceFrames && !cancelled) {
         const [sl, sr] = stretcher.flush();
         await emit(sl, sr);
@@ -349,6 +374,8 @@ const api: ExportWorkerApi = {
     try {
       await output.start();
       const pages = buildCaptionPages(project.words, segments, project.captions.maxWords);
+      const half = TRANSITION_HALF[project.transition ?? 'none'];
+      const shadeAt = (outT: number) => transitionShade(req.transitionPoints, outT, half);
       const beats = zoomBeats(project, segments);
       const frames = Math.max(1, Math.round(outDuration * fps));
       const times = Array.from({ length: frames }, (_, k) => outputToSource(segments, k / fps));
@@ -357,6 +384,13 @@ const api: ExportWorkerApi = {
         while (i < req.clips.length - 1 && t >= req.clips[i].start + req.clips[i].duration) i++;
         return i;
       };
+
+      // Background blur: the person mask runs on every frame, on the cropped frame.
+      const blur = project.background?.mode === 'blur';
+      const personMask = blur ? await PersonMask.create(self.location.origin, true) : null;
+      const sharp = new OffscreenCanvas(width, height);
+      const sharpCtx = sharp.getContext('2d')!;
+      const work = new OffscreenCanvas(width, height);
 
       const renderVideo = async () => {
         ctx.fillStyle = '#000';
@@ -374,9 +408,23 @@ const api: ExportWorkerApi = {
             if (cancelled) break;
             const srcT = times[k];
             if (wrapped) {
-              drawFrame(ctx, wrapped.canvas, wrapped.canvas.width, wrapped.canvas.height, width, height, framingAt(project, beats, srcT), project.rotation);
+              const framing = framingAt(project, beats, srcT);
+              if (personMask) {
+                drawFrame(sharpCtx, wrapped.canvas, wrapped.canvas.width, wrapped.canvas.height, width, height, framing, project.rotation);
+                const mask = personMask.mask(sharp);
+                if (mask) drawBlurredBackground(ctx, sharp, mask, width, height, project.background.strength, work);
+                else ctx.drawImage(sharp, 0, 0);
+              } else {
+                drawFrame(ctx, wrapped.canvas, wrapped.canvas.width, wrapped.canvas.height, width, height, framing, project.rotation);
+              }
             }
             drawCaptions(ctx, pages, srcT, project.captions, width, height);
+            drawTexts(ctx, project.texts ?? [], srcT, width, height);
+            const shade = shadeAt(k / fps);
+            if (shade > 0) {
+              ctx.fillStyle = `rgba(0, 0, 0, ${shade})`;
+              ctx.fillRect(0, 0, width, height);
+            }
             await videoSource.add(k / fps, 1 / fps);
             k++;
             if (k % 10 === 0 || k === frames) onProgress({ progress: k / frames, frame: k, frames });
@@ -395,11 +443,12 @@ const api: ExportWorkerApi = {
             : new Float32Array(Math.ceil(outDuration * 100) + 1).fill(project.music.volume);
         }
         const writer = new AudioWriter(audioSource, Math.round(outDuration * OUT_RATE), music, envelope);
-        tasks.push(renderAudio(clips, req.clips.map((c) => c.gain), audioPieces(segments, req.clips), writer));
+        tasks.push(renderAudio(clips, req.clips, audioPieces(segments, req.clips), writer, (t) => 1 - shadeAt(t)));
       }
       await Promise.all(tasks);
       if (cancelled) throw new Error('CANCELLED');
 
+      personMask?.close();
       videoSource.close();
       audioSource?.close();
       await output.finalize();
@@ -419,6 +468,46 @@ const api: ExportWorkerApi = {
       duration: outDuration,
     };
     return result.buffer ? Comlink.transfer(result, [result.buffer]) : result;
+  },
+
+  /**
+   * `seconds` of the exported sound from output time `from` (clips only, no music): volume,
+   * leveling, noise reduction, speed changes and transitions, exactly as the export renders them.
+   */
+  async previewSound(req: ExportRequest, from: number, seconds: number): Promise<SoundPreview> {
+    cancelled = false;
+    const { project } = req;
+    const segments = projectSegments(project);
+    const to = from + seconds;
+    const pieces = audioPieces(segments, req.clips).flatMap((p) => {
+      const a = Math.max(p.outStart, from);
+      const b = Math.min(p.outEnd, to);
+      if (b - a < 0.01) return [];
+      return [{ ...p, start: p.start + (a - p.outStart) * p.rate, end: p.start + (b - p.outStart) * p.rate, outStart: a - from, outEnd: b - from }];
+    });
+    const clips: OpenClip[] = [];
+    for (const clip of req.clips) {
+      const input = new Input({ formats: ALL_FORMATS, source: new BlobSource(clip.file) });
+      clips.push({ input, video: null, audio: clip.hasAudio ? await decodableAudioTrack(input) : null });
+    }
+    try {
+      const half = TRANSITION_HALF[project.transition ?? 'none'];
+      const writer = new AudioWriter(null, Math.round(seconds * OUT_RATE), null, null);
+      await renderAudio(clips, req.clips, pieces, writer, (t) => 1 - transitionShade(req.transitionPoints, t + from, half));
+      const join = (parts: Float32Array[]) => {
+        const out = new Float32Array(parts.reduce((n, p) => n + p.length, 0));
+        let offset = 0;
+        for (const p of parts) {
+          out.set(p, offset);
+          offset += p.length;
+        }
+        return out;
+      };
+      const result: SoundPreview = { left: join(writer.kept[0]), right: join(writer.kept[1]), sampleRate: OUT_RATE };
+      return Comlink.transfer(result, [result.left.buffer, result.right.buffer]);
+    } finally {
+      clips.forEach((c) => c.input.dispose());
+    }
   },
 
   cancel(): void {

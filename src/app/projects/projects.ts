@@ -1,9 +1,11 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, effect, inject, input, signal, untracked } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
 import { liveQuery } from 'dexie';
 import { db, deleteProject } from '../core/db';
+import { fetchDemoVideo } from '../core/demo';
 import { VIDEO_ACCEPT, fromDataTransfer, isVideoFile, pickFiles, supportsFileSystemAccess, type PickedFile } from '../core/file-access';
+import { PROJECT_FILE_ACCEPT, isProjectFile, openProjectFile, saveProjectFile } from '../core/project-file';
 import { ProjectsService, skippedNotice } from '../core/projects.service';
 import { type Project, migrateProject } from '../engine/model';
 import { sequenceDuration } from '../engine/sequence';
@@ -37,6 +39,9 @@ export class Projects {
   protected readonly lastProjectId = this.projectsService.lastProject();
   protected readonly formatTime = formatTime;
   protected readonly sequenceDuration = sequenceDuration;
+  protected readonly projectAccept = PROJECT_FILE_ACCEPT;
+  /** `/app?demo=1`: opens the sample video right away (landing page "try the demo"). */
+  readonly demo = input<string>();
 
   private urls: string[] = [];
 
@@ -59,6 +64,10 @@ export class Projects {
     inject(DestroyRef).onDestroy(() => {
       sub.unsubscribe();
       this.urls.forEach((u) => URL.revokeObjectURL(u));
+    });
+
+    effect(() => {
+      if (this.demo()) untracked(() => void this.openDemo());
     });
 
     // Installed PWA: "Open with LocalCutVideo" from the OS file manager lands here.
@@ -86,7 +95,9 @@ export class Projects {
       .filter((i) => i.kind === 'file')
       .map((i) => fromDataTransfer(i));
     const picked = (await Promise.all(pending)).filter((p): p is PickedFile => !!p);
-    if (picked.length) await this.create(picked);
+    const projectFile = picked.find((p) => isProjectFile(p.file));
+    if (projectFile) await this.importProject(projectFile.file);
+    else if (picked.length) await this.create(picked);
   }
 
   /** Fallback input, also used by automated tests. */
@@ -114,6 +125,43 @@ export class Projects {
       );
     } finally {
       this.busy.set(false);
+    }
+  }
+
+  protected async openDemo(): Promise<void> {
+    this.busy.set(true);
+    try {
+      const file = await fetchDemoVideo();
+      const { id } = await this.projectsService.createFromFiles([{ file, handle: null }]);
+      await this.router.navigate(['/app', id], { replaceUrl: true });
+    } catch {
+      this.errorKey.set('errors.demo');
+      this.busy.set(false);
+    }
+  }
+
+  protected saveFile(project: Project, e: Event): void {
+    e.preventDefault();
+    e.stopPropagation();
+    saveProjectFile(project);
+  }
+
+  protected async onProjectInput(e: Event): Promise<void> {
+    const input = e.target as HTMLInputElement;
+    const file = input.files?.[0];
+    input.value = '';
+    if (file) await this.importProject(file);
+  }
+
+  /** A project file opens as a new project; its videos are reconnected in the editor. */
+  private async importProject(file: File): Promise<void> {
+    this.errorKey.set(null);
+    try {
+      const id = await openProjectFile(file);
+      this.projectsService.setFlash({ key: 'projects.imported', params: {}, tone: 'info', onlyToReconnect: true });
+      await this.router.navigate(['/app', id]);
+    } catch {
+      this.errorKey.set('errors.notProject');
     }
   }
 

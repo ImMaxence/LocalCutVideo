@@ -20,6 +20,15 @@ export function skippedNotice(skipped: SkippedFile[]): { key: string; params: Re
   };
 }
 
+/** Message shown by the editor once it has opened the project. */
+export interface FlashMessage {
+  key: string;
+  params: Record<string, unknown>;
+  tone?: 'info' | 'error';
+  /** Only shown when videos have to be reconnected by hand. */
+  onlyToReconnect?: boolean;
+}
+
 @Injectable({ providedIn: 'root' })
 export class ProjectsService {
   private readonly workers = inject(WorkersService);
@@ -67,13 +76,13 @@ export class ProjectsService {
   }
 
   /** A message to show once the editor opens (e.g. files skipped during the import). */
-  private flash: { key: string; params: Record<string, unknown> } | null = null;
+  private flash: FlashMessage | null = null;
 
-  setFlash(message: { key: string; params: Record<string, unknown> } | null): void {
+  setFlash(message: FlashMessage | null): void {
     this.flash = message;
   }
 
-  takeFlash(): { key: string; params: Record<string, unknown> } | null {
+  takeFlash(): FlashMessage | null {
     const message = this.flash;
     this.flash = null;
     return message;

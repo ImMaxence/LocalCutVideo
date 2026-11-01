@@ -1,0 +1,10 @@
+/* Playwright tests run in Node. */
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "module": "preserve",
+    "types": ["node"],
+    "noEmit": true
+  },
+  "include": ["./**/*.ts", "../playwright.config.ts"]
+}

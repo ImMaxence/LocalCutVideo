@@ -3,7 +3,7 @@
     <a class="btn ghost icon" routerLink="/app" [attr.aria-label]="'editor.back' | transloco" [title]="'editor.back' | transloco">
       <app-icon name="arrow-left" />
     </a>
-    <a routerLink="/" class="logo" aria-label="LocalCutVideo"><app-logo [size]="26" /></a>
+    <a [routerLink]="'/' | localize" class="logo" aria-label="LocalCutVideo"><app-logo [size]="26" /></a>
     @if (store.project(); as p) {
       <input class="name" [value]="p.name" (change)="rename($event)" [attr.aria-label]="'editor.name' | transloco" spellcheck="false" />
       <span class="save" [class]="store.saveState()">
@@ -239,6 +239,9 @@
               {{ (savePicker ? 'editor.export.streamHint' : 'editor.export.downloadHint') | transloco }}
             </p>
             <div class="actions">
+              <button class="btn ghost save-project" type="button" (click)="saveProject()" [title]="'editor.export.saveProjectHint' | transloco">
+                <app-icon name="file" [size]="15" /> {{ 'editor.export.saveProject' | transloco }}
+              </button>
               <button class="btn" type="button" (click)="closeExport()">{{ 'common.cancel' | transloco }}</button>
               <button class="btn primary" type="button" (click)="store.exportVideo()">
                 <app-icon name="download" [size]="16" /> {{ 'editor.export.start' | transloco }}

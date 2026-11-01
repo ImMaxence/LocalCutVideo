@@ -2,6 +2,23 @@
 
 All notable changes to LocalCutVideo. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning: [SemVer](https://semver.org/).
 
+## [0.13.0] - 2026-11-01
+
+### Added
+- Public pages prerendered in every language, with one URL per language (/fr, /es, /it, /de)
+- Page titles, descriptions, canonical URLs, language alternates, schema.org data, sitemap.xml, robots.txt, llms.txt
+- "Try with a demo video" on the landing page
+- Transitions at cuts: quick fade or fade to black
+- Texts over the video (titles, notes) with the thumbnail title styles
+- Background blur behind the person (MediaPipe selfie segmentation)
+- Voice noise reduction (RNNoise) at export, with "listen to 8 s of the result"
+- Save a project as a .lcv.json file and open it on another computer
+- Unit tests (Vitest) of the engine and end-to-end tests (Playwright) of the key flows
+
+### Changed
+- A reconnected video with the same name and size is accepted without confirmation
+- Visitors are sent to the pages in their language
+
 ## [0.12.1] - 2026-11-01
 
 ### Added

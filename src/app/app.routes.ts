@@ -1,26 +1,30 @@
 import type { Routes } from '@angular/router';
+import { languageResolver, languageSegment } from './core/i18n';
 
 const legal = () => import('./legal/legal').then((m) => m.Legal);
 const thumbnail = () => import('./thumbnail/thumbnail').then((m) => m.Thumbnail);
 
+/** Public pages, prerendered once per language. `seo` names their title and description texts. */
+const publicPages: Routes = [
+  { path: '', loadComponent: () => import('./landing/landing').then((m) => m.Landing), data: { seo: 'home' } },
+  { path: 'thumbnail', loadComponent: thumbnail, data: { seo: 'thumbnail' } },
+  { path: 'changelog', loadComponent: () => import('./changelog/changelog').then((m) => m.Changelog), data: { seo: 'changelog' } },
+  { path: 'legal', loadComponent: legal, data: { doc: 'notice', seo: 'legal' } },
+  { path: 'privacy', loadComponent: legal, data: { doc: 'privacy', seo: 'privacy' } },
+  { path: 'terms', loadComponent: legal, data: { doc: 'terms', seo: 'terms' } },
+];
+
 export const routes: Routes = [
-  {
-    path: '',
-    title: 'LocalCutVideo — Edit videos in your browser, nothing is uploaded',
-    loadComponent: () => import('./landing/landing').then((m) => m.Landing),
-  },
-  { path: 'changelog', title: 'Changelog — LocalCutVideo', loadComponent: () => import('./changelog/changelog').then((m) => m.Changelog) },
-  { path: 'legal', title: 'Legal notice — LocalCutVideo', loadComponent: legal, data: { doc: 'notice' } },
-  { path: 'privacy', title: 'Privacy policy — LocalCutVideo', loadComponent: legal, data: { doc: 'privacy' } },
-  { path: 'terms', title: 'Terms of use — LocalCutVideo', loadComponent: legal, data: { doc: 'terms' } },
-  { path: 'thumbnail', title: 'Thumbnail maker — LocalCutVideo', loadComponent: thumbnail },
-  { path: 'thumbnail/:id', title: 'Thumbnail maker — LocalCutVideo', loadComponent: thumbnail },
-  { path: 'app', title: 'Projects — LocalCutVideo', loadComponent: () => import('./projects/projects').then((m) => m.Projects) },
+  // The app: one URL, in the language chosen by the user, never indexed.
+  { path: 'app', loadComponent: () => import('./projects/projects').then((m) => m.Projects), data: { seo: 'app', noindex: true } },
   {
     path: 'app/:id',
-    title: 'Editor — LocalCutVideo',
     loadComponent: () => import('./editor/editor').then((m) => m.Editor),
-    data: { fullscreen: true },
+    data: { fullscreen: true, seo: 'editor', noindex: true },
   },
+  { path: 'thumbnail/:id', loadComponent: thumbnail, data: { seo: 'thumbnail', noindex: true } },
+  // Public pages: /fr/…, /es/…, /it/…, /de/…, and English at the root.
+  { path: ':lang', canMatch: [languageSegment], resolve: { language: languageResolver }, children: publicPages },
+  { path: '', resolve: { language: languageResolver }, children: publicPages },
   { path: '**', redirectTo: '' },
 ];

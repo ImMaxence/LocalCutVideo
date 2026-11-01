@@ -126,6 +126,40 @@ export function drawFrame(
   ctx.setTransform(1, 0, 0, 1, 0, 0);
 }
 
+/**
+ * Blurs the background behind the person: the frame is drawn blurred, then the sharp frame on
+ * top through the person mask (its alpha), whose upscaling softens the edges. `work` is a
+ * scratch canvas of any size.
+ */
+export function drawBlurredBackground(
+  ctx: Ctx2D,
+  frame: CanvasImageSource,
+  mask: CanvasImageSource,
+  outW: number,
+  outH: number,
+  strength: number,
+  work: OffscreenCanvas,
+): void {
+  const radius = Math.max(2, Math.round(Math.min(outW, outH) * 0.035 * strength));
+  ctx.save();
+  ctx.filter = `blur(${radius}px)`;
+  // Drawn a little larger, so the blur does not darken the borders.
+  ctx.drawImage(frame, -radius, -radius, outW + radius * 2, outH + radius * 2);
+  ctx.restore();
+  if (work.width !== outW || work.height !== outH) {
+    work.width = outW;
+    work.height = outH;
+  }
+  const w = work.getContext('2d')!;
+  w.globalCompositeOperation = 'copy';
+  w.drawImage(frame, 0, 0, outW, outH);
+  w.globalCompositeOperation = 'destination-in';
+  w.imageSmoothingQuality = 'high';
+  w.drawImage(mask, 0, 0, outW, outH);
+  w.globalCompositeOperation = 'source-over';
+  ctx.drawImage(work, 0, 0);
+}
+
 interface LaidOutWord {
   word: Word;
   text: string;

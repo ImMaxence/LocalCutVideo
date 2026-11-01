@@ -45,3 +45,7 @@ Thumbs.db
 
 # Local test footage (never committed)
 /local-video-test/
+
+# Playwright
+/test-results/
+/playwright-report/

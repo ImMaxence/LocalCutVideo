@@ -8,14 +8,18 @@ import {
   effect,
   inject,
   signal,
+  untracked,
   viewChild,
   viewChildren,
 } from '@angular/core';
 import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
 import { envelopeAt } from '../../engine/audio-analysis';
-import { type Ctx2D, drawCaptions, drawFrame, framingAt, loadCaptionFont, outputSize } from '../../engine/render';
+import { type Ctx2D, drawBlurredBackground, drawCaptions, drawFrame, framingAt, loadCaptionFont, outputSize } from '../../engine/render';
+import { PersonMask } from '../../workers/person-mask';
 import { clipIndexAt } from '../../engine/sequence';
-import { formatTime, nextKeptTime, segmentIndexAt, sourceToOutput } from '../../engine/timeline-math';
+import { TRANSITION_HALF } from '../../engine/model';
+import { drawTexts } from '../../engine/thumbnail';
+import { formatTime, nextKeptTime, segmentIndexAt, sourceToOutput, transitionShade } from '../../engine/timeline-math';
 import { Icon } from '../../shared/icon';
 import { EditorStore, type PlayerApi } from '../editor.store';
 
@@ -64,6 +68,11 @@ export class Preview implements PlayerApi {
   private lastSync = 0;
   private lastFrameTime = -1;
   private audio: { ctx: AudioContext; out: AudioNode; gains: WeakMap<HTMLVideoElement, GainNode> } | null = null;
+  /** Background blur: person mask (loaded on first use) and scratch canvases. */
+  private personMask: PersonMask | null = null;
+  private loadingMask = false;
+  private readonly sharp = new OffscreenCanvas(1, 1);
+  private readonly work = new OffscreenCanvas(1, 1);
 
   constructor() {
     // One object URL per clip file, revoked when the clip goes away.
@@ -83,6 +92,9 @@ export class Preview implements PlayerApi {
     effect((onCleanup) => {
       const url = this.musicUrl();
       onCleanup(() => url && URL.revokeObjectURL(url));
+    });
+    effect(() => {
+      if (this.store.project()?.background?.mode === 'blur') untracked(() => void this.loadPersonMask());
     });
     // Redraw whenever the edit changes while paused.
     effect(() => {
@@ -105,6 +117,7 @@ export class Preview implements PlayerApi {
     inject(DestroyRef).onDestroy(() => {
       cancelAnimationFrame(this.raf);
       void this.audio?.ctx.close();
+      this.personMask?.close();
       this.store.registerPlayer(null);
       this.urls.forEach((entry) => URL.revokeObjectURL(entry.url));
     });
@@ -238,12 +251,18 @@ export class Preview implements PlayerApi {
     }
   }
 
-  /** Applies the volume of the playing clip (overall volume × leveling). */
+  private shadeAt(t: number): number {
+    const p = this.store.project();
+    if (!p || p.transition === 'none') return 0;
+    return transitionShade(this.store.transitionPoints(), sourceToOutput(this.store.segments(), t), TRANSITION_HALF[p.transition]);
+  }
+
+  /** Applies the volume of the playing clip (overall volume × leveling, lowered at transitions). */
   private syncVolume(): void {
     const video = this.element(this.active);
     const clip = this.store.clips()[this.active];
     if (!video || !clip) return;
-    const gain = this.store.clipGains().get(clip.id) ?? 1;
+    const gain = (this.store.clipGains().get(clip.id) ?? 1) * (1 - this.shadeAt(this.sequenceTime()));
     const node = this.route(video);
     if (!node) video.volume = Math.min(1, gain);
     else if (node.gain.value !== gain) node.gain.value = gain;
@@ -278,9 +297,29 @@ export class Preview implements PlayerApi {
     const segments = this.store.segments();
     const video = this.element(this.active);
     if (video && video.readyState >= 2 && video.videoWidth) {
-      drawFrame(ctx, video, video.videoWidth, video.videoHeight, width, height, framingAt(p, this.store.zoomBeats(), t), p.rotation);
+      const framing = framingAt(p, this.store.zoomBeats(), t);
+      if (p.background?.mode === 'blur' && this.personMask) {
+        if (this.sharp.width !== width || this.sharp.height !== height) {
+          this.sharp.width = width;
+          this.sharp.height = height;
+        }
+        drawFrame(this.sharp.getContext('2d')!, video, video.videoWidth, video.videoHeight, width, height, framing, p.rotation);
+        const mask = this.personMask.mask(this.sharp);
+        if (mask) drawBlurredBackground(ctx, this.sharp, mask, width, height, p.background.strength, this.work);
+        else ctx.drawImage(this.sharp, 0, 0);
+      } else {
+        drawFrame(ctx, video, video.videoWidth, video.videoHeight, width, height, framing, p.rotation);
+      }
     }
     drawCaptions(ctx, this.store.captionPages(), t, p.captions, width, height);
+    // Paused, a text is shown fully even on its first frame, to edit it.
+    drawTexts(ctx, p.texts ?? [], t, width, height, this.isPlaying);
+    // Transitions show while playing; paused, the frame stays visible for editing.
+    const shade = this.isPlaying ? this.shadeAt(t) : 0;
+    if (shade > 0) {
+      ctx.fillStyle = `rgba(0, 0, 0, ${shade})`;
+      ctx.fillRect(0, 0, width, height);
+    }
 
     // Paused inside a cut: show it, so scrubbing the timeline stays understandable.
     if (!this.isPlaying && segments.length && segmentIndexAt(segments, t) === -1) {
@@ -297,6 +336,19 @@ export class Preview implements PlayerApi {
       ctx.fill();
       ctx.fillStyle = '#fff';
       ctx.fillText(label, size + pad, size * 2.3);
+    }
+  }
+
+  private async loadPersonMask(): Promise<void> {
+    if (this.personMask || this.loadingMask) return;
+    this.loadingMask = true;
+    try {
+      this.personMask = await PersonMask.create(location.origin, false);
+      this.dirty = true;
+    } catch {
+      this.store.notify('editor.background.error', undefined, 'error');
+    } finally {
+      this.loadingMask = false;
     }
   }
 

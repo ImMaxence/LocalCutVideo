@@ -2,12 +2,15 @@ import { ChangeDetectionStrategy, Component, computed, inject, input, model, out
 import { toSignal } from '@angular/core/rxjs-interop';
 import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
 import { SILENCE_PRESETS } from '../../engine/audio-analysis';
+import type { ThumbStyle } from '../../engine/thumbnail';
 import {
   type AspectFormat,
   type CaptionPosition,
   type CaptionStyle,
   type Project,
   type SilenceSettings,
+  type TextOverlay,
+  type TransitionStyle,
   type WhisperModel,
   clipHasVoice,
   defaultCaptionWords,
@@ -18,13 +21,14 @@ import { Icon } from '../../shared/icon';
 import { Select, type SelectOption } from '../../shared/select';
 import { EditorStore } from '../editor.store';
 
-export type InspectorTab = 'clips' | 'format' | 'cuts' | 'captions' | 'framing' | 'audio';
+export type InspectorTab = 'clips' | 'format' | 'cuts' | 'captions' | 'texts' | 'framing' | 'audio';
 
 export const INSPECTOR_TABS: { id: InspectorTab; icon: string }[] = [
   { id: 'clips', icon: 'layers' },
   { id: 'format', icon: 'crop' },
   { id: 'cuts', icon: 'scissors' },
   { id: 'captions', icon: 'captions' },
+  { id: 'texts', icon: 'type' },
   { id: 'framing', icon: 'face' },
   { id: 'audio', icon: 'volume' },
 ];
@@ -62,11 +66,30 @@ export class Inspector {
   protected readonly presets = SILENCE_PRESETS;
   protected readonly styles: CaptionStyle[] = ['karaoke', 'clean', 'boxed'];
   protected readonly positions: CaptionPosition[] = ['top', 'center', 'bottom'];
+  protected readonly transitions: TransitionStyle[] = ['none', 'dip', 'black'];
   protected readonly swatches = ['#ffd60a', '#39ff88', '#4dd8ff', '#ff4d8d', '#ffffff'];
   protected readonly formatTime = formatTime;
 
   protected readonly p = computed(() => this.store.project()!);
   protected readonly removedSeconds = computed(() => this.store.duration() - this.store.outputDuration());
+  protected readonly textStyles: ThumbStyle[] = ['outline', 'shadow', 'box', 'highlight'];
+  protected readonly textColors = ['#ffffff', '#ffd60a', '#111111'];
+  protected readonly textAccents = ['#ffd60a', '#ff4d8d', '#39ff88', '#4dd8ff', '#ff7a1a'];
+  protected readonly selectedText = computed(() => {
+    const id = this.store.selectedText();
+    return (id && this.p().texts?.find((t) => t.id === id)) || null;
+  });
+
+  protected selectText(text: TextOverlay): void {
+    this.store.selectedText.set(text.id);
+    this.store.seek(text.start + 0.01);
+  }
+
+  protected excerpt(text: string): string {
+    const plain = text.replace(/\*/g, '').replace(/\s+/g, ' ').trim();
+    return plain.length > 40 ? `${plain.slice(0, 38)}…` : plain;
+  }
+
   /** Clips where nobody speaks: only real dead air is cut there. */
   protected readonly silentClips = computed(() => this.p().clips.filter((c) => !clipHasVoice(c)).length);
   private lastVolume = 1;

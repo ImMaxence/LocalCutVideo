@@ -212,7 +212,7 @@ export class LangPicker {
   }
 
   protected choose(code: LangCode): void {
-    this.language.set(code);
+    this.language.choose(code);
     this.close(this.variant() === 'menu');
   }
 

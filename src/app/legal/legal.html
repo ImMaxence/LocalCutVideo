@@ -1,7 +1,7 @@
 <div class="container page">
   <nav class="tabs" aria-label="Legal">
     @for (d of docs; track d.id) {
-      <a [routerLink]="d.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a [routerLink]="d.path | localize" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
         <app-icon [name]="d.icon" [size]="16" />
         {{ 'legal.nav.' + d.id | transloco }}
       </a>
@@ -23,7 +23,7 @@
               @for (seg of linkify(paragraph); track $index) {
                 @if (seg.href) {
                   @if (seg.internal) {
-                    <a [routerLink]="seg.href">{{ seg.text }}</a>
+                    <a [routerLink]="seg.href | localize">{{ seg.text }}</a>
                   } @else {
                     <a [href]="seg.href" target="_blank" rel="noopener">{{ seg.text }}</a>
                   }

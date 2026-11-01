@@ -1,6 +1,6 @@
 {
   "name": "localcutvideo",
-  "version": "0.12.1",
+  "version": "0.13.0",
   "description": "Privacy-first video editor running 100% in the browser: auto-cut, Whisper subtitles, auto-framing, MP4 export.",
   "license": "MIT",
   "author": "Maxence Bonnici",
@@ -14,7 +14,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "typecheck": "tsc -p tsconfig.app.json --noEmit && tsc -p tsconfig.worker.json --noEmit"
+    "typecheck": "tsc -p tsconfig.app.json --noEmit && tsc -p tsconfig.worker.json --noEmit && tsc -p tsconfig.spec.json --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "sitemap": "node scripts/sitemap.mjs"
   },
   "private": true,
   "packageManager": "npm@11.19.1",
@@ -24,13 +27,16 @@
     "@angular/core": "^22.2.0",
     "@angular/forms": "^22.2.0",
     "@angular/platform-browser": "^22.2.0",
+    "@angular/platform-server": "^22.2.4",
     "@angular/router": "^22.2.0",
     "@angular/service-worker": "^22.2.0",
+    "@angular/ssr": "^22.2.5",
     "@fontsource-variable/inter": "^5.3.0",
     "@fontsource/montserrat": "^5.3.0",
     "@huggingface/transformers": "^4.3.2",
     "@jsverse/transloco": "^8.4.0",
     "@mediapipe/tasks-vision": "^1.2.0",
+    "@shiguredo/rnnoise-wasm": "^2025.1.5",
     "comlink": "^4.4.2",
     "dexie": "^4.4.7",
     "mediabunny": "^1.65.0",
@@ -42,7 +48,9 @@
     "@angular/build": "^22.2.5",
     "@angular/cli": "^22.2.5",
     "@angular/compiler-cli": "^22.2.0",
+    "@playwright/test": "^1.64.1",
     "prettier": "^3.8.1",
-    "typescript": "~6.0.2"
+    "typescript": "~6.0.2",
+    "vitest": "^5.0.5"
   }
 }

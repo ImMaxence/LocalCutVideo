@@ -68,10 +68,14 @@ export interface ExportClip {
   hasAudio: boolean;
   /** Volume of this clip's sound (overall volume × leveling). */
   gain: number;
+  /** Remove the background noise of the voice. */
+  denoise: boolean;
 }
 
 export interface ExportRequest {
   clips: ExportClip[];
+  /** Output times where the picture dips to black (see the project's transition style). */
+  transitionPoints: number[];
   project: Project;
   music: File | null;
   frameDb: Float32Array | null;
@@ -93,7 +97,15 @@ export interface ExportResult {
   duration: number;
 }
 
+/** A few seconds of the exported sound, to listen to it before exporting. */
+export interface SoundPreview {
+  left: Float32Array;
+  right: Float32Array;
+  sampleRate: number;
+}
+
 export interface ExportWorkerApi {
   run(req: ExportRequest, onProgress: (p: ExportProgress) => void): Promise<ExportResult>;
+  previewSound(req: ExportRequest, from: number, seconds: number): Promise<SoundPreview>;
   cancel(): void;
 }

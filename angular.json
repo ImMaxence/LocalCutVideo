@@ -44,6 +44,8 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
+            "server": "src/main.server.ts",
+            "outputMode": "static",
             "tsConfig": "tsconfig.app.json",
             "webWorkerTsConfig": "tsconfig.worker.json",
             "inlineStyleLanguage": "scss",
@@ -63,7 +65,7 @@
                 "output": "/ort"
               },
               {
-                "glob": "vision_wasm_internal.{js,wasm}",
+                "glob": "vision_wasm{,_module}_internal.{js,wasm}",
                 "input": "node_modules/@mediapipe/tasks-vision/wasm",
                 "output": "/mediapipe"
               },
@@ -71,6 +73,11 @@
                 "glob": "montserrat-{latin,latin-ext}-800-normal.woff2",
                 "input": "node_modules/@fontsource/montserrat/files",
                 "output": "/fonts"
+              },
+              {
+                "glob": "rnnoise.js",
+                "input": "node_modules/@shiguredo/rnnoise-wasm/dist",
+                "output": "/rnnoise"
               }
             ],
             "styles": ["src/styles.scss"]

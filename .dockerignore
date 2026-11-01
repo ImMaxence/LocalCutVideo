@@ -13,3 +13,5 @@ Dockerfile
 docker-compose*.yml
 .dockerignore
 local-video-test
+test-results
+playwright-report

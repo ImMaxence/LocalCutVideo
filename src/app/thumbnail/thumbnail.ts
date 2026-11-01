@@ -3,6 +3,7 @@ import {
   Component,
   DestroyRef,
   ElementRef,
+  afterNextRender,
   computed,
   effect,
   inject,
@@ -140,7 +141,7 @@ export class Thumbnail {
   private holdTimer = 0;
 
   constructor() {
-    void loadCaptionFont(document.fonts, location.origin).then(() => this.fontReady.set(true));
+    afterNextRender(() => void loadCaptionFont(document.fonts, location.origin).then(() => this.fontReady.set(true)));
 
     // Opened from a project: load it and its video at the editor's playhead.
     effect(() => {

@@ -533,7 +533,7 @@ main {
 }
 
 /* Scroll reveal (see RevealDirective). */
-.reveal {
+:root.js .reveal {
   opacity: 0;
   transform: translateY(26px);
   transition:

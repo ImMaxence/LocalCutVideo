@@ -67,6 +67,7 @@ export function remapTimeline(draft: Project, before: Clip[], after: Clip[]): vo
       .sort((a, b) => a.start - b.start);
   draft.cuts = follow(draft.cuts);
   draft.speeds = follow(draft.speeds ?? []);
+  draft.texts = follow(draft.texts ?? []);
 
   if (draft.faces) {
     const faces = draft.faces

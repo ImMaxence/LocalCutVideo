@@ -2,12 +2,14 @@ import { ChangeDetectionStrategy, Component, DestroyRef, computed, effect, injec
 import { RouterLink } from '@angular/router';
 import { TranslocoPipe } from '@jsverse/transloco';
 import { supportsSavePicker } from '../core/file-access';
+import { saveProjectFile } from '../core/project-file';
 import { SILENCE_PRESETS } from '../engine/audio-analysis';
 import type { AspectFormat, ExportSettings, Project } from '../engine/model';
 import { outputSize } from '../engine/render';
 import { formatTime } from '../engine/timeline-math';
 import { Icon } from '../shared/icon';
 import { LangPicker } from '../shared/lang-picker';
+import { LocalizePipe } from '../shared/localize';
 import { Logo } from '../shared/logo';
 import { type AutoEditOptions, type AutoStepId, EditorStore } from './editor.store';
 import { INSPECTOR_TABS, Inspector, type InspectorTab } from './inspector/inspector';
@@ -21,7 +23,7 @@ const MOBILE_QUERY = '(max-width: 760px)';
 
 @Component({
   selector: 'app-editor',
-  imports: [RouterLink, TranslocoPipe, Icon, Logo, LangPicker, Preview, Timeline, Transcript, Inspector],
+  imports: [RouterLink, TranslocoPipe, Icon, Logo, LangPicker, Preview, Timeline, Transcript, Inspector, LocalizePipe],
   providers: [EditorStore],
   templateUrl: './editor.html',
   styleUrl: './editor.scss',
@@ -151,6 +153,14 @@ export class Editor {
   protected openExport(): void {
     this.store.resetExport();
     this.exportOpen.set(true);
+  }
+
+  /** The edit as a .lcv.json file (no video inside), to continue on another computer. */
+  protected saveProject(): void {
+    const p = this.store.project();
+    if (!p) return;
+    saveProjectFile(p);
+    this.store.notify('editor.export.projectSaved');
   }
 
   protected closeExport(): void {

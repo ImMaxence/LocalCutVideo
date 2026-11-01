@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/service-worker/config/schema.json",
-  "index": "/index.html",
+  "index": "/index.csr.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
       "resources": {
-        "files": ["/favicon.ico", "/favicon.svg", "/index.html", "/manifest.webmanifest", "/theme-init.js", "/*.css", "/*.js"]
+        "files": ["/favicon.ico", "/favicon.svg", "/index.csr.html", "/manifest.webmanifest", "/theme-init.js", "/*.css", "/*.js"]
       }
     },
     {
@@ -30,7 +30,7 @@
       "installMode": "lazy",
       "updateMode": "lazy",
       "resources": {
-        "files": ["/ort/**", "/mediapipe/**"]
+        "files": ["/ort/**", "/mediapipe/**", "/rnnoise/**", "/demo/**"]
       }
     }
   ]
