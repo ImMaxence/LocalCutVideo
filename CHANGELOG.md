@@ -2,6 +2,18 @@
 
 All notable changes to LocalCutVideo. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning: [SemVer](https://semver.org/).
 
+## [0.14.0] - 2026-11-01
+
+### Added
+- Guided tour of the editor: arrows and highlights on each tool, started by the demo video, "?" button to replay it
+- Whisper models served by the site itself (downloaded at the Docker build), Hugging Face only as a backup
+
+### Changed
+- Privacy policy: the AI model comes from this site
+
+### Fixed
+- Transcription errors are logged in the browser console for diagnosis
+
 ## [0.13.0] - 2026-11-01
 
 ### Added

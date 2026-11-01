@@ -140,7 +140,7 @@
       "lead": "Votre vidéo est lue directement depuis votre disque. L'analyse audio, la transcription, le suivi de visage et l'encodage tournent dans des threads en arrière-plan (Web Workers) sur votre machine. Il n'existe tout simplement aucun serveur auquel envoyer vos images",
       "upload": "Aucun upload, jamais : le fichier ne quitte pas votre ordinateur",
       "account": "Pas de compte, pas de cookies, pas d'analytics",
-      "csp": "Une Content-Security-Policy stricte n'autorise la page à communiquer qu'avec ce site et Hugging Face, pour télécharger une seule fois le modèle d'IA",
+      "csp": "Une Content-Security-Policy stricte n'autorise la page à communiquer qu'avec ce site, qui sert aussi les modèles d'IA (Hugging Face n'est qu'un secours)",
       "storage": "Les projets sont enregistrés dans la base locale de votre navigateur (IndexedDB) et peuvent être supprimés à tout moment",
       "diagram": {
         "machine": "Votre ordinateur",
@@ -681,7 +681,7 @@
         {
           "title": "Tiers",
           "body": [
-            "Hugging Face : lors de votre première transcription, le modèle Whisper est téléchargé depuis huggingface.co. Comme pour tout téléchargement, Hugging Face reçoit votre adresse IP et les informations standard du navigateur, mais jamais votre audio. Voir leur [politique de confidentialité](https://huggingface.co/privacy).",
+            "Hugging Face : le modèle Whisper est servi par ce site, comme le reste de l'application. S'il n'y est pas disponible, il est téléchargé depuis huggingface.co à la place ; Hugging Face reçoit alors votre adresse IP et les informations standard du navigateur, mais jamais votre audio. Voir leur [politique de confidentialité](https://huggingface.co/privacy).",
             "GitHub : uniquement si vous suivez un lien vers le dépôt du code source.",
             "Aucun autre tiers n'est contacté : une Content-Security-Policy stricte empêche techniquement la page de se connecter ailleurs."
           ]
@@ -845,6 +845,49 @@
     "editor": {
       "title": "Éditeur — LocalCutVideo",
       "description": "Éditeur LocalCutVideo"
+    }
+  },
+  "tour": {
+    "label": "Visite guidée",
+    "help": "Visite guidée",
+    "count": "Étape {{ n }} sur {{ total }}",
+    "skip": "Passer la visite",
+    "prev": "Retour",
+    "next": "Suivant",
+    "done": "C'est parti !",
+    "steps": {
+      "auto": {
+        "title": "En un clic : l'auto-montage",
+        "text": "LocalCutVideo monte la vidéo pour vous : silences et hésitations retirés, sous-titres, cadrage et zoom. Vous pourrez tout modifier ensuite"
+      },
+      "preview": {
+        "title": "L'aperçu",
+        "text": "Ce que vous voyez est exactement ce qui sera exporté. Cliquez dessus, ou appuyez sur Espace, pour lire ou mettre en pause"
+      },
+      "timeline": {
+        "title": "La timeline",
+        "text": "Cliquez pour vous déplacer dans la vidéo. Glissez sur la forme d'onde pour sélectionner un passage"
+      },
+      "cut": {
+        "title": "Couper ou changer la vitesse",
+        "text": "Un passage sélectionné : Couper (X) le retire, Vitesse l'accélère ou le ralentit. Ctrl+Z annule tout"
+      },
+      "transcript": {
+        "title": "Monter par le texte",
+        "text": "Une fois transcrite, supprimer un mot coupe la vidéo. Vous pouvez aussi corriger ce que l'IA a mal compris"
+      },
+      "settings": {
+        "title": "Tous les réglages",
+        "text": "Format (16:9, 9:16, carré), coupes et transitions, sous-titres, textes, cadrage et flou, son et musique"
+      },
+      "thumbnail": {
+        "title": "La miniature",
+        "text": "Créez la miniature de votre vidéo à partir de ses meilleurs moments"
+      },
+      "export": {
+        "title": "Exporter",
+        "text": "Enregistrez la vidéo en MP4. Tout se passe sur votre appareil, rien n'est envoyé"
+      }
     }
   }
 }

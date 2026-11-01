@@ -6,6 +6,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        # Whisper models served by this server (no request to Hugging Face): tiny, base, small.
+        WHISPER_MODELS: tiny,base,small
     image: localcutvideo:latest
     restart: unless-stopped
     expose:

@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, DestroyRef, computed, effect, inject, input, signal, untracked, viewChild } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { TranslocoPipe } from '@jsverse/transloco';
 import { supportsSavePicker } from '../core/file-access';
 import { saveProjectFile } from '../core/project-file';
@@ -15,6 +15,7 @@ import { type AutoEditOptions, type AutoStepId, EditorStore } from './editor.sto
 import { INSPECTOR_TABS, Inspector, type InspectorTab } from './inspector/inspector';
 import { Preview } from './preview/preview';
 import { Timeline } from './timeline/timeline';
+import { Tour, type TourStep } from './tour/tour';
 import { Transcript } from './transcript/transcript';
 
 type MobileTab = 'transcript' | InspectorTab;
@@ -23,7 +24,7 @@ const MOBILE_QUERY = '(max-width: 760px)';
 
 @Component({
   selector: 'app-editor',
-  imports: [RouterLink, TranslocoPipe, Icon, Logo, LangPicker, Preview, Timeline, Transcript, Inspector, LocalizePipe],
+  imports: [RouterLink, TranslocoPipe, Icon, Logo, LangPicker, Preview, Timeline, Transcript, Inspector, LocalizePipe, Tour],
   providers: [EditorStore],
   templateUrl: './editor.html',
   styleUrl: './editor.scss',
@@ -32,7 +33,29 @@ const MOBILE_QUERY = '(max-width: 760px)';
 })
 export class Editor {
   readonly id = input.required<string>();
+  /** `?tour=1` (the demo): the guided tour starts once the editor is ready. */
+  readonly tour = input<string>();
   protected readonly store = inject(EditorStore);
+  private readonly router = inject(Router);
+  protected readonly tourOpen = signal(false);
+  protected readonly tourSteps: TourStep[] = [
+    { key: 'auto', targets: ['.auto-btn'] },
+    { key: 'preview', targets: ['app-preview .stage', '.m-preview'] },
+    { key: 'timeline', targets: ['app-timeline .wave-wrap'] },
+    { key: 'cut', targets: ['app-timeline .marks', 'app-timeline .toolbar'] },
+    { key: 'transcript', targets: ['.transcript-panel', '.m-tabs'] },
+    { key: 'settings', targets: ['app-inspector .tabs', '.m-tabs'] },
+    { key: 'thumbnail', targets: ['.thumb-btn'] },
+    { key: 'export', targets: ['.export-btn'] },
+  ];
+  private readonly startTour = effect(() => {
+    if (!this.tour() || this.store.fileState() !== 'ready') return;
+    untracked(() => {
+      // Let the waveform and the panels settle before pointing at them.
+      setTimeout(() => this.tourOpen.set(true), 800);
+      void this.router.navigate([], { queryParams: {}, replaceUrl: true });
+    });
+  });
   protected readonly exportOpen = signal(false);
   protected readonly savePicker = supportsSavePicker();
   protected readonly formatTime = formatTime;
@@ -100,7 +123,9 @@ export class Editor {
       const count = this.store.project()?.words.length ?? 0;
       this.store.notify(count ? 'editor.transcribe.done' : 'editor.transcribe.empty', { count }, count ? 'info' : 'error');
     } catch (e) {
-      if (!String((e as Error)?.message).includes('CANCELLED')) this.store.notify('errors.transcribe', undefined, 'error');
+      if (String((e as Error)?.message).includes('CANCELLED')) return;
+      console.error('Transcription failed', e);
+      this.store.notify('errors.transcribe', undefined, 'error');
     }
   }
 
@@ -174,6 +199,7 @@ export class Editor {
   }
 
   protected onKey(e: KeyboardEvent): void {
+    if (this.tourOpen()) return;
     const target = e.target as HTMLElement;
     if (target.closest('input, textarea, select, [contenteditable="true"]')) return;
     const mod = e.ctrlKey || e.metaKey;

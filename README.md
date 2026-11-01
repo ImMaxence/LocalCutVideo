@@ -27,7 +27,7 @@
 | --- | --- |
 | **Auto edit** | One click: transcription, filler removal, silence cuts, face framing, smart zoom and karaoke subtitles, with good defaults. Undo in one step. |
 | **Voice detection** | The auto edit asks whether someone speaks in each clip (or detects it with Whisper). Clips without voice get no subtitles and only real dead air is cut. |
-| **Try it** | "Try with a demo video" on the landing page opens the editor with a sample video, no file needed. |
+| **Try it** | "Try with a demo video" on the landing page opens the editor with a sample video and a guided tour (arrows on each tool, "?" button to replay it). |
 | **Texts and transitions** | Titles and notes over the video (same styles as the thumbnails); quick fade or fade to black at every cut. |
 | **Background blur** | The background behind the person is blurred, the person stays sharp (MediaPipe selfie segmentation). |
 | **Project files** | Save a project as a `.lcv.json` file (the edit, without the video) and open it on another computer. |
@@ -39,6 +39,7 @@
 | **Text-based editing** | Whisper word timestamps: delete words in the transcript to cut the video. Correct misheard words or sentences. Filler-word removal. |
 | **Manual cuts** | Drag on the waveform (or use Start / End, keys I and O) to select a part, then Cut (X). |
 | **Speed changes** | Speed up or slow down the selected part or transcript words (0.25× to 4×). Voices keep their pitch (WSOLA time stretch in the export). |
+| **Self-hosted AI** | The Whisper models are served by the site itself (downloaded at the Docker build): transcribing never contacts a third party. Hugging Face is only a backup when a model is missing. |
 | **Language detection** | The spoken language is detected automatically (Whisper language ID), or chosen by hand. |
 | **Karaoke subtitles** | Word-by-word animated captions burned into the video (karaoke, clean, boxed). |
 | **Output formats** | 16:9 (YouTube), 9:16 (TikTok, Reels, Shorts), 1:1, in 720p or 1080p. |
@@ -101,7 +102,7 @@ flowchart LR
   end
 
   exp -->|streamed write| out[(MP4 on your disk)]
-  hf[Hugging Face] -. Whisper model, downloaded once and cached .-> ai
+  site[This site<br/>/models] -. Whisper model, downloaded once and cached .-> ai
 ```
 
 - **The project is a JSON document** (clips, cuts, words, captions, framing, music, export settings). Source files are never modified: editing is non-destructive.
@@ -185,12 +186,24 @@ docker compose -f docker-compose.yml -f docker-compose.local.yml up --build
 # → http://localhost:4280
 ```
 
+### Whisper models
+
+The Docker build downloads the Whisper models into the image (`scripts/download-models.mjs`), so visitors get them from your server and never from Hugging Face. The `WHISPER_MODELS` build argument in `docker-compose.yml` chooses them:
+
+| Model | In the app | Size |
+| --- | --- | --- |
+| `tiny` | Fast | ≈ 180 MB |
+| `base` | Balanced | ≈ 330 MB |
+| `small` | Accurate | ≈ 1 GB |
+
+The first build downloads them (about 1.5 GB for the three); Docker keeps that step in cache, so later builds are fast. Each visitor downloads a model once, then their browser keeps it. A model that is not in the image falls back to Hugging Face. For `npm start`, run `node scripts/download-models.mjs --models tiny` to serve one from `public/models` (ignored by Git).
+
 ### Coolify
 
 1. In Coolify, create a resource from the GitHub repository `ImMaxence/LocalCutVideo`, branch `main`.
 2. Choose the **Docker Compose** build pack, with `docker-compose.yml` as the compose file.
 3. Set the domain of the `web` service to `https://localcutvideo.mbonnici.fr` (container port 80).
-4. Deploy. Coolify's proxy handles HTTPS; the container exposes a `/healthz` endpoint for the health check.
+4. Deploy. Coolify's proxy handles HTTPS; the container exposes a `/healthz` endpoint for the health check. Plan about 2 GB of disk for the image (Whisper models included).
 
 ## Versioning
 

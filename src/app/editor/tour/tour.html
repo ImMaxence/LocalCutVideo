@@ -1,0 +1,49 @@
+<div class="tour">
+  @if (spot(); as s) {
+    <div class="spot" [style.left.px]="s.left" [style.top.px]="s.top" [style.width.px]="s.width" [style.height.px]="s.height"></div>
+  } @else {
+    <div class="dim"></div>
+  }
+  @if (step(); as st) {
+    <div
+      #bubble
+      class="bubble"
+      [class]="'bubble ' + position().placement"
+      [style.left.px]="position().x"
+      [style.top.px]="position().y"
+      [style.--arrow.px]="position().arrow"
+      role="dialog"
+      aria-modal="false"
+      [attr.aria-label]="'tour.label' | transloco"
+      aria-live="polite"
+    >
+      <span class="tail" aria-hidden="true"></span>
+      <div class="head">
+        <span class="count">{{ 'tour.count' | transloco: { n: index() + 1, total: available().length } }}</span>
+        <button class="btn ghost icon sm" type="button" (click)="closed.emit()" [attr.aria-label]="'tour.skip' | transloco" [title]="'tour.skip' | transloco">
+          <app-icon name="x" [size]="15" />
+        </button>
+      </div>
+      <h3>{{ 'tour.steps.' + st.key + '.title' | transloco }}</h3>
+      <p>{{ 'tour.steps.' + st.key + '.text' | transloco }}</p>
+      <div class="dots" aria-hidden="true">
+        @for (s of available(); track s.key; let i = $index) {
+          <i [class.on]="i === index()"></i>
+        }
+      </div>
+      <div class="actions">
+        <button class="btn ghost sm" type="button" (click)="closed.emit()">{{ 'tour.skip' | transloco }}</button>
+        <span class="spacer"></span>
+        @if (index() > 0) {
+          <button class="btn sm" type="button" (click)="prev()"><app-icon name="chevron-left" [size]="15" /> {{ 'tour.prev' | transloco }}</button>
+        }
+        <button class="btn primary sm" type="button" (click)="next()">
+          {{ (last() ? 'tour.done' : 'tour.next') | transloco }}
+          @if (!last()) {
+            <app-icon name="chevron-right" [size]="15" />
+          }
+        </button>
+      </div>
+    </div>
+  }
+</div>

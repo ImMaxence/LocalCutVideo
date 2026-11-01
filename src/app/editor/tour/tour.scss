@@ -1,0 +1,186 @@
+/* Over everything, but the page underneath stays clickable (only the bubble takes clicks). */
+.tour {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  pointer-events: none;
+}
+
+/* The lit element: everything around it is darkened by a huge shadow. */
+.spot {
+  position: fixed;
+  border-radius: 12px;
+  box-shadow:
+    0 0 0 3px var(--accent),
+    0 0 0 9999px rgb(5 6 12 / 0.62);
+  transition:
+    left 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    top 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    width 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    height 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  &::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: inherit;
+    border: 3px solid var(--accent);
+    animation: ring 1.6s ease-out infinite;
+  }
+}
+
+@keyframes ring {
+  from {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.06);
+  }
+}
+
+.dim {
+  position: fixed;
+  inset: 0;
+  background: rgb(5 6 12 / 0.62);
+}
+
+.bubble {
+  --arrow: 40px;
+  position: fixed;
+  width: min(340px, calc(100vw - 24px));
+  padding: 14px 16px 14px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg-elev);
+  color: var(--text);
+  box-shadow: var(--shadow-lg);
+  pointer-events: auto;
+  transition:
+    left 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    top 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  h3 {
+    font-size: 16px;
+    font-weight: 750;
+    margin: 2px 0 6px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-muted);
+    margin: 0;
+  }
+}
+
+/* The arrow: a square turned 45°, on the side facing the element. */
+.tail {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  transform: rotate(45deg);
+  /* The arrow keeps pointing at the element (the bubble itself stays still, easy to click). */
+  .below > & {
+    top: -9px;
+    left: calc(var(--arrow) - 8px);
+    border-right: 0;
+    border-bottom: 0;
+    animation: point-up 1.2s ease-in-out infinite;
+  }
+  .above > & {
+    bottom: -9px;
+    left: calc(var(--arrow) - 8px);
+    border-left: 0;
+    border-top: 0;
+    animation: point-down 1.2s ease-in-out infinite;
+  }
+  .right > & {
+    left: -9px;
+    top: calc(var(--arrow) - 8px);
+    border-right: 0;
+    border-top: 0;
+    animation: point-left 1.2s ease-in-out infinite;
+  }
+  .left > & {
+    right: -9px;
+    top: calc(var(--arrow) - 8px);
+    border-left: 0;
+    border-bottom: 0;
+    animation: point-right 1.2s ease-in-out infinite;
+  }
+  .center > & {
+    display: none;
+  }
+}
+
+@keyframes point-up {
+  50% {
+    transform: translateY(-4px) rotate(45deg);
+  }
+}
+@keyframes point-down {
+  50% {
+    transform: translateY(4px) rotate(45deg);
+  }
+}
+@keyframes point-left {
+  50% {
+    transform: translateX(-4px) rotate(45deg);
+  }
+}
+@keyframes point-right {
+  50% {
+    transform: translateX(4px) rotate(45deg);
+  }
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: -4px -6px 0 0;
+}
+
+.count {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+
+.dots {
+  display: flex;
+  gap: 5px;
+  margin: 12px 0 10px;
+  i {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--border-strong);
+    transition:
+      width 0.2s,
+      background 0.2s;
+    &.on {
+      width: 18px;
+      border-radius: 3px;
+      background: var(--accent);
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  .spacer {
+    flex: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tail,
+  .spot::after {
+    animation: none !important;
+  }
+}

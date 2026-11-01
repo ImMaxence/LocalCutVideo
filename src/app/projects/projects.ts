@@ -133,7 +133,7 @@ export class Projects {
     try {
       const file = await fetchDemoVideo();
       const { id } = await this.projectsService.createFromFiles([{ file, handle: null }]);
-      await this.router.navigate(['/app', id], { replaceUrl: true });
+      await this.router.navigate(['/app', id], { replaceUrl: true, queryParams: { tour: 1 } });
     } catch {
       this.errorKey.set('errors.demo');
       this.busy.set(false);

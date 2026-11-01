@@ -140,7 +140,7 @@
       "lead": "Dein Video wird direkt von deiner Festplatte gelesen. Audioanalyse, Transkription, Gesichtsverfolgung und Kodierung laufen in Hintergrund-Threads (Web Workers) auf deinem Rechner. Es gibt schlicht keinen Server, an den dein Material gehen könnte",
       "upload": "Niemals ein Upload: Die Datei verlässt deinen Computer nicht",
       "account": "Kein Konto, keine Cookies, keine Analytics",
-      "csp": "Eine strenge Content-Security-Policy erlaubt der Seite nur die Verbindung zu dieser Website und zu Hugging Face, um das KI-Modell einmalig herunterzuladen",
+      "csp": "Eine strenge Content-Security-Policy erlaubt der Seite nur die Kommunikation mit dieser Website, die auch die KI-Modelle bereitstellt (Hugging Face dient nur als Ausweichlösung)",
       "storage": "Projekte werden in der lokalen Datenbank deines Browsers (IndexedDB) gespeichert und lassen sich jederzeit löschen",
       "diagram": {
         "machine": "Dein Computer",
@@ -681,7 +681,7 @@
         {
           "title": "Dritte",
           "body": [
-            "Hugging Face: Beim ersten Start einer Transkription wird das Whisper-Modell von huggingface.co heruntergeladen. Wie bei jedem Download erhält Hugging Face deine IP-Adresse und die üblichen Browserinformationen, aber nie dein Audio. Siehe deren [Datenschutzerklärung](https://huggingface.co/privacy).",
+            "Hugging Face: Das Whisper-Modell wird von dieser Website bereitgestellt, wie der Rest der Anwendung. Nur wenn es hier nicht verfügbar ist, wird es stattdessen von huggingface.co geladen; Hugging Face erhält dann deine IP-Adresse und die üblichen Browserinformationen, aber niemals dein Audio. Siehe deren [Datenschutzerklärung](https://huggingface.co/privacy).",
             "GitHub: nur wenn du einem Link zum Quellcode-Repository folgst.",
             "Keine weiteren Dritten werden kontaktiert: Eine strenge Content-Security-Policy verhindert technisch, dass sich die Seite anderswohin verbindet."
           ]
@@ -845,6 +845,49 @@
     "editor": {
       "title": "Editor — LocalCutVideo",
       "description": "LocalCutVideo-Editor"
+    }
+  },
+  "tour": {
+    "label": "Geführte Tour",
+    "help": "Geführte Tour",
+    "count": "Schritt {{ n }} von {{ total }}",
+    "skip": "Tour überspringen",
+    "prev": "Zurück",
+    "next": "Weiter",
+    "done": "Los geht's!",
+    "steps": {
+      "auto": {
+        "title": "Mit einem Klick: der Auto-Schnitt",
+        "text": "LocalCutVideo schneidet das Video für dich: Pausen und Füllwörter entfernt, Untertitel, Bildausschnitt und Zoom. Danach kannst du alles ändern"
+      },
+      "preview": {
+        "title": "Die Vorschau",
+        "text": "Was du siehst, ist genau das, was exportiert wird. Klicke darauf oder drücke die Leertaste, um abzuspielen oder zu pausieren"
+      },
+      "timeline": {
+        "title": "Die Zeitleiste",
+        "text": "Klicke, um im Video zu springen. Ziehe auf der Wellenform, um einen Teil auszuwählen"
+      },
+      "cut": {
+        "title": "Schneiden oder Tempo ändern",
+        "text": "Ist ein Teil ausgewählt, entfernt Schneiden (X) ihn und Tempo macht ihn schneller oder langsamer. Strg+Z macht alles rückgängig"
+      },
+      "transcript": {
+        "title": "Mit dem Text schneiden",
+        "text": "Nach der Transkription schneidet das Löschen eines Wortes das Video. Du kannst auch korrigieren, was die KI falsch verstanden hat"
+      },
+      "settings": {
+        "title": "Alle Einstellungen",
+        "text": "Format (16:9, 9:16, quadratisch), Schnitte und Übergänge, Untertitel, Texte, Bildausschnitt und Unschärfe, Ton und Musik"
+      },
+      "thumbnail": {
+        "title": "Das Thumbnail",
+        "text": "Erstelle das Thumbnail deines Videos aus seinen besten Momenten"
+      },
+      "export": {
+        "title": "Exportieren",
+        "text": "Speichere das Video als MP4. Alles passiert auf deinem Gerät, nichts wird hochgeladen"
+      }
     }
   }
 }

@@ -730,7 +730,8 @@
 }
 
 @media (max-width: 420px) {
-  .lang {
+  .lang,
+  .help-btn {
     display: none;
   }
 }

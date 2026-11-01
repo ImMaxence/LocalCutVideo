@@ -36,7 +36,9 @@ test.describe('export', () => {
   test('saves the project as a file and opens it again', async ({ page }, info) => {
     await page.goto('/');
     await page.getByRole('link', { name: 'Try with a demo video' }).click();
-    await page.waitForURL(/\/app\/[\w-]+$/);
+    // The demo starts the guided tour: skip it.
+    await page.getByRole('button', { name: 'Skip the tour' }).first().click();
+    await expect(page.locator('app-tour')).toHaveCount(0);
     await page.getByRole('tab', { name: 'Texts' }).click();
     await page.getByRole('button', { name: 'Add a text at the playhead' }).click();
 

@@ -28,6 +28,9 @@
     <button class="btn ghost icon" type="button" (click)="store.redo()" [disabled]="!store.canRedo()" [title]="('editor.redo' | transloco) + ' (Ctrl+Shift+Z)'">
       <app-icon name="redo" />
     </button>
+    <button class="btn ghost icon help-btn" type="button" (click)="tourOpen.set(true)" [title]="'tour.help' | transloco" [attr.aria-label]="'tour.help' | transloco">
+      <app-icon name="help" />
+    </button>
     @if (store.project(); as p) {
       <a class="btn ghost thumb-btn" [routerLink]="['/thumbnail', p.id]" [queryParams]="{ t: store.currentTime().toFixed(2) }" [title]="'editor.thumbnail' | transloco" [attr.aria-label]="'editor.thumbnail' | transloco">
         <app-icon name="image" [size]="17" /> <span>{{ 'editor.thumbnail' | transloco }}</span>
@@ -149,6 +152,9 @@
     }
   }
 
+  @if (tourOpen()) {
+    <app-tour [steps]="tourSteps" (closed)="tourOpen.set(false)" />
+  }
   @if (store.notice(); as n) {
     <div class="notice" [class.error]="n.tone === 'error'" role="status">
       <app-icon [name]="n.tone === 'error' ? 'alert' : 'check'" [size]="16" />

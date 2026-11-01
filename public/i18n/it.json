@@ -140,7 +140,7 @@
       "lead": "Il video viene letto direttamente dal disco. Analisi audio, trascrizione, tracciamento del volto e codifica girano in thread in background (Web Worker) sulla tua macchina. Semplicemente non esiste un server a cui inviare il tuo girato",
       "upload": "Nessun upload, mai: il file non lascia il tuo computer",
       "account": "Nessun account, niente cookie, niente analytics",
-      "csp": "Una Content-Security-Policy rigorosa permette alla pagina di comunicare solo con questo sito e con Hugging Face, per scaricare una volta il modello di IA",
+      "csp": "Una Content-Security-Policy rigorosa permette alla pagina di comunicare solo con questo sito, che serve anche i modelli di IA (Hugging Face è solo un ripiego)",
       "storage": "I progetti sono salvati nel database locale del browser (IndexedDB) e possono essere eliminati in qualsiasi momento",
       "diagram": {
         "machine": "Il tuo computer",
@@ -681,7 +681,7 @@
         {
           "title": "Terze parti",
           "body": [
-            "Hugging Face: la prima volta che avvii una trascrizione, il modello Whisper viene scaricato da huggingface.co. Come per qualsiasi download, Hugging Face riceve il tuo indirizzo IP e le informazioni standard del browser, ma mai il tuo audio. Vedi la loro [informativa sulla privacy](https://huggingface.co/privacy).",
+            "Hugging Face: il modello Whisper è servito da questo sito, come il resto dell'applicazione. Solo se qui non è disponibile viene scaricato da huggingface.co; Hugging Face riceve allora il tuo indirizzo IP e le informazioni standard del browser, ma mai il tuo audio. Vedi la loro [informativa sulla privacy](https://huggingface.co/privacy).",
             "GitHub: solo se segui un link al repository del codice sorgente.",
             "Nessun'altra terza parte viene contattata: una Content-Security-Policy rigorosa impedisce tecnicamente alla pagina di collegarsi altrove."
           ]
@@ -845,6 +845,49 @@
     "editor": {
       "title": "Editor — LocalCutVideo",
       "description": "Editor di LocalCutVideo"
+    }
+  },
+  "tour": {
+    "label": "Visita guidata",
+    "help": "Visita guidata",
+    "count": "Passo {{ n }} di {{ total }}",
+    "skip": "Salta la visita",
+    "prev": "Indietro",
+    "next": "Avanti",
+    "done": "Iniziamo!",
+    "steps": {
+      "auto": {
+        "title": "Con un clic: il montaggio automatico",
+        "text": "LocalCutVideo monta il video per te: silenzi ed esitazioni rimossi, sottotitoli, inquadratura e zoom. Dopo puoi modificare tutto"
+      },
+      "preview": {
+        "title": "L'anteprima",
+        "text": "Quello che vedi è esattamente ciò che verrà esportato. Cliccaci sopra, o premi Spazio, per riprodurre o mettere in pausa"
+      },
+      "timeline": {
+        "title": "La timeline",
+        "text": "Clicca per spostarti nel video. Trascina sulla forma d'onda per selezionare una parte"
+      },
+      "cut": {
+        "title": "Tagliare o cambiare la velocità",
+        "text": "Con una parte selezionata, Taglia (X) la rimuove e Velocità la accelera o la rallenta. Ctrl+Z annulla tutto"
+      },
+      "transcript": {
+        "title": "Montare dal testo",
+        "text": "Una volta trascritto, eliminare una parola taglia il video. Puoi anche correggere ciò che l'IA ha capito male"
+      },
+      "settings": {
+        "title": "Tutte le impostazioni",
+        "text": "Formato (16:9, 9:16, quadrato), tagli e transizioni, sottotitoli, testi, inquadratura e sfocatura, audio e musica"
+      },
+      "thumbnail": {
+        "title": "La miniatura",
+        "text": "Crea la miniatura del tuo video partendo dai suoi momenti migliori"
+      },
+      "export": {
+        "title": "Esporta",
+        "text": "Salva il video in MP4. Tutto avviene sul tuo dispositivo, non viene caricato nulla"
+      }
     }
   }
 }

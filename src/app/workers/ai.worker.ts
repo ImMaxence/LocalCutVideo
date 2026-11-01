@@ -1,8 +1,9 @@
 /// <reference lib="webworker" />
 /**
  * AI worker: runs Whisper locally with Transformers.js (WebGPU when available, WASM
- * otherwise) and returns word-level timestamps. The model is downloaded once from
- * Hugging Face and then served from the browser cache, so it works offline afterwards.
+ * otherwise) and returns word-level timestamps. The model is downloaded once, from this site
+ * when it hosts it (/models), otherwise from Hugging Face, then served from the browser cache,
+ * so it works offline afterwards.
  */
 import * as Comlink from 'comlink';
 import { env, pipeline, type AutomaticSpeechRecognitionPipeline } from '@huggingface/transformers';
@@ -36,8 +37,25 @@ async function detectDevice(): Promise<{ device: AiDevice; fp16: boolean }> {
   return { device: 'wasm', fp16: false };
 }
 
+/** Models this site serves itself (listed by scripts/download-models.mjs), null when unknown. */
+let hosted: Promise<string[]> | null = null;
+
+function hostedModels(): Promise<string[]> {
+  hosted ??= fetch(`${self.location.origin}/models/manifest.json`)
+    .then((r) => (r.ok ? r.json() : null))
+    .then((m: { models?: unknown } | null) => (Array.isArray(m?.models) ? (m.models as string[]) : []))
+    .catch(() => []);
+  return hosted;
+}
+
 async function load(model: WhisperModel, onProgress: (p: TranscribeProgress) => void): Promise<AiDevice> {
   const { device, fp16 } = await detectDevice();
+  // Served here: no request to Hugging Face at all. Otherwise Hugging Face is the source.
+  const local = (await hostedModels()).includes(model);
+  env.allowLocalModels = local;
+  env.allowRemoteModels = !local;
+  // A path, not a full URL: Transformers.js only checks that local files exist for paths.
+  env.localModelPath = '/models/';
   const key = `${model}|${device}`;
   if (transcriber && loadedKey === key) return device;
   await transcriber?.dispose();

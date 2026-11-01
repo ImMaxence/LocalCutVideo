@@ -140,7 +140,7 @@
       "lead": "Your video is read directly from your disk. Audio analysis, transcription, face tracking and encoding all run in background threads (Web Workers) on your machine. There is simply no server to send your footage to",
       "upload": "No upload, ever: the file never leaves your computer",
       "account": "No account, no cookies, no analytics",
-      "csp": "A strict Content-Security-Policy only lets the page talk to this site and to Hugging Face, to download the AI model once",
+      "csp": "A strict Content-Security-Policy only lets the page talk to this site, which also serves the AI models (Hugging Face is only a backup)",
       "storage": "Projects are saved in your browser's local database (IndexedDB) and can be deleted at any time",
       "diagram": {
         "machine": "Your computer",
@@ -681,7 +681,7 @@
         {
           "title": "Third parties",
           "body": [
-            "Hugging Face: the first time you start a transcription, the Whisper model is downloaded from huggingface.co. As with any download, Hugging Face receives your IP address and standard browser information, but never your audio. See their [privacy policy](https://huggingface.co/privacy).",
+            "Hugging Face: the Whisper model is served by this site, like the rest of the application. Only if it is not available here is it downloaded from huggingface.co instead; Hugging Face then receives your IP address and standard browser information, but never your audio. See their [privacy policy](https://huggingface.co/privacy).",
             "GitHub: only if you follow a link to the source code repository.",
             "No other third party is contacted: a strict Content-Security-Policy technically prevents the page from connecting anywhere else."
           ]
@@ -845,6 +845,49 @@
     "editor": {
       "title": "Editor — LocalCutVideo",
       "description": "LocalCutVideo editor"
+    }
+  },
+  "tour": {
+    "label": "Guided tour",
+    "help": "Guided tour",
+    "count": "Step {{ n }} of {{ total }}",
+    "skip": "Skip the tour",
+    "prev": "Back",
+    "next": "Next",
+    "done": "Let's go!",
+    "steps": {
+      "auto": {
+        "title": "One click: the auto edit",
+        "text": "LocalCutVideo edits the video for you: silences and hesitations removed, subtitles, framing and zoom. You can change everything afterwards"
+      },
+      "preview": {
+        "title": "The preview",
+        "text": "What you see is exactly what will be exported. Click it, or press Space, to play or pause"
+      },
+      "timeline": {
+        "title": "The timeline",
+        "text": "Click to move through the video. Drag on the waveform to select a part"
+      },
+      "cut": {
+        "title": "Cut or change the speed",
+        "text": "With a part selected, Cut (X) removes it and Speed plays it faster or slower. Ctrl+Z undoes anything"
+      },
+      "transcript": {
+        "title": "Edit by text",
+        "text": "Once transcribed, deleting a word cuts the video. You can also correct what the AI misheard"
+      },
+      "settings": {
+        "title": "All the settings",
+        "text": "Format (16:9, 9:16, square), cuts and transitions, subtitles, texts, framing and blur, sound and music"
+      },
+      "thumbnail": {
+        "title": "The thumbnail",
+        "text": "Make the thumbnail of your video from its best moments"
+      },
+      "export": {
+        "title": "Export",
+        "text": "Save the video as an MP4. Everything happens on your device, nothing is uploaded"
+      }
     }
   }
 }
