@@ -59,29 +59,10 @@
       <button class="btn sm mark" type="button" [class.set]="store.markOut() !== null" (click)="store.setMark('out')" [title]="'editor.timeline.markOutHint' | transloco">
         {{ 'editor.timeline.markOut' | transloco }} <b>]</b>
       </button>
-      <button class="btn sm primary" type="button" [disabled]="!canCut()" (click)="store.cutMarked()" [title]="'editor.timeline.cutHint' | transloco">
+      <button class="btn sm primary" type="button" [class.idle]="!canCut()" (click)="cut()" [title]="'editor.timeline.cutHint' | transloco">
         <app-icon name="scissors" [size]="14" /> {{ 'editor.timeline.cutMarked' | transloco }}
       </button>
-      <span class="speed-wrap">
-        <button
-          class="btn sm"
-          type="button"
-          [disabled]="!canCut()"
-          [attr.aria-expanded]="speedMenu()"
-          aria-haspopup="menu"
-          (click)="speedMenu.set(!speedMenu())"
-          [title]="'editor.timeline.speedHint' | transloco"
-        >
-          <app-icon name="gauge" [size]="14" /> {{ 'editor.timeline.speed' | transloco }}
-        </button>
-        @if (speedMenu() && canCut()) {
-          <span class="speed-menu" role="menu" animate.enter="pop-in">
-            @for (r of rates; track r) {
-              <button class="rate" type="button" role="menuitem" (click)="applySpeed(r)">{{ r }}×</button>
-            }
-          </span>
-        }
-      </span>
+      <app-speed-menu [ready]="canCut()" (pick)="store.speedMarked($event)" (missing)="selectFirst()" />
       @if (store.markIn() !== null || store.markOut() !== null) {
         <button class="btn ghost icon sm" type="button" (click)="store.clearMarks()" [attr.aria-label]="'editor.timeline.clearMarks' | transloco" [title]="'editor.timeline.clearMarks' | transloco">
           <app-icon name="x" [size]="14" />

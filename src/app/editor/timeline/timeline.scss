@@ -4,11 +4,9 @@
   --cut-silence: light-dark(rgb(232 51 107 / 0.2), rgb(255 107 147 / 0.24));
   --cut-manual: light-dark(rgb(183 110 0 / 0.22), rgb(251 191 36 / 0.22));
   --cut-text: light-dark(rgb(91 61 245 / 0.18), rgb(143 125 255 / 0.22));
-  --cut-new: light-dark(rgb(183 110 0 / 0.25), rgb(251 191 36 / 0.25));
   --cut-selected: light-dark(rgb(91 61 245 / 0.34), rgb(143 125 255 / 0.42));
   --speed: light-dark(rgb(2 132 199 / 0.2), rgb(56 189 248 / 0.22));
   --speed-selected: light-dark(rgb(2 132 199 / 0.38), rgb(56 189 248 / 0.42));
-  --speed-solid: light-dark(#0284c7, #38bdf8);
   --handle: light-dark(#12141a, #fff);
   --clip-marker: light-dark(#12141a, #eceef4);
   --mark-region: light-dark(rgb(15 159 110 / 0.22), rgb(52 211 153 / 0.22));
@@ -65,6 +63,10 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  /* Nothing selected yet: Cut stays clickable (it explains how to select) but looks quiet. */
+  .btn.primary.idle {
+    opacity: 0.55;
+  }
   .mark {
     b {
       font-family: var(--mono);
@@ -111,28 +113,6 @@
     margin-right: 4px;
     font-family: var(--mono);
   }
-}
-
-.speed-wrap {
-  position: relative;
-  display: inline-flex;
-}
-
-/* Below the button (the timeline panel clips anything above its toolbar), aligned on its
-   right edge so it stays on screen when the button sits at the end of a phone's toolbar. */
-.speed-menu {
-  position: absolute;
-  top: calc(100% + 6px);
-  right: 0;
-  z-index: 20;
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  gap: 2px;
-  padding: 4px;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: var(--bg-elev);
-  box-shadow: var(--shadow-lg);
 }
 
 .rates {

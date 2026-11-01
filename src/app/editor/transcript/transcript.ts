@@ -15,6 +15,7 @@ import type { Word } from '../../engine/model';
 import { formatTime } from '../../engine/timeline-math';
 import { Icon } from '../../shared/icon';
 import { EditorStore } from '../editor.store';
+import { SpeedMenu } from '../speed-menu';
 
 interface Paragraph {
   start: number;
@@ -28,7 +29,7 @@ interface Paragraph {
  */
 @Component({
   selector: 'app-transcript',
-  imports: [TranslocoPipe, Icon],
+  imports: [TranslocoPipe, Icon, SpeedMenu],
   templateUrl: './transcript.html',
   styleUrl: './transcript.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

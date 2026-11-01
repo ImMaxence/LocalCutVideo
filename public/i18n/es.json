@@ -295,7 +295,7 @@
       "silence": "Silencio",
       "manual": "Manual",
       "text": "Texto",
-      "hint": "Arrastra sobre la forma de onda o usa Inicio / Fin para cortar · haz clic en un corte para ajustar sus bordes · doble clic para quitar",
+      "hint": "Arrastra sobre la forma de onda para seleccionar una parte, luego Cortar o Velocidad · haz clic en un corte para ajustar sus bordes · doble clic para quitar",
       "removeCut": "Quitar corte",
       "zoom": "Zoom de la línea de tiempo",
       "analyzing": "Analizando el audio…",
@@ -321,7 +321,8 @@
       "speedHint": "Acelerar o ralentizar la parte entre el inicio y el fin",
       "selectedSpeed": "Cambio de velocidad",
       "removeSpeed": "Volver a la velocidad normal",
-      "listenSpeed": "Reproducir el cambio de velocidad"
+      "listenSpeed": "Reproducir el cambio de velocidad",
+      "selectFirst": "Primero selecciona una parte: arrastra sobre la forma de onda o marca Inicio y Fin"
     },
     "transcript": {
       "title": "Transcripción",

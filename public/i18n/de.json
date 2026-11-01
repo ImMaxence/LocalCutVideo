@@ -295,7 +295,7 @@
       "silence": "Pause",
       "manual": "Manuell",
       "text": "Text",
-      "hint": "Auf der Wellenform ziehen oder Start / Ende nutzen zum Schneiden · Schnitt anklicken, um die Ränder anzupassen · Doppelklick zum Entfernen",
+      "hint": "Auf der Wellenform ziehen, um einen Teil auszuwählen, dann Schneiden oder Tempo · Schnitt anklicken, um die Ränder anzupassen · Doppelklick zum Entfernen",
       "removeCut": "Schnitt entfernen",
       "zoom": "Zeitleisten-Zoom",
       "analyzing": "Audio wird analysiert…",
@@ -321,7 +321,8 @@
       "speedHint": "Den Teil zwischen Start und Ende beschleunigen oder verlangsamen",
       "selectedSpeed": "Tempoänderung",
       "removeSpeed": "Zurück zum normalen Tempo",
-      "listenSpeed": "Tempoänderung abspielen"
+      "listenSpeed": "Tempoänderung abspielen",
+      "selectFirst": "Wähle zuerst einen Teil: auf der Wellenform ziehen oder Start und Ende setzen"
     },
     "transcript": {
       "title": "Transkript",

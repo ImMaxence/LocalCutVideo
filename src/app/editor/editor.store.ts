@@ -758,6 +758,16 @@ export class EditorStore {
     return true;
   }
 
+  /** Speed change over the words selected in the transcript. */
+  speedWords(rate: number): void {
+    const ids = this.selection();
+    const words = this.project()?.words.filter((w) => ids.has(w.id)) ?? [];
+    if (!words.length) return;
+    const id = this.setSpeed(Math.min(...words.map((w) => w.start)), Math.max(...words.map((w) => w.end)), rate);
+    this.selectedCut.set(null);
+    this.selectedSpeed.set(id);
+  }
+
   /** Moves the edges of a speed change (dragged on the timeline). */
   updateSpeed(id: string, start: number, end: number): void {
     const from = Math.max(0, Math.min(start, end));

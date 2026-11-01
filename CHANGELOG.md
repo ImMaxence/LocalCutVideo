@@ -2,6 +2,15 @@
 
 All notable changes to LocalCutVideo. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning: [SemVer](https://semver.org/).
 
+## [0.12.1] - 2026-11-01
+
+### Added
+- Speed change for the words selected in the transcript
+
+### Changed
+- Dragging on the waveform selects a part (then Cut or Speed) instead of cutting it at once
+- Cut and Speed are never greyed out: without a selection they explain how to make one
+
 ## [0.12.0] - 2026-11-01
 
 ### Added

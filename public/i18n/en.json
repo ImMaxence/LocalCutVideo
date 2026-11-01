@@ -295,7 +295,7 @@
       "silence": "Silence",
       "manual": "Manual",
       "text": "Text",
-      "hint": "Drag on the waveform or use Start / End to cut · click a cut to adjust its edges · double-click to remove",
+      "hint": "Drag on the waveform to select a part, then Cut or Speed · click a cut to adjust its edges · double-click to remove",
       "removeCut": "Remove cut",
       "zoom": "Timeline zoom",
       "analyzing": "Analyzing audio…",
@@ -321,7 +321,8 @@
       "speedHint": "Speed up or slow down the part between start and end",
       "selectedSpeed": "Speed change",
       "removeSpeed": "Back to normal speed",
-      "listenSpeed": "Play the speed change"
+      "listenSpeed": "Play the speed change",
+      "selectFirst": "Select a part first: drag on the waveform, or set Start and End"
     },
     "transcript": {
       "title": "Transcript",

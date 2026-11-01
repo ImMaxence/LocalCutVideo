@@ -19,6 +19,7 @@ import { SPEED_RATES } from '../../engine/model';
 import { deletedWordRanges, formatTime } from '../../engine/timeline-math';
 import { Icon } from '../../shared/icon';
 import { EditorStore, MIN_CUT, type SequenceAnalysis } from '../editor.store';
+import { SpeedMenu } from '../speed-menu';
 
 type RegionsApi = {
   getRegions(): Region[];
@@ -50,18 +51,17 @@ function cssColor(host: HTMLElement, variable: string): string {
 
 /**
  * Waveform timeline of the whole sequence (Wavesurfer.js). The cursor follows the preview and
- * clicking on the waveform seeks. Cuts are regions: drag on the waveform to create one, click
- * it to select it, drag its edges or nudge them to adjust, double-click to remove. Speed changes
- * are made from the Start / End part and shown as labelled regions edited the same way. Words
- * deleted in the transcript appear as locked regions, and markers show where each clip starts.
+ * clicking on the waveform seeks. Dragging on it selects a part (the same as Start / End), which
+ * is then cut or sped up / slowed down. Cuts and speed changes are regions: click one to select
+ * it, drag its edges or nudge them to adjust, double-click to remove. Words deleted in the
+ * transcript appear as locked regions, and markers show where each clip starts.
  */
 @Component({
   selector: 'app-timeline',
-  imports: [TranslocoPipe, Icon],
+  imports: [TranslocoPipe, Icon, SpeedMenu],
   templateUrl: './timeline.html',
   styleUrl: './timeline.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  host: { '(document:pointerdown)': 'onOutside($event)' },
 })
 export class Timeline {
   protected readonly store = inject(EditorStore);
@@ -82,7 +82,6 @@ export class Timeline {
     return (id && this.store.project()?.speeds.find((s) => s.id === id)) || null;
   });
   protected readonly rates = SPEED_RATES;
-  protected readonly speedMenu = signal(false);
   protected readonly nudgeStep = 0.1;
   protected readonly edges = [
     { id: 'start', label: 'editor.timeline.markIn' },
@@ -180,12 +179,15 @@ export class Timeline {
       this.store.selectedCut.set(null);
       this.store.selectedSpeed.set(null);
     });
-    this.regions.enableDragSelection({ color: 'var(--cut-new)' });
+    this.regions.enableDragSelection({ color: 'var(--mark-region)' });
     this.regions.on('region-created', ((region: Region) => {
       if (this.syncing) return;
-      // A region drawn by the user becomes a manual cut; the region list is then rebuilt from the project.
+      // A region drawn by the user selects that part (Start / End): it is then cut or its speed changed.
       region.remove();
-      this.store.addCut(region.start, region.end);
+      this.store.selectedCut.set(null);
+      this.store.selectedSpeed.set(null);
+      this.store.markIn.set(region.start);
+      this.store.markOut.set(region.end);
     }) as never);
     this.regions.on('region-updated', ((region: Region) => {
       if (region.id.startsWith('cut-')) this.store.updateCut(region.id.slice(4), region.start, region.end);
@@ -333,14 +335,13 @@ export class Timeline {
     return width / Math.max(1, this.store.duration());
   }
 
-  protected applySpeed(rate: number): void {
-    this.speedMenu.set(false);
-    this.store.speedMarked(rate);
+  protected cut(): void {
+    if (!this.store.cutMarked()) this.selectFirst();
   }
 
-  /** Closes the speed menu on a click elsewhere. */
-  protected onOutside(e: PointerEvent): void {
-    if (this.speedMenu() && !(e.target as HTMLElement).closest?.('.speed-wrap')) this.speedMenu.set(false);
+  /** Cut or Speed pressed without a selected part: say how to select one. */
+  protected selectFirst(): void {
+    this.store.notify('editor.timeline.selectFirst', undefined, 'error');
   }
 
   protected nudge(edge: 'start' | 'end', direction: 1 | -1): void {

@@ -199,7 +199,7 @@ export class Editor {
     } else if (e.key === 'i' || e.key === 'o') {
       this.store.setMark(e.key === 'i' ? 'in' : 'out');
     } else if (e.key === 'x') {
-      if (!this.store.cutMarked()) this.store.notify('editor.timeline.marksMissing', undefined, 'error');
+      if (!this.store.cutMarked()) this.store.notify('editor.timeline.selectFirst', undefined, 'error');
     } else if (e.key === 'Enter' && this.store.selection().size) {
       e.preventDefault();
       this.transcriptRef()?.startCorrection();
