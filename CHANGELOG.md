@@ -2,6 +2,21 @@
 
 All notable changes to LocalCutVideo. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning: [SemVer](https://semver.org/).
 
+## [0.16.0] - 2026-11-02
+
+### Added
+- Markdown version of every page (`index.md`, also served for `Accept: text/markdown`) and `llms-full.txt`
+- robots.txt open to AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended…)
+- `npm run check:bots`: checks that search engines and AI crawlers get every page
+
+### Changed
+- sitemap.xml and llms.txt generated at build, from the translations
+- The app answers `noindex` instead of being blocked in robots.txt
+
+### Fixed
+- Legal pages: no space before the punctuation after a link
+- Thumbnail maker section of the home page dropped by reader modes
+
 ## [0.15.0] - 2026-11-02
 
 ### Added

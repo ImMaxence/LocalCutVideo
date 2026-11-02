@@ -64,14 +64,33 @@ test.describe('public site', () => {
     expect(await (await request.get('/llms.txt')).text()).toContain('# LocalCutVideo');
   });
 
-  test('serves robots.txt and a sitemap of every page in every language', async ({ request }) => {
-    expect(await (await request.get('/robots.txt')).text()).toContain('Disallow: /app');
+  test('opens every page to search engines and AI crawlers, with a sitemap in every language', async ({ request }) => {
+    const robots = await (await request.get('/robots.txt')).text();
+    for (const bot of ['GPTBot', 'ClaudeBot', 'PerplexityBot', 'Google-Extended']) expect(robots).toContain(`User-agent: ${bot}`);
+    expect(robots).not.toContain('Disallow');
+    expect(robots).toContain('Sitemap: https://localcutvideo.mbonnici.fr/sitemap.xml');
     const sitemap = await (await request.get('/sitemap.xml')).text();
     expect(sitemap.match(/<loc>/g)).toHaveLength(LANGUAGES.length * 6);
     expect(sitemap).toContain('<loc>https://localcutvideo.mbonnici.fr/it/terms</loc>');
   });
 
-  test('the app is not indexed', async ({ page }) => {
+  test('serves each page as Markdown to assistants that ask for it', async ({ request }) => {
+    const md = await request.get('/fr/changelog', { headers: { Accept: 'text/markdown' } });
+    expect(md.headers()['content-type']).toBe('text/markdown; charset=utf-8');
+    expect(md.headersArray()).toContainEqual({ name: 'Vary', value: 'Accept' });
+    expect(await md.text()).toMatch(/^# Nouveautés — LocalCutVideo\n/);
+    expect(await (await request.get('/ja/thumbnail/index.md')).text()).toContain('https://localcutvideo.mbonnici.fr/ja/thumbnail');
+
+    const html = await request.get('/fr/changelog');
+    expect(html.headers()['content-type']).toBe('text/html; charset=utf-8');
+    expect(await html.text()).toContain('<link rel="alternate" type="text/markdown" href="https://localcutvideo.mbonnici.fr/fr/changelog/index.md">');
+    // Files keep their own type, whatever the request accepts.
+    expect((await request.get('/og-image.png', { headers: { Accept: 'text/markdown' } })).headers()['content-type']).toBe('image/png');
+    expect(await (await request.get('/llms-full.txt')).text()).toContain('# LocalCutVideo: full text');
+  });
+
+  test('the app is not indexed', async ({ page, request }) => {
+    expect((await request.get('/app')).headers()['x-robots-tag']).toBe('noindex');
     await page.goto('/app');
     await expect(page.locator('meta[name=robots]')).toHaveAttribute('content', 'noindex');
   });

@@ -1,5 +1,5 @@
 /**
- * Interface languages. Plain data without imports: scripts/sitemap.mjs reads it too.
+ * Interface languages. Plain data without imports: scripts/seo.mjs reads it too.
  *
  * - `code`: URL segment (/pt-br/…), i18n file (public/i18n/pt-br.json) and Transloco id
  * - `tag`: BCP 47 tag of `<html lang>`

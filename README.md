@@ -54,7 +54,7 @@
 | **Crash recovery** | Every change is auto-saved to IndexedDB; the video file is reconnected on reopen. |
 | **PWA** | Installable, works offline, "Open with LocalCutVideo" for video files. |
 | **44 languages** | From English and French to Japanese, Arabic or Swahili, each public page with its own URL (`/fr`, `/pt-br`, `/zh-cn`…); right-to-left layout for Arabic, Hebrew, Persian and Urdu. Light / dark / system theme. |
-| **SEO** | Public pages prerendered at build time (Angular SSG) with titles, descriptions, canonical and `hreflang` links, schema.org data, `sitemap.xml`, `robots.txt` and `llms.txt` for AI assistants. |
+| **SEO** | Public pages prerendered at build time (Angular SSG) with titles, descriptions, Open Graph, canonical and `hreflang` links, schema.org data. `robots.txt` open to search engines and AI crawlers, `sitemap.xml`, `llms.txt` and `llms-full.txt`, and a Markdown version of every page (`/fr/index.md`, also served for `Accept: text/markdown`). |
 | **Legal pages** | Legal notice, privacy policy and terms of use, in every language. |
 
 ## Screenshots
@@ -151,11 +151,12 @@ Requirements: Node.js 22.22+ or 24.15+, and Chrome or Edge to test every feature
 ```bash
 npm install
 npm start            # http://localhost:4200 (COOP/COEP headers are set by the dev server)
-npm run build        # production build in dist/localcutvideo/browser (public pages prerendered)
+npm run build        # production build in dist/localcutvideo/browser (public pages prerendered,
+                     # then sitemap.xml, llms.txt, llms-full.txt and index.md files: scripts/seo.mjs)
 npm run typecheck    # app + workers + tests
 npm test             # unit tests of the engine (Vitest)
 npm run test:e2e     # end-to-end tests (Playwright) against http://localhost:4280
-npm run sitemap      # regenerate public/sitemap.xml after adding a public page
+npm run check:bots   # search engines and AI crawlers get every page (online, or: -- http://localhost:4280)
 ```
 
 The end-to-end tests run against a build (`docker compose -f docker-compose.yml -f docker-compose.local.yml up -d`, or `E2E_BASE_URL=http://localhost:4200` with `npm start`) in Chrome. `E2E_AI=1` adds the Whisper tests, which download a model the first time.

@@ -43,15 +43,16 @@ export class SeoService {
 
     this.title.setTitle(t('title'));
     this.meta.updateTag({ name: 'description', content: t('description') });
-    this.meta.updateTag({ name: 'robots', content: indexed ? 'index, follow' : 'noindex' });
+    this.meta.updateTag({ name: 'robots', content: indexed ? 'index, follow, max-image-preview:large' : 'noindex' });
     this.meta.updateTag({ property: 'og:title', content: t('title') });
     this.meta.updateTag({ property: 'og:description', content: t('description') });
     this.meta.updateTag({ property: 'og:url', content: url });
     this.meta.updateTag({ property: 'og:locale', content: language.og });
     applyLanguage(this.document, lang);
 
-    // Canonical URL and the alternates of every language (x-default: English).
-    this.document.head.querySelectorAll('link[rel="canonical"], link[rel="alternate"][hreflang], script[type="application/ld+json"]').forEach((l) => l.remove());
+    // Canonical URL, the alternates of every language (x-default: English) and the Markdown
+    // version of the page (written by scripts/seo.mjs).
+    this.document.head.querySelectorAll('link[rel="canonical"], link[rel="alternate"], script[type="application/ld+json"]').forEach((l) => l.remove());
     if (!indexed) return;
     for (const data of this.structuredData(key, url, language.tag)) {
       const script = this.document.createElement('script');
@@ -64,6 +65,7 @@ export class SeoService {
       for (const hreflang of l.hreflang) this.link({ rel: 'alternate', hreflang, href: `${SITE_URL}${localizedPath(path, l.code)}` });
     }
     this.link({ rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${localizedPath(path, DEFAULT_LANG)}` });
+    this.link({ rel: 'alternate', type: 'text/markdown', href: `${url.replace(/\/$/, '')}/index.md` });
   }
 
   /** schema.org descriptions: the web app on the home and thumbnail pages, the FAQ on the home page. */
@@ -76,6 +78,7 @@ export class SeoService {
       name: key === 'home' ? 'LocalCutVideo' : t('thumbnail.eyebrow'),
       url,
       description: t(`seo.${key}.description`),
+      image: `${SITE_URL}/og-image.png`,
       inLanguage: lang,
       applicationCategory: 'MultimediaApplication',
       operatingSystem: 'Any',

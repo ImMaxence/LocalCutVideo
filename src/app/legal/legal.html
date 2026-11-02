@@ -28,7 +28,8 @@
                     <a [href]="seg.href" target="_blank" rel="noopener">{{ seg.text }}</a>
                   }
                 } @else {
-                  {{ seg.text }}
+                  <!-- No whitespace around the text: "outlook.fr." must not become "outlook.fr ." -->
+                  <ng-container>{{ seg.text }}</ng-container>
                 }
               }
             </p>

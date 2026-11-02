@@ -1,6 +1,6 @@
 {
   "name": "localcutvideo",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "description": "Privacy-first video editor running 100% in the browser: auto-cut, Whisper subtitles, auto-framing, MP4 export.",
   "license": "MIT",
   "author": "Maxence Bonnici",
@@ -12,12 +12,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && npm run seo",
     "watch": "ng build --watch --configuration development",
     "typecheck": "tsc -p tsconfig.app.json --noEmit && tsc -p tsconfig.worker.json --noEmit && tsc -p tsconfig.spec.json --noEmit",
     "test": "vitest run",
     "test:e2e": "playwright test",
-    "sitemap": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/sitemap.mjs"
+    "seo": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/seo.mjs",
+    "check:bots": "node scripts/check-bots.mjs"
   },
   "private": true,
   "packageManager": "npm@11.19.1",

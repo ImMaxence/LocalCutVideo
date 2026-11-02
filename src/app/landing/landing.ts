@@ -39,7 +39,7 @@ export class Landing {
   ];
 
   protected readonly steps = ['open', 'edit', 'export'];
-  protected readonly promoPoints = ['moments', 'title', 'formats', 'local'];
+  protected readonly spotlightPoints = ['moments', 'title', 'formats', 'local'];
   protected readonly privacyPoints = ['upload', 'account', 'csp', 'storage'];
   protected readonly faq = ['free', 'formats', 'browsers', 'size', 'offline', 'ai'];
   protected readonly browsers = [

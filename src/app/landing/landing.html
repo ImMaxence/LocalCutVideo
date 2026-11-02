@@ -114,19 +114,19 @@
 </section>
 
 <section class="section" id="thumbnail">
-  <div class="container promo card" appReveal>
-    <div class="promo-text">
+  <div class="container spotlight card" appReveal>
+    <div class="spotlight-text">
       <span class="eyebrow">{{ 'landing.thumbnail.eyebrow' | transloco }}</span>
       <h2>{{ 'landing.thumbnail.title' | transloco }}</h2>
       <p class="muted lead-sm">{{ 'landing.thumbnail.text' | transloco }}</p>
-      <ul class="promo-points">
-        @for (k of promoPoints; track k) {
+      <ul class="spotlight-points">
+        @for (k of spotlightPoints; track k) {
           <li><app-icon name="check" [size]="16" /> {{ 'landing.thumbnail.points.' + k | transloco }}</li>
         }
       </ul>
       <a class="btn primary lg" [routerLink]="'/thumbnail' | localize">{{ 'landing.thumbnail.cta' | transloco }} <app-icon name="arrow-right" [size]="17" /></a>
     </div>
-    <div class="promo-visual" aria-hidden="true">
+    <div class="spotlight-visual" aria-hidden="true">
       <div class="mock-thumb">
         <span class="sun"></span>
         <span class="hill"></span>
