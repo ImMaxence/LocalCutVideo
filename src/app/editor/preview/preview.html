@@ -15,7 +15,8 @@
     playsinline
     preload="auto"
     (seeked)="markDirty()"
-    (loadeddata)="markDirty()"
+    (loadedmetadata)="onMetadata(video)"
+    (loadeddata)="onLoadedData(video)"
   ></video>
 }
 <audio #music [src]="musicUrl() ?? ''" preload="auto"></audio>

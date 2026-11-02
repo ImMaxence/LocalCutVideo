@@ -41,15 +41,16 @@
   },
   "landing": {
     "hero": {
-      "badgeLocal": "100 % lokalt, ingen opplasting",
-      "badgeOpen": "Gratis og åpen kildekode",
-      "title1": "Rediger videoene dine",
-      "title2": "Ingenting forlater datamaskinen din",
-      "lead": "LocalCutVideo klipper bort stillhet, transkriberer med Whisper, brenner inn karaoketekster og beskjærer 16:9 til 9:16, helt i nettleseren din. Ingen opplasting, ingen konto, ingen server",
-      "cta": "Åpne redigeringsverktøyet",
+      "badgeLocal": "Videoene dine blir hos deg",
+      "badgeOpen": "Uten vannmerke, åpen kildekode",
+      "title1": "Rediger videoene dine med ett klikk",
+      "title2": "uten å laste opp noe",
+      "lead": "Klipp bort pauser og «eh», legg til animerte undertekster og bytt automatisk til TikTok-format. Gratis, uten konto og uten vannmerke: alt skjer på datamaskinen din",
+      "cta": "Rediger videoen min gratis",
       "github": "Se på GitHub",
-      "hint": "Fungerer best i Chrome eller Edge på en datamaskin",
-      "demo": "Prøv med en demovideo"
+      "hint": "Ingen registrering · Best på datamaskin, med Chrome eller Edge",
+      "demo": "Prøv demoen",
+      "badgeAlt": "Det gratis alternativet til CapCut"
     },
     "mock": {
       "w1": "Så i dag",
@@ -62,95 +63,95 @@
       "cap2": "datamaskin"
     },
     "stats": {
-      "upload": "byte lastet opp",
-      "local": "behandlet på enheten din",
+      "upload": "videoer lastet opp på internett",
       "languages": "språk i grensesnittet",
-      "gpu": "akselerert KI og koding"
+      "free": "gratis, uten abonnement",
+      "watermark": "vannmerker på videoene dine"
     },
     "how": {
       "eyebrow": "Slik fungerer det",
-      "title": "Fra råopptak til en video klar for publisering i tre trinn",
+      "title": "En video klar til å publiseres i tre steg",
       "open": {
-        "title": "Åpne en video",
-        "text": "Velg en fil på disken din. Den leses der den ligger: ingen kopi, ingen opplasting, selv for filer på flere gigabyte"
+        "title": "Åpne videoen din",
+        "text": "Dra inn en video fra datamaskinen eller mobilen. Den åpnes med en gang, selv om den er kjempestor"
       },
       "edit": {
-        "title": "La verktøyet jobbe",
-        "text": "Stillhet oppdages, tale transkriberes ord for ord og ansikter følges, alt lokalt. Rett hva som helst ved å redigere teksten"
+        "title": "Start den automatiske redigeringen",
+        "text": "Pauser og nøling klippes bort, undertekstene skriver seg selv, og den som snakker, holdes i bildet. Etterpå kan du finjustere alt"
       },
       "export": {
-        "title": "Eksporter MP4-filen",
-        "text": "Velg 16:9, 9:16 eller 1:1. Videoen kodes av skjermkortet ditt og skrives rett til disken din"
+        "title": "Last ned og publiser",
+        "text": "Få videoen din i HD, i formatet til TikTok, YouTube eller Instagram, klar til å publiseres"
       }
     },
     "features": {
       "eyebrow": "Funksjoner",
-      "title": "Alt du trenger for videoer der noen snakker til kamera",
-      "lead": "Laget for skapere på YouTube, TikTok, Reels og Shorts som helst ikke vil laste opp råopptakene sine noe sted",
+      "title": "Alt du trenger for videoer som fenger",
+      "lead": "For skapere på TikTok, Reels, Shorts og YouTube, men også lærere, kursholdere og bedrifter",
       "silences": {
-        "title": "Klipp bort stillhet automatisk",
-        "text": "Finner pauser ut fra lydnivået og fjerner dem, med justerbar terskel, minstelengde og pusterom"
+        "title": "Farvel til pauser",
+        "text": "Stillhet og dødtid blir funnet og klippet bort automatisk: videoen din får mer tempo på et sekund"
       },
       "textEdit": {
-        "title": "Rediger via tekst",
-        "text": "Whisper gir hvert ord et tidsstempel. Slett ord i transkripsjonen, så klippes den tilsvarende delen av videoen"
+        "title": "Rediger som en tekst",
+        "text": "Videoen din transkriberes ord for ord. Slett en setning i teksten, så forsvinner den fra videoen"
       },
       "captions": {
-        "title": "Karaoketekster",
-        "text": "Animerte tekster ord for ord brent inn i videoen, i stilene karaoke, ren eller med boks, i din uthevingsfarge"
+        "title": "Automatiske undertekster",
+        "text": "Animerte undertekster ord for ord, som på TikTok, uten at du skriver noe. Velg stil og farge"
       },
       "framing": {
-        "title": "Automatisk beskjæring 16:9 → 9:16",
-        "text": "Ansiktssporing holder den som snakker i bildet når du gjør en liggende video om til en stående"
+        "title": "TikTok-format med ett klikk",
+        "text": "Gjør en liggende video stående: ansiktet til den som snakker, holdes alltid i bildet"
       },
       "zoom": {
-        "title": "Smart zoom",
-        "text": "Vekslende innzooming ved hvert klipp får jump cuts til å se tilsiktede ut og holder på seerne"
+        "title": "Zoom med rytme",
+        "text": "Diskrete zoom ved hvert klipp gir energi og holder på publikummet ditt helt til slutt"
       },
       "ducking": {
-        "title": "Lyd og musikk",
-        "text": "Skru opp volumet, jevn ut klippene og legg til bakgrunnsmusikk som senker seg selv når noen snakker"
+        "title": "Bakgrunnsmusikk",
+        "text": "Legg til musikk som senkes av seg selv når du snakker, og still inn volumet for hvert opptak"
       },
       "recovery": {
-        "title": "Gjenoppretting etter krasj",
-        "text": "Hver endring lagres i nettleseren i sanntid. Åpne fanen igjen og fortsett akkurat der du slapp"
+        "title": "Ingenting går tapt",
+        "text": "Alt lagres fortløpende. Lukk fanen, kom tilbake senere og fortsett akkurat der du slapp"
       },
       "offline": {
-        "title": "Fungerer uten nett",
-        "text": "Installer det som en app. Når KI-modellen er lastet ned, fungerer hele verktøyet uten internettforbindelse"
+        "title": "Også uten internett",
+        "text": "Installer det som en app: når det er klart, fungerer det også på toget eller i flyet"
       },
       "export": {
-        "title": "Rask maskinvareeksport",
-        "text": "Kodingen bruker WebCodecs, videokoderen som er innebygd i nettleseren og skjermkortet ditt, i stedet for treg programvarekoding"
+        "title": "HD uten vannmerke",
+        "text": "Eksporter i 720p eller 1080p, opptil 60 bilder per sekund. Ingen logo, ingen betalversjon"
       },
       "clips": {
-        "title": "Sett sammen flere klipp",
-        "text": "Slipp flere opptak samtidig: de settes sammen til én video, i den rekkefølgen du velger, med felles tidslinje og transkripsjon"
+        "title": "Flere opptak, én video",
+        "text": "Dra inn alle opptakene på en gang: de settes etter hverandre i den rekkefølgen du velger"
       },
       "inputs": {
-        "title": "MP4, MOV, WebM, MKV",
-        "text": "Åpner filene fra mobilen og kameraet ditt, også HEVC-videoer fra iPhone når nettleseren kan dekode dem"
+        "title": "Videoer fra mobilen din",
+        "text": "MP4, MOV, WebM, MKV: åpne videoer fra mobilen eller kameraet ditt, også fra iPhone hvis nettleseren din kan spille dem av"
       },
       "languages": {
-        "title": "Flerspråklig",
-        "text": "Grensesnittet snakker {{ count }} språk, og Whisper transkriberer dusinvis til, med automatisk språkgjenkjenning"
+        "title": "På ditt språk",
+        "text": "Grensesnittet finnes på {{ count }} språk, og undertekster fungerer på dusinvis av språk som gjenkjennes automatisk"
       }
     },
     "privacy": {
       "eyebrow": "Personvern",
-      "title": "Ingen opplasting, fra grunnen av",
-      "lead": "Videoen din leses direkte fra disken din. Lydanalyse, transkripsjon, ansiktssporing og koding kjører i bakgrunnstråder (Web Workers) på maskinen din. Det finnes rett og slett ingen server å sende opptakene dine til",
-      "upload": "Aldri noen opplasting: filen forlater aldri datamaskinen din",
-      "account": "Ingen konto, ingen informasjonskapsler, ingen statistikk",
-      "csp": "En streng Content-Security-Policy lar bare siden snakke med dette nettstedet, som også leverer KI-modellene (Hugging Face er bare en reserve)",
-      "storage": "Prosjekter lagres i nettleserens lokale database (IndexedDB) og kan slettes når som helst",
+      "title": "Videoene dine blir hos deg",
+      "lead": "Her lastes ingenting opp: din egen enhet gjør hele jobben, til og med den kunstige intelligensen. Ingen andre ser bildene dine",
+      "upload": "Videoene dine sendes aldri over internett",
+      "account": "Ingen konto, ingen reklame, ingen sporing",
+      "storage": "Prosjektene dine blir i nettleseren og kan slettes med ett klikk",
       "diagram": {
         "machine": "Datamaskinen din",
         "file": "Videofil",
         "browser": "Nettleseren din",
         "upload": "Opplasting til en server",
         "model": "Nedlasting av KI-modellen (én gang, i hurtigbuffer)"
-      }
+      },
+      "sensitive": "Perfekt for konfidensielle videoer: møter, kunder, familie"
     },
     "support": {
       "eyebrow": "Kompatibilitet",
@@ -167,15 +168,15 @@
       "title": "Ofte stilte spørsmål",
       "free": {
         "q": "Er det virkelig gratis? Hvor er haken?",
-        "a": "Det er gratis og åpen kildekode. Siden alt arbeidet skjer på datamaskinen din, finnes det ingen serverkostnader å betale, så det er ingenting å selge deg og ingen data å samle inn"
+        "a": "Det finnes ingen. Siden datamaskinen din gjør jobben, er det ingen dyre servere å betale for: ingen abonnement, ingen vannmerke, ingen reklame. Koden er til og med offentlig (åpen kildekode)"
       },
       "formats": {
-        "q": "Hvilke videoformater kan jeg åpne?",
-        "a": "MP4, MOV, WebM og MKV, så lenge nettleseren kan dekode kodeken (H.264, HEVC, VP9, AV1 avhengig av nettleser og system). Eksporten er en MP4-fil"
+        "q": "Hvilke videoer kan jeg åpne?",
+        "a": "Videoer fra mobilen, kameraet eller skjermopptakene dine: MP4, MOV, WebM og MKV. Resultatet er en MP4-fil som spilles av overalt"
       },
       "browsers": {
-        "q": "Hvorfor Chrome eller Edge?",
-        "a": "De støtter File System Access API, som lar verktøyet åpne videoen igjen etter en omlasting og skrive eksporten rett til disken. Andre nettlesere fungerer også, med noen ekstra klikk"
+        "q": "Hvilken nettleser bør jeg bruke?",
+        "a": "Chrome eller Edge på en datamaskin gir den beste opplevelsen. Firefox og Safari fungerer også, med noen ekstra klikk for å åpne en video på nytt. På mobil passer korte videoer best"
       },
       "size": {
         "q": "Finnes det en grense for filstørrelse?",
@@ -183,11 +184,15 @@
       },
       "offline": {
         "q": "Fungerer det uten internett?",
-        "a": "Ja, når det først er lastet inn. Installer det som app (PWA) og transkriber én gang mens du er tilkoblet: Whisper-modellen lagres da i hurtigbufferen, og alt fungerer uten nett"
+        "a": "Ja. Første gang lastes undertekstverktøyet ned, bare én gang. Deretter fungerer alt uten nett, og du kan til og med installere det som en app"
       },
       "ai": {
-        "q": "Hvor kjører KI-en?",
-        "a": "I nettleseren din. Whisper kjører med Transformers.js på skjermkortet (WebGPU) eller prosessoren (WebAssembly), og ansiktsgjenkjenningen bruker MediaPipe. Modellene lastes ned én gang, lyden din sendes aldri"
+        "q": "Hvordan kan KI-en kjøre uten server?",
+        "a": "KI-modellene (Whisper for undertekster, MediaPipe for ansikter) lastes ned én gang, deretter kjører datamaskinen din dem. Stemmen din og bildene dine forlater den aldri"
+      },
+      "capcut": {
+        "q": "Hva er forskjellen fra CapCut?",
+        "a": "LocalCutVideo konsentrerer seg om det videoer der noen snakker til kameraet trenger (pauser klippet bort, automatiske undertekster, stående format), uten konto og uten å laste opp videoene dine. For spesialeffekter, animerte overganger eller trendy maler er CapCut mer komplett"
       }
     },
     "final": {
@@ -207,6 +212,23 @@
       "cta": "Lag et miniatyrbilde",
       "mockTitle": "Min første",
       "mockAccent": "vlogg"
+    },
+    "compare": {
+      "eyebrow": "Sammenligning",
+      "title": "Hvorfor velge LocalCutVideo?",
+      "lead": "De fleste nettbaserte videoredigerere laster opp videoene dine til sine servere og sparer de beste verktøyene til et abonnement. Her er alt gratis og blir hos deg",
+      "them": "Nettbaserte videoredigerere",
+      "yes": "Ja",
+      "no": "Nei",
+      "sometimes": "Noen ganger",
+      "rows": {
+        "free": "100 % gratis, uten vannmerke",
+        "account": "Uten konto eller registrering",
+        "auto": "Automatiske undertekster og klipp inkludert",
+        "upload": "Videoene dine blir på enheten din",
+        "offline": "Fungerer uten internett"
+      },
+      "note": "CapCut er et varemerke som tilhører eieren. LocalCutVideo er et uavhengig prosjekt uten tilknytning til CapCut eller ByteDance"
     }
   },
   "changelog": {
@@ -232,11 +254,12 @@
     "recent": "Nylige prosjekter",
     "empty": "Ingen prosjekter ennå. Åpne en video for å komme i gang",
     "delete": "Slett prosjektet",
-    "confirmDelete": "Slette prosjektet «{{ name }}»? Videofilen på disken din påvirkes ikke",
     "multi": "Flere filer? De settes sammen til én video, i navnerekkefølge",
     "importFile": "Åpne en prosjektfil (.lcv.json)",
     "saveFile": "Lagre prosjektet som en fil",
-    "imported": "Prosjektet er åpnet: velg videoene for å fortsette"
+    "imported": "Prosjektet er åpnet: velg videoene for å fortsette",
+    "deleteTitle": "Slette dette prosjektet?",
+    "deleteText": "«{{ name }}» fjernes fra prosjektene dine, sammen med klipp og undertekster. Videofilen din blir ikke rørt"
   },
   "errors": {
     "notVideo": "Denne filen ser ikke ut til å være en video",
@@ -600,6 +623,11 @@
       "blur": "Uskarp",
       "strength": "Uskarphetsgrad",
       "error": "Bakgrunnsuskarpheten kunne ikke starte på denne enheten"
+    },
+    "mobile": {
+      "title": "Redigering på mobil er begrenset",
+      "text": "Redigeringsverktøyet er laget for en datamaskin. På mobilen fungerer det for korte videoer, men det kan være tregt eller gå tom for minne. Bruk Chrome eller Edge på en datamaskin for best resultat",
+      "ok": "Skjønner"
     }
   },
   "legal": {
@@ -817,8 +845,8 @@
   },
   "seo": {
     "home": {
-      "title": "LocalCutVideo — Gratis videoredigering i nettleseren, ingenting lastes opp",
-      "description": "Rediger videoene dine i nettleseren: stillhet klippes bort automatisk, KI-tekster, ansiktsbeskjæring for TikTok og Shorts, miniatyrbilder. Gratis og åpen kildekode, videoene dine forlater aldri datamaskinen din"
+      "title": "LocalCutVideo — Det gratis alternativet til CapCut, uten opplasting",
+      "description": "Gratis automatisk videoredigering i nettleseren: pauser klippet bort, animerte undertekster, TikTok- og Shorts-format, miniatyrbilder. Ingen konto, ingen vannmerke, videoene dine forlater aldri datamaskinen din"
     },
     "thumbnail": {
       "title": "Gratis verktøy for YouTube-miniatyrbilder — LocalCutVideo",

@@ -41,15 +41,16 @@
   },
   "landing": {
     "hero": {
-      "badgeLocal": "100% local, zero envios",
-      "badgeOpen": "Gratuito e de código aberto",
-      "title1": "Edite os seus vídeos",
-      "title2": "Nada sai do seu computador",
-      "lead": "O LocalCutVideo corta os silêncios, transcreve com o Whisper, grava legendas karaoke e reenquadra de 16:9 para 9:16, tudo no seu navegador. Sem envios, sem conta, sem servidor",
-      "cta": "Abrir o editor",
+      "badgeLocal": "Os seus vídeos ficam consigo",
+      "badgeOpen": "Sem marca de água, código aberto",
+      "title1": "Edite os seus vídeos com um clique",
+      "title2": "sem enviar nada para a internet",
+      "lead": "Corte os silêncios e os «hã», adicione legendas animadas e passe para o formato TikTok automaticamente. Gratuito, sem conta e sem marca de água: tudo acontece no seu computador",
+      "cta": "Editar o meu vídeo grátis",
       "github": "Ver no GitHub",
-      "hint": "Funciona melhor no Chrome ou no Edge, num computador",
-      "demo": "Experimentar com um vídeo de demonstração"
+      "hint": "Sem registo · Ideal no computador, com Chrome ou Edge",
+      "demo": "Experimentar a demo",
+      "badgeAlt": "A alternativa gratuita ao CapCut"
     },
     "mock": {
       "w1": "Então hoje",
@@ -62,95 +63,95 @@
       "cap2": "computador"
     },
     "stats": {
-      "upload": "bytes enviados",
-      "local": "processado no seu dispositivo",
+      "upload": "vídeos enviados para a internet",
       "languages": "idiomas da interface",
-      "gpu": "IA e codificação aceleradas"
+      "free": "gratuito, sem subscrição",
+      "watermark": "marcas de água nos seus vídeos"
     },
     "how": {
       "eyebrow": "Como funciona",
-      "title": "Das gravações em bruto a um vídeo pronto a publicar em três passos",
+      "title": "Um vídeo pronto a publicar em três passos",
       "open": {
-        "title": "Abra um vídeo",
-        "text": "Escolha um ficheiro no seu disco. É lido no próprio local: sem cópia, sem envio, mesmo com vários gigabytes"
+        "title": "Abra o seu vídeo",
+        "text": "Arraste um vídeo do computador ou do telemóvel. Abre logo, mesmo que seja enorme"
       },
       "edit": {
-        "title": "Deixe o editor trabalhar",
-        "text": "Os silêncios são detetados, a fala é transcrita palavra a palavra e os rostos são seguidos, tudo localmente. Corrija o que quiser editando o texto"
+        "title": "Lance a edição automática",
+        "text": "Os silêncios e as hesitações são cortados, as legendas escrevem-se sozinhas e quem fala fica ao centro. Depois pode ajustar tudo"
       },
       "export": {
-        "title": "Exporte o MP4",
-        "text": "Escolha 16:9, 9:16 ou 1:1. O vídeo é codificado pela sua placa gráfica e gravado diretamente no seu disco"
+        "title": "Transfira e publique",
+        "text": "Obtenha o seu vídeo em HD, no formato do TikTok, YouTube ou Instagram, pronto a publicar"
       }
     },
     "features": {
       "eyebrow": "Funcionalidades",
-      "title": "Tudo o que precisa para vídeos falados",
-      "lead": "Feito para criadores de YouTube, TikTok, Reels e Shorts que preferem não enviar as suas gravações para lado nenhum",
+      "title": "Tudo o que precisa para vídeos que prendem a atenção",
+      "lead": "Para criadores de TikTok, Reels, Shorts e YouTube, mas também professores, formadores e empresas",
       "silences": {
-        "title": "Corte automático dos silêncios",
-        "text": "Deteta as pausas pelo volume do áudio e remove-as, com limiar, duração mínima e margem de respiração ajustáveis"
+        "title": "Adeus aos silêncios",
+        "text": "Os silêncios e os tempos mortos são detetados e cortados automaticamente: o seu vídeo ganha ritmo num segundo"
       },
       "textEdit": {
-        "title": "Edição pelo texto",
-        "text": "O Whisper dá a cada palavra o seu tempo exato. Apague palavras na transcrição e o trecho de vídeo correspondente é cortado"
+        "title": "Edite como um texto",
+        "text": "O seu vídeo é transcrito palavra a palavra. Apague uma frase do texto e ela desaparece do vídeo"
       },
       "captions": {
-        "title": "Legendas karaoke",
-        "text": "Legendas animadas palavra a palavra gravadas no vídeo, nos estilos karaoke, simples ou em caixa, com a sua cor de destaque"
+        "title": "Legendas automáticas",
+        "text": "Legendas animadas palavra a palavra, como no TikTok, sem escrever nada. Escolha o estilo e a cor"
       },
       "framing": {
-        "title": "Enquadramento automático 16:9 → 9:16",
-        "text": "O seguimento do rosto mantém quem fala no enquadramento quando transforma um vídeo horizontal num vertical"
+        "title": "Formato TikTok num clique",
+        "text": "Passe um vídeo horizontal para vertical: o rosto de quem fala fica sempre no enquadramento"
       },
       "zoom": {
-        "title": "Zoom inteligente",
-        "text": "Zooms alternados em cada corte tornam os jump cuts intencionais e prendem a atenção de quem vê"
+        "title": "Zooms que dão ritmo",
+        "text": "Zooms subtis em cada corte dão dinamismo e prendem o seu público até ao fim"
       },
       "ducking": {
-        "title": "Som e música",
-        "text": "Aumente o volume, equilibre os seus clipes e adicione uma música de fundo que baixa sozinha quando alguém fala"
+        "title": "Música de fundo",
+        "text": "Adicione uma música que baixa sozinha quando fala e ajuste o volume de cada take"
       },
       "recovery": {
-        "title": "Recuperação após falhas",
-        "text": "Cada alteração é guardada no seu navegador em tempo real. Volte a abrir o separador e continue exatamente onde ficou"
+        "title": "Nada se perde",
+        "text": "Tudo é guardado à medida que trabalha. Feche o separador, volte mais tarde e continue exatamente onde ficou"
       },
       "offline": {
-        "title": "Funciona offline",
-        "text": "Instale-o como aplicação. Depois de transferido o modelo de IA, todo o editor funciona sem ligação à internet"
+        "title": "Mesmo sem internet",
+        "text": "Instale-o como uma aplicação: depois de pronto, funciona também no comboio ou no avião"
       },
       "export": {
-        "title": "Exportação rápida por hardware",
-        "text": "A codificação usa o WebCodecs, o codificador de vídeo integrado no seu navegador e na sua placa gráfica, em vez de uma lenta codificação por software"
+        "title": "HD e sem marca de água",
+        "text": "Exporte em 720p ou 1080p, até 60 imagens por segundo. Nenhum logótipo adicionado, nenhuma versão paga"
       },
       "clips": {
-        "title": "Montagem de vários clipes",
-        "text": "Largue vários takes de uma vez: são juntos num só vídeo, pela ordem que escolher, com uma linha temporal e uma transcrição partilhadas"
+        "title": "Vários takes, um vídeo",
+        "text": "Largue todos os takes de uma vez: são juntos uns a seguir aos outros, pela ordem que escolher"
       },
       "inputs": {
-        "title": "MP4, MOV, WebM, MKV",
-        "text": "Abre os ficheiros do seu telemóvel e da sua câmara, incluindo os vídeos HEVC do iPhone quando o navegador os consegue descodificar"
+        "title": "Os vídeos do seu telemóvel",
+        "text": "MP4, MOV, WebM, MKV: abra vídeos do telemóvel ou da câmara, incluindo os do iPhone se o seu navegador os conseguir ler"
       },
       "languages": {
-        "title": "Multilingue",
-        "text": "A interface fala {{ count }} idiomas e o Whisper transcreve dezenas de outros, com deteção automática do idioma"
+        "title": "Na sua língua",
+        "text": "A interface existe em {{ count }} línguas e as legendas funcionam em dezenas de línguas, detetadas automaticamente"
       }
     },
     "privacy": {
       "eyebrow": "Privacidade",
-      "title": "Zero envios, por conceção",
-      "lead": "O seu vídeo é lido diretamente do seu disco. A análise de áudio, a transcrição, o seguimento do rosto e a codificação correm em threads de fundo (Web Workers) na sua máquina. Simplesmente não existe nenhum servidor para onde enviar as suas gravações",
-      "upload": "Nunca há envios: o ficheiro nunca sai do seu computador",
-      "account": "Sem conta, sem cookies, sem estatísticas",
-      "csp": "Uma Content-Security-Policy rigorosa só deixa a página comunicar com este site, que também fornece os modelos de IA (o Hugging Face é apenas uma alternativa)",
-      "storage": "Os projetos são guardados na base de dados local do seu navegador (IndexedDB) e podem ser apagados a qualquer momento",
+      "title": "Os seus vídeos ficam consigo",
+      "lead": "Aqui nada é enviado: é o seu próprio dispositivo que faz todo o trabalho, até a inteligência artificial. Mais ninguém vê as suas imagens",
+      "upload": "Os seus vídeos nunca são enviados pela internet",
+      "account": "Sem conta, sem publicidade, sem rastreio",
+      "storage": "Os seus projetos ficam no navegador e apagam-se com um clique",
       "diagram": {
         "machine": "O seu computador",
         "file": "Ficheiro de vídeo",
         "browser": "O seu navegador",
         "upload": "Envio para um servidor",
         "model": "Transferência do modelo de IA (uma vez, em cache)"
-      }
+      },
+      "sensitive": "Ideal para vídeos confidenciais: reuniões, clientes, família"
     },
     "support": {
       "eyebrow": "Compatibilidade",
@@ -167,15 +168,15 @@
       "title": "Perguntas frequentes",
       "free": {
         "q": "É mesmo gratuito? Onde está o truque?",
-        "a": "É gratuito e de código aberto. Como todo o trabalho é feito no seu computador, não há custos de servidor a pagar, por isso não há nada para lhe vender nem dados para recolher"
+        "a": "Não há. Como é o seu computador que faz o trabalho, não há servidores caros para pagar: sem subscrição, sem marca de água, sem publicidade. O código é até público (código aberto)"
       },
       "formats": {
-        "q": "Que formatos de vídeo posso abrir?",
-        "a": "MP4, MOV, WebM e MKV, desde que o navegador consiga descodificar o codec (H.264, HEVC, VP9, AV1, consoante o navegador e o sistema). A exportação é um ficheiro MP4"
+        "q": "Que vídeos posso abrir?",
+        "a": "Os vídeos do telemóvel, da câmara ou das gravações de ecrã: MP4, MOV, WebM e MKV. O resultado é um ficheiro MP4 que se reproduz em todo o lado"
       },
       "browsers": {
-        "q": "Porquê o Chrome ou o Edge?",
-        "a": "Suportam a File System Access API, que permite ao editor reabrir o vídeo depois de recarregar e gravar a exportação diretamente no disco. Os outros navegadores também funcionam, com alguns cliques a mais"
+        "q": "Que navegador devo usar?",
+        "a": "Chrome ou Edge num computador dão a melhor experiência. Firefox e Safari também funcionam, com alguns cliques extra para reabrir um vídeo. No telemóvel, prefira vídeos curtos"
       },
       "size": {
         "q": "Existe um limite de tamanho de ficheiro?",
@@ -183,11 +184,15 @@
       },
       "offline": {
         "q": "Funciona sem internet?",
-        "a": "Sim, depois de carregado. Instale-o como aplicação (PWA) e faça uma transcrição enquanto estiver online: o modelo Whisper fica em cache e tudo passa a funcionar offline"
+        "a": "Sim. Na primeira vez, a ferramenta de legendas é transferida, uma única vez. Depois tudo funciona offline, e pode até instalá-lo como uma aplicação"
       },
       "ai": {
-        "q": "Onde é que a IA corre?",
-        "a": "No seu navegador. O Whisper corre com o Transformers.js na sua placa gráfica (WebGPU) ou no processador (WebAssembly), e a deteção de rostos usa o MediaPipe. Os modelos são transferidos uma vez, o seu áudio nunca é enviado"
+        "q": "Como é que a IA funciona sem servidor?",
+        "a": "Os modelos de IA (Whisper para as legendas, MediaPipe para os rostos) são transferidos uma vez e depois é o seu computador que os executa. A sua voz e as suas imagens nunca saem dele"
+      },
+      "capcut": {
+        "q": "Qual a diferença em relação ao CapCut?",
+        "a": "O LocalCutVideo concentra-se no essencial dos vídeos a falar para a câmara (silêncios cortados, legendas automáticas, formato vertical), sem conta e sem enviar os seus vídeos. Para efeitos especiais, transições animadas ou modelos da moda, o CapCut é mais completo"
       }
     },
     "final": {
@@ -207,6 +212,23 @@
       "cta": "Criar uma miniatura",
       "mockTitle": "O meu primeiro",
       "mockAccent": "vlog"
+    },
+    "compare": {
+      "eyebrow": "Comparação",
+      "title": "Porquê escolher o LocalCutVideo?",
+      "lead": "A maioria dos editores de vídeo online envia os seus vídeos para os servidores deles e reserva as melhores ferramentas para uma subscrição. Aqui tudo é gratuito e fica consigo",
+      "them": "Editores de vídeo online",
+      "yes": "Sim",
+      "no": "Não",
+      "sometimes": "Às vezes",
+      "rows": {
+        "free": "100% gratuito, sem marca de água",
+        "account": "Sem conta nem registo",
+        "auto": "Legendas e cortes automáticos incluídos",
+        "upload": "Os seus vídeos ficam no seu dispositivo",
+        "offline": "Funciona sem internet"
+      },
+      "note": "CapCut é uma marca do respetivo proprietário. O LocalCutVideo é um projeto independente, sem ligação ao CapCut nem à ByteDance"
     }
   },
   "changelog": {
@@ -232,11 +254,12 @@
     "recent": "Projetos recentes",
     "empty": "Ainda não há projetos. Abra um vídeo para começar",
     "delete": "Eliminar o projeto",
-    "confirmDelete": "Eliminar o projeto «{{ name }}»? O ficheiro de vídeo no seu disco não é afetado",
     "multi": "Vários ficheiros? São montados num só vídeo, por ordem de nome",
     "importFile": "Abrir um ficheiro de projeto (.lcv.json)",
     "saveFile": "Guardar o projeto num ficheiro",
-    "imported": "Projeto aberto: selecione os respetivos vídeos para continuar"
+    "imported": "Projeto aberto: selecione os respetivos vídeos para continuar",
+    "deleteTitle": "Eliminar este projeto?",
+    "deleteText": "«{{ name }}» será removido dos seus projetos, com os cortes e as legendas. O seu ficheiro de vídeo não é alterado"
   },
   "errors": {
     "notVideo": "Este ficheiro não parece ser um vídeo",
@@ -600,6 +623,11 @@
       "blur": "Desfocado",
       "strength": "Intensidade da desfocagem",
       "error": "Não foi possível iniciar a desfocagem do fundo neste dispositivo"
+    },
+    "mobile": {
+      "title": "Editar no telemóvel é limitado",
+      "text": "O editor foi pensado para computador. No telemóvel serve para vídeos curtos, mas pode ficar lento ou sem memória. Para um melhor resultado, use o Chrome ou o Edge num computador",
+      "ok": "Percebi"
     }
   },
   "legal": {
@@ -817,8 +845,8 @@
   },
   "seo": {
     "home": {
-      "title": "LocalCutVideo — Editor de vídeo gratuito no navegador, nada é enviado",
-      "description": "Edite os seus vídeos no navegador: silêncios cortados automaticamente, legendas por IA, enquadramento no rosto para TikTok e Shorts, miniaturas. Gratuito e de código aberto, os seus vídeos nunca saem do seu computador"
+      "title": "LocalCutVideo — A alternativa gratuita ao CapCut, sem upload",
+      "description": "Edição de vídeo automática e gratuita no navegador: silêncios cortados, legendas animadas, formato TikTok e Shorts, miniaturas. Sem conta, sem marca de água, os seus vídeos nunca saem do seu computador"
     },
     "thumbnail": {
       "title": "Criador de miniaturas do YouTube gratuito — LocalCutVideo",

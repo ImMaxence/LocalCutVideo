@@ -190,7 +190,7 @@ export class EditorStore {
   readonly selectedText = signal<string | null>(null);
   readonly whisperModel = signal<WhisperModel>('base');
   readonly whisperLanguage = signal<string | null>(null);
-  readonly notice = signal<{ key: string; params?: Record<string, unknown>; tone: 'info' | 'error' } | null>(null);
+  readonly notice = signal<{ key: string; params?: Record<string, unknown>; tone: 'info' | 'error'; detail?: string } | null>(null);
   private noticeTimer = 0;
 
   /** Stable across edits that do not touch the clips, so the waveform is not rebuilt for nothing. */
@@ -365,10 +365,11 @@ export class EditorStore {
     this.changes.next();
   }
 
-  notify(key: string, params?: Record<string, unknown>, tone: 'info' | 'error' = 'info'): void {
+  /** `detail`: the raw error message, shown small under the text so a user can report it. */
+  notify(key: string, params?: Record<string, unknown>, tone: 'info' | 'error' = 'info', detail?: string): void {
     clearTimeout(this.noticeTimer);
-    this.notice.set({ key, params, tone });
-    this.noticeTimer = window.setTimeout(() => this.notice.set(null), tone === 'error' ? 8000 : 3500);
+    this.notice.set({ key, params, tone, detail });
+    this.noticeTimer = window.setTimeout(() => this.notice.set(null), detail ? 12000 : tone === 'error' ? 8000 : 3500);
   }
 
   private syncHistoryFlags(): void {
@@ -1199,6 +1200,7 @@ export class EditorStore {
         mark(id, (await work()) === false ? 'skipped' : 'done');
       } catch (e) {
         if (String((e as Error)?.message).includes('CANCELLED')) throw e;
+        console.error(`Auto edit step "${id}" failed`, e);
         mark(id, 'error');
       }
     };

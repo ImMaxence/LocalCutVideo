@@ -5,9 +5,9 @@
 <h1 align="center">LocalCutVideo</h1>
 
 <p align="center">
-  <b>Edit your videos. Nothing leaves your computer.</b><br />
-  Auto-cut silences, Whisper subtitles, text-based editing, 16:9 → 9:16 auto-framing and MP4 export,<br />
-  running 100% in the browser. No upload, no account, no server.
+  <b>Edit your videos in one click. Nothing leaves your computer.</b><br />
+  The free, open source CapCut alternative for talking-head videos: silences cut, animated subtitles,<br />
+  TikTok format with face tracking and MP4 export, running 100% in the browser. No upload, no account, no watermark.
 </p>
 
 <p align="center">
@@ -27,7 +27,7 @@
 | --- | --- |
 | **Auto edit** | One click: transcription, filler removal, silence cuts, face framing, smart zoom and karaoke subtitles, with good defaults. Undo in one step. |
 | **Voice detection** | The auto edit asks whether someone speaks in each clip (or detects it with Whisper). Clips without voice get no subtitles and only real dead air is cut. |
-| **Try it** | "Try with a demo video" on the landing page opens the editor with a sample video and a guided tour (arrows on each tool, "?" button to replay it). |
+| **Try it** | "Try the demo" on the home page opens the editor with a sample video and a guided tour (arrows on each tool, "?" button to replay it). |
 | **Texts and transitions** | Titles and notes over the video (same styles as the thumbnails); quick fade or fade to black at every cut. |
 | **Background blur** | The background behind the person is blurred, the person stays sharp (MediaPipe selfie segmentation). |
 | **Project files** | Save a project as a `.lcv.json` file (the edit, without the video) and open it on another computer. |
@@ -40,6 +40,7 @@
 | **Manual cuts** | Drag on the waveform (or use Start / End, keys I and O) to select a part, then Cut (X). |
 | **Speed changes** | Speed up or slow down the selected part or transcript words (0.25× to 4×). Voices keep their pitch (WSOLA time stretch in the export). |
 | **Self-hosted AI** | The Whisper models are served by the site itself (downloaded at the Docker build): transcribing never contacts a third party. Hugging Face is only a backup when a model is missing. |
+| **GPU or CPU** | Whisper runs on the graphics card (WebGPU) and switches to the processor (WebAssembly) if the GPU fails; iPhone and iPad use the processor from the start. A failed transcription shows the error's detail. |
 | **Language detection** | The spoken language is detected automatically (Whisper language ID), or chosen by hand. |
 | **Karaoke subtitles** | Word-by-word animated captions burned into the video (karaoke, clean, boxed). |
 | **Output formats** | 16:9 (YouTube), 9:16 (TikTok, Reels, Shorts), 1:1, in 720p or 1080p. |
@@ -49,7 +50,7 @@
 | **Rotation** | Turn a video filmed sideways by 90° steps; preview, export and face tracking follow. |
 | **Timeline** | Wavesurfer.js waveform with draggable, resizable cut regions; select a cut to nudge its start / end (±0.1 s) or listen to it; zoom (buttons, Ctrl + wheel); undo / redo. |
 | **Light preview** | The preview renders at 360p, 540p or 720p to keep the editor smooth; the export is always full quality. |
-| **Mobile editor** | A dedicated phone layout with the tools in a bottom tab bar. |
+| **Mobile editor** | A dedicated phone layout with the tools in a bottom tab bar and dialogs that fit the screen. A notice says a computer works better (once per session). |
 | **Fast export** | Hardware encoding with WebCodecs, MP4 muxing with Mediabunny, streamed straight to disk. |
 | **Crash recovery** | Every change is auto-saved to IndexedDB; the video file is reconnected on reopen. |
 | **PWA** | Installable, works offline, "Open with LocalCutVideo" for video files. |
@@ -62,6 +63,10 @@
 | Landing (dark) | Landing (light) |
 | --- | --- |
 | ![Landing page, dark theme](docs/screenshots/landing-dark.png) | ![Landing page, light theme](docs/screenshots/landing-light.png) |
+
+| Features | Comparison with online editors |
+| --- | --- |
+| ![Features section of the home page](docs/screenshots/features.png) | ![Comparison table: LocalCutVideo and online video editors](docs/screenshots/compare.png) |
 
 | Auto edit | Silence detection and cuts |
 | --- | --- |
@@ -127,7 +132,7 @@ flowchart LR
 | Chrome, Edge, Opera, Brave (desktop) | Full: crash recovery with file handles, export streamed to disk, WebGPU transcription |
 | Firefox | Editing and export work; the video must be re-selected after closing the tab; the export is downloaded |
 | Safari (recent) | Same as Firefox; WebCodecs support depends on the version |
-| Mobile | Short clips only, limited by memory |
+| Mobile | Short clips only, limited by memory; on iPhone, Whisper runs on the processor (WebAssembly) |
 
 ## Tech stack
 
@@ -141,7 +146,7 @@ flowchart LR
 | Timeline | Wavesurfer.js 8 (regions + timeline plugins) |
 | Workers | Comlink |
 | PWA | `@angular/service-worker`, web app manifest with file handlers |
-| Tests | Vitest (engine), Playwright (key flows in Chrome) |
+| Tests | Vitest (engine, translations), Playwright (key flows in Chrome) |
 | Hosting | nginx (COOP/COEP, CSP, caching) in Docker, deployed with Coolify |
 
 ## Development
@@ -154,12 +159,14 @@ npm start            # http://localhost:4200 (COOP/COEP headers are set by the d
 npm run build        # production build in dist/localcutvideo/browser (public pages prerendered,
                      # then sitemap.xml, llms.txt, llms-full.txt and index.md files: scripts/seo.mjs)
 npm run typecheck    # app + workers + tests
-npm test             # unit tests of the engine (Vitest)
+npm test             # unit tests (Vitest): the engine, and every language has every text
 npm run test:e2e     # end-to-end tests (Playwright) against http://localhost:4280
 npm run check:bots   # search engines and AI crawlers get every page (online, or: -- http://localhost:4280)
 ```
 
 The end-to-end tests run against a build (`docker compose -f docker-compose.yml -f docker-compose.local.yml up -d`, or `E2E_BASE_URL=http://localhost:4200` with `npm start`) in Chrome. `E2E_AI=1` adds the Whisper tests, which download a model the first time.
+
+Every interface text lives in the 44 files of `public/i18n` (English is the reference): a new text goes into all of them, and `npm test` fails when one is missing or loses a `{{ placeholder }}`.
 
 ```text
 src/app/
@@ -170,6 +177,7 @@ src/app/
 ├── editor/      editor page, store (state, auto-save, undo), preview, timeline, transcript, inspector
 ├── landing/     landing page
 ├── projects/    project list, multi-file import, crash-recovery entry point
+├── shared/      UI pieces: icons, language picker, theme switch, confirmation dialog
 ├── changelog/   renders CHANGELOG.md
 ├── thumbnail/   thumbnail maker
 └── legal/       legal notice, privacy policy, terms of use (content in public/i18n)
@@ -215,3 +223,5 @@ The first build downloads them (about 1.5 GB for the three); Docker keeps that s
 ## License
 
 [MIT](LICENSE) © Maxence Bonnici. Third-party libraries and models keep their own licenses (Mediabunny: MPL-2.0, Transformers.js, MediaPipe and Dexie: Apache-2.0, Wavesurfer.js: BSD-3-Clause, Whisper models: MIT, Montserrat and Inter fonts: OFL).
+
+CapCut is a trademark of its owner. LocalCutVideo is an independent project, not affiliated with CapCut or ByteDance.

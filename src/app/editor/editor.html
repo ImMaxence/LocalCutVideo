@@ -154,11 +154,25 @@
 
   @if (tourOpen()) {
     <app-tour [steps]="tourSteps" (closed)="tourOpen.set(false)" />
+  } @else if (mobile() && mobileNotice()) {
+    <div class="mobile-notice" role="status">
+      <span class="mobile-notice-icon"><app-icon name="monitor" [size]="18" /></span>
+      <div>
+        <b>{{ 'editor.mobile.title' | transloco }}</b>
+        <p>{{ 'editor.mobile.text' | transloco }}</p>
+      </div>
+      <button class="btn sm primary" type="button" (click)="dismissMobileNotice()">{{ 'editor.mobile.ok' | transloco }}</button>
+    </div>
   }
   @if (store.notice(); as n) {
     <div class="notice" [class.error]="n.tone === 'error'" role="status">
       <app-icon [name]="n.tone === 'error' ? 'alert' : 'check'" [size]="16" />
-      {{ n.key | transloco: n.params }}
+      <span class="notice-text">
+        {{ n.key | transloco: n.params }}
+        @if (n.detail) {
+          <small dir="ltr">{{ n.detail }}</small>
+        }
+      </span>
     </div>
   }
 

@@ -40,7 +40,14 @@ const sections = (...blocks) => blocks.flat().filter(Boolean).join('\n\n');
 // --- The pages ------------------------------------------------------------------------------
 
 function home(t, lang) {
-  const features = ['silences', 'clips', 'textEdit', 'captions', 'framing', 'zoom', 'ducking', 'recovery', 'offline', 'export', 'inputs', 'languages'];
+  const features = ['silences', 'captions', 'framing', 'textEdit', 'zoom', 'ducking', 'clips', 'export', 'inputs', 'recovery', 'offline', 'languages'];
+  const compare = [
+    ['free', 'sometimes'],
+    ['account', 'sometimes'],
+    ['auto', 'sometimes'],
+    ['upload', 'no'],
+    ['offline', 'no'],
+  ];
   const browsers = [
     ['Chrome / Edge', 'ok', 'full'],
     ['Opera / Brave', 'ok', 'full'],
@@ -50,32 +57,40 @@ function home(t, lang) {
   ];
   return sections(
     `## ${t('landing.hero.title1')} — ${t('landing.hero.title2')}`,
-    `${t('landing.hero.badgeLocal')} · ${t('landing.hero.badgeOpen')}`,
+    `${t('landing.hero.badgeAlt')} · ${t('landing.hero.badgeLocal')} · ${t('landing.hero.badgeOpen')}`,
     t('landing.hero.lead'),
     `[${t('landing.hero.cta')}](${SITE}/app) · [${t('landing.hero.demo')}](${SITE}/app?demo=1) · [${t('landing.hero.github')}](${REPO})`,
     t('landing.hero.hint'),
     [
+      `- **100%** ${t('landing.stats.free')}`,
+      `- **0** ${t('landing.stats.watermark')}`,
       `- **0** ${t('landing.stats.upload')}`,
-      `- **100%** ${t('landing.stats.local')}`,
       `- **${LANGUAGES.length}** ${t('landing.stats.languages')}`,
-      `- **GPU** ${t('landing.stats.gpu')}`,
     ].join('\n'),
     `## ${t('landing.how.title')}`,
     ['open', 'edit', 'export'].map((step, i) => `### ${i + 1}. ${t(`landing.how.${step}.title`)}\n\n${t(`landing.how.${step}.text`)}`),
     `## ${t('landing.features.title')}`,
     t('landing.features.lead'),
     features.map((f) => `### ${t(`landing.features.${f}.title`)}\n\n${t(`landing.features.${f}.text`, { count: LANGUAGES.length })}`),
+    `## ${t('landing.compare.title')}`,
+    t('landing.compare.lead'),
+    [
+      `| | LocalCutVideo | ${t('landing.compare.them')} |`,
+      '|---|---|---|',
+      ...compare.map(([row, them]) => `| ${t(`landing.compare.rows.${row}`)} | ${t('landing.compare.yes')} | ${t(`landing.compare.${them}`)} |`),
+    ].join('\n'),
+    t('landing.compare.note'),
     `## ${t('landing.thumbnail.title')}`,
     t('landing.thumbnail.text'),
     ['moments', 'title', 'formats', 'local'].map((p) => `- ${t(`landing.thumbnail.points.${p}`)}`).join('\n'),
     `[${t('landing.thumbnail.cta')}](${url('/thumbnail', lang)})`,
     `## ${t('landing.privacy.title')}`,
     t('landing.privacy.lead'),
-    ['upload', 'account', 'csp', 'storage'].map((p) => `- ${t(`landing.privacy.${p}`)}`).join('\n'),
+    ['upload', 'account', 'sensitive', 'storage'].map((p) => `- ${t(`landing.privacy.${p}`)}`).join('\n'),
     `## ${t('landing.support.title')}`,
     browsers.map(([name, level, text]) => `- **${name}** (${t(`landing.support.${level}`)}) — ${t(`landing.support.${text}`)}`).join('\n'),
     `## ${t('landing.faq.title')}`,
-    ['free', 'formats', 'browsers', 'size', 'offline', 'ai'].map((q) => `### ${t(`landing.faq.${q}.q`)}\n\n${t(`landing.faq.${q}.a`)}`),
+    ['free', 'capcut', 'formats', 'browsers', 'size', 'offline', 'ai'].map((q) => `### ${t(`landing.faq.${q}.q`)}\n\n${t(`landing.faq.${q}.a`)}`),
     `## ${t('landing.final.title')}`,
     t('landing.final.text'),
     `[${t('landing.hero.cta')}](${SITE}/app)`,

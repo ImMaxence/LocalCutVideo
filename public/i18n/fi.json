@@ -41,15 +41,16 @@
   },
   "landing": {
     "hero": {
-      "badgeLocal": "100 % paikallinen, ei latauksia palvelimelle",
-      "badgeOpen": "Ilmainen ja avointa lähdekoodia",
-      "title1": "Muokkaa videoitasi",
-      "title2": "Mikään ei poistu tietokoneeltasi",
-      "lead": "LocalCutVideo leikkaa hiljaiset kohdat, litteroi Whisperillä, polttaa karaoketekstitykset ja rajaa 16:9-videon muotoon 9:16, kokonaan selaimessasi. Ei latauksia, ei tiliä, ei palvelinta",
-      "cta": "Avaa editori",
+      "badgeLocal": "Videosi pysyvät sinulla",
+      "badgeOpen": "Ei vesileimaa, avoin lähdekoodi",
+      "title1": "Editoi videosi yhdellä klikkauksella",
+      "title2": "lähettämättä mitään verkkoon",
+      "lead": "Leikkaa tauot ja ”öö”:t pois, lisää animoidut tekstitykset ja vaihda TikTok-muotoon automaattisesti. Ilmainen, ilman tiliä ja ilman vesileimaa: kaikki tapahtuu tietokoneellasi",
+      "cta": "Editoi videoni ilmaiseksi",
       "github": "Katso GitHubissa",
-      "hint": "Toimii parhaiten Chromella tai Edgellä tietokoneella",
-      "demo": "Kokeile esittelyvideolla"
+      "hint": "Ei rekisteröitymistä · Paras tietokoneella, Chromella tai Edgellä",
+      "demo": "Kokeile demoa",
+      "badgeAlt": "Ilmainen CapCut-vaihtoehto"
     },
     "mock": {
       "w1": "Eli tänään",
@@ -62,95 +63,95 @@
       "cap2": "tietokoneellasi"
     },
     "stats": {
-      "upload": "tavua ladattu palvelimelle",
-      "local": "käsitelty laitteellasi",
+      "upload": "videota lähetetty verkkoon",
       "languages": "käyttöliittymän kieltä",
-      "gpu": "kiihdytetty tekoäly ja koodaus"
+      "free": "ilmainen, ei tilausta",
+      "watermark": "vesileimaa videoissasi"
     },
     "how": {
       "eyebrow": "Näin se toimii",
-      "title": "Raakamateriaalista julkaisuvalmiiksi videoksi kolmessa vaiheessa",
+      "title": "Julkaisuvalmis video kolmessa vaiheessa",
       "open": {
-        "title": "Avaa video",
-        "text": "Valitse tiedosto levyltäsi. Se luetaan paikallaan: ei kopiota, ei latausta, vaikka tiedosto olisi useita gigatavuja"
+        "title": "Avaa videosi",
+        "text": "Vedä video tietokoneelta tai puhelimesta. Se aukeaa heti, vaikka olisi valtava"
       },
       "edit": {
-        "title": "Anna editorin tehdä työ",
-        "text": "Hiljaiset kohdat tunnistetaan, puhe litteroidaan sana sanalta ja kasvoja seurataan, kaikki paikallisesti. Korjaa mitä tahansa muokkaamalla tekstiä"
+        "title": "Käynnistä automaattinen editointi",
+        "text": "Tauot ja takeltelut leikataan pois, tekstitykset kirjoittuvat itsestään ja puhuja pysyy kuvan keskellä. Jälkeenpäin voit hioa kaiken"
       },
       "export": {
-        "title": "Vie MP4-tiedosto",
-        "text": "Valitse 16:9, 9:16 tai 1:1. Näytönohjaimesi koodaa videon ja se kirjoitetaan suoraan levyllesi"
+        "title": "Lataa ja julkaise",
+        "text": "Saat videosi HD-laatuisena TikTokin, YouTuben tai Instagramin muodossa, valmiina julkaistavaksi"
       }
     },
     "features": {
       "eyebrow": "Ominaisuudet",
-      "title": "Kaikki mitä tarvitset puhevideoihin",
-      "lead": "Tehty YouTube-, TikTok-, Reels- ja Shorts-sisällöntuottajille, jotka eivät halua ladata raakamateriaaliaan minnekään",
+      "title": "Kaikki mitä tarvitset videoihin, jotka pitävät otteessaan",
+      "lead": "TikTokin, Reelsin, Shortsien ja YouTuben tekijöille, mutta myös opettajille, kouluttajille ja yrityksille",
       "silences": {
-        "title": "Hiljaisuuksien automaattinen leikkaus",
-        "text": "Tunnistaa tauot äänenvoimakkuudesta ja poistaa ne, säädettävällä kynnyksellä, vähimmäispituudella ja hengitystilalla"
+        "title": "Hyvästi tauot",
+        "text": "Hiljaisuudet ja tyhjät hetket löydetään ja leikataan pois automaattisesti: videosi saa lisää tempoa sekunnissa"
       },
       "textEdit": {
-        "title": "Muokkaa tekstin kautta",
-        "text": "Whisper antaa jokaiselle sanalle aikaleiman. Poista sanoja litteroinnista, niin vastaava kohta videosta leikataan"
+        "title": "Editoi kuin tekstiä",
+        "text": "Videosi litteroidaan sana sanalta. Poista lause tekstistä, niin se katoaa videosta"
       },
       "captions": {
-        "title": "Karaoketekstitykset",
-        "text": "Sana sanalta animoidut tekstitykset poltettuna videoon, karaoke-, pelkistetyllä tai laatikkotyylillä, omalla korostusvärilläsi"
+        "title": "Automaattiset tekstitykset",
+        "text": "Animoidut tekstitykset sana sanalta, kuten TikTokissa, kirjoittamatta mitään. Valitse tyyli ja väri"
       },
       "framing": {
-        "title": "Automaattinen rajaus 16:9 → 9:16",
-        "text": "Kasvojen seuranta pitää puhujan kuvassa, kun muutat vaakavideon pystyvideoksi"
+        "title": "TikTok-muoto yhdellä klikkauksella",
+        "text": "Muuta vaakavideo pystyvideoksi: puhujan kasvot pysyvät aina kuvassa"
       },
       "zoom": {
-        "title": "Älykäs zoomaus",
-        "text": "Vuorottelevat lähennykset jokaisessa leikkauksessa saavat hyppyleikkaukset näyttämään tarkoituksellisilta ja pitävät katsojat mukana"
+        "title": "Rytmikkäät zoomaukset",
+        "text": "Hienovaraiset zoomaukset jokaisessa leikkauksessa tuovat energiaa ja pitävät yleisösi mukana loppuun asti"
       },
       "ducking": {
-        "title": "Ääni ja musiikki",
-        "text": "Nosta äänenvoimakkuutta, tasoita leikkeet ja lisää taustamusiikki, joka hiljenee itsestään aina kun joku puhuu"
+        "title": "Taustamusiikki",
+        "text": "Lisää musiikkia, joka hiljenee itsestään kun puhut, ja säädä jokaisen oton äänenvoimakkuus"
       },
       "recovery": {
-        "title": "Palautus kaatumisen jälkeen",
-        "text": "Jokainen muutos tallennetaan selaimeesi reaaliajassa. Avaa välilehti uudelleen ja jatka täsmälleen siitä, mihin jäit"
+        "title": "Mitään ei katoa",
+        "text": "Kaikki tallentuu sitä mukaa. Sulje välilehti, palaa myöhemmin ja jatka täsmälleen siitä, mihin jäit"
       },
       "offline": {
-        "title": "Toimii ilman verkkoa",
-        "text": "Asenna se sovellukseksi. Kun tekoälymalli on ladattu, koko editori toimii ilman internetyhteyttä"
+        "title": "Myös ilman nettiä",
+        "text": "Asenna se sovelluksena: kun se on valmis, se toimii myös junassa tai lentokoneessa"
       },
       "export": {
-        "title": "Nopea laitteistovienti",
-        "text": "Koodaus käyttää WebCodecsia, selaimeesi ja näytönohjaimeesi sisäänrakennettua videokooderia, hitaan ohjelmistokoodauksen sijaan"
+        "title": "HD ilman vesileimaa",
+        "text": "Vie 720p- tai 1080p-laatuna, jopa 60 kuvaa sekunnissa. Ei lisättyä logoa, ei maksullista versiota"
       },
       "clips": {
-        "title": "Useiden leikkeiden kokoaminen",
-        "text": "Pudota useita ottoja kerralla: ne yhdistetään yhdeksi videoksi valitsemassasi järjestyksessä, yhteisellä aikajanalla ja litteroinnilla"
+        "title": "Monta ottoa, yksi video",
+        "text": "Vedä kaikki otot kerralla: ne liitetään peräkkäin haluamaasi järjestykseen"
       },
       "inputs": {
-        "title": "MP4, MOV, WebM, MKV",
-        "text": "Avaa puhelimesi ja kamerasi tiedostot, myös iPhonen HEVC-videot, kun selaimesi pystyy purkamaan ne"
+        "title": "Puhelimesi videot",
+        "text": "MP4, MOV, WebM, MKV: avaa videoita puhelimesta tai kamerasta, myös iPhonen videoita, jos selaimesi osaa toistaa ne"
       },
       "languages": {
-        "title": "Monikielinen",
-        "text": "Käyttöliittymä puhuu {{ count }} kieltä ja Whisper litteroi kymmeniä muita, automaattisella kielentunnistuksella"
+        "title": "Omalla kielelläsi",
+        "text": "Käyttöliittymä on saatavilla {{ count }} kielellä ja tekstitykset toimivat kymmenillä kielillä, jotka tunnistetaan automaattisesti"
       }
     },
     "privacy": {
       "eyebrow": "Yksityisyys",
-      "title": "Ei latauksia, suunnittelun lähtökohtana",
-      "lead": "Videosi luetaan suoraan levyltäsi. Äänianalyysi, litterointi, kasvojen seuranta ja koodaus toimivat taustasäikeissä (Web Workers) koneellasi. Palvelinta, jolle materiaalisi lähetettäisiin, ei yksinkertaisesti ole",
-      "upload": "Ei koskaan latauksia: tiedosto ei koskaan poistu tietokoneeltasi",
-      "account": "Ei tiliä, ei evästeitä, ei analytiikkaa",
-      "csp": "Tiukka Content-Security-Policy sallii sivun viestiä vain tämän sivuston kanssa, joka toimittaa myös tekoälymallit (Hugging Face on vain varalla)",
-      "storage": "Projektit tallennetaan selaimesi paikalliseen tietokantaan (IndexedDB), ja ne voi poistaa milloin tahansa",
+      "title": "Videosi pysyvät sinulla",
+      "lead": "Täällä mitään ei lähetetä: oma laitteesi tekee kaiken työn, jopa tekoälyn. Kukaan muu ei näe kuviasi",
+      "upload": "Videoitasi ei koskaan lähetetä internetiin",
+      "account": "Ei tiliä, ei mainoksia, ei seurantaa",
+      "storage": "Projektisi pysyvät selaimessasi ja ne voi poistaa yhdellä klikkauksella",
       "diagram": {
         "machine": "Tietokoneesi",
         "file": "Videotiedosto",
         "browser": "Selaimesi",
         "upload": "Lataus palvelimelle",
         "model": "Tekoälymallin lataus (kerran, välimuistiin)"
-      }
+      },
+      "sensitive": "Ihanteellinen luottamuksellisille videoille: kokoukset, asiakkaat, perhe"
     },
     "support": {
       "eyebrow": "Yhteensopivuus",
@@ -167,27 +168,31 @@
       "title": "Usein kysytyt kysymykset",
       "free": {
         "q": "Onko se todella ilmainen? Missä on juju?",
-        "a": "Se on ilmainen ja avointa lähdekoodia. Koska kaikki työ tehdään tietokoneellasi, palvelinkuluja ei ole, joten sinulle ei ole mitään myytävää eikä tietoja kerättävää"
+        "a": "Jujua ei ole. Koska tietokoneesi tekee työn, kalliita palvelimia ei tarvitse maksaa: ei tilausta, ei vesileimaa, ei mainoksia. Koodi on jopa julkinen (avoin lähdekoodi)"
       },
       "formats": {
-        "q": "Mitä videomuotoja voin avata?",
-        "a": "MP4, MOV, WebM ja MKV, kunhan selaimesi pystyy purkamaan koodekin (H.264, HEVC, VP9, AV1 selaimesta ja järjestelmästä riippuen). Vienti on MP4-tiedosto"
+        "q": "Mitä videoita voin avata?",
+        "a": "Puhelimen, kameran tai näyttötallenteiden videoita: MP4, MOV, WebM ja MKV. Tuloksena on MP4-tiedosto, joka toimii kaikkialla"
       },
       "browsers": {
-        "q": "Miksi Chrome tai Edge?",
-        "a": "Ne tukevat File System Access API:a, jonka avulla editori voi avata videosi uudelleen sivun päivityksen jälkeen ja kirjoittaa viennin suoraan levylle. Muutkin selaimet toimivat muutamalla lisäklikkauksella"
+        "q": "Mitä selainta kannattaa käyttää?",
+        "a": "Chrome tai Edge tietokoneella tarjoavat parhaan kokemuksen. Firefox ja Safari toimivat myös, muutamalla lisäklikkauksella videon avaamiseksi uudelleen. Puhelimella kannattaa suosia lyhyitä videoita"
       },
       "size": {
         "q": "Onko tiedostokoolla rajaa?",
         "a": "Latausrajaa ei ole, koska mitään ei ladata. Video luetaan levyltä pieninä paloina; käytännön raja on tietokoneesi muisti ja kärsivällisyytesi hyvin pitkien videoiden kanssa"
       },
       "offline": {
-        "q": "Toimiiko se ilman internetiä?",
-        "a": "Kyllä, kun se on kerran ladattu. Asenna se sovellukseksi (PWA) ja litteroi kerran verkossa ollessasi: Whisper-malli tallentuu välimuistiin ja kaikki toimii ilman verkkoa"
+        "q": "Toimiiko se ilman nettiä?",
+        "a": "Kyllä. Ensimmäisellä kerralla tekstitystyökalu ladataan, vain kerran. Sen jälkeen kaikki toimii ilman yhteyttä, ja voit jopa asentaa sen sovelluksena"
       },
       "ai": {
-        "q": "Missä tekoäly toimii?",
-        "a": "Selaimessasi. Whisper toimii Transformers.js:n avulla näytönohjaimellasi (WebGPU) tai suorittimellasi (WebAssembly), ja kasvojentunnistus käyttää MediaPipea. Mallit ladataan kerran, ääntäsi ei lähetetä koskaan"
+        "q": "Miten tekoäly voi toimia ilman palvelinta?",
+        "a": "Tekoälymallit (Whisper tekstityksiin, MediaPipe kasvoihin) ladataan kerran, minkä jälkeen tietokoneesi ajaa niitä. Äänesi ja kuvasi eivät koskaan lähde sieltä"
+      },
+      "capcut": {
+        "q": "Mitä eroa on CapCutiin?",
+        "a": "LocalCutVideo keskittyy siihen, mitä kameralle puhuttavat videot tarvitsevat (tauot pois, automaattiset tekstitykset, pystymuoto), ilman tiliä ja lähettämättä videoitasi verkkoon. Erikoistehosteisiin, animoituihin siirtymiin tai trendikkäisiin pohjiin CapCut on monipuolisempi"
       }
     },
     "final": {
@@ -207,6 +212,23 @@
       "cta": "Tee pikkukuva",
       "mockTitle": "Ensimmäinen",
       "mockAccent": "vlogini"
+    },
+    "compare": {
+      "eyebrow": "Vertailu",
+      "title": "Miksi valita LocalCutVideo?",
+      "lead": "Useimmat verkon videoeditorit lähettävät videosi palvelimilleen ja varaavat parhaat työkalunsa tilaajille. Täällä kaikki on ilmaista ja pysyy sinulla",
+      "them": "Verkon videoeditorit",
+      "yes": "Kyllä",
+      "no": "Ei",
+      "sometimes": "Joskus",
+      "rows": {
+        "free": "100 % ilmainen, ei vesileimaa",
+        "account": "Ei tiliä eikä rekisteröitymistä",
+        "auto": "Automaattiset tekstitykset ja leikkaukset mukana",
+        "upload": "Videosi pysyvät laitteellasi",
+        "offline": "Toimii ilman nettiä"
+      },
+      "note": "CapCut on omistajansa tavaramerkki. LocalCutVideo on itsenäinen projekti, eikä sillä ole yhteyttä CapCutiin tai ByteDanceen"
     }
   },
   "changelog": {
@@ -232,11 +254,12 @@
     "recent": "Viimeisimmät projektit",
     "empty": "Ei vielä projekteja. Avaa video aloittaaksesi",
     "delete": "Poista projekti",
-    "confirmDelete": "Poistetaanko projekti ”{{ name }}”? Levylläsi olevaan videotiedostoon ei kosketa",
     "multi": "Useita tiedostoja? Ne kootaan yhdeksi videoksi nimijärjestyksessä",
     "importFile": "Avaa projektitiedosto (.lcv.json)",
     "saveFile": "Tallenna projekti tiedostoksi",
-    "imported": "Projekti avattu: valitse sen videot jatkaaksesi"
+    "imported": "Projekti avattu: valitse sen videot jatkaaksesi",
+    "deleteTitle": "Poistetaanko tämä projekti?",
+    "deleteText": "”{{ name }}” poistetaan projekteistasi leikkauksineen ja tekstityksineen. Videotiedostoosi ei kosketa"
   },
   "errors": {
     "notVideo": "Tämä tiedosto ei näytä olevan video",
@@ -600,6 +623,11 @@
       "blur": "Sumennettu",
       "strength": "Sumennuksen voimakkuus",
       "error": "Taustan sumennusta ei voitu käynnistää tällä laitteella"
+    },
+    "mobile": {
+      "title": "Editointi puhelimella on rajallista",
+      "text": "Editori on tehty tietokoneelle. Puhelimella se sopii lyhyille videoille, mutta se voi olla hidas tai muisti voi loppua. Parhaan tuloksen saat Chromella tai Edgellä tietokoneella",
+      "ok": "Selvä"
     }
   },
   "legal": {
@@ -817,8 +845,8 @@
   },
   "seo": {
     "home": {
-      "title": "LocalCutVideo — Ilmainen videoeditori selaimessa, mitään ei ladata",
-      "description": "Muokkaa videoitasi selaimessa: hiljaisuudet leikataan automaattisesti, tekoälytekstitykset, kasvorajaus TikTokiin ja Shortsiin, pikkukuvat. Ilmainen ja avointa lähdekoodia, videosi eivät koskaan poistu tietokoneeltasi"
+      "title": "LocalCutVideo — Ilmainen CapCut-vaihtoehto, mitään ei lähetetä",
+      "description": "Ilmainen automaattinen videoeditointi selaimessa: tauot leikataan pois, animoidut tekstitykset, TikTok- ja Shorts-muoto, pikkukuvat. Ei tiliä, ei vesileimaa, videosi eivät koskaan lähde tietokoneeltasi"
     },
     "thumbnail": {
       "title": "Ilmainen YouTube-pikkukuvatyökalu — LocalCutVideo",

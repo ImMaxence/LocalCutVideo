@@ -41,15 +41,16 @@
   },
   "landing": {
     "hero": {
-      "badgeLocal": "100% lokal, walang upload",
-      "badgeOpen": "Libre at open source",
-      "title1": "I-edit ang mga video mo",
-      "title2": "Walang lumalabas sa iyong computer",
-      "lead": "Pinuputol ng LocalCutVideo ang mga katahimikan, ginagawang teksto ang salita gamit ang Whisper, naglalagay ng karaoke subtitle, at nire-reframe ang 16:9 bilang 9:16, lahat sa loob ng iyong browser. Walang upload, walang account, walang server",
-      "cta": "Buksan ang editor",
+      "badgeLocal": "Sa iyo lang ang mga video mo",
+      "badgeOpen": "Walang watermark, open source",
+      "title1": "I-edit ang mga video mo sa isang click",
+      "title2": "nang walang ina-upload",
+      "lead": "Tanggalin ang mga patlang at “ah”, magdagdag ng animated na subtitle at awtomatikong lumipat sa format ng TikTok. Libre, walang account at walang watermark: lahat ay nangyayari sa computer mo",
+      "cta": "I-edit ang video ko nang libre",
       "github": "Tingnan sa GitHub",
-      "hint": "Pinakamahusay sa Chrome o Edge sa computer",
-      "demo": "Subukan gamit ang demo video"
+      "hint": "Walang sign-up · Pinakamaganda sa computer, gamit ang Chrome o Edge",
+      "demo": "Subukan ang demo",
+      "badgeAlt": "Ang libreng alternatibo sa CapCut"
     },
     "mock": {
       "w1": "So ngayong araw",
@@ -62,95 +63,95 @@
       "cap2": "computer"
     },
     "stats": {
-      "upload": "byte na na-upload",
-      "local": "pinoproseso sa device mo",
+      "upload": "video na na-upload sa internet",
       "languages": "wika ng interface",
-      "gpu": "pinabilis na AI at encoding"
+      "free": "libre, walang subscription",
+      "watermark": "watermark sa mga video mo"
     },
     "how": {
       "eyebrow": "Paano ito gumagana",
-      "title": "Mula sa raw footage hanggang sa video na handang i-post, sa tatlong hakbang",
+      "title": "Video na handang i-post sa tatlong hakbang",
       "open": {
-        "title": "Magbukas ng video",
-        "text": "Pumili ng file sa disk mo. Binabasa ito sa mismong lugar: walang kopya, walang upload, kahit ilang gigabyte pa ang file"
+        "title": "Buksan ang video mo",
+        "text": "I-drag ang video mula sa computer o phone mo. Agad itong bubukas, kahit napakalaki"
       },
       "edit": {
-        "title": "Hayaang magtrabaho ang editor",
-        "text": "Natutukoy ang mga katahimikan, ginagawang teksto ang salita nang bawat salita, at sinusundan ang mga mukha, lahat sa lokal. Ayusin ang kahit ano sa pag-edit ng teksto"
+        "title": "Patakbuhin ang auto edit",
+        "text": "Tinatanggal ang mga patlang at pag-aalinlangan, kusang nasusulat ang mga subtitle at nananatili sa frame ang nagsasalita. Pagkatapos, puwede mong ayusin ang lahat"
       },
       "export": {
-        "title": "I-export ang MP4",
-        "text": "Pumili ng 16:9, 9:16 o 1:1. Ine-encode ng iyong graphics card ang video at direktang isinusulat sa disk mo"
+        "title": "I-download at i-post",
+        "text": "Kunin ang video mo sa HD, sa format ng TikTok, YouTube o Instagram, handang i-post"
       }
     },
     "features": {
       "eyebrow": "Mga feature",
-      "title": "Lahat ng kailangan mo para sa mga video na nagsasalita sa camera",
-      "lead": "Ginawa para sa mga creator ng YouTube, TikTok, Reels at Shorts na ayaw i-upload kahit saan ang kanilang raw footage",
+      "title": "Lahat ng kailangan mo para sa mga video na nakakakuha ng atensyon",
+      "lead": "Para sa mga creator sa TikTok, Reels, Shorts at YouTube, pati na rin sa mga guro, trainer at negosyo",
       "silences": {
-        "title": "Awtomatikong pagputol ng katahimikan",
-        "text": "Natutukoy ang mga paghinto batay sa lakas ng tunog at inaalis ang mga ito, na may naaayos na threshold, pinakamaikling haba at puwang sa paghinga"
+        "title": "Paalam sa mga patlang",
+        "text": "Awtomatikong hinahanap at tinatanggal ang katahimikan at mga bakanteng sandali: mas mabilis ang daloy ng video mo sa isang segundo"
       },
       "textEdit": {
-        "title": "Mag-edit gamit ang teksto",
-        "text": "Binibigyan ng Whisper ng timestamp ang bawat salita. Burahin ang mga salita sa transcript at mapuputol ang katugmang bahagi ng video"
+        "title": "Mag-edit na parang text",
+        "text": "Isinasalin sa text ang video mo, salita por salita. Burahin ang isang pangungusap sa text at mawawala ito sa video"
       },
       "captions": {
-        "title": "Karaoke subtitles",
-        "text": "Mga subtitle na gumagalaw bawat salita na nakabaon sa video, sa istilong karaoke, simple o naka-box, sa kulay ng highlight na gusto mo"
+        "title": "Awtomatikong subtitle",
+        "text": "Animated na subtitle salita por salita, gaya sa TikTok, nang walang tina-type. Piliin ang style at kulay"
       },
       "framing": {
-        "title": "Awtomatikong framing 16:9 → 9:16",
-        "text": "Pinapanatili ng face tracking ang nagsasalita sa frame kapag ginawa mong patayo ang pahigang video"
+        "title": "Format ng TikTok sa isang click",
+        "text": "Gawing patayo ang pahigang video: laging nasa frame ang mukha ng nagsasalita"
       },
       "zoom": {
-        "title": "Smart zoom",
-        "text": "Ang salit-salitang pag-zoom sa bawat putol ay nagpapamukhang sinadya ang mga jump cut at pinapanatiling nanonood ang mga tao"
+        "title": "Mga zoom na may ritmo",
+        "text": "Banayad na zoom sa bawat cut na nagbibigay-buhay at nagpapanatili sa manonood hanggang dulo"
       },
       "ducking": {
-        "title": "Tunog at musika",
-        "text": "Lakasan ang volume, pantayin ang mga clip, at magdagdag ng background music na kusang humihina kapag may nagsasalita"
+        "title": "Background music",
+        "text": "Magdagdag ng musikang kusang humihina kapag nagsasalita ka, at itakda ang volume ng bawat take"
       },
       "recovery": {
-        "title": "Pagbawi pagkatapos mag-crash",
-        "text": "Nase-save agad sa browser mo ang bawat pagbabago. Buksan muli ang tab at ituloy mismo kung saan ka huminto"
+        "title": "Walang nawawala",
+        "text": "Lahat ay nase-save habang nagtatrabaho ka. Isara ang tab, bumalik mamaya at ituloy kung saan ka huminto"
       },
       "offline": {
-        "title": "Gumagana offline",
-        "text": "I-install ito bilang app. Kapag na-download na ang AI model, gumagana ang buong editor kahit walang internet"
+        "title": "Kahit walang internet",
+        "text": "I-install ito na parang app: kapag handa na, gumagana rin ito sa tren o eroplano"
       },
       "export": {
-        "title": "Mabilis na hardware export",
-        "text": "Ginagamit ng encoding ang WebCodecs, ang video encoder na nasa iyong browser at graphics card, sa halip na mabagal na software encoding"
+        "title": "HD at walang watermark",
+        "text": "Mag-export sa 720p o 1080p, hanggang 60 frame bawat segundo. Walang dagdag na logo, walang bayad na bersyon"
       },
       "clips": {
-        "title": "Pagsasama-sama ng maraming clip",
-        "text": "Mag-drop ng ilang take nang sabay: pinagsasama ang mga ito sa iisang video, sa pagkakasunod na pipiliin mo, na may iisang timeline at transcript"
+        "title": "Maraming take, isang video",
+        "text": "I-drag ang lahat ng take nang sabay: pinagdudugtong ang mga ito ayon sa pagkakasunod na pipiliin mo"
       },
       "inputs": {
-        "title": "MP4, MOV, WebM, MKV",
-        "text": "Binubuksan ang mga file mula sa iyong phone at camera, kasama ang mga HEVC video ng iPhone kung kaya itong i-decode ng browser mo"
+        "title": "Mga video mula sa phone mo",
+        "text": "MP4, MOV, WebM, MKV: buksan ang mga video mula sa phone o camera mo, pati ang galing iPhone kung kaya itong i-play ng browser mo"
       },
       "languages": {
-        "title": "Maraming wika",
-        "text": "Available ang interface sa {{ count }} na wika at nagta-transcribe ang Whisper ng dose-dosenang iba pa, na may awtomatikong pagtukoy ng wika"
+        "title": "Sa sarili mong wika",
+        "text": "May {{ count }} wika ang interface at gumagana ang subtitle sa dose-dosenang wika na awtomatikong natutukoy"
       }
     },
     "privacy": {
       "eyebrow": "Privacy",
-      "title": "Walang upload, mula pa sa disenyo",
-      "lead": "Direktang binabasa ang video mo mula sa disk. Ang pagsusuri ng audio, transcription, face tracking at encoding ay tumatakbo lahat sa mga background thread (Web Workers) sa iyong computer. Talagang walang server na mapagpapadalhan ng footage mo",
-      "upload": "Kailanman walang upload: hindi kailanman lumalabas ang file sa iyong computer",
-      "account": "Walang account, walang cookies, walang analytics",
-      "csp": "Pinapayagan lang ng mahigpit na Content-Security-Policy ang page na makipag-ugnayan sa site na ito, na siya ring nagbibigay ng mga AI model (backup lang ang Hugging Face)",
-      "storage": "Sine-save ang mga proyekto sa lokal na database ng browser mo (IndexedDB) at mabubura anumang oras",
+      "title": "Sa iyo lang ang mga video mo",
+      "lead": "Walang ina-upload dito: ang sarili mong device ang gumagawa ng lahat ng trabaho, pati ang artificial intelligence. Walang ibang nakakakita ng footage mo",
+      "upload": "Hindi kailanman ipinapadala sa internet ang mga video mo",
+      "account": "Walang account, walang ads, walang tracking",
+      "storage": "Nananatili sa browser mo ang mga proyekto at nabubura sa isang click",
       "diagram": {
         "machine": "Ang computer mo",
         "file": "Video file",
         "browser": "Ang browser mo",
         "upload": "Pag-upload sa server",
         "model": "Pag-download ng AI model (isang beses, naka-cache)"
-      }
+      },
+      "sensitive": "Swak sa mga kumpidensyal na video: meeting, kliyente, pamilya"
     },
     "support": {
       "eyebrow": "Compatibility",
@@ -166,28 +167,32 @@
     "faq": {
       "title": "Mga madalas itanong",
       "free": {
-        "q": "Libre ba talaga? Ano ang kapalit?",
-        "a": "Libre ito at open source. Dahil nangyayari ang lahat ng trabaho sa iyong computer, walang gastos sa server, kaya walang ibebenta sa iyo at walang datos na kokolektahin"
+        "q": "Talaga bang libre? Ano'ng kapalit?",
+        "a": "Wala. Dahil computer mo ang gumagawa ng trabaho, walang mamahaling server na babayaran: walang subscription, walang watermark, walang ads. Pampubliko pa ang code (open source)"
       },
       "formats": {
-        "q": "Anong mga format ng video ang mabubuksan ko?",
-        "a": "MP4, MOV, WebM at MKV, basta kaya ng browser mo na i-decode ang codec (H.264, HEVC, VP9, AV1 depende sa browser at system). MP4 file ang export"
+        "q": "Anong mga video ang puwede kong buksan?",
+        "a": "Mga video mula sa phone, camera o screen recording mo: MP4, MOV, WebM at MKV. Ang resulta ay MP4 file na napapanood kahit saan"
       },
       "browsers": {
-        "q": "Bakit Chrome o Edge?",
-        "a": "Sinusuportahan nila ang File System Access API, na nagpapahintulot sa editor na buksan muli ang video mo pagkatapos mag-reload at isulat ang export direkta sa disk. Gumagana rin ang ibang browser, may ilang dagdag na click lang"
+        "q": "Anong browser ang dapat kong gamitin?",
+        "a": "Ang Chrome o Edge sa computer ang may pinakamagandang karanasan. Gumagana rin ang Firefox at Safari, may ilang dagdag na click para muling buksan ang video. Sa phone, mas mainam ang maiikling video"
       },
       "size": {
         "q": "May limitasyon ba sa laki ng file?",
         "a": "Walang limitasyon sa upload dahil walang ina-upload. Binabasa ang video mula sa disk nang paunti-unti; ang praktikal na limitasyon ay ang memory ng computer mo at ang pasensya mo sa napakahahabang video"
       },
       "offline": {
-        "q": "Gumagana ba ito nang walang internet?",
-        "a": "Oo, kapag na-load na. I-install ito bilang app (PWA) at mag-transcribe nang isang beses habang online: maka-cache ang Whisper model at gagana ang lahat offline"
+        "q": "Gumagana ba ito kahit walang internet?",
+        "a": "Oo. Sa unang beses, dina-download ang subtitle tool, isang beses lang. Pagkatapos, gumagana na ang lahat offline, at puwede mo pa itong i-install na parang app"
       },
       "ai": {
-        "q": "Saan tumatakbo ang AI?",
-        "a": "Sa browser mo. Tumatakbo ang Whisper gamit ang Transformers.js sa iyong graphics card (WebGPU) o processor (WebAssembly), at MediaPipe ang ginagamit sa face detection. Isang beses lang dina-download ang mga model, hindi kailanman ipinapadala ang audio mo"
+        "q": "Paano gumagana ang AI nang walang server?",
+        "a": "Ang mga AI model (Whisper para sa subtitle, MediaPipe para sa mukha) ay dina-download nang isang beses, saka pinapatakbo ng computer mo. Hindi kailanman umaalis doon ang boses at mga larawan mo"
+      },
+      "capcut": {
+        "q": "Ano ang pagkakaiba nito sa CapCut?",
+        "a": "Nakatuon ang LocalCutVideo sa kailangan ng mga video na nagsasalita sa camera (tinatanggal na patlang, awtomatikong subtitle, patayong format), nang walang account at walang ina-upload na video. Para sa special effects, animated na transition o mga usong template, mas kumpleto ang CapCut"
       }
     },
     "final": {
@@ -207,6 +212,23 @@
       "cta": "Gumawa ng thumbnail",
       "mockTitle": "Aking unang",
       "mockAccent": "vlog"
+    },
+    "compare": {
+      "eyebrow": "Paghahambing",
+      "title": "Bakit LocalCutVideo?",
+      "lead": "Karamihan sa mga online video editor ay nag-a-upload ng mga video mo sa kanilang server at itinatabi ang pinakamagagandang tool para sa subscription. Dito, libre ang lahat at sa iyo lang",
+      "them": "Mga online video editor",
+      "yes": "Oo",
+      "no": "Hindi",
+      "sometimes": "Minsan",
+      "rows": {
+        "free": "100% libre, walang watermark",
+        "account": "Walang account o sign-up",
+        "auto": "Kasama ang awtomatikong subtitle at cut",
+        "upload": "Nananatili sa device mo ang mga video mo",
+        "offline": "Gumagana kahit walang internet"
+      },
+      "note": "Ang CapCut ay trademark ng may-ari nito. Ang LocalCutVideo ay isang independiyenteng proyekto, walang kaugnayan sa CapCut o ByteDance"
     }
   },
   "changelog": {
@@ -232,11 +254,12 @@
     "recent": "Mga kamakailang proyekto",
     "empty": "Wala pang proyekto. Magbukas ng video para magsimula",
     "delete": "Burahin ang proyekto",
-    "confirmDelete": "Burahin ang proyektong “{{ name }}”? Hindi maaapektuhan ang video file sa disk mo",
     "multi": "Maraming file? Pagsasamahin sila sa iisang video, ayon sa pagkakasunod ng pangalan",
     "importFile": "Magbukas ng project file (.lcv.json)",
     "saveFile": "I-save ang proyekto bilang file",
-    "imported": "Nabuksan ang proyekto: piliin ang mga video nito para magpatuloy"
+    "imported": "Nabuksan ang proyekto: piliin ang mga video nito para magpatuloy",
+    "deleteTitle": "Burahin ang proyektong ito?",
+    "deleteText": "Aalisin ang “{{ name }}” sa mga proyekto mo, kasama ang mga cut at subtitle nito. Hindi gagalawin ang video file mo"
   },
   "errors": {
     "notVideo": "Mukhang hindi video ang file na ito",
@@ -600,6 +623,11 @@
       "blur": "Malabo",
       "strength": "Lakas ng pagpapalabo",
       "error": "Hindi masimulan ang pagpapalabo ng background sa device na ito"
+    },
+    "mobile": {
+      "title": "Limitado ang pag-edit sa phone",
+      "text": "Ginawa ang editor para sa computer. Sa phone, ayos ito sa maiikling video, pero puwedeng bumagal o maubusan ng memory. Para sa pinakamagandang resulta, gamitin ang Chrome o Edge sa computer",
+      "ok": "Sige, gets ko"
     }
   },
   "legal": {
@@ -817,8 +845,8 @@
   },
   "seo": {
     "home": {
-      "title": "LocalCutVideo — Libreng video editor sa browser, walang ina-upload",
-      "description": "I-edit ang mga video mo sa browser: kusang pinuputol ang katahimikan, AI subtitles, framing sa mukha para sa TikTok at Shorts, mga thumbnail. Libre at open source, hindi kailanman lumalabas ang mga video mo sa iyong computer"
+      "title": "LocalCutVideo — Libreng alternatibo sa CapCut, walang upload",
+      "description": "Libre at awtomatikong pag-edit ng video sa browser: tinatanggal ang mga patlang, animated na subtitle, format para sa TikTok at Shorts, thumbnail. Walang account, walang watermark, hindi umaalis sa computer mo ang mga video mo"
     },
     "thumbnail": {
       "title": "Libreng YouTube thumbnail maker — LocalCutVideo",

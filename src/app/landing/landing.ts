@@ -5,6 +5,7 @@ import { LANGUAGES } from '../core/languages';
 import { REPO_URL } from '../core/version';
 import { Icon } from '../shared/icon';
 import { LocalizePipe } from '../shared/localize';
+import { Logo } from '../shared/logo';
 import { Reveal } from '../shared/reveal';
 
 interface Feature {
@@ -12,9 +13,15 @@ interface Feature {
   icon: string;
 }
 
+/** The comparison with online editors: LocalCutVideo has every row, they have it or not. */
+interface CompareRow {
+  key: string;
+  them: 'no' | 'sometimes';
+}
+
 @Component({
   selector: 'app-landing',
-  imports: [RouterLink, TranslocoPipe, Icon, Reveal, LocalizePipe],
+  imports: [RouterLink, TranslocoPipe, Icon, Logo, Reveal, LocalizePipe],
   templateUrl: './landing.html',
   styleUrl: './landing.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -25,23 +32,31 @@ export class Landing {
 
   protected readonly features: Feature[] = [
     { key: 'silences', icon: 'scissors' },
-    { key: 'clips', icon: 'layers' },
-    { key: 'textEdit', icon: 'text' },
     { key: 'captions', icon: 'captions' },
     { key: 'framing', icon: 'face' },
+    { key: 'textEdit', icon: 'text' },
     { key: 'zoom', icon: 'zoom' },
     { key: 'ducking', icon: 'volume' },
-    { key: 'recovery', icon: 'save' },
-    { key: 'offline', icon: 'offline' },
+    { key: 'clips', icon: 'layers' },
     { key: 'export', icon: 'zap' },
     { key: 'inputs', icon: 'film' },
+    { key: 'recovery', icon: 'save' },
+    { key: 'offline', icon: 'offline' },
     { key: 'languages', icon: 'globe' },
+  ];
+
+  protected readonly compareRows: CompareRow[] = [
+    { key: 'free', them: 'sometimes' },
+    { key: 'account', them: 'sometimes' },
+    { key: 'auto', them: 'sometimes' },
+    { key: 'upload', them: 'no' },
+    { key: 'offline', them: 'no' },
   ];
 
   protected readonly steps = ['open', 'edit', 'export'];
   protected readonly spotlightPoints = ['moments', 'title', 'formats', 'local'];
-  protected readonly privacyPoints = ['upload', 'account', 'csp', 'storage'];
-  protected readonly faq = ['free', 'formats', 'browsers', 'size', 'offline', 'ai'];
+  protected readonly privacyPoints = ['upload', 'account', 'sensitive', 'storage'];
+  protected readonly faq = ['free', 'capcut', 'formats', 'browsers', 'size', 'offline', 'ai'];
   protected readonly browsers = [
     { name: 'Chrome / Edge', key: 'full', level: 'ok' },
     { name: 'Opera / Brave', key: 'full', level: 'ok' },

@@ -41,15 +41,16 @@
   },
   "landing": {
     "hero": {
-      "badgeLocal": "100 % lokalno, bez prijenosa",
-      "badgeOpen": "Besplatno i otvorenog koda",
-      "title1": "Uređujte svoje videozapise",
-      "title2": "Ništa ne napušta vaše računalo",
-      "lead": "LocalCutVideo izrezuje tišine, transkribira pomoću Whispera, ugrađuje karaoke titlove i prekadrira 16:9 u 9:16, sve u vašem pregledniku. Bez prijenosa, bez računa, bez poslužitelja",
-      "cta": "Otvori uređivač",
+      "badgeLocal": "Vaši videozapisi ostaju kod vas",
+      "badgeOpen": "Bez vodenog žiga, otvoreni kod",
+      "title1": "Uređujte videozapise jednim klikom",
+      "title2": "bez učitavanja ičega na internet",
+      "lead": "Izrežite pauze i „ovaj”, dodajte animirane titlove i automatski prijeđite na format za TikTok. Besplatno, bez računa i bez vodenog žiga: sve se događa na vašem računalu",
+      "cta": "Uredi moj video besplatno",
       "github": "Pogledaj na GitHubu",
-      "hint": "Najbolje radi u Chromeu ili Edgeu na računalu",
-      "demo": "Isprobaj s demo videom"
+      "hint": "Bez registracije · Najbolje na računalu, u Chromeu ili Edgeu",
+      "demo": "Isprobajte demo",
+      "badgeAlt": "Besplatna alternativa za CapCut"
     },
     "mock": {
       "w1": "Dakle, danas",
@@ -62,95 +63,95 @@
       "cap2": "računalu"
     },
     "stats": {
-      "upload": "prenesenih bajtova",
-      "local": "obrađeno na vašem uređaju",
+      "upload": "videozapisa učitanih na internet",
       "languages": "jezika sučelja",
-      "gpu": "ubrzana UI i kodiranje"
+      "free": "besplatno, bez pretplate",
+      "watermark": "vodenih žigova na vašim videozapisima"
     },
     "how": {
       "eyebrow": "Kako radi",
-      "title": "Od sirove snimke do videa spremnog za objavu u tri koraka",
+      "title": "Videozapis spreman za objavu u tri koraka",
       "open": {
-        "title": "Otvorite video",
-        "text": "Odaberite datoteku na disku. Čita se na mjestu: bez kopije, bez prijenosa, čak i za datoteke od nekoliko gigabajta"
+        "title": "Otvorite videozapis",
+        "text": "Povucite videozapis s računala ili mobitela. Otvara se odmah, čak i ako je golem"
       },
       "edit": {
-        "title": "Pustite uređivač da radi",
-        "text": "Tišine se otkrivaju, govor se transkribira riječ po riječ, a lica se prate, sve lokalno. Ispravite bilo što uređivanjem teksta"
+        "title": "Pokrenite automatsku montažu",
+        "text": "Pauze i oklijevanja se izrezuju, titlovi se pišu sami, a govornik ostaje u kadru. Nakon toga sve možete doraditi"
       },
       "export": {
-        "title": "Izvezite MP4",
-        "text": "Odaberite 16:9, 9:16 ili 1:1. Video kodira vaša grafička kartica i zapisuje se izravno na disk"
+        "title": "Preuzmite i objavite",
+        "text": "Dobijte videozapis u HD-u, u formatu za TikTok, YouTube ili Instagram, spreman za objavu"
       }
     },
     "features": {
       "eyebrow": "Značajke",
-      "title": "Sve što vam treba za videe u kojima govorite u kameru",
-      "lead": "Napravljen za autore na YouTubeu, TikToku, Reelsima i Shortsima koji svoje sirove snimke radije nigdje ne prenose",
+      "title": "Sve za videozapise koji drže pažnju",
+      "lead": "Za kreatore na TikToku, Reelsima, Shortsima i YouTubeu, ali i za nastavnike, predavače i tvrtke",
       "silences": {
-        "title": "Automatsko izrezivanje tišina",
-        "text": "Otkriva stanke prema glasnoći zvuka i uklanja ih, s podesivim pragom, minimalnim trajanjem i prostorom za dah"
+        "title": "Zbogom pauzama",
+        "text": "Tišine i prazni trenuci automatski se pronalaze i izrezuju: vaš videozapis u sekundi dobiva ritam"
       },
       "textEdit": {
-        "title": "Uređivanje putem teksta",
-        "text": "Whisper svakoj riječi daje vremensku oznaku. Izbrišite riječi u transkripciji i odgovarajući dio videa se izreže"
+        "title": "Uređujte kao tekst",
+        "text": "Vaš se videozapis transkribira riječ po riječ. Izbrišite rečenicu iz teksta i nestat će iz videozapisa"
       },
       "captions": {
-        "title": "Karaoke titlovi",
-        "text": "Titlovi animirani riječ po riječ ugrađeni u video, u karaoke, čistom ili uokvirenom stilu, u vašoj boji isticanja"
+        "title": "Automatski titlovi",
+        "text": "Animirani titlovi riječ po riječ, kao na TikToku, bez tipkanja. Odaberite stil i boju"
       },
       "framing": {
-        "title": "Automatsko kadriranje 16:9 → 9:16",
-        "text": "Praćenje lica drži govornika u kadru kad vodoravni video pretvarate u okomiti"
+        "title": "Format za TikTok jednim klikom",
+        "text": "Pretvorite vodoravni videozapis u okomiti: lice govornika uvijek ostaje u kadru"
       },
       "zoom": {
-        "title": "Pametni zum",
-        "text": "Naizmjenični zumovi na svakom rezu čine jump cutove namjernima i zadržavaju gledatelje"
+        "title": "Zumiranja s ritmom",
+        "text": "Suptilna zumiranja na svakom rezu daju dinamiku i drže publiku do kraja"
       },
       "ducking": {
-        "title": "Zvuk i glazba",
-        "text": "Pojačajte zvuk, ujednačite isječke i dodajte pozadinsku glazbu koja se sama stišava kad netko govori"
+        "title": "Glazba u pozadini",
+        "text": "Dodajte glazbu koja se sama utiša kad govorite i podesite glasnoću svake snimke"
       },
       "recovery": {
-        "title": "Oporavak nakon pada",
-        "text": "Svaka promjena sprema se u preglednik u stvarnom vremenu. Ponovno otvorite karticu i nastavite točno gdje ste stali"
+        "title": "Ništa se ne gubi",
+        "text": "Sve se sprema usput. Zatvorite karticu, vratite se kasnije i nastavite točno ondje gdje ste stali"
       },
       "offline": {
-        "title": "Radi izvanmrežno",
-        "text": "Instalirajte ga kao aplikaciju. Kad se model UI preuzme, cijeli uređivač radi bez internetske veze"
+        "title": "Čak i bez interneta",
+        "text": "Instalirajte ga kao aplikaciju: kad je spreman, radi i u vlaku ili avionu"
       },
       "export": {
-        "title": "Brz hardverski izvoz",
-        "text": "Kodiranje koristi WebCodecs, video koder ugrađen u vaš preglednik i grafičku karticu, umjesto sporog softverskog kodiranja"
+        "title": "HD i bez vodenog žiga",
+        "text": "Izvezite u 720p ili 1080p, do 60 sličica u sekundi. Bez dodanog logotipa, bez plaćene verzije"
       },
       "clips": {
-        "title": "Spajanje više isječaka",
-        "text": "Ispustite više snimki odjednom: spajaju se u jedan video, redoslijedom koji odaberete, sa zajedničkom vremenskom crtom i transkripcijom"
+        "title": "Više snimki, jedan videozapis",
+        "text": "Povucite sve snimke odjednom: spajaju se jedna za drugom redoslijedom koji odaberete"
       },
       "inputs": {
-        "title": "MP4, MOV, WebM, MKV",
-        "text": "Otvara datoteke s mobitela i fotoaparata, uključujući HEVC snimke s iPhonea kad ih preglednik može dekodirati"
+        "title": "Videozapisi s vašeg mobitela",
+        "text": "MP4, MOV, WebM, MKV: otvarajte videozapise s mobitela ili kamere, uključujući one s iPhonea ako ih vaš preglednik može reproducirati"
       },
       "languages": {
-        "title": "Višejezično",
-        "text": "Sučelje govori {{ count }} jezika, a Whisper transkribira još desetke drugih, uz automatsko prepoznavanje jezika"
+        "title": "Na vašem jeziku",
+        "text": "Sučelje postoji na {{ count }} jezika, a titlovi rade na desecima jezika koji se automatski prepoznaju"
       }
     },
     "privacy": {
       "eyebrow": "Privatnost",
-      "title": "Nula prijenosa, po dizajnu",
-      "lead": "Vaš video čita se izravno s diska. Analiza zvuka, transkripcija, praćenje lica i kodiranje odvijaju se u pozadinskim nitima (Web Workers) na vašem računalu. Jednostavno ne postoji poslužitelj na koji bi se vaše snimke slale",
-      "upload": "Nikad nikakav prijenos: datoteka nikad ne napušta vaše računalo",
-      "account": "Bez računa, bez kolačića, bez statistike",
-      "csp": "Stroga Content-Security-Policy dopušta stranici da komunicira samo s ovom web-lokacijom, koja isporučuje i modele UI (Hugging Face je samo rezerva)",
-      "storage": "Projekti se spremaju u lokalnu bazu podataka preglednika (IndexedDB) i mogu se izbrisati u bilo kojem trenutku",
+      "title": "Vaši videozapisi ostaju kod vas",
+      "lead": "Ovdje se ništa ne učitava: sav posao obavlja vaš vlastiti uređaj, čak i umjetnu inteligenciju. Nitko drugi ne vidi vaše snimke",
+      "upload": "Vaši se videozapisi nikad ne šalju putem interneta",
+      "account": "Bez računa, bez oglasa, bez praćenja",
+      "storage": "Vaši projekti ostaju u pregledniku i brišu se jednim klikom",
       "diagram": {
         "machine": "Vaše računalo",
         "file": "Video datoteka",
         "browser": "Vaš preglednik",
         "upload": "Prijenos na poslužitelj",
         "model": "Preuzimanje modela UI (jednom, u predmemoriju)"
-      }
+      },
+      "sensitive": "Idealno za povjerljive videozapise: sastanke, klijente, obitelj"
     },
     "support": {
       "eyebrow": "Kompatibilnost",
@@ -167,15 +168,15 @@
       "title": "Česta pitanja",
       "free": {
         "q": "Je li stvarno besplatno? Gdje je kvaka?",
-        "a": "Besplatno je i otvorenog koda. Budući da se sav rad odvija na vašem računalu, nema troškova poslužitelja, pa vam nema što prodati i nema podataka za prikupljanje"
+        "a": "Nema je. Budući da posao obavlja vaše računalo, ne treba plaćati skupe poslužitelje: bez pretplate, bez vodenog žiga, bez oglasa. Kod je čak javan (otvoreni kod)"
       },
       "formats": {
-        "q": "Koje video formate mogu otvoriti?",
-        "a": "MP4, MOV, WebM i MKV, pod uvjetom da preglednik može dekodirati kodek (H.264, HEVC, VP9, AV1, ovisno o pregledniku i sustavu). Izvoz je MP4 datoteka"
+        "q": "Koje videozapise mogu otvoriti?",
+        "a": "Videozapise s mobitela, kamere ili snimke zaslona: MP4, MOV, WebM i MKV. Rezultat je MP4 datoteka koja se reproducira posvuda"
       },
       "browsers": {
-        "q": "Zašto Chrome ili Edge?",
-        "a": "Podržavaju File System Access API, koji uređivaču omogućuje da nakon ponovnog učitavanja ponovno otvori video i zapiše izvoz izravno na disk. Ostali preglednici također rade, uz nekoliko dodatnih klikova"
+        "q": "Koji preglednik koristiti?",
+        "a": "Chrome ili Edge na računalu pružaju najbolje iskustvo. Firefox i Safari također rade, uz nekoliko klikova više za ponovno otvaranje videozapisa. Na mobitelu radije birajte kratke videozapise"
       },
       "size": {
         "q": "Postoji li ograničenje veličine datoteke?",
@@ -183,11 +184,15 @@
       },
       "offline": {
         "q": "Radi li bez interneta?",
-        "a": "Da, nakon učitavanja. Instalirajte ga kao aplikaciju (PWA) i jednom napravite transkripciju dok ste na mreži: model Whisper ostaje u predmemoriji i sve radi izvanmrežno"
+        "a": "Da. Prvi put preuzima se alat za titlove, samo jednom. Nakon toga sve radi izvanmrežno, a možete ga čak instalirati kao aplikaciju"
       },
       "ai": {
-        "q": "Gdje radi UI?",
-        "a": "U vašem pregledniku. Whisper radi s Transformers.js na grafičkoj kartici (WebGPU) ili procesoru (WebAssembly), a prepoznavanje lica koristi MediaPipe. Modeli se preuzimaju jednom, vaš se zvuk nikad ne šalje"
+        "q": "Kako UI može raditi bez poslužitelja?",
+        "a": "Modeli UI-ja (Whisper za titlove, MediaPipe za lica) preuzimaju se jednom, a zatim ih pokreće vaše računalo. Vaš glas i vaše slike nikad ga ne napuštaju"
+      },
+      "capcut": {
+        "q": "Koja je razlika u odnosu na CapCut?",
+        "a": "LocalCutVideo usredotočen je na ono što trebaju videozapisi u kojima netko govori u kameru (izrezane pauze, automatski titlovi, okomiti format), bez računa i bez učitavanja vaših videozapisa. Za specijalne efekte, animirane prijelaze ili popularne predloške CapCut je potpuniji"
       }
     },
     "final": {
@@ -207,6 +212,23 @@
       "cta": "Izradi minijaturu",
       "mockTitle": "Moj prvi",
       "mockAccent": "vlog"
+    },
+    "compare": {
+      "eyebrow": "Usporedba",
+      "title": "Zašto odabrati LocalCutVideo?",
+      "lead": "Većina mrežnih uređivača videa učitava vaše videozapise na svoje poslužitelje, a najbolje alate čuva za pretplatnike. Ovdje je sve besplatno i ostaje kod vas",
+      "them": "Mrežni uređivači videa",
+      "yes": "Da",
+      "no": "Ne",
+      "sometimes": "Ponekad",
+      "rows": {
+        "free": "100 % besplatno, bez vodenog žiga",
+        "account": "Bez računa i registracije",
+        "auto": "Automatski titlovi i rezovi uključeni",
+        "upload": "Vaši videozapisi ostaju na vašem uređaju",
+        "offline": "Radi bez interneta"
+      },
+      "note": "CapCut je zaštitni znak svojeg vlasnika. LocalCutVideo je neovisan projekt, nepovezan s CapCutom ili tvrtkom ByteDance"
     }
   },
   "changelog": {
@@ -232,11 +254,12 @@
     "recent": "Nedavni projekti",
     "empty": "Još nema projekata. Otvorite video za početak",
     "delete": "Izbriši projekt",
-    "confirmDelete": "Izbrisati projekt „{{ name }}”? Video datoteka na disku ostaje netaknuta",
     "multi": "Više datoteka? Spajaju se u jedan video, redoslijedom naziva",
     "importFile": "Otvori datoteku projekta (.lcv.json)",
     "saveFile": "Spremi projekt kao datoteku",
-    "imported": "Projekt otvoren: odaberite njegove videe za nastavak"
+    "imported": "Projekt otvoren: odaberite njegove videe za nastavak",
+    "deleteTitle": "Izbrisati ovaj projekt?",
+    "deleteText": "„{{ name }}” bit će uklonjen iz vaših projekata zajedno s rezovima i titlovima. Vaša video datoteka ostaje netaknuta"
   },
   "errors": {
     "notVideo": "Ova datoteka ne izgleda kao video",
@@ -600,6 +623,11 @@
       "blur": "Zamućena",
       "strength": "Jačina zamućenja",
       "error": "Zamućenje pozadine nije se moglo pokrenuti na ovom uređaju"
+    },
+    "mobile": {
+      "title": "Montaža na mobitelu je ograničena",
+      "text": "Uređivač je namijenjen računalu. Na mobitelu je prikladan za kratke videozapise, ali može biti spor ili ostati bez memorije. Za najbolji rezultat koristite Chrome ili Edge na računalu",
+      "ok": "Razumijem"
     }
   },
   "legal": {
@@ -817,8 +845,8 @@
   },
   "seo": {
     "home": {
-      "title": "LocalCutVideo — Besplatan uređivač videa u pregledniku, ništa se ne prenosi",
-      "description": "Uređujte videe u pregledniku: automatsko izrezivanje tišina, titlovi pomoću UI, kadriranje na lice za TikTok i Shorts, minijature. Besplatno i otvorenog koda, vaši videi nikad ne napuštaju vaše računalo"
+      "title": "LocalCutVideo — Besplatna alternativa za CapCut, bez učitavanja",
+      "description": "Besplatna automatska montaža videa u pregledniku: izrezane pauze, animirani titlovi, format za TikTok i Shorts, minijature. Bez računa, bez vodenog žiga, vaši videozapisi nikad ne napuštaju vaše računalo"
     },
     "thumbnail": {
       "title": "Besplatan izrađivač YouTube minijatura — LocalCutVideo",

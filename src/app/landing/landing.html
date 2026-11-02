@@ -3,6 +3,7 @@
   <div class="container hero-grid">
     <div class="hero-copy">
       <div class="pills">
+        <span class="badge alt"><app-icon name="sparkles" [size]="14" /> {{ 'landing.hero.badgeAlt' | transloco }}</span>
         <span class="badge"><app-icon name="lock" [size]="14" /> {{ 'landing.hero.badgeLocal' | transloco }}</span>
         <span class="badge"><app-icon name="github" [size]="14" /> {{ 'landing.hero.badgeOpen' | transloco }}</span>
       </div>
@@ -68,10 +69,10 @@
 
   <div class="container">
     <div class="stats" [appReveal]="3">
+      <div><b>100%</b><span>{{ 'landing.stats.free' | transloco }}</span></div>
+      <div><b>0</b><span>{{ 'landing.stats.watermark' | transloco }}</span></div>
       <div><b>0</b><span>{{ 'landing.stats.upload' | transloco }}</span></div>
-      <div><b>100%</b><span>{{ 'landing.stats.local' | transloco }}</span></div>
       <div><b>{{ languageCount }}</b><span>{{ 'landing.stats.languages' | transloco }}</span></div>
-      <div><b>GPU</b><span>{{ 'landing.stats.gpu' | transloco }}</span></div>
     </div>
   </div>
 </section>
@@ -110,6 +111,35 @@
         </article>
       }
     </div>
+  </div>
+</section>
+
+<section class="section" id="compare">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <span class="eyebrow">{{ 'landing.compare.eyebrow' | transloco }}</span>
+      <h2>{{ 'landing.compare.title' | transloco }}</h2>
+      <p class="muted">{{ 'landing.compare.lead' | transloco }}</p>
+    </div>
+    <div class="card compare" appReveal>
+      <div class="compare-row compare-head">
+        <span></span>
+        <b class="us"><app-logo [size]="18" /> LocalCutVideo</b>
+        <b>{{ 'landing.compare.them' | transloco }}</b>
+      </div>
+      @for (row of compareRows; track row.key) {
+        <div class="compare-row">
+          <span>{{ 'landing.compare.rows.' + row.key | transloco }}</span>
+          <span class="mark yes">
+            <app-icon name="check" [size]="16" /> <small>{{ 'landing.compare.yes' | transloco }}</small>
+          </span>
+          <span class="mark" [class]="row.them">
+            <app-icon [name]="row.them === 'no' ? 'x' : 'minus'" [size]="16" /> <small>{{ 'landing.compare.' + row.them | transloco }}</small>
+          </span>
+        </div>
+      }
+    </div>
+    <p class="compare-note faint">{{ 'landing.compare.note' | transloco }}</p>
   </div>
 </section>
 

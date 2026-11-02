@@ -1,6 +1,6 @@
 /// <reference lib="webworker" />
 /**
- * AI worker: runs Whisper locally with Transformers.js (WebGPU when available, WASM
+ * AI worker: runs Whisper locally with Transformers.js (WebGPU when available and working, WASM
  * otherwise) and returns word-level timestamps. The model is downloaded once, from this site
  * when it hosts it (/models), otherwise from Hugging Face, then served from the browser cache,
  * so it works offline afterwards.
@@ -22,11 +22,18 @@ if (env.backends.onnx.wasm) {
 
 let transcriber: AutomaticSpeechRecognitionPipeline | null = null;
 let loadedKey = '';
+/** Device of the model being loaded or loaded. */
+let device: AiDevice = 'wasm';
 let cancelled = false;
+/**
+ * WebGPU failed once (loading or running Whisper): WebAssembly from then on, slower but
+ * reliable. Safari on iPhone and iPad starts there: its WebGPU runs out of memory or fails.
+ */
+let gpuFailed = /iPhone|iPad|iPod/.test(self.navigator.userAgent);
 
 async function detectDevice(): Promise<{ device: AiDevice; fp16: boolean }> {
   const gpu = (self.navigator as Navigator & { gpu?: { requestAdapter(): Promise<{ features: Set<string> } | null> } }).gpu;
-  if (gpu) {
+  if (gpu && !gpuFailed) {
     try {
       const adapter = await gpu.requestAdapter();
       if (adapter) return { device: 'webgpu', fp16: adapter.features.has('shader-f16') };
@@ -48,18 +55,26 @@ function hostedModels(): Promise<string[]> {
   return hosted;
 }
 
+/** The GPU check, made once (and again after a WebGPU failure). */
+let detected: Promise<{ device: AiDevice; fp16: boolean }> | null = null;
+
 async function load(model: WhisperModel, onProgress: (p: TranscribeProgress) => void): Promise<AiDevice> {
-  const { device, fp16 } = await detectDevice();
+  detected ??= detectDevice();
+  const target = await detected;
   // Served here: no request to Hugging Face at all. Otherwise Hugging Face is the source.
   const local = (await hostedModels()).includes(model);
   env.allowLocalModels = local;
   env.allowRemoteModels = !local;
   // A path, not a full URL: Transformers.js only checks that local files exist for paths.
   env.localModelPath = '/models/';
-  const key = `${model}|${device}`;
+  const key = `${model}|${target.device}`;
   if (transcriber && loadedKey === key) return device;
-  await transcriber?.dispose();
+  // A broken GPU may also fail to free its model: it is dropped anyway.
+  await transcriber?.dispose().catch(() => undefined);
   transcriber = null;
+  loadedKey = '';
+  device = target.device;
+  const fp16 = target.fp16;
 
   const files = new Map<string, { loaded: number; total: number }>();
   const progress_callback = (info: { status: string; file?: string; loaded?: number; total?: number }) => {
@@ -87,6 +102,24 @@ async function load(model: WhisperModel, onProgress: (p: TranscribeProgress) => 
   })) as AutomaticSpeechRecognitionPipeline;
   loadedKey = key;
   return device;
+}
+
+/**
+ * Loads the model if needed and runs one Whisper step. When WebGPU fails, at loading or while
+ * running, the model is loaded again on WebAssembly and the step runs once more.
+ */
+async function withFallback<T>(model: WhisperModel, onProgress: (p: TranscribeProgress) => void, run: () => Promise<T>): Promise<T> {
+  try {
+    await load(model, onProgress);
+    return await run();
+  } catch (e) {
+    if (device !== 'webgpu' || cancelled) throw e;
+    console.warn('Whisper failed on WebGPU, switching to WebAssembly', e);
+    gpuFailed = true;
+    detected = null;
+    await load(model, onProgress);
+    return run();
+  }
 }
 
 /** Known Whisper hallucinations on silence or music (credits from its subtitle training data). */
@@ -193,11 +226,10 @@ const api: AiWorkerApi = {
     onProgress: (p: TranscribeProgress) => void,
   ): Promise<{ device: AiDevice; samples: SpeechSample[] }> {
     cancelled = false;
-    const device = await load(model, onProgress);
     const results: SpeechSample[] = [];
     for (const sample of samples) {
       if (cancelled) throw new Error('CANCELLED');
-      results.push(await speechSample(sample));
+      results.push(await withFallback(model, onProgress, () => speechSample(sample)));
       onProgress({ stage: 'transcribe', progress: results.length / samples.length });
     }
     return { device, samples: results };
@@ -211,7 +243,9 @@ const api: AiWorkerApi = {
     onWords: (words: RawWord[]) => void,
   ): Promise<{ device: AiDevice; language: string | null }> {
     cancelled = false;
-    const device = await load(options.model, onProgress);
+    const infer = <T>(run: () => Promise<T>) => withFallback(options.model, onProgress, run);
+    // Loads the model first, so its download shows before the language detection.
+    await infer(async () => undefined);
     const sampleRate = 16000;
     const work = chunks.filter((c) => !c.silent);
     const totalSeconds = work.reduce((n, c) => n + (c.end - c.start), 0) || 1;
@@ -228,7 +262,7 @@ const api: AiWorkerApi = {
         .slice(0, 3);
       const votes = new Map<string, number>();
       for (const s of samples) {
-        const guess = (await probe(pcm.subarray(Math.floor(s.start * sampleRate), Math.floor(s.end * sampleRate)))).language;
+        const guess = (await infer(() => probe(pcm.subarray(Math.floor(s.start * sampleRate), Math.floor(s.end * sampleRate))))).language;
         if (guess) votes.set(guess, (votes.get(guess) ?? 0) + 1);
       }
       language = [...votes.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ?? null;
@@ -237,11 +271,13 @@ const api: AiWorkerApi = {
     for (const chunk of work) {
       if (cancelled) throw new Error('CANCELLED');
       const audio = pcm.subarray(Math.floor(chunk.start * sampleRate), Math.floor(chunk.end * sampleRate));
-      const output = (await transcriber!(audio, {
-        return_timestamps: 'word',
-        language: language ?? undefined,
-        task: 'transcribe',
-      } as never)) as { chunks?: { text: string; timestamp: [number, number | null] }[] };
+      const output = (await infer(() =>
+        transcriber!(audio, {
+          return_timestamps: 'word',
+          language: language ?? undefined,
+          task: 'transcribe',
+        } as never),
+      )) as { chunks?: { text: string; timestamp: [number, number | null] }[] };
 
       const raw = output.chunks ?? [];
       if (!HALLUCINATIONS.some((re) => re.test(raw.map((c) => c.text).join('')))) {

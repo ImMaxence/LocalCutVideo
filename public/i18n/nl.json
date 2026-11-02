@@ -41,15 +41,16 @@
   },
   "landing": {
     "hero": {
-      "badgeLocal": "100% lokaal, niets geüpload",
-      "badgeOpen": "Gratis en open source",
-      "title1": "Bewerk je video's",
-      "title2": "Niets verlaat je computer",
-      "lead": "LocalCutVideo knipt stiltes weg, transcribeert met Whisper, brandt karaoke-ondertitels in en zet 16:9 om naar 9:16, volledig in je browser. Geen upload, geen account, geen server",
-      "cta": "Editor openen",
+      "badgeLocal": "Je video's blijven bij jou",
+      "badgeOpen": "Geen watermerk, open source",
+      "title1": "Bewerk je video's met één klik",
+      "title2": "zonder iets te uploaden",
+      "lead": "Knip stiltes en ‘eh’s’ weg, voeg geanimeerde ondertitels toe en zet je video automatisch om naar TikTok-formaat. Gratis, zonder account en zonder watermerk: alles gebeurt op je computer",
+      "cta": "Bewerk mijn video gratis",
       "github": "Bekijken op GitHub",
-      "hint": "Werkt het best in Chrome of Edge op een computer",
-      "demo": "Probeer met een demovideo"
+      "hint": "Geen registratie · Het best op een computer, met Chrome of Edge",
+      "demo": "Probeer de demo",
+      "badgeAlt": "Het gratis alternatief voor CapCut"
     },
     "mock": {
       "w1": "Dus vandaag",
@@ -62,95 +63,95 @@
       "cap2": "computer"
     },
     "stats": {
-      "upload": "bytes geüpload",
-      "local": "verwerkt op je apparaat",
+      "upload": "video's naar internet geüpload",
       "languages": "interfacetalen",
-      "gpu": "versnelde AI en codering"
+      "free": "gratis, geen abonnement",
+      "watermark": "watermerken op je video's"
     },
     "how": {
       "eyebrow": "Hoe het werkt",
-      "title": "Van ruwe opnames naar een video klaar om te posten in drie stappen",
+      "title": "Een video klaar om te posten in drie stappen",
       "open": {
-        "title": "Open een video",
-        "text": "Kies een bestand op je schijf. Het wordt ter plaatse gelezen: geen kopie, geen upload, zelfs bij bestanden van meerdere gigabytes"
+        "title": "Open je video",
+        "text": "Sleep een video van je computer of telefoon erin. Hij opent meteen, ook als hij enorm groot is"
       },
       "edit": {
-        "title": "Laat de editor het werk doen",
-        "text": "Stiltes worden gedetecteerd, spraak wordt woord voor woord getranscribeerd en gezichten worden gevolgd, allemaal lokaal. Verbeter alles door de tekst te bewerken"
+        "title": "Start de automatische montage",
+        "text": "Stiltes en haperingen worden eruit geknipt, ondertitels schrijven zichzelf en wie praat blijft in beeld. Daarna kun je alles bijwerken"
       },
       "export": {
-        "title": "Exporteer de MP4",
-        "text": "Kies 16:9, 9:16 of 1:1. De video wordt gecodeerd door je videokaart en direct naar je schijf geschreven"
+        "title": "Downloaden en posten",
+        "text": "Krijg je video in HD, in het formaat van TikTok, YouTube of Instagram, klaar om te posten"
       }
     },
     "features": {
       "eyebrow": "Functies",
-      "title": "Alles wat je nodig hebt voor talking-head video's",
-      "lead": "Gemaakt voor makers op YouTube, TikTok, Reels en Shorts die hun ruwe opnames liever nergens uploaden",
+      "title": "Alles voor video's die de aandacht vasthouden",
+      "lead": "Voor makers op TikTok, Reels, Shorts en YouTube, maar ook voor docenten, trainers en bedrijven",
       "silences": {
-        "title": "Stiltes automatisch knippen",
-        "text": "Detecteert pauzes aan de hand van het geluidsvolume en verwijdert ze, met instelbare drempel, minimale duur en ademruimte"
+        "title": "Weg met stiltes",
+        "text": "Stiltes en dode momenten worden automatisch gevonden en weggeknipt: je video krijgt in een seconde meer vaart"
       },
       "textEdit": {
-        "title": "Bewerken via tekst",
-        "text": "Whisper geeft elk woord een tijdstempel. Verwijder woorden in het transcript en het bijbehorende stuk video wordt geknipt"
+        "title": "Bewerk als een tekst",
+        "text": "Je video wordt woord voor woord uitgeschreven. Verwijder een zin uit de tekst en hij verdwijnt uit de video"
       },
       "captions": {
-        "title": "Karaoke-ondertitels",
-        "text": "Woord voor woord geanimeerde ondertitels ingebrand in de video, in karaoke-, strakke of kaderstijl, met jouw accentkleur"
+        "title": "Automatische ondertitels",
+        "text": "Geanimeerde ondertitels woord voor woord, zoals op TikTok, zonder iets te typen. Kies de stijl en de kleur"
       },
       "framing": {
-        "title": "Automatische kadrering 16:9 → 9:16",
-        "text": "Gezichtsherkenning houdt de spreker in beeld wanneer je een liggende video omzet naar een staande"
+        "title": "TikTok-formaat met één klik",
+        "text": "Maak van een liggende video een staande: het gezicht van wie praat blijft altijd in beeld"
       },
       "zoom": {
-        "title": "Slimme zoom",
-        "text": "Afwisselende inzoomeffecten bij elke knip laten jump cuts bewust ogen en houden kijkers vast"
+        "title": "Zooms met ritme",
+        "text": "Subtiele zooms bij elke knip geven energie en houden je publiek vast tot het einde"
       },
       "ducking": {
-        "title": "Geluid en muziek",
-        "text": "Zet het volume hoger, maak je clips even luid en voeg achtergrondmuziek toe die vanzelf zachter wordt zodra iemand praat"
+        "title": "Achtergrondmuziek",
+        "text": "Voeg muziek toe die vanzelf zachter gaat als je praat, en stel het volume van elke opname in"
       },
       "recovery": {
-        "title": "Herstel na een crash",
-        "text": "Elke wijziging wordt direct in je browser opgeslagen. Open het tabblad opnieuw en ga precies verder waar je was gebleven"
+        "title": "Er gaat niets verloren",
+        "text": "Alles wordt doorlopend bewaard. Sluit het tabblad, kom later terug en ga precies verder waar je was"
       },
       "offline": {
-        "title": "Werkt offline",
-        "text": "Installeer het als app. Zodra het AI-model is gedownload, werkt de hele editor zonder internetverbinding"
+        "title": "Ook zonder internet",
+        "text": "Installeer het als een app: eenmaal klaar werkt het ook in de trein of het vliegtuig"
       },
       "export": {
-        "title": "Snelle hardware-export",
-        "text": "De codering gebruikt WebCodecs, de video-encoder die in je browser en videokaart zit, in plaats van trage softwarecodering"
+        "title": "HD en zonder watermerk",
+        "text": "Exporteer in 720p of 1080p, tot 60 beelden per seconde. Geen logo erbij, geen betaalde versie"
       },
       "clips": {
-        "title": "Meerdere clips samenvoegen",
-        "text": "Sleep meerdere takes tegelijk: ze worden samengevoegd tot één video, in de volgorde die je kiest, met een gedeelde tijdlijn en transcript"
+        "title": "Meerdere opnames, één video",
+        "text": "Sleep al je opnames tegelijk erin: ze worden achter elkaar gezet, in de volgorde die jij kiest"
       },
       "inputs": {
-        "title": "MP4, MOV, WebM, MKV",
-        "text": "Opent de bestanden van je telefoon en camera, ook HEVC-video's van een iPhone als je browser ze kan decoderen"
+        "title": "Video's van je telefoon",
+        "text": "MP4, MOV, WebM, MKV: open video's van je telefoon of camera, ook die van een iPhone als je browser ze kan afspelen"
       },
       "languages": {
-        "title": "Meertalig",
-        "text": "De interface spreekt {{ count }} talen en Whisper transcribeert er tientallen meer, met automatische taalherkenning"
+        "title": "In jouw taal",
+        "text": "De interface is er in {{ count }} talen en ondertitels werken in tientallen talen, automatisch herkend"
       }
     },
     "privacy": {
       "eyebrow": "Privacy",
-      "title": "Niets geüpload, zo ontworpen",
-      "lead": "Je video wordt direct van je schijf gelezen. Audioanalyse, transcriptie, gezichtsherkenning en codering draaien allemaal in achtergrondthreads (Web Workers) op je eigen computer. Er is simpelweg geen server om je opnames naartoe te sturen",
-      "upload": "Nooit een upload: het bestand verlaat nooit je computer",
-      "account": "Geen account, geen cookies, geen statistieken",
-      "csp": "Een strikte Content-Security-Policy laat de pagina alleen met deze site praten, die ook de AI-modellen levert (Hugging Face is slechts een reserve)",
-      "storage": "Projecten worden opgeslagen in de lokale database van je browser (IndexedDB) en kunnen op elk moment worden verwijderd",
+      "title": "Je video's blijven bij jou",
+      "lead": "Hier wordt niets geüpload: je eigen apparaat doet al het werk, zelfs de kunstmatige intelligentie. Niemand anders ziet je beelden",
+      "upload": "Je video's worden nooit over internet verstuurd",
+      "account": "Geen account, geen advertenties, geen tracking",
+      "storage": "Je projecten blijven in je browser en zijn met één klik te verwijderen",
       "diagram": {
         "machine": "Je computer",
         "file": "Videobestand",
         "browser": "Je browser",
         "upload": "Upload naar een server",
         "model": "Download van het AI-model (eenmalig, in cache)"
-      }
+      },
+      "sensitive": "Ideaal voor vertrouwelijke video's: vergaderingen, klanten, familie"
     },
     "support": {
       "eyebrow": "Compatibiliteit",
@@ -167,15 +168,15 @@
       "title": "Veelgestelde vragen",
       "free": {
         "q": "Is het echt gratis? Wat is het addertje?",
-        "a": "Het is gratis en open source. Omdat al het werk op je eigen computer gebeurt, zijn er geen serverkosten te betalen, dus is er niets om je te verkopen en geen gegevens om te verzamelen"
+        "a": "Dat is er niet. Omdat je computer het werk doet, zijn er geen dure servers te betalen: geen abonnement, geen watermerk, geen advertenties. De code is zelfs openbaar (open source)"
       },
       "formats": {
-        "q": "Welke videoformaten kan ik openen?",
-        "a": "MP4, MOV, WebM en MKV, zolang je browser de codec kan decoderen (H.264, HEVC, VP9, AV1, afhankelijk van je browser en systeem). De export is een MP4-bestand"
+        "q": "Welke video's kan ik openen?",
+        "a": "Video's van je telefoon, je camera of je schermopnames: MP4, MOV, WebM en MKV. Het resultaat is een MP4-bestand dat overal afspeelt"
       },
       "browsers": {
-        "q": "Waarom Chrome of Edge?",
-        "a": "Die ondersteunen de File System Access API, waarmee de editor je video na het herladen opnieuw kan openen en de export direct naar schijf kan schrijven. Andere browsers werken ook, met een paar klikken extra"
+        "q": "Welke browser gebruik ik?",
+        "a": "Chrome of Edge op een computer geven de beste ervaring. Firefox en Safari werken ook, met een paar extra klikken om een video opnieuw te openen. Houd het op een telefoon bij korte video's"
       },
       "size": {
         "q": "Is er een maximale bestandsgrootte?",
@@ -183,11 +184,15 @@
       },
       "offline": {
         "q": "Werkt het zonder internet?",
-        "a": "Ja, zodra het geladen is. Installeer het als app (PWA) en transcribeer één keer terwijl je online bent: het Whisper-model staat dan in de cache en alles werkt offline"
+        "a": "Ja. De eerste keer wordt de ondertiteltool gedownload, maar één keer. Daarna werkt alles offline en kun je het zelfs als app installeren"
       },
       "ai": {
-        "q": "Waar draait de AI?",
-        "a": "In je browser. Whisper draait met Transformers.js op je videokaart (WebGPU) of processor (WebAssembly), en de gezichtsherkenning gebruikt MediaPipe. De modellen worden één keer gedownload, je audio wordt nooit verstuurd"
+        "q": "Hoe kan de AI zonder server werken?",
+        "a": "De AI-modellen (Whisper voor ondertitels, MediaPipe voor gezichten) worden één keer gedownload, daarna draait je computer ze. Je stem en je beelden verlaten hem nooit"
+      },
+      "capcut": {
+        "q": "Wat is het verschil met CapCut?",
+        "a": "LocalCutVideo richt zich op wat video's waarin iemand in de camera praat nodig hebben (stiltes eruit, automatische ondertitels, staand formaat), zonder account en zonder je video's te uploaden. Voor speciale effecten, geanimeerde overgangen of trendy sjablonen is CapCut uitgebreider"
       }
     },
     "final": {
@@ -207,6 +212,23 @@
       "cta": "Thumbnail maken",
       "mockTitle": "Mijn eerste",
       "mockAccent": "vlog"
+    },
+    "compare": {
+      "eyebrow": "Vergelijking",
+      "title": "Waarom LocalCutVideo?",
+      "lead": "De meeste online video-editors uploaden je video's naar hun servers en bewaren hun beste functies voor een abonnement. Hier is alles gratis en blijft het bij jou",
+      "them": "Online video-editors",
+      "yes": "Ja",
+      "no": "Nee",
+      "sometimes": "Soms",
+      "rows": {
+        "free": "100% gratis, zonder watermerk",
+        "account": "Geen account of registratie",
+        "auto": "Automatische ondertitels en knippen inbegrepen",
+        "upload": "Je video's blijven op je apparaat",
+        "offline": "Werkt zonder internet"
+      },
+      "note": "CapCut is een merk van de eigenaar ervan. LocalCutVideo is een onafhankelijk project, niet verbonden aan CapCut of ByteDance"
     }
   },
   "changelog": {
@@ -232,11 +254,12 @@
     "recent": "Recente projecten",
     "empty": "Nog geen projecten. Open een video om te beginnen",
     "delete": "Project verwijderen",
-    "confirmDelete": "Het project ‘{{ name }}’ verwijderen? Het videobestand op je schijf blijft ongewijzigd",
     "multi": "Meerdere bestanden? Ze worden samengevoegd tot één video, op volgorde van naam",
     "importFile": "Een projectbestand openen (.lcv.json)",
     "saveFile": "Het project als bestand opslaan",
-    "imported": "Project geopend: selecteer de video's om verder te gaan"
+    "imported": "Project geopend: selecteer de video's om verder te gaan",
+    "deleteTitle": "Dit project verwijderen?",
+    "deleteText": "‘{{ name }}’ wordt uit je projecten verwijderd, met de knippen en ondertitels. Je videobestand blijft ongemoeid"
   },
   "errors": {
     "notVideo": "Dit bestand lijkt geen video te zijn",
@@ -600,6 +623,11 @@
       "blur": "Vervaagd",
       "strength": "Sterkte van de vervaging",
       "error": "De achtergrondvervaging kon op dit apparaat niet starten"
+    },
+    "mobile": {
+      "title": "Bewerken op een telefoon is beperkt",
+      "text": "De editor is gemaakt voor een computer. Op een telefoon werkt hij voor korte video's, maar hij kan traag zijn of te weinig geheugen hebben. Gebruik voor het beste resultaat Chrome of Edge op een computer",
+      "ok": "Begrepen"
     }
   },
   "legal": {
@@ -817,8 +845,8 @@
   },
   "seo": {
     "home": {
-      "title": "LocalCutVideo — Gratis video-editor in je browser, niets wordt geüpload",
-      "description": "Bewerk je video's in de browser: stiltes automatisch geknipt, AI-ondertitels, gezichtskadrering voor TikTok en Shorts, thumbnails. Gratis en open source, je video's verlaten nooit je computer"
+      "title": "LocalCutVideo — Het gratis alternatief voor CapCut, zonder upload",
+      "description": "Gratis automatisch video's bewerken in je browser: stiltes eruit, geanimeerde ondertitels, TikTok- en Shorts-formaat, thumbnails. Geen account, geen watermerk, je video's verlaten nooit je computer"
     },
     "thumbnail": {
       "title": "Gratis YouTube-thumbnailmaker — LocalCutVideo",

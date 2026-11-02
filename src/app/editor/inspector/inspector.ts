@@ -17,6 +17,7 @@ import {
 } from '../../engine/model';
 import type { PlacedClip } from '../../engine/sequence';
 import { formatTime, nextKeptTime } from '../../engine/timeline-math';
+import { ConfirmService } from '../../shared/confirm';
 import { Icon } from '../../shared/icon';
 import { Select, type SelectOption } from '../../shared/select';
 import { EditorStore } from '../editor.store';
@@ -48,6 +49,7 @@ const SPOKEN = ['en', 'fr', 'es', 'it', 'de', 'pt', 'nl'];
 export class Inspector {
   protected readonly store = inject(EditorStore);
   private readonly transloco = inject(TranslocoService);
+  private readonly confirm = inject(ConfirmService);
   readonly transcribe = output<'missing' | 'all'>();
   /** The mobile layout drives the tab from its bottom bar and hides the inner tab bar. */
   readonly tab = model<InspectorTab>('format');
@@ -190,9 +192,11 @@ export class Inspector {
     this.store.whisperLanguage.set(v === 'auto' ? null : v);
   }
 
-  protected retranscribe(): void {
+  protected async retranscribe(): Promise<void> {
     const edited = this.p().words.some((w) => w.deleted);
-    if (!edited || confirm(this.transloco.translate('editor.transcribe.confirmAll'))) this.transcribe.emit('all');
+    if (!edited || (await this.confirm.ask({ text: 'editor.transcribe.confirmAll', confirm: 'editor.transcribe.rerun', danger: true }))) {
+      this.transcribe.emit('all');
+    }
   }
 
   protected sourceLabel(): string {
@@ -210,8 +214,9 @@ export class Inspector {
     this.store.seek(t !== null && t < clip.end ? t : clip.start);
   }
 
-  protected removeClip(clip: PlacedClip): void {
-    if (confirm(this.transloco.translate('editor.clips.confirmRemove', { name: clip.source.name }))) this.store.removeClip(clip.id);
+  protected async removeClip(clip: PlacedClip): Promise<void> {
+    const ok = await this.confirm.ask({ text: 'editor.clips.confirmRemove', params: { name: clip.source.name }, confirm: 'editor.clips.remove', danger: true });
+    if (ok) this.store.removeClip(clip.id);
   }
 
   protected onDragStart(index: number, e: DragEvent): void {

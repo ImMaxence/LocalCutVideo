@@ -41,15 +41,16 @@
   },
   "landing": {
     "hero": {
-      "badgeLocal": "100% lokāli, nekas netiek augšupielādēts",
-      "badgeOpen": "Bezmaksas un atvērtais kods",
-      "title1": "Rediģē savus video",
-      "title2": "Nekas neatstāj tavu datoru",
-      "lead": "LocalCutVideo izgriež klusumus, transkribē ar Whisper, iededzina karaoke subtitrus un pārkadrē 16:9 uz 9:16, pilnībā tavā pārlūkā. Bez augšupielādes, bez konta, bez servera",
-      "cta": "Atvērt redaktoru",
+      "badgeLocal": "Tavi video paliek pie tevis",
+      "badgeOpen": "Bez ūdenszīmes, atvērtais kods",
+      "title1": "Montē savus video ar vienu klikšķi",
+      "title2": "neko neaugšupielādējot",
+      "lead": "Izgriez pauzes un “ēēē”, pievieno animētus subtitrus un automātiski pārej uz TikTok formātu. Bez maksas, bez konta un bez ūdenszīmes: viss notiek tavā datorā",
+      "cta": "Montēt manu video bez maksas",
       "github": "Skatīt GitHub",
-      "hint": "Vislabāk darbojas Chrome vai Edge datorā",
-      "demo": "Izmēģināt ar demo video"
+      "hint": "Bez reģistrācijas · Vislabāk datorā, ar Chrome vai Edge",
+      "demo": "Izmēģināt demo",
+      "badgeAlt": "Bezmaksas CapCut alternatīva"
     },
     "mock": {
       "w1": "Tātad šodien",
@@ -62,95 +63,95 @@
       "cap2": "datorā"
     },
     "stats": {
-      "upload": "baiti augšupielādēti",
-      "local": "apstrādāts tavā ierīcē",
+      "upload": "video augšupielādēti internetā",
       "languages": "saskarnes valodas",
-      "gpu": "paātrināts MI un kodēšana"
+      "free": "bez maksas, bez abonementa",
+      "watermark": "ūdenszīmju tavos video"
     },
     "how": {
       "eyebrow": "Kā tas darbojas",
-      "title": "No neapstrādāta materiāla līdz publicēšanai gatavam video trīs soļos",
+      "title": "Publicēšanai gatavs video trīs soļos",
       "open": {
-        "title": "Atver video",
-        "text": "Izvēlies failu savā diskā. Tas tiek nolasīts uz vietas: bez kopijas, bez augšupielādes, pat vairāku gigabaitu failiem"
+        "title": "Atver savu video",
+        "text": "Ievelc video no datora vai telefona. Tas atveras uzreiz, pat ja ir milzīgs"
       },
       "edit": {
-        "title": "Ļauj redaktoram strādāt",
-        "text": "Klusumi tiek atrasti, runa tiek transkribēta vārdu pa vārdam un sejas tiek izsekotas, viss lokāli. Labo jebko, rediģējot tekstu"
+        "title": "Palaid automātisko montāžu",
+        "text": "Pauzes un vilcināšanās tiek izgrieztas, subtitri uzrakstās paši, un runātājs paliek kadra centrā. Pēc tam vari visu pielāgot"
       },
       "export": {
-        "title": "Eksportē MP4",
-        "text": "Izvēlies 16:9, 9:16 vai 1:1. Video kodē tava videokarte, un tas tiek ierakstīts tieši tavā diskā"
+        "title": "Lejupielādē un publicē",
+        "text": "Saņem savu video HD kvalitātē, TikTok, YouTube vai Instagram formātā, gatavu publicēšanai"
       }
     },
     "features": {
       "eyebrow": "Funkcijas",
-      "title": "Viss, kas nepieciešams video, kuros runā kamerā",
-      "lead": "Radīts YouTube, TikTok, Reels un Shorts satura veidotājiem, kuri negrib savu neapstrādāto materiālu nekur augšupielādēt",
+      "title": "Viss, kas vajadzīgs video, kas notur uzmanību",
+      "lead": "TikTok, Reels, Shorts un YouTube satura veidotājiem, kā arī skolotājiem, pasniedzējiem un uzņēmumiem",
       "silences": {
-        "title": "Automātiska klusumu izgriešana",
-        "text": "Atrod pauzes pēc skaņas skaļuma un izņem tās, ar regulējamu slieksni, minimālo garumu un elpas atstarpi"
+        "title": "Ardievas pauzēm",
+        "text": "Klusums un tukši brīži tiek atrasti un izgriezti automātiski: tavs video sekundē iegūst tempu"
       },
       "textEdit": {
-        "title": "Rediģēšana ar tekstu",
-        "text": "Whisper katram vārdam piešķir laika zīmogu. Izdzēs vārdus transkripcijā, un atbilstošā video daļa tiek izgriezta"
+        "title": "Montē kā tekstu",
+        "text": "Tavs video tiek atšifrēts vārdu pa vārdam. Izdzēs teikumu no teksta, un tas pazūd no video"
       },
       "captions": {
-        "title": "Karaoke subtitri",
-        "text": "Vārdu pa vārdam animēti subtitri, iededzināti video, karaoke, tīrā vai rāmja stilā, tavā izcēluma krāsā"
+        "title": "Automātiski subtitri",
+        "text": "Animēti subtitri vārdu pa vārdam, kā TikTok, neko neierakstot. Izvēlies stilu un krāsu"
       },
       "framing": {
-        "title": "Automātiska kadrēšana 16:9 → 9:16",
-        "text": "Seju izsekošana notur runātāju kadrā, kad horizontālu video pārveido par vertikālu"
+        "title": "TikTok formāts ar vienu klikšķi",
+        "text": "Pārvērt horizontālu video vertikālā: runātāja seja vienmēr paliek kadrā"
       },
       "zoom": {
-        "title": "Gudrā tālummaiņa",
-        "text": "Mainīga pietuvināšana pie katra griezuma padara lēciena griezumus apzinātus un notur skatītājus"
+        "title": "Ritmiski tuvinājumi",
+        "text": "Smalki tuvinājumi pie katra griezuma piešķir dinamiku un notur skatītājus līdz beigām"
       },
       "ducking": {
-        "title": "Skaņa un mūzika",
-        "text": "Palielini skaļumu, izlīdzini klipus un pievieno fona mūziku, kas pati klusinās, kad kāds runā"
+        "title": "Fona mūzika",
+        "text": "Pievieno mūziku, kas pati kļūst klusāka, kad tu runā, un iestati katra uzņēmuma skaļumu"
       },
       "recovery": {
-        "title": "Atjaunošana pēc avārijas",
-        "text": "Katra izmaiņa tiek saglabāta tavā pārlūkā reāllaikā. Atver cilni no jauna un turpini tieši tur, kur pārtrauci"
+        "title": "Nekas nepazūd",
+        "text": "Viss tiek saglabāts darba gaitā. Aizver cilni, atgriezies vēlāk un turpini tieši tur, kur beidzi"
       },
       "offline": {
-        "title": "Darbojas bezsaistē",
-        "text": "Instalē to kā lietotni. Kad MI modelis ir lejupielādēts, viss redaktors darbojas bez interneta savienojuma"
+        "title": "Arī bez interneta",
+        "text": "Instalē to kā lietotni: kad tā ir gatava, tā darbojas arī vilcienā vai lidmašīnā"
       },
       "export": {
-        "title": "Ātrs aparatūras eksports",
-        "text": "Kodēšanai izmanto WebCodecs, tavā pārlūkā un videokartē iebūvēto video kodētāju, nevis lēnu programmatūras kodēšanu"
+        "title": "HD un bez ūdenszīmes",
+        "text": "Eksportē 720p vai 1080p kvalitātē, līdz 60 kadriem sekundē. Nav pievienota logotipa, nav maksas versijas"
       },
       "clips": {
-        "title": "Vairāku klipu salikšana",
-        "text": "Iemet vairākus uzņēmumus uzreiz: tie tiek apvienoti vienā video tevis izvēlētajā secībā, ar kopīgu laika joslu un transkripciju"
+        "title": "Vairāki uzņēmumi, viens video",
+        "text": "Ievelc visus uzņēmumus uzreiz: tie tiek savienoti vienu pēc otra tevis izvēlētajā secībā"
       },
       "inputs": {
-        "title": "MP4, MOV, WebM, MKV",
-        "text": "Atver tava tālruņa un kameras failus, arī iPhone HEVC video, ja tavs pārlūks spēj tos dekodēt"
+        "title": "Tava telefona video",
+        "text": "MP4, MOV, WebM, MKV: atver video no telefona vai kameras, arī no iPhone, ja tavs pārlūks tos spēj atskaņot"
       },
       "languages": {
-        "title": "Daudzvalodu",
-        "text": "Saskarne runā {{ count }} valodās, un Whisper transkribē vēl desmitiem citu, ar automātisku valodas noteikšanu"
+        "title": "Tavā valodā",
+        "text": "Saskarne pieejama {{ count }} valodās, un subtitri darbojas desmitiem valodu, kas tiek atpazītas automātiski"
       }
     },
     "privacy": {
       "eyebrow": "Privātums",
-      "title": "Bez augšupielādes, jau pēc būtības",
-      "lead": "Tavs video tiek nolasīts tieši no tava diska. Audio analīze, transkripcija, seju izsekošana un kodēšana notiek fona pavedienos (Web Workers) tavā datorā. Vienkārši nav servera, uz kuru sūtīt tavu materiālu",
-      "upload": "Nekad nekādas augšupielādes: fails nekad neatstāj tavu datoru",
-      "account": "Bez konta, bez sīkdatnēm, bez analītikas",
-      "csp": "Stingra Content-Security-Policy ļauj lapai sazināties tikai ar šo vietni, kas nodrošina arī MI modeļus (Hugging Face ir tikai rezerve)",
-      "storage": "Projekti tiek saglabāti tava pārlūka lokālajā datubāzē (IndexedDB), un tos var izdzēst jebkurā brīdī",
+      "title": "Tavi video paliek pie tevis",
+      "lead": "Šeit nekas netiek augšupielādēts: visu darbu veic tava paša ierīce, pat mākslīgo intelektu. Neviens cits neredz tavus kadrus",
+      "upload": "Tavi video nekad netiek sūtīti internetā",
+      "account": "Bez konta, bez reklāmām, bez izsekošanas",
+      "storage": "Tavi projekti paliek pārlūkā, un tos var izdzēst ar vienu klikšķi",
       "diagram": {
         "machine": "Tavs dators",
         "file": "Video fails",
         "browser": "Tavs pārlūks",
         "upload": "Augšupielāde serverī",
         "model": "MI modeļa lejupielāde (vienreiz, kešatmiņā)"
-      }
+      },
+      "sensitive": "Ideāli konfidenciāliem video: sanāksmes, klienti, ģimene"
     },
     "support": {
       "eyebrow": "Saderība",
@@ -166,16 +167,16 @@
     "faq": {
       "title": "Biežāk uzdotie jautājumi",
       "free": {
-        "q": "Vai tas tiešām ir bezmaksas? Kur ir āķis?",
-        "a": "Tas ir bezmaksas un atvērtā koda. Tā kā viss darbs notiek tavā datorā, nav servera izmaksu, ko segt, tāpēc nav nekā, ko tev pārdot, un nav datu, ko vākt"
+        "q": "Vai tiešām bez maksas? Kur ir āķis?",
+        "a": "Āķa nav. Tā kā darbu veic tavs dators, nav jāmaksā par dārgiem serveriem: nav abonementa, nav ūdenszīmes, nav reklāmu. Kods pat ir publisks (atvērtais kods)"
       },
       "formats": {
-        "q": "Kādus video formātus es varu atvērt?",
-        "a": "MP4, MOV, WebM un MKV, ja vien tavs pārlūks spēj dekodēt kodeku (H.264, HEVC, VP9, AV1 atkarībā no pārlūka un sistēmas). Eksports ir MP4 fails"
+        "q": "Kādus video varu atvērt?",
+        "a": "Video no telefona, kameras vai ekrāna ierakstiem: MP4, MOV, WebM un MKV. Rezultāts ir MP4 fails, kas atskaņojas visur"
       },
       "browsers": {
-        "q": "Kāpēc Chrome vai Edge?",
-        "a": "Tie atbalsta File System Access API, kas ļauj redaktoram atkal atvērt tavu video pēc pārlādēšanas un ierakstīt eksportu tieši diskā. Citi pārlūki arī darbojas, ar dažiem papildu klikšķiem"
+        "q": "Kuru pārlūku izmantot?",
+        "a": "Chrome vai Edge datorā sniedz labāko pieredzi. Firefox un Safari arī darbojas, ar dažiem papildu klikšķiem, lai atkal atvērtu video. Telefonā labāk izvēlies īsus video"
       },
       "size": {
         "q": "Vai ir faila lieluma ierobežojums?",
@@ -183,11 +184,15 @@
       },
       "offline": {
         "q": "Vai tas darbojas bez interneta?",
-        "a": "Jā, kad tas ir ielādēts. Instalē to kā lietotni (PWA) un transkribē vienreiz, kamēr esi tiešsaistē: Whisper modelis tad paliek kešatmiņā, un viss darbojas bezsaistē"
+        "a": "Jā. Pirmajā reizē tiek lejupielādēts subtitru rīks, tikai vienu reizi. Pēc tam viss darbojas bezsaistē, un to var pat instalēt kā lietotni"
       },
       "ai": {
-        "q": "Kur darbojas MI?",
-        "a": "Tavā pārlūkā. Whisper darbojas ar Transformers.js tavā videokartē (WebGPU) vai procesorā (WebAssembly), bet seju noteikšanai izmanto MediaPipe. Modeļi tiek lejupielādēti vienreiz, tavs audio nekad netiek nosūtīts"
+        "q": "Kā mākslīgais intelekts var darboties bez servera?",
+        "a": "MI modeļi (Whisper subtitriem, MediaPipe sejām) tiek lejupielādēti vienreiz, un pēc tam tos darbina tavs dators. Tava balss un attēli to nekad nepamet"
+      },
+      "capcut": {
+        "q": "Ar ko tas atšķiras no CapCut?",
+        "a": "LocalCutVideo koncentrējas uz to, kas vajadzīgs video, kuros kāds runā kamerā (izgrieztas pauzes, automātiski subtitri, vertikāls formāts), bez konta un neaugšupielādējot tavus video. Speciālajiem efektiem, animētām pārejām vai modernām veidnēm CapCut ir pilnīgāks"
       }
     },
     "final": {
@@ -207,6 +212,23 @@
       "cta": "Izveidot sīktēlu",
       "mockTitle": "Mans pirmais",
       "mockAccent": "vlogs"
+    },
+    "compare": {
+      "eyebrow": "Salīdzinājums",
+      "title": "Kāpēc izvēlēties LocalCutVideo?",
+      "lead": "Lielākā daļa tiešsaistes video redaktoru augšupielādē tavus video savos serveros un labākos rīkus patur abonentiem. Šeit viss ir bez maksas un paliek pie tevis",
+      "them": "Tiešsaistes video redaktori",
+      "yes": "Jā",
+      "no": "Nē",
+      "sometimes": "Dažreiz",
+      "rows": {
+        "free": "100% bez maksas, bez ūdenszīmes",
+        "account": "Bez konta un reģistrācijas",
+        "auto": "Automātiski subtitri un griezumi iekļauti",
+        "upload": "Tavi video paliek tavā ierīcē",
+        "offline": "Darbojas bez interneta"
+      },
+      "note": "CapCut ir tā īpašnieka preču zīme. LocalCutVideo ir neatkarīgs projekts, kas nav saistīts ar CapCut vai ByteDance"
     }
   },
   "changelog": {
@@ -232,11 +254,12 @@
     "recent": "Nesenie projekti",
     "empty": "Vēl nav neviena projekta. Atver video, lai sāktu",
     "delete": "Dzēst projektu",
-    "confirmDelete": "Dzēst projektu “{{ name }}”? Video fails tavā diskā netiek ietekmēts",
     "multi": "Vairāki faili? Tie tiek salikti vienā video nosaukumu secībā",
     "importFile": "Atvērt projekta failu (.lcv.json)",
     "saveFile": "Saglabāt projektu kā failu",
-    "imported": "Projekts atvērts: izvēlies tā video, lai turpinātu"
+    "imported": "Projekts atvērts: izvēlies tā video, lai turpinātu",
+    "deleteTitle": "Dzēst šo projektu?",
+    "deleteText": "“{{ name }}” tiks noņemts no taviem projektiem kopā ar griezumiem un subtitriem. Tavs video fails netiek aizskarts"
   },
   "errors": {
     "notVideo": "Šis fails neizskatās pēc video",
@@ -600,6 +623,11 @@
       "blur": "Izpludināts",
       "strength": "Izpludinājuma stiprums",
       "error": "Fona izpludināšanu šajā ierīcē neizdevās palaist"
+    },
+    "mobile": {
+      "title": "Montāža telefonā ir ierobežota",
+      "text": "Redaktors ir paredzēts datoram. Telefonā tas der īsiem video, bet var būt lēns vai pietrūkt atmiņas. Labākam rezultātam izmanto Chrome vai Edge datorā",
+      "ok": "Sapratu"
     }
   },
   "legal": {
@@ -817,8 +845,8 @@
   },
   "seo": {
     "home": {
-      "title": "LocalCutVideo — Bezmaksas video redaktors pārlūkā, nekas netiek augšupielādēts",
-      "description": "Rediģē savus video pārlūkā: klusumi tiek izgriezti automātiski, MI subtitri, sejas kadrēšana TikTok un Shorts, sīktēli. Bezmaksas un atvērtā koda, tavi video nekad neatstāj tavu datoru"
+      "title": "LocalCutVideo — Bezmaksas CapCut alternatīva bez augšupielādes",
+      "description": "Bezmaksas automātiska video montāža pārlūkā: pauzes izgrieztas, animēti subtitri, TikTok un Shorts formāts, sīktēli. Bez konta, bez ūdenszīmes, tavi video nekad nepamet tavu datoru"
     },
     "thumbnail": {
       "title": "Bezmaksas YouTube sīktēlu veidotājs — LocalCutVideo",

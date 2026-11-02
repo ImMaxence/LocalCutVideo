@@ -41,15 +41,16 @@
   },
   "landing": {
     "hero": {
-      "badgeLocal": "100% local, zero încărcări",
-      "badgeOpen": "Gratuit și open source",
-      "title1": "Editează-ți videoclipurile",
-      "title2": "Nimic nu părăsește computerul tău",
-      "lead": "LocalCutVideo taie pauzele, transcrie cu Whisper, inscripționează subtitrări karaoke și reîncadrează 16:9 în 9:16, totul în browser. Fără încărcare, fără cont, fără server",
-      "cta": "Deschide editorul",
+      "badgeLocal": "Videoclipurile tale rămân la tine",
+      "badgeOpen": "Fără filigran, open source",
+      "title1": "Editează-ți videoclipurile cu un clic",
+      "title2": "fără să încarci nimic online",
+      "lead": "Taie pauzele și „ăăă”-urile, adaugă subtitrări animate și treci automat la formatul TikTok. Gratuit, fără cont și fără filigran: totul se întâmplă pe computerul tău",
+      "cta": "Editează-mi videoclipul gratuit",
       "github": "Vezi pe GitHub",
-      "hint": "Funcționează cel mai bine în Chrome sau Edge, pe computer",
-      "demo": "Încearcă cu un videoclip demo"
+      "hint": "Fără înregistrare · Ideal pe computer, cu Chrome sau Edge",
+      "demo": "Încearcă demo-ul",
+      "badgeAlt": "Alternativa gratuită la CapCut"
     },
     "mock": {
       "w1": "Deci azi",
@@ -62,95 +63,95 @@
       "cap2": "computerul tău"
     },
     "stats": {
-      "upload": "octeți încărcați",
-      "local": "procesat pe dispozitivul tău",
+      "upload": "videoclipuri încărcate pe internet",
       "languages": "limbi ale interfeței",
-      "gpu": "IA și codare accelerate"
+      "free": "gratuit, fără abonament",
+      "watermark": "filigrane pe videoclipurile tale"
     },
     "how": {
       "eyebrow": "Cum funcționează",
-      "title": "De la filmarea brută la un videoclip gata de postat în trei pași",
+      "title": "Un videoclip gata de publicat în trei pași",
       "open": {
-        "title": "Deschide un videoclip",
-        "text": "Alege un fișier de pe disc. Este citit pe loc: fără copiere, fără încărcare, chiar și pentru fișiere de câțiva gigaocteți"
+        "title": "Deschide videoclipul",
+        "text": "Trage un videoclip de pe computer sau telefon. Se deschide imediat, chiar dacă e uriaș"
       },
       "edit": {
-        "title": "Lasă editorul să lucreze",
-        "text": "Pauzele sunt detectate, vorbirea e transcrisă cuvânt cu cuvânt, iar fețele sunt urmărite, totul local. Corectează orice editând textul"
+        "title": "Pornește editarea automată",
+        "text": "Pauzele și ezitările sunt tăiate, subtitrările se scriu singure, iar cel care vorbește rămâne în cadru. Apoi poți ajusta totul"
       },
       "export": {
-        "title": "Exportă MP4-ul",
-        "text": "Alege 16:9, 9:16 sau 1:1. Videoclipul este codat de placa video și scris direct pe disc"
+        "title": "Descarcă și publică",
+        "text": "Primește videoclipul în HD, în format TikTok, YouTube sau Instagram, gata de publicat"
       }
     },
     "features": {
       "eyebrow": "Funcții",
-      "title": "Tot ce îți trebuie pentru videoclipuri în care vorbești la cameră",
-      "lead": "Creat pentru creatorii de pe YouTube, TikTok, Reels și Shorts care preferă să nu încarce nicăieri filmările brute",
+      "title": "Tot ce-ți trebuie pentru videoclipuri care captează atenția",
+      "lead": "Pentru creatorii de pe TikTok, Reels, Shorts și YouTube, dar și pentru profesori, formatori și companii",
       "silences": {
-        "title": "Tăierea automată a pauzelor",
-        "text": "Detectează pauzele după volumul sunetului și le elimină, cu prag, durată minimă și marjă de respirație reglabile"
+        "title": "Adio pauze",
+        "text": "Liniștea și momentele moarte sunt găsite și tăiate automat: videoclipul tău capătă ritm într-o secundă"
       },
       "textEdit": {
-        "title": "Editare prin text",
-        "text": "Whisper dă fiecărui cuvânt un marcaj de timp. Șterge cuvinte din transcriere și porțiunea video corespunzătoare e tăiată"
+        "title": "Editează ca pe un text",
+        "text": "Videoclipul tău e transcris cuvânt cu cuvânt. Șterge o frază din text și dispare din videoclip"
       },
       "captions": {
-        "title": "Subtitrări karaoke",
-        "text": "Subtitrări animate cuvânt cu cuvânt, inscripționate în videoclip, în stil karaoke, simplu sau în casetă, cu culoarea ta de evidențiere"
+        "title": "Subtitrări automate",
+        "text": "Subtitrări animate cuvânt cu cuvânt, ca pe TikTok, fără să tastezi nimic. Alege stilul și culoarea"
       },
       "framing": {
-        "title": "Încadrare automată 16:9 → 9:16",
-        "text": "Urmărirea feței ține vorbitorul în cadru când transformi un videoclip orizontal într-unul vertical"
+        "title": "Format TikTok cu un clic",
+        "text": "Transformă un videoclip orizontal în vertical: fața celui care vorbește rămâne mereu în cadru"
       },
       "zoom": {
-        "title": "Zoom inteligent",
-        "text": "Zoom-urile alternante la fiecare tăietură fac ca jump cut-urile să pară intenționate și țin spectatorii atenți"
+        "title": "Zoomuri cu ritm",
+        "text": "Zoomuri discrete la fiecare tăietură aduc dinamism și îți țin publicul până la final"
       },
       "ducking": {
-        "title": "Sunet și muzică",
-        "text": "Dă volumul mai tare, egalizează clipurile și adaugă muzică de fundal care se dă singură mai încet când vorbește cineva"
+        "title": "Muzică de fundal",
+        "text": "Adaugă muzică ce scade singură când vorbești și reglează volumul fiecărei filmări"
       },
       "recovery": {
-        "title": "Recuperare după blocare",
-        "text": "Fiecare modificare e salvată în browser în timp real. Redeschide fila și continuă exact de unde ai rămas"
+        "title": "Nu se pierde nimic",
+        "text": "Totul se salvează pe parcurs. Închide fila, revino mai târziu și continuă exact de unde ai rămas"
       },
       "offline": {
-        "title": "Funcționează offline",
-        "text": "Instalează-l ca aplicație. Odată descărcat modelul IA, întregul editor funcționează fără conexiune la internet"
+        "title": "Chiar și fără internet",
+        "text": "Instalează-l ca pe o aplicație: odată pregătit, funcționează și în tren sau în avion"
       },
       "export": {
-        "title": "Export hardware rapid",
-        "text": "Codarea folosește WebCodecs, encoderul video integrat în browser și în placa video, în locul unei codări software lente"
+        "title": "HD și fără filigran",
+        "text": "Exportă în 720p sau 1080p, până la 60 de cadre pe secundă. Niciun logo adăugat, nicio versiune cu plată"
       },
       "clips": {
-        "title": "Asamblare din mai multe clipuri",
-        "text": "Trage mai multe duble deodată: sunt unite într-un singur videoclip, în ordinea aleasă, cu o cronologie și o transcriere comune"
+        "title": "Mai multe filmări, un singur videoclip",
+        "text": "Trage toate filmările deodată: sunt puse una după alta, în ordinea pe care o alegi"
       },
       "inputs": {
-        "title": "MP4, MOV, WebM, MKV",
-        "text": "Deschide fișierele de pe telefon și cameră, inclusiv filmările HEVC de pe iPhone, când browserul le poate decoda"
+        "title": "Videoclipurile de pe telefon",
+        "text": "MP4, MOV, WebM, MKV: deschide videoclipuri de pe telefon sau cameră, inclusiv de pe iPhone, dacă browserul tău le poate reda"
       },
       "languages": {
-        "title": "Multilingv",
-        "text": "Interfața vorbește {{ count }} de limbi, iar Whisper transcrie alte zeci, cu detectarea automată a limbii"
+        "title": "În limba ta",
+        "text": "Interfața există în {{ count }} de limbi, iar subtitrările funcționează în zeci de limbi, detectate automat"
       }
     },
     "privacy": {
       "eyebrow": "Confidențialitate",
-      "title": "Zero încărcări, din principiu",
-      "lead": "Videoclipul tău e citit direct de pe disc. Analiza audio, transcrierea, urmărirea feței și codarea rulează în fire de fundal (Web Workers) pe computerul tău. Pur și simplu nu există niciun server către care să fie trimisă filmarea ta",
-      "upload": "Nicio încărcare, niciodată: fișierul nu părăsește computerul",
-      "account": "Fără cont, fără cookie-uri, fără statistici",
-      "csp": "O Content-Security-Policy strictă permite paginii să comunice doar cu acest site, care furnizează și modelele IA (Hugging Face e doar o rezervă)",
-      "storage": "Proiectele sunt salvate în baza de date locală a browserului (IndexedDB) și pot fi șterse oricând",
+      "title": "Videoclipurile tale rămân la tine",
+      "lead": "Aici nu se încarcă nimic: propriul tău dispozitiv face toată treaba, chiar și inteligența artificială. Nimeni altcineva nu-ți vede imaginile",
+      "upload": "Videoclipurile tale nu sunt trimise niciodată pe internet",
+      "account": "Fără cont, fără reclame, fără urmărire",
+      "storage": "Proiectele tale rămân în browser și se șterg cu un clic",
       "diagram": {
         "machine": "Computerul tău",
         "file": "Fișier video",
         "browser": "Browserul tău",
         "upload": "Încărcare pe un server",
         "model": "Descărcarea modelului IA (o dată, în cache)"
-      }
+      },
+      "sensitive": "Ideal pentru videoclipuri confidențiale: ședințe, clienți, familie"
     },
     "support": {
       "eyebrow": "Compatibilitate",
@@ -166,16 +167,16 @@
     "faq": {
       "title": "Întrebări frecvente",
       "free": {
-        "q": "Chiar e gratuit? Unde e șmecheria?",
-        "a": "Este gratuit și open source. Pentru că toată munca se face pe computerul tău, nu există costuri de server de plătit, deci nu e nimic de vândut și nicio dată de colectat"
+        "q": "Chiar e gratuit? Unde e capcana?",
+        "a": "Nu există. Pentru că munca o face computerul tău, nu sunt servere scumpe de plătit: fără abonament, fără filigran, fără reclame. Codul este chiar public (open source)"
       },
       "formats": {
-        "q": "Ce formate video pot deschide?",
-        "a": "MP4, MOV, WebM și MKV, cu condiția ca browserul să poată decoda codecul (H.264, HEVC, VP9, AV1, în funcție de browser și de sistem). Exportul este un fișier MP4"
+        "q": "Ce videoclipuri pot deschide?",
+        "a": "Videoclipuri de pe telefon, de pe cameră sau înregistrări de ecran: MP4, MOV, WebM și MKV. Rezultatul este un fișier MP4 care merge oriunde"
       },
       "browsers": {
-        "q": "De ce Chrome sau Edge?",
-        "a": "Acestea acceptă File System Access API, care permite editorului să redeschidă videoclipul după reîncărcare și să scrie exportul direct pe disc. Celelalte browsere funcționează și ele, cu câteva clicuri în plus"
+        "q": "Ce browser să folosesc?",
+        "a": "Chrome sau Edge pe computer oferă cea mai bună experiență. Firefox și Safari funcționează și ele, cu câteva clicuri în plus pentru a redeschide un videoclip. Pe telefon, preferă videoclipurile scurte"
       },
       "size": {
         "q": "Există o limită de mărime a fișierului?",
@@ -183,11 +184,15 @@
       },
       "offline": {
         "q": "Funcționează fără internet?",
-        "a": "Da, odată încărcat. Instalează-l ca aplicație (PWA) și fă o transcriere cât ești online: modelul Whisper rămâne apoi în cache și totul funcționează offline"
+        "a": "Da. Prima dată se descarcă unealta de subtitrare, o singură dată. Apoi totul funcționează offline și îl poți chiar instala ca pe o aplicație"
       },
       "ai": {
-        "q": "Unde rulează IA?",
-        "a": "În browserul tău. Whisper rulează cu Transformers.js pe placa video (WebGPU) sau pe procesor (WebAssembly), iar detectarea fețelor folosește MediaPipe. Modelele se descarcă o singură dată, sunetul tău nu e trimis niciodată"
+        "q": "Cum poate funcționa IA fără server?",
+        "a": "Modelele IA (Whisper pentru subtitrări, MediaPipe pentru fețe) sunt descărcate o dată, apoi le rulează computerul tău. Vocea și imaginile tale nu pleacă niciodată de acolo"
+      },
+      "capcut": {
+        "q": "Care e diferența față de CapCut?",
+        "a": "LocalCutVideo se concentrează pe ce le trebuie videoclipurilor în care cineva vorbește la cameră (pauze tăiate, subtitrări automate, format vertical), fără cont și fără să-ți încarci videoclipurile. Pentru efecte speciale, tranziții animate sau șabloane la modă, CapCut este mai complet"
       }
     },
     "final": {
@@ -207,6 +212,23 @@
       "cta": "Creează o miniatură",
       "mockTitle": "Primul meu",
       "mockAccent": "vlog"
+    },
+    "compare": {
+      "eyebrow": "Comparație",
+      "title": "De ce să alegi LocalCutVideo?",
+      "lead": "Majoritatea editoarelor video online îți încarcă videoclipurile pe serverele lor și păstrează cele mai bune unelte pentru un abonament. Aici totul e gratuit și rămâne la tine",
+      "them": "Editoare video online",
+      "yes": "Da",
+      "no": "Nu",
+      "sometimes": "Uneori",
+      "rows": {
+        "free": "100% gratuit, fără filigran",
+        "account": "Fără cont sau înregistrare",
+        "auto": "Subtitrări și tăieturi automate incluse",
+        "upload": "Videoclipurile rămân pe dispozitivul tău",
+        "offline": "Funcționează fără internet"
+      },
+      "note": "CapCut este o marcă a proprietarului său. LocalCutVideo este un proiect independent, fără legătură cu CapCut sau ByteDance"
     }
   },
   "changelog": {
@@ -232,11 +254,12 @@
     "recent": "Proiecte recente",
     "empty": "Niciun proiect încă. Deschide un videoclip pentru a începe",
     "delete": "Șterge proiectul",
-    "confirmDelete": "Ștergi proiectul „{{ name }}”? Fișierul video de pe disc nu este afectat",
     "multi": "Mai multe fișiere? Sunt asamblate într-un singur videoclip, în ordinea numelor",
     "importFile": "Deschide un fișier de proiect (.lcv.json)",
     "saveFile": "Salvează proiectul ca fișier",
-    "imported": "Proiect deschis: selectează videoclipurile lui pentru a continua"
+    "imported": "Proiect deschis: selectează videoclipurile lui pentru a continua",
+    "deleteTitle": "Ștergi acest proiect?",
+    "deleteText": "„{{ name }}” va fi eliminat din proiectele tale, împreună cu tăieturile și subtitrările. Fișierul video nu este atins"
   },
   "errors": {
     "notVideo": "Acest fișier nu pare a fi un videoclip",
@@ -600,6 +623,11 @@
       "blur": "Estompat",
       "strength": "Intensitatea estompării",
       "error": "Estomparea fundalului nu a putut porni pe acest dispozitiv"
+    },
+    "mobile": {
+      "title": "Editarea pe telefon este limitată",
+      "text": "Editorul este gândit pentru computer. Pe telefon merge pentru videoclipuri scurte, dar poate fi lent sau poate rămâne fără memorie. Pentru un rezultat mai bun, folosește Chrome sau Edge pe un computer",
+      "ok": "Am înțeles"
     }
   },
   "legal": {
@@ -817,8 +845,8 @@
   },
   "seo": {
     "home": {
-      "title": "LocalCutVideo — Editor video gratuit în browser, nimic nu se încarcă",
-      "description": "Editează-ți videoclipurile în browser: pauze tăiate automat, subtitrări cu IA, încadrare pe față pentru TikTok și Shorts, miniaturi. Gratuit și open source, videoclipurile tale nu părăsesc niciodată computerul"
+      "title": "LocalCutVideo — Alternativa gratuită la CapCut, fără upload",
+      "description": "Editare video automată și gratuită în browser: pauze tăiate, subtitrări animate, format TikTok și Shorts, miniaturi. Fără cont, fără filigran, videoclipurile tale nu părăsesc niciodată computerul"
     },
     "thumbnail": {
       "title": "Generator gratuit de miniaturi YouTube — LocalCutVideo",

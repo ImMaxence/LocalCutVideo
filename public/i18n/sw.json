@@ -41,15 +41,16 @@
   },
   "landing": {
     "hero": {
-      "badgeLocal": "100% ndani ya kifaa, bila kupakia",
-      "badgeOpen": "Bure na chanzo huria",
-      "title1": "Hariri video zako",
-      "title2": "Hakuna kinachoondoka kwenye kompyuta yako",
-      "lead": "LocalCutVideo hukata ukimya, hugeuza usemi kuwa maandishi kwa Whisper, huongeza manukuu ya karaoke na hupanga upya 16:9 kuwa 9:16, yote ndani ya kivinjari chako. Hakuna kupakia, hakuna akaunti, hakuna seva",
-      "cta": "Fungua kihariri",
+      "badgeLocal": "Video zako zinabaki kwako",
+      "badgeOpen": "Bila alama ya maji, chanzo huria",
+      "title1": "Hariri video zako kwa kubofya mara moja",
+      "title2": "bila kupakia chochote mtandaoni",
+      "lead": "Kata vituo na “aaa”, ongeza manukuu yanayosonga na uhamie kiotomatiki kwenye muundo wa TikTok. Bure, bila akaunti na bila alama ya maji: kila kitu hufanyika kwenye kompyuta yako",
+      "cta": "Hariri video yangu bure",
       "github": "Tazama kwenye GitHub",
-      "hint": "Bora zaidi kwenye Chrome au Edge kwenye kompyuta",
-      "demo": "Jaribu kwa video ya mfano"
+      "hint": "Bila kujisajili · Bora kwenye kompyuta, ukitumia Chrome au Edge",
+      "demo": "Jaribu onyesho",
+      "badgeAlt": "Mbadala wa bure wa CapCut"
     },
     "mock": {
       "w1": "Basi leo",
@@ -62,95 +63,95 @@
       "cap2": "kompyuta yako"
     },
     "stats": {
-      "upload": "baiti zilizopakiwa",
-      "local": "huchakatwa kwenye kifaa chako",
+      "upload": "video zilizopakiwa mtandaoni",
       "languages": "lugha za kiolesura",
-      "gpu": "AI na usimbaji vilivyoharakishwa"
+      "free": "bure, bila usajili wa malipo",
+      "watermark": "alama za maji kwenye video zako"
     },
     "how": {
       "eyebrow": "Jinsi inavyofanya kazi",
-      "title": "Kutoka picha ghafi hadi video tayari kuchapishwa, kwa hatua tatu",
+      "title": "Video tayari kuchapishwa kwa hatua tatu",
       "open": {
-        "title": "Fungua video",
-        "text": "Chagua faili kwenye diski yako. Inasomwa pale ilipo: hainakiliwi, haipakiwi, hata ikiwa na gigabaiti kadhaa"
+        "title": "Fungua video yako",
+        "text": "Buruta video kutoka kwenye kompyuta au simu yako. Inafunguka papo hapo, hata ikiwa ni kubwa sana"
       },
       "edit": {
-        "title": "Acha kihariri kifanye kazi",
-        "text": "Ukimya hugunduliwa, usemi huandikwa neno kwa neno na nyuso hufuatiliwa, yote ndani ya kifaa. Rekebisha chochote kwa kuhariri maandishi"
+        "title": "Anzisha uhariri wa kiotomatiki",
+        "text": "Vituo na kusita hukatwa, manukuu hujiandika yenyewe na mzungumzaji hubaki katikati ya picha. Baadaye unaweza kurekebisha kila kitu"
       },
       "export": {
-        "title": "Hamisha MP4",
-        "text": "Chagua 16:9, 9:16 au 1:1. Kadi yako ya michoro husimba video na kuiandika moja kwa moja kwenye diski yako"
+        "title": "Pakua na uchapishe",
+        "text": "Pata video yako kwa HD, katika muundo wa TikTok, YouTube au Instagram, tayari kuchapishwa"
       }
     },
     "features": {
       "eyebrow": "Vipengele",
-      "title": "Kila unachohitaji kwa video za kuzungumza mbele ya kamera",
-      "lead": "Imetengenezwa kwa watayarishi wa YouTube, TikTok, Reels na Shorts ambao hawataki kupakia picha zao ghafi popote",
+      "title": "Kila unachohitaji kwa video zinazovutia",
+      "lead": "Kwa watayarishi wa TikTok, Reels, Shorts na YouTube, pamoja na walimu, wakufunzi na kampuni",
       "silences": {
-        "title": "Kukata ukimya kiotomatiki",
-        "text": "Vituo hugunduliwa kwa kiwango cha sauti na kuondolewa, kwa kizingiti, muda wa chini na nafasi ya kupumua unavyoweza kurekebisha"
+        "title": "Kwaheri vituo",
+        "text": "Ukimya na nyakati tupu hupatikana na kukatwa kiotomatiki: video yako inapata kasi kwa sekunde moja"
       },
       "textEdit": {
-        "title": "Hariri kwa maandishi",
-        "text": "Whisper huweka muda kwa kila neno. Futa maneno kwenye nakala ya maandishi na sehemu inayolingana ya video inakatwa"
+        "title": "Hariri kama maandishi",
+        "text": "Video yako inanukuliwa neno kwa neno. Futa sentensi kwenye maandishi nayo hutoweka kwenye video"
       },
       "captions": {
-        "title": "Manukuu ya karaoke",
-        "text": "Manukuu yanayosonga neno kwa neno yamechomwa ndani ya video, kwa mtindo wa karaoke, rahisi au ndani ya kisanduku, kwa rangi ya kuangazia unayoipenda"
+        "title": "Manukuu ya kiotomatiki",
+        "text": "Manukuu yanayosonga neno kwa neno, kama kwenye TikTok, bila kuandika chochote. Chagua mtindo na rangi"
       },
       "framing": {
-        "title": "Upangaji wa fremu kiotomatiki 16:9 → 9:16",
-        "text": "Ufuatiliaji wa uso humweka mzungumzaji ndani ya fremu unapogeuza video ya mlalo kuwa wima"
+        "title": "Muundo wa TikTok kwa mbofyo mmoja",
+        "text": "Geuza video ya mlalo kuwa ya wima: uso wa mzungumzaji hubaki kwenye fremu kila wakati"
       },
       "zoom": {
-        "title": "Kukuza kwa akili",
-        "text": "Kukuza kwa kubadilishana kwenye kila kata hufanya miruko ionekane imekusudiwa na huwafanya watazamaji waendelee kutazama"
+        "title": "Kukuza kwa mdundo",
+        "text": "Kukuza kidogo kwenye kila kipande kunaongeza msisimko na kuwaweka watazamaji hadi mwisho"
       },
       "ducking": {
-        "title": "Sauti na muziki",
-        "text": "Ongeza sauti, sawazisha klipu na ongeza muziki wa usuli unaopungua wenyewe mtu anapozungumza"
+        "title": "Muziki wa usuli",
+        "text": "Ongeza muziki unaoshuka wenyewe unapozungumza, na urekebishe sauti ya kila kipande ulichorekodi"
       },
       "recovery": {
-        "title": "Kurejesha baada ya hitilafu",
-        "text": "Kila badiliko huhifadhiwa papo hapo kwenye kivinjari chako. Fungua kichupo tena na uendelee pale ulipoachia"
+        "title": "Hakuna kinachopotea",
+        "text": "Kila kitu huhifadhiwa unapofanya kazi. Funga kichupo, rudi baadaye na uendelee pale ulipoachia"
       },
       "offline": {
-        "title": "Hufanya kazi bila mtandao",
-        "text": "Isakinishe kama programu. Mara modeli ya AI ikishapakuliwa, kihariri kizima hufanya kazi bila intaneti"
+        "title": "Hata bila intaneti",
+        "text": "Isakinishe kama programu: ikishakuwa tayari, inafanya kazi hata ukiwa kwenye treni au ndege"
       },
       "export": {
-        "title": "Uhamishaji wa haraka kwa maunzi",
-        "text": "Usimbaji hutumia WebCodecs, kisimbaji video kilichojengwa ndani ya kivinjari na kadi yako ya michoro, badala ya usimbaji wa polepole wa programu"
+        "title": "HD na bila alama ya maji",
+        "text": "Hamisha kwa 720p au 1080p, hadi fremu 60 kwa sekunde. Hakuna nembo inayoongezwa, hakuna toleo la kulipia"
       },
       "clips": {
-        "title": "Kuunganisha klipu nyingi",
-        "text": "Dondosha picha kadhaa kwa pamoja: zinaunganishwa kuwa video moja, kwa mpangilio unaouchagua, zikiwa na mstari mmoja wa muda na nakala moja ya maandishi"
+        "title": "Rekodi kadhaa, video moja",
+        "text": "Buruta rekodi zako zote kwa pamoja: zinaunganishwa moja baada ya nyingine kwa mpangilio unaochagua"
       },
       "inputs": {
-        "title": "MP4, MOV, WebM, MKV",
-        "text": "Hufungua faili kutoka kwa simu na kamera yako, ikiwemo video za HEVC za iPhone ikiwa kivinjari chako kinaweza kuzisimbua"
+        "title": "Video za simu yako",
+        "text": "MP4, MOV, WebM, MKV: fungua video za simu au kamera yako, zikiwemo za iPhone ikiwa kivinjari chako kinaweza kuzicheza"
       },
       "languages": {
-        "title": "Lugha nyingi",
-        "text": "Kiolesura kinapatikana kwa lugha {{ count }} na Whisper huandika makumi ya nyingine, na hugundua lugha kiotomatiki"
+        "title": "Kwa lugha yako",
+        "text": "Kiolesura kinapatikana kwa lugha {{ count }} na manukuu hufanya kazi kwa lugha nyingi zinazotambuliwa kiotomatiki"
       }
     },
     "privacy": {
       "eyebrow": "Faragha",
-      "title": "Hakuna kupakia, tangu mwanzo wa muundo",
-      "lead": "Video yako inasomwa moja kwa moja kutoka kwenye diski. Uchambuzi wa sauti, uandishi, ufuatiliaji wa uso na usimbaji vyote hufanyika kwenye nyuzi za usuli (Web Workers) kwenye kompyuta yako. Hakuna kabisa seva ya kutuma picha zako",
-      "upload": "Hakuna kupakia kamwe: faili haiondoki kwenye kompyuta yako",
-      "account": "Hakuna akaunti, hakuna vidakuzi, hakuna takwimu",
-      "csp": "Content-Security-Policy kali huruhusu ukurasa kuwasiliana na tovuti hii pekee, ambayo pia hutoa modeli za AI (Hugging Face ni akiba tu)",
-      "storage": "Miradi huhifadhiwa kwenye hifadhidata ya ndani ya kivinjari chako (IndexedDB) na inaweza kufutwa wakati wowote",
+      "title": "Video zako zinabaki kwako",
+      "lead": "Hapa hakuna kinachopakiwa: kifaa chako mwenyewe hufanya kazi yote, hata akili bandia. Hakuna mtu mwingine anayeona picha zako",
+      "upload": "Video zako hazitumwi kamwe kupitia intaneti",
+      "account": "Bila akaunti, bila matangazo, bila ufuatiliaji",
+      "storage": "Miradi yako inabaki kwenye kivinjari na inafutwa kwa mbofyo mmoja",
       "diagram": {
         "machine": "Kompyuta yako",
         "file": "Faili ya video",
         "browser": "Kivinjari chako",
         "upload": "Kupakia kwenye seva",
         "model": "Kupakua modeli ya AI (mara moja, huhifadhiwa)"
-      }
+      },
+      "sensitive": "Bora kwa video za siri: mikutano, wateja, familia"
     },
     "support": {
       "eyebrow": "Uoanifu",
@@ -166,28 +167,32 @@
     "faq": {
       "title": "Maswali yanayoulizwa mara kwa mara",
       "free": {
-        "q": "Je, ni bure kweli? Kuna mtego gani?",
-        "a": "Ni bure na chanzo huria. Kwa kuwa kazi yote hufanyika kwenye kompyuta yako, hakuna gharama za seva, kwa hiyo hakuna cha kukuuzia wala data ya kukusanya"
+        "q": "Ni bure kweli? Kuna mtego gani?",
+        "a": "Hakuna. Kwa kuwa kompyuta yako ndiyo hufanya kazi, hakuna seva za gharama za kulipia: hakuna usajili wa malipo, hakuna alama ya maji, hakuna matangazo. Msimbo wenyewe ni wa umma (chanzo huria)"
       },
       "formats": {
-        "q": "Ninaweza kufungua miundo gani ya video?",
-        "a": "MP4, MOV, WebM na MKV, mradi kivinjari chako kinaweza kusimbua kodeki (H.264, HEVC, VP9, AV1 kulingana na kivinjari na mfumo). Uhamishaji ni faili ya MP4"
+        "q": "Ninaweza kufungua video zipi?",
+        "a": "Video za simu, kamera au rekodi za skrini yako: MP4, MOV, WebM na MKV. Matokeo ni faili la MP4 linalocheza popote"
       },
       "browsers": {
-        "q": "Kwa nini Chrome au Edge?",
-        "a": "Vinaunga mkono File System Access API, inayoruhusu kihariri kufungua tena video yako baada ya kupakia upya na kuandika uhamishaji moja kwa moja kwenye diski. Vivinjari vingine pia hufanya kazi, kwa mibofyo michache ya ziada"
+        "q": "Nitumie kivinjari gani?",
+        "a": "Chrome au Edge kwenye kompyuta hutoa uzoefu bora zaidi. Firefox na Safari pia hufanya kazi, kwa mibofyo michache zaidi ili kufungua video tena. Kwenye simu, pendelea video fupi"
       },
       "size": {
         "q": "Je, kuna kikomo cha ukubwa wa faili?",
         "a": "Hakuna kikomo cha kupakia kwa sababu hakuna kinachopakiwa. Video husomwa kutoka kwenye diski kipande kwa kipande; kikomo halisi ni kumbukumbu ya kompyuta yako na subira yako kwa video ndefu sana"
       },
       "offline": {
-        "q": "Je, inafanya kazi bila intaneti?",
-        "a": "Ndiyo, mara ikishapakiwa. Isakinishe kama programu (PWA) na uandike mara moja ukiwa mtandaoni: modeli ya Whisper huhifadhiwa na kila kitu kitafanya kazi bila mtandao"
+        "q": "Inafanya kazi bila intaneti?",
+        "a": "Ndiyo. Mara ya kwanza, zana ya manukuu hupakuliwa, mara moja tu. Baada ya hapo kila kitu hufanya kazi nje ya mtandao, na unaweza hata kuisakinisha kama programu"
       },
       "ai": {
-        "q": "AI inafanya kazi wapi?",
-        "a": "Ndani ya kivinjari chako. Whisper hufanya kazi kwa Transformers.js kwenye kadi yako ya michoro (WebGPU) au kichakataji (WebAssembly), na ugunduzi wa uso hutumia MediaPipe. Modeli hupakuliwa mara moja, sauti yako haitumwi kamwe"
+        "q": "AI inawezaje kufanya kazi bila seva?",
+        "a": "Miundo ya AI (Whisper kwa manukuu, MediaPipe kwa nyuso) hupakuliwa mara moja, kisha kompyuta yako ndiyo huiendesha. Sauti yako na picha zako haziondoki kamwe humo"
+      },
+      "capcut": {
+        "q": "Kuna tofauti gani na CapCut?",
+        "a": "LocalCutVideo inazingatia kile ambacho video za mtu anayezungumza mbele ya kamera zinahitaji (vituo vilivyokatwa, manukuu ya kiotomatiki, muundo wa wima), bila akaunti na bila kupakia video zako. Kwa madoido maalum, mipito inayosonga au violezo vinavyovuma, CapCut ni kamili zaidi"
       }
     },
     "final": {
@@ -207,6 +212,23 @@
       "cta": "Tengeneza picha ya jalada",
       "mockTitle": "Vlog yangu",
       "mockAccent": "ya kwanza"
+    },
+    "compare": {
+      "eyebrow": "Ulinganisho",
+      "title": "Kwa nini uchague LocalCutVideo?",
+      "lead": "Vihariri vingi vya video mtandaoni hupakia video zako kwenye seva zao na kuhifadhi zana bora kwa wanaolipia. Hapa kila kitu ni bure na kinabaki kwako",
+      "them": "Vihariri vya video mtandaoni",
+      "yes": "Ndiyo",
+      "no": "Hapana",
+      "sometimes": "Wakati mwingine",
+      "rows": {
+        "free": "Bure 100%, bila alama ya maji",
+        "account": "Bila akaunti wala usajili",
+        "auto": "Manukuu na ukataji wa kiotomatiki vimejumuishwa",
+        "upload": "Video zako zinabaki kwenye kifaa chako",
+        "offline": "Inafanya kazi bila intaneti"
+      },
+      "note": "CapCut ni chapa ya biashara ya mmiliki wake. LocalCutVideo ni mradi huru, usiohusiana na CapCut wala ByteDance"
     }
   },
   "changelog": {
@@ -232,11 +254,12 @@
     "recent": "Miradi ya hivi karibuni",
     "empty": "Bado hakuna mradi. Fungua video ili uanze",
     "delete": "Futa mradi",
-    "confirmDelete": "Ufute mradi “{{ name }}”? Faili ya video kwenye diski yako haitaguswa",
     "multi": "Faili kadhaa? Zitaunganishwa kuwa video moja, kwa mpangilio wa majina",
     "importFile": "Fungua faili ya mradi (.lcv.json)",
     "saveFile": "Hifadhi mradi kama faili",
-    "imported": "Mradi umefunguliwa: chagua video zake ili uendelee"
+    "imported": "Mradi umefunguliwa: chagua video zake ili uendelee",
+    "deleteTitle": "Ufute mradi huu?",
+    "deleteText": "“{{ name }}” utaondolewa kwenye miradi yako pamoja na vipande vilivyokatwa na manukuu yake. Faili lako la video halitaguswa"
   },
   "errors": {
     "notVideo": "Faili hii haionekani kuwa video",
@@ -600,6 +623,11 @@
       "blur": "Ukungu",
       "strength": "Nguvu ya ukungu",
       "error": "Imeshindwa kuanzisha ukungu wa usuli kwenye kifaa hiki"
+    },
+    "mobile": {
+      "title": "Kuhariri kwenye simu kuna mipaka",
+      "text": "Kihariri kimeundwa kwa ajili ya kompyuta. Kwenye simu kinafaa kwa video fupi, lakini kinaweza kuwa cha polepole au kukosa kumbukumbu. Kwa matokeo bora, tumia Chrome au Edge kwenye kompyuta",
+      "ok": "Nimeelewa"
     }
   },
   "legal": {
@@ -817,8 +845,8 @@
   },
   "seo": {
     "home": {
-      "title": "LocalCutVideo — Kihariri video cha bure kwenye kivinjari, bila kupakia",
-      "description": "Hariri video zako kwenye kivinjari: ukimya hukatwa kiotomatiki, manukuu ya AI, fremu inayofuata uso kwa TikTok na Shorts, picha za jalada. Bure na chanzo huria, video zako haziondoki kamwe kwenye kompyuta yako"
+      "title": "LocalCutVideo — Mbadala wa bure wa CapCut, bila kupakia",
+      "description": "Uhariri wa video wa kiotomatiki na bure kwenye kivinjari: vituo vinakatwa, manukuu yanayosonga, muundo wa TikTok na Shorts, picha ndogo. Bila akaunti, bila alama ya maji, video zako haziondoki kamwe kwenye kompyuta yako"
     },
     "thumbnail": {
       "title": "Kitengeneza picha za jalada za YouTube bure — LocalCutVideo",

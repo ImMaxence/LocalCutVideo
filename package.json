@@ -1,6 +1,6 @@
 {
   "name": "localcutvideo",
-  "version": "0.16.0",
+  "version": "0.17.0",
   "description": "Privacy-first video editor running 100% in the browser: auto-cut, Whisper subtitles, auto-framing, MP4 export.",
   "license": "MIT",
   "author": "Maxence Bonnici",

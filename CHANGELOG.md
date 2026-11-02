@@ -2,6 +2,23 @@
 
 All notable changes to LocalCutVideo. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning: [SemVer](https://semver.org/).
 
+## [0.17.0] - 2026-11-02
+
+### Added
+- Home page rewritten in plain words: "the free CapCut alternative", comparison with online editors, CapCut question in the FAQ
+- Notice in the editor on phones: it works best on a computer
+- Confirmation dialogs in the app's style instead of the browser's (delete a project, remove a clip, transcribe again)
+
+### Changed
+- Whisper switches to WebAssembly when WebGPU fails, and uses it from the start on iPhone and iPad
+- A failed transcription shows the error's detail
+
+### Fixed
+- Auto edit and export dialogs wider than a phone screen
+- Long messages squeezed to half the screen on phones
+- Black preview on iPhone: Safari loads no frame before a first play
+- Black flashes in the preview while seeking
+
 ## [0.16.0] - 2026-11-02
 
 ### Added

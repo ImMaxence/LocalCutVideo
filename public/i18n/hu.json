@@ -41,15 +41,16 @@
   },
   "landing": {
     "hero": {
-      "badgeLocal": "100% helyi, nulla feltöltés",
-      "badgeOpen": "Ingyenes és nyílt forráskódú",
-      "title1": "Szerkeszd a videóidat",
-      "title2": "Semmi sem hagyja el a gépedet",
-      "lead": "A LocalCutVideo kivágja a csendet, Whisperrel átírja a beszédet, karaoke-feliratokat éget be, és 16:9-ből 9:16-ra vágja a képet, mindezt a böngésződben. Nincs feltöltés, nincs fiók, nincs szerver",
-      "cta": "Szerkesztő megnyitása",
+      "badgeLocal": "A videóid nálad maradnak",
+      "badgeOpen": "Vízjel nélkül, nyílt forráskód",
+      "title1": "Vágd meg a videóidat egy kattintással",
+      "title2": "anélkül, hogy bármit feltöltenél",
+      "lead": "Vágd ki a szüneteket és az „ööö”-ket, adj hozzá animált feliratokat, és válts automatikusan TikTok-formátumra. Ingyen, fiók és vízjel nélkül: minden a számítógépeden történik",
+      "cta": "Megvágom a videómat ingyen",
       "github": "Megtekintés a GitHubon",
-      "hint": "Számítógépen, Chrome-ban vagy Edge-ben működik a legjobban",
-      "demo": "Kipróbálás egy bemutatóvideóval"
+      "hint": "Regisztráció nélkül · Számítógépen a legjobb, Chrome-mal vagy Edge-dzsel",
+      "demo": "Demó kipróbálása",
+      "badgeAlt": "Ingyenes CapCut-alternatíva"
     },
     "mock": {
       "w1": "Szóval ma",
@@ -62,95 +63,95 @@
       "cap2": "gépeden marad"
     },
     "stats": {
-      "upload": "feltöltött bájt",
-      "local": "az eszközödön feldolgozva",
+      "upload": "feltöltött videó az interneten",
       "languages": "nyelvű felület",
-      "gpu": "gyorsított MI és kódolás"
+      "free": "ingyenes, előfizetés nélkül",
+      "watermark": "vízjel a videóidon"
     },
     "how": {
       "eyebrow": "Hogyan működik",
-      "title": "A nyers felvételtől a posztolásra kész videóig három lépésben",
+      "title": "Közzétételre kész videó három lépésben",
       "open": {
-        "title": "Nyiss meg egy videót",
-        "text": "Válassz egy fájlt a lemezedről. Helyben olvassa be: nincs másolat, nincs feltöltés, még több gigabájtos fájloknál sem"
+        "title": "Nyisd meg a videódat",
+        "text": "Húzz be egy videót a számítógépedről vagy a telefonodról. Azonnal megnyílik, akkor is, ha hatalmas"
       },
       "edit": {
-        "title": "Hagyd dolgozni a szerkesztőt",
-        "text": "A csend felismerése, a beszéd szóról szóra történő átírása és az arcok követése mind helyben történik. Bármit kijavíthatsz a szöveg szerkesztésével"
+        "title": "Indítsd el az automatikus vágást",
+        "text": "A szünetek és az elakadások kikerülnek, a feliratok maguktól íródnak, a beszélő pedig a képben marad. Utána mindent finomíthatsz"
       },
       "export": {
-        "title": "Exportáld az MP4-et",
-        "text": "Válaszd a 16:9, 9:16 vagy 1:1 formátumot. A videót a videokártyád kódolja, és közvetlenül a lemezedre kerül"
+        "title": "Töltsd le és posztold",
+        "text": "Megkapod a videódat HD-ben, TikTok, YouTube vagy Instagram formátumban, posztolásra készen"
       }
     },
     "features": {
       "eyebrow": "Funkciók",
-      "title": "Minden, ami a kamerába beszélős videókhoz kell",
-      "lead": "YouTube-, TikTok-, Reels- és Shorts-alkotóknak készült, akik inkább sehova sem töltenék fel a nyers felvételeiket",
+      "title": "Minden, ami a figyelmet lekötő videókhoz kell",
+      "lead": "TikTok-, Reels-, Shorts- és YouTube-alkotóknak, de tanároknak, oktatóknak és cégeknek is",
       "silences": {
-        "title": "Csend automatikus kivágása",
-        "text": "A hangerő alapján felismeri a szüneteket és eltávolítja őket, állítható küszöbbel, minimális hosszal és levegővételi ráhagyással"
+        "title": "Viszlát, szünetek",
+        "text": "A csendeket és az üresjáratokat automatikusan megtalálja és kivágja: a videód egy pillanat alatt pörgősebb lesz"
       },
       "textEdit": {
-        "title": "Szerkesztés szövegből",
-        "text": "A Whisper minden szóhoz időbélyeget rendel. Törölj szavakat az átiratból, és a hozzájuk tartozó videórész kivágódik"
+        "title": "Vágj úgy, mint egy szöveget",
+        "text": "A videódat szóról szóra leírja. Törölj egy mondatot a szövegből, és eltűnik a videóból"
       },
       "captions": {
-        "title": "Karaoke-feliratok",
-        "text": "Szóról szóra animált, a videóba égetett feliratok karaoke, letisztult vagy dobozos stílusban, a saját kiemelőszíneddel"
+        "title": "Automatikus feliratok",
+        "text": "Animált feliratok szóról szóra, mint a TikTokon, gépelés nélkül. Válaszd ki a stílust és a színt"
       },
       "framing": {
-        "title": "Automatikus képkivágás 16:9 → 9:16",
-        "text": "Az arckövetés képben tartja a beszélőt, amikor egy fekvő videót állóvá alakítasz"
+        "title": "TikTok-formátum egy kattintással",
+        "text": "Alakíts egy fekvő videót állóvá: a beszélő arca mindig a képben marad"
       },
       "zoom": {
-        "title": "Okos zoom",
-        "text": "A vágásonként váltakozó ráközelítések szándékossá teszik a jump cutokat, és a nézőket is ott tartják"
+        "title": "Ritmusos zoomok",
+        "text": "Finom zoomok minden vágásnál lendületet adnak, és a végéig lekötik a nézőidet"
       },
       "ducking": {
-        "title": "Hang és zene",
-        "text": "Hangosítsd fel, egyenlítsd ki a klipjeidet, és adj hozzá háttérzenét, amely magától elhalkul, amikor valaki beszél"
+        "title": "Háttérzene",
+        "text": "Adj hozzá zenét, ami magától halkabb lesz, amikor beszélsz, és állítsd be minden felvétel hangerejét"
       },
       "recovery": {
-        "title": "Helyreállítás összeomlás után",
-        "text": "Minden változtatás valós időben mentődik a böngésződben. Nyisd meg újra a lapot, és folytasd pontosan ott, ahol abbahagytad"
+        "title": "Semmi sem vész el",
+        "text": "Minden folyamatosan mentődik. Zárd be a lapot, gyere vissza később, és folytasd pontosan ott, ahol abbahagytad"
       },
       "offline": {
-        "title": "Offline is működik",
-        "text": "Telepítsd alkalmazásként. Miután letöltődött az MI-modell, a teljes szerkesztő internetkapcsolat nélkül is működik"
+        "title": "Internet nélkül is",
+        "text": "Telepítsd alkalmazásként: ha egyszer kész, a vonaton vagy a repülőn is működik"
       },
       "export": {
-        "title": "Gyors hardveres exportálás",
-        "text": "A kódolás a WebCodecs-et, a böngésződbe és a videokártyádba épített videókódolót használja a lassú szoftveres kódolás helyett"
+        "title": "HD és vízjel nélkül",
+        "text": "Exportálj 720p-ben vagy 1080p-ben, akár 60 képkocka/másodperccel. Nincs hozzáadott logó, nincs fizetős verzió"
       },
       "clips": {
-        "title": "Több klip összefűzése",
-        "text": "Húzz be egyszerre több felvételt: egyetlen videóvá fűződnek a választott sorrendben, közös idővonallal és átirattal"
+        "title": "Több felvétel, egy videó",
+        "text": "Húzd be egyszerre az összes felvételt: egymás után fűzi őket az általad választott sorrendben"
       },
       "inputs": {
-        "title": "MP4, MOV, WebM, MKV",
-        "text": "Megnyitja a telefonod és a kamerád fájljait, köztük az iPhone HEVC-videóit is, ha a böngésződ dekódolni tudja őket"
+        "title": "A telefonod videói",
+        "text": "MP4, MOV, WebM, MKV: nyisd meg a telefonod vagy a kamerád videóit, az iPhone-osakat is, ha a böngésződ le tudja játszani őket"
       },
       "languages": {
-        "title": "Többnyelvű",
-        "text": "A felület {{ count }} nyelven beszél, a Whisper pedig további tucatnyi nyelvet ír át, automatikus nyelvfelismeréssel"
+        "title": "A te nyelveden",
+        "text": "A felület {{ count }} nyelven érhető el, a feliratok pedig több tucat nyelven működnek, automatikus felismeréssel"
       }
     },
     "privacy": {
       "eyebrow": "Adatvédelem",
-      "title": "Nulla feltöltés, alapelvből",
-      "lead": "A videód közvetlenül a lemezedről töltődik be. A hangelemzés, az átírás, az arckövetés és a kódolás háttérszálakon (Web Workers) fut a gépeden. Egyszerűen nincs szerver, ahová a felvételeidet küldeni lehetne",
-      "upload": "Soha nincs feltöltés: a fájl sosem hagyja el a számítógépedet",
-      "account": "Nincs fiók, nincs süti, nincs statisztika",
-      "csp": "Egy szigorú Content-Security-Policy csak ezzel az oldallal engedi kommunikálni a lapot, amely az MI-modelleket is szolgáltatja (a Hugging Face csak tartalék)",
-      "storage": "A projektek a böngésződ helyi adatbázisában (IndexedDB) tárolódnak, és bármikor törölhetők",
+      "title": "A videóid nálad maradnak",
+      "lead": "Itt semmi nem kerül feltöltésre: a saját eszközöd végzi az összes munkát, még a mesterséges intelligenciát is. Senki más nem látja a felvételeidet",
+      "upload": "A videóid soha nem kerülnek az internetre",
+      "account": "Nincs fiók, nincs reklám, nincs követés",
+      "storage": "A projektjeid a böngésződben maradnak, és egy kattintással törölheted őket",
       "diagram": {
         "machine": "A számítógéped",
         "file": "Videofájl",
         "browser": "A böngésződ",
         "upload": "Feltöltés egy szerverre",
         "model": "Az MI-modell letöltése (egyszer, gyorsítótárba)"
-      }
+      },
+      "sensitive": "Ideális bizalmas videókhoz: megbeszélések, ügyfelek, család"
     },
     "support": {
       "eyebrow": "Kompatibilitás",
@@ -167,15 +168,15 @@
       "title": "Gyakori kérdések",
       "free": {
         "q": "Tényleg ingyenes? Hol a csapda?",
-        "a": "Ingyenes és nyílt forráskódú. Mivel minden munka a te gépeden zajlik, nincs szerverköltség, amit ki kellene fizetni, így nincs mit eladni neked, és nincs adat, amit gyűjteni kellene"
+        "a": "Nincs csapda. Mivel a munkát a számítógéped végzi, nem kell drága szervereket fizetni: nincs előfizetés, nincs vízjel, nincs reklám. A kód ráadásul nyilvános (nyílt forráskód)"
       },
       "formats": {
-        "q": "Milyen videóformátumokat nyithatok meg?",
-        "a": "MP4, MOV, WebM és MKV, amennyiben a böngésződ dekódolni tudja a kodeket (H.264, HEVC, VP9, AV1 a böngészőtől és a rendszertől függően). Az export MP4-fájl"
+        "q": "Milyen videókat nyithatok meg?",
+        "a": "A telefonod, a kamerád videóit vagy a képernyőfelvételeidet: MP4, MOV, WebM és MKV. Az eredmény egy MP4-fájl, ami mindenhol lejátszható"
       },
       "browsers": {
-        "q": "Miért Chrome vagy Edge?",
-        "a": "Támogatják a File System Access API-t, amellyel a szerkesztő újratöltés után újra megnyithatja a videódat, és közvetlenül a lemezre írhatja az exportot. Más böngészők is működnek, néhány extra kattintással"
+        "q": "Melyik böngészőt használjam?",
+        "a": "A Chrome vagy az Edge számítógépen nyújtja a legjobb élményt. A Firefox és a Safari is működik, néhány plusz kattintással egy videó újbóli megnyitásakor. Telefonon inkább rövid videókkal dolgozz"
       },
       "size": {
         "q": "Van fájlméret-korlát?",
@@ -183,11 +184,15 @@
       },
       "offline": {
         "q": "Működik internet nélkül?",
-        "a": "Igen, ha egyszer betöltődött. Telepítsd alkalmazásként (PWA), és online állapotban végezz el egy átírást: a Whisper-modell ezután a gyorsítótárban marad, és minden offline működik"
+        "a": "Igen. Az első alkalommal letöltődik a feliratozó eszköz, csak egyszer. Utána minden offline is működik, és akár alkalmazásként is telepítheted"
       },
       "ai": {
-        "q": "Hol fut az MI?",
-        "a": "A böngésződben. A Whisper a Transformers.js segítségével fut a videokártyádon (WebGPU) vagy a processzorodon (WebAssembly), az arcfelismerés pedig a MediaPipe-ot használja. A modellek egyszer töltődnek le, a hangod soha nem kerül elküldésre"
+        "q": "Hogyan futhat az MI szerver nélkül?",
+        "a": "Az MI-modellek (Whisper a feliratokhoz, MediaPipe az arcokhoz) egyszer letöltődnek, aztán a számítógéped futtatja őket. A hangod és a képeid soha nem hagyják el"
+      },
+      "capcut": {
+        "q": "Miben különbözik a CapCuttól?",
+        "a": "A LocalCutVideo arra összpontosít, amire a kamerába beszélős videóknak szükségük van (kivágott szünetek, automatikus feliratok, álló formátum), fiók nélkül és a videóid feltöltése nélkül. Speciális effektekhez, animált átmenetekhez vagy divatos sablonokhoz a CapCut gazdagabb"
       }
     },
     "final": {
@@ -207,6 +212,23 @@
       "cta": "Bélyegkép készítése",
       "mockTitle": "Az első",
       "mockAccent": "vlogom"
+    },
+    "compare": {
+      "eyebrow": "Összehasonlítás",
+      "title": "Miért a LocalCutVideo?",
+      "lead": "A legtöbb online videószerkesztő feltölti a videóidat a saját szervereire, a legjobb eszközeit pedig előfizetéshez köti. Itt minden ingyenes, és nálad marad",
+      "them": "Online videószerkesztők",
+      "yes": "Igen",
+      "no": "Nem",
+      "sometimes": "Néha",
+      "rows": {
+        "free": "100% ingyenes, vízjel nélkül",
+        "account": "Fiók és regisztráció nélkül",
+        "auto": "Automatikus feliratok és vágások benne vannak",
+        "upload": "A videóid az eszközödön maradnak",
+        "offline": "Internet nélkül is működik"
+      },
+      "note": "A CapCut a tulajdonosa védjegye. A LocalCutVideo független projekt, nem áll kapcsolatban a CapCuttal vagy a ByteDance-szel"
     }
   },
   "changelog": {
@@ -232,11 +254,12 @@
     "recent": "Legutóbbi projektek",
     "empty": "Még nincs projekted. Kezdésként nyiss meg egy videót",
     "delete": "Projekt törlése",
-    "confirmDelete": "Törlöd a(z) „{{ name }}” projektet? A lemezeden lévő videofájl érintetlen marad",
     "multi": "Több fájl? Egy videóvá fűződnek össze, név szerinti sorrendben",
     "importFile": "Projektfájl megnyitása (.lcv.json)",
     "saveFile": "Projekt mentése fájlba",
-    "imported": "Projekt megnyitva: a folytatáshoz válaszd ki a videóit"
+    "imported": "Projekt megnyitva: a folytatáshoz válaszd ki a videóit",
+    "deleteTitle": "Törlöd ezt a projektet?",
+    "deleteText": "A(z) „{{ name }}” a vágásaival és felirataival együtt kikerül a projektjeid közül. A videófájlod érintetlen marad"
   },
   "errors": {
     "notVideo": "Ez a fájl nem tűnik videónak",
@@ -600,6 +623,11 @@
       "blur": "Elmosott",
       "strength": "Elmosás erőssége",
       "error": "A háttér elmosása nem indítható el ezen az eszközön"
+    },
+    "mobile": {
+      "title": "A telefonos vágás korlátozott",
+      "text": "A szerkesztő számítógépre készült. Telefonon rövid videókhoz jó, de lassú lehet, vagy elfogyhat a memória. A legjobb eredményért használd a Chrome-ot vagy az Edge-et számítógépen",
+      "ok": "Értem"
     }
   },
   "legal": {
@@ -817,8 +845,8 @@
   },
   "seo": {
     "home": {
-      "title": "LocalCutVideo — Ingyenes videószerkesztő a böngészőben, semmi sem töltődik fel",
-      "description": "Szerkeszd a videóidat a böngészőben: automatikusan kivágott csend, MI-feliratok, arcra igazított képkivágás TikTokra és Shortsra, bélyegképek. Ingyenes és nyílt forráskódú, a videóid sosem hagyják el a gépedet"
+      "title": "LocalCutVideo — Ingyenes CapCut-alternatíva, feltöltés nélkül",
+      "description": "Ingyenes automatikus videóvágás a böngészőben: kivágott szünetek, animált feliratok, TikTok- és Shorts-formátum, bélyegképek. Fiók nélkül, vízjel nélkül, a videóid soha nem hagyják el a számítógépedet"
     },
     "thumbnail": {
       "title": "Ingyenes YouTube bélyegkép-készítő — LocalCutVideo",

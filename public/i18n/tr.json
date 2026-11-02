@@ -41,15 +41,16 @@
   },
   "landing": {
     "hero": {
-      "badgeLocal": "%100 yerel, sıfır yükleme",
-      "badgeOpen": "Ücretsiz ve açık kaynak",
-      "title1": "Videolarınızı düzenleyin",
-      "title2": "Hiçbir şey bilgisayarınızdan çıkmaz",
-      "lead": "LocalCutVideo sessizlikleri keser, Whisper ile yazıya döker, karaoke altyazıları videoya işler ve 16:9'u 9:16'ya yeniden çerçeveler; hepsi tarayıcınızda. Yükleme yok, hesap yok, sunucu yok",
-      "cta": "Düzenleyiciyi aç",
+      "badgeLocal": "Videolarınız sizde kalır",
+      "badgeOpen": "Filigransız, açık kaynak",
+      "title1": "Videolarınızı tek tıkla kurgulayın",
+      "title2": "hiçbir şey yüklemeden",
+      "lead": "Duraklamaları ve “ııı”ları kesin, animasyonlu altyazılar ekleyin ve otomatik olarak TikTok formatına geçin. Ücretsiz, hesapsız ve filigransız: her şey bilgisayarınızda olur",
+      "cta": "Videomu ücretsiz kurgula",
       "github": "GitHub'da gör",
-      "hint": "En iyi bilgisayarda Chrome veya Edge ile çalışır",
-      "demo": "Demo videoyla dene"
+      "hint": "Kayıt yok · En iyisi bilgisayarda, Chrome veya Edge ile",
+      "demo": "Demoyu deneyin",
+      "badgeAlt": "CapCut'a ücretsiz alternatif"
     },
     "mock": {
       "w1": "Evet bugün",
@@ -62,95 +63,95 @@
       "cap2": "bilgisayarınızda kalır"
     },
     "stats": {
-      "upload": "bayt yüklendi",
-      "local": "cihazınızda işlenir",
+      "upload": "internete yüklenen video",
       "languages": "arayüz dili",
-      "gpu": "hızlandırılmış YZ ve kodlama"
+      "free": "ücretsiz, abonelik yok",
+      "watermark": "videolarınızda filigran"
     },
     "how": {
       "eyebrow": "Nasıl çalışır",
-      "title": "Ham çekimden paylaşıma hazır videoya üç adımda",
+      "title": "Üç adımda paylaşıma hazır bir video",
       "open": {
-        "title": "Bir video açın",
-        "text": "Diskinizden bir dosya seçin. Olduğu yerde okunur: kopya yok, yükleme yok, gigabaytlarca büyük dosyalarda bile"
+        "title": "Videonuzu açın",
+        "text": "Bilgisayarınızdan veya telefonunuzdan bir video sürükleyin. Çok büyük olsa bile hemen açılır"
       },
       "edit": {
-        "title": "Düzenleyici çalışsın",
-        "text": "Sessizlikler algılanır, konuşma kelime kelime yazıya dökülür ve yüzler takip edilir; hepsi yerel olarak. Metni düzenleyerek her şeyi düzeltin"
+        "title": "Otomatik kurguyu başlatın",
+        "text": "Duraklamalar ve tereddütler kesilir, altyazılar kendiliğinden yazılır ve konuşan kişi kadrajda kalır. Ardından her şeyi ince ayarlayabilirsiniz"
       },
       "export": {
-        "title": "MP4'ü dışa aktarın",
-        "text": "16:9, 9:16 veya 1:1 seçin. Video ekran kartınız tarafından kodlanır ve doğrudan diskinize yazılır"
+        "title": "İndirin ve paylaşın",
+        "text": "Videonuzu HD olarak, TikTok, YouTube veya Instagram formatında, paylaşıma hazır alın"
       }
     },
     "features": {
       "eyebrow": "Özellikler",
-      "title": "Kameraya konuşulan videolar için ihtiyacınız olan her şey",
-      "lead": "Ham çekimlerini hiçbir yere yüklemek istemeyen YouTube, TikTok, Reels ve Shorts içerik üreticileri için tasarlandı",
+      "title": "Dikkat çeken videolar için ihtiyacınız olan her şey",
+      "lead": "TikTok, Reels, Shorts ve YouTube içerik üreticileri için, ayrıca öğretmenler, eğitmenler ve şirketler için",
       "silences": {
-        "title": "Sessizlikleri otomatik kes",
-        "text": "Duraklamaları ses yüksekliğinden algılar ve kaldırır; eşik, minimum süre ve nefes payı ayarlanabilir"
+        "title": "Duraklamalara veda",
+        "text": "Sessizlikler ve ölü anlar otomatik olarak bulunup kesilir: videonuz bir saniyede tempo kazanır"
       },
       "textEdit": {
-        "title": "Metinle düzenleme",
-        "text": "Whisper her kelimeye bir zaman damgası verir. Dökümde kelimeleri silin, videonun ilgili kısmı kesilsin"
+        "title": "Metin gibi kurgulayın",
+        "text": "Videonuz kelime kelime yazıya dökülür. Metinden bir cümleyi silin, videodan da kaybolsun"
       },
       "captions": {
-        "title": "Karaoke altyazılar",
-        "text": "Kelime kelime animasyonlu altyazılar videoya işlenir; karaoke, sade veya kutulu stillerde, seçtiğiniz vurgu rengiyle"
+        "title": "Otomatik altyazılar",
+        "text": "TikTok'taki gibi kelime kelime animasyonlu altyazılar, hiçbir şey yazmadan. Stili ve rengi seçin"
       },
       "framing": {
-        "title": "Otomatik çerçeveleme 16:9 → 9:16",
-        "text": "Yüz takibi, yatay bir videoyu dikeye çevirdiğinizde konuşan kişiyi kadrajda tutar"
+        "title": "Tek tıkla TikTok formatı",
+        "text": "Yatay bir videoyu dikeye çevirin: konuşan kişinin yüzü her zaman kadrajda kalır"
       },
       "zoom": {
-        "title": "Akıllı yakınlaştırma",
-        "text": "Her kesimde dönüşümlü yakınlaştırmalar jump cut'ları bilinçli gösterir ve izleyicileri tutar"
+        "title": "Ritimli yakınlaştırmalar",
+        "text": "Her kesimde hafif yakınlaştırmalar dinamizm katar ve izleyicinizi sonuna kadar tutar"
       },
       "ducking": {
-        "title": "Ses ve müzik",
-        "text": "Sesi yükseltin, kliplerinizi dengeleyin ve biri konuştuğunda kendiliğinden kısılan bir arka plan müziği ekleyin"
+        "title": "Arka plan müziği",
+        "text": "Siz konuşurken kendiliğinden kısılan bir müzik ekleyin ve her çekimin ses seviyesini ayarlayın"
       },
       "recovery": {
-        "title": "Çökme sonrası kurtarma",
-        "text": "Her değişiklik tarayıcınıza anında kaydedilir. Sekmeyi yeniden açın ve tam kaldığınız yerden devam edin"
+        "title": "Hiçbir şey kaybolmaz",
+        "text": "Her şey siz çalışırken kaydedilir. Sekmeyi kapatın, sonra geri dönün ve tam kaldığınız yerden devam edin"
       },
       "offline": {
-        "title": "Çevrimdışı çalışır",
-        "text": "Uygulama olarak yükleyin. YZ modeli bir kez indirildikten sonra tüm düzenleyici internet bağlantısı olmadan çalışır"
+        "title": "İnternet olmadan da",
+        "text": "Bir uygulama gibi yükleyin: hazır olduğunda trende ya da uçakta da çalışır"
       },
       "export": {
-        "title": "Hızlı donanım ile dışa aktarma",
-        "text": "Kodlama, yavaş yazılımsal kodlama yerine tarayıcınıza ve ekran kartınıza yerleşik video kodlayıcı WebCodecs'i kullanır"
+        "title": "HD ve filigransız",
+        "text": "720p veya 1080p olarak, saniyede 60 kareye kadar dışa aktarın. Eklenen logo yok, ücretli sürüm yok"
       },
       "clips": {
-        "title": "Çoklu klip birleştirme",
-        "text": "Birden çok çekimi aynı anda bırakın: seçtiğiniz sırayla, ortak zaman çizelgesi ve dökümle tek bir videoda birleşirler"
+        "title": "Birkaç çekim, tek video",
+        "text": "Tüm çekimlerinizi tek seferde sürükleyin: seçtiğiniz sırayla art arda birleştirilir"
       },
       "inputs": {
-        "title": "MP4, MOV, WebM, MKV",
-        "text": "Telefonunuzun ve kameranızın dosyalarını açar; tarayıcınız çözebiliyorsa iPhone HEVC videoları da dahil"
+        "title": "Telefonunuzdaki videolar",
+        "text": "MP4, MOV, WebM, MKV: telefonunuzdaki veya kameranızdaki videoları açın, tarayıcınız oynatabiliyorsa iPhone videolarını da"
       },
       "languages": {
-        "title": "Çok dilli",
-        "text": "Arayüz {{ count }} dil konuşur ve Whisper otomatik dil algılamayla onlarca dili daha yazıya döker"
+        "title": "Kendi dilinizde",
+        "text": "Arayüz {{ count }} dilde mevcut ve altyazılar otomatik algılanan onlarca dilde çalışır"
       }
     },
     "privacy": {
       "eyebrow": "Gizlilik",
-      "title": "Tasarımı gereği sıfır yükleme",
-      "lead": "Videonuz doğrudan diskinizden okunur. Ses analizi, yazıya dökme, yüz takibi ve kodlama bilgisayarınızdaki arka plan iş parçacıklarında (Web Workers) çalışır. Çekimlerinizin gönderileceği bir sunucu yoktur",
-      "upload": "Asla yükleme yok: dosya bilgisayarınızdan hiç çıkmaz",
-      "account": "Hesap yok, çerez yok, istatistik yok",
-      "csp": "Katı bir Content-Security-Policy, sayfanın yalnızca YZ modellerini de sunan bu siteyle iletişim kurmasına izin verir (Hugging Face yalnızca yedektir)",
-      "storage": "Projeler tarayıcınızın yerel veritabanında (IndexedDB) saklanır ve istediğiniz zaman silinebilir",
+      "title": "Videolarınız sizde kalır",
+      "lead": "Burada hiçbir şey yüklenmez: tüm işi kendi cihazınız yapar, yapay zekâ bile. Görüntülerinizi başka kimse görmez",
+      "upload": "Videolarınız asla internet üzerinden gönderilmez",
+      "account": "Hesap yok, reklam yok, takip yok",
+      "storage": "Projeleriniz tarayıcınızda kalır ve tek tıkla silinir",
       "diagram": {
         "machine": "Bilgisayarınız",
         "file": "Video dosyası",
         "browser": "Tarayıcınız",
         "upload": "Sunucuya yükleme",
         "model": "YZ modeli indirme (bir kez, önbellekte)"
-      }
+      },
+      "sensitive": "Gizli videolar için ideal: toplantılar, müşteriler, aile"
     },
     "support": {
       "eyebrow": "Uyumluluk",
@@ -166,28 +167,32 @@
     "faq": {
       "title": "Sık sorulan sorular",
       "free": {
-        "q": "Gerçekten ücretsiz mi? İşin püf noktası ne?",
-        "a": "Ücretsiz ve açık kaynaklı. Tüm iş bilgisayarınızda yapıldığından ödenecek bir sunucu maliyeti yoktur; bu yüzden size satacak bir şey, toplanacak bir veri de yoktur"
+        "q": "Gerçekten ücretsiz mi? İşin içinde bir iş var mı?",
+        "a": "Yok. İşi bilgisayarınız yaptığı için ödenecek pahalı sunucular yok: abonelik yok, filigran yok, reklam yok. Kod üstelik herkese açık (açık kaynak)"
       },
       "formats": {
-        "q": "Hangi video biçimlerini açabilirim?",
-        "a": "Tarayıcınız codec'i çözebildiği sürece MP4, MOV, WebM ve MKV (tarayıcınıza ve sisteminize göre H.264, HEVC, VP9, AV1). Dışa aktarım bir MP4 dosyasıdır"
+        "q": "Hangi videoları açabilirim?",
+        "a": "Telefonunuzdan, kameranızdan veya ekran kayıtlarınızdan videolar: MP4, MOV, WebM ve MKV. Sonuç, her yerde oynatılan bir MP4 dosyasıdır"
       },
       "browsers": {
-        "q": "Neden Chrome veya Edge?",
-        "a": "File System Access API'yi desteklerler; bu API, düzenleyicinin yeniden yüklemeden sonra videonuzu tekrar açmasını ve dışa aktarımı doğrudan diske yazmasını sağlar. Diğer tarayıcılar da birkaç ek tıklamayla çalışır"
+        "q": "Hangi tarayıcıyı kullanmalıyım?",
+        "a": "Bilgisayarda Chrome veya Edge en iyi deneyimi sunar. Firefox ve Safari de çalışır, bir videoyu yeniden açmak için birkaç ek tıklama gerekir. Telefonda kısa videoları tercih edin"
       },
       "size": {
         "q": "Dosya boyutu sınırı var mı?",
         "a": "Hiçbir şey yüklenmediği için yükleme sınırı yoktur. Video diskten küçük parçalar halinde okunur; pratik sınır bilgisayarınızın belleği ve çok uzun videolardaki sabrınızdır"
       },
       "offline": {
-        "q": "İnternetsiz çalışır mı?",
-        "a": "Evet, bir kez yüklendikten sonra. Uygulama (PWA) olarak yükleyin ve çevrimiçiyken bir kez yazıya dökün: Whisper modeli önbelleğe alınır ve her şey çevrimdışı çalışır"
+        "q": "İnternet olmadan çalışır mı?",
+        "a": "Evet. İlk seferde altyazı aracı indirilir, yalnızca bir kez. Sonrasında her şey çevrimdışı çalışır, hatta bir uygulama gibi yükleyebilirsiniz"
       },
       "ai": {
-        "q": "Yapay zekâ nerede çalışır?",
-        "a": "Tarayıcınızda. Whisper, Transformers.js ile ekran kartınızda (WebGPU) veya işlemcinizde (WebAssembly) çalışır; yüz algılama ise MediaPipe kullanır. Modeller bir kez indirilir, sesiniz asla gönderilmez"
+        "q": "Yapay zekâ sunucu olmadan nasıl çalışıyor?",
+        "a": "Yapay zekâ modelleri (altyazılar için Whisper, yüzler için MediaPipe) bir kez indirilir, sonra bilgisayarınız onları çalıştırır. Sesiniz ve görüntüleriniz oradan asla çıkmaz"
+      },
+      "capcut": {
+        "q": "CapCut'tan farkı ne?",
+        "a": "LocalCutVideo, kameraya konuşulan videoların ihtiyaç duyduklarına odaklanır (kesilen duraklamalar, otomatik altyazılar, dikey format), hesap olmadan ve videolarınızı yüklemeden. Özel efektler, animasyonlu geçişler veya trend şablonlar için CapCut daha kapsamlıdır"
       }
     },
     "final": {
@@ -207,6 +212,23 @@
       "cta": "Kapak görseli oluştur",
       "mockTitle": "İlk",
       "mockAccent": "vlogum"
+    },
+    "compare": {
+      "eyebrow": "Karşılaştırma",
+      "title": "Neden LocalCutVideo?",
+      "lead": "Çoğu çevrimiçi video düzenleyici videolarınızı kendi sunucularına yükler ve en iyi araçlarını aboneliğe saklar. Burada her şey ücretsiz ve sizde kalır",
+      "them": "Çevrimiçi video düzenleyiciler",
+      "yes": "Evet",
+      "no": "Hayır",
+      "sometimes": "Bazen",
+      "rows": {
+        "free": "%100 ücretsiz, filigransız",
+        "account": "Hesap veya kayıt yok",
+        "auto": "Otomatik altyazılar ve kesimler dahil",
+        "upload": "Videolarınız cihazınızda kalır",
+        "offline": "İnternetsiz çalışır"
+      },
+      "note": "CapCut, sahibinin ticari markasıdır. LocalCutVideo, CapCut veya ByteDance ile bağlantısı olmayan bağımsız bir projedir"
     }
   },
   "changelog": {
@@ -232,11 +254,12 @@
     "recent": "Son projeler",
     "empty": "Henüz proje yok. Başlamak için bir video açın",
     "delete": "Projeyi sil",
-    "confirmDelete": "“{{ name }}” projesi silinsin mi? Diskinizdeki video dosyası etkilenmez",
     "multi": "Birden çok dosya mı? Ad sırasına göre tek bir videoda birleştirilir",
     "importFile": "Bir proje dosyası aç (.lcv.json)",
     "saveFile": "Projeyi dosya olarak kaydet",
-    "imported": "Proje açıldı: devam etmek için videolarını seçin"
+    "imported": "Proje açıldı: devam etmek için videolarını seçin",
+    "deleteTitle": "Bu proje silinsin mi?",
+    "deleteText": "“{{ name }}”, kesimleri ve altyazılarıyla birlikte projelerinizden kaldırılacak. Video dosyanıza dokunulmaz"
   },
   "errors": {
     "notVideo": "Bu dosya bir videoya benzemiyor",
@@ -600,6 +623,11 @@
       "blur": "Bulanık",
       "strength": "Bulanıklık gücü",
       "error": "Arka plan bulanıklaştırma bu cihazda başlatılamadı"
+    },
+    "mobile": {
+      "title": "Telefonda kurgu sınırlıdır",
+      "text": "Düzenleyici bilgisayar için tasarlandı. Telefonda kısa videolar için uygundur ama yavaş olabilir ya da belleği yetmeyebilir. En iyi sonuç için bilgisayarda Chrome veya Edge kullanın",
+      "ok": "Anladım"
     }
   },
   "legal": {
@@ -817,8 +845,8 @@
   },
   "seo": {
     "home": {
-      "title": "LocalCutVideo — Tarayıcıda ücretsiz video düzenleyici, hiçbir şey yüklenmez",
-      "description": "Videolarınızı tarayıcıda düzenleyin: sessizlikler otomatik kesilir, yapay zekâ altyazıları, TikTok ve Shorts için yüze çerçeveleme, kapak görselleri. Ücretsiz ve açık kaynak, videolarınız bilgisayarınızdan hiç çıkmaz"
+      "title": "LocalCutVideo — CapCut'a ücretsiz alternatif, yükleme yok",
+      "description": "Tarayıcınızda ücretsiz otomatik video kurgusu: kesilen duraklamalar, animasyonlu altyazılar, TikTok ve Shorts formatı, küçük resimler. Hesap yok, filigran yok, videolarınız bilgisayarınızdan hiç çıkmaz"
     },
     "thumbnail": {
       "title": "Ücretsiz YouTube kapak görseli aracı — LocalCutVideo",

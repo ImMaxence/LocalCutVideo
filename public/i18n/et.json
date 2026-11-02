@@ -41,15 +41,16 @@
   },
   "landing": {
     "hero": {
-      "badgeLocal": "100% kohalik, midagi ei laadita üles",
-      "badgeOpen": "Tasuta ja avatud lähtekoodiga",
-      "title1": "Monteeri oma videoid",
-      "title2": "Midagi ei lahku sinu arvutist",
-      "lead": "LocalCutVideo lõikab välja vaikused, transkribeerib Whisperiga, põletab sisse karaoke-subtiitrid ja kadreerib 16:9 ümber 9:16 formaati, täielikult sinu brauseris. Ei üleslaadimist, ei kontot, ei serverit",
-      "cta": "Ava redaktor",
+      "badgeLocal": "Sinu videod jäävad sinu juurde",
+      "badgeOpen": "Ilma vesimärgita, avatud lähtekoodiga",
+      "title1": "Monteeri oma videod ühe klõpsuga",
+      "title2": "midagi üles laadimata",
+      "lead": "Lõika välja pausid ja „ee“-d, lisa animeeritud subtiitrid ja vaheta automaatselt TikToki formaati. Tasuta, ilma kontota ja ilma vesimärgita: kõik toimub sinu arvutis",
+      "cta": "Monteeri mu video tasuta",
       "github": "Vaata GitHubis",
-      "hint": "Töötab kõige paremini Chrome'is või Edge'is arvutis",
-      "demo": "Proovi demovideoga"
+      "hint": "Registreerumist pole vaja · Parim arvutis, Chrome'i või Edge'iga",
+      "demo": "Proovi demot",
+      "badgeAlt": "Tasuta CapCuti alternatiiv"
     },
     "mock": {
       "w1": "Niisiis täna",
@@ -62,95 +63,95 @@
       "cap2": "arvutisse"
     },
     "stats": {
-      "upload": "baiti üles laaditud",
-      "local": "töödeldud sinu seadmes",
+      "upload": "videot internetti üles laaditud",
       "languages": "liidese keelt",
-      "gpu": "kiirendatud AI ja kodeerimine"
+      "free": "tasuta, ilma tellimuseta",
+      "watermark": "vesimärki sinu videotel"
     },
     "how": {
       "eyebrow": "Kuidas see töötab",
-      "title": "Toorest materjalist postitamiseks valmis videoni kolme sammuga",
+      "title": "Avaldamiseks valmis video kolme sammuga",
       "open": {
-        "title": "Ava video",
-        "text": "Vali fail oma kettalt. Seda loetakse kohapeal: koopiat ei tehta, midagi ei laadita üles, isegi mitme gigabaidiste failide puhul"
+        "title": "Ava oma video",
+        "text": "Lohista video arvutist või telefonist. See avaneb kohe, isegi kui see on hiiglaslik"
       },
       "edit": {
-        "title": "Lase redaktoril töötada",
-        "text": "Vaikused tuvastatakse, kõne transkribeeritakse sõna-sõnalt ja nägusid jälgitakse, kõik kohapeal. Paranda mida iganes, muutes teksti"
+        "title": "Käivita automaatne montaaž",
+        "text": "Pausid ja kõhklused lõigatakse välja, subtiitrid kirjutavad end ise ja rääkija püsib kaadri keskel. Pärast saad kõike viimistleda"
       },
       "export": {
-        "title": "Ekspordi MP4",
-        "text": "Vali 16:9, 9:16 või 1:1. Video kodeerib sinu graafikakaart ja see kirjutatakse otse sinu kettale"
+        "title": "Laadi alla ja avalda",
+        "text": "Saa oma video HD-kvaliteedis TikToki, YouTube'i või Instagrami formaadis, avaldamiseks valmis"
       }
     },
     "features": {
       "eyebrow": "Funktsioonid",
-      "title": "Kõik, mida vajad kaamerasse rääkimise videote jaoks",
-      "lead": "Loodud YouTube'i, TikToki, Reelsi ja Shortsi sisuloojatele, kes eelistavad oma toormaterjali mitte kuhugi üles laadida",
+      "title": "Kõik, mida vajad tähelepanu köitvate videote jaoks",
+      "lead": "TikToki, Reelsi, Shortsi ja YouTube'i loojatele, aga ka õpetajatele, koolitajatele ja ettevõtetele",
       "silences": {
-        "title": "Vaikuste automaatne lõikamine",
-        "text": "Tuvastab pausid heli valjuse järgi ja eemaldab need, reguleeritava läve, minimaalse pikkuse ja hingamisruumiga"
+        "title": "Hüvasti, pausid",
+        "text": "Vaikused ja tühjad hetked leitakse ja lõigatakse automaatselt välja: sinu video saab sekundiga rohkem hoogu"
       },
       "textEdit": {
-        "title": "Monteeri teksti kaudu",
-        "text": "Whisper annab igale sõnale ajatempli. Kustuta sõnu transkriptsioonist ja vastav videolõik lõigatakse välja"
+        "title": "Monteeri nagu teksti",
+        "text": "Sinu video transkribeeritakse sõna-sõnalt. Kustuta tekstist lause ja see kaob videost"
       },
       "captions": {
-        "title": "Karaoke-subtiitrid",
-        "text": "Sõna-sõnalt animeeritud subtiitrid videosse põletatuna, karaoke-, puhtas või kastiga stiilis, sinu esiletõstuvärviga"
+        "title": "Automaatsed subtiitrid",
+        "text": "Animeeritud subtiitrid sõna-sõnalt nagu TikTokis, ilma midagi trükkimata. Vali stiil ja värv"
       },
       "framing": {
-        "title": "Automaatne kadreerimine 16:9 → 9:16",
-        "text": "Näojälgimine hoiab kõneleja kaadris, kui muudad horisontaalse video vertikaalseks"
+        "title": "TikToki formaat ühe klõpsuga",
+        "text": "Tee horisontaalsest videost vertikaalne: rääkija nägu püsib alati kaadris"
       },
       "zoom": {
-        "title": "Nutikas suumimine",
-        "text": "Vahelduvad sissesuumimised igal lõikel muudavad hüppelõiked tahtlikuks ja hoiavad vaatajaid kinni"
+        "title": "Rütmikad suumid",
+        "text": "Kerged suumid igal lõikel annavad hoogu ja hoiavad su publikut lõpuni"
       },
       "ducking": {
-        "title": "Heli ja muusika",
-        "text": "Keera helitugevust üles, ühtlusta klippe ja lisa taustamuusika, mis vaikib iseenesest, kui keegi räägib"
+        "title": "Taustamuusika",
+        "text": "Lisa muusika, mis vaikseneb ise, kui sa räägid, ja reguleeri iga võtte helitugevust"
       },
       "recovery": {
-        "title": "Taastamine pärast krahhi",
-        "text": "Iga muudatus salvestatakse reaalajas sinu brauserisse. Ava vahekaart uuesti ja jätka täpselt sealt, kus pooleli jäid"
+        "title": "Midagi ei lähe kaduma",
+        "text": "Kõik salvestatakse jooksvalt. Sulge vaheleht, tule hiljem tagasi ja jätka täpselt sealt, kus pooleli jäid"
       },
       "offline": {
-        "title": "Töötab võrguühenduseta",
-        "text": "Paigalda see rakendusena. Kui AI-mudel on alla laaditud, töötab kogu redaktor ilma internetiühenduseta"
+        "title": "Ka ilma internetita",
+        "text": "Paigalda see nagu rakendus: kui see on valmis, töötab see ka rongis või lennukis"
       },
       "export": {
-        "title": "Kiire riistvaraline eksport",
-        "text": "Kodeerimine kasutab WebCodecsit, sinu brauserisse ja graafikakaarti sisseehitatud videokodeerijat, aeglase tarkvaralise kodeerimise asemel"
+        "title": "HD ja ilma vesimärgita",
+        "text": "Ekspordi 720p või 1080p kvaliteedis, kuni 60 kaadrit sekundis. Logo ei lisata, tasulist versiooni pole"
       },
       "clips": {
-        "title": "Mitme klipi kokkupanek",
-        "text": "Lohista mitu võtet korraga: need ühendatakse üheks videoks sinu valitud järjekorras, ühise ajatelje ja transkriptsiooniga"
+        "title": "Mitu võtet, üks video",
+        "text": "Lohista kõik võtted korraga: need pannakse üksteise järele sinu valitud järjekorras"
       },
       "inputs": {
-        "title": "MP4, MOV, WebM, MKV",
-        "text": "Avab sinu telefoni ja kaamera failid, sealhulgas iPhone'i HEVC-videod, kui sinu brauser suudab neid dekodeerida"
+        "title": "Sinu telefoni videod",
+        "text": "MP4, MOV, WebM, MKV: ava videoid telefonist või kaamerast, ka iPhone'i omi, kui sinu brauser neid esitada oskab"
       },
       "languages": {
-        "title": "Mitmekeelne",
-        "text": "Liides räägib {{ count }} keelt ja Whisper transkribeerib kümneid keeli veel, automaatse keeletuvastusega"
+        "title": "Sinu keeles",
+        "text": "Liides on saadaval {{ count }} keeles ja subtiitrid toimivad kümnetes keeltes, mis tuvastatakse automaatselt"
       }
     },
     "privacy": {
       "eyebrow": "Privaatsus",
-      "title": "Null üleslaadimist, juba disainist",
-      "lead": "Sinu videot loetakse otse sinu kettalt. Helianalüüs, transkriptsioon, näojälgimine ja kodeerimine töötavad taustalõimedes (Web Workers) sinu arvutis. Lihtsalt pole serverit, kuhu sinu materjali saata",
-      "upload": "Mitte kunagi üleslaadimist: fail ei lahku kunagi sinu arvutist",
-      "account": "Kontota, küpsisteta, analüütikata",
-      "csp": "Range Content-Security-Policy lubab lehel suhelda ainult selle saidiga, mis pakub ka AI-mudeleid (Hugging Face on vaid varuvariant)",
-      "storage": "Projektid salvestatakse sinu brauseri kohalikku andmebaasi (IndexedDB) ja neid saab igal ajal kustutada",
+      "title": "Sinu videod jäävad sinu juurde",
+      "lead": "Siin ei laadita midagi üles: sinu enda seade teeb kogu töö, isegi tehisintellekti oma. Keegi teine sinu kaadreid ei näe",
+      "upload": "Sinu videoid ei saadeta kunagi internetti",
+      "account": "Pole kontot, pole reklaame, pole jälgimist",
+      "storage": "Sinu projektid jäävad brauserisse ja need saab ühe klõpsuga kustutada",
       "diagram": {
         "machine": "Sinu arvuti",
         "file": "Videofail",
         "browser": "Sinu brauser",
         "upload": "Üleslaadimine serverisse",
         "model": "AI-mudeli allalaadimine (üks kord, vahemällu)"
-      }
+      },
+      "sensitive": "Ideaalne konfidentsiaalsete videote jaoks: koosolekud, kliendid, pere"
     },
     "support": {
       "eyebrow": "Ühilduvus",
@@ -166,16 +167,16 @@
     "faq": {
       "title": "Korduma kippuvad küsimused",
       "free": {
-        "q": "Kas see on tõesti tasuta? Milles on konks?",
-        "a": "See on tasuta ja avatud lähtekoodiga. Kuna kogu töö toimub sinu arvutis, pole serverikulusid, mida maksta, seega pole sulle midagi müüa ega andmeid koguda"
+        "q": "Kas see on tõesti tasuta? Kus on konks?",
+        "a": "Konksu pole. Kuna töö teeb ära sinu arvuti, pole vaja maksta kallite serverite eest: pole tellimust, pole vesimärki, pole reklaame. Kood on isegi avalik (avatud lähtekood)"
       },
       "formats": {
-        "q": "Milliseid videoformaate saan avada?",
-        "a": "MP4, MOV, WebM ja MKV, kui sinu brauser suudab koodekit dekodeerida (H.264, HEVC, VP9, AV1 sõltuvalt brauserist ja süsteemist). Eksport on MP4-fail"
+        "q": "Milliseid videoid saan avada?",
+        "a": "Videoid telefonist, kaamerast või ekraanisalvestustest: MP4, MOV, WebM ja MKV. Tulemuseks on MP4-fail, mis mängib igal pool"
       },
       "browsers": {
-        "q": "Miks Chrome või Edge?",
-        "a": "Need toetavad File System Access API-t, mis laseb redaktoril sinu video pärast uuesti laadimist taas avada ja ekspordi otse kettale kirjutada. Ka teised brauserid töötavad, paari lisaklõpsuga"
+        "q": "Millist brauserit kasutada?",
+        "a": "Chrome või Edge arvutis pakuvad parimat kogemust. Firefox ja Safari töötavad samuti, video uuesti avamiseks kulub paar klõpsu rohkem. Telefonis eelista lühikesi videoid"
       },
       "size": {
         "q": "Kas faili suurusel on piirang?",
@@ -183,11 +184,15 @@
       },
       "offline": {
         "q": "Kas see töötab ilma internetita?",
-        "a": "Jah, kui see on kord laaditud. Paigalda see rakendusena (PWA) ja transkribeeri üks kord võrgus olles: Whisperi mudel jääb siis vahemällu ja kõik töötab võrguühenduseta"
+        "a": "Jah. Esimesel korral laaditakse subtiitrite tööriist alla, ainult üks kord. Seejärel töötab kõik võrguühenduseta ja saad selle isegi rakendusena paigaldada"
       },
       "ai": {
-        "q": "Kus AI töötab?",
-        "a": "Sinu brauseris. Whisper töötab Transformers.js-iga sinu graafikakaardil (WebGPU) või protsessoril (WebAssembly) ja näotuvastus kasutab MediaPipe'i. Mudelid laaditakse alla üks kord, sinu heli ei saadeta kunagi"
+        "q": "Kuidas saab tehisintellekt töötada ilma serverita?",
+        "a": "Tehisintellekti mudelid (Whisper subtiitrite, MediaPipe nägude jaoks) laaditakse alla üks kord, seejärel käitab neid sinu arvuti. Sinu hääl ja pildid ei lahku sealt kunagi"
+      },
+      "capcut": {
+        "q": "Mis vahe on CapCutiga?",
+        "a": "LocalCutVideo keskendub sellele, mida vajavad kaamerasse rääkimise videod (pausid välja, automaatsed subtiitrid, vertikaalne formaat), ilma kontota ja sinu videoid üles laadimata. Eriefektide, animeeritud üleminekute või trendikate mallide jaoks on CapCut põhjalikum"
       }
     },
     "final": {
@@ -207,6 +212,23 @@
       "cta": "Loo pisipilt",
       "mockTitle": "Minu esimene",
       "mockAccent": "vlogi"
+    },
+    "compare": {
+      "eyebrow": "Võrdlus",
+      "title": "Miks valida LocalCutVideo?",
+      "lead": "Enamik veebipõhiseid videoredaktoreid laadib sinu videod oma serveritesse ja jätab parimad tööriistad tellijatele. Siin on kõik tasuta ja jääb sinu juurde",
+      "them": "Veebipõhised videoredaktorid",
+      "yes": "Jah",
+      "no": "Ei",
+      "sometimes": "Mõnikord",
+      "rows": {
+        "free": "100% tasuta, ilma vesimärgita",
+        "account": "Ilma konto ja registreerumiseta",
+        "auto": "Automaatsed subtiitrid ja lõiked kaasas",
+        "upload": "Sinu videod jäävad sinu seadmesse",
+        "offline": "Töötab ilma internetita"
+      },
+      "note": "CapCut on selle omaniku kaubamärk. LocalCutVideo on sõltumatu projekt, mis ei ole seotud CapCuti ega ByteDance'iga"
     }
   },
   "changelog": {
@@ -232,11 +254,12 @@
     "recent": "Viimased projektid",
     "empty": "Projekte veel pole. Alustamiseks ava video",
     "delete": "Kustuta projekt",
-    "confirmDelete": "Kas kustutada projekt „{{ name }}“? Sinu kettal olevat videofaili see ei mõjuta",
     "multi": "Mitu faili? Need pannakse kokku üheks videoks nimede järjekorras",
     "importFile": "Ava projektifail (.lcv.json)",
     "saveFile": "Salvesta projekt failina",
-    "imported": "Projekt avatud: jätkamiseks vali selle videod"
+    "imported": "Projekt avatud: jätkamiseks vali selle videod",
+    "deleteTitle": "Kas kustutada see projekt?",
+    "deleteText": "„{{ name }}“ eemaldatakse sinu projektidest koos lõigete ja subtiitritega. Sinu videofaili ei puudutata"
   },
   "errors": {
     "notVideo": "See fail ei näi olevat video",
@@ -600,6 +623,11 @@
       "blur": "Hägune",
       "strength": "Hägususe tugevus",
       "error": "Tausta hägustamist ei õnnestunud selles seadmes käivitada"
+    },
+    "mobile": {
+      "title": "Telefonis monteerimine on piiratud",
+      "text": "Redaktor on mõeldud arvutile. Telefonis sobib see lühikeste videote jaoks, kuid võib olla aeglane või mälu võib otsa saada. Parima tulemuse saad Chrome'i või Edge'iga arvutis",
+      "ok": "Sain aru"
     }
   },
   "legal": {
@@ -817,8 +845,8 @@
   },
   "seo": {
     "home": {
-      "title": "LocalCutVideo — Tasuta videoredaktor brauseris, midagi ei laadita üles",
-      "description": "Monteeri oma videoid brauseris: vaikused lõigatakse automaatselt, AI-subtiitrid, näokadreering TikToki ja Shortsi jaoks, pisipildid. Tasuta ja avatud lähtekoodiga, sinu videod ei lahku kunagi sinu arvutist"
+      "title": "LocalCutVideo — Tasuta CapCuti alternatiiv, ilma üleslaadimiseta",
+      "description": "Tasuta automaatne videomontaaž brauseris: pausid lõigatud, animeeritud subtiitrid, TikToki ja Shortsi formaat, pisipildid. Kontot pole vaja, vesimärki pole, sinu videod ei lahku kunagi sinu arvutist"
     },
     "thumbnail": {
       "title": "Tasuta YouTube'i pisipiltide looja — LocalCutVideo",

@@ -239,6 +239,9 @@
   bottom: 24px;
   transform: translateX(-50%);
   z-index: 60;
+  /* max-content: with left: 50% alone, a long message would shrink to half the screen. */
+  width: max-content;
+  max-width: min(560px, calc(100vw - 24px));
   display: flex;
   align-items: center;
   gap: 8px;
@@ -253,6 +256,70 @@
     background: var(--danger);
     color: #fff;
   }
+  app-icon {
+    flex: none;
+  }
+}
+
+/* Phones: "a computer works better", over the preview until dismissed. */
+.mobile-notice {
+  position: fixed;
+  top: 60px;
+  left: 10px;
+  right: 10px;
+  z-index: 70;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 4px 12px;
+  padding: 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  background: var(--bg-elev);
+  box-shadow: var(--shadow-lg);
+  animation: notice-in 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  b {
+    font-size: 14.5px;
+  }
+  p {
+    margin-top: 2px;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .btn {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 8px;
+  }
+}
+
+.mobile-notice-icon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: light-dark(rgb(183 110 0 / 0.12), rgb(251 191 36 / 0.14));
+  color: var(--warning);
+}
+
+@keyframes notice-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+.notice-text {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  small {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    font-weight: 500;
+    opacity: 0.85;
+    overflow-wrap: anywhere;
+  }
 }
 
 .backdrop {
@@ -260,6 +327,8 @@
   inset: 0;
   z-index: 80;
   display: grid;
+  /* An explicit track: an auto one grows to the dialog's longest unbreakable line and overflows a phone. */
+  grid-template-columns: minmax(0, 1fr);
   place-items: center;
   padding: 24px;
   background: rgb(5 6 10 / 0.55);
@@ -268,6 +337,8 @@
 
 .dialog {
   width: min(480px, 100%);
+  max-height: calc(100dvh - 48px);
+  overflow-y: auto;
   display: grid;
   gap: 16px;
   padding: 26px;
@@ -296,7 +367,7 @@
   background: var(--border);
   div {
     display: grid;
-    grid-template-columns: 110px 1fr;
+    grid-template-columns: 110px minmax(0, 1fr);
     gap: 12px;
     padding: 10px 14px;
     background: var(--bg-elev);
@@ -330,6 +401,7 @@
 
 .actions {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   gap: 8px;
 }
@@ -376,8 +448,6 @@
 
 .auto-dialog {
   width: min(520px, 100%);
-  max-height: calc(100dvh - 48px);
-  overflow-y: auto;
   .label {
     font-size: 13px;
     font-weight: 650;
@@ -726,6 +796,39 @@
   }
   .export-settings {
     grid-template-columns: 1fr;
+  }
+  /* Above the bottom tab bar. */
+  .notice {
+    bottom: calc(72px + env(safe-area-inset-bottom));
+  }
+  .backdrop {
+    padding: 12px;
+  }
+  .dialog {
+    max-height: calc(100dvh - 24px);
+    gap: 14px;
+    padding: 20px 16px;
+  }
+  .actions .btn {
+    flex: 1 1 auto;
+  }
+  /* The secondary action gets its own row, under the main ones. */
+  .actions .save-project {
+    order: 1;
+    flex-basis: 100%;
+  }
+  .summary {
+    div {
+      grid-template-columns: 88px minmax(0, 1fr);
+      padding: 9px 12px;
+    }
+    dd {
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+  }
+  .auto-options {
+    padding: 2px 12px;
   }
 }
 

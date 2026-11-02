@@ -41,15 +41,16 @@
   },
   "landing": {
     "hero": {
-      "badgeLocal": "100% local, zero upload",
-      "badgeOpen": "Free & open source",
-      "title1": "Edit your videos",
-      "title2": "Nothing leaves your computer",
-      "lead": "LocalCutVideo cuts silences, transcribes with Whisper, burns karaoke subtitles and reframes 16:9 into 9:16, entirely in your browser. No upload, no account, no server",
-      "cta": "Open the editor",
+      "badgeLocal": "Your videos stay with you",
+      "badgeOpen": "No watermark, open source",
+      "title1": "Edit your videos in one click",
+      "title2": "without uploading anything",
+      "lead": "Cut out silences and “ums”, add animated subtitles and switch to TikTok format automatically. Free, no account, no watermark: everything happens on your computer",
+      "cta": "Edit my video for free",
       "github": "View on GitHub",
-      "hint": "Works best in Chrome or Edge on a computer",
-      "demo": "Try with a demo video"
+      "hint": "No sign-up · Best on a computer, with Chrome or Edge",
+      "demo": "Try the demo",
+      "badgeAlt": "The free CapCut alternative"
     },
     "mock": {
       "w1": "So today",
@@ -62,95 +63,95 @@
       "cap2": "computer"
     },
     "stats": {
-      "upload": "bytes uploaded",
-      "local": "processed on your device",
+      "upload": "videos uploaded to the internet",
       "languages": "interface languages",
-      "gpu": "accelerated AI & encoding"
+      "free": "free, no subscription",
+      "watermark": "watermark on your videos"
     },
     "how": {
       "eyebrow": "How it works",
-      "title": "From raw footage to a ready-to-post video in three steps",
+      "title": "A video ready to post in three steps",
       "open": {
-        "title": "Open a video",
-        "text": "Pick a file from your disk. It is read in place: no copy, no upload, even for multi-gigabyte files"
+        "title": "Open your video",
+        "text": "Drop in a video from your computer or phone. It opens right away, even if it is huge"
       },
       "edit": {
-        "title": "Let the editor work",
-        "text": "Silences are detected, speech is transcribed word by word and faces are tracked, all locally. Fix anything by editing the text"
+        "title": "Run the auto edit",
+        "text": "Silences and hesitations are cut, subtitles write themselves and the speaker stays centered. You can fine-tune everything afterwards"
       },
       "export": {
-        "title": "Export the MP4",
-        "text": "Pick 16:9, 9:16 or 1:1. The video is encoded by your graphics card and written straight to your disk"
+        "title": "Download and post",
+        "text": "Get your video in HD, in TikTok, YouTube or Instagram format, ready to post"
       }
     },
     "features": {
       "eyebrow": "Features",
-      "title": "Everything you need for talking-head videos",
-      "lead": "Built for YouTube, TikTok, Reels and Shorts creators who would rather not upload their raw footage anywhere",
+      "title": "Everything you need for videos that hold attention",
+      "lead": "For TikTok, Reels, Shorts and YouTube creators, and also teachers, trainers and businesses",
       "silences": {
-        "title": "Auto-cut silences",
-        "text": "Detects pauses from the audio loudness and removes them, with adjustable threshold, minimum length and breathing room"
+        "title": "No more dead air",
+        "text": "Silences and pauses are found and cut automatically: your video gets punchier in a second"
       },
       "textEdit": {
-        "title": "Edit by text",
-        "text": "Whisper gives every word a timestamp. Delete words in the transcript and the matching video is cut"
+        "title": "Edit like a document",
+        "text": "Your video is transcribed word by word. Delete a sentence from the text and it disappears from the video"
       },
       "captions": {
-        "title": "Karaoke subtitles",
-        "text": "Word-by-word animated captions burned into the video, in karaoke, clean or boxed styles, with your highlight color"
+        "title": "Automatic subtitles",
+        "text": "Animated word-by-word subtitles, like on TikTok, added without typing a thing. Pick the style and the color"
       },
       "framing": {
-        "title": "Auto-framing 16:9 → 9:16",
-        "text": "Face tracking keeps the speaker in frame when you turn a landscape video into a vertical one"
+        "title": "TikTok format in one click",
+        "text": "Turn a horizontal video into a vertical one: the speaker's face always stays in the frame"
       },
       "zoom": {
-        "title": "Smart zoom",
-        "text": "Alternating punch-in zooms on every cut make jump cuts look intentional and keep viewers watching"
+        "title": "Zooms that keep the pace",
+        "text": "Subtle zooms at every cut add energy and keep your audience watching to the end"
       },
       "ducking": {
-        "title": "Sound and music",
-        "text": "Turn the volume up, level your clips and add background music that lowers itself whenever someone speaks"
+        "title": "Background music",
+        "text": "Add music that lowers itself when you speak, and set the volume of each take"
       },
       "recovery": {
-        "title": "Crash recovery",
-        "text": "Every change is saved in your browser in real time. Reopen the tab and pick up exactly where you left off"
+        "title": "Nothing gets lost",
+        "text": "Everything is saved as you go. Close the tab, come back later and pick up exactly where you left off"
       },
       "offline": {
-        "title": "Works offline",
-        "text": "Install it as an app. Once the AI model is downloaded, the whole editor works without an internet connection"
+        "title": "Even without internet",
+        "text": "Install it like an app: once ready, it also works on a train or a plane"
       },
       "export": {
-        "title": "Fast hardware export",
-        "text": "Encoding uses WebCodecs, the video encoder built into your browser and graphics card, instead of slow software encoding"
+        "title": "HD, no watermark",
+        "text": "Export in 720p or 1080p, up to 60 frames per second. No logo added, no paid upgrade"
       },
       "clips": {
-        "title": "Multi-clip assembly",
-        "text": "Drop several takes at once: they are joined into one video, in the order you choose, with a shared timeline and transcript"
+        "title": "Several takes, one video",
+        "text": "Drop all your takes at once: they are joined end to end, in the order you choose"
       },
       "inputs": {
-        "title": "MP4, MOV, WebM, MKV",
-        "text": "Opens the files of your phone and camera, including iPhone HEVC movies when your browser can decode them"
+        "title": "Videos from your phone",
+        "text": "MP4, MOV, WebM, MKV: open videos from your phone or camera, including iPhone ones if your browser can play them"
       },
       "languages": {
-        "title": "Multilingual",
-        "text": "The interface speaks {{ count }} languages and Whisper transcribes dozens more, with automatic language detection"
+        "title": "In your language",
+        "text": "The interface speaks {{ count }} languages and subtitles work in dozens of languages, detected automatically"
       }
     },
     "privacy": {
       "eyebrow": "Privacy",
-      "title": "Zero upload, by design",
-      "lead": "Your video is read directly from your disk. Audio analysis, transcription, face tracking and encoding all run in background threads (Web Workers) on your machine. There is simply no server to send your footage to",
-      "upload": "No upload, ever: the file never leaves your computer",
-      "account": "No account, no cookies, no analytics",
-      "csp": "A strict Content-Security-Policy only lets the page talk to this site, which also serves the AI models (Hugging Face is only a backup)",
-      "storage": "Projects are saved in your browser's local database (IndexedDB) and can be deleted at any time",
+      "title": "Your videos stay with you",
+      "lead": "Nothing is uploaded here: your own device does all the work, even the artificial intelligence. Nobody else ever sees your footage",
+      "upload": "Your videos are never sent over the internet",
+      "account": "No account, no ads, no tracking",
+      "storage": "Your projects stay in your browser and can be deleted in one click",
       "diagram": {
         "machine": "Your computer",
         "file": "Video file",
         "browser": "Your browser",
         "upload": "Upload to a server",
         "model": "AI model download (once, cached)"
-      }
+      },
+      "sensitive": "Ideal for confidential videos: meetings, clients, family"
     },
     "support": {
       "eyebrow": "Compatibility",
@@ -167,15 +168,15 @@
       "title": "Frequently asked questions",
       "free": {
         "q": "Is it really free? What's the catch?",
-        "a": "It is free and open source. Since all the work happens on your computer, there is no server cost to pay for, so there is nothing to sell you and no data to collect"
+        "a": "There is none. Since your computer does the work, there are no expensive servers to pay for: no subscription, no watermark, no ads. The code is even public (open source)"
       },
       "formats": {
-        "q": "Which video formats can I open?",
-        "a": "MP4, MOV, WebM and MKV, as long as your browser can decode the codec (H.264, HEVC, VP9, AV1 depending on your browser and system). The export is an MP4 file"
+        "q": "Which videos can I open?",
+        "a": "Videos from your phone, your camera or your screen recordings: MP4, MOV, WebM and MKV. The result is an MP4 file that plays everywhere"
       },
       "browsers": {
-        "q": "Why Chrome or Edge?",
-        "a": "They support the File System Access API, which lets the editor re-open your video after a reload and write the export straight to disk. Other browsers work too, with a few extra clicks"
+        "q": "Which browser should I use?",
+        "a": "Chrome or Edge on a computer give the best experience. Firefox and Safari work too, with a few extra clicks to reopen a video. On a phone, stick to short videos"
       },
       "size": {
         "q": "Is there a file size limit?",
@@ -183,11 +184,15 @@
       },
       "offline": {
         "q": "Does it work without internet?",
-        "a": "Yes, once loaded. Install it as an app (PWA) and transcribe once while online: the Whisper model is then cached and everything works offline"
+        "a": "Yes. The first time, the subtitle tool downloads, just once. After that everything works offline, and you can even install it as an app"
       },
       "ai": {
-        "q": "Where does the AI run?",
-        "a": "In your browser. Whisper runs with Transformers.js on your graphics card (WebGPU) or processor (WebAssembly), and face detection uses MediaPipe. The models are downloaded once, never your audio"
+        "q": "How can the AI run without a server?",
+        "a": "The AI models (Whisper for subtitles, MediaPipe for faces) are downloaded once, then your computer runs them. Your voice and your images never leave it"
+      },
+      "capcut": {
+        "q": "How is it different from CapCut?",
+        "a": "LocalCutVideo focuses on what talking-head videos need (silences cut, automatic subtitles, vertical format), with no account and without uploading your videos. For special effects, animated transitions or trendy templates, CapCut is more complete"
       }
     },
     "final": {
@@ -207,6 +212,23 @@
       "cta": "Make a thumbnail",
       "mockTitle": "My first",
       "mockAccent": "vlog"
+    },
+    "compare": {
+      "eyebrow": "Comparison",
+      "title": "Why choose LocalCutVideo?",
+      "lead": "Most online video editors upload your videos to their servers and keep their best tools for a subscription. Here, everything is free and stays with you",
+      "them": "Online video editors",
+      "yes": "Yes",
+      "no": "No",
+      "sometimes": "Sometimes",
+      "rows": {
+        "free": "100% free, no watermark",
+        "account": "No account or sign-up",
+        "auto": "Automatic subtitles and cuts included",
+        "upload": "Your videos stay on your device",
+        "offline": "Works without internet"
+      },
+      "note": "CapCut is a trademark of its owner. LocalCutVideo is an independent project, not affiliated with CapCut or ByteDance"
     }
   },
   "changelog": {
@@ -232,11 +254,12 @@
     "recent": "Recent projects",
     "empty": "No project yet. Open a video to get started",
     "delete": "Delete project",
-    "confirmDelete": "Delete the project “{{ name }}”? The video file on your disk is not affected",
     "multi": "Several files? They are assembled into one video, in name order",
     "importFile": "Open a project file (.lcv.json)",
     "saveFile": "Save the project as a file",
-    "imported": "Project opened: select its videos to continue"
+    "imported": "Project opened: select its videos to continue",
+    "deleteTitle": "Delete this project?",
+    "deleteText": "“{{ name }}” will be removed from your projects, with its cuts and subtitles. Your video file is not affected"
   },
   "errors": {
     "notVideo": "This file does not look like a video",
@@ -600,6 +623,11 @@
       "blur": "Blurred",
       "strength": "Blur strength",
       "error": "The background blur could not start on this device"
+    },
+    "mobile": {
+      "title": "Editing on a phone is limited",
+      "text": "The editor is designed for a computer. On a phone it handles short videos, but it can be slow or run out of memory. For the best results, use Chrome or Edge on a computer",
+      "ok": "Got it"
     }
   },
   "legal": {
@@ -817,8 +845,8 @@
   },
   "seo": {
     "home": {
-      "title": "LocalCutVideo — Free video editor in your browser, nothing is uploaded",
-      "description": "Edit your videos in the browser: silences cut automatically, AI subtitles, face framing for TikTok and Shorts, thumbnails. Free and open source, your videos never leave your computer"
+      "title": "LocalCutVideo — The free CapCut alternative, no upload",
+      "description": "Free automatic video editing in your browser: silences cut, animated subtitles, TikTok and Shorts format, thumbnails. No account, no watermark, your videos never leave your computer"
     },
     "thumbnail": {
       "title": "Free YouTube thumbnail maker — LocalCutVideo",

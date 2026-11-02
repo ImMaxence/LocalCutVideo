@@ -17,6 +17,19 @@ describe('languages', () => {
     expect(files.sort()).toEqual(LANGUAGES.map((l) => l.code).sort());
   });
 
+  it('has every text of the English file in every language, with the same placeholders', () => {
+    const files = import.meta.glob<Record<string, unknown>>('/public/i18n/*.json', { eager: true, import: 'default' });
+    const texts = (o: Record<string, unknown>, prefix = ''): [string, string][] =>
+      Object.entries(o).flatMap(([k, v]) => (v && typeof v === 'object' ? texts(v as Record<string, unknown>, `${prefix}${k}.`) : [[`${prefix}${k}`, String(v)]]));
+    const placeholders = (s: string) => (s.match(/\{\{\s*\w+\s*\}\}/g) ?? []).map((p) => p.replace(/\s/g, '')).sort().join();
+    const en = new Map(texts(files['/public/i18n/en.json']));
+    for (const [file, json] of Object.entries(files)) {
+      const own = new Map(texts(json));
+      expect([...own.keys()].sort(), file).toEqual([...en.keys()].sort());
+      for (const [key, text] of en) expect(placeholders(own.get(key) ?? ''), `${file} ${key}`).toBe(placeholders(text));
+    }
+  });
+
   it('maps browser languages to a site language', () => {
     expect(languageFor('fr-CA')).toBe('fr');
     expect(languageFor('en')).toBe('en');

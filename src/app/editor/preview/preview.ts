@@ -41,6 +41,7 @@ interface VideoSource {
   templateUrl: './preview.html',
   styleUrl: './preview.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: { '(document:pointerdown)': 'primeAll()' },
 })
 export class Preview implements PlayerApi {
   protected readonly store = inject(EditorStore);
@@ -68,6 +69,9 @@ export class Preview implements PlayerApi {
   private lastSync = 0;
   private lastFrameTime = -1;
   private audio: { ctx: AudioContext; out: AudioNode; gains: WeakMap<HTMLVideoElement, GainNode> } | null = null;
+  /** Videos that gave a frame at least once (`loadeddata`), and the ones being primed (see prime()). */
+  private readonly loaded = new WeakSet<HTMLVideoElement>();
+  private readonly priming = new WeakSet<HTMLVideoElement>();
   /** Background blur: person mask (loaded on first use) and scratch canvases. */
   private personMask: PersonMask | null = null;
   private loadingMask = false;
@@ -215,6 +219,9 @@ export class Preview implements PlayerApi {
       if (video.currentTime !== this.lastFrameTime) this.dirty = true;
     }
     if (this.dirty) {
+      // A seeking video has no frame to give (Safari is slow at it): keep the last one on screen
+      // rather than a black flash, and draw once it is there.
+      if (video?.seeking && this.loaded.has(video)) return;
       this.dirty = false;
       this.lastFrameTime = video?.currentTime ?? -1;
       this.draw(this.isPlaying ? this.sequenceTime() : this.store.currentTime());
@@ -354,6 +361,47 @@ export class Preview implements PlayerApi {
 
   protected markDirty(): void {
     this.dirty = true;
+  }
+
+  protected onLoadedData(video: HTMLVideoElement): void {
+    this.loaded.add(video);
+    this.dirty = true;
+  }
+
+  /** Other browsers load the first frame on their own right after the metadata: give them time. */
+  protected onMetadata(video: HTMLVideoElement): void {
+    setTimeout(() => this.prime(video), 400);
+  }
+
+  /** On a touch (a user gesture, allowed even in iOS Low Power Mode), loads the videos still without a frame. */
+  protected primeAll(): void {
+    for (const ref of this.videoRefs()) this.prime(ref.nativeElement);
+  }
+
+  /**
+   * iOS Safari ignores `preload`: a video gives no frame (black preview) until it has played. A
+   * short muted play loads it; muted playback needs no gesture, except in Low Power Mode, where
+   * the next touch (primeAll) does it.
+   */
+  private prime(video: HTMLVideoElement): void {
+    if (this.loaded.has(video) || this.priming.has(video) || !video.paused) return;
+    this.priming.add(video);
+    const time = video.currentTime;
+    video.muted = true;
+    video
+      .play()
+      .then(() => {
+        // The user may have pressed play meanwhile: then this video keeps playing.
+        if (this.isPlaying && this.element(this.active) === video) return;
+        video.pause();
+        video.currentTime = time;
+      })
+      .catch(() => undefined)
+      .finally(() => {
+        video.muted = false;
+        this.priming.delete(video);
+        this.dirty = true;
+      });
   }
 
   protected step(seconds: number): void {

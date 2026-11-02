@@ -41,15 +41,16 @@
   },
   "landing": {
     "hero": {
-      "badgeLocal": "100 % lokálne, nič sa nenahráva",
-      "badgeOpen": "Zadarmo a open source",
-      "title1": "Strihajte svoje videá",
-      "title2": "Nič neopustí váš počítač",
-      "lead": "LocalCutVideo vystrihne ticho, prepíše reč pomocou Whispera, vypáli karaoke titulky a prekádruje 16:9 na 9:16, a to celé vo vašom prehliadači. Žiadne nahrávanie, žiadny účet, žiadny server",
-      "cta": "Otvoriť editor",
+      "badgeLocal": "Vaše videá zostávajú u vás",
+      "badgeOpen": "Bez vodoznaku, open source",
+      "title1": "Strihajte videá jedným kliknutím",
+      "title2": "bez nahrávania čohokoľvek",
+      "lead": "Vystrihnite pauzy a „ehm“, pridajte animované titulky a automaticky prejdite na formát pre TikTok. Zadarmo, bez účtu a bez vodoznaku: všetko prebieha vo vašom počítači",
+      "cta": "Zostrihať moje video zadarmo",
       "github": "Zobraziť na GitHube",
-      "hint": "Najlepšie funguje v Chrome alebo Edge na počítači",
-      "demo": "Vyskúšať na ukážkovom videu"
+      "hint": "Bez registrácie · Najlepšie na počítači, v Chrome alebo Edge",
+      "demo": "Vyskúšať demo",
+      "badgeAlt": "Bezplatná alternatíva k CapCutu"
     },
     "mock": {
       "w1": "Takže dnes",
@@ -62,95 +63,95 @@
       "cap2": "počítači"
     },
     "stats": {
-      "upload": "nahraných bajtov",
-      "local": "spracované vo vašom zariadení",
+      "upload": "videí nahraných na internet",
       "languages": "jazykov rozhrania",
-      "gpu": "zrýchlená AI a kódovanie"
+      "free": "zadarmo, bez predplatného",
+      "watermark": "vodoznakov vo vašich videách"
     },
     "how": {
       "eyebrow": "Ako to funguje",
-      "title": "Od surového záznamu k videu pripravenému na zverejnenie v troch krokoch",
+      "title": "Video pripravené na zverejnenie v troch krokoch",
       "open": {
         "title": "Otvorte video",
-        "text": "Vyberte súbor na disku. Číta sa priamo na mieste: žiadna kópia, žiadne nahrávanie, ani pri súboroch s veľkosťou niekoľkých gigabajtov"
+        "text": "Pretiahnite video z počítača alebo telefónu. Otvorí sa hneď, aj keď je obrovské"
       },
       "edit": {
-        "title": "Nechajte editor pracovať",
-        "text": "Ticho sa rozpozná, reč sa prepíše slovo po slove a tváre sa sledujú, všetko lokálne. Čokoľvek opravíte úpravou textu"
+        "title": "Spustite automatický strih",
+        "text": "Pauzy a zaváhania sa vystrihnú, titulky sa napíšu samy a hovoriaci zostane v zábere. Potom môžete všetko doladiť"
       },
       "export": {
-        "title": "Exportujte MP4",
-        "text": "Zvoľte 16:9, 9:16 alebo 1:1. Video zakóduje vaša grafická karta a zapíše sa priamo na disk"
+        "title": "Stiahnite a zverejnite",
+        "text": "Získajte video v HD, vo formáte pre TikTok, YouTube alebo Instagram, pripravené na zverejnenie"
       }
     },
     "features": {
       "eyebrow": "Funkcie",
-      "title": "Všetko, čo potrebujete pre videá, v ktorých hovoríte do kamery",
-      "lead": "Vytvorené pre tvorcov na YouTube, TikToku, Reels a Shorts, ktorí nechcú nikam nahrávať svoj surový záznam",
+      "title": "Všetko pre videá, ktoré udržia pozornosť",
+      "lead": "Pre tvorcov na TikToku, Reels, Shorts a YouTube, ale aj pre učiteľov, lektorov a firmy",
       "silences": {
-        "title": "Automatické vystrihnutie ticha",
-        "text": "Rozpozná pauzy podľa hlasitosti zvuku a odstráni ich, s nastaviteľným prahom, minimálnou dĺžkou a priestorom na nádych"
+        "title": "Koniec pauzám",
+        "text": "Ticho a hluché miesta sa nájdu a vystrihnú automaticky: vaše video v sekunde získa spád"
       },
       "textEdit": {
-        "title": "Strih pomocou textu",
-        "text": "Whisper priradí každému slovu časovú značku. Zmažte slová v prepise a zodpovedajúca časť videa sa vystrihne"
+        "title": "Strihajte ako text",
+        "text": "Vaše video sa prepíše slovo po slove. Zmažte vetu v texte a zmizne z videa"
       },
       "captions": {
-        "title": "Karaoke titulky",
-        "text": "Titulky animované slovo po slove vypálené do videa, v štýle karaoke, čistom alebo v rámčeku, vo vašej farbe zvýraznenia"
+        "title": "Automatické titulky",
+        "text": "Animované titulky slovo po slove, ako na TikToku, bez písania. Vyberte štýl a farbu"
       },
       "framing": {
-        "title": "Automatické kádrovanie 16:9 → 9:16",
-        "text": "Sledovanie tváre udrží hovoriaceho v zábere, keď z vodorovného videa urobíte zvislé"
+        "title": "Formát pre TikTok jedným kliknutím",
+        "text": "Zmeňte vodorovné video na zvislé: tvár hovoriaceho zostane vždy v zábere"
       },
       "zoom": {
-        "title": "Chytrý zoom",
-        "text": "Striedavé priblíženie pri každom strihu dodá jump cutom zámerný vzhľad a udrží divákov pri videu"
+        "title": "Priblíženia s rytmom",
+        "text": "Jemné priblíženia pri každom strihu dodajú dynamiku a udržia divákov až do konca"
       },
       "ducking": {
-        "title": "Zvuk a hudba",
-        "text": "Zosilnite zvuk, vyrovnajte klipy a pridajte hudbu v pozadí, ktorá sa sama stíši, keď niekto hovorí"
+        "title": "Hudba v pozadí",
+        "text": "Pridajte hudbu, ktorá sa sama stíši, keď hovoríte, a nastavte hlasitosť každého záberu"
       },
       "recovery": {
-        "title": "Obnova po páde",
-        "text": "Každá zmena sa v reálnom čase ukladá do prehliadača. Otvorte kartu znova a pokračujte presne tam, kde ste skončili"
+        "title": "Nič sa nestratí",
+        "text": "Všetko sa priebežne ukladá. Zatvorte kartu, vráťte sa neskôr a pokračujte presne tam, kde ste skončili"
       },
       "offline": {
-        "title": "Funguje offline",
-        "text": "Nainštalujte si ho ako aplikáciu. Keď sa stiahne model AI, celý editor funguje bez pripojenia na internet"
+        "title": "Aj bez internetu",
+        "text": "Nainštalujte si ho ako aplikáciu: keď je pripravený, funguje aj vo vlaku alebo v lietadle"
       },
       "export": {
-        "title": "Rýchly hardvérový export",
-        "text": "Kódovanie využíva WebCodecs, kodér videa zabudovaný v prehliadači a grafickej karte, namiesto pomalého softvérového kódovania"
+        "title": "HD a bez vodoznaku",
+        "text": "Exportujte v 720p alebo 1080p, až 60 snímok za sekundu. Žiadne pridané logo, žiadna platená verzia"
       },
       "clips": {
-        "title": "Spájanie viacerých klipov",
-        "text": "Pretiahnite niekoľko záberov naraz: spoja sa do jedného videa v poradí, ktoré zvolíte, so spoločnou časovou osou a prepisom"
+        "title": "Viac záberov, jedno video",
+        "text": "Pretiahnite všetky zábery naraz: spoja sa za sebou v poradí, ktoré si zvolíte"
       },
       "inputs": {
-        "title": "MP4, MOV, WebM, MKV",
-        "text": "Otvorí súbory z telefónu aj fotoaparátu, vrátane videí HEVC z iPhonu, ak ich prehliadač dokáže dekódovať"
+        "title": "Videá z vášho telefónu",
+        "text": "MP4, MOV, WebM, MKV: otvárajte videá z telefónu alebo fotoaparátu, vrátane tých z iPhonu, ak ich váš prehliadač dokáže prehrať"
       },
       "languages": {
-        "title": "Viacjazyčné",
-        "text": "Rozhranie hovorí {{ count }} jazykmi a Whisper prepisuje desiatky ďalších, s automatickým rozpoznaním jazyka"
+        "title": "Vo vašom jazyku",
+        "text": "Rozhranie existuje v {{ count }} jazykoch a titulky fungujú v desiatkach jazykov, ktoré sa rozpoznajú automaticky"
       }
     },
     "privacy": {
       "eyebrow": "Súkromie",
-      "title": "Žiadne nahrávanie, už z princípu",
-      "lead": "Vaše video sa číta priamo z disku. Analýza zvuku, prepis, sledovanie tváre aj kódovanie bežia vo vláknach na pozadí (Web Workers) na vašom počítači. Jednoducho neexistuje server, kam by sa váš záznam posielal",
-      "upload": "Nikdy žiadne nahrávanie: súbor nikdy neopustí váš počítač",
-      "account": "Žiadny účet, žiadne cookies, žiadne štatistiky",
-      "csp": "Prísna Content-Security-Policy dovolí stránke komunikovať len s týmto webom, ktorý poskytuje aj modely AI (Hugging Face je len záloha)",
-      "storage": "Projekty sa ukladajú do miestnej databázy prehliadača (IndexedDB) a môžete ich kedykoľvek zmazať",
+      "title": "Vaše videá zostávajú u vás",
+      "lead": "Tu sa nič nenahráva: všetku prácu urobí vaše vlastné zariadenie, dokonca aj umelú inteligenciu. Nikto iný vaše zábery nevidí",
+      "upload": "Vaše videá sa nikdy neposielajú cez internet",
+      "account": "Žiadny účet, žiadne reklamy, žiadne sledovanie",
+      "storage": "Vaše projekty zostávajú v prehliadači a zmažete ich jedným kliknutím",
       "diagram": {
         "machine": "Váš počítač",
         "file": "Video súbor",
         "browser": "Váš prehliadač",
         "upload": "Nahranie na server",
         "model": "Stiahnutie modelu AI (raz, do vyrovnávacej pamäte)"
-      }
+      },
+      "sensitive": "Ideálne na dôverné videá: porady, klienti, rodina"
     },
     "support": {
       "eyebrow": "Kompatibilita",
@@ -167,15 +168,15 @@
       "title": "Časté otázky",
       "free": {
         "q": "Je to naozaj zadarmo? Kde je háčik?",
-        "a": "Je to zadarmo a open source. Keďže všetka práca prebieha na vašom počítači, nie sú žiadne náklady na servery, takže vám niet čo predávať a nie sú žiadne údaje na zber"
+        "a": "Žiadny nie je. Keďže prácu robí váš počítač, netreba platiť drahé servery: žiadne predplatné, žiadny vodoznak, žiadne reklamy. Kód je dokonca verejný (open source)"
       },
       "formats": {
-        "q": "Aké formáty videa môžem otvoriť?",
-        "a": "MP4, MOV, WebM a MKV, ak prehliadač dokáže dekódovať kodek (H.264, HEVC, VP9, AV1 podľa prehliadača a systému). Exportuje sa súbor MP4"
+        "q": "Aké videá môžem otvoriť?",
+        "a": "Videá z telefónu, fotoaparátu alebo záznamy obrazovky: MP4, MOV, WebM a MKV. Výsledkom je súbor MP4, ktorý sa prehrá všade"
       },
       "browsers": {
-        "q": "Prečo Chrome alebo Edge?",
-        "a": "Podporujú File System Access API, ktoré editoru umožní po opätovnom načítaní znova otvoriť video a zapísať export priamo na disk. Ostatné prehliadače fungujú tiež, len s pár kliknutiami navyše"
+        "q": "Aký prehliadač použiť?",
+        "a": "Chrome alebo Edge na počítači ponúkajú najlepší zážitok. Firefox a Safari fungujú tiež, len s niekoľkými kliknutiami navyše pri opätovnom otvorení videa. Na telefóne uprednostnite krátke videá"
       },
       "size": {
         "q": "Je nejaký limit veľkosti súboru?",
@@ -183,11 +184,15 @@
       },
       "offline": {
         "q": "Funguje to bez internetu?",
-        "a": "Áno, keď sa raz načíta. Nainštalujte ho ako aplikáciu (PWA) a raz urobte prepis online: model Whisper sa uloží do vyrovnávacej pamäte a všetko potom funguje offline"
+        "a": "Áno. Pri prvom použití sa stiahne nástroj na titulky, iba raz. Potom všetko funguje offline a môžete si ho dokonca nainštalovať ako aplikáciu"
       },
       "ai": {
-        "q": "Kde beží AI?",
-        "a": "Vo vašom prehliadači. Whisper beží s Transformers.js na grafickej karte (WebGPU) alebo procesore (WebAssembly) a rozpoznávanie tvárí využíva MediaPipe. Modely sa sťahujú raz, váš zvuk sa nikdy neodosiela"
+        "q": "Ako môže AI bežať bez servera?",
+        "a": "Modely AI (Whisper na titulky, MediaPipe na tváre) sa stiahnu raz a potom ich spúšťa váš počítač. Váš hlas ani vaše obrazy ho nikdy neopustia"
+      },
+      "capcut": {
+        "q": "Aký je rozdiel oproti CapCutu?",
+        "a": "LocalCutVideo sa sústreďuje na to, čo potrebujú videá, v ktorých niekto hovorí do kamery (vystrihnuté pauzy, automatické titulky, zvislý formát), bez účtu a bez nahrávania vašich videí. Na špeciálne efekty, animované prechody či trendové šablóny je CapCut bohatší"
       }
     },
     "final": {
@@ -207,6 +212,23 @@
       "cta": "Vytvoriť náhľad",
       "mockTitle": "Môj prvý",
       "mockAccent": "vlog"
+    },
+    "compare": {
+      "eyebrow": "Porovnanie",
+      "title": "Prečo si vybrať LocalCutVideo?",
+      "lead": "Väčšina online editorov videa nahráva vaše videá na svoje servery a najlepšie nástroje necháva pre predplatiteľov. Tu je všetko zadarmo a zostáva u vás",
+      "them": "Online editory videa",
+      "yes": "Áno",
+      "no": "Nie",
+      "sometimes": "Niekedy",
+      "rows": {
+        "free": "100 % zadarmo, bez vodoznaku",
+        "account": "Bez účtu a registrácie",
+        "auto": "Automatické titulky a strihy v cene",
+        "upload": "Vaše videá zostávajú vo vašom zariadení",
+        "offline": "Funguje bez internetu"
+      },
+      "note": "CapCut je ochranná známka svojho vlastníka. LocalCutVideo je nezávislý projekt bez spojenia s CapCutom alebo so spoločnosťou ByteDance"
     }
   },
   "changelog": {
@@ -232,11 +254,12 @@
     "recent": "Nedávne projekty",
     "empty": "Zatiaľ žiadne projekty. Začnite otvorením videa",
     "delete": "Zmazať projekt",
-    "confirmDelete": "Zmazať projekt „{{ name }}“? Video súbor na disku zostane bez zmeny",
     "multi": "Viac súborov? Spoja sa do jedného videa v poradí podľa názvu",
     "importFile": "Otvoriť súbor projektu (.lcv.json)",
     "saveFile": "Uložiť projekt ako súbor",
-    "imported": "Projekt otvorený: na pokračovanie vyberte jeho videá"
+    "imported": "Projekt otvorený: na pokračovanie vyberte jeho videá",
+    "deleteTitle": "Zmazať tento projekt?",
+    "deleteText": "„{{ name }}“ sa odstráni z vašich projektov aj so strihmi a titulkami. Váš videosúbor zostane nedotknutý"
   },
   "errors": {
     "notVideo": "Tento súbor nevyzerá ako video",
@@ -600,6 +623,11 @@
       "blur": "Rozmazané",
       "strength": "Sila rozmazania",
       "error": "Rozmazanie pozadia sa na tomto zariadení nepodarilo spustiť"
+    },
+    "mobile": {
+      "title": "Strih na telefóne je obmedzený",
+      "text": "Editor je určený pre počítač. Na telefóne zvládne krátke videá, ale môže byť pomalý alebo mu dôjde pamäť. Najlepšie výsledky dosiahnete v Chrome alebo Edge na počítači",
+      "ok": "Rozumiem"
     }
   },
   "legal": {
@@ -817,8 +845,8 @@
   },
   "seo": {
     "home": {
-      "title": "LocalCutVideo — Bezplatný editor videa v prehliadači, nič sa nenahráva",
-      "description": "Strihajte videá v prehliadači: automatické vystrihnutie ticha, titulky pomocou AI, kádrovanie na tvár pre TikTok a Shorts, náhľady. Zadarmo a open source, vaše videá nikdy neopustia váš počítač"
+      "title": "LocalCutVideo — Bezplatná alternatíva k CapCutu, bez nahrávania",
+      "description": "Bezplatný automatický strih videa v prehliadači: vystrihnuté pauzy, animované titulky, formát pre TikTok a Shorts, miniatúry. Bez účtu, bez vodoznaku, vaše videá nikdy neopustia váš počítač"
     },
     "thumbnail": {
       "title": "Bezplatný tvorca náhľadov pre YouTube — LocalCutVideo",

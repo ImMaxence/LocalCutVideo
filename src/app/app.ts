@@ -11,11 +11,12 @@ import { Icon } from './shared/icon';
 import { LangPicker } from './shared/lang-picker';
 import { LocalizePipe } from './shared/localize';
 import { Logo } from './shared/logo';
+import { ConfirmDialog } from './shared/confirm';
 import { ThemeSwitch } from './shared/theme-switch';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, TranslocoPipe, Icon, Logo, LangPicker, ThemeSwitch, LocalizePipe],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, TranslocoPipe, Icon, Logo, LangPicker, ThemeSwitch, LocalizePipe, ConfirmDialog],
   templateUrl: './app.html',
   styleUrl: './app.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

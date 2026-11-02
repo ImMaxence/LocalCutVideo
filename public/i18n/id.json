@@ -41,15 +41,16 @@
   },
   "landing": {
     "hero": {
-      "badgeLocal": "100% lokal, nol unggahan",
-      "badgeOpen": "Gratis & open source",
-      "title1": "Edit video Anda",
-      "title2": "Tidak ada yang keluar dari komputer Anda",
-      "lead": "LocalCutVideo memotong bagian hening, membuat transkrip dengan Whisper, menanamkan subtitel karaoke, dan membingkai ulang 16:9 menjadi 9:16, semuanya di browser Anda. Tanpa unggah, tanpa akun, tanpa server",
-      "cta": "Buka editor",
+      "badgeLocal": "Video Anda tetap di tangan Anda",
+      "badgeOpen": "Tanpa watermark, open source",
+      "title1": "Edit video Anda dengan sekali klik",
+      "title2": "tanpa mengunggah apa pun",
+      "lead": "Potong jeda dan “eh”, tambahkan subtitel animasi, dan beralih ke format TikTok secara otomatis. Gratis, tanpa akun, dan tanpa watermark: semuanya terjadi di komputer Anda",
+      "cta": "Edit video saya gratis",
       "github": "Lihat di GitHub",
-      "hint": "Paling baik di Chrome atau Edge pada komputer",
-      "demo": "Coba dengan video demo"
+      "hint": "Tanpa daftar · Terbaik di komputer, dengan Chrome atau Edge",
+      "demo": "Coba demonya",
+      "badgeAlt": "Alternatif gratis untuk CapCut"
     },
     "mock": {
       "w1": "Jadi hari ini",
@@ -62,95 +63,95 @@
       "cap2": "komputer Anda"
     },
     "stats": {
-      "upload": "byte diunggah",
-      "local": "diproses di perangkat Anda",
+      "upload": "video diunggah ke internet",
       "languages": "bahasa antarmuka",
-      "gpu": "AI & encoding dipercepat"
+      "free": "gratis, tanpa langganan",
+      "watermark": "watermark di video Anda"
     },
     "how": {
       "eyebrow": "Cara kerja",
-      "title": "Dari rekaman mentah ke video siap unggah dalam tiga langkah",
+      "title": "Video siap unggah dalam tiga langkah",
       "open": {
-        "title": "Buka video",
-        "text": "Pilih file dari disk Anda. File dibaca di tempatnya: tanpa salinan, tanpa unggah, bahkan untuk file berukuran beberapa gigabyte"
+        "title": "Buka video Anda",
+        "text": "Seret video dari komputer atau ponsel. Video langsung terbuka, meski ukurannya sangat besar"
       },
       "edit": {
-        "title": "Biarkan editor bekerja",
-        "text": "Bagian hening terdeteksi, ucapan ditranskripsi kata demi kata, dan wajah dilacak, semuanya secara lokal. Perbaiki apa pun dengan mengedit teks"
+        "title": "Jalankan edit otomatis",
+        "text": "Jeda dan keraguan dipotong, subtitel menulis sendiri, dan pembicara tetap di dalam bingkai. Setelah itu Anda bisa menyempurnakan semuanya"
       },
       "export": {
-        "title": "Ekspor MP4",
-        "text": "Pilih 16:9, 9:16, atau 1:1. Video di-encode oleh kartu grafis Anda dan langsung ditulis ke disk"
+        "title": "Unduh dan unggah",
+        "text": "Dapatkan video Anda dalam HD, dalam format TikTok, YouTube, atau Instagram, siap diunggah"
       }
     },
     "features": {
       "eyebrow": "Fitur",
-      "title": "Semua yang Anda perlukan untuk video bicara ke kamera",
-      "lead": "Dibuat untuk kreator YouTube, TikTok, Reels, dan Shorts yang lebih suka tidak mengunggah rekaman mentahnya ke mana pun",
+      "title": "Semua yang Anda perlukan untuk video yang memikat",
+      "lead": "Untuk kreator TikTok, Reels, Shorts, dan YouTube, juga guru, pelatih, dan perusahaan",
       "silences": {
-        "title": "Potong hening otomatis",
-        "text": "Mendeteksi jeda dari volume suara lalu menghapusnya, dengan ambang, durasi minimum, dan ruang napas yang bisa diatur"
+        "title": "Selamat tinggal jeda",
+        "text": "Keheningan dan momen kosong ditemukan dan dipotong otomatis: video Anda langsung lebih bertempo"
       },
       "textEdit": {
-        "title": "Edit lewat teks",
-        "text": "Whisper memberi setiap kata stempel waktu. Hapus kata di transkrip dan bagian video yang sesuai ikut terpotong"
+        "title": "Edit seperti teks",
+        "text": "Video Anda ditranskripsi kata demi kata. Hapus satu kalimat di teks dan kalimat itu hilang dari video"
       },
       "captions": {
-        "title": "Subtitel karaoke",
-        "text": "Subtitel beranimasi kata demi kata yang ditanamkan ke video, dengan gaya karaoke, polos, atau kotak, dalam warna sorotan pilihan Anda"
+        "title": "Subtitel otomatis",
+        "text": "Subtitel animasi kata demi kata, seperti di TikTok, tanpa mengetik apa pun. Pilih gaya dan warnanya"
       },
       "framing": {
-        "title": "Pembingkaian otomatis 16:9 → 9:16",
-        "text": "Pelacakan wajah menjaga pembicara tetap dalam bingkai saat Anda mengubah video lanskap menjadi vertikal"
+        "title": "Format TikTok sekali klik",
+        "text": "Ubah video horizontal menjadi vertikal: wajah pembicara selalu tetap di dalam bingkai"
       },
       "zoom": {
-        "title": "Zoom pintar",
-        "text": "Zoom bergantian di setiap potongan membuat jump cut terlihat disengaja dan membuat penonton bertahan"
+        "title": "Zoom yang berirama",
+        "text": "Zoom halus di setiap potongan menambah dinamika dan membuat penonton bertahan sampai akhir"
       },
       "ducking": {
-        "title": "Suara & musik",
-        "text": "Naikkan volume, samakan suara klip, dan tambahkan musik latar yang mengecil sendiri setiap kali seseorang berbicara"
+        "title": "Musik latar",
+        "text": "Tambahkan musik yang mengecil sendiri saat Anda berbicara, dan atur volume setiap rekaman"
       },
       "recovery": {
-        "title": "Pemulihan setelah crash",
-        "text": "Setiap perubahan tersimpan di browser secara langsung. Buka lagi tab-nya dan lanjutkan tepat dari tempat Anda berhenti"
+        "title": "Tidak ada yang hilang",
+        "text": "Semuanya tersimpan selama Anda bekerja. Tutup tab, kembali nanti, dan lanjutkan tepat dari tempat terakhir"
       },
       "offline": {
-        "title": "Bisa offline",
-        "text": "Pasang sebagai aplikasi. Setelah model AI terunduh, seluruh editor bisa dipakai tanpa koneksi internet"
+        "title": "Bahkan tanpa internet",
+        "text": "Pasang seperti aplikasi: setelah siap, aplikasi ini juga berjalan di kereta atau pesawat"
       },
       "export": {
-        "title": "Ekspor perangkat keras yang cepat",
-        "text": "Encoding memakai WebCodecs, encoder video bawaan browser dan kartu grafis Anda, bukan encoding perangkat lunak yang lambat"
+        "title": "HD dan tanpa watermark",
+        "text": "Ekspor dalam 720p atau 1080p, hingga 60 frame per detik. Tanpa logo tambahan, tanpa versi berbayar"
       },
       "clips": {
-        "title": "Gabungkan banyak klip",
-        "text": "Seret beberapa take sekaligus: semuanya digabung menjadi satu video, dalam urutan yang Anda pilih, dengan timeline dan transkrip bersama"
+        "title": "Beberapa rekaman, satu video",
+        "text": "Seret semua rekaman sekaligus: rekaman disambung satu per satu sesuai urutan pilihan Anda"
       },
       "inputs": {
-        "title": "MP4, MOV, WebM, MKV",
-        "text": "Membuka file dari ponsel dan kamera Anda, termasuk video HEVC dari iPhone jika browser Anda bisa mendekodenya"
+        "title": "Video dari ponsel Anda",
+        "text": "MP4, MOV, WebM, MKV: buka video dari ponsel atau kamera, termasuk video iPhone jika browser Anda bisa memutarnya"
       },
       "languages": {
-        "title": "Multibahasa",
-        "text": "Antarmuka tersedia dalam {{ count }} bahasa dan Whisper mentranskripsi puluhan bahasa lain, dengan deteksi bahasa otomatis"
+        "title": "Dalam bahasa Anda",
+        "text": "Antarmuka tersedia dalam {{ count }} bahasa dan subtitel berfungsi dalam puluhan bahasa yang dikenali otomatis"
       }
     },
     "privacy": {
       "eyebrow": "Privasi",
-      "title": "Nol unggahan, sejak dirancang",
-      "lead": "Video Anda dibaca langsung dari disk. Analisis audio, transkripsi, pelacakan wajah, dan encoding semuanya berjalan di thread latar belakang (Web Workers) di komputer Anda. Memang tidak ada server tempat rekaman Anda dikirim",
-      "upload": "Tidak pernah ada unggahan: file tidak pernah meninggalkan komputer Anda",
-      "account": "Tanpa akun, tanpa cookie, tanpa analitik",
-      "csp": "Content-Security-Policy yang ketat hanya membolehkan halaman berkomunikasi dengan situs ini, yang juga menyediakan model AI (Hugging Face hanya cadangan)",
-      "storage": "Proyek disimpan di database lokal browser Anda (IndexedDB) dan bisa dihapus kapan saja",
+      "title": "Video Anda tetap di tangan Anda",
+      "lead": "Di sini tidak ada yang diunggah: perangkat Anda sendiri yang mengerjakan semuanya, bahkan kecerdasan buatannya. Tidak ada orang lain yang melihat rekaman Anda",
+      "upload": "Video Anda tidak pernah dikirim lewat internet",
+      "account": "Tanpa akun, tanpa iklan, tanpa pelacakan",
+      "storage": "Proyek Anda tetap di browser dan bisa dihapus dengan sekali klik",
       "diagram": {
         "machine": "Komputer Anda",
         "file": "File video",
         "browser": "Browser Anda",
         "upload": "Unggah ke server",
         "model": "Unduhan model AI (sekali, di cache)"
-      }
+      },
+      "sensitive": "Ideal untuk video rahasia: rapat, klien, keluarga"
     },
     "support": {
       "eyebrow": "Kompatibilitas",
@@ -167,15 +168,15 @@
       "title": "Pertanyaan umum",
       "free": {
         "q": "Benar-benar gratis? Apa jebakannya?",
-        "a": "Gratis dan open source. Karena semua pekerjaan terjadi di komputer Anda, tidak ada biaya server yang harus ditanggung, jadi tidak ada yang perlu dijual kepada Anda dan tidak ada data yang dikumpulkan"
+        "a": "Tidak ada. Karena komputer Anda yang bekerja, tidak ada server mahal yang perlu dibayar: tanpa langganan, tanpa watermark, tanpa iklan. Kodenya bahkan terbuka untuk umum (open source)"
       },
       "formats": {
-        "q": "Format video apa saja yang bisa dibuka?",
-        "a": "MP4, MOV, WebM, dan MKV, selama browser Anda bisa mendekode codec-nya (H.264, HEVC, VP9, AV1 tergantung browser dan sistem). Hasil ekspor berupa file MP4"
+        "q": "Video apa saja yang bisa saya buka?",
+        "a": "Video dari ponsel, kamera, atau rekaman layar Anda: MP4, MOV, WebM, dan MKV. Hasilnya berupa file MP4 yang bisa diputar di mana saja"
       },
       "browsers": {
-        "q": "Kenapa Chrome atau Edge?",
-        "a": "Keduanya mendukung File System Access API, sehingga editor bisa membuka lagi video Anda setelah dimuat ulang dan menulis hasil ekspor langsung ke disk. Browser lain juga bisa, dengan beberapa klik tambahan"
+        "q": "Browser apa yang sebaiknya saya pakai?",
+        "a": "Chrome atau Edge di komputer memberikan pengalaman terbaik. Firefox dan Safari juga berfungsi, dengan beberapa klik tambahan untuk membuka ulang video. Di ponsel, sebaiknya gunakan video pendek"
       },
       "size": {
         "q": "Apakah ada batas ukuran file?",
@@ -183,11 +184,15 @@
       },
       "offline": {
         "q": "Apakah bisa tanpa internet?",
-        "a": "Ya, setelah dimuat. Pasang sebagai aplikasi (PWA) dan lakukan transkripsi sekali saat online: model Whisper tersimpan di cache dan semuanya bisa berjalan offline"
+        "a": "Bisa. Pertama kali, alat subtitel diunduh, cukup sekali. Setelah itu semuanya berjalan offline, dan Anda bahkan bisa memasangnya sebagai aplikasi"
       },
       "ai": {
-        "q": "Di mana AI-nya berjalan?",
-        "a": "Di browser Anda. Whisper berjalan dengan Transformers.js di kartu grafis (WebGPU) atau prosesor (WebAssembly), dan deteksi wajah memakai MediaPipe. Model diunduh sekali, audio Anda tidak pernah dikirim"
+        "q": "Bagaimana AI bisa berjalan tanpa server?",
+        "a": "Model AI (Whisper untuk subtitel, MediaPipe untuk wajah) diunduh sekali, lalu komputer Anda yang menjalankannya. Suara dan gambar Anda tidak pernah keluar dari komputer"
+      },
+      "capcut": {
+        "q": "Apa bedanya dengan CapCut?",
+        "a": "LocalCutVideo berfokus pada kebutuhan video berbicara ke kamera (jeda dipotong, subtitel otomatis, format vertikal), tanpa akun dan tanpa mengunggah video Anda. Untuk efek khusus, transisi animasi, atau template yang sedang tren, CapCut lebih lengkap"
       }
     },
     "final": {
@@ -207,6 +212,23 @@
       "cta": "Buat thumbnail",
       "mockTitle": "Vlog",
       "mockAccent": "pertamaku"
+    },
+    "compare": {
+      "eyebrow": "Perbandingan",
+      "title": "Mengapa memilih LocalCutVideo?",
+      "lead": "Sebagian besar editor video online mengunggah video Anda ke server mereka dan menyimpan fitur terbaiknya untuk pelanggan berbayar. Di sini semuanya gratis dan tetap di tangan Anda",
+      "them": "Editor video online",
+      "yes": "Ya",
+      "no": "Tidak",
+      "sometimes": "Kadang",
+      "rows": {
+        "free": "100% gratis, tanpa watermark",
+        "account": "Tanpa akun atau pendaftaran",
+        "auto": "Subtitel dan potongan otomatis sudah termasuk",
+        "upload": "Video Anda tetap di perangkat Anda",
+        "offline": "Berfungsi tanpa internet"
+      },
+      "note": "CapCut adalah merek dagang milik pemiliknya. LocalCutVideo adalah proyek independen yang tidak terafiliasi dengan CapCut maupun ByteDance"
     }
   },
   "changelog": {
@@ -232,11 +254,12 @@
     "recent": "Proyek terbaru",
     "empty": "Belum ada proyek. Buka video untuk memulai",
     "delete": "Hapus proyek",
-    "confirmDelete": "Hapus proyek “{{ name }}”? File video di disk Anda tidak terpengaruh",
     "multi": "Beberapa file? Semuanya digabung menjadi satu video, sesuai urutan nama",
     "importFile": "Buka file proyek (.lcv.json)",
     "saveFile": "Simpan proyek sebagai file",
-    "imported": "Proyek dibuka: pilih video-videonya untuk melanjutkan"
+    "imported": "Proyek dibuka: pilih video-videonya untuk melanjutkan",
+    "deleteTitle": "Hapus proyek ini?",
+    "deleteText": "“{{ name }}” akan dihapus dari proyek Anda, beserta potongan dan subtitelnya. File video Anda tidak tersentuh"
   },
   "errors": {
     "notVideo": "File ini sepertinya bukan video",
@@ -600,6 +623,11 @@
       "blur": "Buram",
       "strength": "Kekuatan buram",
       "error": "Efek buram latar tidak bisa dijalankan di perangkat ini"
+    },
+    "mobile": {
+      "title": "Mengedit di ponsel masih terbatas",
+      "text": "Editor ini dirancang untuk komputer. Di ponsel, editor cocok untuk video pendek, tetapi bisa lambat atau kehabisan memori. Untuk hasil terbaik, gunakan Chrome atau Edge di komputer",
+      "ok": "Mengerti"
     }
   },
   "legal": {
@@ -817,8 +845,8 @@
   },
   "seo": {
     "home": {
-      "title": "LocalCutVideo — Editor video gratis di browser, tanpa unggah",
-      "description": "Edit video di browser: hening dipotong otomatis, subtitel AI, bingkai mengikuti wajah untuk TikTok dan Shorts, thumbnail. Gratis dan open source, video Anda tidak pernah meninggalkan komputer"
+      "title": "LocalCutVideo — Alternatif gratis untuk CapCut, tanpa unggah",
+      "description": "Edit video otomatis dan gratis di browser: jeda dipotong, subtitel animasi, format TikTok dan Shorts, thumbnail. Tanpa akun, tanpa watermark, video Anda tidak pernah meninggalkan komputer Anda"
     },
     "thumbnail": {
       "title": "Pembuat thumbnail YouTube gratis — LocalCutVideo",

@@ -41,15 +41,16 @@
   },
   "landing": {
     "hero": {
-      "badgeLocal": "100% trên máy, không tải lên",
-      "badgeOpen": "Miễn phí & mã nguồn mở",
-      "title1": "Chỉnh sửa video của bạn",
-      "title2": "Không gì rời khỏi máy tính của bạn",
-      "lead": "LocalCutVideo cắt đoạn im lặng, chép lời bằng Whisper, gắn phụ đề karaoke và chuyển khung hình 16:9 sang 9:16, tất cả trong trình duyệt. Không tải lên, không tài khoản, không máy chủ",
-      "cta": "Mở trình chỉnh sửa",
+      "badgeLocal": "Video của bạn ở lại với bạn",
+      "badgeOpen": "Không hình mờ, mã nguồn mở",
+      "title1": "Dựng video chỉ với một cú nhấp",
+      "title2": "mà không tải gì lên mạng",
+      "lead": "Cắt bỏ khoảng lặng và tiếng “ờ”, thêm phụ đề động và tự động chuyển sang định dạng TikTok. Miễn phí, không tài khoản, không hình mờ: mọi thứ diễn ra trên máy tính của bạn",
+      "cta": "Dựng video của tôi miễn phí",
       "github": "Xem trên GitHub",
-      "hint": "Hoạt động tốt nhất trên Chrome hoặc Edge trên máy tính",
-      "demo": "Thử với video mẫu"
+      "hint": "Không cần đăng ký · Tốt nhất trên máy tính, với Chrome hoặc Edge",
+      "demo": "Dùng thử bản demo",
+      "badgeAlt": "Lựa chọn thay thế CapCut miễn phí"
     },
     "mock": {
       "w1": "Vậy hôm nay",
@@ -62,95 +63,95 @@
       "cap2": "máy tính của bạn"
     },
     "stats": {
-      "upload": "byte được tải lên",
-      "local": "xử lý trên thiết bị của bạn",
+      "upload": "video bị tải lên mạng",
       "languages": "ngôn ngữ giao diện",
-      "gpu": "AI và mã hóa được tăng tốc"
+      "free": "miễn phí, không thuê bao",
+      "watermark": "hình mờ trên video của bạn"
     },
     "how": {
       "eyebrow": "Cách hoạt động",
-      "title": "Từ cảnh quay thô đến video sẵn sàng đăng trong ba bước",
+      "title": "Video sẵn sàng đăng chỉ trong ba bước",
       "open": {
-        "title": "Mở video",
-        "text": "Chọn một tệp trên ổ đĩa. Tệp được đọc tại chỗ: không sao chép, không tải lên, kể cả tệp nặng vài gigabyte"
+        "title": "Mở video của bạn",
+        "text": "Kéo một video từ máy tính hoặc điện thoại. Video mở ngay lập tức, kể cả khi rất nặng"
       },
       "edit": {
-        "title": "Để trình chỉnh sửa làm việc",
-        "text": "Đoạn im lặng được phát hiện, lời nói được chép từng từ và khuôn mặt được theo dõi, tất cả ngay trên máy. Sửa bất cứ gì bằng cách chỉnh văn bản"
+        "title": "Chạy dựng tự động",
+        "text": "Khoảng lặng và chỗ ngập ngừng được cắt, phụ đề tự viết và người nói luôn ở giữa khung hình. Sau đó bạn có thể tinh chỉnh mọi thứ"
       },
       "export": {
-        "title": "Xuất MP4",
-        "text": "Chọn 16:9, 9:16 hoặc 1:1. Video được card đồ họa mã hóa và ghi thẳng vào ổ đĩa"
+        "title": "Tải về và đăng",
+        "text": "Nhận video chất lượng HD, ở định dạng TikTok, YouTube hoặc Instagram, sẵn sàng để đăng"
       }
     },
     "features": {
       "eyebrow": "Tính năng",
-      "title": "Mọi thứ bạn cần cho video nói trước ống kính",
-      "lead": "Dành cho nhà sáng tạo YouTube, TikTok, Reels và Shorts không muốn tải cảnh quay thô lên bất cứ đâu",
+      "title": "Mọi thứ bạn cần cho những video cuốn hút",
+      "lead": "Dành cho nhà sáng tạo TikTok, Reels, Shorts và YouTube, cũng như giáo viên, người đào tạo và doanh nghiệp",
       "silences": {
-        "title": "Tự động cắt im lặng",
-        "text": "Phát hiện khoảng ngắt dựa trên âm lượng rồi xóa chúng, có thể chỉnh ngưỡng, độ dài tối thiểu và khoảng lấy hơi"
+        "title": "Tạm biệt khoảng lặng",
+        "text": "Khoảng lặng và đoạn chết được tìm và cắt tự động: video của bạn nhịp nhàng hơn chỉ trong một giây"
       },
       "textEdit": {
-        "title": "Chỉnh sửa bằng văn bản",
-        "text": "Whisper gắn mốc thời gian cho từng từ. Xóa từ trong bản chép lời và đoạn video tương ứng sẽ bị cắt"
+        "title": "Dựng như sửa văn bản",
+        "text": "Video của bạn được chép lời từng chữ. Xóa một câu trong văn bản và nó biến mất khỏi video"
       },
       "captions": {
-        "title": "Phụ đề karaoke",
-        "text": "Phụ đề chuyển động từng từ được gắn vào video, kiểu karaoke, tối giản hoặc có khung, với màu nhấn bạn chọn"
+        "title": "Phụ đề tự động",
+        "text": "Phụ đề động từng chữ một, như trên TikTok, không cần gõ gì. Chọn kiểu và màu sắc"
       },
       "framing": {
-        "title": "Tự động căn khung 16:9 → 9:16",
-        "text": "Theo dõi khuôn mặt giữ người nói luôn trong khung khi bạn chuyển video ngang thành video dọc"
+        "title": "Định dạng TikTok chỉ một cú nhấp",
+        "text": "Biến video ngang thành video dọc: khuôn mặt người nói luôn nằm trong khung hình"
       },
       "zoom": {
-        "title": "Thu phóng thông minh",
-        "text": "Phóng to xen kẽ ở mỗi điểm cắt khiến jump cut trông có chủ ý và giữ chân người xem"
+        "title": "Zoom tạo nhịp",
+        "text": "Những cú zoom nhẹ ở mỗi đoạn cắt tăng sự sinh động và giữ chân người xem đến cuối"
       },
       "ducking": {
-        "title": "Âm thanh & nhạc",
-        "text": "Tăng âm lượng, cân bằng các clip và thêm nhạc nền tự nhỏ lại mỗi khi có người nói"
+        "title": "Nhạc nền",
+        "text": "Thêm nhạc tự nhỏ lại khi bạn nói và chỉnh âm lượng cho từng cảnh quay"
       },
       "recovery": {
-        "title": "Khôi phục sau sự cố",
-        "text": "Mọi thay đổi được lưu vào trình duyệt theo thời gian thực. Mở lại thẻ và tiếp tục đúng chỗ bạn đã dừng"
+        "title": "Không mất gì cả",
+        "text": "Mọi thứ được lưu liên tục khi bạn làm việc. Đóng tab, quay lại sau và tiếp tục đúng chỗ bạn đã dừng"
       },
       "offline": {
-        "title": "Dùng ngoại tuyến",
-        "text": "Cài đặt như một ứng dụng. Khi mô hình AI đã tải về, toàn bộ trình chỉnh sửa chạy không cần internet"
+        "title": "Kể cả khi không có mạng",
+        "text": "Cài đặt như một ứng dụng: khi đã sẵn sàng, nó vẫn chạy trên tàu hoặc máy bay"
       },
       "export": {
-        "title": "Xuất nhanh bằng phần cứng",
-        "text": "Việc mã hóa dùng WebCodecs, bộ mã hóa video tích hợp trong trình duyệt và card đồ họa, thay cho mã hóa phần mềm chậm chạp"
+        "title": "HD và không hình mờ",
+        "text": "Xuất video 720p hoặc 1080p, tối đa 60 khung hình mỗi giây. Không chèn logo, không có bản trả phí"
       },
       "clips": {
-        "title": "Ghép nhiều clip",
-        "text": "Thả nhiều cảnh quay cùng lúc: chúng được nối thành một video theo thứ tự bạn chọn, dùng chung dòng thời gian và bản chép lời"
+        "title": "Nhiều cảnh quay, một video",
+        "text": "Kéo tất cả cảnh quay vào cùng lúc: chúng được nối liền nhau theo thứ tự bạn chọn"
       },
       "inputs": {
-        "title": "MP4, MOV, WebM, MKV",
-        "text": "Mở tệp từ điện thoại và máy ảnh, kể cả video HEVC từ iPhone nếu trình duyệt giải mã được"
+        "title": "Video trong điện thoại của bạn",
+        "text": "MP4, MOV, WebM, MKV: mở video từ điện thoại hoặc máy quay, kể cả video iPhone nếu trình duyệt của bạn phát được"
       },
       "languages": {
-        "title": "Đa ngôn ngữ",
-        "text": "Giao diện có {{ count }} ngôn ngữ và Whisper chép lời thêm hàng chục ngôn ngữ khác, với tính năng tự nhận diện ngôn ngữ"
+        "title": "Bằng ngôn ngữ của bạn",
+        "text": "Giao diện có {{ count }} ngôn ngữ và phụ đề hoạt động với hàng chục ngôn ngữ, được nhận diện tự động"
       }
     },
     "privacy": {
       "eyebrow": "Quyền riêng tư",
-      "title": "Không tải lên, ngay từ thiết kế",
-      "lead": "Video được đọc trực tiếp từ ổ đĩa. Phân tích âm thanh, chép lời, theo dõi khuôn mặt và mã hóa đều chạy trong luồng nền (Web Workers) trên máy của bạn. Đơn giản là không có máy chủ nào để gửi cảnh quay của bạn đến",
-      "upload": "Không bao giờ tải lên: tệp không bao giờ rời khỏi máy tính của bạn",
-      "account": "Không tài khoản, không cookie, không thống kê",
-      "csp": "Content-Security-Policy nghiêm ngặt chỉ cho phép trang giao tiếp với trang web này, nơi cũng cung cấp các mô hình AI (Hugging Face chỉ là dự phòng)",
-      "storage": "Dự án được lưu trong cơ sở dữ liệu cục bộ của trình duyệt (IndexedDB) và có thể xóa bất cứ lúc nào",
+      "title": "Video của bạn ở lại với bạn",
+      "lead": "Ở đây không có gì bị tải lên: chính thiết bị của bạn làm toàn bộ công việc, kể cả trí tuệ nhân tạo. Không ai khác nhìn thấy cảnh quay của bạn",
+      "upload": "Video của bạn không bao giờ bị gửi qua internet",
+      "account": "Không tài khoản, không quảng cáo, không theo dõi",
+      "storage": "Dự án của bạn ở lại trong trình duyệt và xóa được chỉ với một cú nhấp",
       "diagram": {
         "machine": "Máy tính của bạn",
         "file": "Tệp video",
         "browser": "Trình duyệt của bạn",
         "upload": "Tải lên máy chủ",
         "model": "Tải mô hình AI (một lần, lưu bộ nhớ đệm)"
-      }
+      },
+      "sensitive": "Lý tưởng cho video bí mật: cuộc họp, khách hàng, gia đình"
     },
     "support": {
       "eyebrow": "Tương thích",
@@ -166,28 +167,32 @@
     "faq": {
       "title": "Câu hỏi thường gặp",
       "free": {
-        "q": "Thật sự miễn phí sao? Có gì khuất tất không?",
-        "a": "Nó miễn phí và mã nguồn mở. Vì mọi xử lý diễn ra trên máy tính của bạn nên không tốn chi phí máy chủ, không có gì để bán cho bạn và cũng không có dữ liệu nào để thu thập"
+        "q": "Thật sự miễn phí sao? Có gì mờ ám không?",
+        "a": "Không có gì cả. Vì máy tính của bạn làm hết công việc, không có máy chủ đắt tiền nào phải trả: không thuê bao, không hình mờ, không quảng cáo. Mã nguồn còn được công khai (mã nguồn mở)"
       },
       "formats": {
-        "q": "Tôi có thể mở những định dạng video nào?",
-        "a": "MP4, MOV, WebM và MKV, miễn là trình duyệt giải mã được codec (H.264, HEVC, VP9, AV1 tùy trình duyệt và hệ thống). Bản xuất là tệp MP4"
+        "q": "Tôi có thể mở những video nào?",
+        "a": "Video từ điện thoại, máy quay hoặc bản ghi màn hình: MP4, MOV, WebM và MKV. Kết quả là một tệp MP4 phát được ở mọi nơi"
       },
       "browsers": {
-        "q": "Vì sao lại là Chrome hoặc Edge?",
-        "a": "Chúng hỗ trợ File System Access API, giúp trình chỉnh sửa mở lại video sau khi tải lại trang và ghi bản xuất thẳng vào ổ đĩa. Các trình duyệt khác vẫn dùng được, chỉ cần thêm vài cú nhấp"
+        "q": "Nên dùng trình duyệt nào?",
+        "a": "Chrome hoặc Edge trên máy tính cho trải nghiệm tốt nhất. Firefox và Safari cũng hoạt động, chỉ cần thêm vài cú nhấp để mở lại video. Trên điện thoại, nên dùng video ngắn"
       },
       "size": {
         "q": "Có giới hạn dung lượng tệp không?",
         "a": "Không có giới hạn tải lên vì chẳng có gì được tải lên. Video được đọc từ ổ đĩa theo từng phần nhỏ; giới hạn thực tế là bộ nhớ máy tính và sự kiên nhẫn của bạn với video rất dài"
       },
       "offline": {
-        "q": "Có dùng được khi không có internet không?",
-        "a": "Có, sau khi đã tải xong. Cài đặt dưới dạng ứng dụng (PWA) và chép lời một lần khi đang trực tuyến: mô hình Whisper sẽ được lưu bộ nhớ đệm và mọi thứ chạy ngoại tuyến"
+        "q": "Có chạy được khi không có mạng không?",
+        "a": "Có. Lần đầu, công cụ phụ đề sẽ được tải về, chỉ một lần. Sau đó mọi thứ chạy ngoại tuyến, và bạn còn có thể cài nó như một ứng dụng"
       },
       "ai": {
-        "q": "AI chạy ở đâu?",
-        "a": "Trong trình duyệt của bạn. Whisper chạy bằng Transformers.js trên card đồ họa (WebGPU) hoặc bộ xử lý (WebAssembly), còn nhận diện khuôn mặt dùng MediaPipe. Mô hình chỉ tải một lần, âm thanh của bạn không bao giờ bị gửi đi"
+        "q": "Làm sao AI chạy được mà không cần máy chủ?",
+        "a": "Các mô hình AI (Whisper cho phụ đề, MediaPipe cho khuôn mặt) được tải về một lần, sau đó máy tính của bạn tự chạy chúng. Giọng nói và hình ảnh của bạn không bao giờ rời khỏi máy"
+      },
+      "capcut": {
+        "q": "Khác gì so với CapCut?",
+        "a": "LocalCutVideo tập trung vào những gì video nói trước camera cần (cắt khoảng lặng, phụ đề tự động, định dạng dọc), không cần tài khoản và không tải video của bạn lên. Với hiệu ứng đặc biệt, chuyển cảnh động hay mẫu thịnh hành, CapCut đầy đủ hơn"
       }
     },
     "final": {
@@ -207,6 +212,23 @@
       "cta": "Tạo ảnh thu nhỏ",
       "mockTitle": "Vlog",
       "mockAccent": "đầu tiên"
+    },
+    "compare": {
+      "eyebrow": "So sánh",
+      "title": "Vì sao chọn LocalCutVideo?",
+      "lead": "Hầu hết trình dựng video trực tuyến đều tải video của bạn lên máy chủ của họ và dành những công cụ tốt nhất cho gói trả phí. Ở đây mọi thứ đều miễn phí và ở lại với bạn",
+      "them": "Trình dựng video trực tuyến",
+      "yes": "Có",
+      "no": "Không",
+      "sometimes": "Đôi khi",
+      "rows": {
+        "free": "Miễn phí 100%, không hình mờ",
+        "account": "Không cần tài khoản hay đăng ký",
+        "auto": "Có sẵn phụ đề và cắt tự động",
+        "upload": "Video ở lại trên thiết bị của bạn",
+        "offline": "Chạy không cần mạng"
+      },
+      "note": "CapCut là nhãn hiệu của chủ sở hữu. LocalCutVideo là dự án độc lập, không liên kết với CapCut hay ByteDance"
     }
   },
   "changelog": {
@@ -232,11 +254,12 @@
     "recent": "Dự án gần đây",
     "empty": "Chưa có dự án nào. Mở một video để bắt đầu",
     "delete": "Xóa dự án",
-    "confirmDelete": "Xóa dự án “{{ name }}”? Tệp video trên ổ đĩa không bị ảnh hưởng",
     "multi": "Nhiều tệp? Chúng được ghép thành một video theo thứ tự tên",
     "importFile": "Mở tệp dự án (.lcv.json)",
     "saveFile": "Lưu dự án thành tệp",
-    "imported": "Đã mở dự án: chọn các video của nó để tiếp tục"
+    "imported": "Đã mở dự án: chọn các video của nó để tiếp tục",
+    "deleteTitle": "Xóa dự án này?",
+    "deleteText": "“{{ name }}” sẽ bị gỡ khỏi danh sách dự án, cùng các đoạn cắt và phụ đề. Tệp video của bạn không bị ảnh hưởng"
   },
   "errors": {
     "notVideo": "Tệp này có vẻ không phải video",
@@ -600,6 +623,11 @@
       "blur": "Làm mờ",
       "strength": "Độ mờ",
       "error": "Không thể bật làm mờ hậu cảnh trên thiết bị này"
+    },
+    "mobile": {
+      "title": "Dựng video trên điện thoại còn hạn chế",
+      "text": "Trình chỉnh sửa được thiết kế cho máy tính. Trên điện thoại, nó phù hợp với video ngắn nhưng có thể chậm hoặc thiếu bộ nhớ. Để có kết quả tốt nhất, hãy dùng Chrome hoặc Edge trên máy tính",
+      "ok": "Đã hiểu"
     }
   },
   "legal": {
@@ -817,8 +845,8 @@
   },
   "seo": {
     "home": {
-      "title": "LocalCutVideo — Trình chỉnh sửa video miễn phí trên trình duyệt, không tải lên",
-      "description": "Chỉnh sửa video ngay trong trình duyệt: tự động cắt im lặng, phụ đề bằng AI, căn khung theo khuôn mặt cho TikTok và Shorts, tạo ảnh thu nhỏ. Miễn phí, mã nguồn mở, video không bao giờ rời khỏi máy tính của bạn"
+      "title": "LocalCutVideo — Lựa chọn thay thế CapCut miễn phí, không tải lên",
+      "description": "Dựng video tự động và miễn phí ngay trong trình duyệt: cắt khoảng lặng, phụ đề động, định dạng TikTok và Shorts, ảnh thu nhỏ. Không cần tài khoản, không hình mờ, video của bạn không bao giờ rời khỏi máy tính"
     },
     "thumbnail": {
       "title": "Công cụ tạo ảnh thu nhỏ YouTube miễn phí — LocalCutVideo",

@@ -4,7 +4,7 @@ import { expect } from './helpers';
 test.describe('guided tour', () => {
   test('starts with the demo and points at each tool', async ({ page }, info) => {
     await page.goto('/');
-    await page.getByRole('link', { name: 'Try with a demo video' }).click();
+    await page.getByRole('link', { name: 'Try the demo' }).click();
     const bubble = page.locator('app-tour .bubble');
     await expect(bubble).toContainText('One click: the auto edit', { timeout: 60_000 });
     await expect(page).not.toHaveURL(/tour=/);

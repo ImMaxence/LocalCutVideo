@@ -7,8 +7,8 @@ import { filter } from 'rxjs';
 import { DEFAULT_LANG, LANGUAGES, applyLanguage, localizedPath, unlocalizedPath } from './i18n';
 import { APP_VERSION, REPO_URL, SITE_URL } from './version';
 
-const FEATURES = ['silences', 'clips', 'textEdit', 'captions', 'framing', 'zoom', 'ducking', 'recovery', 'offline', 'export', 'inputs', 'languages'];
-const FAQ = ['free', 'formats', 'browsers', 'size', 'offline', 'ai'];
+const FEATURES = ['silences', 'captions', 'framing', 'textEdit', 'zoom', 'ducking', 'clips', 'export', 'inputs', 'recovery', 'offline', 'languages'];
+const FAQ = ['free', 'capcut', 'formats', 'browsers', 'size', 'offline', 'ai'];
 
 /**
  * Title, description, canonical URL and language alternates of every page, from the `seo` key

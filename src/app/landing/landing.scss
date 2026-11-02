@@ -31,10 +31,15 @@
   gap: 8px;
   flex-wrap: wrap;
   margin-bottom: 22px;
+  .alt {
+    border-color: transparent;
+    background: var(--gradient) border-box;
+    color: #fff;
+  }
 }
 
 h1 {
-  font-size: clamp(38px, 5.4vw, 62px);
+  font-size: clamp(36px, 4.6vw, 56px);
   font-weight: 800;
   letter-spacing: -0.035em;
   line-height: 1.04;
@@ -459,6 +464,80 @@ h1 {
   color: var(--accent);
 }
 
+/* Comparison with online editors ------------------------------------------------------- */
+
+.compare {
+  max-width: 880px;
+  overflow: hidden;
+}
+
+.compare-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px 170px;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 22px;
+  border-bottom: 1px solid var(--border);
+  font-size: 15px;
+  font-weight: 550;
+  &:last-child {
+    border-bottom: 0;
+  }
+  > :not(:first-child) {
+    justify-self: center;
+    text-align: center;
+  }
+}
+
+.compare-head {
+  background: var(--surface);
+  font-size: 13.5px;
+  .us {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+}
+
+.mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 650;
+  app-icon {
+    flex: none;
+    padding: 3px;
+    border-radius: 50%;
+    width: 22px !important;
+    height: 22px !important;
+  }
+  &.yes {
+    color: var(--success);
+    app-icon {
+      background: light-dark(rgb(15 159 110 / 0.12), rgb(52 211 153 / 0.14));
+    }
+  }
+  &.sometimes {
+    color: var(--warning);
+    app-icon {
+      background: light-dark(rgb(183 110 0 / 0.12), rgb(251 191 36 / 0.14));
+    }
+  }
+  &.no {
+    color: var(--danger);
+    app-icon {
+      background: light-dark(rgb(217 45 58 / 0.1), rgb(248 113 113 / 0.12));
+    }
+  }
+}
+
+.compare-note {
+  max-width: 880px;
+  margin-top: 12px;
+  font-size: 12.5px;
+}
+
 .privacy {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -691,6 +770,10 @@ details {
   .hero {
     padding-top: 40px;
   }
+  /* Two badges are enough on a phone: three stack into a block above the title. */
+  .pills .badge:nth-child(3) {
+    display: none;
+  }
   .stats {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -715,6 +798,28 @@ details {
     > .muted {
       grid-column: 1 / -1;
     }
+  }
+  /* Icons only: the yes / no / sometimes words stay for screen readers. */
+  .compare-row {
+    grid-template-columns: minmax(0, 1fr) 76px 76px;
+    gap: 8px;
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+  .compare-head {
+    font-size: 12px;
+    line-height: 1.25;
+    .us {
+      flex-direction: column;
+      gap: 2px;
+    }
+  }
+  .mark small {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
   }
 }
 

@@ -41,15 +41,16 @@
   },
   "landing": {
     "hero": {
-      "badgeLocal": "100 % vietoje, niekas neįkeliama",
-      "badgeOpen": "Nemokama ir atvirojo kodo",
-      "title1": "Redaguokite savo vaizdo įrašus",
-      "title2": "Niekas nepalieka jūsų kompiuterio",
-      "lead": "LocalCutVideo iškerpa tylą, transkribuoja su Whisper, įrašo karaoke subtitrus ir perkadruoja 16:9 į 9:16, viskas jūsų naršyklėje. Jokio įkėlimo, jokios paskyros, jokio serverio",
-      "cta": "Atidaryti redaktorių",
+      "badgeLocal": "Jūsų vaizdo įrašai lieka pas jus",
+      "badgeOpen": "Be vandens ženklo, atvirasis kodas",
+      "title1": "Montuokite vaizdo įrašus vienu paspaudimu",
+      "title2": "nieko neįkeldami į internetą",
+      "lead": "Iškirpkite pauzes ir „ee“, pridėkite animuotus subtitrus ir automatiškai pereikite į TikTok formatą. Nemokamai, be paskyros ir be vandens ženklo: viskas vyksta jūsų kompiuteryje",
+      "cta": "Montuoti mano vaizdo įrašą nemokamai",
       "github": "Žiūrėti GitHub",
-      "hint": "Geriausiai veikia su Chrome arba Edge kompiuteryje",
-      "demo": "Išbandyti su demonstraciniu įrašu"
+      "hint": "Be registracijos · Geriausia kompiuteryje, su Chrome arba Edge",
+      "demo": "Išbandyti demonstraciją",
+      "badgeAlt": "Nemokama CapCut alternatyva"
     },
     "mock": {
       "w1": "Taigi šiandien",
@@ -62,95 +63,95 @@
       "cap2": "kompiuteryje"
     },
     "stats": {
-      "upload": "įkeltų baitų",
-      "local": "apdorojama jūsų įrenginyje",
+      "upload": "vaizdo įrašų įkelta į internetą",
       "languages": "sąsajos kalbos",
-      "gpu": "spartinamas DI ir kodavimas"
+      "free": "nemokama, be prenumeratos",
+      "watermark": "vandens ženklų jūsų vaizdo įrašuose"
     },
     "how": {
       "eyebrow": "Kaip tai veikia",
-      "title": "Nuo neapdorotos medžiagos iki paskelbti paruošto vaizdo įrašo per tris žingsnius",
+      "title": "Paruoštas skelbti vaizdo įrašas per tris žingsnius",
       "open": {
         "title": "Atidarykite vaizdo įrašą",
-        "text": "Pasirinkite failą diske. Jis skaitomas vietoje: jokios kopijos, jokio įkėlimo, net kelių gigabaitų failams"
+        "text": "Nutempkite vaizdo įrašą iš kompiuterio ar telefono. Jis atsidaro iš karto, net jei yra milžiniškas"
       },
       "edit": {
-        "title": "Leiskite redaktoriui dirbti",
-        "text": "Tyla aptinkama, kalba transkribuojama žodis po žodžio, veidai sekami, ir visa tai vietoje. Pataisykite bet ką redaguodami tekstą"
+        "title": "Paleiskite automatinį montavimą",
+        "text": "Pauzės ir dvejonės iškerpamos, subtitrai užsirašo patys, o kalbantysis lieka kadro centre. Vėliau viską galite pataisyti"
       },
       "export": {
-        "title": "Eksportuokite MP4",
-        "text": "Pasirinkite 16:9, 9:16 arba 1:1. Vaizdo įrašą užkoduoja jūsų vaizdo plokštė ir jis įrašomas tiesiai į jūsų diską"
+        "title": "Atsisiųskite ir paskelbkite",
+        "text": "Gaukite vaizdo įrašą HD kokybe, TikTok, YouTube ar Instagram formatu, paruoštą skelbti"
       }
     },
     "features": {
       "eyebrow": "Funkcijos",
-      "title": "Viskas, ko reikia vaizdo įrašams, kuriuose kalbama į kamerą",
-      "lead": "Sukurta YouTube, TikTok, Reels ir Shorts kūrėjams, kurie nenori niekur įkelti savo neapdorotos medžiagos",
+      "title": "Viskas, ko reikia dėmesį išlaikantiems vaizdo įrašams",
+      "lead": "TikTok, Reels, Shorts ir YouTube kūrėjams, taip pat mokytojams, lektoriams ir įmonėms",
       "silences": {
-        "title": "Automatinis tylos iškirpimas",
-        "text": "Aptinka pauzes pagal garso stiprumą ir jas pašalina, su reguliuojama riba, mažiausia trukme ir atokvėpio tarpu"
+        "title": "Sudie, pauzės",
+        "text": "Tylos ir tušti momentai randami ir iškerpami automatiškai: jūsų vaizdo įrašas per sekundę įgauna tempo"
       },
       "textEdit": {
-        "title": "Redagavimas tekstu",
-        "text": "Whisper kiekvienam žodžiui suteikia laiko žymą. Ištrinkite žodžius transkripcijoje ir atitinkama vaizdo įrašo dalis iškerpama"
+        "title": "Montuokite kaip tekstą",
+        "text": "Jūsų vaizdo įrašas transkribuojamas žodis po žodžio. Ištrinkite sakinį iš teksto ir jis dings iš vaizdo įrašo"
       },
       "captions": {
-        "title": "Karaoke subtitrai",
-        "text": "Žodis po žodžio animuoti subtitrai, įrašyti į vaizdo įrašą, karaoke, švariu arba rėmelio stiliumi, jūsų paryškinimo spalva"
+        "title": "Automatiniai subtitrai",
+        "text": "Animuoti subtitrai žodis po žodžio, kaip TikTok, nieko nerenkant. Pasirinkite stilių ir spalvą"
       },
       "framing": {
-        "title": "Automatinis kadravimas 16:9 → 9:16",
-        "text": "Veido sekimas išlaiko kalbantįjį kadre, kai horizontalų vaizdo įrašą paverčiate vertikaliu"
+        "title": "TikTok formatas vienu paspaudimu",
+        "text": "Paverskite horizontalų vaizdo įrašą vertikaliu: kalbančiojo veidas visada lieka kadre"
       },
       "zoom": {
-        "title": "Išmanusis priartinimas",
-        "text": "Kintantys priartinimai ties kiekvienu kirpimu paverčia šuolinius kirpimus sąmoningais ir išlaiko žiūrovų dėmesį"
+        "title": "Ritmingi priartinimai",
+        "text": "Subtilūs priartinimai prie kiekvieno kirpimo suteikia dinamikos ir išlaiko žiūrovus iki pabaigos"
       },
       "ducking": {
-        "title": "Garsas ir muzika",
-        "text": "Pagarsinkite, suvienodinkite klipus ir pridėkite foninę muziką, kuri pati pritilsta, kai kas nors kalba"
+        "title": "Foninė muzika",
+        "text": "Pridėkite muziką, kuri pati patyla, kai kalbate, ir nustatykite kiekvieno dublio garsumą"
       },
       "recovery": {
-        "title": "Atkūrimas po strigties",
-        "text": "Kiekvienas pakeitimas išsaugomas naršyklėje realiuoju laiku. Vėl atidarykite skirtuką ir tęskite tiksliai ten, kur baigėte"
+        "title": "Niekas nedingsta",
+        "text": "Viskas išsaugoma eigoje. Uždarykite skirtuką, grįžkite vėliau ir tęskite lygiai ten, kur baigėte"
       },
       "offline": {
-        "title": "Veikia neprisijungus",
-        "text": "Įdiekite kaip programėlę. Kai DI modelis atsisiųstas, visas redaktorius veikia be interneto ryšio"
+        "title": "Net be interneto",
+        "text": "Įdiekite kaip programėlę: kai ji paruošta, veikia ir traukinyje ar lėktuve"
       },
       "export": {
-        "title": "Greitas aparatinis eksportas",
-        "text": "Kodavimui naudojamas WebCodecs, į naršyklę ir vaizdo plokštę įmontuotas vaizdo koderis, o ne lėtas programinis kodavimas"
+        "title": "HD ir be vandens ženklo",
+        "text": "Eksportuokite 720p arba 1080p kokybe, iki 60 kadrų per sekundę. Jokio pridėto logotipo, jokios mokamos versijos"
       },
       "clips": {
-        "title": "Kelių klipų sujungimas",
-        "text": "Įmeskite kelis dublius iš karto: jie sujungiami į vieną vaizdo įrašą jūsų pasirinkta tvarka, su bendra laiko juosta ir transkripcija"
+        "title": "Keli dubliai, vienas vaizdo įrašas",
+        "text": "Nutempkite visus dublius iš karto: jie sujungiami vienas po kito jūsų pasirinkta tvarka"
       },
       "inputs": {
-        "title": "MP4, MOV, WebM, MKV",
-        "text": "Atidaro jūsų telefono ir kameros failus, įskaitant iPhone HEVC vaizdo įrašus, jei naršyklė gali juos iškoduoti"
+        "title": "Jūsų telefono vaizdo įrašai",
+        "text": "MP4, MOV, WebM, MKV: atidarykite vaizdo įrašus iš telefono ar kameros, taip pat iš iPhone, jei jūsų naršyklė gali juos paleisti"
       },
       "languages": {
-        "title": "Daugiakalbis",
-        "text": "Sąsaja kalba {{ count }} kalbomis, o Whisper transkribuoja dar dešimtis kitų, su automatiniu kalbos atpažinimu"
+        "title": "Jūsų kalba",
+        "text": "Sąsaja yra {{ count }} kalbomis, o subtitrai veikia dešimtimis kalbų, atpažįstamų automatiškai"
       }
     },
     "privacy": {
       "eyebrow": "Privatumas",
-      "title": "Jokio įkėlimo, nuo pat pradžių",
-      "lead": "Jūsų vaizdo įrašas skaitomas tiesiai iš disko. Garso analizė, transkripcija, veido sekimas ir kodavimas vyksta foninėse gijose (Web Workers) jūsų kompiuteryje. Paprasčiausiai nėra serverio, į kurį būtų galima siųsti jūsų medžiagą",
-      "upload": "Jokio įkėlimo, niekada: failas niekada nepalieka jūsų kompiuterio",
-      "account": "Jokios paskyros, slapukų ar analitikos",
-      "csp": "Griežta Content-Security-Policy leidžia puslapiui bendrauti tik su šia svetaine, kuri taip pat teikia DI modelius (Hugging Face yra tik atsarginis variantas)",
-      "storage": "Projektai saugomi vietinėje naršyklės duomenų bazėje (IndexedDB) ir gali būti ištrinti bet kada",
+      "title": "Jūsų vaizdo įrašai lieka pas jus",
+      "lead": "Čia niekas neįkeliama: visą darbą atlieka jūsų paties įrenginys, net dirbtinis intelektas. Niekas kitas nemato jūsų kadrų",
+      "upload": "Jūsų vaizdo įrašai niekada nesiunčiami internetu",
+      "account": "Jokios paskyros, jokių reklamų, jokio sekimo",
+      "storage": "Jūsų projektai lieka naršyklėje ir ištrinami vienu paspaudimu",
       "diagram": {
         "machine": "Jūsų kompiuteris",
         "file": "Vaizdo įrašo failas",
         "browser": "Jūsų naršyklė",
         "upload": "Įkėlimas į serverį",
         "model": "DI modelio atsisiuntimas (vieną kartą, į podėlį)"
-      }
+      },
+      "sensitive": "Puikiai tinka konfidencialiems vaizdo įrašams: susitikimams, klientams, šeimai"
     },
     "support": {
       "eyebrow": "Suderinamumas",
@@ -166,16 +167,16 @@
     "faq": {
       "title": "Dažnai užduodami klausimai",
       "free": {
-        "q": "Ar tikrai nemokama? Kur kabliukas?",
-        "a": "Tai nemokama ir atvirojo kodo programa. Kadangi visas darbas vyksta jūsų kompiuteryje, nereikia mokėti už serverius, todėl nėra ko jums parduoti ir nėra duomenų rinkti"
+        "q": "Ar tikrai nemokama? Kur gudrybė?",
+        "a": "Jokios gudrybės. Kadangi darbą atlieka jūsų kompiuteris, nereikia mokėti už brangius serverius: jokios prenumeratos, jokio vandens ženklo, jokių reklamų. Kodas net yra viešas (atvirasis kodas)"
       },
       "formats": {
-        "q": "Kokius vaizdo formatus galiu atidaryti?",
-        "a": "MP4, MOV, WebM ir MKV, jei naršyklė gali iškoduoti kodeką (H.264, HEVC, VP9, AV1 priklausomai nuo naršyklės ir sistemos). Eksportuojamas MP4 failas"
+        "q": "Kokius vaizdo įrašus galiu atidaryti?",
+        "a": "Vaizdo įrašus iš telefono, kameros ar ekrano įrašus: MP4, MOV, WebM ir MKV. Rezultatas yra MP4 failas, kuris paleidžiamas visur"
       },
       "browsers": {
-        "q": "Kodėl Chrome arba Edge?",
-        "a": "Jie palaiko File System Access API, kuri leidžia redaktoriui vėl atidaryti vaizdo įrašą po įkėlimo iš naujo ir įrašyti eksportą tiesiai į diską. Kitos naršyklės taip pat veikia, tik su keliais papildomais paspaudimais"
+        "q": "Kokią naršyklę naudoti?",
+        "a": "Chrome arba Edge kompiuteryje suteikia geriausią patirtį. Firefox ir Safari taip pat veikia, tik vaizdo įrašui vėl atidaryti prireiks keleto papildomų paspaudimų. Telefone rinkitės trumpus vaizdo įrašus"
       },
       "size": {
         "q": "Ar yra failo dydžio apribojimas?",
@@ -183,11 +184,15 @@
       },
       "offline": {
         "q": "Ar veikia be interneto?",
-        "a": "Taip, kai jau įkelta. Įdiekite kaip programėlę (PWA) ir vieną kartą transkribuokite prisijungę: Whisper modelis išsaugomas podėlyje ir viskas veikia neprisijungus"
+        "a": "Taip. Pirmą kartą atsisiunčiamas subtitrų įrankis, tik vieną kartą. Po to viskas veikia neprisijungus, o programą galite net įdiegti"
       },
       "ai": {
-        "q": "Kur veikia DI?",
-        "a": "Jūsų naršyklėje. Whisper veikia su Transformers.js jūsų vaizdo plokštėje (WebGPU) arba procesoriuje (WebAssembly), o veidų aptikimui naudojamas MediaPipe. Modeliai atsisiunčiami vieną kartą, jūsų garsas niekada nesiunčiamas"
+        "q": "Kaip dirbtinis intelektas veikia be serverio?",
+        "a": "DI modeliai (Whisper subtitrams, MediaPipe veidams) atsisiunčiami vieną kartą, o paskui juos vykdo jūsų kompiuteris. Jūsų balsas ir vaizdai niekada jo nepalieka"
+      },
+      "capcut": {
+        "q": "Kuo tai skiriasi nuo CapCut?",
+        "a": "LocalCutVideo susitelkia į tai, ko reikia vaizdo įrašams, kuriuose kalbama į kamerą (iškirptos pauzės, automatiniai subtitrai, vertikalus formatas), be paskyros ir neįkeliant jūsų vaizdo įrašų. Specialiesiems efektams, animuotiems perėjimams ar madingiems šablonams CapCut yra išsamesnis"
       }
     },
     "final": {
@@ -207,6 +212,23 @@
       "cta": "Sukurti miniatiūrą",
       "mockTitle": "Mano pirmasis",
       "mockAccent": "vlogas"
+    },
+    "compare": {
+      "eyebrow": "Palyginimas",
+      "title": "Kodėl verta rinktis LocalCutVideo?",
+      "lead": "Dauguma internetinių vaizdo redaktorių įkelia jūsų vaizdo įrašus į savo serverius, o geriausius įrankius pasilieka prenumeratoriams. Čia viskas nemokama ir lieka pas jus",
+      "them": "Internetiniai vaizdo redaktoriai",
+      "yes": "Taip",
+      "no": "Ne",
+      "sometimes": "Kartais",
+      "rows": {
+        "free": "100 % nemokama, be vandens ženklo",
+        "account": "Be paskyros ir registracijos",
+        "auto": "Automatiniai subtitrai ir kirpimai įskaičiuoti",
+        "upload": "Jūsų vaizdo įrašai lieka jūsų įrenginyje",
+        "offline": "Veikia be interneto"
+      },
+      "note": "CapCut yra jo savininko prekių ženklas. LocalCutVideo yra nepriklausomas projektas, nesusijęs su CapCut ar ByteDance"
     }
   },
   "changelog": {
@@ -232,11 +254,12 @@
     "recent": "Naujausi projektai",
     "empty": "Projektų dar nėra. Atidarykite vaizdo įrašą ir pradėkite",
     "delete": "Ištrinti projektą",
-    "confirmDelete": "Ištrinti projektą „{{ name }}“? Vaizdo įrašo failas jūsų diske nepaliečiamas",
     "multi": "Keli failai? Jie sujungiami į vieną vaizdo įrašą pavadinimų tvarka",
     "importFile": "Atidaryti projekto failą (.lcv.json)",
     "saveFile": "Išsaugoti projektą kaip failą",
-    "imported": "Projektas atidarytas: pasirinkite jo vaizdo įrašus, kad tęstumėte"
+    "imported": "Projektas atidarytas: pasirinkite jo vaizdo įrašus, kad tęstumėte",
+    "deleteTitle": "Ištrinti šį projektą?",
+    "deleteText": "„{{ name }}“ bus pašalintas iš jūsų projektų kartu su kirpimais ir subtitrais. Jūsų vaizdo failas nepaliečiamas"
   },
   "errors": {
     "notVideo": "Šis failas neatrodo kaip vaizdo įrašas",
@@ -600,6 +623,11 @@
       "blur": "Suliejamas",
       "strength": "Suliejimo stiprumas",
       "error": "Šiame įrenginyje nepavyko paleisti fono suliejimo"
+    },
+    "mobile": {
+      "title": "Montavimas telefone ribotas",
+      "text": "Redaktorius sukurtas kompiuteriui. Telefone jis tinka trumpiems vaizdo įrašams, bet gali veikti lėtai arba pritrūkti atminties. Geriausiam rezultatui naudokite Chrome arba Edge kompiuteryje",
+      "ok": "Supratau"
     }
   },
   "legal": {
@@ -817,8 +845,8 @@
   },
   "seo": {
     "home": {
-      "title": "LocalCutVideo — Nemokamas vaizdo redaktorius naršyklėje, niekas neįkeliama",
-      "description": "Redaguokite vaizdo įrašus naršyklėje: tyla iškerpama automatiškai, DI subtitrai, veido kadravimas TikTok ir Shorts, miniatiūros. Nemokama ir atvirojo kodo, jūsų vaizdo įrašai niekada nepalieka jūsų kompiuterio"
+      "title": "LocalCutVideo — nemokama CapCut alternatyva be įkėlimo",
+      "description": "Nemokamas automatinis vaizdo įrašų montavimas naršyklėje: iškirptos pauzės, animuoti subtitrai, TikTok ir Shorts formatas, miniatiūros. Be paskyros, be vandens ženklo, jūsų vaizdo įrašai niekada nepalieka jūsų kompiuterio"
     },
     "thumbnail": {
       "title": "Nemokamas YouTube miniatiūrų kūrimo įrankis — LocalCutVideo",

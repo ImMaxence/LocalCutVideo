@@ -41,15 +41,16 @@
   },
   "landing": {
     "hero": {
-      "badgeLocal": "100% setempat, sifar muat naik",
-      "badgeOpen": "Percuma & sumber terbuka",
-      "title1": "Sunting video anda",
-      "title2": "Tiada apa yang keluar dari komputer anda",
-      "lead": "LocalCutVideo memotong bahagian senyap, menyalin pertuturan dengan Whisper, membenamkan sari kata karaoke dan membingkai semula 16:9 kepada 9:16, semuanya dalam pelayar anda. Tiada muat naik, tiada akaun, tiada pelayan",
-      "cta": "Buka editor",
+      "badgeLocal": "Video anda kekal bersama anda",
+      "badgeOpen": "Tanpa tera air, sumber terbuka",
+      "title1": "Sunting video anda dengan satu klik",
+      "title2": "tanpa memuat naik apa-apa",
+      "lead": "Potong jeda dan “err”, tambah sari kata beranimasi dan tukar ke format TikTok secara automatik. Percuma, tanpa akaun dan tanpa tera air: semuanya berlaku pada komputer anda",
+      "cta": "Sunting video saya secara percuma",
       "github": "Lihat di GitHub",
-      "hint": "Paling baik dalam Chrome atau Edge pada komputer",
-      "demo": "Cuba dengan video demo"
+      "hint": "Tanpa pendaftaran · Terbaik pada komputer, dengan Chrome atau Edge",
+      "demo": "Cuba demo",
+      "badgeAlt": "Alternatif percuma kepada CapCut"
     },
     "mock": {
       "w1": "Jadi hari ini",
@@ -62,95 +63,95 @@
       "cap2": "komputer anda"
     },
     "stats": {
-      "upload": "bait dimuat naik",
-      "local": "diproses pada peranti anda",
+      "upload": "video dimuat naik ke internet",
       "languages": "bahasa antara muka",
-      "gpu": "AI & pengekodan dipercepat"
+      "free": "percuma, tanpa langganan",
+      "watermark": "tera air pada video anda"
     },
     "how": {
       "eyebrow": "Cara ia berfungsi",
-      "title": "Daripada rakaman mentah kepada video sedia dimuat naik dalam tiga langkah",
+      "title": "Video sedia diterbitkan dalam tiga langkah",
       "open": {
-        "title": "Buka video",
-        "text": "Pilih fail daripada cakera anda. Fail dibaca di tempatnya: tiada salinan, tiada muat naik, walaupun untuk fail bersaiz beberapa gigabait"
+        "title": "Buka video anda",
+        "text": "Seret video dari komputer atau telefon anda. Ia terbuka serta-merta, walaupun sangat besar"
       },
       "edit": {
-        "title": "Biar editor bekerja",
-        "text": "Bahagian senyap dikesan, pertuturan disalin perkataan demi perkataan dan wajah dijejaki, semuanya secara setempat. Betulkan apa sahaja dengan menyunting teks"
+        "title": "Mulakan suntingan automatik",
+        "text": "Jeda dan keraguan dipotong, sari kata ditulis sendiri dan penutur kekal dalam bingkai. Selepas itu anda boleh memperhalusi semuanya"
       },
       "export": {
-        "title": "Eksport MP4",
-        "text": "Pilih 16:9, 9:16 atau 1:1. Video dikodkan oleh kad grafik anda dan ditulis terus ke cakera"
+        "title": "Muat turun dan terbitkan",
+        "text": "Dapatkan video anda dalam HD, dalam format TikTok, YouTube atau Instagram, sedia diterbitkan"
       }
     },
     "features": {
       "eyebrow": "Ciri-ciri",
-      "title": "Semua yang anda perlukan untuk video bercakap di depan kamera",
-      "lead": "Dibina untuk pencipta YouTube, TikTok, Reels dan Shorts yang tidak mahu memuat naik rakaman mentah mereka ke mana-mana",
+      "title": "Semua yang anda perlukan untuk video yang menarik perhatian",
+      "lead": "Untuk pencipta TikTok, Reels, Shorts dan YouTube, serta guru, jurulatih dan syarikat",
       "silences": {
-        "title": "Potong senyap secara automatik",
-        "text": "Mengesan jeda berdasarkan kekuatan bunyi lalu membuangnya, dengan ambang, tempoh minimum dan ruang nafas yang boleh dilaraskan"
+        "title": "Selamat tinggal jeda",
+        "text": "Kesenyapan dan saat kosong dikesan dan dipotong secara automatik: video anda lebih rancak dalam sesaat"
       },
       "textEdit": {
-        "title": "Sunting melalui teks",
-        "text": "Whisper memberi setiap perkataan cap masa. Padam perkataan dalam transkrip dan bahagian video yang sepadan akan dipotong"
+        "title": "Sunting seperti teks",
+        "text": "Video anda ditranskripsikan perkataan demi perkataan. Padam satu ayat dalam teks dan ia hilang daripada video"
       },
       "captions": {
-        "title": "Sari kata karaoke",
-        "text": "Sari kata beranimasi perkataan demi perkataan yang dibenamkan dalam video, gaya karaoke, ringkas atau berkotak, dalam warna serlahan anda"
+        "title": "Sari kata automatik",
+        "text": "Sari kata beranimasi perkataan demi perkataan, seperti di TikTok, tanpa menaip apa-apa. Pilih gaya dan warna"
       },
       "framing": {
-        "title": "Bingkai automatik 16:9 → 9:16",
-        "text": "Penjejakan wajah mengekalkan penutur dalam bingkai apabila anda menukar video landskap kepada menegak"
+        "title": "Format TikTok dengan satu klik",
+        "text": "Tukar video mendatar kepada menegak: wajah penutur sentiasa kekal dalam bingkai"
       },
       "zoom": {
-        "title": "Zum pintar",
-        "text": "Zum yang berselang-seli pada setiap potongan menjadikan jump cut kelihatan disengajakan dan membuatkan penonton terus menonton"
+        "title": "Zum yang berirama",
+        "text": "Zum halus pada setiap potongan menambah rentak dan mengekalkan penonton hingga ke akhir"
       },
       "ducking": {
-        "title": "Bunyi & muzik",
-        "text": "Kuatkan bunyi, seimbangkan klip anda dan tambah muzik latar yang perlahan dengan sendiri setiap kali seseorang bercakap"
+        "title": "Muzik latar",
+        "text": "Tambah muzik yang perlahan dengan sendirinya apabila anda bercakap, dan laraskan kelantangan setiap rakaman"
       },
       "recovery": {
-        "title": "Pemulihan selepas ranap",
-        "text": "Setiap perubahan disimpan dalam pelayar anda serta-merta. Buka semula tab dan sambung tepat di tempat anda berhenti"
+        "title": "Tiada yang hilang",
+        "text": "Semuanya disimpan semasa anda bekerja. Tutup tab, kembali kemudian dan sambung tepat di tempat anda berhenti"
       },
       "offline": {
-        "title": "Berfungsi luar talian",
-        "text": "Pasang sebagai aplikasi. Selepas model AI dimuat turun, seluruh editor berfungsi tanpa sambungan internet"
+        "title": "Walaupun tanpa internet",
+        "text": "Pasang seperti aplikasi: setelah sedia, ia juga berfungsi di dalam kereta api atau kapal terbang"
       },
       "export": {
-        "title": "Eksport perkakasan yang pantas",
-        "text": "Pengekodan menggunakan WebCodecs, pengekod video terbina dalam pelayar dan kad grafik anda, bukannya pengekodan perisian yang perlahan"
+        "title": "HD dan tanpa tera air",
+        "text": "Eksport dalam 720p atau 1080p, sehingga 60 bingkai sesaat. Tiada logo ditambah, tiada versi berbayar"
       },
       "clips": {
-        "title": "Gabung banyak klip",
-        "text": "Lepaskan beberapa rakaman sekali gus: semuanya digabungkan menjadi satu video, mengikut susunan pilihan anda, dengan garis masa dan transkrip yang dikongsi"
+        "title": "Beberapa rakaman, satu video",
+        "text": "Seret semua rakaman sekali gus: ia disambung satu demi satu mengikut susunan pilihan anda"
       },
       "inputs": {
-        "title": "MP4, MOV, WebM, MKV",
-        "text": "Membuka fail daripada telefon dan kamera anda, termasuk video HEVC iPhone jika pelayar anda boleh menyahkodnya"
+        "title": "Video dari telefon anda",
+        "text": "MP4, MOV, WebM, MKV: buka video dari telefon atau kamera anda, termasuk video iPhone jika pelayar anda boleh memainkannya"
       },
       "languages": {
-        "title": "Pelbagai bahasa",
-        "text": "Antara muka tersedia dalam {{ count }} bahasa dan Whisper menyalin berpuluh-puluh bahasa lagi, dengan pengesanan bahasa automatik"
+        "title": "Dalam bahasa anda",
+        "text": "Antara muka tersedia dalam {{ count }} bahasa dan sari kata berfungsi dalam berpuluh-puluh bahasa yang dikesan secara automatik"
       }
     },
     "privacy": {
       "eyebrow": "Privasi",
-      "title": "Sifar muat naik, sejak reka bentuk",
-      "lead": "Video anda dibaca terus daripada cakera. Analisis audio, transkripsi, penjejakan wajah dan pengekodan semuanya berjalan dalam bebenang latar (Web Workers) pada komputer anda. Memang tiada pelayan untuk menghantar rakaman anda",
-      "upload": "Tiada muat naik, selama-lamanya: fail tidak pernah meninggalkan komputer anda",
-      "account": "Tiada akaun, tiada kuki, tiada analitik",
-      "csp": "Content-Security-Policy yang ketat hanya membenarkan halaman berhubung dengan laman ini, yang turut menyediakan model AI (Hugging Face hanya sandaran)",
-      "storage": "Projek disimpan dalam pangkalan data setempat pelayar anda (IndexedDB) dan boleh dipadam bila-bila masa",
+      "title": "Video anda kekal bersama anda",
+      "lead": "Di sini tiada apa-apa dimuat naik: peranti anda sendiri melakukan semua kerja, malah kecerdasan buatan sekalipun. Tiada orang lain melihat rakaman anda",
+      "upload": "Video anda tidak pernah dihantar melalui internet",
+      "account": "Tanpa akaun, tanpa iklan, tanpa penjejakan",
+      "storage": "Projek anda kekal dalam pelayar dan boleh dipadam dengan satu klik",
       "diagram": {
         "machine": "Komputer anda",
         "file": "Fail video",
         "browser": "Pelayar anda",
         "upload": "Muat naik ke pelayan",
         "model": "Muat turun model AI (sekali, dalam cache)"
-      }
+      },
+      "sensitive": "Sesuai untuk video sulit: mesyuarat, pelanggan, keluarga"
     },
     "support": {
       "eyebrow": "Keserasian",
@@ -166,28 +167,32 @@
     "faq": {
       "title": "Soalan lazim",
       "free": {
-        "q": "Betul-betul percuma? Apa muslihatnya?",
-        "a": "Ia percuma dan sumber terbuka. Oleh sebab semua kerja dilakukan pada komputer anda, tiada kos pelayan untuk dibayar, jadi tiada apa untuk dijual kepada anda dan tiada data untuk dikumpul"
+        "q": "Benar-benar percuma? Apa helahnya?",
+        "a": "Tiada. Oleh kerana komputer anda yang melakukan kerja, tiada pelayan mahal yang perlu dibayar: tiada langganan, tiada tera air, tiada iklan. Kodnya juga terbuka kepada umum (sumber terbuka)"
       },
       "formats": {
-        "q": "Format video apa yang boleh saya buka?",
-        "a": "MP4, MOV, WebM dan MKV, asalkan pelayar anda boleh menyahkod kodeknya (H.264, HEVC, VP9, AV1 bergantung pada pelayar dan sistem). Eksport ialah fail MP4"
+        "q": "Video apakah yang boleh saya buka?",
+        "a": "Video dari telefon, kamera atau rakaman skrin anda: MP4, MOV, WebM dan MKV. Hasilnya ialah fail MP4 yang boleh dimainkan di mana-mana"
       },
       "browsers": {
-        "q": "Kenapa Chrome atau Edge?",
-        "a": "Kedua-duanya menyokong File System Access API, yang membolehkan editor membuka semula video anda selepas muat semula dan menulis eksport terus ke cakera. Pelayar lain juga berfungsi, dengan beberapa klik tambahan"
+        "q": "Pelayar mana yang patut saya gunakan?",
+        "a": "Chrome atau Edge pada komputer memberikan pengalaman terbaik. Firefox dan Safari juga berfungsi, dengan beberapa klik tambahan untuk membuka semula video. Di telefon, utamakan video pendek"
       },
       "size": {
         "q": "Adakah had saiz fail?",
         "a": "Tiada had muat naik kerana tiada apa yang dimuat naik. Video dibaca daripada cakera sedikit demi sedikit; had sebenar ialah memori komputer anda dan kesabaran anda untuk video yang sangat panjang"
       },
       "offline": {
-        "q": "Bolehkah ia berfungsi tanpa internet?",
-        "a": "Ya, selepas dimuatkan. Pasang sebagai aplikasi (PWA) dan buat transkripsi sekali semasa dalam talian: model Whisper disimpan dalam cache dan semuanya berfungsi luar talian"
+        "q": "Adakah ia berfungsi tanpa internet?",
+        "a": "Ya. Kali pertama, alat sari kata dimuat turun, sekali sahaja. Selepas itu semuanya berfungsi di luar talian, malah anda boleh memasangnya sebagai aplikasi"
       },
       "ai": {
-        "q": "Di mana AI berjalan?",
-        "a": "Dalam pelayar anda. Whisper berjalan dengan Transformers.js pada kad grafik (WebGPU) atau pemproses (WebAssembly) anda, dan pengesanan wajah menggunakan MediaPipe. Model dimuat turun sekali, audio anda tidak pernah dihantar"
+        "q": "Bagaimana AI boleh berjalan tanpa pelayan?",
+        "a": "Model AI (Whisper untuk sari kata, MediaPipe untuk wajah) dimuat turun sekali, kemudian komputer anda yang menjalankannya. Suara dan imej anda tidak pernah keluar dari situ"
+      },
+      "capcut": {
+        "q": "Apakah bezanya dengan CapCut?",
+        "a": "LocalCutVideo memberi tumpuan kepada keperluan video bercakap ke kamera (jeda dipotong, sari kata automatik, format menegak), tanpa akaun dan tanpa memuat naik video anda. Untuk kesan khas, peralihan beranimasi atau templat yang sedang trending, CapCut lebih lengkap"
       }
     },
     "final": {
@@ -207,6 +212,23 @@
       "cta": "Buat lakaran kecil",
       "mockTitle": "Vlog",
       "mockAccent": "pertama saya"
+    },
+    "compare": {
+      "eyebrow": "Perbandingan",
+      "title": "Mengapa memilih LocalCutVideo?",
+      "lead": "Kebanyakan editor video dalam talian memuat naik video anda ke pelayan mereka dan menyimpan alat terbaik untuk langganan. Di sini semuanya percuma dan kekal bersama anda",
+      "them": "Editor video dalam talian",
+      "yes": "Ya",
+      "no": "Tidak",
+      "sometimes": "Kadangkala",
+      "rows": {
+        "free": "100% percuma, tanpa tera air",
+        "account": "Tanpa akaun atau pendaftaran",
+        "auto": "Sari kata dan potongan automatik disertakan",
+        "upload": "Video anda kekal pada peranti anda",
+        "offline": "Berfungsi tanpa internet"
+      },
+      "note": "CapCut ialah tanda dagangan pemiliknya. LocalCutVideo ialah projek bebas yang tidak bergabung dengan CapCut atau ByteDance"
     }
   },
   "changelog": {
@@ -232,11 +254,12 @@
     "recent": "Projek terkini",
     "empty": "Belum ada projek. Buka video untuk bermula",
     "delete": "Padam projek",
-    "confirmDelete": "Padam projek “{{ name }}”? Fail video dalam cakera anda tidak terjejas",
     "multi": "Beberapa fail? Semuanya digabungkan menjadi satu video, mengikut susunan nama",
     "importFile": "Buka fail projek (.lcv.json)",
     "saveFile": "Simpan projek sebagai fail",
-    "imported": "Projek dibuka: pilih video-videonya untuk meneruskan"
+    "imported": "Projek dibuka: pilih video-videonya untuk meneruskan",
+    "deleteTitle": "Padam projek ini?",
+    "deleteText": "“{{ name }}” akan dibuang daripada projek anda, bersama potongan dan sari katanya. Fail video anda tidak terjejas"
   },
   "errors": {
     "notVideo": "Fail ini nampaknya bukan video",
@@ -600,6 +623,11 @@
       "blur": "Kabur",
       "strength": "Kekuatan kabur",
       "error": "Kabur latar tidak dapat dimulakan pada peranti ini"
+    },
+    "mobile": {
+      "title": "Menyunting di telefon adalah terhad",
+      "text": "Editor ini direka untuk komputer. Di telefon, ia sesuai untuk video pendek, tetapi boleh menjadi perlahan atau kehabisan memori. Untuk hasil terbaik, gunakan Chrome atau Edge pada komputer",
+      "ok": "Faham"
     }
   },
   "legal": {
@@ -817,8 +845,8 @@
   },
   "seo": {
     "home": {
-      "title": "LocalCutVideo — Editor video percuma dalam pelayar, tiada muat naik",
-      "description": "Sunting video dalam pelayar: bahagian senyap dipotong automatik, sari kata AI, bingkai pada wajah untuk TikTok dan Shorts, lakaran kecil. Percuma dan sumber terbuka, video anda tidak pernah meninggalkan komputer"
+      "title": "LocalCutVideo — Alternatif percuma kepada CapCut, tanpa muat naik",
+      "description": "Suntingan video automatik dan percuma dalam pelayar: jeda dipotong, sari kata beranimasi, format TikTok dan Shorts, imej kecil. Tanpa akaun, tanpa tera air, video anda tidak pernah meninggalkan komputer anda"
     },
     "thumbnail": {
       "title": "Pembuat lakaran kecil YouTube percuma — LocalCutVideo",

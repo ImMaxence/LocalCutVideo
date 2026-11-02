@@ -10,6 +10,7 @@ import { ProjectsService, skippedNotice } from '../core/projects.service';
 import { type Project, migrateProject } from '../engine/model';
 import { sequenceDuration } from '../engine/sequence';
 import { formatTime } from '../engine/timeline-math';
+import { ConfirmService } from '../shared/confirm';
 import { Icon } from '../shared/icon';
 
 interface ProjectCard {
@@ -30,6 +31,7 @@ export class Projects {
   private readonly router = inject(Router);
   private readonly projectsService = inject(ProjectsService);
   private readonly transloco = inject(TranslocoService);
+  private readonly confirm = inject(ConfirmService);
 
   protected readonly cards = signal<ProjectCard[] | null>(null);
   protected readonly busy = signal(false);
@@ -168,7 +170,14 @@ export class Projects {
   protected async remove(project: Project, e: Event): Promise<void> {
     e.preventDefault();
     e.stopPropagation();
-    if (!confirm(this.transloco.translate('projects.confirmDelete', { name: project.name }))) return;
+    const ok = await this.confirm.ask({
+      title: 'projects.deleteTitle',
+      text: 'projects.deleteText',
+      params: { name: project.name },
+      confirm: 'projects.delete',
+      danger: true,
+    });
+    if (!ok) return;
     await deleteProject(project.id);
     if (this.lastProjectId === project.id) this.projectsService.setLastProject(null);
   }

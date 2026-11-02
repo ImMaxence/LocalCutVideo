@@ -21,6 +21,15 @@ import { Transcript } from './transcript/transcript';
 type MobileTab = 'transcript' | InspectorTab;
 
 const MOBILE_QUERY = '(max-width: 760px)';
+const MOBILE_NOTICE_KEY = 'lcv-mobile-notice';
+
+function readSessionFlag(key: string): boolean {
+  try {
+    return sessionStorage.getItem(key) === '1';
+  } catch {
+    return false;
+  }
+}
 
 @Component({
   selector: 'app-editor',
@@ -82,6 +91,8 @@ export class Editor {
 
   /** Phones get their own layout: preview on top, tools in a bottom tab bar. */
   protected readonly mobile = signal(matchMedia(MOBILE_QUERY).matches);
+  /** On a phone, a notice says a computer works better; shown once per browsing session. */
+  protected readonly mobileNotice = signal(!readSessionFlag(MOBILE_NOTICE_KEY));
   protected readonly inspectorTab = signal<InspectorTab>('format');
   protected readonly mobileTab = signal<MobileTab>('transcript');
   protected readonly mobileTabs: { id: MobileTab; icon: string; key: string }[] = [
@@ -125,7 +136,7 @@ export class Editor {
     } catch (e) {
       if (String((e as Error)?.message).includes('CANCELLED')) return;
       console.error('Transcription failed', e);
-      this.store.notify('errors.transcribe', undefined, 'error');
+      this.store.notify('errors.transcribe', undefined, 'error', String((e as Error)?.message ?? e).slice(0, 200));
     }
   }
 
@@ -193,6 +204,15 @@ export class Editor {
     this.exportOpen.set(false);
   }
 
+  protected dismissMobileNotice(): void {
+    this.mobileNotice.set(false);
+    try {
+      sessionStorage.setItem(MOBILE_NOTICE_KEY, '1');
+    } catch {
+      // Private mode: it comes back on the next visit.
+    }
+  }
+
   protected selectMobileTab(tab: MobileTab): void {
     this.mobileTab.set(tab);
     if (tab !== 'transcript') this.inspectorTab.set(tab);
@@ -201,7 +221,8 @@ export class Editor {
   protected onKey(e: KeyboardEvent): void {
     if (this.tourOpen()) return;
     const target = e.target as HTMLElement;
-    if (target.closest('input, textarea, select, [contenteditable="true"]')) return;
+    // A confirmation dialog is open (app-confirm): its keys are its own.
+    if (target.closest('input, textarea, select, [contenteditable="true"], dialog')) return;
     const mod = e.ctrlKey || e.metaKey;
     if (mod && e.key.toLowerCase() === 'z') {
       e.preventDefault();
