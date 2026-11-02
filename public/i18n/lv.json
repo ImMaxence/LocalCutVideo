@@ -631,7 +631,7 @@
     }
   },
   "legal": {
-    "updated": "Pēdējo reizi atjaunināts: 2026. gada 1. novembrī",
+    "updated": "Pēdējo reizi atjaunināts: 2026. gada 2. novembrī",
     "contact": "Kontakti",
     "nav": {
       "notice": "Juridiskā informācija",
@@ -654,6 +654,7 @@
           "title": "Mitināšana",
           "body": [
             "Vietni mitina pats tās izdevējs Maxence Bonnici personīgā serverī, un tā tiek izvietota ar platformu Coolify.",
+            "Pieprasījumi vietnei iet caur uzņēmuma Cloudflare, Inc. (101 Townsend St, San Francisco, CA 94107, ASV) tīklu, kas aizsargā serveri un šifrē savienojumu.",
             "Kontakti: maxence.bonnici@outlook.fr"
           ]
         },
@@ -711,6 +712,7 @@
         {
           "title": "Trešās puses",
           "body": [
+            "Cloudflare: visi pieprasījumi šai vietnei iet caur Cloudflare, kas aizsargā serveri un šifrē savienojumu. Kā jebkurš tīkla starpnieks, tas apstrādā tavu IP adresi un parasto pārlūka informāciju, lai piegādātu lapas, un drošības nolūkos var glabāt tehniskus žurnālus; tas nekad nesaņem tavus video vai audio, kas nekad neatstāj tavu ierīci. Skati Cloudflare [privātuma politiku](https://www.cloudflare.com/privacypolicy/).",
             "Hugging Face: Whisper modeli nodrošina šī vietne, tāpat kā pārējo lietotni. Tikai tad, ja tas šeit nav pieejams, tas tiek lejupielādēts no huggingface.co; tad Hugging Face saņem tavu IP adresi un parasto pārlūka informāciju, bet nekad tavu audio. Skati viņu [privātuma politiku](https://huggingface.co/privacy).",
             "GitHub: tikai tad, ja seko saitei uz pirmkoda repozitoriju.",
             "Neviena cita trešā puse netiek uzrunāta: stingra Content-Security-Policy tehniski neļauj lapai savienoties nekur citur."

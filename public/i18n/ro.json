@@ -631,7 +631,7 @@
     }
   },
   "legal": {
-    "updated": "Ultima actualizare: 1 noiembrie 2026",
+    "updated": "Ultima actualizare: 2 noiembrie 2026",
     "contact": "Contact",
     "nav": {
       "notice": "Mențiuni legale",
@@ -654,6 +654,7 @@
           "title": "Găzduire",
           "body": [
             "Site-ul este găzduit chiar de editorul său, Maxence Bonnici, pe un server personal, și implementat cu platforma Coolify.",
+            "Cererile către site trec prin rețeaua Cloudflare, Inc. (101 Townsend St, San Francisco, CA 94107, SUA), care protejează serverul și criptează conexiunea.",
             "Contact: maxence.bonnici@outlook.fr"
           ]
         },
@@ -711,6 +712,7 @@
         {
           "title": "Terți",
           "body": [
+            "Cloudflare: toate cererile către acest site trec prin Cloudflare, care protejează serverul și criptează conexiunea. Ca orice intermediar de rețea, prelucrează adresa ta IP și informațiile obișnuite ale browserului pentru a livra paginile și poate păstra jurnale tehnice în scopuri de securitate; nu primește niciodată videoclipurile sau sunetul tău, care nu părăsesc niciodată dispozitivul tău. Vezi [politica de confidențialitate](https://www.cloudflare.com/privacypolicy/) a Cloudflare.",
             "Hugging Face: modelul Whisper este furnizat de acest site, ca restul aplicației. Doar dacă nu este disponibil aici, este descărcat în schimb de pe huggingface.co; Hugging Face primește atunci adresa ta IP și informațiile obișnuite ale browserului, dar niciodată sunetul tău. Vezi [politica lor de confidențialitate](https://huggingface.co/privacy).",
             "GitHub: doar dacă urmezi un link către depozitul codului sursă.",
             "Niciun alt terț nu este contactat: o Content-Security-Policy strictă împiedică tehnic pagina să se conecteze în altă parte."

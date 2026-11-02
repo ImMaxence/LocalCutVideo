@@ -15,8 +15,9 @@ RUN npm run build
 FROM node:24-alpine AS models
 ARG WHISPER_MODELS=tiny,base,small
 WORKDIR /models-build
-COPY scripts/download-models.mjs .
-RUN mkdir -p /models && if [ -n "$WHISPER_MODELS" ]; then node download-models.mjs --out /models --models "$WHISPER_MODELS"; fi
+COPY scripts/download-models.mjs scripts/
+COPY src/app/core/whisper-models.ts src/app/core/
+RUN mkdir -p /models && if [ -n "$WHISPER_MODELS" ]; then node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/download-models.mjs --out /models --models "$WHISPER_MODELS"; fi
 
 # --- Serve the static files ----------------------------------------------------------------
 FROM nginx:1.29-alpine

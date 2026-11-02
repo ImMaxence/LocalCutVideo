@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { isFiller } from './fillers';
-import { LEGACY_CLIP_ID, SCHEMA_VERSION, type Clip, type Project, clipHasVoice, createProject, migrateProject } from './model';
+import { LEGACY_CLIP_ID, SCHEMA_VERSION, type Clip, type Project, clipHasVoice, createProject, isProjectShape, migrateProject } from './model';
 
 describe('project document', () => {
   it('upgrades an old single-video project', () => {
@@ -24,6 +24,22 @@ describe('project document', () => {
     p.captions.size = 1.4;
     expect(migrateProject(p).audio.volume).toBe(2);
     expect(migrateProject(p).captions.size).toBe(1.4);
+  });
+
+  it('accepts a saved project and rejects malformed files', () => {
+    const p = createProject('x');
+    p.clips = [{ id: 'a', source: { name: 'a.mp4', size: 10, duration: 3 } as Clip['source'] }];
+    p.words = [{ id: 'w', text: 'hi', start: 0, end: 1, deleted: false }];
+    expect(isProjectShape(JSON.parse(JSON.stringify(p)))).toBe(true);
+    expect(isProjectShape({ clips: [] })).toBe(true);
+    expect(isProjectShape(null)).toBe(false);
+    expect(isProjectShape({ clips: [{ id: 'a', source: { name: 'a.mp4' } }] })).toBe(false);
+    expect(isProjectShape({ ...p, cuts: [{ start: '0', end: 1 }] })).toBe(false);
+    expect(isProjectShape({ ...p, speeds: [{ start: 0, end: 1, rate: 0 }] })).toBe(false);
+    expect(isProjectShape({ ...p, captions: { ...p.captions, size: 'huge' } })).toBe(false);
+    expect(isProjectShape({ ...p, music: { ...p.music, name: 'song.mp3' } })).toBe(true);
+    expect(isProjectShape({ ...p, export: { resolution: 4320, fps: 30 } })).toBe(false);
+    expect(isProjectShape({ ...p, rotation: 45 })).toBe(false);
   });
 
   it("uses the user's voice answer before the detection", () => {

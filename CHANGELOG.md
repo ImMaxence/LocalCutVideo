@@ -2,6 +2,16 @@
 
 All notable changes to LocalCutVideo. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning: [SemVer](https://semver.org/).
 
+## [0.17.1] - 2026-11-02
+
+### Security
+- HSTS: browsers always reach the site over HTTPS
+- Whisper models pinned to a Hugging Face commit, at build and in the app
+- Opened project files are checked field by field before being saved
+
+### Changed
+- Privacy policy and legal notice name Cloudflare, which the site's traffic goes through
+
 ## [0.17.0] - 2026-11-02
 
 ### Added

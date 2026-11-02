@@ -631,7 +631,7 @@
     }
   },
   "legal": {
-    "updated": "Senast uppdaterad: 1 november 2026",
+    "updated": "Senast uppdaterad: 2 november 2026",
     "contact": "Kontakt",
     "nav": {
       "notice": "Juridisk information",
@@ -654,6 +654,7 @@
           "title": "Webbhotell",
           "body": [
             "Webbplatsen drivs av utgivaren själv, Maxence Bonnici, på en privat server och driftsätts med plattformen Coolify.",
+            "Förfrågningar till webbplatsen går via nätverket hos Cloudflare, Inc. (101 Townsend St, San Francisco, CA 94107, USA), som skyddar servern och krypterar anslutningen.",
             "Kontakt: maxence.bonnici@outlook.fr"
           ]
         },
@@ -711,6 +712,7 @@
         {
           "title": "Tredje parter",
           "body": [
+            "Cloudflare: alla förfrågningar till den här webbplatsen går via Cloudflare, som skyddar servern och krypterar anslutningen. Som alla nätverksmellanhänder behandlar Cloudflare din IP-adress och vanlig webbläsarinformation för att leverera sidorna, och kan spara tekniska loggar av säkerhetsskäl; det tar aldrig emot dina videor eller ditt ljud, som aldrig lämnar din enhet. Se deras [integritetspolicy](https://www.cloudflare.com/privacypolicy/).",
             "Hugging Face: Whisper-modellen levereras av den här webbplatsen, precis som resten av applikationen. Bara om den inte finns tillgänglig här laddas den i stället ned från huggingface.co; Hugging Face tar då emot din IP-adress och vanlig webbläsarinformation, men aldrig ditt ljud. Se deras [integritetspolicy](https://huggingface.co/privacy).",
             "GitHub: bara om du följer en länk till källkodsförrådet.",
             "Ingen annan tredje part kontaktas: en strikt Content-Security-Policy hindrar tekniskt sidan från att ansluta någon annanstans."

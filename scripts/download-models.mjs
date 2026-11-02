@@ -10,6 +10,7 @@ import { mkdir, readFile, rename, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { Readable } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
+import { WHISPER_REPOS } from '../src/app/core/whisper-models.ts';
 
 const arg = (name, fallback) => {
   const i = process.argv.indexOf(`--${name}`);
@@ -19,7 +20,7 @@ const out = path.resolve(arg('out', 'public/models'));
 const models = arg('models', process.env.WHISPER_MODELS || 'tiny,base,small')
   .split(',')
   .map((m) => m.trim())
-  .filter((m) => ['tiny', 'base', 'small'].includes(m));
+  .filter((m) => Object.hasOwn(WHISPER_REPOS, m));
 
 // Configuration and tokenizer, plus the weights the app loads: fp32 / fp16 encoder and q4
 // decoder on WebGPU, 8-bit encoder and decoder on WebAssembly.
@@ -49,9 +50,10 @@ async function size(file) {
   }
 }
 
-async function download(repo, file) {
+async function download(repo, revision, file) {
   const target = path.join(out, repo, file);
-  const url = `https://huggingface.co/${repo}/resolve/main/${file}`;
+  // A commit, not `main`: the files are exactly the ones the app was tested with.
+  const url = `https://huggingface.co/${repo}/resolve/${revision}/${file}`;
   const head = await fetch(url, { method: 'HEAD' });
   if (!head.ok) throw new Error(`${url}: ${head.status}`);
   const expected = Number(head.headers.get('content-length') ?? -1);
@@ -68,8 +70,8 @@ async function download(repo, file) {
 const manifestFile = path.join(out, 'manifest.json');
 const available = new Set(JSON.parse(await readFile(manifestFile, 'utf8').catch(() => '{"models":[]}')).models);
 for (const model of models) {
-  const repo = `onnx-community/whisper-${model}_timestamped`;
-  for (const file of FILES) console.log(`${repo}/${file}: ${await download(repo, file)}`);
+  const { repo, revision } = WHISPER_REPOS[model];
+  for (const file of FILES) console.log(`${repo}/${file}: ${await download(repo, revision, file)}`);
   available.add(model);
   await writeFile(manifestFile, JSON.stringify({ models: [...available].sort(), updatedAt: new Date().toISOString() }, null, 2));
 }

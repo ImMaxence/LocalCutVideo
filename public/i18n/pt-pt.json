@@ -631,7 +631,7 @@
     }
   },
   "legal": {
-    "updated": "Última atualização: 1 de novembro de 2026",
+    "updated": "Última atualização: 2 de novembro de 2026",
     "contact": "Contacto",
     "nav": {
       "notice": "Informação legal",
@@ -654,6 +654,7 @@
           "title": "Alojamento",
           "body": [
             "O site é alojado pelo próprio editor, Maxence Bonnici, num servidor pessoal, e implementado com a plataforma Coolify.",
+            "Os pedidos ao site passam pela rede da Cloudflare, Inc. (101 Townsend St, San Francisco, CA 94107, EUA), que protege o servidor e cifra a ligação.",
             "Contacto: maxence.bonnici@outlook.fr"
           ]
         },
@@ -711,6 +712,7 @@
         {
           "title": "Terceiros",
           "body": [
+            "Cloudflare: todos os pedidos a este site passam pela Cloudflare, que protege o servidor e cifra a ligação. Como qualquer intermediário de rede, trata o seu endereço IP e as informações normais do navegador para entregar as páginas, e pode conservar registos técnicos para fins de segurança; nunca recebe os seus vídeos nem o seu áudio, que nunca saem do seu dispositivo. Consulte a [política de privacidade](https://www.cloudflare.com/privacypolicy/) da Cloudflare.",
             "Hugging Face: o modelo Whisper é fornecido por este site, tal como o resto da aplicação. Só se não estiver disponível aqui é que é transferido de huggingface.co; nesse caso, o Hugging Face recebe o seu endereço IP e as informações normais do navegador, mas nunca o seu áudio. Consulte a respetiva [política de privacidade](https://huggingface.co/privacy).",
             "GitHub: apenas se seguir uma ligação para o repositório do código-fonte.",
             "Nenhum outro terceiro é contactado: uma Content-Security-Policy rigorosa impede tecnicamente a página de se ligar a qualquer outro lado."

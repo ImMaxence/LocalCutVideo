@@ -631,7 +631,7 @@
     }
   },
   "legal": {
-    "updated": "최종 업데이트: 2026년 11월 1일",
+    "updated": "최종 업데이트: 2026년 11월 2일",
     "contact": "연락처",
     "nav": {
       "notice": "법적 고지",
@@ -654,6 +654,7 @@
           "title": "호스팅",
           "body": [
             "이 웹사이트는 운영자인 Maxence Bonnici가 개인 서버에서 직접 호스팅하며, Coolify 플랫폼으로 배포합니다.",
+            "사이트에 대한 요청은 서버를 보호하고 연결을 암호화하는 Cloudflare, Inc. (101 Townsend St, San Francisco, CA 94107, 미국)의 네트워크를 거칩니다.",
             "연락처: maxence.bonnici@outlook.fr"
           ]
         },
@@ -711,6 +712,7 @@
         {
           "title": "제3자",
           "body": [
+            "Cloudflare: 이 사이트에 대한 모든 요청은 서버를 보호하고 연결을 암호화하는 Cloudflare를 거칩니다. 다른 네트워크 중개자와 마찬가지로 페이지를 전달하기 위해 IP 주소와 일반적인 브라우저 정보를 처리하며, 보안 목적으로 기술 로그를 보관할 수 있습니다. 동영상이나 음성은 절대 받지 않으며, 이는 기기를 떠나지 않습니다. 해당 회사의 [개인정보 처리방침](https://www.cloudflare.com/privacypolicy/)을 참고하세요.",
             "Hugging Face: Whisper 모델은 앱의 나머지 부분과 마찬가지로 이 사이트에서 제공합니다. 여기서 사용할 수 없을 때만 대신 huggingface.co에서 내려받으며, 이때 Hugging Face는 IP 주소와 일반적인 브라우저 정보를 받지만 음성은 절대 받지 않습니다. 해당 회사의 [개인정보 처리방침](https://huggingface.co/privacy)을 참고하세요.",
             "GitHub: 소스 코드 저장소 링크를 따라갈 때만.",
             "그 밖의 제3자와는 연결하지 않습니다. 엄격한 Content-Security-Policy가 페이지가 다른 곳에 연결하는 것을 기술적으로 막습니다."

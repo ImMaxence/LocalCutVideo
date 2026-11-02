@@ -7,6 +7,7 @@
  */
 import * as Comlink from 'comlink';
 import { env, pipeline, type AutomaticSpeechRecognitionPipeline } from '@huggingface/transformers';
+import { WHISPER_REPOS } from '../core/whisper-models';
 import type { WhisperModel } from '../engine/model';
 import type { AiDevice, AiWorkerApi, RawWord, SpeechSample, TranscribeProgress, WhisperChunk } from './worker-types';
 
@@ -95,7 +96,9 @@ async function load(model: WhisperModel, onProgress: (p: TranscribeProgress) => 
       ? { encoder_model: fp16 ? 'fp16' : 'fp32', decoder_model_merged: 'q4' }
       : { encoder_model: 'q8', decoder_model_merged: 'q8' };
 
-  transcriber = (await pipeline('automatic-speech-recognition', `onnx-community/whisper-${model}_timestamped`, {
+  const { repo, revision } = WHISPER_REPOS[model];
+  transcriber = (await pipeline('automatic-speech-recognition', repo, {
+    revision,
     device,
     dtype: dtype as never,
     progress_callback: progress_callback as never,

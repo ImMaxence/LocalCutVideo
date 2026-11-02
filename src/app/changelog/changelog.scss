@@ -110,6 +110,9 @@ article {
     &.changed {
       color: var(--accent);
     }
+    &.security {
+      color: var(--danger);
+    }
   }
   ul {
     margin: 0;

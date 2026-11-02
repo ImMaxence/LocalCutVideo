@@ -631,7 +631,7 @@
     }
   },
   "legal": {
-    "updated": "最後更新：2026 年 11 月 1 日",
+    "updated": "最後更新：2026 年 11 月 2 日",
     "contact": "聯絡方式",
     "nav": {
       "notice": "法律聲明",
@@ -654,6 +654,7 @@
           "title": "代管",
           "body": [
             "本網站由發布者 Maxence Bonnici 自行代管於個人伺服器，並透過 Coolify 平台部署。",
+            "對本站的請求會經過 Cloudflare, Inc. (101 Townsend St, San Francisco, CA 94107，美國）的網路，它負責保護伺服器並加密連線。",
             "聯絡方式：maxence.bonnici@outlook.fr"
           ]
         },
@@ -711,6 +712,7 @@
         {
           "title": "第三方",
           "body": [
+            "Cloudflare：對本站的所有請求都會經過 Cloudflare，它負責保護伺服器並加密連線。與任何網路中介一樣，它會處理你的 IP 位址和一般瀏覽器資訊以傳送頁面，並可能基於安全目的保留技術記錄；它絕不會收到你的影片或音訊，因為它們從不離開你的裝置。詳見其[隱私權政策](https://www.cloudflare.com/privacypolicy/)。",
             "Hugging Face：Whisper 模型與應用程式的其他部分一樣由本站提供。只有本站無法提供時，才會改從 huggingface.co 下載；此時 Hugging Face 會收到你的 IP 位址和一般瀏覽器資訊，但絕不會收到你的音訊。請參閱其[隱私權政策](https://huggingface.co/privacy)。",
             "GitHub：僅在你點擊指向原始碼儲存庫的連結時。",
             "不會連絡任何其他第三方：嚴格的 Content-Security-Policy 在技術上阻止頁面連線到其他任何地方。"

@@ -631,7 +631,7 @@
     }
   },
   "legal": {
-    "updated": "Cập nhật lần cuối: 1 tháng 11 năm 2026",
+    "updated": "Cập nhật lần cuối: 2 tháng 11 năm 2026",
     "contact": "Liên hệ",
     "nav": {
       "notice": "Thông tin pháp lý",
@@ -654,6 +654,7 @@
           "title": "Lưu trữ",
           "body": [
             "Trang web do chính đơn vị phát hành, Maxence Bonnici, tự lưu trữ trên máy chủ cá nhân và triển khai bằng nền tảng Coolify.",
+            "Các yêu cầu tới trang web đi qua mạng của Cloudflare, Inc. (101 Townsend St, San Francisco, CA 94107, Hoa Kỳ), dịch vụ bảo vệ máy chủ và mã hóa kết nối.",
             "Liên hệ: maxence.bonnici@outlook.fr"
           ]
         },
@@ -711,6 +712,7 @@
         {
           "title": "Bên thứ ba",
           "body": [
+            "Cloudflare: mọi yêu cầu tới trang web này đều đi qua Cloudflare, dịch vụ bảo vệ máy chủ và mã hóa kết nối. Như mọi bên trung gian mạng, Cloudflare xử lý địa chỉ IP và thông tin trình duyệt thông thường của bạn để phân phối các trang, và có thể lưu nhật ký kỹ thuật vì mục đích bảo mật; Cloudflare không bao giờ nhận video hay âm thanh của bạn, vốn không bao giờ rời khỏi thiết bị của bạn. Xem [chính sách quyền riêng tư](https://www.cloudflare.com/privacypolicy/) của họ.",
             "Hugging Face: mô hình Whisper do trang web này cung cấp, giống như phần còn lại của ứng dụng. Chỉ khi không có sẵn ở đây, mô hình mới được tải từ huggingface.co; khi đó Hugging Face nhận địa chỉ IP và thông tin trình duyệt thông thường của bạn, nhưng không bao giờ nhận âm thanh của bạn. Xem [chính sách quyền riêng tư](https://huggingface.co/privacy) của họ.",
             "GitHub: chỉ khi bạn nhấp vào liên kết đến kho mã nguồn.",
             "Không liên hệ bên thứ ba nào khác: Content-Security-Policy nghiêm ngặt ngăn trang kết nối đến bất cứ nơi nào khác về mặt kỹ thuật."

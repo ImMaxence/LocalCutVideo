@@ -251,6 +251,57 @@ export function migrateProject(raw: Project & { source?: SourceInfo | null }): P
   };
 }
 
+const isObject = (v: unknown): v is Record<string, unknown> => typeof v === 'object' && v !== null && !Array.isArray(v);
+const finite = (v: unknown): v is number => typeof v === 'number' && Number.isFinite(v);
+const isRange = (v: unknown): v is Range => isObject(v) && finite(v['start']) && finite(v['end']);
+const listOf = (v: unknown, item: (x: unknown) => boolean) => v === undefined || (Array.isArray(v) && v.every(item));
+const oneOf = (v: unknown, values: readonly unknown[]) => v === undefined || values.includes(v);
+
+/** A settings group of a file: every known setting it has keeps the type of its default. */
+function sameShape(raw: unknown, defaults: object): boolean {
+  if (raw === undefined) return true;
+  if (!isObject(raw)) return false;
+  return Object.entries(defaults).every(([key, d]) => {
+    const v = raw[key];
+    return v === undefined || typeof v === typeof d || (d === null && (v === null || typeof v === 'string'));
+  });
+}
+
+/**
+ * Checks a project read from an outside file (.lcv.json) before it is saved: wrong types would
+ * otherwise break the editor or the export. Missing fields are fine, migrateProject fills them.
+ */
+export function isProjectShape(raw: unknown): raw is Project {
+  if (!isObject(raw)) return false;
+  const base = createProject('');
+  const clip = (c: unknown) =>
+    isObject(c) &&
+    typeof c['id'] === 'string' &&
+    isObject(c['source']) &&
+    typeof c['source']['name'] === 'string' &&
+    finite(c['source']['size']) &&
+    finite(c['source']['duration']);
+  const word = (w: unknown) => isRange(w) && typeof (w as Word).text === 'string';
+  const face = (f: unknown) => isObject(f) && finite(f['t']) && finite(f['x']) && finite(f['y']);
+  return (
+    (raw['name'] === undefined || typeof raw['name'] === 'string') &&
+    Array.isArray(raw['clips']) &&
+    raw['clips'].every(clip) &&
+    listOf(raw['cuts'], isRange) &&
+    listOf(raw['speeds'], (s) => isRange(s) && finite((s as SpeedRange).rate) && (s as SpeedRange).rate > 0) &&
+    listOf(raw['texts'], isRange) &&
+    listOf(raw['words'], word) &&
+    (raw['faces'] === null || listOf(raw['faces'], face)) &&
+    (raw['transcript'] == null || isObject(raw['transcript'])) &&
+    oneOf(raw['format'], ['16:9', '9:16', '1:1']) &&
+    oneOf(raw['rotation'], [0, 90, 180, 270]) &&
+    oneOf(raw['transition'], Object.keys(TRANSITION_HALF)) &&
+    (['captions', 'framing', 'background', 'audio', 'music', 'silence', 'export'] as const).every((k) => sameShape(raw[k], base[k])) &&
+    oneOf((raw['export'] as Partial<ExportSettings> | undefined)?.resolution, [720, 1080]) &&
+    oneOf((raw['export'] as Partial<ExportSettings> | undefined)?.fps, [24, 25, 30, 60])
+  );
+}
+
 /** Identifies a file without reading it, to check that a re-selected file is the same one. */
 export function fingerprint(file: { name: string; size: number; lastModified: number }): string {
   return `${file.name}|${file.size}|${file.lastModified}`;

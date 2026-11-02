@@ -631,7 +631,7 @@
     }
   },
   "legal": {
-    "updated": "Ilisasishwa mwisho: 1 Novemba 2026",
+    "updated": "Ilisasishwa mwisho: 2 Novemba 2026",
     "contact": "Wasiliana",
     "nav": {
       "notice": "Taarifa ya kisheria",
@@ -654,6 +654,7 @@
           "title": "Upangishaji",
           "body": [
             "Tovuti inapangishwa na mchapishaji wake mwenyewe, Maxence Bonnici, kwenye seva binafsi, na inasambazwa kwa jukwaa la Coolify.",
+            "Maombi kwa tovuti hupitia mtandao wa Cloudflare, Inc. (101 Townsend St, San Francisco, CA 94107, Marekani), unaolinda seva na kusimba muunganisho.",
             "Mawasiliano: maxence.bonnici@outlook.fr"
           ]
         },
@@ -711,6 +712,7 @@
         {
           "title": "Wahusika wengine",
           "body": [
+            "Cloudflare: maombi yote kwa tovuti hii hupitia Cloudflare, inayolinda seva na kusimba muunganisho. Kama mpatanishi yeyote wa mtandao, huchakata anwani yako ya IP na taarifa za kawaida za kivinjari ili kuwasilisha kurasa, na inaweza kuhifadhi kumbukumbu za kiufundi kwa madhumuni ya usalama; kamwe haipokei video au sauti yako, ambazo kamwe haziondoki kwenye kifaa chako. Tazama [sera yao ya faragha](https://www.cloudflare.com/privacypolicy/).",
             "Hugging Face: modeli ya Whisper hutolewa na tovuti hii, kama sehemu nyingine ya programu. Ikiwa tu haipatikani hapa ndipo inapakuliwa kutoka huggingface.co; wakati huo Hugging Face hupokea anwani yako ya IP na taarifa za kawaida za kivinjari, lakini kamwe si sauti yako. Tazama [sera yao ya faragha](https://huggingface.co/privacy).",
             "GitHub: ikiwa tu utafuata kiungo cha hazina ya msimbo chanzo.",
             "Hakuna mhusika mwingine anayewasiliana naye: Content-Security-Policy kali kiufundi huzuia ukurasa kuunganishwa mahali pengine popote."

@@ -631,7 +631,7 @@
     }
   },
   "legal": {
-    "updated": "Poslední aktualizace: 1. listopadu 2026",
+    "updated": "Poslední aktualizace: 2. listopadu 2026",
     "contact": "Kontakt",
     "nav": {
       "notice": "Právní upozornění",
@@ -654,6 +654,7 @@
           "title": "Hosting",
           "body": [
             "Web hostuje sám jeho provozovatel, Maxence Bonnici, na osobním serveru a nasazuje ho pomocí platformy Coolify.",
+            "Požadavky na web procházejí sítí společnosti Cloudflare, Inc. (101 Townsend St, San Francisco, CA 94107, USA), která chrání server a šifruje spojení.",
             "Kontakt: maxence.bonnici@outlook.fr"
           ]
         },
@@ -711,6 +712,7 @@
         {
           "title": "Třetí strany",
           "body": [
+            "Cloudflare: všechny požadavky na tento web procházejí přes Cloudflare, který chrání server a šifruje spojení. Jako každý síťový prostředník zpracovává vaši IP adresu a běžné informace o prohlížeči, aby mohl doručit stránky, a může uchovávat technické záznamy pro účely zabezpečení; nikdy však nedostává vaše videa ani zvuk, které nikdy neopustí vaše zařízení. Viz [zásady ochrany soukromí](https://www.cloudflare.com/privacypolicy/) společnosti Cloudflare.",
             "Hugging Face: model Whisper poskytuje tento web, stejně jako zbytek aplikace. Pouze pokud zde není k dispozici, stáhne se místo toho z huggingface.co; Hugging Face pak obdrží vaši IP adresu a běžné informace o prohlížeči, ale nikdy váš zvuk. Viz jejich [zásady ochrany soukromí](https://huggingface.co/privacy).",
             "GitHub: pouze pokud kliknete na odkaz do repozitáře se zdrojovým kódem.",
             "Žádná jiná třetí strana se nekontaktuje: přísná Content-Security-Policy technicky brání stránce připojit se kamkoli jinam."

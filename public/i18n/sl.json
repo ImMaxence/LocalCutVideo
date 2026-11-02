@@ -631,7 +631,7 @@
     }
   },
   "legal": {
-    "updated": "Zadnja posodobitev: 1. november 2026",
+    "updated": "Zadnja posodobitev: 2. november 2026",
     "contact": "Kontakt",
     "nav": {
       "notice": "Pravno obvestilo",
@@ -654,6 +654,7 @@
           "title": "Gostovanje",
           "body": [
             "Spletno mesto gosti izdajatelj sam, Maxence Bonnici, na osebnem strežniku, uvaja pa se s platformo Coolify.",
+            "Zahteve za spletno mesto potekajo prek omrežja podjetja Cloudflare, Inc. (101 Townsend St, San Francisco, CA 94107, ZDA), ki ščiti strežnik in šifrira povezavo.",
             "Kontakt: maxence.bonnici@outlook.fr"
           ]
         },
@@ -711,6 +712,7 @@
         {
           "title": "Tretje osebe",
           "body": [
+            "Cloudflare: vse zahteve za to spletno mesto potekajo prek Cloudflara, ki ščiti strežnik in šifrira povezavo. Kot vsak omrežni posrednik obdeluje vaš naslov IP in običajne podatke o brskalniku, da dostavi strani, in lahko hrani tehnične dnevnike za varnostne namene; nikoli pa ne prejme vaših videoposnetkov ali zvoka, ki nikoli ne zapustijo vaše naprave. Oglejte si [politiko zasebnosti](https://www.cloudflare.com/privacypolicy/) podjetja Cloudflare.",
             "Hugging Face: model Whisper zagotavlja to spletno mesto, tako kot preostanek aplikacije. Samo če tukaj ni na voljo, se namesto tega prenese s huggingface.co; Hugging Face takrat prejme vaš naslov IP in običajne podatke o brskalniku, nikoli pa vašega zvoka. Oglejte si njihovo [politiko zasebnosti](https://huggingface.co/privacy).",
             "GitHub: samo če sledite povezavi do repozitorija izvorne kode.",
             "Nobena druga tretja oseba se ne kontaktira: stroga Content-Security-Policy strani tehnično prepreči povezavo kamor koli drugam."

@@ -631,7 +631,7 @@
     }
   },
   "legal": {
-    "updated": "Kemas kini terakhir: 1 November 2026",
+    "updated": "Kemas kini terakhir: 2 November 2026",
     "contact": "Hubungi",
     "nav": {
       "notice": "Notis undang-undang",
@@ -654,6 +654,7 @@
           "title": "Pengehosan",
           "body": [
             "Laman web ini dihoskan sendiri oleh penerbitnya, Maxence Bonnici, pada pelayan peribadi, dan digunakan dengan platform Coolify.",
+            "Permintaan ke laman ini melalui rangkaian Cloudflare, Inc. (101 Townsend St, San Francisco, CA 94107, AS), yang melindungi pelayan dan menyulitkan sambungan.",
             "Hubungi: maxence.bonnici@outlook.fr"
           ]
         },
@@ -711,6 +712,7 @@
         {
           "title": "Pihak ketiga",
           "body": [
+            "Cloudflare: semua permintaan ke laman ini melalui Cloudflare, yang melindungi pelayan dan menyulitkan sambungan. Seperti mana-mana perantara rangkaian, ia memproses alamat IP anda dan maklumat pelayar biasa untuk menghantar halaman, dan mungkin menyimpan log teknikal bagi tujuan keselamatan; ia tidak pernah menerima video atau audio anda, yang tidak pernah meninggalkan peranti anda. Lihat [dasar privasi](https://www.cloudflare.com/privacypolicy/) mereka.",
             "Hugging Face: model Whisper disediakan oleh laman ini, sama seperti bahagian lain aplikasi. Hanya jika ia tidak tersedia di sini, ia dimuat turun dari huggingface.co; Hugging Face kemudian menerima alamat IP anda dan maklumat pelayar biasa, tetapi tidak pernah audio anda. Lihat [dasar privasi](https://huggingface.co/privacy) mereka.",
             "GitHub: hanya jika anda mengikuti pautan ke repositori kod sumber.",
             "Tiada pihak ketiga lain dihubungi: Content-Security-Policy yang ketat secara teknikal menghalang halaman daripada bersambung ke tempat lain."

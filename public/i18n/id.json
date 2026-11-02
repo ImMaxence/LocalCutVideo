@@ -631,7 +631,7 @@
     }
   },
   "legal": {
-    "updated": "Terakhir diperbarui: 1 November 2026",
+    "updated": "Terakhir diperbarui: 2 November 2026",
     "contact": "Kontak",
     "nav": {
       "notice": "Pemberitahuan hukum",
@@ -654,6 +654,7 @@
           "title": "Hosting",
           "body": [
             "Situs web ini di-host sendiri oleh penerbitnya, Maxence Bonnici, di server pribadi, dan dipasang dengan platform Coolify.",
+            "Permintaan ke situs melewati jaringan Cloudflare, Inc. (101 Townsend St, San Francisco, CA 94107, AS), yang melindungi server dan mengenkripsi koneksi.",
             "Kontak: maxence.bonnici@outlook.fr"
           ]
         },
@@ -711,6 +712,7 @@
         {
           "title": "Pihak ketiga",
           "body": [
+            "Cloudflare: semua permintaan ke situs ini melewati Cloudflare, yang melindungi server dan mengenkripsi koneksi. Seperti perantara jaringan lainnya, Cloudflare memproses alamat IP Anda dan informasi browser standar untuk mengirimkan halaman, dan dapat menyimpan log teknis untuk tujuan keamanan; Cloudflare tidak pernah menerima video atau audio Anda, yang tidak pernah meninggalkan perangkat Anda. Lihat [kebijakan privasi](https://www.cloudflare.com/privacypolicy/) mereka.",
             "Hugging Face: model Whisper disediakan oleh situs ini, seperti bagian aplikasi lainnya. Hanya jika tidak tersedia di sini, model diunduh dari huggingface.co; Hugging Face lalu menerima alamat IP Anda dan informasi browser standar, tetapi tidak pernah audio Anda. Lihat [kebijakan privasi](https://huggingface.co/privacy) mereka.",
             "GitHub: hanya jika Anda membuka tautan ke repositori kode sumber.",
             "Tidak ada pihak ketiga lain yang dihubungi: Content-Security-Policy yang ketat secara teknis mencegah halaman terhubung ke mana pun."

@@ -631,7 +631,7 @@
     }
   },
   "legal": {
-    "updated": "Son güncelleme: 1 Kasım 2026",
+    "updated": "Son güncelleme: 2 Kasım 2026",
     "contact": "İletişim",
     "nav": {
       "notice": "Yasal bildirim",
@@ -654,6 +654,7 @@
           "title": "Barındırma",
           "body": [
             "Web sitesi, yayıncısı Maxence Bonnici tarafından kişisel bir sunucuda barındırılır ve Coolify platformuyla yayına alınır.",
+            "Siteye yapılan istekler, sunucuyu koruyan ve bağlantıyı şifreleyen Cloudflare, Inc. (101 Townsend St, San Francisco, CA 94107, ABD) ağı üzerinden geçer.",
             "İletişim: maxence.bonnici@outlook.fr"
           ]
         },
@@ -711,6 +712,7 @@
         {
           "title": "Üçüncü taraflar",
           "body": [
+            "Cloudflare: bu siteye yapılan tüm istekler, sunucuyu koruyan ve bağlantıyı şifreleyen Cloudflare üzerinden geçer. Her ağ aracısı gibi, sayfaları iletmek için IP adresinizi ve standart tarayıcı bilgilerini işler ve güvenlik amacıyla teknik kayıtlar tutabilir; videolarınızı veya sesinizi asla almaz, bunlar cihazınızdan asla çıkmaz. Cloudflare'in [gizlilik politikasına](https://www.cloudflare.com/privacypolicy/) bakın.",
             "Hugging Face: Whisper modeli, uygulamanın geri kalanı gibi bu site tarafından sunulur. Yalnızca burada mevcut değilse bunun yerine huggingface.co'dan indirilir; bu durumda Hugging Face IP adresinizi ve standart tarayıcı bilgilerini alır, ancak sesinizi asla almaz. Onların [gizlilik politikasına](https://huggingface.co/privacy) bakın.",
             "GitHub: yalnızca kaynak kod deposuna giden bir bağlantıyı izlerseniz.",
             "Başka hiçbir üçüncü tarafla iletişim kurulmaz: katı bir Content-Security-Policy, sayfanın başka herhangi bir yere bağlanmasını teknik olarak engeller."

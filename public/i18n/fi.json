@@ -631,7 +631,7 @@
     }
   },
   "legal": {
-    "updated": "Päivitetty viimeksi: 1. marraskuuta 2026",
+    "updated": "Päivitetty viimeksi: 2. marraskuuta 2026",
     "contact": "Yhteystiedot",
     "nav": {
       "notice": "Oikeudelliset tiedot",
@@ -654,6 +654,7 @@
           "title": "Ylläpito",
           "body": [
             "Sivustoa ylläpitää julkaisija Maxence Bonnici itse henkilökohtaisella palvelimella, ja se otetaan käyttöön Coolify-alustalla.",
+            "Sivuston pyynnöt kulkevat yhtiön Cloudflare, Inc. (101 Townsend St, San Francisco, CA 94107, Yhdysvallat) verkon kautta, joka suojaa palvelinta ja salaa yhteyden.",
             "Yhteystiedot: maxence.bonnici@outlook.fr"
           ]
         },
@@ -711,6 +712,7 @@
         {
           "title": "Kolmannet osapuolet",
           "body": [
+            "Cloudflare: kaikki tämän sivuston pyynnöt kulkevat Cloudflaren kautta, joka suojaa palvelinta ja salaa yhteyden. Kuten mikä tahansa verkon välittäjä, se käsittelee IP-osoitettasi ja tavanomaisia selaintietoja sivujen toimittamiseksi ja voi säilyttää teknisiä lokeja tietoturvasyistä; se ei koskaan saa videoitasi tai ääntäsi, sillä ne eivät koskaan poistu laitteeltasi. Katso Cloudflaren [tietosuojakäytäntö](https://www.cloudflare.com/privacypolicy/).",
             "Hugging Face: Whisper-mallin toimittaa tämä sivusto, kuten muunkin sovelluksen. Vain jos malli ei ole täällä saatavilla, se ladataan sen sijaan osoitteesta huggingface.co; Hugging Face saa silloin IP-osoitteesi ja tavanomaiset selaintiedot, mutta ei koskaan ääntäsi. Katso heidän [tietosuojakäytäntönsä](https://huggingface.co/privacy).",
             "GitHub: vain jos seuraat linkkiä lähdekoodin tietovarastoon.",
             "Muihin kolmansiin osapuoliin ei oteta yhteyttä: tiukka Content-Security-Policy estää teknisesti sivua muodostamasta yhteyttä minnekään muualle."

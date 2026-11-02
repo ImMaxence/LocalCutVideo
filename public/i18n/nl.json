@@ -631,7 +631,7 @@
     }
   },
   "legal": {
-    "updated": "Laatst bijgewerkt: 1 november 2026",
+    "updated": "Laatst bijgewerkt: 2 november 2026",
     "contact": "Contact",
     "nav": {
       "notice": "Juridische vermelding",
@@ -654,6 +654,7 @@
           "title": "Hosting",
           "body": [
             "De website wordt door de uitgever, Maxence Bonnici, zelf gehost op een persoonlijke server en uitgerold met het platform Coolify.",
+            "Verzoeken aan de site lopen via het netwerk van Cloudflare, Inc. (101 Townsend St, San Francisco, CA 94107, VS), dat de server beschermt en de verbinding versleutelt.",
             "Contact: maxence.bonnici@outlook.fr"
           ]
         },
@@ -711,6 +712,7 @@
         {
           "title": "Derden",
           "body": [
+            "Cloudflare: alle verzoeken aan deze site lopen via Cloudflare, dat de server beschermt en de verbinding versleutelt. Zoals elke netwerktussenpersoon verwerkt Cloudflare je IP-adres en standaard browsergegevens om de pagina's te leveren, en kan het om veiligheidsredenen technische logs bewaren; je video's of audio ontvangt het nooit, want die verlaten je apparaat nooit. Zie hun [privacybeleid](https://www.cloudflare.com/privacypolicy/).",
             "Hugging Face: het Whisper-model wordt door deze site geleverd, net als de rest van de applicatie. Alleen als het hier niet beschikbaar is, wordt het in plaats daarvan van huggingface.co gedownload; Hugging Face ontvangt dan je IP-adres en standaard browsergegevens, maar nooit je audio. Zie hun [privacybeleid](https://huggingface.co/privacy).",
             "GitHub: alleen als je een link naar de broncoderepository volgt.",
             "Er wordt geen andere derde partij gecontacteerd: een strikte Content-Security-Policy verhindert technisch dat de pagina ergens anders verbinding mee maakt."

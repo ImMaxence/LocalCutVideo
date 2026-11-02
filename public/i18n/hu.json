@@ -631,7 +631,7 @@
     }
   },
   "legal": {
-    "updated": "Utolsó frissítés: 2026. november 1.",
+    "updated": "Utolsó frissítés: 2026. november 2.",
     "contact": "Kapcsolat",
     "nav": {
       "notice": "Impresszum",
@@ -654,6 +654,7 @@
           "title": "Tárhely",
           "body": [
             "A weboldalt maga a kiadó, Maxence Bonnici üzemelteti egy saját szerveren, és a Coolify platformmal telepíti.",
+            "Az oldalra érkező kérések a Cloudflare, Inc. (101 Townsend St, San Francisco, CA 94107, USA) hálózatán haladnak át, amely védi a szervert és titkosítja a kapcsolatot.",
             "Kapcsolat: maxence.bonnici@outlook.fr"
           ]
         },
@@ -711,6 +712,7 @@
         {
           "title": "Harmadik felek",
           "body": [
+            "Cloudflare: az oldalra érkező minden kérés a Cloudflare-en keresztül halad, amely védi a szervert és titkosítja a kapcsolatot. Mint minden hálózati közvetítő, az oldalak kézbesítéséhez kezeli az IP-címedet és a szokásos böngészőadatokat, és biztonsági okokból technikai naplókat őrizhet; a videóidat és a hangodat azonban soha nem kapja meg, mert azok soha nem hagyják el az eszközödet. Lásd a Cloudflare [adatvédelmi tájékoztatóját](https://www.cloudflare.com/privacypolicy/).",
             "Hugging Face: a Whisper-modellt ez az oldal szolgáltatja, akárcsak az alkalmazás többi részét. Csak ha itt nem érhető el, akkor töltődik le helyette a huggingface.co-ról; ekkor a Hugging Face megkapja az IP-címedet és a szokásos böngészőadatokat, de a hangodat soha. Lásd az [adatvédelmi tájékoztatójukat](https://huggingface.co/privacy).",
             "GitHub: csak ha a forráskód-tárolóra mutató linkre kattintasz.",
             "Más harmadik féllel nem történik kapcsolatfelvétel: egy szigorú Content-Security-Policy technikailag megakadályozza, hogy a lap bárhová máshová csatlakozzon."

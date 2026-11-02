@@ -631,7 +631,7 @@
     }
   },
   "legal": {
-    "updated": "Viimati uuendatud: 1. november 2026",
+    "updated": "Viimati uuendatud: 2. november 2026",
     "contact": "Kontakt",
     "nav": {
       "notice": "Õiguslik teave",
@@ -654,6 +654,7 @@
           "title": "Majutus",
           "body": [
             "Veebisaiti majutab selle väljaandja Maxence Bonnici ise isiklikus serveris ja see on juurutatud Coolify platvormiga.",
+            "Saidi päringud liiguvad läbi ettevõtte Cloudflare, Inc. (101 Townsend St, San Francisco, CA 94107, USA) võrgu, mis kaitseb serverit ja krüpteerib ühenduse.",
             "Kontakt: maxence.bonnici@outlook.fr"
           ]
         },
@@ -711,6 +712,7 @@
         {
           "title": "Kolmandad osapooled",
           "body": [
+            "Cloudflare: kõik selle saidi päringud liiguvad läbi Cloudflare'i, mis kaitseb serverit ja krüpteerib ühenduse. Nagu iga võrguvahendaja, töötleb see lehtede edastamiseks sinu IP-aadressi ja tavapärast brauseriteavet ning võib turvalisuse huvides säilitada tehnilisi logisid; see ei saa kunagi sinu videoid ega heli, mis ei lahku kunagi sinu seadmest. Vaata Cloudflare'i [privaatsuspoliitikat](https://www.cloudflare.com/privacypolicy/).",
             "Hugging Face: Whisperi mudelit pakub see sait nagu ka ülejäänud rakendust. Ainult siis, kui see pole siin saadaval, laaditakse see hoopis aadressilt huggingface.co; Hugging Face saab siis sinu IP-aadressi ja tavapärase brauseriteabe, kuid mitte kunagi sinu heli. Vaata nende [privaatsuspoliitikat](https://huggingface.co/privacy).",
             "GitHub: ainult siis, kui järgid linki lähtekoodi hoidlasse.",
             "Ühegi teise kolmanda osapoolega ühendust ei võeta: range Content-Security-Policy takistab tehniliselt lehel kuhugi mujale ühendust looma."

@@ -205,7 +205,7 @@ The Docker build downloads the Whisper models into the image (`scripts/download-
 | `base` | Balanced | ≈ 330 MB |
 | `small` | Accurate | ≈ 1 GB |
 
-The first build downloads them (about 1.5 GB for the three); Docker keeps that step in cache, so later builds are fast. Each visitor downloads a model once, then their browser keeps it. A model that is not in the image falls back to Hugging Face. For `npm start`, run `node scripts/download-models.mjs --models tiny` to serve one from `public/models` (ignored by Git).
+The first build downloads them (about 1.5 GB for the three); Docker keeps that step in cache, so later builds are fast. Each visitor downloads a model once, then their browser keeps it. A model that is not in the image falls back to Hugging Face. Each model is pinned to a Hugging Face commit in [`src/app/core/whisper-models.ts`](src/app/core/whisper-models.ts), for the build and the app alike. For `npm start`, run `node scripts/download-models.mjs --models tiny` to serve one from `public/models` (ignored by Git).
 
 ### Coolify
 
