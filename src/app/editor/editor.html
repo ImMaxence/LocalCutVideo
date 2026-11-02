@@ -268,7 +268,7 @@
             @if (run.summary; as s) {
               <div class="auto-summary">
                 <div><b>{{ s.cuts }}</b><span>{{ 'editor.auto.summary.cuts' | transloco }}</span></div>
-                <div><b>−{{ formatTime(s.removed) }}</b><span>{{ 'editor.auto.summary.removed' | transloco }}</span></div>
+                <div><b dir="ltr">−{{ formatTime(s.removed) }}</b><span>{{ 'editor.auto.summary.removed' | transloco }}</span></div>
                 <div><b>{{ s.words }}</b><span>{{ 'editor.auto.summary.words' | transloco }}</span></div>
               </div>
               @if (s.silentClips) {

@@ -14,6 +14,8 @@
     "faq": "FAQ",
     "changelog": "Änderungen",
     "language": "Sprache",
+    "searchLanguage": "Sprache suchen",
+    "noLanguage": "Keine Sprache gefunden",
     "install": "App installieren",
     "open": "Editor öffnen",
     "menu": "Menü öffnen",
@@ -131,7 +133,7 @@
       },
       "languages": {
         "title": "Mehrsprachig",
-        "text": "Die Oberfläche spricht 5 Sprachen, und Whisper transkribiert Dutzende weitere, mit automatischer Spracherkennung"
+        "text": "Die Oberfläche spricht {{ count }} Sprachen, und Whisper transkribiert Dutzende weitere, mit automatischer Spracherkennung"
       }
     },
     "privacy": {

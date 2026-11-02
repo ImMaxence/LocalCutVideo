@@ -17,7 +17,7 @@ const MODES: { id: ThemeMode; icon: string }[] = [
   host: { '[class.labelled]': 'labels()' },
   template: `
     <div class="switch" role="radiogroup" [attr.aria-label]="'theme.label' | transloco">
-      <span class="thumb" [style.transform]="'translateX(' + index() * 100 + '%)'" aria-hidden="true"></span>
+      <span class="thumb" [style.--i]="index()" aria-hidden="true"></span>
       @for (m of modes; track m.id) {
         <button
           type="button"
@@ -58,12 +58,16 @@ const MODES: { id: ThemeMode; icon: string }[] = [
       position: absolute;
       top: 3px;
       bottom: 3px;
-      left: 3px;
+      inset-inline-start: 3px;
       width: calc((100% - 6px) / 3);
       border-radius: 8px;
       background: var(--bg-elev);
       box-shadow: var(--shadow-sm);
+      transform: translateX(calc(var(--i) * 100%));
       transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+      &:dir(rtl) {
+        transform: translateX(calc(var(--i) * -100%));
+      }
     }
     button {
       position: relative;

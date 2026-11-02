@@ -42,14 +42,15 @@
 .timeline {
   list-style: none;
   margin: 0;
-  padding: 0 0 0 28px;
+  padding: 0;
+  padding-inline-start: 28px;
   position: relative;
   display: grid;
   gap: 18px;
   &::before {
     content: '';
     position: absolute;
-    left: 7px;
+    inset-inline-start: 7px;
     top: 10px;
     bottom: 10px;
     width: 2px;
@@ -62,7 +63,7 @@
 
 .dot {
   position: absolute;
-  left: -27px;
+  inset-inline-start: -27px;
   top: 24px;
   width: 16px;
   height: 16px;
@@ -90,7 +91,7 @@ article {
     letter-spacing: -0.01em;
   }
   time {
-    margin-left: auto;
+    margin-inline-start: auto;
     font-size: 13px;
     font-variant-numeric: tabular-nums;
   }
@@ -112,7 +113,7 @@ article {
   }
   ul {
     margin: 0;
-    padding-left: 18px;
+    padding-inline-start: 18px;
     display: grid;
     gap: 4px;
     font-size: 14.5px;

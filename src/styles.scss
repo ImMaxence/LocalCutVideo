@@ -72,6 +72,11 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Arabic, Hebrew, Persian, Urdu: arrows point the way the text reads. */
+app-icon:is([name='arrow-right'], [name='arrow-left'], [name='chevron-right'], [name='chevron-left']):dir(rtl) {
+  transform: scaleX(-1);
+}
+
 a {
   color: var(--accent);
   text-decoration: none;
@@ -394,7 +399,7 @@ input[type='color'] {
       content: '';
       position: absolute;
       top: 2px;
-      left: 2px;
+      inset-inline-start: 2px;
       width: 16px;
       height: 16px;
       border-radius: 50%;
@@ -406,6 +411,9 @@ input[type='color'] {
       background: var(--accent);
       &::after {
         transform: translateX(16px);
+      }
+      &:dir(rtl)::after {
+        transform: translateX(-16px);
       }
     }
   }

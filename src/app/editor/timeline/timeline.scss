@@ -43,7 +43,7 @@
     width: 10px;
     height: 10px;
     border-radius: 3px;
-    margin-left: 6px;
+    margin-inline-start: 6px;
     &.silence {
       background: var(--pink);
     }
@@ -96,7 +96,7 @@
   .edge {
     display: inline-flex;
     align-items: center;
-    margin-right: 6px;
+    margin-inline-end: 6px;
   }
   .edge-label {
     margin: 0 2px 0 6px;
@@ -110,7 +110,7 @@
     font-variant-numeric: tabular-nums;
   }
   .length {
-    margin-right: 4px;
+    margin-inline-end: 4px;
     font-family: var(--mono);
   }
 }
@@ -145,7 +145,7 @@
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    margin-right: 4px;
+    margin-inline-end: 4px;
     color: var(--speed-solid);
   }
 }
@@ -162,7 +162,7 @@
 }
 
 .right {
-  margin-left: auto;
+  margin-inline-start: auto;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -178,7 +178,7 @@
     margin: 0 4px;
   }
   .fit {
-    margin-left: 4px;
+    margin-inline-start: 4px;
     font-size: 12px;
   }
 }
@@ -282,6 +282,6 @@
     display: none;
   }
   .right {
-    margin-left: auto;
+    margin-inline-start: auto;
   }
 }

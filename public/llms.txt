@@ -2,7 +2,7 @@
 
 > Free, open source video editor that runs entirely in the web browser. Videos are never uploaded: decoding, AI (speech-to-text, face tracking), editing and MP4 export all happen on the user's device. Made for talking-head videos, vlogs, YouTube, TikTok, Reels and Shorts.
 
-LocalCutVideo is a web app (installable as a PWA, works offline) available in English, French, Spanish, Italian and German. No account, no tracking, MIT license.
+LocalCutVideo is a web app (installable as a PWA, works offline) available in 44 languages (English, French, Spanish, German, Portuguese, Japanese, Chinese, Arabic, Hindi…). No account, no tracking, MIT license.
 
 ## What it does
 
@@ -24,7 +24,7 @@ LocalCutVideo is a web app (installable as a PWA, works offline) available in En
 
 ## Pages
 
-- [Home](https://localcutvideo.mbonnici.fr/): features, privacy, FAQ (also in [French](https://localcutvideo.mbonnici.fr/fr), [Spanish](https://localcutvideo.mbonnici.fr/es), [Italian](https://localcutvideo.mbonnici.fr/it), [German](https://localcutvideo.mbonnici.fr/de))
+- [Home](https://localcutvideo.mbonnici.fr/): features, privacy, FAQ (also in 43 other languages, such as [French](https://localcutvideo.mbonnici.fr/fr), [Spanish](https://localcutvideo.mbonnici.fr/es), [Portuguese](https://localcutvideo.mbonnici.fr/pt-br), [Japanese](https://localcutvideo.mbonnici.fr/ja) or [Arabic](https://localcutvideo.mbonnici.fr/ar); the full list is in the [sitemap](https://localcutvideo.mbonnici.fr/sitemap.xml))
 - [Open the editor](https://localcutvideo.mbonnici.fr/app)
 - [Try with a demo video](https://localcutvideo.mbonnici.fr/app?demo=1)
 - [Thumbnail maker](https://localcutvideo.mbonnici.fr/thumbnail)

@@ -1,0 +1,895 @@
+{
+  "common": {
+    "videoFiles": "Video datoteke",
+    "audioFiles": "Audio datoteke",
+    "cancel": "Odustani",
+    "close": "Zatvori",
+    "retry": "Pokušaj ponovno",
+    "none": "Ništa",
+    "remove": "Ukloni"
+  },
+  "nav": {
+    "features": "Značajke",
+    "privacy": "Privatnost",
+    "faq": "Pitanja",
+    "changelog": "Promjene",
+    "language": "Jezik",
+    "searchLanguage": "Traži jezik",
+    "noLanguage": "Nije pronađen nijedan jezik",
+    "install": "Instaliraj aplikaciju",
+    "open": "Otvori uređivač",
+    "menu": "Otvori izbornik",
+    "close": "Zatvori izbornik",
+    "thumbnail": "Minijature"
+  },
+  "theme": {
+    "system": "Sustav",
+    "light": "Svijetla",
+    "dark": "Tamna",
+    "label": "Tema"
+  },
+  "footer": {
+    "tagline": "Besplatan uređivač videa otvorenog koda koji radi u potpunosti u vašem pregledniku. Vaše datoteke nikad ne napuštaju vaše računalo",
+    "issues": "Prijavi problem",
+    "noTracking": "Bez kolačića, bez praćenja",
+    "product": "Proizvod",
+    "legal": "Pravne informacije"
+  },
+  "pwa": {
+    "update": "Dostupna je nova verzija",
+    "reload": "Ponovno učitaj"
+  },
+  "landing": {
+    "hero": {
+      "badgeLocal": "100 % lokalno, bez prijenosa",
+      "badgeOpen": "Besplatno i otvorenog koda",
+      "title1": "Uređujte svoje videozapise",
+      "title2": "Ništa ne napušta vaše računalo",
+      "lead": "LocalCutVideo izrezuje tišine, transkribira pomoću Whispera, ugrađuje karaoke titlove i prekadrira 16:9 u 9:16, sve u vašem pregledniku. Bez prijenosa, bez računa, bez poslužitelja",
+      "cta": "Otvori uređivač",
+      "github": "Pogledaj na GitHubu",
+      "hint": "Najbolje radi u Chromeu ili Edgeu na računalu",
+      "demo": "Isprobaj s demo videom"
+    },
+    "mock": {
+      "w1": "Dakle, danas",
+      "filler": "ovaj,",
+      "w2": "pokazat ću vam",
+      "w3": "kako to radi",
+      "line2": "Sve radi na vašem računalu, čak i umjetna inteligencija",
+      "line3": "Izbrišite riječ i video se izreže",
+      "cap1": "Ovo ostaje na vašem",
+      "cap2": "računalu"
+    },
+    "stats": {
+      "upload": "prenesenih bajtova",
+      "local": "obrađeno na vašem uređaju",
+      "languages": "jezika sučelja",
+      "gpu": "ubrzana UI i kodiranje"
+    },
+    "how": {
+      "eyebrow": "Kako radi",
+      "title": "Od sirove snimke do videa spremnog za objavu u tri koraka",
+      "open": {
+        "title": "Otvorite video",
+        "text": "Odaberite datoteku na disku. Čita se na mjestu: bez kopije, bez prijenosa, čak i za datoteke od nekoliko gigabajta"
+      },
+      "edit": {
+        "title": "Pustite uređivač da radi",
+        "text": "Tišine se otkrivaju, govor se transkribira riječ po riječ, a lica se prate, sve lokalno. Ispravite bilo što uređivanjem teksta"
+      },
+      "export": {
+        "title": "Izvezite MP4",
+        "text": "Odaberite 16:9, 9:16 ili 1:1. Video kodira vaša grafička kartica i zapisuje se izravno na disk"
+      }
+    },
+    "features": {
+      "eyebrow": "Značajke",
+      "title": "Sve što vam treba za videe u kojima govorite u kameru",
+      "lead": "Napravljen za autore na YouTubeu, TikToku, Reelsima i Shortsima koji svoje sirove snimke radije nigdje ne prenose",
+      "silences": {
+        "title": "Automatsko izrezivanje tišina",
+        "text": "Otkriva stanke prema glasnoći zvuka i uklanja ih, s podesivim pragom, minimalnim trajanjem i prostorom za dah"
+      },
+      "textEdit": {
+        "title": "Uređivanje putem teksta",
+        "text": "Whisper svakoj riječi daje vremensku oznaku. Izbrišite riječi u transkripciji i odgovarajući dio videa se izreže"
+      },
+      "captions": {
+        "title": "Karaoke titlovi",
+        "text": "Titlovi animirani riječ po riječ ugrađeni u video, u karaoke, čistom ili uokvirenom stilu, u vašoj boji isticanja"
+      },
+      "framing": {
+        "title": "Automatsko kadriranje 16:9 → 9:16",
+        "text": "Praćenje lica drži govornika u kadru kad vodoravni video pretvarate u okomiti"
+      },
+      "zoom": {
+        "title": "Pametni zum",
+        "text": "Naizmjenični zumovi na svakom rezu čine jump cutove namjernima i zadržavaju gledatelje"
+      },
+      "ducking": {
+        "title": "Zvuk i glazba",
+        "text": "Pojačajte zvuk, ujednačite isječke i dodajte pozadinsku glazbu koja se sama stišava kad netko govori"
+      },
+      "recovery": {
+        "title": "Oporavak nakon pada",
+        "text": "Svaka promjena sprema se u preglednik u stvarnom vremenu. Ponovno otvorite karticu i nastavite točno gdje ste stali"
+      },
+      "offline": {
+        "title": "Radi izvanmrežno",
+        "text": "Instalirajte ga kao aplikaciju. Kad se model UI preuzme, cijeli uređivač radi bez internetske veze"
+      },
+      "export": {
+        "title": "Brz hardverski izvoz",
+        "text": "Kodiranje koristi WebCodecs, video koder ugrađen u vaš preglednik i grafičku karticu, umjesto sporog softverskog kodiranja"
+      },
+      "clips": {
+        "title": "Spajanje više isječaka",
+        "text": "Ispustite više snimki odjednom: spajaju se u jedan video, redoslijedom koji odaberete, sa zajedničkom vremenskom crtom i transkripcijom"
+      },
+      "inputs": {
+        "title": "MP4, MOV, WebM, MKV",
+        "text": "Otvara datoteke s mobitela i fotoaparata, uključujući HEVC snimke s iPhonea kad ih preglednik može dekodirati"
+      },
+      "languages": {
+        "title": "Višejezično",
+        "text": "Sučelje govori {{ count }} jezika, a Whisper transkribira još desetke drugih, uz automatsko prepoznavanje jezika"
+      }
+    },
+    "privacy": {
+      "eyebrow": "Privatnost",
+      "title": "Nula prijenosa, po dizajnu",
+      "lead": "Vaš video čita se izravno s diska. Analiza zvuka, transkripcija, praćenje lica i kodiranje odvijaju se u pozadinskim nitima (Web Workers) na vašem računalu. Jednostavno ne postoji poslužitelj na koji bi se vaše snimke slale",
+      "upload": "Nikad nikakav prijenos: datoteka nikad ne napušta vaše računalo",
+      "account": "Bez računa, bez kolačića, bez statistike",
+      "csp": "Stroga Content-Security-Policy dopušta stranici da komunicira samo s ovom web-lokacijom, koja isporučuje i modele UI (Hugging Face je samo rezerva)",
+      "storage": "Projekti se spremaju u lokalnu bazu podataka preglednika (IndexedDB) i mogu se izbrisati u bilo kojem trenutku",
+      "diagram": {
+        "machine": "Vaše računalo",
+        "file": "Video datoteka",
+        "browser": "Vaš preglednik",
+        "upload": "Prijenos na poslužitelj",
+        "model": "Preuzimanje modela UI (jednom, u predmemoriju)"
+      }
+    },
+    "support": {
+      "eyebrow": "Kompatibilnost",
+      "title": "Podrška za preglednike",
+      "ok": "Potpuna",
+      "partial": "Djelomična",
+      "full": "Sve, uključujući oporavak nakon pada i zapisivanje izvoza izravno na disk",
+      "firefox": "Uređivanje i izvoz rade. Nakon zatvaranja kartice morat ćete ponovno odabrati video",
+      "safari": "Samo novije verzije. Nakon ponovnog učitavanja ponovno odaberite video; izvoz se preuzima",
+      "mobile": "Mobiteli i tableti",
+      "mobileText": "Radi za kratke isječke, ali zbog ograničenja memorije dugi videi nisu pouzdani"
+    },
+    "faq": {
+      "title": "Česta pitanja",
+      "free": {
+        "q": "Je li stvarno besplatno? Gdje je kvaka?",
+        "a": "Besplatno je i otvorenog koda. Budući da se sav rad odvija na vašem računalu, nema troškova poslužitelja, pa vam nema što prodati i nema podataka za prikupljanje"
+      },
+      "formats": {
+        "q": "Koje video formate mogu otvoriti?",
+        "a": "MP4, MOV, WebM i MKV, pod uvjetom da preglednik može dekodirati kodek (H.264, HEVC, VP9, AV1, ovisno o pregledniku i sustavu). Izvoz je MP4 datoteka"
+      },
+      "browsers": {
+        "q": "Zašto Chrome ili Edge?",
+        "a": "Podržavaju File System Access API, koji uređivaču omogućuje da nakon ponovnog učitavanja ponovno otvori video i zapiše izvoz izravno na disk. Ostali preglednici također rade, uz nekoliko dodatnih klikova"
+      },
+      "size": {
+        "q": "Postoji li ograničenje veličine datoteke?",
+        "a": "Nema ograničenja prijenosa jer se ništa ne prenosi. Video se čita s diska u malim dijelovima; praktično ograničenje su memorija računala i vaše strpljenje s vrlo dugim videima"
+      },
+      "offline": {
+        "q": "Radi li bez interneta?",
+        "a": "Da, nakon učitavanja. Instalirajte ga kao aplikaciju (PWA) i jednom napravite transkripciju dok ste na mreži: model Whisper ostaje u predmemoriji i sve radi izvanmrežno"
+      },
+      "ai": {
+        "q": "Gdje radi UI?",
+        "a": "U vašem pregledniku. Whisper radi s Transformers.js na grafičkoj kartici (WebGPU) ili procesoru (WebAssembly), a prepoznavanje lica koristi MediaPipe. Modeli se preuzimaju jednom, vaš se zvuk nikad ne šalje"
+      }
+    },
+    "final": {
+      "title": "Vaš sljedeći video, uređen za nekoliko minuta",
+      "text": "Bez registracije, bez prijenosa, bez vodenog žiga. Otvorite datoteku i počnite uređivati"
+    },
+    "thumbnail": {
+      "eyebrow": "Novo · Minijature",
+      "title": "I minijatura koja mu pristaje",
+      "text": "Izrađivač minijatura pronalazi najoštrije trenutke vašeg videa. Dodajte veliki naslov s obojenim riječima i preuzmite ga u pravoj veličini",
+      "points": {
+        "moments": "Predloženi najbolji trenuci",
+        "title": "Naslov s istaknutim riječima, 4 stila",
+        "formats": "YouTube 1280×720, Shorts i kvadrat",
+        "local": "Izrađena na vašem uređaju, ništa se ne prenosi"
+      },
+      "cta": "Izradi minijaturu",
+      "mockTitle": "Moj prvi",
+      "mockAccent": "vlog"
+    }
+  },
+  "changelog": {
+    "eyebrow": "Verzije",
+    "title": "Promjene",
+    "lead": "Sve verzije LocalCutVidea, od najnovije",
+    "current": "Koristite verziju",
+    "github": "Pogledaj na GitHubu",
+    "releases": "Izdanja na GitHubu",
+    "latest": "Najnovija",
+    "error": "Popis promjena nije se mogao učitati"
+  },
+  "projects": {
+    "title": "Vaši projekti",
+    "lead": "Projekti se automatski spremaju u ovaj preglednik. Vaši videi ostaju tamo gdje jesu na disku",
+    "resume": "Nastavite gdje ste stali",
+    "reading": "Čitanje videa…",
+    "drop": "Ispustite videe ovdje",
+    "or": "ili",
+    "open": "Otvori videe",
+    "private": "Datoteka se čita lokalno, ništa se ne prenosi",
+    "noFsAccess": "Vaš preglednik ne može pamtiti datoteke između sesija: nakon zatvaranja kartice morat ćete ponovno odabrati video. Chrome ili Edge to izbjegavaju",
+    "recent": "Nedavni projekti",
+    "empty": "Još nema projekata. Otvorite video za početak",
+    "delete": "Izbriši projekt",
+    "confirmDelete": "Izbrisati projekt „{{ name }}”? Video datoteka na disku ostaje netaknuta",
+    "multi": "Više datoteka? Spajaju se u jedan video, redoslijedom naziva",
+    "importFile": "Otvori datoteku projekta (.lcv.json)",
+    "saveFile": "Spremi projekt kao datoteku",
+    "imported": "Projekt otvoren: odaberite njegove videe za nastavak"
+  },
+  "errors": {
+    "notVideo": "Ova datoteka ne izgleda kao video",
+    "codec": "Vaš preglednik ne može dekodirati kodek ovog videa (HEVC/H.265 zahtijeva Chrome ili HEVC proširenje u Edgeu). Pokušajte ga pretvoriti u H.264 MP4",
+    "noVideo": "U ovoj datoteci nije pronađen video zapis",
+    "generic": "Nešto je pošlo po zlu pri čitanju ove datoteke",
+    "transcribe": "Transkripcija nije uspjela. Pokušajte s manjim modelom ili provjerite vezu za prvo preuzimanje",
+    "export": "Izvoz nije uspio",
+    "faces": "Praćenje lica nije uspjelo za ovaj video",
+    "skipped": "Preskočeno (nije se moglo pročitati): {{ names }}",
+    "skippedCodec": "Preskočeno, kodek nije podržan u ovom pregledniku: {{ names }}. Pokušajte Chrome ili pretvorite u H.264 MP4",
+    "notProject": "Ova datoteka nije projekt LocalCutVidea",
+    "demo": "Demo video nije se mogao učitati"
+  },
+  "languages": {
+    "en": "Engleski",
+    "fr": "Francuski",
+    "es": "Španjolski",
+    "it": "Talijanski",
+    "de": "Njemački",
+    "pt": "Portugalski",
+    "nl": "Nizozemski"
+  },
+  "editor": {
+    "back": "Natrag na projekte",
+    "name": "Naziv projekta",
+    "undo": "Poništi",
+    "redo": "Ponovi",
+    "missing": "Ovaj projekt više ne postoji",
+    "save": {
+      "saving": "Spremanje…",
+      "saved": "Spremljeno lokalno",
+      "error": "Nije spremljeno"
+    },
+    "reconnect": {
+      "loading": "Otvaranje videa…",
+      "title": "Ponovno povežite svoje videe",
+      "allow": "Dopusti pristup svima",
+      "select": "Odaberi",
+      "mismatch": "Ovo ne izgleda kao izvorna datoteka („{{ name }}”). Ipak koristiti?",
+      "intro": "Projekt je siguran. Radi vaše privatnosti preglednik ponovno traži dopuštenje prije nego što uređivač može čitati vaše datoteke",
+      "allowOne": "Dopusti",
+      "privacy": "Vaši videi čitaju se tamo gdje se nalaze na disku, nikad se ne kopiraju niti prenose",
+      "status": {
+        "ready": "Povezano",
+        "permission": "Čeka se vaše dopuštenje",
+        "moved": "Nije pronađeno: premješteno ili preimenovano?",
+        "missing": "Ponovno ga odaberite (preglednik ne pamti pristup datotekama)",
+        "loading": "Otvaranje…"
+      }
+    },
+    "preview": {
+      "cut": "Rez",
+      "back": "Natrag 5 s",
+      "play": "Reproduciraj",
+      "pause": "Pauza",
+      "savedHint": "Vrijeme uklonjeno rezovima",
+      "badge": "Lagani pregled · {{ q }}p",
+      "quality": "Kvaliteta pregleda",
+      "qualityHint": "Lakši pregled održava uređivač glatkim. Izvoz uvijek koristi punu kvalitetu"
+    },
+    "timeline": {
+      "title": "Vremenska crta",
+      "silence": "Tišina",
+      "manual": "Ručno",
+      "text": "Tekst",
+      "hint": "Povucite po valnom obliku da odaberete dio, zatim Izreži ili Brzina · kliknite rez da prilagodite rubove · dvostruki klik za uklanjanje",
+      "removeCut": "Ukloni rez",
+      "zoom": "Zum vremenske crte",
+      "analyzing": "Analiza zvuka…",
+      "zoomIn": "Povećaj",
+      "zoomOut": "Smanji",
+      "fit": "Prilagodi",
+      "fitHint": "Prikaži cijeli video (savjet: Ctrl + kotačić za zum)",
+      "manualCut": "Ručno rezanje",
+      "markIn": "Početak",
+      "markOut": "Kraj",
+      "markInHint": "Početak dijela za izrezivanje, na položaju reprodukcije (I)",
+      "markOutHint": "Kraj dijela za izrezivanje, na položaju reprodukcije (O)",
+      "cutMarked": "Izreži",
+      "cutHint": "Ukloni dio između početka i kraja (X)",
+      "clearMarks": "Očisti početak i kraj",
+      "marksMissing": "Najprije postavite početak (I) i kraj (O)",
+      "analysisError": "Zvuk se nije mogao analizirati",
+      "selectedCut": "Odabrani rez",
+      "earlier": "Ranije",
+      "later": "Kasnije",
+      "listen": "Poslušaj rez",
+      "speed": "Brzina",
+      "speedHint": "Ubrzajte ili usporite dio između početka i kraja",
+      "selectedSpeed": "Promjena brzine",
+      "removeSpeed": "Natrag na normalnu brzinu",
+      "listenSpeed": "Reproduciraj promjenu brzine",
+      "selectFirst": "Najprije odaberite dio: povucite po valnom obliku ili postavite Početak i Kraj"
+    },
+    "transcript": {
+      "title": "Transkripcija",
+      "words": "Riječi: {{ count }}",
+      "fillers": "Ukloni poštapalice ({{ count }})",
+      "restore": "Vrati sve",
+      "selected": "Odabrano: {{ count }}",
+      "cut": "Izreži / vrati",
+      "tip": "Kliknite riječ da skočite na nju. Povucite ili Shift + klik za odabir, zatim Delete za izrezivanje ili Ispravi (Enter) za ispravak onoga što je Whisper krivo čuo",
+      "emptyTitle": "Još nema transkripcije",
+      "emptyText": "Transkribirajte video da biste ga uređivali putem teksta i dobili titlove riječ po riječ",
+      "correct": "Ispravi",
+      "correctTitle": "Što je zapravo rečeno?",
+      "correctHint": "Ponovno upišite riječ ili cijelu rečenicu. Vremena i titlovi prilagođavaju se automatski",
+      "apply": "Primijeni"
+    },
+    "transcribe": {
+      "title": "Transkripcija (Whisper)",
+      "hint": "Radi na vašem uređaju. Model se preuzima jednom, a zatim ostaje u predmemoriji",
+      "model": "Model",
+      "models": {
+        "tiny": "Brzi",
+        "base": "Uravnoteženi",
+        "small": "Precizni"
+      },
+      "download": "Jednokratno preuzimanje od {{ size }}",
+      "language": "Govorni jezik",
+      "auto": "Automatsko prepoznavanje",
+      "run": "Transkribiraj",
+      "rerun": "Ponovno transkribiraj sve",
+      "done": "Transkribirano riječi: {{ count }}",
+      "empty": "U ovom videu nije pronađen govor",
+      "stage": {
+        "audio": "Izdvajanje zvuka…",
+        "download": "Preuzimanje modela…",
+        "transcribe": "Transkribiranje…"
+      },
+      "missing": "Transkribiraj nove isječke ({{ count }})",
+      "rerunHint": "Počinje ispočetka s gornjim modelom i jezikom",
+      "confirmAll": "Ponovno transkribirati sve? Riječi koje ste izrezali ili ispravili bit će izgubljene",
+      "detected": "Prepoznati jezik: {{ language }}"
+    },
+    "tabs": {
+      "format": "Format",
+      "cuts": "Rezovi",
+      "captions": "Titlovi",
+      "framing": "Kadriranje",
+      "audio": "Zvuk",
+      "clips": "Isječci",
+      "texts": "Tekstovi"
+    },
+    "format": {
+      "title": "Izlazni format",
+      "hint": "Video se obrezuje da stane. Koristite Kadriranje da pratite govornika",
+      "landscape": "YouTube",
+      "vertical": "TikTok · Reels",
+      "square": "Feed",
+      "source": "Izvor:",
+      "resolution": "Razlučivost",
+      "fps": "Sličica u sekundi",
+      "exportNote": "Razlučivost i broj sličica biraju se pri izvozu",
+      "rotation": "Rotacija",
+      "rotateLeft": "Zakreni ulijevo",
+      "rotateRight": "Zakreni udesno",
+      "rotationHint": "Za video snimljen bočno. Primjenjuje se na sve isječke",
+      "rotatedFaces": "Video zakrenut: ponovno uključite „Prati lice” u Kadriranju"
+    },
+    "cuts": {
+      "title": "Otkrivanje tišine",
+      "hint": "Uklanja stanke. Smanjite prag ako se riječi odsijecaju",
+      "threshold": "Prag",
+      "suggested": "Preporučeno za ovu snimku: {{ value }} dB",
+      "minSilence": "Minimalna tišina",
+      "padding": "Prostor za dah",
+      "detect": "Otkrij i izreži tišine",
+      "detected": "Izrezano tišina: {{ count }}",
+      "count": "rezovi",
+      "removed": "uklonjeno",
+      "final": "konačno trajanje",
+      "clear": "Ukloni sve rezove",
+      "mode": "Traži stanke prema",
+      "modes": {
+        "audio": "Glasnoći",
+        "transcript": "Transkripciji"
+      },
+      "modeHint": "Način transkripcije precizan je čak i uz pozadinsku buku ili glazbu",
+      "modeNeedsTranscript": "Transkribirajte video da se stanke traže prema riječima: preciznije na bučnim mjestima",
+      "preset": "Ritam",
+      "presets": {
+        "gentle": "Prirodan",
+        "normal": "Uravnotežen",
+        "tight": "Dinamičan"
+      },
+      "live": "Rezovi se ažuriraju uživo dok mijenjate postavke",
+      "silentClips": "Isječci bez glasa: {{ count }}. U njima se izrezuje samo stvarno mrtvo vrijeme"
+    },
+    "captions": {
+      "title": "Ugrađeni titlovi",
+      "style": "Stil",
+      "styles": {
+        "karaoke": "Karaoke",
+        "clean": "Čisti",
+        "boxed": "Uokvireni"
+      },
+      "position": "Položaj",
+      "positions": {
+        "top": "Gore",
+        "center": "Sredina",
+        "bottom": "Dolje"
+      },
+      "size": "Veličina",
+      "words": "Riječi po titlu",
+      "uppercase": "Velika slova",
+      "highlight": "Boja isticanja"
+    },
+    "framing": {
+      "title": "Automatsko kadriranje",
+      "hint": "Prati lica kako bi govornik ostao u kadru, idealno za 16:9 → 9:16",
+      "center": "Centrirano",
+      "face": "Prati lice",
+      "analyzing": "Praćenje lica…",
+      "analyze": "Prati lica",
+      "reanalyze": "Ponovno prati lica",
+      "tracked": "Praćeno položaja: {{ count }}",
+      "found": "Lice praćeno: kadar prati govornika",
+      "notFound": "U ovom videu lice nije dosljedno pronađeno",
+      "punch": "Pametni zum",
+      "punchHint": "Izmjenjuje blagi zum na svakom rezu, ili na svakoj rečenici kad nema rezova, kako bi video ostao dinamičan",
+      "zoom": "Jačina zuma",
+      "firstTime": "Odabir „Prati lice” jednom lokalno analizira video",
+      "beatsCuts": "Zum se mijenja {{ count }} puta, na vašim rezovima",
+      "beatsAuto": "Još nema rezova: zum se mijenja {{ count }} puta, na rečenicama ili svake 4 s"
+    },
+    "audio": {
+      "title": "Pozadinska glazba",
+      "hint": "Glazba se automatski stišava dok netko govori (auto-ducking)",
+      "reconnect": "Ponovno poveži „{{ name }}”",
+      "pick": "Odaberi glazbenu datoteku",
+      "enabled": "Uključi u video",
+      "volume": "Glasnoća glazbe",
+      "ducking": "Stišavanje tijekom govora",
+      "duckingHint": "Koliko se glazba stiša kad netko govori"
+    },
+    "export": {
+      "button": "Izvezi",
+      "title": "Izvoz videa",
+      "running": "Izvoz…",
+      "eta": "Još otprilike {{ time }}",
+      "keepOpen": "Ostavite ovu karticu otvorenom. Kodiranje koristi grafičku karticu kad god je moguće",
+      "done": "Izvoz dovršen",
+      "saved": "„{{ name }}” spremljen je na disk za {{ seconds }} s",
+      "downloaded": "„{{ name }}” preuzet je za {{ seconds }} s",
+      "duration": "Trajanje",
+      "from": "od {{ time }}",
+      "streamHint": "Odabrat ćete gdje spremiti MP4. Zapisuje se izravno na disk",
+      "downloadHint": "MP4 se sastavlja lokalno, a zatim preuzima",
+      "start": "Izvezi MP4",
+      "saveProject": "Spremi projekt",
+      "saveProjectHint": "Datoteka .lcv.json s vašim uređivanjem (bez videa), za nastavak na drugom računalu",
+      "projectSaved": "Projekt spremljen kao datoteka .lcv.json"
+    },
+    "clips": {
+      "title": "Isječci",
+      "hint": "Videi se reproduciraju jedan za drugim ovim redoslijedom. Povucite za promjenu redoslijeda: rezovi i riječi prate svoj isječak",
+      "jump": "Idi na ovaj isječak",
+      "up": "Pomakni gore",
+      "down": "Pomakni dolje",
+      "remove": "Ukloni isječak",
+      "add": "Dodaj videe",
+      "summary": "Isječci: {{ count }} · ukupno {{ time }}",
+      "confirmRemove": "Ukloniti „{{ name }}” iz projekta? Njegovi rezovi i riječi također se uklanjaju (Ctrl+Z za poništavanje)",
+      "added": "Dodano isječaka: {{ count }}",
+      "addedTranscribe": "Dodano isječaka: {{ count }}. Ponovno transkribirajte da biste ih titlovali: već transkribirani isječci se zadržavaju",
+      "noVoice": "bez glasa",
+      "voiceOn": "Glas · kliknite ako nitko ne govori",
+      "voiceOff": "Bez glasa · kliknite ako netko govori"
+    },
+    "auto": {
+      "button": "Automatska montaža",
+      "cta": "Automatski montiraj video",
+      "transcribeOnly": "ili samo transkribiraj",
+      "heading": "Neka LocalCutVideo montira vaš video",
+      "lead": "Jednim klikom: uklonjene tišine i oklijevanja, titlovi, kadriranje na govornika i pametni zum. Sve možete promijeniti poslije",
+      "target": "Gdje ćete ga objaviti?",
+      "options": {
+        "silences": "Izreži tišine",
+        "fillers": "Ukloni oklijevanja (ovaj, hmm…)",
+        "captions": "Karaoke titlovi",
+        "framing": "Prati lice",
+        "framingNoCrop": "Nije potrebno: ovaj format prikazuje cijelu sliku",
+        "zoom": "Pametni zum"
+      },
+      "local": "Sve radi na vašem uređaju. Video se nikad ne prenosi",
+      "start": "Pokreni automatsku montažu",
+      "running": "Montiranje vašeg videa…",
+      "done": "Vaš video je montiran!",
+      "view": "Pogledaj rezultat",
+      "undo": "Poništi automatsku montažu",
+      "undone": "Projekt je vraćen u stanje prije automatske montaže",
+      "summary": {
+        "cuts": "rezovi",
+        "removed": "uklonjeno",
+        "words": "titlovanih riječi",
+        "silent": "Isječci bez glasa: {{ count }}. Izrezano je samo stvarno mrtvo vrijeme"
+      },
+      "steps": {
+        "analyze": "Analiza zvuka",
+        "transcribe": "Transkripcija govora",
+        "fillers": "Uklanjanje oklijevanja",
+        "silences": "Izrezivanje tišina",
+        "framing": "Praćenje lica",
+        "style": "Titlovi i pametni zum",
+        "voice": "Prepoznavanje glasova"
+      },
+      "status": {
+        "skipped": "preskočeno",
+        "error": "neuspjelo"
+      },
+      "voice": {
+        "title": "Govori li netko u videu?",
+        "auto": "Auto",
+        "yes": "Da",
+        "no": "Ne",
+        "detectedYes": "Prepoznato: netko govori",
+        "detectedNo": "Prepoznato: nema glasa",
+        "hint": "Bez glasa: bez transkripcije i titlova, izrezuje se samo stvarno mrtvo vrijeme"
+      }
+    },
+    "mix": {
+      "title": "Zvuk videa",
+      "hint": "Pojačajte ili stišajte zvuk svojih isječaka",
+      "volume": "Glasnoća",
+      "mute": "Isključi zvuk",
+      "unmute": "Uključi zvuk",
+      "volumeHint": "Primjenjuje se na pregled i izvoz",
+      "boostHint": "Iznad 100 % limiter sprječava izobličenje",
+      "normalize": "Ujednači isječke",
+      "normalizeHint": "Svi isječci iste glasnoće, snimljeni izbliza ili izdaleka",
+      "denoise": "Smanji pozadinsku buku",
+      "denoiseHint": "Jasniji glas (vjetar, šum, ventilatori). Primjenjuje se pri izvozu, na isječke s glasom. Najprije poslušajte",
+      "listen": "Poslušaj 8 s rezultata",
+      "stopListening": "Prestani slušati",
+      "preparing": "Priprema…"
+    },
+    "thumbnail": "Minijatura",
+    "transition": {
+      "title": "Prijelaz na rezovima",
+      "none": "Oštar rez",
+      "dip": "Brzo pretapanje",
+      "black": "Zatamnjenje",
+      "hint": "Reproducira se na svakom rezu i promjeni isječka (a sa zatamnjenjem i na početku i kraju). Vidljivo tijekom reprodukcije"
+    },
+    "texts": {
+      "title": "Tekstovi preko videa",
+      "hint": "Naslovi i bilješke prikazani na položaju reprodukcije. Stavite riječi između zvjezdica da ih obojite",
+      "add": "Dodaj tekst na položaju reprodukcije",
+      "default": "Vaš *tekst*",
+      "timing": "Prikazano",
+      "startHere": "Počni ovdje",
+      "endHere": "Završi ovdje",
+      "remove": "Ukloni ovaj tekst"
+    },
+    "background": {
+      "title": "Pozadina",
+      "hint": "Zamućuje pozadinu iza osobe, koja ostaje oštra. Izračunava se na vašem uređaju",
+      "none": "Oštra",
+      "blur": "Zamućena",
+      "strength": "Jačina zamućenja",
+      "error": "Zamućenje pozadine nije se moglo pokrenuti na ovom uređaju"
+    }
+  },
+  "legal": {
+    "updated": "Posljednje ažuriranje: 1. studenoga 2026.",
+    "contact": "Kontakt",
+    "nav": {
+      "notice": "Pravna obavijest",
+      "privacy": "Privatnost",
+      "terms": "Uvjeti korištenja"
+    },
+    "notice": {
+      "title": "Pravna obavijest",
+      "intro": "Podaci koje zahtijeva francusko pravo (članak 6. LCEN-a, zakon br. 2004-575 od 21. lipnja 2004.) o izdavaču i pružatelju smještaja ove web-lokacije.",
+      "sections": [
+        {
+          "title": "Izdavač",
+          "body": [
+            "Web-lokaciju localcutvideo.mbonnici.fr („LocalCutVideo”) izdaje Maxence Bonnici, privatna osoba, u nekomercijalne svrhe.",
+            "Odgovorna osoba: Maxence Bonnici.",
+            "Kontakt: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Smještaj",
+          "body": [
+            "Web-lokaciju smješta sam izdavač, Maxence Bonnici, na osobnom poslužitelju, a postavlja se pomoću platforme Coolify.",
+            "Kontakt: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Intelektualno vlasništvo",
+          "body": [
+            "Izvorni kod LocalCutVidea otvoren je i objavljen pod licencom MIT na [GitHubu](https://github.com/ImMaxence/LocalCutVideo).",
+            "Komponente trećih strana, modeli UI i fontovi koje aplikacija koristi ostaju vlasništvo svojih autora i koriste se prema vlastitim licencama, navedenima u [uvjetima korištenja](/terms). Navedeni zaštitni znakovi (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) pripadaju svojim vlasnicima."
+          ]
+        },
+        {
+          "title": "Odgovornost",
+          "body": [
+            "Izdavač se trudi da web-lokacija bude dostupna, a podaci točni, ali ne može jamčiti ni jedno ni drugo. Korištenje aplikacije uređeno je [uvjetima korištenja](/terms)."
+          ]
+        },
+        {
+          "title": "Osobni podaci",
+          "body": [
+            "LocalCutVideo ne prikuplja nikakve osobne podatke: videi se obrađuju samo na vašem uređaju. Pojedinosti su u [pravilima privatnosti](/privacy)."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Pravila privatnosti",
+      "intro": "LocalCutVideo je napravljen tako da vaši videi nikad ne napuštaju vaš uređaj. Ova stranica jednostavno objašnjava što se obrađuje i gdje.",
+      "sections": [
+        {
+          "title": "Ukratko",
+          "body": [
+            "Bez prijenosa: vaši videi, zvuk i transkripcije obrađuju se u vašem pregledniku i nikad se ne šalju izdavaču ni bilo kome drugome.",
+            "Bez računa, bez kolačića, bez statistike, bez oglasa."
+          ]
+        },
+        {
+          "title": "Što ostaje na vašem uređaju",
+          "body": [
+            "Video i audio datoteke koje otvorite čitaju se izravno s diska. Analizu, transkripciju (Whisper), praćenje lica i izvoz lokalno izračunava vaš preglednik.",
+            "Vaši projekti (rezovi, transkripcija, postavke) spremaju se u lokalnu bazu podataka preglednika (IndexedDB), zajedno s minijaturom i predmemorijom analiza. Izdavač im nema pristup. Projekt možete izbrisati na stranici projekata ili izbrisati sve brisanjem podataka ove web-lokacije u postavkama preglednika."
+          ]
+        },
+        {
+          "title": "Lokalna pohrana",
+          "body": [
+            "Aplikacija sprema vaše postavke sučelja (jezik, tema, zadnji otvoreni projekt) u lokalnu pohranu preglednika, a svoje datoteke i preuzete modele UI čuva u predmemoriji preglednika kako bi radila izvanmrežno. To je nužno za uslugu, nikad se ne koristi za vaše praćenje i stoga ne zahtijeva traku za privolu."
+          ]
+        },
+        {
+          "title": "Poslužitelj",
+          "body": [
+            "Poslužitelj samo isporučuje datoteke aplikacije i ne vodi zapise pristupa. Kao svaki web-poslužitelj, tehnički prima vašu IP adresu kako bi odgovarao na zahtjeve, ali je ne pohranjuje."
+          ]
+        },
+        {
+          "title": "Treće strane",
+          "body": [
+            "Hugging Face: model Whisper isporučuje ova web-lokacija, kao i ostatak aplikacije. Samo ako ovdje nije dostupan, preuzima se umjesto toga s huggingface.co; Hugging Face tada prima vašu IP adresu i uobičajene podatke o pregledniku, ali nikad vaš zvuk. Pogledajte njihova [pravila privatnosti](https://huggingface.co/privacy).",
+            "GitHub: samo ako slijedite poveznicu na repozitorij izvornog koda.",
+            "Nijedna druga treća strana ne kontaktira se: stroga Content-Security-Policy tehnički sprječava stranicu da se poveže bilo gdje drugdje."
+          ]
+        },
+        {
+          "title": "Vaša prava",
+          "body": [
+            "Prema GDPR-u imate pravo na pristup, ispravak i brisanje svojih podataka te pravo na prigovor na njihovu obradu. Budući da izdavač nema nikakvih podataka o vama, obično nema čemu pristupiti, ali bilo koje pitanje možete postaviti na maxence.bonnici@outlook.fr. Također možete podnijeti pritužbu CNIL-u ([cnil.fr](https://www.cnil.fr)) ili tijelu za zaštitu podataka u svojoj zemlji."
+          ]
+        },
+        {
+          "title": "Promjene",
+          "body": [
+            "Ova se pravila mogu ažurirati kako se aplikacija razvija. Datum posljednjeg ažuriranja naveden je na vrhu ove stranice."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Uvjeti korištenja",
+      "intro": "Korištenjem LocalCutVidea prihvaćate ove uvjete. Kratki su jer je usluga jednostavna: besplatan alat koji radi u vašem pregledniku.",
+      "sections": [
+        {
+          "title": "Usluga",
+          "body": [
+            "LocalCutVideo je besplatna aplikacija za uređivanje videa koja radi u potpunosti u vašem web-pregledniku. Pruža se besplatno, bez računa, i može se promijeniti, prekinuti ili prestati u bilo kojem trenutku bez najave."
+          ]
+        },
+        {
+          "title": "Vaš sadržaj",
+          "body": [
+            "Ostajete jedini vlasnik i jedini odgovorni za videe, zvukove i glazbu koje uređujete i objavljujete. Morate imati potrebna prava (autorska prava, glazbene licence, pravo na sliku snimljenih osoba).",
+            "Aplikacija se ne smije koristiti u nezakonite svrhe."
+          ]
+        },
+        {
+          "title": "Automatske značajke",
+          "body": [
+            "Transkripcija, titlovi, otkrivanje tišine i automatsko kadriranje izrađuju se automatski i mogu sadržavati pogreške. Provjerite rezultat prije objave."
+          ]
+        },
+        {
+          "title": "Vaše datoteke i projekti",
+          "body": [
+            "Aplikacija nikad ne mijenja vaše izvorne datoteke. Projekti se pohranjuju u pregledniku i mogu se izgubiti ako se njegovi podaci izbrišu ili ako preglednik oslobodi prostor: uvijek čuvajte izvorne datoteke."
+          ]
+        },
+        {
+          "title": "Jamstvo i odgovornost",
+          "body": [
+            "Softver se pruža „takav kakav jest”, bez ikakvog jamstva, pod licencom MIT. U mjeri u kojoj to zakon dopušta, izdavač ne odgovara za štetu nastalu korištenjem ili nemogućnošću korištenja aplikacije (gubitak podataka, pogreške izvoza, nedostupnost…)."
+          ]
+        },
+        {
+          "title": "Otvoreni kod i komponente trećih strana",
+          "body": [
+            "Izvorni kod dostupan je pod licencom MIT na [GitHubu](https://github.com/ImMaxence/LocalCutVideo).",
+            "LocalCutVideo se oslanja na: Mediabunny (MPL-2.0), Transformers.js i ONNX Runtime (Apache-2.0 i MIT), OpenAI-jeve modele Whisper (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) te fontove Inter i Montserrat (SIL Open Font License)."
+          ]
+        },
+        {
+          "title": "Mjerodavno pravo",
+          "body": [
+            "Na ove se uvjete primjenjuje francusko pravo. Pitanja: maxence.bonnici@outlook.fr."
+          ]
+        }
+      ]
+    }
+  },
+  "thumbnail": {
+    "eyebrow": "Izrađivač minijatura",
+    "title": "Minijature na koje se želi kliknuti",
+    "lead": "Odaberite najbolji trenutak svog videa, dodajte upečatljiv naslov i preuzmite sliku spremnu za YouTube, Shorts ili Instagram. Sve se odvija na vašem uređaju",
+    "pick": "Ispustite video ili sliku",
+    "pickHint": "MP4, MOV, WebM, JPG, PNG… datoteka ostaje na vašem uređaju",
+    "choose": "Odaberi datoteku",
+    "local": "Ništa se ne prenosi: slika se izrađuje u vašem pregledniku",
+    "permissionTitle": "Dopustite pristup videu projekta",
+    "permissionText": "Vaš preglednik traži potvrdu prije ponovnog čitanja datoteke s uređaja",
+    "permission": "Dopusti pristup",
+    "back": "Natrag na uređivač",
+    "dragHint": "Povucite sliku da je prekadrirate",
+    "frame": "Sličica videa",
+    "prevFrame": "Prethodna sličica",
+    "nextFrame": "Sljedeća sličica",
+    "moments": "Najbolji trenuci",
+    "other": "Odaberi drugu datoteku",
+    "format": "Format",
+    "formats": {
+      "landscape": "YouTube",
+      "vertical": "Shorts · TikTok",
+      "square": "Instagram"
+    },
+    "text": "Naslov",
+    "textPlaceholder": "Vaš privlačan naslov",
+    "defaultText": "Vaš *naslov* ovdje",
+    "accentHint": "Stavite riječi između zvjezdica da ih obojite: *ovako*",
+    "size": "Veličina teksta",
+    "position": "Položaj",
+    "positions": {
+      "top": "Gore",
+      "center": "Sredina",
+      "bottom": "Dolje"
+    },
+    "alignCenter": "Centrirano",
+    "alignLeft": "Lijevo",
+    "uppercase": "Velika slova",
+    "tilt": "Nakošeni tekst",
+    "style": "Stil naslova",
+    "styles": {
+      "outline": "Obris",
+      "shadow": "Sjena",
+      "box": "Traka",
+      "highlight": "Marker"
+    },
+    "color": "Boja teksta",
+    "accent": "Boja istaknutih riječi",
+    "image": "Slika",
+    "zoom": "Zum",
+    "brightness": "Svjetlina",
+    "contrast": "Kontrast",
+    "saturation": "Zasićenost",
+    "shade": "Zatamni rubove",
+    "reset": "Vrati",
+    "downloadJpg": "Preuzmi JPG",
+    "downloadPng": "Preuzmi PNG",
+    "sizeInfo": "{{ width }} × {{ height }} px · JPG je najbolji za YouTube (ispod 2 MB)",
+    "saved": "Spremljeno: {{ name }}",
+    "loadError": "Ovaj projekt nije se mogao otvoriti",
+    "readError": "Ova datoteka nije se mogla pročitati"
+  },
+  "seo": {
+    "home": {
+      "title": "LocalCutVideo — Besplatan uređivač videa u pregledniku, ništa se ne prenosi",
+      "description": "Uređujte videe u pregledniku: automatsko izrezivanje tišina, titlovi pomoću UI, kadriranje na lice za TikTok i Shorts, minijature. Besplatno i otvorenog koda, vaši videi nikad ne napuštaju vaše računalo"
+    },
+    "thumbnail": {
+      "title": "Besplatan izrađivač YouTube minijatura — LocalCutVideo",
+      "description": "Izradite minijaturu za YouTube, Shorts ili Instagram iz svog videa: predloženi najbolji trenuci, veliki naslov s obojenim riječima, JPG ili PNG. Besplatno, u pregledniku, ništa se ne prenosi"
+    },
+    "changelog": {
+      "title": "Promjene — LocalCutVideo",
+      "description": "Što je novo u LocalCutVideu, verziju po verziju"
+    },
+    "legal": {
+      "title": "Pravna obavijest — LocalCutVideo",
+      "description": "Izdavač i smještaj LocalCutVidea"
+    },
+    "privacy": {
+      "title": "Pravila privatnosti — LocalCutVideo",
+      "description": "LocalCutVideo ništa ne prenosi: vaši videi, transkripcije i projekti ostaju na vašem uređaju"
+    },
+    "terms": {
+      "title": "Uvjeti korištenja — LocalCutVideo",
+      "description": "Uvjeti korištenja LocalCutVidea, besplatnog uređivača videa otvorenog koda"
+    },
+    "app": {
+      "title": "Projekti — LocalCutVideo",
+      "description": "Vaši video projekti, spremljeni u pregledniku"
+    },
+    "editor": {
+      "title": "Uređivač — LocalCutVideo",
+      "description": "Uređivač LocalCutVidea"
+    }
+  },
+  "tour": {
+    "label": "Vodič",
+    "help": "Vodič",
+    "count": "Korak {{ n }} od {{ total }}",
+    "skip": "Preskoči vodič",
+    "prev": "Natrag",
+    "next": "Dalje",
+    "done": "Krenimo!",
+    "steps": {
+      "auto": {
+        "title": "Jedan klik: automatska montaža",
+        "text": "LocalCutVideo montira video za vas: uklonjene tišine i oklijevanja, titlovi, kadriranje i zum. Sve možete promijeniti poslije"
+      },
+      "preview": {
+        "title": "Pregled",
+        "text": "Ono što vidite točno je ono što će se izvesti. Kliknite ga ili pritisnite razmaknicu za reprodukciju ili pauzu"
+      },
+      "timeline": {
+        "title": "Vremenska crta",
+        "text": "Kliknite za kretanje kroz video. Povucite po valnom obliku da odaberete dio"
+      },
+      "cut": {
+        "title": "Izrežite ili promijenite brzinu",
+        "text": "S odabranim dijelom Izreži (X) ga uklanja, a Brzina ga reproducira brže ili sporije. Ctrl+Z poništava bilo što"
+      },
+      "transcript": {
+        "title": "Uređivanje putem teksta",
+        "text": "Nakon transkripcije brisanje riječi izrezuje video. Možete i ispraviti ono što je UI krivo čula"
+      },
+      "settings": {
+        "title": "Sve postavke",
+        "text": "Format (16:9, 9:16, kvadrat), rezovi i prijelazi, titlovi, tekstovi, kadriranje i zamućenje, zvuk i glazba"
+      },
+      "thumbnail": {
+        "title": "Minijatura",
+        "text": "Izradite minijaturu svog videa iz njegovih najboljih trenutaka"
+      },
+      "export": {
+        "title": "Izvoz",
+        "text": "Spremite video kao MP4. Sve se odvija na vašem uređaju, ništa se ne prenosi"
+      }
+    }
+  }
+}

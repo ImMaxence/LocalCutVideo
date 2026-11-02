@@ -1,0 +1,895 @@
+{
+  "common": {
+    "videoFiles": "Videobestanden",
+    "audioFiles": "Audiobestanden",
+    "cancel": "Annuleren",
+    "close": "Sluiten",
+    "retry": "Opnieuw proberen",
+    "none": "Geen",
+    "remove": "Verwijderen"
+  },
+  "nav": {
+    "features": "Functies",
+    "privacy": "Privacy",
+    "faq": "FAQ",
+    "changelog": "Wijzigingen",
+    "language": "Taal",
+    "searchLanguage": "Taal zoeken",
+    "noLanguage": "Geen taal gevonden",
+    "install": "App installeren",
+    "open": "Editor openen",
+    "menu": "Menu openen",
+    "close": "Menu sluiten",
+    "thumbnail": "Thumbnails"
+  },
+  "theme": {
+    "system": "Systeem",
+    "light": "Licht",
+    "dark": "Donker",
+    "label": "Thema"
+  },
+  "footer": {
+    "tagline": "Een gratis, open-source video-editor die volledig in je browser draait. Je bestanden verlaten nooit je computer",
+    "issues": "Een probleem melden",
+    "noTracking": "Geen cookies, geen tracking",
+    "product": "Product",
+    "legal": "Juridisch"
+  },
+  "pwa": {
+    "update": "Er is een nieuwe versie beschikbaar",
+    "reload": "Herladen"
+  },
+  "landing": {
+    "hero": {
+      "badgeLocal": "100% lokaal, niets geüpload",
+      "badgeOpen": "Gratis en open source",
+      "title1": "Bewerk je video's",
+      "title2": "Niets verlaat je computer",
+      "lead": "LocalCutVideo knipt stiltes weg, transcribeert met Whisper, brandt karaoke-ondertitels in en zet 16:9 om naar 9:16, volledig in je browser. Geen upload, geen account, geen server",
+      "cta": "Editor openen",
+      "github": "Bekijken op GitHub",
+      "hint": "Werkt het best in Chrome of Edge op een computer",
+      "demo": "Probeer met een demovideo"
+    },
+    "mock": {
+      "w1": "Dus vandaag",
+      "filler": "eh,",
+      "w2": "laat ik jullie zien",
+      "w3": "hoe het werkt",
+      "line2": "Alles draait op je eigen computer, zelfs de AI",
+      "line3": "Verwijder een woord en de video wordt geknipt",
+      "cap1": "Dit blijft op je",
+      "cap2": "computer"
+    },
+    "stats": {
+      "upload": "bytes geüpload",
+      "local": "verwerkt op je apparaat",
+      "languages": "interfacetalen",
+      "gpu": "versnelde AI en codering"
+    },
+    "how": {
+      "eyebrow": "Hoe het werkt",
+      "title": "Van ruwe opnames naar een video klaar om te posten in drie stappen",
+      "open": {
+        "title": "Open een video",
+        "text": "Kies een bestand op je schijf. Het wordt ter plaatse gelezen: geen kopie, geen upload, zelfs bij bestanden van meerdere gigabytes"
+      },
+      "edit": {
+        "title": "Laat de editor het werk doen",
+        "text": "Stiltes worden gedetecteerd, spraak wordt woord voor woord getranscribeerd en gezichten worden gevolgd, allemaal lokaal. Verbeter alles door de tekst te bewerken"
+      },
+      "export": {
+        "title": "Exporteer de MP4",
+        "text": "Kies 16:9, 9:16 of 1:1. De video wordt gecodeerd door je videokaart en direct naar je schijf geschreven"
+      }
+    },
+    "features": {
+      "eyebrow": "Functies",
+      "title": "Alles wat je nodig hebt voor talking-head video's",
+      "lead": "Gemaakt voor makers op YouTube, TikTok, Reels en Shorts die hun ruwe opnames liever nergens uploaden",
+      "silences": {
+        "title": "Stiltes automatisch knippen",
+        "text": "Detecteert pauzes aan de hand van het geluidsvolume en verwijdert ze, met instelbare drempel, minimale duur en ademruimte"
+      },
+      "textEdit": {
+        "title": "Bewerken via tekst",
+        "text": "Whisper geeft elk woord een tijdstempel. Verwijder woorden in het transcript en het bijbehorende stuk video wordt geknipt"
+      },
+      "captions": {
+        "title": "Karaoke-ondertitels",
+        "text": "Woord voor woord geanimeerde ondertitels ingebrand in de video, in karaoke-, strakke of kaderstijl, met jouw accentkleur"
+      },
+      "framing": {
+        "title": "Automatische kadrering 16:9 → 9:16",
+        "text": "Gezichtsherkenning houdt de spreker in beeld wanneer je een liggende video omzet naar een staande"
+      },
+      "zoom": {
+        "title": "Slimme zoom",
+        "text": "Afwisselende inzoomeffecten bij elke knip laten jump cuts bewust ogen en houden kijkers vast"
+      },
+      "ducking": {
+        "title": "Geluid en muziek",
+        "text": "Zet het volume hoger, maak je clips even luid en voeg achtergrondmuziek toe die vanzelf zachter wordt zodra iemand praat"
+      },
+      "recovery": {
+        "title": "Herstel na een crash",
+        "text": "Elke wijziging wordt direct in je browser opgeslagen. Open het tabblad opnieuw en ga precies verder waar je was gebleven"
+      },
+      "offline": {
+        "title": "Werkt offline",
+        "text": "Installeer het als app. Zodra het AI-model is gedownload, werkt de hele editor zonder internetverbinding"
+      },
+      "export": {
+        "title": "Snelle hardware-export",
+        "text": "De codering gebruikt WebCodecs, de video-encoder die in je browser en videokaart zit, in plaats van trage softwarecodering"
+      },
+      "clips": {
+        "title": "Meerdere clips samenvoegen",
+        "text": "Sleep meerdere takes tegelijk: ze worden samengevoegd tot één video, in de volgorde die je kiest, met een gedeelde tijdlijn en transcript"
+      },
+      "inputs": {
+        "title": "MP4, MOV, WebM, MKV",
+        "text": "Opent de bestanden van je telefoon en camera, ook HEVC-video's van een iPhone als je browser ze kan decoderen"
+      },
+      "languages": {
+        "title": "Meertalig",
+        "text": "De interface spreekt {{ count }} talen en Whisper transcribeert er tientallen meer, met automatische taalherkenning"
+      }
+    },
+    "privacy": {
+      "eyebrow": "Privacy",
+      "title": "Niets geüpload, zo ontworpen",
+      "lead": "Je video wordt direct van je schijf gelezen. Audioanalyse, transcriptie, gezichtsherkenning en codering draaien allemaal in achtergrondthreads (Web Workers) op je eigen computer. Er is simpelweg geen server om je opnames naartoe te sturen",
+      "upload": "Nooit een upload: het bestand verlaat nooit je computer",
+      "account": "Geen account, geen cookies, geen statistieken",
+      "csp": "Een strikte Content-Security-Policy laat de pagina alleen met deze site praten, die ook de AI-modellen levert (Hugging Face is slechts een reserve)",
+      "storage": "Projecten worden opgeslagen in de lokale database van je browser (IndexedDB) en kunnen op elk moment worden verwijderd",
+      "diagram": {
+        "machine": "Je computer",
+        "file": "Videobestand",
+        "browser": "Je browser",
+        "upload": "Upload naar een server",
+        "model": "Download van het AI-model (eenmalig, in cache)"
+      }
+    },
+    "support": {
+      "eyebrow": "Compatibiliteit",
+      "title": "Browserondersteuning",
+      "ok": "Volledig",
+      "partial": "Gedeeltelijk",
+      "full": "Alles, inclusief herstel na een crash en de export die direct naar schijf wordt geschreven",
+      "firefox": "Bewerken en exporteren werken. Na het sluiten van het tabblad moet je de video opnieuw selecteren",
+      "safari": "Alleen recente versies. Selecteer de video opnieuw na het herladen; de export wordt gedownload",
+      "mobile": "Telefoons en tablets",
+      "mobileText": "Werkt voor korte clips, maar door geheugenlimieten zijn lange video's onbetrouwbaar"
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "free": {
+        "q": "Is het echt gratis? Wat is het addertje?",
+        "a": "Het is gratis en open source. Omdat al het werk op je eigen computer gebeurt, zijn er geen serverkosten te betalen, dus is er niets om je te verkopen en geen gegevens om te verzamelen"
+      },
+      "formats": {
+        "q": "Welke videoformaten kan ik openen?",
+        "a": "MP4, MOV, WebM en MKV, zolang je browser de codec kan decoderen (H.264, HEVC, VP9, AV1, afhankelijk van je browser en systeem). De export is een MP4-bestand"
+      },
+      "browsers": {
+        "q": "Waarom Chrome of Edge?",
+        "a": "Die ondersteunen de File System Access API, waarmee de editor je video na het herladen opnieuw kan openen en de export direct naar schijf kan schrijven. Andere browsers werken ook, met een paar klikken extra"
+      },
+      "size": {
+        "q": "Is er een maximale bestandsgrootte?",
+        "a": "Er is geen uploadlimiet, want er wordt niets geüpload. De video wordt in kleine stukjes van de schijf gelezen; de praktische grens is het geheugen van je computer en je geduld bij zeer lange video's"
+      },
+      "offline": {
+        "q": "Werkt het zonder internet?",
+        "a": "Ja, zodra het geladen is. Installeer het als app (PWA) en transcribeer één keer terwijl je online bent: het Whisper-model staat dan in de cache en alles werkt offline"
+      },
+      "ai": {
+        "q": "Waar draait de AI?",
+        "a": "In je browser. Whisper draait met Transformers.js op je videokaart (WebGPU) of processor (WebAssembly), en de gezichtsherkenning gebruikt MediaPipe. De modellen worden één keer gedownload, je audio wordt nooit verstuurd"
+      }
+    },
+    "final": {
+      "title": "Je volgende video, bewerkt in een paar minuten",
+      "text": "Geen registratie, geen upload, geen watermerk. Open een bestand en begin met bewerken"
+    },
+    "thumbnail": {
+      "eyebrow": "Nieuw · Thumbnails",
+      "title": "En de bijpassende thumbnail",
+      "text": "De thumbnailmaker vindt de scherpste momenten van je video. Voeg een grote titel met gekleurde woorden toe en download hem in het juiste formaat",
+      "points": {
+        "moments": "Beste momenten voorgesteld",
+        "title": "Titel met gemarkeerde woorden, 4 stijlen",
+        "formats": "YouTube 1280×720, Shorts en vierkant",
+        "local": "Gemaakt op je apparaat, niets geüpload"
+      },
+      "cta": "Thumbnail maken",
+      "mockTitle": "Mijn eerste",
+      "mockAccent": "vlog"
+    }
+  },
+  "changelog": {
+    "eyebrow": "Versies",
+    "title": "Wijzigingen",
+    "lead": "Elke versie van LocalCutVideo, de nieuwste eerst",
+    "current": "Je gebruikt",
+    "github": "Bekijken op GitHub",
+    "releases": "Releases op GitHub",
+    "latest": "Nieuwste",
+    "error": "De wijzigingen konden niet worden geladen"
+  },
+  "projects": {
+    "title": "Je projecten",
+    "lead": "Projecten worden automatisch in deze browser opgeslagen. Je video's blijven waar ze staan op je schijf",
+    "resume": "Verdergaan waar je was gebleven",
+    "reading": "Video wordt gelezen…",
+    "drop": "Sleep je video's hierheen",
+    "or": "of",
+    "open": "Video's openen",
+    "private": "Het bestand wordt lokaal gelezen, er wordt niets geüpload",
+    "noFsAccess": "Je browser kan bestanden niet onthouden tussen sessies: na het sluiten van het tabblad moet je de video opnieuw selecteren. Chrome of Edge hebben dit probleem niet",
+    "recent": "Recente projecten",
+    "empty": "Nog geen projecten. Open een video om te beginnen",
+    "delete": "Project verwijderen",
+    "confirmDelete": "Het project ‘{{ name }}’ verwijderen? Het videobestand op je schijf blijft ongewijzigd",
+    "multi": "Meerdere bestanden? Ze worden samengevoegd tot één video, op volgorde van naam",
+    "importFile": "Een projectbestand openen (.lcv.json)",
+    "saveFile": "Het project als bestand opslaan",
+    "imported": "Project geopend: selecteer de video's om verder te gaan"
+  },
+  "errors": {
+    "notVideo": "Dit bestand lijkt geen video te zijn",
+    "codec": "Je browser kan de codec van deze video niet decoderen (HEVC/H.265 vereist Chrome, of de HEVC-extensie in Edge). Probeer hem om te zetten naar H.264 MP4",
+    "noVideo": "Er is geen videospoor gevonden in dit bestand",
+    "generic": "Er ging iets mis bij het lezen van dit bestand",
+    "transcribe": "De transcriptie is mislukt. Probeer een kleiner model of controleer je verbinding voor de eerste download",
+    "export": "De export is mislukt",
+    "faces": "Gezichtsherkenning is mislukt op deze video",
+    "skipped": "Overgeslagen (konden niet worden gelezen): {{ names }}",
+    "skippedCodec": "Overgeslagen, codec niet ondersteund door deze browser: {{ names }}. Probeer Chrome, of zet ze om naar H.264 MP4",
+    "notProject": "Dit bestand is geen LocalCutVideo-project",
+    "demo": "De demovideo kon niet worden geladen"
+  },
+  "languages": {
+    "en": "Engels",
+    "fr": "Frans",
+    "es": "Spaans",
+    "it": "Italiaans",
+    "de": "Duits",
+    "pt": "Portugees",
+    "nl": "Nederlands"
+  },
+  "editor": {
+    "back": "Terug naar projecten",
+    "name": "Projectnaam",
+    "undo": "Ongedaan maken",
+    "redo": "Opnieuw",
+    "missing": "Dit project bestaat niet meer",
+    "save": {
+      "saving": "Opslaan…",
+      "saved": "Lokaal opgeslagen",
+      "error": "Niet opgeslagen"
+    },
+    "reconnect": {
+      "loading": "Video wordt geopend…",
+      "title": "Koppel je video's opnieuw",
+      "allow": "Toegang tot alles toestaan",
+      "select": "Selecteren",
+      "mismatch": "Dit lijkt niet het originele bestand (‘{{ name }}’). Toch gebruiken?",
+      "intro": "Het project is veilig. Voor je privacy vraagt de browser opnieuw toestemming voordat de editor je bestanden mag lezen",
+      "allowOne": "Toestaan",
+      "privacy": "Je video's worden gelezen waar ze staan op je schijf, nooit gekopieerd of geüpload",
+      "status": {
+        "ready": "Gekoppeld",
+        "permission": "Wacht op je toestemming",
+        "moved": "Niet gevonden: verplaatst of hernoemd?",
+        "missing": "Selecteer opnieuw (je browser onthoudt de toegang tot bestanden niet)",
+        "loading": "Openen…"
+      }
+    },
+    "preview": {
+      "cut": "Knip",
+      "back": "5 s terug",
+      "play": "Afspelen",
+      "pause": "Pauzeren",
+      "savedHint": "Tijd verwijderd door knippen",
+      "badge": "Lichte preview · {{ q }}p",
+      "quality": "Kwaliteit van de preview",
+      "qualityHint": "Een lichtere preview houdt de editor soepel. De export gebruikt altijd de volle kwaliteit"
+    },
+    "timeline": {
+      "title": "Tijdlijn",
+      "silence": "Stilte",
+      "manual": "Handmatig",
+      "text": "Tekst",
+      "hint": "Sleep over de golfvorm om een stuk te selecteren, daarna Knippen of Snelheid · klik op een knip om de randen aan te passen · dubbelklik om te verwijderen",
+      "removeCut": "Knip verwijderen",
+      "zoom": "Zoom van de tijdlijn",
+      "analyzing": "Audio wordt geanalyseerd…",
+      "zoomIn": "Inzoomen",
+      "zoomOut": "Uitzoomen",
+      "fit": "Passend",
+      "fitHint": "Toon de hele video (tip: Ctrl + scrollwiel om te zoomen)",
+      "manualCut": "Handmatig knippen",
+      "markIn": "Begin",
+      "markOut": "Einde",
+      "markInHint": "Begin van het stuk om te knippen, bij de afspeelkop (I)",
+      "markOutHint": "Einde van het stuk om te knippen, bij de afspeelkop (O)",
+      "cutMarked": "Knippen",
+      "cutHint": "Verwijder het stuk tussen begin en einde (X)",
+      "clearMarks": "Begin en einde wissen",
+      "marksMissing": "Stel eerst een begin (I) en een einde (O) in",
+      "analysisError": "De audio kon niet worden geanalyseerd",
+      "selectedCut": "Geselecteerde knip",
+      "earlier": "Eerder",
+      "later": "Later",
+      "listen": "Knip beluisteren",
+      "speed": "Snelheid",
+      "speedHint": "Het stuk tussen begin en einde versnellen of vertragen",
+      "selectedSpeed": "Snelheidswijziging",
+      "removeSpeed": "Terug naar normale snelheid",
+      "listenSpeed": "Snelheidswijziging afspelen",
+      "selectFirst": "Selecteer eerst een stuk: sleep over de golfvorm, of stel Begin en Einde in"
+    },
+    "transcript": {
+      "title": "Transcript",
+      "words": "{{ count }} woorden",
+      "fillers": "Stopwoorden verwijderen ({{ count }})",
+      "restore": "Alles herstellen",
+      "selected": "{{ count }} geselecteerd",
+      "cut": "Knippen / herstellen",
+      "tip": "Klik op een woord om ernaartoe te springen. Sleep of shift-klik om te selecteren, dan Delete om te knippen of Corrigeren (Enter) om te verbeteren wat Whisper verkeerd verstond",
+      "emptyTitle": "Nog geen transcript",
+      "emptyText": "Transcribeer de video om hem via tekst te bewerken en woord-voor-woord-ondertitels te krijgen",
+      "correct": "Corrigeren",
+      "correctTitle": "Wat werd er echt gezegd?",
+      "correctHint": "Typ een woord of een hele zin opnieuw. Timing en ondertitels passen zich automatisch aan",
+      "apply": "Toepassen"
+    },
+    "transcribe": {
+      "title": "Transcriptie (Whisper)",
+      "hint": "Draait op je apparaat. Het model wordt één keer gedownload en daarna in de cache bewaard",
+      "model": "Model",
+      "models": {
+        "tiny": "Snel",
+        "base": "Gebalanceerd",
+        "small": "Nauwkeurig"
+      },
+      "download": "Eenmalige download van {{ size }}",
+      "language": "Gesproken taal",
+      "auto": "Automatisch herkennen",
+      "run": "Transcriberen",
+      "rerun": "Alles opnieuw transcriberen",
+      "done": "{{ count }} woorden getranscribeerd",
+      "empty": "Er is geen spraak gevonden in deze video",
+      "stage": {
+        "audio": "Audio wordt uitgepakt…",
+        "download": "Model wordt gedownload…",
+        "transcribe": "Bezig met transcriberen…"
+      },
+      "missing": "De nieuwe clips transcriberen ({{ count }})",
+      "rerunHint": "Begint opnieuw met het model en de taal hierboven",
+      "confirmAll": "Alles opnieuw transcriberen? De woorden die je hebt geknipt of verbeterd gaan verloren",
+      "detected": "Herkende taal: {{ language }}"
+    },
+    "tabs": {
+      "format": "Formaat",
+      "cuts": "Knippen",
+      "captions": "Ondertitels",
+      "framing": "Kadrering",
+      "audio": "Geluid",
+      "clips": "Clips",
+      "texts": "Teksten"
+    },
+    "format": {
+      "title": "Uitvoerformaat",
+      "hint": "De video wordt bijgesneden. Gebruik Kadrering om de spreker te volgen",
+      "landscape": "YouTube",
+      "vertical": "TikTok · Reels",
+      "square": "Feed",
+      "source": "Bron:",
+      "resolution": "Resolutie",
+      "fps": "Beelden per seconde",
+      "exportNote": "Resolutie en framerate kies je bij het exporteren",
+      "rotation": "Rotatie",
+      "rotateLeft": "Naar links draaien",
+      "rotateRight": "Naar rechts draaien",
+      "rotationHint": "Voor een video die zijwaarts is gefilmd. Geldt voor elke clip",
+      "rotatedFaces": "Video gedraaid: zet ‘Gezicht volgen’ opnieuw aan bij Kadrering"
+    },
+    "cuts": {
+      "title": "Stiltedetectie",
+      "hint": "Verwijdert de pauzes. Verlaag de drempel als er woorden worden afgeknipt",
+      "threshold": "Drempel",
+      "suggested": "Aanbevolen voor deze opname: {{ value }} dB",
+      "minSilence": "Minimale stilte",
+      "padding": "Ademruimte",
+      "detect": "Stiltes detecteren en knippen",
+      "detected": "{{ count }} stiltes geknipt",
+      "count": "knippen",
+      "removed": "verwijderd",
+      "final": "eindduur",
+      "clear": "Alle knippen verwijderen",
+      "mode": "Pauzes vinden via",
+      "modes": {
+        "audio": "Volume",
+        "transcript": "Transcript"
+      },
+      "modeHint": "De transcriptmodus is nauwkeurig, zelfs met achtergrondgeluid of muziek",
+      "modeNeedsTranscript": "Transcribeer de video om pauzes via de woorden te vinden: nauwkeuriger op lawaaiige plekken",
+      "preset": "Ritme",
+      "presets": {
+        "gentle": "Natuurlijk",
+        "normal": "Gebalanceerd",
+        "tight": "Dynamisch"
+      },
+      "live": "De knippen worden live bijgewerkt terwijl je de instellingen wijzigt",
+      "silentClips": "{{ count }} clip(s) zonder stem: daar wordt alleen echte dode tijd geknipt"
+    },
+    "captions": {
+      "title": "Ingebrande ondertitels",
+      "style": "Stijl",
+      "styles": {
+        "karaoke": "Karaoke",
+        "clean": "Strak",
+        "boxed": "Kader"
+      },
+      "position": "Positie",
+      "positions": {
+        "top": "Boven",
+        "center": "Midden",
+        "bottom": "Onder"
+      },
+      "size": "Grootte",
+      "words": "Woorden per ondertitel",
+      "uppercase": "Hoofdletters",
+      "highlight": "Accentkleur"
+    },
+    "framing": {
+      "title": "Automatische kadrering",
+      "hint": "Volgt gezichten om de spreker in beeld te houden, ideaal voor 16:9 → 9:16",
+      "center": "Gecentreerd",
+      "face": "Gezicht volgen",
+      "analyzing": "Gezichten worden gevolgd…",
+      "analyze": "Gezichten volgen",
+      "reanalyze": "Gezichten opnieuw volgen",
+      "tracked": "{{ count }} posities gevolgd",
+      "found": "Gezicht gevolgd: de kadrering volgt de spreker",
+      "notFound": "Er is geen gezicht consequent gevonden in deze video",
+      "punch": "Slimme zoom",
+      "punchHint": "Wisselt een lichte zoom af bij elke knip, of bij elke zin als er geen knip is, zodat de video dynamisch blijft",
+      "zoom": "Zoomsterkte",
+      "firstTime": "Als je ‘Gezicht volgen’ kiest, wordt de video één keer lokaal geanalyseerd",
+      "beatsCuts": "De zoom wisselt {{ count }} keer, bij je knippen",
+      "beatsAuto": "Nog geen knippen: de zoom wisselt {{ count }} keer, bij zinnen of om de 4 s"
+    },
+    "audio": {
+      "title": "Achtergrondmuziek",
+      "hint": "De muziek wordt automatisch zachter gezet terwijl iemand praat (auto-ducking)",
+      "reconnect": "‘{{ name }}’ opnieuw koppelen",
+      "pick": "Een muziekbestand kiezen",
+      "enabled": "Opnemen in de video",
+      "volume": "Muziekvolume",
+      "ducking": "Zachter tijdens spraak",
+      "duckingHint": "Hoeveel zachter de muziek wordt als iemand praat"
+    },
+    "export": {
+      "button": "Exporteren",
+      "title": "De video exporteren",
+      "running": "Bezig met exporteren…",
+      "eta": "Nog ongeveer {{ time }}",
+      "keepOpen": "Houd dit tabblad open. De codering gebruikt waar mogelijk je videokaart",
+      "done": "Export voltooid",
+      "saved": "‘{{ name }}’ is in {{ seconds }} s op je schijf opgeslagen",
+      "downloaded": "‘{{ name }}’ is in {{ seconds }} s gedownload",
+      "duration": "Duur",
+      "from": "van {{ time }}",
+      "streamHint": "Je kiest zelf waar de MP4 wordt opgeslagen. Hij wordt direct naar schijf geschreven",
+      "downloadHint": "De MP4 wordt lokaal samengesteld en daarna gedownload",
+      "start": "MP4 exporteren",
+      "saveProject": "Het project opslaan",
+      "saveProjectHint": "Een .lcv.json-bestand met je bewerking (zonder de video), om verder te gaan op een andere computer",
+      "projectSaved": "Project opgeslagen als .lcv.json-bestand"
+    },
+    "clips": {
+      "title": "Clips",
+      "hint": "De video's worden in deze volgorde na elkaar afgespeeld. Sleep om de volgorde te wijzigen: knippen en woorden volgen hun clip",
+      "jump": "Naar deze clip gaan",
+      "up": "Omhoog",
+      "down": "Omlaag",
+      "remove": "Clip verwijderen",
+      "add": "Video's toevoegen",
+      "summary": "{{ count }} clip(s) · {{ time }} in totaal",
+      "confirmRemove": "‘{{ name }}’ uit het project verwijderen? De knippen en woorden ervan worden ook verwijderd (Ctrl+Z om ongedaan te maken)",
+      "added": "{{ count }} clip(s) toegevoegd",
+      "addedTranscribe": "{{ count }} clip(s) toegevoegd. Transcribeer opnieuw om ze te ondertitelen: reeds getranscribeerde clips blijven behouden",
+      "noVoice": "geen stem",
+      "voiceOn": "Stem · klik als niemand praat",
+      "voiceOff": "Geen stem · klik als iemand praat"
+    },
+    "auto": {
+      "button": "Automatisch bewerken",
+      "cta": "De video automatisch bewerken",
+      "transcribeOnly": "of alleen transcriberen",
+      "heading": "Laat LocalCutVideo je video bewerken",
+      "lead": "In één klik: stiltes en stopwoorden verwijderd, ondertitels, kadrering op de spreker en slimme zoom. Je kunt achteraf alles aanpassen",
+      "target": "Waar ga je hem posten?",
+      "options": {
+        "silences": "De stiltes knippen",
+        "fillers": "Stopwoorden verwijderen (eh, ehm…)",
+        "captions": "Karaoke-ondertitels",
+        "framing": "Gezicht volgen",
+        "framingNoCrop": "Niet nodig: dit formaat toont het hele beeld",
+        "zoom": "Slimme zoom"
+      },
+      "local": "Alles draait op je apparaat. De video wordt nooit geüpload",
+      "start": "Automatische bewerking starten",
+      "running": "Je video wordt bewerkt…",
+      "done": "Je video is bewerkt!",
+      "view": "Het resultaat bekijken",
+      "undo": "Automatische bewerking ongedaan maken",
+      "undone": "Het project is terug zoals het was vóór de automatische bewerking",
+      "summary": {
+        "cuts": "knippen",
+        "removed": "verwijderd",
+        "words": "woorden ondertiteld",
+        "silent": "{{ count }} clip(s) zonder stem: alleen echte dode tijd is geknipt"
+      },
+      "steps": {
+        "analyze": "De audio analyseren",
+        "transcribe": "De spraak transcriberen",
+        "fillers": "Stopwoorden verwijderen",
+        "silences": "De stiltes knippen",
+        "framing": "Het gezicht volgen",
+        "style": "Ondertitels en slimme zoom",
+        "voice": "Stemmen detecteren"
+      },
+      "status": {
+        "skipped": "overgeslagen",
+        "error": "mislukt"
+      },
+      "voice": {
+        "title": "Praat er iemand in de video?",
+        "auto": "Auto",
+        "yes": "Ja",
+        "no": "Nee",
+        "detectedYes": "Gedetecteerd: er praat iemand",
+        "detectedNo": "Gedetecteerd: geen stem",
+        "hint": "Geen stem: geen transcript of ondertitels, alleen echte dode tijd wordt geknipt"
+      }
+    },
+    "mix": {
+      "title": "Geluid van de video",
+      "hint": "Zet het geluid van je clips harder of zachter",
+      "volume": "Volume",
+      "mute": "Dempen",
+      "unmute": "Dempen opheffen",
+      "volumeHint": "Geldt voor de preview en de export",
+      "boostHint": "Boven 100 % voorkomt een limiter vervorming",
+      "normalize": "Clips gelijk trekken",
+      "normalizeHint": "Elke clip even luid, van dichtbij of veraf gefilmd",
+      "denoise": "Achtergrondgeluid verminderen",
+      "denoiseHint": "Helderdere stem (wind, ruis, ventilatoren). Toegepast bij de export, op clips met stem. Luister eerst",
+      "listen": "8 s van het resultaat beluisteren",
+      "stopListening": "Stoppen met luisteren",
+      "preparing": "Voorbereiden…"
+    },
+    "thumbnail": "Thumbnail",
+    "transition": {
+      "title": "Overgang bij knippen",
+      "none": "Harde knip",
+      "dip": "Snelle overvloeiing",
+      "black": "Naar zwart",
+      "hint": "Bij elke knip en clipwissel (en aan het begin en einde bij naar zwart). Zichtbaar tijdens het afspelen"
+    },
+    "texts": {
+      "title": "Teksten over de video",
+      "hint": "Titels en notities die bij de afspeelkop worden getoond. Zet woorden tussen sterretjes om ze te kleuren",
+      "add": "Een tekst toevoegen bij de afspeelkop",
+      "default": "Je *tekst*",
+      "timing": "Getoond",
+      "startHere": "Hier beginnen",
+      "endHere": "Hier eindigen",
+      "remove": "Deze tekst verwijderen"
+    },
+    "background": {
+      "title": "Achtergrond",
+      "hint": "Vervaagt de achtergrond achter de persoon, die scherp blijft. Berekend op je apparaat",
+      "none": "Scherp",
+      "blur": "Vervaagd",
+      "strength": "Sterkte van de vervaging",
+      "error": "De achtergrondvervaging kon op dit apparaat niet starten"
+    }
+  },
+  "legal": {
+    "updated": "Laatst bijgewerkt: 1 november 2026",
+    "contact": "Contact",
+    "nav": {
+      "notice": "Juridische vermelding",
+      "privacy": "Privacy",
+      "terms": "Gebruiksvoorwaarden"
+    },
+    "notice": {
+      "title": "Juridische vermelding",
+      "intro": "Informatie die de Franse wet verplicht stelt (artikel 6 van de LCEN, wet nr. 2004-575 van 21 juni 2004) over de uitgever en de host van deze website.",
+      "sections": [
+        {
+          "title": "Uitgever",
+          "body": [
+            "De website localcutvideo.mbonnici.fr (‘LocalCutVideo’) wordt uitgegeven door Maxence Bonnici, een particulier, zonder commercieel doel.",
+            "Verantwoordelijke uitgever: Maxence Bonnici.",
+            "Contact: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Hosting",
+          "body": [
+            "De website wordt door de uitgever, Maxence Bonnici, zelf gehost op een persoonlijke server en uitgerold met het platform Coolify.",
+            "Contact: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Intellectueel eigendom",
+          "body": [
+            "De broncode van LocalCutVideo is open source en gepubliceerd onder de MIT-licentie op [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
+            "Componenten van derden, AI-modellen en lettertypen die de applicatie gebruikt, blijven eigendom van hun makers en worden gebruikt onder hun eigen licenties, vermeld in de [gebruiksvoorwaarden](/terms). Genoemde merken (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) zijn eigendom van hun houders."
+          ]
+        },
+        {
+          "title": "Aansprakelijkheid",
+          "body": [
+            "De uitgever doet zijn best om de website beschikbaar en de informatie juist te houden, maar kan geen van beide garanderen. Het gebruik van de applicatie valt onder de [gebruiksvoorwaarden](/terms)."
+          ]
+        },
+        {
+          "title": "Persoonsgegevens",
+          "body": [
+            "LocalCutVideo verzamelt geen persoonsgegevens: video's worden alleen op je apparaat verwerkt. Details staan in het [privacybeleid](/privacy)."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacybeleid",
+      "intro": "LocalCutVideo is zo gebouwd dat je video's nooit je apparaat verlaten. Deze pagina legt eenvoudig uit wat er wordt verwerkt, en waar.",
+      "sections": [
+        {
+          "title": "In het kort",
+          "body": [
+            "Geen upload: je video's, audio en transcripten worden in je browser verwerkt en nooit naar de uitgever of iemand anders gestuurd.",
+            "Geen account, geen cookies, geen statistieken, geen advertenties."
+          ]
+        },
+        {
+          "title": "Wat er op je apparaat blijft",
+          "body": [
+            "De video- en audiobestanden die je opent, worden direct van je schijf gelezen. Analyse, transcriptie (Whisper), gezichtsherkenning en export worden lokaal door je browser berekend.",
+            "Je projecten (knippen, transcript, instellingen) worden opgeslagen in de lokale database van je browser (IndexedDB), samen met een miniatuur en een cache van analyses. De uitgever heeft er geen toegang toe. Je kunt een project verwijderen op de projectenpagina, of alles wissen door de gegevens van deze site te verwijderen in de instellingen van je browser."
+          ]
+        },
+        {
+          "title": "Lokale opslag",
+          "body": [
+            "De applicatie bewaart je interfacevoorkeuren (taal, thema, laatst geopende project) in de lokale opslag van je browser, en bewaart haar eigen bestanden en de gedownloade AI-modellen in de browsercache zodat ze offline kan werken. Dit is strikt noodzakelijk voor de dienst, wordt nooit gebruikt om je te volgen en vereist daarom geen toestemmingsbanner."
+          ]
+        },
+        {
+          "title": "Server",
+          "body": [
+            "De server levert alleen de bestanden van de applicatie en houdt geen toegangslogs bij. Zoals elke webserver ontvangt hij technisch gezien je IP-adres om verzoeken te beantwoorden, maar slaat het niet op."
+          ]
+        },
+        {
+          "title": "Derden",
+          "body": [
+            "Hugging Face: het Whisper-model wordt door deze site geleverd, net als de rest van de applicatie. Alleen als het hier niet beschikbaar is, wordt het in plaats daarvan van huggingface.co gedownload; Hugging Face ontvangt dan je IP-adres en standaard browsergegevens, maar nooit je audio. Zie hun [privacybeleid](https://huggingface.co/privacy).",
+            "GitHub: alleen als je een link naar de broncoderepository volgt.",
+            "Er wordt geen andere derde partij gecontacteerd: een strikte Content-Security-Policy verhindert technisch dat de pagina ergens anders verbinding mee maakt."
+          ]
+        },
+        {
+          "title": "Je rechten",
+          "body": [
+            "Op grond van de AVG heb je het recht op inzage, rectificatie en verwijdering van je gegevens, en het recht om bezwaar te maken tegen de verwerking ervan. Omdat de uitgever geen gegevens over je heeft, valt er meestal niets in te zien, maar je kunt elke vraag stellen via maxence.bonnici@outlook.fr. Je kunt ook een klacht indienen bij de CNIL ([cnil.fr](https://www.cnil.fr)) of bij de gegevensbeschermingsautoriteit van je land."
+          ]
+        },
+        {
+          "title": "Wijzigingen",
+          "body": [
+            "Dit beleid kan worden bijgewerkt wanneer de applicatie verandert. De datum van de laatste wijziging staat bovenaan deze pagina."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Gebruiksvoorwaarden",
+      "intro": "Door LocalCutVideo te gebruiken, ga je akkoord met deze voorwaarden. Ze zijn kort omdat de dienst eenvoudig is: een gratis tool die in je browser draait.",
+      "sections": [
+        {
+          "title": "Dienst",
+          "body": [
+            "LocalCutVideo is een gratis applicatie voor videobewerking die volledig in je webbrowser draait. Ze wordt kosteloos aangeboden, zonder account, en kan op elk moment zonder aankondiging veranderen, onderbroken worden of stoppen."
+          ]
+        },
+        {
+          "title": "Je inhoud",
+          "body": [
+            "Je blijft de enige eigenaar van en de enige verantwoordelijke voor de video's, geluiden en muziek die je bewerkt en publiceert. Je moet over de nodige rechten beschikken (auteursrecht, muzieklicenties, portretrecht van de gefilmde personen).",
+            "De applicatie mag niet voor onwettige doeleinden worden gebruikt."
+          ]
+        },
+        {
+          "title": "Automatische functies",
+          "body": [
+            "Transcriptie, ondertitels, stiltedetectie en automatische kadrering worden automatisch gemaakt en kunnen fouten bevatten. Controleer het resultaat voordat je het publiceert."
+          ]
+        },
+        {
+          "title": "Je bestanden en projecten",
+          "body": [
+            "De applicatie wijzigt nooit je originele bestanden. Projecten worden in je browser opgeslagen en kunnen verloren gaan als de gegevens ervan worden gewist of als de browser ruimte vrijmaakt: bewaar altijd je originele bestanden."
+          ]
+        },
+        {
+          "title": "Garantie en aansprakelijkheid",
+          "body": [
+            "De software wordt geleverd ‘zoals hij is’, zonder enige garantie, onder de MIT-licentie. Voor zover de wet het toestaat, kan de uitgever niet aansprakelijk worden gesteld voor schade die voortvloeit uit het gebruik of de onmogelijkheid om de applicatie te gebruiken (gegevensverlies, exportfouten, onbeschikbaarheid…)."
+          ]
+        },
+        {
+          "title": "Open source en componenten van derden",
+          "body": [
+            "De broncode is beschikbaar onder de MIT-licentie op [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
+            "LocalCutVideo maakt gebruik van: Mediabunny (MPL-2.0), Transformers.js en ONNX Runtime (Apache-2.0 en MIT), de Whisper-modellen van OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) en de lettertypen Inter en Montserrat (SIL Open Font License)."
+          ]
+        },
+        {
+          "title": "Toepasselijk recht",
+          "body": [
+            "Op deze voorwaarden is het Franse recht van toepassing. Vragen: maxence.bonnici@outlook.fr."
+          ]
+        }
+      ]
+    }
+  },
+  "thumbnail": {
+    "eyebrow": "Thumbnailmaker",
+    "title": "Thumbnails waar mensen op willen klikken",
+    "lead": "Kies het beste moment van je video, voeg een pakkende titel toe en download een afbeelding klaar voor YouTube, Shorts of Instagram. Alles gebeurt op je apparaat",
+    "pick": "Sleep een video of afbeelding hierheen",
+    "pickHint": "MP4, MOV, WebM, JPG, PNG… het bestand blijft op je apparaat",
+    "choose": "Een bestand kiezen",
+    "local": "Er wordt niets geüpload: de afbeelding wordt in je browser gemaakt",
+    "permissionTitle": "Toegang tot de video van het project toestaan",
+    "permissionText": "Je browser vraagt om bevestiging voordat het bestand opnieuw van je apparaat wordt gelezen",
+    "permission": "Toegang toestaan",
+    "back": "Terug naar de editor",
+    "dragHint": "Sleep de afbeelding om het kader aan te passen",
+    "frame": "Videobeeld",
+    "prevFrame": "Vorig beeld",
+    "nextFrame": "Volgend beeld",
+    "moments": "Beste momenten",
+    "other": "Een ander bestand kiezen",
+    "format": "Formaat",
+    "formats": {
+      "landscape": "YouTube",
+      "vertical": "Shorts · TikTok",
+      "square": "Instagram"
+    },
+    "text": "Titel",
+    "textPlaceholder": "Je pakkende titel",
+    "defaultText": "Jouw *titel* hier",
+    "accentHint": "Zet woorden tussen sterretjes om ze te kleuren: *zoals dit*",
+    "size": "Tekstgrootte",
+    "position": "Positie",
+    "positions": {
+      "top": "Boven",
+      "center": "Midden",
+      "bottom": "Onder"
+    },
+    "alignCenter": "Gecentreerd",
+    "alignLeft": "Links",
+    "uppercase": "Hoofdletters",
+    "tilt": "Schuine tekst",
+    "style": "Titelstijl",
+    "styles": {
+      "outline": "Contour",
+      "shadow": "Schaduw",
+      "box": "Banner",
+      "highlight": "Markeerstift"
+    },
+    "color": "Tekstkleur",
+    "accent": "Kleur van gemarkeerde woorden",
+    "image": "Afbeelding",
+    "zoom": "Zoom",
+    "brightness": "Helderheid",
+    "contrast": "Contrast",
+    "saturation": "Verzadiging",
+    "shade": "Randen donkerder maken",
+    "reset": "Herstellen",
+    "downloadJpg": "JPG downloaden",
+    "downloadPng": "PNG downloaden",
+    "sizeInfo": "{{ width }} × {{ height }} px · JPG is het best voor YouTube (onder 2 MB)",
+    "saved": "Opgeslagen: {{ name }}",
+    "loadError": "Dit project kon niet worden geopend",
+    "readError": "Dit bestand kon niet worden gelezen"
+  },
+  "seo": {
+    "home": {
+      "title": "LocalCutVideo — Gratis video-editor in je browser, niets wordt geüpload",
+      "description": "Bewerk je video's in de browser: stiltes automatisch geknipt, AI-ondertitels, gezichtskadrering voor TikTok en Shorts, thumbnails. Gratis en open source, je video's verlaten nooit je computer"
+    },
+    "thumbnail": {
+      "title": "Gratis YouTube-thumbnailmaker — LocalCutVideo",
+      "description": "Maak een thumbnail voor YouTube, Shorts of Instagram uit je video: beste momenten voorgesteld, grote titel met gekleurde woorden, JPG of PNG. Gratis, in je browser, niets geüpload"
+    },
+    "changelog": {
+      "title": "Wijzigingen — LocalCutVideo",
+      "description": "Wat er nieuw is in LocalCutVideo, versie per versie"
+    },
+    "legal": {
+      "title": "Juridische vermelding — LocalCutVideo",
+      "description": "Uitgever en hosting van LocalCutVideo"
+    },
+    "privacy": {
+      "title": "Privacybeleid — LocalCutVideo",
+      "description": "LocalCutVideo uploadt niets: je video's, transcripten en projecten blijven op je apparaat"
+    },
+    "terms": {
+      "title": "Gebruiksvoorwaarden — LocalCutVideo",
+      "description": "Gebruiksvoorwaarden van LocalCutVideo, een gratis en open-source video-editor"
+    },
+    "app": {
+      "title": "Projecten — LocalCutVideo",
+      "description": "Je videoprojecten, opgeslagen in je browser"
+    },
+    "editor": {
+      "title": "Editor — LocalCutVideo",
+      "description": "LocalCutVideo-editor"
+    }
+  },
+  "tour": {
+    "label": "Rondleiding",
+    "help": "Rondleiding",
+    "count": "Stap {{ n }} van {{ total }}",
+    "skip": "Rondleiding overslaan",
+    "prev": "Terug",
+    "next": "Volgende",
+    "done": "Aan de slag!",
+    "steps": {
+      "auto": {
+        "title": "Eén klik: automatisch bewerken",
+        "text": "LocalCutVideo bewerkt de video voor je: stiltes en stopwoorden verwijderd, ondertitels, kadrering en zoom. Je kunt achteraf alles aanpassen"
+      },
+      "preview": {
+        "title": "De preview",
+        "text": "Wat je ziet, is precies wat er wordt geëxporteerd. Klik erop, of druk op de spatiebalk, om af te spelen of te pauzeren"
+      },
+      "timeline": {
+        "title": "De tijdlijn",
+        "text": "Klik om door de video te bewegen. Sleep over de golfvorm om een stuk te selecteren"
+      },
+      "cut": {
+        "title": "Knippen of de snelheid wijzigen",
+        "text": "Met een geselecteerd stuk verwijdert Knippen (X) het en speelt Snelheid het sneller of trager af. Ctrl+Z maakt alles ongedaan"
+      },
+      "transcript": {
+        "title": "Bewerken via tekst",
+        "text": "Na de transcriptie knipt het verwijderen van een woord de video. Je kunt ook verbeteren wat de AI verkeerd verstond"
+      },
+      "settings": {
+        "title": "Alle instellingen",
+        "text": "Formaat (16:9, 9:16, vierkant), knippen en overgangen, ondertitels, teksten, kadrering en vervaging, geluid en muziek"
+      },
+      "thumbnail": {
+        "title": "De thumbnail",
+        "text": "Maak de thumbnail van je video uit de beste momenten"
+      },
+      "export": {
+        "title": "Exporteren",
+        "text": "Sla de video op als MP4. Alles gebeurt op je apparaat, er wordt niets geüpload"
+      }
+    }
+  }
+}

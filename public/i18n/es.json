@@ -14,6 +14,8 @@
     "faq": "FAQ",
     "changelog": "Novedades",
     "language": "Idioma",
+    "searchLanguage": "Buscar un idioma",
+    "noLanguage": "Ningún idioma encontrado",
     "install": "Instalar app",
     "open": "Abrir el editor",
     "menu": "Abrir el menú",
@@ -131,7 +133,7 @@
       },
       "languages": {
         "title": "Multilingüe",
-        "text": "La interfaz habla 5 idiomas y Whisper transcribe decenas más, con detección automática del idioma"
+        "text": "La interfaz habla {{ count }} idiomas y Whisper transcribe decenas más, con detección automática del idioma"
       }
     },
     "privacy": {

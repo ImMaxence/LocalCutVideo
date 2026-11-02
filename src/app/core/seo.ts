@@ -4,10 +4,9 @@ import { Meta, Title } from '@angular/platform-browser';
 import { NavigationEnd, Router } from '@angular/router';
 import { TranslocoService } from '@jsverse/transloco';
 import { filter } from 'rxjs';
-import { DEFAULT_LANG, LANGUAGES, localizedPath, unlocalizedPath } from './i18n';
+import { DEFAULT_LANG, LANGUAGES, applyLanguage, localizedPath, unlocalizedPath } from './i18n';
 import { APP_VERSION, REPO_URL, SITE_URL } from './version';
 
-const OG_LOCALES: Record<string, string> = { en: 'en_US', fr: 'fr_FR', es: 'es_ES', it: 'it_IT', de: 'de_DE' };
 const FEATURES = ['silences', 'clips', 'textEdit', 'captions', 'framing', 'zoom', 'ducking', 'recovery', 'offline', 'export', 'inputs', 'languages'];
 const FAQ = ['free', 'formats', 'browsers', 'size', 'offline', 'ai'];
 
@@ -37,6 +36,7 @@ export class SeoService {
     const key = (route.data['seo'] as string | undefined) ?? 'app';
     const indexed = !!route.data['seo'] && !route.data['noindex'];
     const lang = this.transloco.getActiveLang();
+    const language = LANGUAGES.find((l) => l.code === lang) ?? LANGUAGES[0];
     const t = (field: string) => this.transloco.translate(`seo.${key}.${field}`);
     const path = unlocalizedPath(this.router.url);
     const url = `${SITE_URL}${localizedPath(path, lang)}`;
@@ -47,20 +47,22 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:title', content: t('title') });
     this.meta.updateTag({ property: 'og:description', content: t('description') });
     this.meta.updateTag({ property: 'og:url', content: url });
-    this.meta.updateTag({ property: 'og:locale', content: OG_LOCALES[lang] ?? 'en_US' });
-    this.document.documentElement.lang = lang;
+    this.meta.updateTag({ property: 'og:locale', content: language.og });
+    applyLanguage(this.document, lang);
 
-    // Canonical URL and one alternate per language (x-default: English).
+    // Canonical URL and the alternates of every language (x-default: English).
     this.document.head.querySelectorAll('link[rel="canonical"], link[rel="alternate"][hreflang], script[type="application/ld+json"]').forEach((l) => l.remove());
     if (!indexed) return;
-    for (const data of this.structuredData(key, url, lang)) {
+    for (const data of this.structuredData(key, url, language.tag)) {
       const script = this.document.createElement('script');
       script.setAttribute('type', 'application/ld+json');
       script.textContent = JSON.stringify(data);
       this.document.head.appendChild(script);
     }
     this.link({ rel: 'canonical', href: url });
-    for (const l of LANGUAGES) this.link({ rel: 'alternate', hreflang: l.code, href: `${SITE_URL}${localizedPath(path, l.code)}` });
+    for (const l of LANGUAGES) {
+      for (const hreflang of l.hreflang) this.link({ rel: 'alternate', hreflang, href: `${SITE_URL}${localizedPath(path, l.code)}` });
+    }
     this.link({ rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${localizedPath(path, DEFAULT_LANG)}` });
   }
 

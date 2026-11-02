@@ -105,7 +105,7 @@
           </div>
           <small class="faint">{{ 'editor.format.rotationHint' | transloco }}</small>
         </div>
-        <p class="source faint"><app-icon name="film" [size]="13" /> {{ 'editor.format.source' | transloco }} {{ sourceLabel() }}</p>
+        <p class="source faint"><app-icon name="film" [size]="13" /> {{ 'editor.format.source' | transloco }} <bdi>{{ sourceLabel() }}</bdi></p>
         <p class="note"><app-icon name="info" [size]="14" /> {{ 'editor.format.exportNote' | transloco }}</p>
       </section>
     }
@@ -186,7 +186,7 @@
       </section>
       <section class="stats">
         <div><b>{{ p().cuts.length }}</b><span>{{ 'editor.cuts.count' | transloco }}</span></div>
-        <div><b>−{{ formatTime(removedSeconds()) }}</b><span>{{ 'editor.cuts.removed' | transloco }}</span></div>
+        <div><b dir="ltr">−{{ formatTime(removedSeconds()) }}</b><span>{{ 'editor.cuts.removed' | transloco }}</span></div>
         <div><b>{{ formatTime(store.outputDuration()) }}</b><span>{{ 'editor.cuts.final' | transloco }}</span></div>
       </section>
       @if (p().cuts.length) {
@@ -326,7 +326,7 @@
                 <button type="button" class="text-item" [class.active]="store.selectedText() === o.id" (click)="selectText(o)">
                   <app-icon name="type" [size]="14" />
                   <span class="excerpt">{{ excerpt(o.text) }}</span>
-                  <small>{{ formatTime(o.start, true) }} → {{ formatTime(o.end, true) }}</small>
+                  <small dir="ltr">{{ formatTime(o.start, true) }} → {{ formatTime(o.end, true) }}</small>
                 </button>
               </li>
             }
@@ -338,7 +338,7 @@
           <textarea class="text-input" rows="2" [value]="o.text" (input)="store.updateText(o.id, { text: value($event) }, 'text-' + o.id)" [attr.aria-label]="'editor.texts.title' | transloco"></textarea>
           <small class="faint">{{ 'thumbnail.accentHint' | transloco }}</small>
           <div class="field">
-            <span class="label">{{ 'editor.texts.timing' | transloco }} <span class="value">{{ formatTime(o.start, true) }} → {{ formatTime(o.end, true) }}</span></span>
+            <span class="label">{{ 'editor.texts.timing' | transloco }} <span class="value" dir="ltr">{{ formatTime(o.start, true) }} → {{ formatTime(o.end, true) }}</span></span>
             <div class="row-between">
               <button class="btn sm" type="button" (click)="store.updateText(o.id, { start: store.currentTime() })"><b>[</b> {{ 'editor.texts.startHere' | transloco }}</button>
               <button class="btn sm" type="button" (click)="store.updateText(o.id, { end: store.currentTime() })">{{ 'editor.texts.endHere' | transloco }} <b>]</b></button>

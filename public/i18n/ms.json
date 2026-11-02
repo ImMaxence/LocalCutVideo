@@ -1,0 +1,895 @@
+{
+  "common": {
+    "videoFiles": "Fail video",
+    "audioFiles": "Fail audio",
+    "cancel": "Batal",
+    "close": "Tutup",
+    "retry": "Cuba lagi",
+    "none": "Tiada",
+    "remove": "Buang"
+  },
+  "nav": {
+    "features": "Ciri-ciri",
+    "privacy": "Privasi",
+    "faq": "Soalan lazim",
+    "changelog": "Log perubahan",
+    "language": "Bahasa",
+    "searchLanguage": "Cari bahasa",
+    "noLanguage": "Tiada bahasa ditemui",
+    "install": "Pasang aplikasi",
+    "open": "Buka editor",
+    "menu": "Buka menu",
+    "close": "Tutup menu",
+    "thumbnail": "Lakaran kecil"
+  },
+  "theme": {
+    "system": "Sistem",
+    "light": "Cerah",
+    "dark": "Gelap",
+    "label": "Tema"
+  },
+  "footer": {
+    "tagline": "Editor video percuma dan sumber terbuka yang berjalan sepenuhnya dalam pelayar anda. Fail anda tidak pernah meninggalkan komputer",
+    "issues": "Laporkan masalah",
+    "noTracking": "Tiada kuki, tiada penjejakan",
+    "product": "Produk",
+    "legal": "Undang-undang"
+  },
+  "pwa": {
+    "update": "Versi baharu tersedia",
+    "reload": "Muat semula"
+  },
+  "landing": {
+    "hero": {
+      "badgeLocal": "100% setempat, sifar muat naik",
+      "badgeOpen": "Percuma & sumber terbuka",
+      "title1": "Sunting video anda",
+      "title2": "Tiada apa yang keluar dari komputer anda",
+      "lead": "LocalCutVideo memotong bahagian senyap, menyalin pertuturan dengan Whisper, membenamkan sari kata karaoke dan membingkai semula 16:9 kepada 9:16, semuanya dalam pelayar anda. Tiada muat naik, tiada akaun, tiada pelayan",
+      "cta": "Buka editor",
+      "github": "Lihat di GitHub",
+      "hint": "Paling baik dalam Chrome atau Edge pada komputer",
+      "demo": "Cuba dengan video demo"
+    },
+    "mock": {
+      "w1": "Jadi hari ini",
+      "filler": "emm,",
+      "w2": "saya akan tunjukkan",
+      "w3": "cara ia berfungsi",
+      "line2": "Semuanya berjalan pada komputer anda sendiri, malah AI juga",
+      "line3": "Padam satu perkataan, video terus dipotong",
+      "cap1": "Ini kekal di",
+      "cap2": "komputer anda"
+    },
+    "stats": {
+      "upload": "bait dimuat naik",
+      "local": "diproses pada peranti anda",
+      "languages": "bahasa antara muka",
+      "gpu": "AI & pengekodan dipercepat"
+    },
+    "how": {
+      "eyebrow": "Cara ia berfungsi",
+      "title": "Daripada rakaman mentah kepada video sedia dimuat naik dalam tiga langkah",
+      "open": {
+        "title": "Buka video",
+        "text": "Pilih fail daripada cakera anda. Fail dibaca di tempatnya: tiada salinan, tiada muat naik, walaupun untuk fail bersaiz beberapa gigabait"
+      },
+      "edit": {
+        "title": "Biar editor bekerja",
+        "text": "Bahagian senyap dikesan, pertuturan disalin perkataan demi perkataan dan wajah dijejaki, semuanya secara setempat. Betulkan apa sahaja dengan menyunting teks"
+      },
+      "export": {
+        "title": "Eksport MP4",
+        "text": "Pilih 16:9, 9:16 atau 1:1. Video dikodkan oleh kad grafik anda dan ditulis terus ke cakera"
+      }
+    },
+    "features": {
+      "eyebrow": "Ciri-ciri",
+      "title": "Semua yang anda perlukan untuk video bercakap di depan kamera",
+      "lead": "Dibina untuk pencipta YouTube, TikTok, Reels dan Shorts yang tidak mahu memuat naik rakaman mentah mereka ke mana-mana",
+      "silences": {
+        "title": "Potong senyap secara automatik",
+        "text": "Mengesan jeda berdasarkan kekuatan bunyi lalu membuangnya, dengan ambang, tempoh minimum dan ruang nafas yang boleh dilaraskan"
+      },
+      "textEdit": {
+        "title": "Sunting melalui teks",
+        "text": "Whisper memberi setiap perkataan cap masa. Padam perkataan dalam transkrip dan bahagian video yang sepadan akan dipotong"
+      },
+      "captions": {
+        "title": "Sari kata karaoke",
+        "text": "Sari kata beranimasi perkataan demi perkataan yang dibenamkan dalam video, gaya karaoke, ringkas atau berkotak, dalam warna serlahan anda"
+      },
+      "framing": {
+        "title": "Bingkai automatik 16:9 → 9:16",
+        "text": "Penjejakan wajah mengekalkan penutur dalam bingkai apabila anda menukar video landskap kepada menegak"
+      },
+      "zoom": {
+        "title": "Zum pintar",
+        "text": "Zum yang berselang-seli pada setiap potongan menjadikan jump cut kelihatan disengajakan dan membuatkan penonton terus menonton"
+      },
+      "ducking": {
+        "title": "Bunyi & muzik",
+        "text": "Kuatkan bunyi, seimbangkan klip anda dan tambah muzik latar yang perlahan dengan sendiri setiap kali seseorang bercakap"
+      },
+      "recovery": {
+        "title": "Pemulihan selepas ranap",
+        "text": "Setiap perubahan disimpan dalam pelayar anda serta-merta. Buka semula tab dan sambung tepat di tempat anda berhenti"
+      },
+      "offline": {
+        "title": "Berfungsi luar talian",
+        "text": "Pasang sebagai aplikasi. Selepas model AI dimuat turun, seluruh editor berfungsi tanpa sambungan internet"
+      },
+      "export": {
+        "title": "Eksport perkakasan yang pantas",
+        "text": "Pengekodan menggunakan WebCodecs, pengekod video terbina dalam pelayar dan kad grafik anda, bukannya pengekodan perisian yang perlahan"
+      },
+      "clips": {
+        "title": "Gabung banyak klip",
+        "text": "Lepaskan beberapa rakaman sekali gus: semuanya digabungkan menjadi satu video, mengikut susunan pilihan anda, dengan garis masa dan transkrip yang dikongsi"
+      },
+      "inputs": {
+        "title": "MP4, MOV, WebM, MKV",
+        "text": "Membuka fail daripada telefon dan kamera anda, termasuk video HEVC iPhone jika pelayar anda boleh menyahkodnya"
+      },
+      "languages": {
+        "title": "Pelbagai bahasa",
+        "text": "Antara muka tersedia dalam {{ count }} bahasa dan Whisper menyalin berpuluh-puluh bahasa lagi, dengan pengesanan bahasa automatik"
+      }
+    },
+    "privacy": {
+      "eyebrow": "Privasi",
+      "title": "Sifar muat naik, sejak reka bentuk",
+      "lead": "Video anda dibaca terus daripada cakera. Analisis audio, transkripsi, penjejakan wajah dan pengekodan semuanya berjalan dalam bebenang latar (Web Workers) pada komputer anda. Memang tiada pelayan untuk menghantar rakaman anda",
+      "upload": "Tiada muat naik, selama-lamanya: fail tidak pernah meninggalkan komputer anda",
+      "account": "Tiada akaun, tiada kuki, tiada analitik",
+      "csp": "Content-Security-Policy yang ketat hanya membenarkan halaman berhubung dengan laman ini, yang turut menyediakan model AI (Hugging Face hanya sandaran)",
+      "storage": "Projek disimpan dalam pangkalan data setempat pelayar anda (IndexedDB) dan boleh dipadam bila-bila masa",
+      "diagram": {
+        "machine": "Komputer anda",
+        "file": "Fail video",
+        "browser": "Pelayar anda",
+        "upload": "Muat naik ke pelayan",
+        "model": "Muat turun model AI (sekali, dalam cache)"
+      }
+    },
+    "support": {
+      "eyebrow": "Keserasian",
+      "title": "Sokongan pelayar",
+      "ok": "Penuh",
+      "partial": "Separa",
+      "full": "Semuanya, termasuk pemulihan selepas ranap dan eksport terus ke cakera",
+      "firefox": "Penyuntingan dan eksport berfungsi. Selepas menutup tab, anda perlu memilih video semula",
+      "safari": "Versi terkini sahaja. Pilih video semula selepas muat semula; eksport dimuat turun",
+      "mobile": "Telefon & tablet",
+      "mobileText": "Berfungsi untuk klip pendek, tetapi had memori menjadikan video panjang tidak boleh diharap"
+    },
+    "faq": {
+      "title": "Soalan lazim",
+      "free": {
+        "q": "Betul-betul percuma? Apa muslihatnya?",
+        "a": "Ia percuma dan sumber terbuka. Oleh sebab semua kerja dilakukan pada komputer anda, tiada kos pelayan untuk dibayar, jadi tiada apa untuk dijual kepada anda dan tiada data untuk dikumpul"
+      },
+      "formats": {
+        "q": "Format video apa yang boleh saya buka?",
+        "a": "MP4, MOV, WebM dan MKV, asalkan pelayar anda boleh menyahkod kodeknya (H.264, HEVC, VP9, AV1 bergantung pada pelayar dan sistem). Eksport ialah fail MP4"
+      },
+      "browsers": {
+        "q": "Kenapa Chrome atau Edge?",
+        "a": "Kedua-duanya menyokong File System Access API, yang membolehkan editor membuka semula video anda selepas muat semula dan menulis eksport terus ke cakera. Pelayar lain juga berfungsi, dengan beberapa klik tambahan"
+      },
+      "size": {
+        "q": "Adakah had saiz fail?",
+        "a": "Tiada had muat naik kerana tiada apa yang dimuat naik. Video dibaca daripada cakera sedikit demi sedikit; had sebenar ialah memori komputer anda dan kesabaran anda untuk video yang sangat panjang"
+      },
+      "offline": {
+        "q": "Bolehkah ia berfungsi tanpa internet?",
+        "a": "Ya, selepas dimuatkan. Pasang sebagai aplikasi (PWA) dan buat transkripsi sekali semasa dalam talian: model Whisper disimpan dalam cache dan semuanya berfungsi luar talian"
+      },
+      "ai": {
+        "q": "Di mana AI berjalan?",
+        "a": "Dalam pelayar anda. Whisper berjalan dengan Transformers.js pada kad grafik (WebGPU) atau pemproses (WebAssembly) anda, dan pengesanan wajah menggunakan MediaPipe. Model dimuat turun sekali, audio anda tidak pernah dihantar"
+      }
+    },
+    "final": {
+      "title": "Video anda yang seterusnya, siap disunting dalam beberapa minit",
+      "text": "Tiada daftar, tiada muat naik, tiada tera air. Buka fail dan mula menyunting"
+    },
+    "thumbnail": {
+      "eyebrow": "Baharu · Lakaran kecil",
+      "title": "Dan lakaran kecil yang sepadan",
+      "text": "Pembuat lakaran kecil mencari detik paling jelas dalam video anda. Tambah tajuk besar dengan perkataan berwarna dan muat turun dalam saiz yang betul",
+      "points": {
+        "moments": "Cadangan detik terbaik",
+        "title": "Tajuk dengan perkataan diserlahkan, 4 gaya",
+        "formats": "YouTube 1280×720, Shorts dan segi empat sama",
+        "local": "Dibuat pada peranti anda, tiada yang dimuat naik"
+      },
+      "cta": "Buat lakaran kecil",
+      "mockTitle": "Vlog",
+      "mockAccent": "pertama saya"
+    }
+  },
+  "changelog": {
+    "eyebrow": "Keluaran",
+    "title": "Log perubahan",
+    "lead": "Semua versi LocalCutVideo, yang terbaharu dahulu",
+    "current": "Versi anda:",
+    "github": "Lihat di GitHub",
+    "releases": "Keluaran GitHub",
+    "latest": "Terbaharu",
+    "error": "Log perubahan tidak dapat dimuatkan"
+  },
+  "projects": {
+    "title": "Projek anda",
+    "lead": "Projek disimpan secara automatik dalam pelayar ini. Video anda kekal di tempatnya dalam cakera",
+    "resume": "Sambung dari tempat anda berhenti",
+    "reading": "Membaca video…",
+    "drop": "Lepaskan video anda di sini",
+    "or": "atau",
+    "open": "Buka video",
+    "private": "Fail dibaca secara setempat, tiada yang dimuat naik",
+    "noFsAccess": "Pelayar anda tidak dapat mengingati fail antara sesi: selepas menutup tab, anda perlu memilih video semula. Chrome atau Edge tidak mempunyai masalah ini",
+    "recent": "Projek terkini",
+    "empty": "Belum ada projek. Buka video untuk bermula",
+    "delete": "Padam projek",
+    "confirmDelete": "Padam projek “{{ name }}”? Fail video dalam cakera anda tidak terjejas",
+    "multi": "Beberapa fail? Semuanya digabungkan menjadi satu video, mengikut susunan nama",
+    "importFile": "Buka fail projek (.lcv.json)",
+    "saveFile": "Simpan projek sebagai fail",
+    "imported": "Projek dibuka: pilih video-videonya untuk meneruskan"
+  },
+  "errors": {
+    "notVideo": "Fail ini nampaknya bukan video",
+    "codec": "Pelayar anda tidak dapat menyahkod kodek video ini (HEVC/H.265 memerlukan Chrome, atau sambungan HEVC dalam Edge). Cuba tukar kepada MP4 H.264",
+    "noVideo": "Tiada trek video ditemui dalam fail ini",
+    "generic": "Berlaku ralat semasa membaca fail ini",
+    "transcribe": "Transkripsi gagal. Cuba model yang lebih kecil atau semak sambungan anda untuk muat turun pertama",
+    "export": "Eksport gagal",
+    "faces": "Penjejakan wajah gagal pada video ini",
+    "skipped": "Dilangkau (tidak dapat dibaca): {{ names }}",
+    "skippedCodec": "Dilangkau, kodek tidak disokong oleh pelayar ini: {{ names }}. Cuba Chrome, atau tukar kepada MP4 H.264",
+    "notProject": "Fail ini bukan projek LocalCutVideo",
+    "demo": "Video demo tidak dapat dimuatkan"
+  },
+  "languages": {
+    "en": "Inggeris",
+    "fr": "Perancis",
+    "es": "Sepanyol",
+    "it": "Itali",
+    "de": "Jerman",
+    "pt": "Portugis",
+    "nl": "Belanda"
+  },
+  "editor": {
+    "back": "Kembali ke projek",
+    "name": "Nama projek",
+    "undo": "Buat asal",
+    "redo": "Buat semula",
+    "missing": "Projek ini sudah tiada",
+    "save": {
+      "saving": "Menyimpan…",
+      "saved": "Disimpan secara setempat",
+      "error": "Tidak disimpan"
+    },
+    "reconnect": {
+      "loading": "Membuka video…",
+      "title": "Sambung semula video anda",
+      "allow": "Benarkan akses kepada semua",
+      "select": "Pilih",
+      "mismatch": "Ini nampaknya bukan fail asal (“{{ name }}”). Gunakan juga?",
+      "intro": "Projek selamat. Demi privasi anda, pelayar meminta kebenaran sekali lagi sebelum editor boleh membaca fail anda",
+      "allowOne": "Benarkan",
+      "privacy": "Video anda dibaca di tempatnya dalam cakera, tidak pernah disalin atau dimuat naik",
+      "status": {
+        "ready": "Disambungkan",
+        "permission": "Menunggu kebenaran anda",
+        "moved": "Tidak ditemui: dialihkan atau ditukar nama?",
+        "missing": "Pilih semula (pelayar anda tidak menyimpan akses fail)",
+        "loading": "Membuka…"
+      }
+    },
+    "preview": {
+      "cut": "Potongan",
+      "back": "Undur 5 s",
+      "play": "Main",
+      "pause": "Jeda",
+      "savedHint": "Masa yang dibuang oleh potongan",
+      "badge": "Pratonton ringan · {{ q }}p",
+      "quality": "Kualiti pratonton",
+      "qualityHint": "Pratonton yang lebih ringan memastikan editor lancar. Eksport sentiasa menggunakan kualiti penuh"
+    },
+    "timeline": {
+      "title": "Garis masa",
+      "silence": "Senyap",
+      "manual": "Manual",
+      "text": "Teks",
+      "hint": "Seret pada bentuk gelombang untuk memilih bahagian, kemudian Potong atau Kelajuan · klik potongan untuk melaras tepinya · klik dua kali untuk membuang",
+      "removeCut": "Buang potongan",
+      "zoom": "Zum garis masa",
+      "analyzing": "Menganalisis audio…",
+      "zoomIn": "Zum masuk",
+      "zoomOut": "Zum keluar",
+      "fit": "Muat",
+      "fitHint": "Tunjukkan keseluruhan video (petua: Ctrl + roda untuk zum)",
+      "manualCut": "Potong secara manual",
+      "markIn": "Mula",
+      "markOut": "Tamat",
+      "markInHint": "Permulaan bahagian yang hendak dipotong, pada kepala main (I)",
+      "markOutHint": "Penghujung bahagian yang hendak dipotong, pada kepala main (O)",
+      "cutMarked": "Potong",
+      "cutHint": "Buang bahagian antara mula dan tamat (X)",
+      "clearMarks": "Kosongkan mula dan tamat",
+      "marksMissing": "Tetapkan mula (I) dan tamat (O) dahulu",
+      "analysisError": "Audio tidak dapat dianalisis",
+      "selectedCut": "Potongan dipilih",
+      "earlier": "Lebih awal",
+      "later": "Lebih lewat",
+      "listen": "Dengar potongan",
+      "speed": "Kelajuan",
+      "speedHint": "Cepatkan atau perlahankan bahagian antara mula dan tamat",
+      "selectedSpeed": "Perubahan kelajuan",
+      "removeSpeed": "Kembali ke kelajuan biasa",
+      "listenSpeed": "Main perubahan kelajuan",
+      "selectFirst": "Pilih bahagian dahulu: seret pada bentuk gelombang, atau tetapkan Mula dan Tamat"
+    },
+    "transcript": {
+      "title": "Transkrip",
+      "words": "{{ count }} perkataan",
+      "fillers": "Buang perkataan pengisi ({{ count }})",
+      "restore": "Pulihkan semua",
+      "selected": "{{ count }} dipilih",
+      "cut": "Potong / pulihkan",
+      "tip": "Klik perkataan untuk melompat ke situ. Seret atau Shift-klik untuk memilih, kemudian Delete untuk memotong atau Betulkan (Enter) untuk membetulkan apa yang Whisper salah dengar",
+      "emptyTitle": "Belum ada transkrip",
+      "emptyText": "Salin video untuk menyuntingnya melalui teks dan mendapatkan sari kata perkataan demi perkataan",
+      "correct": "Betulkan",
+      "correctTitle": "Apa yang sebenarnya diucapkan?",
+      "correctHint": "Taip semula satu perkataan atau satu ayat penuh. Masa dan sari kata dilaraskan secara automatik",
+      "apply": "Guna"
+    },
+    "transcribe": {
+      "title": "Transkripsi (Whisper)",
+      "hint": "Berjalan pada peranti anda. Model dimuat turun sekali, kemudian disimpan dalam cache",
+      "model": "Model",
+      "models": {
+        "tiny": "Pantas",
+        "base": "Seimbang",
+        "small": "Tepat"
+      },
+      "download": "Muat turun sekali {{ size }}",
+      "language": "Bahasa pertuturan",
+      "auto": "Kesan secara automatik",
+      "run": "Salin",
+      "rerun": "Salin semula semuanya",
+      "done": "{{ count }} perkataan disalin",
+      "empty": "Tiada pertuturan ditemui dalam video ini",
+      "stage": {
+        "audio": "Mengekstrak audio…",
+        "download": "Memuat turun model…",
+        "transcribe": "Menyalin…"
+      },
+      "missing": "Salin klip baharu ({{ count }})",
+      "rerunHint": "Bermula semula dengan model dan bahasa di atas",
+      "confirmAll": "Salin semula semuanya? Perkataan yang anda potong atau betulkan akan hilang",
+      "detected": "Bahasa dikesan: {{ language }}"
+    },
+    "tabs": {
+      "format": "Format",
+      "cuts": "Potongan",
+      "captions": "Sari kata",
+      "framing": "Bingkai",
+      "audio": "Bunyi",
+      "clips": "Klip",
+      "texts": "Teks"
+    },
+    "format": {
+      "title": "Format output",
+      "hint": "Video dipangkas supaya muat. Gunakan Bingkai untuk mengikut penutur",
+      "landscape": "YouTube",
+      "vertical": "TikTok · Reels",
+      "square": "Suapan",
+      "source": "Sumber:",
+      "resolution": "Resolusi",
+      "fps": "Bingkai sesaat",
+      "exportNote": "Resolusi dan kadar bingkai dipilih semasa eksport",
+      "rotation": "Putaran",
+      "rotateLeft": "Putar ke kiri",
+      "rotateRight": "Putar ke kanan",
+      "rotationHint": "Untuk video yang dirakam secara mengiring. Terpakai pada semua klip",
+      "rotatedFaces": "Video diputar: hidupkan semula “Ikut wajah” dalam Bingkai"
+    },
+    "cuts": {
+      "title": "Pengesanan senyap",
+      "hint": "Membuang jeda. Rendahkan ambang jika ada perkataan yang terpotong",
+      "threshold": "Ambang",
+      "suggested": "Dicadangkan untuk rakaman ini: {{ value }} dB",
+      "minSilence": "Senyap minimum",
+      "padding": "Ruang nafas",
+      "detect": "Kesan dan potong senyap",
+      "detected": "{{ count }} bahagian senyap dipotong",
+      "count": "potongan",
+      "removed": "dibuang",
+      "final": "tempoh akhir",
+      "clear": "Buang semua potongan",
+      "mode": "Cari jeda berdasarkan",
+      "modes": {
+        "audio": "Kelantangan",
+        "transcript": "Transkrip"
+      },
+      "modeHint": "Mod transkrip tetap tepat walaupun ada bunyi bising atau muzik latar",
+      "modeNeedsTranscript": "Salin video untuk mencari jeda daripada perkataan: lebih tepat di tempat bising",
+      "preset": "Rentak",
+      "presets": {
+        "gentle": "Semula jadi",
+        "normal": "Seimbang",
+        "tight": "Dinamik"
+      },
+      "live": "Potongan dikemas kini secara langsung semasa anda menukar tetapan",
+      "silentClips": "{{ count }} klip tanpa suara: di situ hanya masa kosong sebenar dipotong"
+    },
+    "captions": {
+      "title": "Sari kata terbenam",
+      "style": "Gaya",
+      "styles": {
+        "karaoke": "Karaoke",
+        "clean": "Ringkas",
+        "boxed": "Berkotak"
+      },
+      "position": "Kedudukan",
+      "positions": {
+        "top": "Atas",
+        "center": "Tengah",
+        "bottom": "Bawah"
+      },
+      "size": "Saiz",
+      "words": "Perkataan setiap sari kata",
+      "uppercase": "Huruf besar",
+      "highlight": "Warna serlahan"
+    },
+    "framing": {
+      "title": "Bingkai automatik",
+      "hint": "Menjejaki wajah untuk mengekalkan penutur dalam bingkai, sesuai untuk 16:9 → 9:16",
+      "center": "Di tengah",
+      "face": "Ikut wajah",
+      "analyzing": "Menjejaki wajah…",
+      "analyze": "Jejaki wajah",
+      "reanalyze": "Jejaki wajah semula",
+      "tracked": "{{ count }} kedudukan dijejaki",
+      "found": "Wajah dijejaki: bingkai mengikut penutur",
+      "notFound": "Tiada wajah ditemui secara konsisten dalam video ini",
+      "punch": "Zum pintar",
+      "punchHint": "Menyelang-seli zum ringan pada setiap potongan, atau pada setiap ayat jika tiada potongan, supaya video kekal dinamik",
+      "zoom": "Tahap zum",
+      "firstTime": "Memilih “Ikut wajah” menganalisis video sekali, secara setempat",
+      "beatsCuts": "Zum berubah {{ count }} kali, pada potongan anda",
+      "beatsAuto": "Belum ada potongan: zum berubah {{ count }} kali, pada ayat atau setiap 4 s"
+    },
+    "audio": {
+      "title": "Muzik latar",
+      "hint": "Muzik diperlahankan secara automatik semasa seseorang bercakap (auto-ducking)",
+      "reconnect": "Sambung semula “{{ name }}”",
+      "pick": "Pilih fail muzik",
+      "enabled": "Sertakan dalam video",
+      "volume": "Kelantangan muzik",
+      "ducking": "Diperlahankan semasa bercakap",
+      "duckingHint": "Sejauh mana muzik diperlahankan apabila seseorang bercakap"
+    },
+    "export": {
+      "button": "Eksport",
+      "title": "Eksport video",
+      "running": "Mengeksport…",
+      "eta": "Kira-kira {{ time }} lagi",
+      "keepOpen": "Biarkan tab ini terbuka. Pengekodan menggunakan kad grafik anda jika boleh",
+      "done": "Eksport selesai",
+      "saved": "“{{ name }}” disimpan ke cakera anda dalam {{ seconds }} s",
+      "downloaded": "“{{ name }}” dimuat turun dalam {{ seconds }} s",
+      "duration": "Tempoh",
+      "from": "daripada {{ time }}",
+      "streamHint": "Anda akan memilih tempat menyimpan MP4. Ia ditulis terus ke cakera",
+      "downloadHint": "MP4 dipasang secara setempat, kemudian dimuat turun",
+      "start": "Eksport MP4",
+      "saveProject": "Simpan projek",
+      "saveProjectHint": "Fail .lcv.json yang mengandungi suntingan anda (tanpa video), untuk diteruskan pada komputer lain",
+      "projectSaved": "Projek disimpan sebagai fail .lcv.json"
+    },
+    "clips": {
+      "title": "Klip",
+      "hint": "Video dimainkan berturut-turut mengikut susunan ini. Seret untuk menyusun semula: potongan dan perkataan mengikut klipnya",
+      "jump": "Pergi ke klip ini",
+      "up": "Alih ke atas",
+      "down": "Alih ke bawah",
+      "remove": "Buang klip",
+      "add": "Tambah video",
+      "summary": "{{ count }} klip · {{ time }} kesemuanya",
+      "confirmRemove": "Buang “{{ name }}” daripada projek? Potongan dan perkataannya juga akan dibuang (Ctrl+Z untuk buat asal)",
+      "added": "{{ count }} klip ditambah",
+      "addedTranscribe": "{{ count }} klip ditambah. Salin semula untuk memberi sari kata: klip yang telah disalin dikekalkan",
+      "noVoice": "tiada suara",
+      "voiceOn": "Ada suara · klik jika tiada orang bercakap",
+      "voiceOff": "Tiada suara · klik jika ada orang bercakap"
+    },
+    "auto": {
+      "button": "Sunting automatik",
+      "cta": "Sunting video secara automatik",
+      "transcribeOnly": "atau salin sahaja",
+      "heading": "Biar LocalCutVideo menyunting video anda",
+      "lead": "Dalam satu klik: senyap dan teragak-agak dibuang, sari kata, bingkai pada penutur dan zum pintar. Anda boleh ubah semuanya kemudian",
+      "target": "Di mana anda akan memuat naiknya?",
+      "options": {
+        "silences": "Potong bahagian senyap",
+        "fillers": "Buang teragak-agak (emm, err…)",
+        "captions": "Sari kata karaoke",
+        "framing": "Ikut wajah",
+        "framingNoCrop": "Tidak perlu: format ini menunjukkan keseluruhan gambar",
+        "zoom": "Zum pintar"
+      },
+      "local": "Semuanya berjalan pada peranti anda. Video tidak pernah dimuat naik",
+      "start": "Mulakan sunting automatik",
+      "running": "Menyunting video anda…",
+      "done": "Video anda sudah disunting!",
+      "view": "Lihat hasilnya",
+      "undo": "Buat asal sunting automatik",
+      "undone": "Projek kembali seperti sebelum sunting automatik",
+      "summary": {
+        "cuts": "potongan",
+        "removed": "dibuang",
+        "words": "perkataan bersari kata",
+        "silent": "{{ count }} klip tanpa suara: hanya masa kosong sebenar dipotong"
+      },
+      "steps": {
+        "analyze": "Menganalisis audio",
+        "transcribe": "Menyalin pertuturan",
+        "fillers": "Membuang teragak-agak",
+        "silences": "Memotong bahagian senyap",
+        "framing": "Mengikut wajah",
+        "style": "Sari kata dan zum pintar",
+        "voice": "Mengesan suara"
+      },
+      "status": {
+        "skipped": "dilangkau",
+        "error": "gagal"
+      },
+      "voice": {
+        "title": "Adakah seseorang bercakap dalam video?",
+        "auto": "Auto",
+        "yes": "Ya",
+        "no": "Tidak",
+        "detectedYes": "Dikesan: ada orang bercakap",
+        "detectedNo": "Dikesan: tiada suara",
+        "hint": "Tiada suara: tiada transkrip atau sari kata, hanya masa kosong sebenar dipotong"
+      }
+    },
+    "mix": {
+      "title": "Bunyi video",
+      "hint": "Kuatkan atau perlahankan bunyi klip anda",
+      "volume": "Kelantangan",
+      "mute": "Bisukan",
+      "unmute": "Nyahbisu",
+      "volumeHint": "Terpakai pada pratonton dan eksport",
+      "boostHint": "Melebihi 100 %, pengehad mencegah herotan",
+      "normalize": "Seimbangkan klip",
+      "normalizeHint": "Setiap klip sama kuat, sama ada dirakam dekat atau jauh",
+      "denoise": "Kurangkan bunyi bising latar",
+      "denoiseHint": "Suara lebih jelas (angin, desis, kipas). Digunakan semasa eksport, pada klip yang ada suara. Dengar dahulu",
+      "listen": "Dengar 8 s hasilnya",
+      "stopListening": "Berhenti mendengar",
+      "preparing": "Menyediakan…"
+    },
+    "thumbnail": "Lakaran kecil",
+    "transition": {
+      "title": "Peralihan pada potongan",
+      "none": "Potongan terus",
+      "dip": "Pudar pantas",
+      "black": "Pudar ke hitam",
+      "hint": "Dimainkan pada setiap potongan dan pertukaran klip (dan pada awal serta akhir untuk pudar ke hitam). Kelihatan semasa dimainkan"
+    },
+    "texts": {
+      "title": "Teks di atas video",
+      "hint": "Tajuk dan nota yang dipaparkan pada kepala main. Letakkan perkataan di antara asterisk untuk mewarnakannya",
+      "add": "Tambah teks pada kepala main",
+      "default": "*Teks* anda",
+      "timing": "Dipaparkan",
+      "startHere": "Mula di sini",
+      "endHere": "Tamat di sini",
+      "remove": "Buang teks ini"
+    },
+    "background": {
+      "title": "Latar",
+      "hint": "Mengaburkan latar di belakang orang itu, yang kekal tajam. Dikira pada peranti anda",
+      "none": "Tajam",
+      "blur": "Kabur",
+      "strength": "Kekuatan kabur",
+      "error": "Kabur latar tidak dapat dimulakan pada peranti ini"
+    }
+  },
+  "legal": {
+    "updated": "Kemas kini terakhir: 1 November 2026",
+    "contact": "Hubungi",
+    "nav": {
+      "notice": "Notis undang-undang",
+      "privacy": "Privasi",
+      "terms": "Terma penggunaan"
+    },
+    "notice": {
+      "title": "Notis undang-undang",
+      "intro": "Maklumat yang dikehendaki oleh undang-undang Perancis (Perkara 6 LCEN, undang-undang no. 2004-575 bertarikh 21 Jun 2004) tentang penerbit dan hos laman web ini.",
+      "sections": [
+        {
+          "title": "Penerbit",
+          "body": [
+            "Laman web localcutvideo.mbonnici.fr (“LocalCutVideo”) diterbitkan oleh Maxence Bonnici, individu persendirian, secara bukan komersial.",
+            "Pengarah penerbitan: Maxence Bonnici.",
+            "Hubungi: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Pengehosan",
+          "body": [
+            "Laman web ini dihoskan sendiri oleh penerbitnya, Maxence Bonnici, pada pelayan peribadi, dan digunakan dengan platform Coolify.",
+            "Hubungi: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Harta intelek",
+          "body": [
+            "Kod sumber LocalCutVideo adalah sumber terbuka dan diterbitkan di bawah lesen MIT di [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
+            "Komponen pihak ketiga, model AI dan fon yang digunakan oleh aplikasi kekal milik pencipta masing-masing dan digunakan di bawah lesen mereka sendiri, yang disenaraikan dalam [terma penggunaan](/terms). Jenama yang disebut (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) milik pemiliknya."
+          ]
+        },
+        {
+          "title": "Liabiliti",
+          "body": [
+            "Penerbit berusaha memastikan laman web sentiasa tersedia dan maklumatnya tepat, tetapi tidak dapat menjamin kedua-duanya. Penggunaan aplikasi tertakluk kepada [terma penggunaan](/terms)."
+          ]
+        },
+        {
+          "title": "Data peribadi",
+          "body": [
+            "LocalCutVideo tidak mengumpul sebarang data peribadi: video hanya diproses pada peranti anda. Butirannya terdapat dalam [dasar privasi](/privacy)."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Dasar privasi",
+      "intro": "LocalCutVideo dibina supaya video anda tidak pernah meninggalkan peranti anda. Halaman ini menerangkan dengan mudah apa yang diproses, dan di mana.",
+      "sections": [
+        {
+          "title": "Ringkasnya",
+          "body": [
+            "Tiada muat naik: video, audio dan transkrip anda diproses dalam pelayar dan tidak pernah dihantar kepada penerbit atau sesiapa pun.",
+            "Tiada akaun, tiada kuki, tiada analitik, tiada iklan."
+          ]
+        },
+        {
+          "title": "Apa yang kekal pada peranti anda",
+          "body": [
+            "Fail video dan audio yang anda buka dibaca terus daripada cakera. Analisis, transkripsi (Whisper), penjejakan wajah dan eksport dikira secara setempat oleh pelayar anda.",
+            "Projek anda (potongan, transkrip, tetapan) disimpan dalam pangkalan data setempat pelayar anda (IndexedDB), bersama lakaran kecil dan cache analisis. Penerbit tidak mempunyai akses kepadanya. Anda boleh memadam projek dari halaman projek, atau memadam semuanya dengan mengosongkan data laman ini dalam tetapan pelayar."
+          ]
+        },
+        {
+          "title": "Storan setempat",
+          "body": [
+            "Aplikasi menyimpan pilihan antara muka anda (bahasa, tema, projek terakhir dibuka) dalam storan setempat pelayar, dan menyimpan failnya sendiri serta model AI yang dimuat turun dalam cache pelayar supaya boleh berfungsi luar talian. Semua ini benar-benar perlu untuk perkhidmatan, tidak pernah digunakan untuk menjejaki anda, dan oleh itu tidak memerlukan sepanduk persetujuan."
+          ]
+        },
+        {
+          "title": "Pelayan",
+          "body": [
+            "Pelayan hanya menghantar fail aplikasi dan tidak menyimpan log akses. Seperti mana-mana pelayan web, ia secara teknikal menerima alamat IP anda untuk menjawab permintaan, tetapi tidak menyimpannya."
+          ]
+        },
+        {
+          "title": "Pihak ketiga",
+          "body": [
+            "Hugging Face: model Whisper disediakan oleh laman ini, sama seperti bahagian lain aplikasi. Hanya jika ia tidak tersedia di sini, ia dimuat turun dari huggingface.co; Hugging Face kemudian menerima alamat IP anda dan maklumat pelayar biasa, tetapi tidak pernah audio anda. Lihat [dasar privasi](https://huggingface.co/privacy) mereka.",
+            "GitHub: hanya jika anda mengikuti pautan ke repositori kod sumber.",
+            "Tiada pihak ketiga lain dihubungi: Content-Security-Policy yang ketat secara teknikal menghalang halaman daripada bersambung ke tempat lain."
+          ]
+        },
+        {
+          "title": "Hak anda",
+          "body": [
+            "Di bawah GDPR, anda berhak untuk mengakses, membetulkan dan memadam data anda, serta membantah pemprosesannya. Oleh sebab penerbit tidak menyimpan sebarang data tentang anda, biasanya tiada apa untuk diakses, tetapi anda boleh bertanya apa-apa melalui maxence.bonnici@outlook.fr. Anda juga boleh membuat aduan kepada CNIL ([cnil.fr](https://www.cnil.fr)) atau pihak berkuasa perlindungan data di negara anda."
+          ]
+        },
+        {
+          "title": "Perubahan",
+          "body": [
+            "Dasar ini mungkin dikemas kini apabila aplikasi berkembang. Tarikh kemas kini terakhir dipaparkan di bahagian atas halaman ini."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terma penggunaan",
+      "intro": "Dengan menggunakan LocalCutVideo, anda menerima terma ini. Ia ringkas kerana perkhidmatannya mudah: alat percuma yang berjalan dalam pelayar anda.",
+      "sections": [
+        {
+          "title": "Perkhidmatan",
+          "body": [
+            "LocalCutVideo ialah aplikasi penyuntingan video percuma yang berjalan sepenuhnya dalam pelayar web anda. Ia disediakan tanpa bayaran, tanpa akaun, dan mungkin berubah, terganggu atau dihentikan pada bila-bila masa tanpa notis."
+          ]
+        },
+        {
+          "title": "Kandungan anda",
+          "body": [
+            "Anda kekal sebagai pemilik tunggal dan satu-satunya yang bertanggungjawab atas video, bunyi dan muzik yang anda sunting dan terbitkan. Anda mesti memiliki hak yang diperlukan (hak cipta, lesen muzik, hak imej orang yang dirakam).",
+            "Aplikasi tidak boleh digunakan untuk tujuan yang menyalahi undang-undang."
+          ]
+        },
+        {
+          "title": "Ciri automatik",
+          "body": [
+            "Transkripsi, sari kata, pengesanan senyap dan bingkai automatik dihasilkan secara automatik dan mungkin mengandungi ralat. Semak hasilnya sebelum menerbitkannya."
+          ]
+        },
+        {
+          "title": "Fail dan projek anda",
+          "body": [
+            "Aplikasi tidak pernah mengubah fail asal anda. Projek disimpan dalam pelayar anda dan mungkin hilang jika datanya dikosongkan atau jika pelayar mengosongkan ruang: sentiasa simpan fail asal anda."
+          ]
+        },
+        {
+          "title": "Waranti dan liabiliti",
+          "body": [
+            "Perisian ini disediakan “seadanya”, tanpa sebarang waranti, di bawah lesen MIT. Setakat yang dibenarkan oleh undang-undang, penerbit tidak boleh dipertanggungjawabkan atas sebarang kerosakan akibat penggunaan atau ketidakupayaan menggunakan aplikasi (kehilangan data, ralat eksport, ketiadaan perkhidmatan…)."
+          ]
+        },
+        {
+          "title": "Sumber terbuka dan komponen pihak ketiga",
+          "body": [
+            "Kod sumber tersedia di bawah lesen MIT di [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
+            "LocalCutVideo bergantung pada: Mediabunny (MPL-2.0), Transformers.js dan ONNX Runtime (Apache-2.0 dan MIT), model Whisper oleh OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) serta fon Inter dan Montserrat (SIL Open Font License)."
+          ]
+        },
+        {
+          "title": "Undang-undang yang terpakai",
+          "body": [
+            "Terma ini tertakluk kepada undang-undang Perancis. Soalan: maxence.bonnici@outlook.fr."
+          ]
+        }
+      ]
+    }
+  },
+  "thumbnail": {
+    "eyebrow": "Pembuat lakaran kecil",
+    "title": "Lakaran kecil yang membuatkan orang mahu klik",
+    "lead": "Pilih detik terbaik video anda, tambah tajuk yang menarik dan muat turun imej yang sedia untuk YouTube, Shorts atau Instagram. Semuanya berlaku pada peranti anda",
+    "pick": "Lepaskan video atau imej",
+    "pickHint": "MP4, MOV, WebM, JPG, PNG… fail kekal pada peranti anda",
+    "choose": "Pilih fail",
+    "local": "Tiada yang dimuat naik: imej dibuat dalam pelayar anda",
+    "permissionTitle": "Benarkan akses kepada video projek",
+    "permissionText": "Pelayar anda meminta pengesahan sebelum membaca fail daripada peranti anda sekali lagi",
+    "permission": "Benarkan akses",
+    "back": "Kembali ke editor",
+    "dragHint": "Seret gambar untuk membingkai semula",
+    "frame": "Bingkai video",
+    "prevFrame": "Bingkai sebelumnya",
+    "nextFrame": "Bingkai seterusnya",
+    "moments": "Detik terbaik",
+    "other": "Pilih fail lain",
+    "format": "Format",
+    "formats": {
+      "landscape": "YouTube",
+      "vertical": "Shorts · TikTok",
+      "square": "Instagram"
+    },
+    "text": "Tajuk",
+    "textPlaceholder": "Tajuk menarik anda",
+    "defaultText": "*Tajuk* anda di sini",
+    "accentHint": "Letakkan perkataan di antara asterisk untuk mewarnakannya: *seperti ini*",
+    "size": "Saiz teks",
+    "position": "Kedudukan",
+    "positions": {
+      "top": "Atas",
+      "center": "Tengah",
+      "bottom": "Bawah"
+    },
+    "alignCenter": "Di tengah",
+    "alignLeft": "Kiri",
+    "uppercase": "Huruf besar",
+    "tilt": "Teks condong",
+    "style": "Gaya tajuk",
+    "styles": {
+      "outline": "Garis luar",
+      "shadow": "Bayang",
+      "box": "Jalur",
+      "highlight": "Penyerlah"
+    },
+    "color": "Warna teks",
+    "accent": "Warna perkataan diserlahkan",
+    "image": "Gambar",
+    "zoom": "Zum",
+    "brightness": "Kecerahan",
+    "contrast": "Kontras",
+    "saturation": "Ketepuan",
+    "shade": "Gelapkan tepi",
+    "reset": "Set semula",
+    "downloadJpg": "Muat turun JPG",
+    "downloadPng": "Muat turun PNG",
+    "sizeInfo": "{{ width }} × {{ height }} px · JPG paling sesuai untuk YouTube (bawah 2 MB)",
+    "saved": "Disimpan: {{ name }}",
+    "loadError": "Projek ini tidak dapat dibuka",
+    "readError": "Fail ini tidak dapat dibaca"
+  },
+  "seo": {
+    "home": {
+      "title": "LocalCutVideo — Editor video percuma dalam pelayar, tiada muat naik",
+      "description": "Sunting video dalam pelayar: bahagian senyap dipotong automatik, sari kata AI, bingkai pada wajah untuk TikTok dan Shorts, lakaran kecil. Percuma dan sumber terbuka, video anda tidak pernah meninggalkan komputer"
+    },
+    "thumbnail": {
+      "title": "Pembuat lakaran kecil YouTube percuma — LocalCutVideo",
+      "description": "Buat lakaran kecil YouTube, Shorts atau Instagram daripada video anda: cadangan detik terbaik, tajuk besar dengan perkataan berwarna, JPG atau PNG. Percuma, dalam pelayar, tiada muat naik"
+    },
+    "changelog": {
+      "title": "Log perubahan — LocalCutVideo",
+      "description": "Apa yang baharu dalam LocalCutVideo, versi demi versi"
+    },
+    "legal": {
+      "title": "Notis undang-undang — LocalCutVideo",
+      "description": "Penerbit dan pengehosan LocalCutVideo"
+    },
+    "privacy": {
+      "title": "Dasar privasi — LocalCutVideo",
+      "description": "LocalCutVideo tidak memuat naik apa-apa: video, transkrip dan projek anda kekal pada peranti anda"
+    },
+    "terms": {
+      "title": "Terma penggunaan — LocalCutVideo",
+      "description": "Terma penggunaan LocalCutVideo, editor video percuma dan sumber terbuka"
+    },
+    "app": {
+      "title": "Projek — LocalCutVideo",
+      "description": "Projek video anda, disimpan dalam pelayar"
+    },
+    "editor": {
+      "title": "Editor — LocalCutVideo",
+      "description": "Editor LocalCutVideo"
+    }
+  },
+  "tour": {
+    "label": "Lawatan berpandu",
+    "help": "Lawatan berpandu",
+    "count": "Langkah {{ n }} daripada {{ total }}",
+    "skip": "Langkau lawatan",
+    "prev": "Kembali",
+    "next": "Seterusnya",
+    "done": "Jom mula!",
+    "steps": {
+      "auto": {
+        "title": "Satu klik: sunting automatik",
+        "text": "LocalCutVideo menyunting video untuk anda: senyap dan teragak-agak dibuang, sari kata, bingkai dan zum. Anda boleh ubah semuanya kemudian"
+      },
+      "preview": {
+        "title": "Pratonton",
+        "text": "Apa yang anda lihat ialah apa yang akan dieksport. Klik padanya, atau tekan Space, untuk main atau jeda"
+      },
+      "timeline": {
+        "title": "Garis masa",
+        "text": "Klik untuk bergerak dalam video. Seret pada bentuk gelombang untuk memilih bahagian"
+      },
+      "cut": {
+        "title": "Potong atau tukar kelajuan",
+        "text": "Apabila bahagian dipilih, Potong (X) membuangnya dan Kelajuan memainkannya lebih laju atau perlahan. Ctrl+Z membuat asal apa sahaja"
+      },
+      "transcript": {
+        "title": "Sunting melalui teks",
+        "text": "Selepas disalin, memadam perkataan akan memotong video. Anda juga boleh membetulkan apa yang AI salah dengar"
+      },
+      "settings": {
+        "title": "Semua tetapan",
+        "text": "Format (16:9, 9:16, segi empat sama), potongan dan peralihan, sari kata, teks, bingkai dan kabur, bunyi dan muzik"
+      },
+      "thumbnail": {
+        "title": "Lakaran kecil",
+        "text": "Buat lakaran kecil video anda daripada detik terbaiknya"
+      },
+      "export": {
+        "title": "Eksport",
+        "text": "Simpan video sebagai MP4. Semuanya berlaku pada peranti anda, tiada yang dimuat naik"
+      }
+    }
+  }
+}

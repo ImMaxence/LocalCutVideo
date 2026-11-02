@@ -1,0 +1,895 @@
+{
+  "common": {
+    "videoFiles": "File video",
+    "audioFiles": "File audio",
+    "cancel": "Batal",
+    "close": "Tutup",
+    "retry": "Coba lagi",
+    "none": "Tidak ada",
+    "remove": "Hapus"
+  },
+  "nav": {
+    "features": "Fitur",
+    "privacy": "Privasi",
+    "faq": "FAQ",
+    "changelog": "Riwayat versi",
+    "language": "Bahasa",
+    "searchLanguage": "Cari bahasa",
+    "noLanguage": "Bahasa tidak ditemukan",
+    "install": "Pasang aplikasi",
+    "open": "Buka editor",
+    "menu": "Buka menu",
+    "close": "Tutup menu",
+    "thumbnail": "Thumbnail"
+  },
+  "theme": {
+    "system": "Sistem",
+    "light": "Terang",
+    "dark": "Gelap",
+    "label": "Tema"
+  },
+  "footer": {
+    "tagline": "Editor video gratis dan open source yang berjalan sepenuhnya di browser Anda. File Anda tidak pernah meninggalkan komputer",
+    "issues": "Laporkan masalah",
+    "noTracking": "Tanpa cookie, tanpa pelacakan",
+    "product": "Produk",
+    "legal": "Hukum"
+  },
+  "pwa": {
+    "update": "Versi baru tersedia",
+    "reload": "Muat ulang"
+  },
+  "landing": {
+    "hero": {
+      "badgeLocal": "100% lokal, nol unggahan",
+      "badgeOpen": "Gratis & open source",
+      "title1": "Edit video Anda",
+      "title2": "Tidak ada yang keluar dari komputer Anda",
+      "lead": "LocalCutVideo memotong bagian hening, membuat transkrip dengan Whisper, menanamkan subtitel karaoke, dan membingkai ulang 16:9 menjadi 9:16, semuanya di browser Anda. Tanpa unggah, tanpa akun, tanpa server",
+      "cta": "Buka editor",
+      "github": "Lihat di GitHub",
+      "hint": "Paling baik di Chrome atau Edge pada komputer",
+      "demo": "Coba dengan video demo"
+    },
+    "mock": {
+      "w1": "Jadi hari ini",
+      "filler": "eh,",
+      "w2": "saya akan tunjukkan",
+      "w3": "cara kerjanya",
+      "line2": "Semuanya berjalan di komputer Anda sendiri, bahkan AI-nya",
+      "line3": "Hapus satu kata, videonya terpotong",
+      "cap1": "Ini tetap ada di",
+      "cap2": "komputer Anda"
+    },
+    "stats": {
+      "upload": "byte diunggah",
+      "local": "diproses di perangkat Anda",
+      "languages": "bahasa antarmuka",
+      "gpu": "AI & encoding dipercepat"
+    },
+    "how": {
+      "eyebrow": "Cara kerja",
+      "title": "Dari rekaman mentah ke video siap unggah dalam tiga langkah",
+      "open": {
+        "title": "Buka video",
+        "text": "Pilih file dari disk Anda. File dibaca di tempatnya: tanpa salinan, tanpa unggah, bahkan untuk file berukuran beberapa gigabyte"
+      },
+      "edit": {
+        "title": "Biarkan editor bekerja",
+        "text": "Bagian hening terdeteksi, ucapan ditranskripsi kata demi kata, dan wajah dilacak, semuanya secara lokal. Perbaiki apa pun dengan mengedit teks"
+      },
+      "export": {
+        "title": "Ekspor MP4",
+        "text": "Pilih 16:9, 9:16, atau 1:1. Video di-encode oleh kartu grafis Anda dan langsung ditulis ke disk"
+      }
+    },
+    "features": {
+      "eyebrow": "Fitur",
+      "title": "Semua yang Anda perlukan untuk video bicara ke kamera",
+      "lead": "Dibuat untuk kreator YouTube, TikTok, Reels, dan Shorts yang lebih suka tidak mengunggah rekaman mentahnya ke mana pun",
+      "silences": {
+        "title": "Potong hening otomatis",
+        "text": "Mendeteksi jeda dari volume suara lalu menghapusnya, dengan ambang, durasi minimum, dan ruang napas yang bisa diatur"
+      },
+      "textEdit": {
+        "title": "Edit lewat teks",
+        "text": "Whisper memberi setiap kata stempel waktu. Hapus kata di transkrip dan bagian video yang sesuai ikut terpotong"
+      },
+      "captions": {
+        "title": "Subtitel karaoke",
+        "text": "Subtitel beranimasi kata demi kata yang ditanamkan ke video, dengan gaya karaoke, polos, atau kotak, dalam warna sorotan pilihan Anda"
+      },
+      "framing": {
+        "title": "Pembingkaian otomatis 16:9 → 9:16",
+        "text": "Pelacakan wajah menjaga pembicara tetap dalam bingkai saat Anda mengubah video lanskap menjadi vertikal"
+      },
+      "zoom": {
+        "title": "Zoom pintar",
+        "text": "Zoom bergantian di setiap potongan membuat jump cut terlihat disengaja dan membuat penonton bertahan"
+      },
+      "ducking": {
+        "title": "Suara & musik",
+        "text": "Naikkan volume, samakan suara klip, dan tambahkan musik latar yang mengecil sendiri setiap kali seseorang berbicara"
+      },
+      "recovery": {
+        "title": "Pemulihan setelah crash",
+        "text": "Setiap perubahan tersimpan di browser secara langsung. Buka lagi tab-nya dan lanjutkan tepat dari tempat Anda berhenti"
+      },
+      "offline": {
+        "title": "Bisa offline",
+        "text": "Pasang sebagai aplikasi. Setelah model AI terunduh, seluruh editor bisa dipakai tanpa koneksi internet"
+      },
+      "export": {
+        "title": "Ekspor perangkat keras yang cepat",
+        "text": "Encoding memakai WebCodecs, encoder video bawaan browser dan kartu grafis Anda, bukan encoding perangkat lunak yang lambat"
+      },
+      "clips": {
+        "title": "Gabungkan banyak klip",
+        "text": "Seret beberapa take sekaligus: semuanya digabung menjadi satu video, dalam urutan yang Anda pilih, dengan timeline dan transkrip bersama"
+      },
+      "inputs": {
+        "title": "MP4, MOV, WebM, MKV",
+        "text": "Membuka file dari ponsel dan kamera Anda, termasuk video HEVC dari iPhone jika browser Anda bisa mendekodenya"
+      },
+      "languages": {
+        "title": "Multibahasa",
+        "text": "Antarmuka tersedia dalam {{ count }} bahasa dan Whisper mentranskripsi puluhan bahasa lain, dengan deteksi bahasa otomatis"
+      }
+    },
+    "privacy": {
+      "eyebrow": "Privasi",
+      "title": "Nol unggahan, sejak dirancang",
+      "lead": "Video Anda dibaca langsung dari disk. Analisis audio, transkripsi, pelacakan wajah, dan encoding semuanya berjalan di thread latar belakang (Web Workers) di komputer Anda. Memang tidak ada server tempat rekaman Anda dikirim",
+      "upload": "Tidak pernah ada unggahan: file tidak pernah meninggalkan komputer Anda",
+      "account": "Tanpa akun, tanpa cookie, tanpa analitik",
+      "csp": "Content-Security-Policy yang ketat hanya membolehkan halaman berkomunikasi dengan situs ini, yang juga menyediakan model AI (Hugging Face hanya cadangan)",
+      "storage": "Proyek disimpan di database lokal browser Anda (IndexedDB) dan bisa dihapus kapan saja",
+      "diagram": {
+        "machine": "Komputer Anda",
+        "file": "File video",
+        "browser": "Browser Anda",
+        "upload": "Unggah ke server",
+        "model": "Unduhan model AI (sekali, di cache)"
+      }
+    },
+    "support": {
+      "eyebrow": "Kompatibilitas",
+      "title": "Dukungan browser",
+      "ok": "Penuh",
+      "partial": "Sebagian",
+      "full": "Semuanya, termasuk pemulihan setelah crash dan ekspor langsung ke disk",
+      "firefox": "Edit dan ekspor berfungsi. Setelah menutup tab, Anda perlu memilih video lagi",
+      "safari": "Hanya versi terbaru. Pilih ulang video setelah memuat ulang; hasil ekspor diunduh",
+      "mobile": "Ponsel & tablet",
+      "mobileText": "Berfungsi untuk klip pendek, tetapi batas memori membuat video panjang tidak andal"
+    },
+    "faq": {
+      "title": "Pertanyaan umum",
+      "free": {
+        "q": "Benar-benar gratis? Apa jebakannya?",
+        "a": "Gratis dan open source. Karena semua pekerjaan terjadi di komputer Anda, tidak ada biaya server yang harus ditanggung, jadi tidak ada yang perlu dijual kepada Anda dan tidak ada data yang dikumpulkan"
+      },
+      "formats": {
+        "q": "Format video apa saja yang bisa dibuka?",
+        "a": "MP4, MOV, WebM, dan MKV, selama browser Anda bisa mendekode codec-nya (H.264, HEVC, VP9, AV1 tergantung browser dan sistem). Hasil ekspor berupa file MP4"
+      },
+      "browsers": {
+        "q": "Kenapa Chrome atau Edge?",
+        "a": "Keduanya mendukung File System Access API, sehingga editor bisa membuka lagi video Anda setelah dimuat ulang dan menulis hasil ekspor langsung ke disk. Browser lain juga bisa, dengan beberapa klik tambahan"
+      },
+      "size": {
+        "q": "Apakah ada batas ukuran file?",
+        "a": "Tidak ada batas unggahan karena tidak ada yang diunggah. Video dibaca dari disk sedikit demi sedikit; batas praktisnya adalah memori komputer dan kesabaran Anda untuk video yang sangat panjang"
+      },
+      "offline": {
+        "q": "Apakah bisa tanpa internet?",
+        "a": "Ya, setelah dimuat. Pasang sebagai aplikasi (PWA) dan lakukan transkripsi sekali saat online: model Whisper tersimpan di cache dan semuanya bisa berjalan offline"
+      },
+      "ai": {
+        "q": "Di mana AI-nya berjalan?",
+        "a": "Di browser Anda. Whisper berjalan dengan Transformers.js di kartu grafis (WebGPU) atau prosesor (WebAssembly), dan deteksi wajah memakai MediaPipe. Model diunduh sekali, audio Anda tidak pernah dikirim"
+      }
+    },
+    "final": {
+      "title": "Video Anda berikutnya, selesai diedit dalam hitungan menit",
+      "text": "Tanpa daftar, tanpa unggah, tanpa watermark. Buka file dan mulai mengedit"
+    },
+    "thumbnail": {
+      "eyebrow": "Baru · Thumbnail",
+      "title": "Dan thumbnail yang serasi",
+      "text": "Pembuat thumbnail menemukan momen paling tajam di video Anda. Tambahkan judul besar dengan kata berwarna dan unduh dalam ukuran yang tepat",
+      "points": {
+        "moments": "Saran momen terbaik",
+        "title": "Judul dengan kata yang disorot, 4 gaya",
+        "formats": "YouTube 1280×720, Shorts, dan persegi",
+        "local": "Dibuat di perangkat Anda, tidak ada yang diunggah"
+      },
+      "cta": "Buat thumbnail",
+      "mockTitle": "Vlog",
+      "mockAccent": "pertamaku"
+    }
+  },
+  "changelog": {
+    "eyebrow": "Rilis",
+    "title": "Riwayat versi",
+    "lead": "Semua versi LocalCutVideo, dari yang terbaru",
+    "current": "Versi Anda:",
+    "github": "Lihat di GitHub",
+    "releases": "Rilis di GitHub",
+    "latest": "Terbaru",
+    "error": "Riwayat versi tidak bisa dimuat"
+  },
+  "projects": {
+    "title": "Proyek Anda",
+    "lead": "Proyek tersimpan otomatis di browser ini. Video Anda tetap di tempatnya di disk",
+    "resume": "Lanjutkan dari terakhir kali",
+    "reading": "Membaca video…",
+    "drop": "Letakkan video Anda di sini",
+    "or": "atau",
+    "open": "Buka video",
+    "private": "File dibaca secara lokal, tidak ada yang diunggah",
+    "noFsAccess": "Browser Anda tidak bisa mengingat file antar sesi: setelah menutup tab, Anda perlu memilih video lagi. Chrome atau Edge tidak punya masalah ini",
+    "recent": "Proyek terbaru",
+    "empty": "Belum ada proyek. Buka video untuk memulai",
+    "delete": "Hapus proyek",
+    "confirmDelete": "Hapus proyek “{{ name }}”? File video di disk Anda tidak terpengaruh",
+    "multi": "Beberapa file? Semuanya digabung menjadi satu video, sesuai urutan nama",
+    "importFile": "Buka file proyek (.lcv.json)",
+    "saveFile": "Simpan proyek sebagai file",
+    "imported": "Proyek dibuka: pilih video-videonya untuk melanjutkan"
+  },
+  "errors": {
+    "notVideo": "File ini sepertinya bukan video",
+    "codec": "Browser Anda tidak bisa mendekode codec video ini (HEVC/H.265 butuh Chrome, atau ekstensi HEVC di Edge). Coba ubah ke MP4 H.264",
+    "noVideo": "Tidak ada trek video di file ini",
+    "generic": "Terjadi kesalahan saat membaca file ini",
+    "transcribe": "Transkripsi gagal. Coba model yang lebih kecil atau periksa koneksi Anda untuk unduhan pertama",
+    "export": "Ekspor gagal",
+    "faces": "Pelacakan wajah gagal pada video ini",
+    "skipped": "Dilewati (tidak bisa dibaca): {{ names }}",
+    "skippedCodec": "Dilewati, codec tidak didukung browser ini: {{ names }}. Coba Chrome, atau ubah ke MP4 H.264",
+    "notProject": "File ini bukan proyek LocalCutVideo",
+    "demo": "Video demo tidak bisa dimuat"
+  },
+  "languages": {
+    "en": "Inggris",
+    "fr": "Prancis",
+    "es": "Spanyol",
+    "it": "Italia",
+    "de": "Jerman",
+    "pt": "Portugis",
+    "nl": "Belanda"
+  },
+  "editor": {
+    "back": "Kembali ke proyek",
+    "name": "Nama proyek",
+    "undo": "Urungkan",
+    "redo": "Ulangi",
+    "missing": "Proyek ini sudah tidak ada",
+    "save": {
+      "saving": "Menyimpan…",
+      "saved": "Tersimpan di perangkat",
+      "error": "Belum tersimpan"
+    },
+    "reconnect": {
+      "loading": "Membuka video…",
+      "title": "Hubungkan kembali video Anda",
+      "allow": "Izinkan akses ke semua",
+      "select": "Pilih",
+      "mismatch": "Ini sepertinya bukan file aslinya (“{{ name }}”). Tetap gunakan?",
+      "intro": "Proyek aman. Demi privasi Anda, browser meminta izin lagi sebelum editor bisa membaca file Anda",
+      "allowOne": "Izinkan",
+      "privacy": "Video Anda dibaca di tempatnya di disk, tidak pernah disalin atau diunggah",
+      "status": {
+        "ready": "Terhubung",
+        "permission": "Menunggu izin Anda",
+        "moved": "Tidak ditemukan: dipindah atau diganti nama?",
+        "missing": "Pilih lagi (browser Anda tidak menyimpan akses file)",
+        "loading": "Membuka…"
+      }
+    },
+    "preview": {
+      "cut": "Potongan",
+      "back": "Mundur 5 dtk",
+      "play": "Putar",
+      "pause": "Jeda",
+      "savedHint": "Waktu yang dihapus oleh potongan",
+      "badge": "Pratinjau ringan · {{ q }}p",
+      "quality": "Kualitas pratinjau",
+      "qualityHint": "Pratinjau yang lebih ringan membuat editor tetap lancar. Ekspor selalu memakai kualitas penuh"
+    },
+    "timeline": {
+      "title": "Timeline",
+      "silence": "Hening",
+      "manual": "Manual",
+      "text": "Teks",
+      "hint": "Seret di gelombang suara untuk memilih bagian, lalu Potong atau Kecepatan · klik potongan untuk menyesuaikan tepinya · klik dua kali untuk menghapus",
+      "removeCut": "Hapus potongan",
+      "zoom": "Zoom timeline",
+      "analyzing": "Menganalisis audio…",
+      "zoomIn": "Perbesar",
+      "zoomOut": "Perkecil",
+      "fit": "Pas",
+      "fitHint": "Tampilkan seluruh video (tip: Ctrl + roda mouse untuk zoom)",
+      "manualCut": "Potong manual",
+      "markIn": "Awal",
+      "markOut": "Akhir",
+      "markInHint": "Awal bagian yang dipotong, di posisi putar (I)",
+      "markOutHint": "Akhir bagian yang dipotong, di posisi putar (O)",
+      "cutMarked": "Potong",
+      "cutHint": "Hapus bagian antara awal dan akhir (X)",
+      "clearMarks": "Hapus awal dan akhir",
+      "marksMissing": "Tentukan awal (I) dan akhir (O) terlebih dahulu",
+      "analysisError": "Audio tidak bisa dianalisis",
+      "selectedCut": "Potongan terpilih",
+      "earlier": "Lebih awal",
+      "later": "Lebih lambat",
+      "listen": "Dengarkan potongan",
+      "speed": "Kecepatan",
+      "speedHint": "Percepat atau perlambat bagian antara awal dan akhir",
+      "selectedSpeed": "Perubahan kecepatan",
+      "removeSpeed": "Kembali ke kecepatan normal",
+      "listenSpeed": "Putar perubahan kecepatan",
+      "selectFirst": "Pilih bagian terlebih dahulu: seret di gelombang suara, atau tentukan Awal dan Akhir"
+    },
+    "transcript": {
+      "title": "Transkrip",
+      "words": "{{ count }} kata",
+      "fillers": "Hapus kata pengisi ({{ count }})",
+      "restore": "Pulihkan semua",
+      "selected": "{{ count }} dipilih",
+      "cut": "Potong / pulihkan",
+      "tip": "Klik kata untuk melompat ke sana. Seret atau Shift-klik untuk memilih, lalu Delete untuk memotong atau Koreksi (Enter) untuk memperbaiki yang salah didengar Whisper",
+      "emptyTitle": "Belum ada transkrip",
+      "emptyText": "Transkripsikan video untuk mengeditnya lewat teks dan mendapatkan subtitel kata demi kata",
+      "correct": "Koreksi",
+      "correctTitle": "Apa yang sebenarnya diucapkan?",
+      "correctHint": "Ketik ulang satu kata atau satu kalimat penuh. Waktu dan subtitel menyesuaikan otomatis",
+      "apply": "Terapkan"
+    },
+    "transcribe": {
+      "title": "Transkripsi (Whisper)",
+      "hint": "Berjalan di perangkat Anda. Model diunduh sekali, lalu disimpan di cache",
+      "model": "Model",
+      "models": {
+        "tiny": "Cepat",
+        "base": "Seimbang",
+        "small": "Akurat"
+      },
+      "download": "Unduhan sekali {{ size }}",
+      "language": "Bahasa yang diucapkan",
+      "auto": "Deteksi otomatis",
+      "run": "Transkripsikan",
+      "rerun": "Transkripsikan ulang semuanya",
+      "done": "{{ count }} kata ditranskripsi",
+      "empty": "Tidak ada ucapan di video ini",
+      "stage": {
+        "audio": "Mengekstrak audio…",
+        "download": "Mengunduh model…",
+        "transcribe": "Mentranskripsi…"
+      },
+      "missing": "Transkripsikan klip baru ({{ count }})",
+      "rerunHint": "Mulai ulang dengan model dan bahasa di atas",
+      "confirmAll": "Transkripsikan ulang semuanya? Kata yang Anda potong atau koreksi akan hilang",
+      "detected": "Bahasa terdeteksi: {{ language }}"
+    },
+    "tabs": {
+      "format": "Format",
+      "cuts": "Potongan",
+      "captions": "Subtitel",
+      "framing": "Bingkai",
+      "audio": "Suara",
+      "clips": "Klip",
+      "texts": "Teks"
+    },
+    "format": {
+      "title": "Format keluaran",
+      "hint": "Video dipangkas agar pas. Gunakan Bingkai untuk mengikuti pembicara",
+      "landscape": "YouTube",
+      "vertical": "TikTok · Reels",
+      "square": "Feed",
+      "source": "Sumber:",
+      "resolution": "Resolusi",
+      "fps": "Frame per detik",
+      "exportNote": "Resolusi dan frame rate dipilih saat ekspor",
+      "rotation": "Rotasi",
+      "rotateLeft": "Putar ke kiri",
+      "rotateRight": "Putar ke kanan",
+      "rotationHint": "Untuk video yang direkam miring. Berlaku untuk semua klip",
+      "rotatedFaces": "Video diputar: aktifkan lagi “Ikuti wajah” di Bingkai"
+    },
+    "cuts": {
+      "title": "Deteksi hening",
+      "hint": "Menghapus jeda. Turunkan ambang jika ada kata yang terpotong",
+      "threshold": "Ambang",
+      "suggested": "Disarankan untuk rekaman ini: {{ value }} dB",
+      "minSilence": "Hening minimum",
+      "padding": "Ruang napas",
+      "detect": "Deteksi dan potong hening",
+      "detected": "{{ count }} hening dipotong",
+      "count": "potongan",
+      "removed": "dihapus",
+      "final": "durasi akhir",
+      "clear": "Hapus semua potongan",
+      "mode": "Cari jeda berdasarkan",
+      "modes": {
+        "audio": "Volume",
+        "transcript": "Transkrip"
+      },
+      "modeHint": "Mode transkrip tetap akurat meski ada bising atau musik latar",
+      "modeNeedsTranscript": "Transkripsikan video untuk mencari jeda dari kata: lebih akurat di tempat bising",
+      "preset": "Ritme",
+      "presets": {
+        "gentle": "Alami",
+        "normal": "Seimbang",
+        "tight": "Dinamis"
+      },
+      "live": "Potongan diperbarui langsung saat Anda mengubah pengaturan",
+      "silentClips": "{{ count }} klip tanpa suara orang: di sana hanya waktu kosong sungguhan yang dipotong"
+    },
+    "captions": {
+      "title": "Subtitel tertanam",
+      "style": "Gaya",
+      "styles": {
+        "karaoke": "Karaoke",
+        "clean": "Polos",
+        "boxed": "Kotak"
+      },
+      "position": "Posisi",
+      "positions": {
+        "top": "Atas",
+        "center": "Tengah",
+        "bottom": "Bawah"
+      },
+      "size": "Ukuran",
+      "words": "Kata per subtitel",
+      "uppercase": "Huruf kapital",
+      "highlight": "Warna sorotan"
+    },
+    "framing": {
+      "title": "Pembingkaian otomatis",
+      "hint": "Melacak wajah agar pembicara tetap dalam bingkai, ideal untuk 16:9 → 9:16",
+      "center": "Tengah",
+      "face": "Ikuti wajah",
+      "analyzing": "Melacak wajah…",
+      "analyze": "Lacak wajah",
+      "reanalyze": "Lacak wajah lagi",
+      "tracked": "{{ count }} posisi dilacak",
+      "found": "Wajah terlacak: bingkai mengikuti pembicara",
+      "notFound": "Tidak ada wajah yang konsisten ditemukan di video ini",
+      "punch": "Zoom pintar",
+      "punchHint": "Menyelingi zoom ringan di setiap potongan, atau di setiap kalimat jika tidak ada potongan, agar video tetap dinamis",
+      "zoom": "Besar zoom",
+      "firstTime": "Memilih “Ikuti wajah” menganalisis video sekali, secara lokal",
+      "beatsCuts": "Zoom berganti {{ count }} kali, di potongan Anda",
+      "beatsAuto": "Belum ada potongan: zoom berganti {{ count }} kali, di setiap kalimat atau tiap 4 dtk"
+    },
+    "audio": {
+      "title": "Musik latar",
+      "hint": "Musik otomatis mengecil saat seseorang berbicara (auto-ducking)",
+      "reconnect": "Hubungkan kembali “{{ name }}”",
+      "pick": "Pilih file musik",
+      "enabled": "Sertakan dalam video",
+      "volume": "Volume musik",
+      "ducking": "Dikecilkan saat bicara",
+      "duckingHint": "Seberapa kecil musik saat seseorang berbicara"
+    },
+    "export": {
+      "button": "Ekspor",
+      "title": "Ekspor video",
+      "running": "Mengekspor…",
+      "eta": "Sekitar {{ time }} lagi",
+      "keepOpen": "Biarkan tab ini terbuka. Encoding memakai kartu grafis Anda bila memungkinkan",
+      "done": "Ekspor selesai",
+      "saved": "“{{ name }}” disimpan ke disk Anda dalam {{ seconds }} dtk",
+      "downloaded": "“{{ name }}” diunduh dalam {{ seconds }} dtk",
+      "duration": "Durasi",
+      "from": "dari {{ time }}",
+      "streamHint": "Anda akan memilih tempat menyimpan MP4. File langsung ditulis ke disk",
+      "downloadHint": "MP4 dirakit secara lokal, lalu diunduh",
+      "start": "Ekspor MP4",
+      "saveProject": "Simpan proyek",
+      "saveProjectHint": "File .lcv.json berisi editan Anda (tanpa video), untuk melanjutkan di komputer lain",
+      "projectSaved": "Proyek disimpan sebagai file .lcv.json"
+    },
+    "clips": {
+      "title": "Klip",
+      "hint": "Video diputar berurutan sesuai urutan ini. Seret untuk mengubah urutan: potongan dan kata ikut dengan klipnya",
+      "jump": "Ke klip ini",
+      "up": "Pindah ke atas",
+      "down": "Pindah ke bawah",
+      "remove": "Hapus klip",
+      "add": "Tambah video",
+      "summary": "{{ count }} klip · total {{ time }}",
+      "confirmRemove": "Hapus “{{ name }}” dari proyek? Potongan dan katanya juga ikut terhapus (Ctrl+Z untuk mengurungkan)",
+      "added": "{{ count }} klip ditambahkan",
+      "addedTranscribe": "{{ count }} klip ditambahkan. Transkripsikan lagi untuk memberinya subtitel: klip yang sudah ditranskripsi tetap disimpan",
+      "noVoice": "tanpa suara",
+      "voiceOn": "Ada suara · klik jika tidak ada yang bicara",
+      "voiceOff": "Tanpa suara · klik jika ada yang bicara"
+    },
+    "auto": {
+      "button": "Edit otomatis",
+      "cta": "Edit video otomatis",
+      "transcribeOnly": "atau transkripsi saja",
+      "heading": "Biarkan LocalCutVideo mengedit video Anda",
+      "lead": "Sekali klik: hening dan keraguan dihapus, subtitel, bingkai ke pembicara, dan zoom pintar. Semuanya bisa diubah setelahnya",
+      "target": "Di mana Anda akan mengunggahnya?",
+      "options": {
+        "silences": "Potong bagian hening",
+        "fillers": "Hapus keraguan (eh, emm…)",
+        "captions": "Subtitel karaoke",
+        "framing": "Ikuti wajah",
+        "framingNoCrop": "Tidak perlu: format ini menampilkan seluruh gambar",
+        "zoom": "Zoom pintar"
+      },
+      "local": "Semuanya berjalan di perangkat Anda. Video tidak pernah diunggah",
+      "start": "Mulai edit otomatis",
+      "running": "Mengedit video Anda…",
+      "done": "Video Anda sudah diedit!",
+      "view": "Lihat hasilnya",
+      "undo": "Urungkan edit otomatis",
+      "undone": "Proyek kembali seperti sebelum edit otomatis",
+      "summary": {
+        "cuts": "potongan",
+        "removed": "dihapus",
+        "words": "kata bersubtitel",
+        "silent": "{{ count }} klip tanpa suara orang: hanya waktu kosong sungguhan yang dipotong"
+      },
+      "steps": {
+        "analyze": "Menganalisis audio",
+        "transcribe": "Mentranskripsi ucapan",
+        "fillers": "Menghapus keraguan",
+        "silences": "Memotong hening",
+        "framing": "Mengikuti wajah",
+        "style": "Subtitel dan zoom pintar",
+        "voice": "Mendeteksi suara"
+      },
+      "status": {
+        "skipped": "dilewati",
+        "error": "gagal"
+      },
+      "voice": {
+        "title": "Apakah ada yang berbicara di video?",
+        "auto": "Otomatis",
+        "yes": "Ya",
+        "no": "Tidak",
+        "detectedYes": "Terdeteksi: ada yang berbicara",
+        "detectedNo": "Terdeteksi: tanpa suara",
+        "hint": "Tanpa suara: tanpa transkrip atau subtitel, hanya waktu kosong sungguhan yang dipotong"
+      }
+    },
+    "mix": {
+      "title": "Suara video",
+      "hint": "Naikkan atau turunkan suara klip Anda",
+      "volume": "Volume",
+      "mute": "Bisukan",
+      "unmute": "Bunyikan",
+      "volumeHint": "Berlaku untuk pratinjau dan ekspor",
+      "boostHint": "Di atas 100 %, limiter mencegah suara pecah",
+      "normalize": "Samakan volume klip",
+      "normalizeHint": "Setiap klip sama kerasnya, direkam dari dekat atau jauh",
+      "denoise": "Kurangi bising latar",
+      "denoiseHint": "Suara lebih jernih (angin, desis, kipas). Diterapkan saat ekspor, pada klip yang ada suaranya. Dengarkan dulu",
+      "listen": "Dengarkan 8 dtk hasilnya",
+      "stopListening": "Berhenti mendengarkan",
+      "preparing": "Menyiapkan…"
+    },
+    "thumbnail": "Thumbnail",
+    "transition": {
+      "title": "Transisi di potongan",
+      "none": "Potong langsung",
+      "dip": "Pudar cepat",
+      "black": "Pudar ke hitam",
+      "hint": "Diputar di setiap potongan dan pergantian klip (dan di awal serta akhir untuk pudar ke hitam). Terlihat saat diputar"
+    },
+    "texts": {
+      "title": "Teks di atas video",
+      "hint": "Judul dan catatan yang ditampilkan di posisi putar. Apit kata dengan tanda bintang untuk mewarnainya",
+      "add": "Tambah teks di posisi putar",
+      "default": "*Teks* Anda",
+      "timing": "Ditampilkan",
+      "startHere": "Mulai di sini",
+      "endHere": "Selesai di sini",
+      "remove": "Hapus teks ini"
+    },
+    "background": {
+      "title": "Latar belakang",
+      "hint": "Memburamkan latar di belakang orang, yang tetap tajam. Dihitung di perangkat Anda",
+      "none": "Tajam",
+      "blur": "Buram",
+      "strength": "Kekuatan buram",
+      "error": "Efek buram latar tidak bisa dijalankan di perangkat ini"
+    }
+  },
+  "legal": {
+    "updated": "Terakhir diperbarui: 1 November 2026",
+    "contact": "Kontak",
+    "nav": {
+      "notice": "Pemberitahuan hukum",
+      "privacy": "Privasi",
+      "terms": "Ketentuan penggunaan"
+    },
+    "notice": {
+      "title": "Pemberitahuan hukum",
+      "intro": "Informasi yang diwajibkan hukum Prancis (Pasal 6 LCEN, undang-undang no. 2004-575 tanggal 21 Juni 2004) tentang penerbit dan penyedia hosting situs web ini.",
+      "sections": [
+        {
+          "title": "Penerbit",
+          "body": [
+            "Situs web localcutvideo.mbonnici.fr (“LocalCutVideo”) diterbitkan oleh Maxence Bonnici, perorangan, secara nonkomersial.",
+            "Penanggung jawab publikasi: Maxence Bonnici.",
+            "Kontak: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Hosting",
+          "body": [
+            "Situs web ini di-host sendiri oleh penerbitnya, Maxence Bonnici, di server pribadi, dan dipasang dengan platform Coolify.",
+            "Kontak: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Kekayaan intelektual",
+          "body": [
+            "Kode sumber LocalCutVideo bersifat open source dan diterbitkan dengan lisensi MIT di [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
+            "Komponen pihak ketiga, model AI, dan font yang dipakai aplikasi tetap menjadi milik pembuatnya dan digunakan berdasarkan lisensinya masing-masing, yang tercantum dalam [ketentuan penggunaan](/terms). Merek yang disebut (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) milik pemiliknya masing-masing."
+          ]
+        },
+        {
+          "title": "Tanggung jawab",
+          "body": [
+            "Penerbit berupaya menjaga situs tetap tersedia dan informasinya akurat, tetapi tidak dapat menjamin keduanya. Penggunaan aplikasi diatur oleh [ketentuan penggunaan](/terms)."
+          ]
+        },
+        {
+          "title": "Data pribadi",
+          "body": [
+            "LocalCutVideo tidak mengumpulkan data pribadi apa pun: video hanya diproses di perangkat Anda. Detailnya ada di [kebijakan privasi](/privacy)."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Kebijakan privasi",
+      "intro": "LocalCutVideo dibuat agar video Anda tidak pernah meninggalkan perangkat Anda. Halaman ini menjelaskan dengan sederhana apa yang diproses, dan di mana.",
+      "sections": [
+        {
+          "title": "Singkatnya",
+          "body": [
+            "Tanpa unggah: video, audio, dan transkrip Anda diproses di browser dan tidak pernah dikirim ke penerbit atau siapa pun.",
+            "Tanpa akun, tanpa cookie, tanpa analitik, tanpa iklan."
+          ]
+        },
+        {
+          "title": "Yang tetap di perangkat Anda",
+          "body": [
+            "File video dan audio yang Anda buka dibaca langsung dari disk. Analisis, transkripsi (Whisper), pelacakan wajah, dan ekspor dihitung secara lokal oleh browser Anda.",
+            "Proyek Anda (potongan, transkrip, pengaturan) disimpan di database lokal browser (IndexedDB), bersama thumbnail dan cache hasil analisis. Penerbit tidak memiliki akses ke sana. Anda bisa menghapus proyek dari halaman proyek, atau menghapus semuanya dengan membersihkan data situs ini di pengaturan browser."
+          ]
+        },
+        {
+          "title": "Penyimpanan lokal",
+          "body": [
+            "Aplikasi menyimpan preferensi antarmuka Anda (bahasa, tema, proyek terakhir yang dibuka) di penyimpanan lokal browser, serta menyimpan file-filenya sendiri dan model AI yang diunduh di cache browser agar bisa berjalan offline. Semua ini sangat diperlukan untuk layanan, tidak pernah dipakai untuk melacak Anda, sehingga tidak memerlukan banner persetujuan."
+          ]
+        },
+        {
+          "title": "Server",
+          "body": [
+            "Server hanya menyajikan file aplikasi dan tidak menyimpan log akses. Seperti server web lainnya, server secara teknis menerima alamat IP Anda untuk menjawab permintaan, tetapi tidak menyimpannya."
+          ]
+        },
+        {
+          "title": "Pihak ketiga",
+          "body": [
+            "Hugging Face: model Whisper disediakan oleh situs ini, seperti bagian aplikasi lainnya. Hanya jika tidak tersedia di sini, model diunduh dari huggingface.co; Hugging Face lalu menerima alamat IP Anda dan informasi browser standar, tetapi tidak pernah audio Anda. Lihat [kebijakan privasi](https://huggingface.co/privacy) mereka.",
+            "GitHub: hanya jika Anda membuka tautan ke repositori kode sumber.",
+            "Tidak ada pihak ketiga lain yang dihubungi: Content-Security-Policy yang ketat secara teknis mencegah halaman terhubung ke mana pun."
+          ]
+        },
+        {
+          "title": "Hak Anda",
+          "body": [
+            "Berdasarkan GDPR, Anda berhak mengakses, memperbaiki, dan menghapus data Anda, serta menolak pemrosesannya. Karena penerbit tidak menyimpan data apa pun tentang Anda, biasanya tidak ada yang bisa diakses, tetapi Anda bisa mengajukan pertanyaan apa pun ke maxence.bonnici@outlook.fr. Anda juga bisa mengajukan keluhan ke CNIL ([cnil.fr](https://www.cnil.fr)) atau otoritas perlindungan data di negara Anda."
+          ]
+        },
+        {
+          "title": "Perubahan",
+          "body": [
+            "Kebijakan ini dapat diperbarui seiring perkembangan aplikasi. Tanggal pembaruan terakhir ditampilkan di bagian atas halaman ini."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Ketentuan penggunaan",
+      "intro": "Dengan menggunakan LocalCutVideo, Anda menerima ketentuan ini. Ketentuannya singkat karena layanannya sederhana: alat gratis yang berjalan di browser Anda.",
+      "sections": [
+        {
+          "title": "Layanan",
+          "body": [
+            "LocalCutVideo adalah aplikasi edit video gratis yang berjalan sepenuhnya di browser web Anda. Aplikasi ini disediakan tanpa biaya, tanpa akun, dan dapat berubah, terhenti, atau berhenti kapan saja tanpa pemberitahuan."
+          ]
+        },
+        {
+          "title": "Konten Anda",
+          "body": [
+            "Anda tetap menjadi satu-satunya pemilik dan satu-satunya yang bertanggung jawab atas video, suara, dan musik yang Anda edit dan terbitkan. Anda harus memiliki hak yang diperlukan (hak cipta, lisensi musik, hak atas citra orang yang direkam).",
+            "Aplikasi tidak boleh digunakan untuk tujuan yang melanggar hukum."
+          ]
+        },
+        {
+          "title": "Fitur otomatis",
+          "body": [
+            "Transkripsi, subtitel, deteksi hening, dan pembingkaian otomatis dihasilkan secara otomatis dan bisa mengandung kesalahan. Periksa hasilnya sebelum menerbitkan."
+          ]
+        },
+        {
+          "title": "File dan proyek Anda",
+          "body": [
+            "Aplikasi tidak pernah mengubah file asli Anda. Proyek disimpan di browser dan bisa hilang jika datanya dibersihkan atau jika browser mengosongkan ruang: selalu simpan file asli Anda."
+          ]
+        },
+        {
+          "title": "Jaminan dan tanggung jawab",
+          "body": [
+            "Perangkat lunak ini disediakan “apa adanya”, tanpa jaminan apa pun, di bawah lisensi MIT. Sejauh diizinkan hukum, penerbit tidak bertanggung jawab atas kerugian apa pun akibat penggunaan atau ketidakmampuan menggunakan aplikasi (kehilangan data, kesalahan ekspor, layanan tidak tersedia…)."
+          ]
+        },
+        {
+          "title": "Open source dan komponen pihak ketiga",
+          "body": [
+            "Kode sumber tersedia dengan lisensi MIT di [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
+            "LocalCutVideo memakai: Mediabunny (MPL-2.0), Transformers.js dan ONNX Runtime (Apache-2.0 dan MIT), model Whisper dari OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT), serta font Inter dan Montserrat (SIL Open Font License)."
+          ]
+        },
+        {
+          "title": "Hukum yang berlaku",
+          "body": [
+            "Ketentuan ini tunduk pada hukum Prancis. Pertanyaan: maxence.bonnici@outlook.fr."
+          ]
+        }
+      ]
+    }
+  },
+  "thumbnail": {
+    "eyebrow": "Pembuat thumbnail",
+    "title": "Thumbnail yang bikin orang ingin mengeklik",
+    "lead": "Pilih momen terbaik video Anda, tambahkan judul yang menarik, lalu unduh gambar yang siap untuk YouTube, Shorts, atau Instagram. Semuanya terjadi di perangkat Anda",
+    "pick": "Letakkan video atau gambar",
+    "pickHint": "MP4, MOV, WebM, JPG, PNG… file tetap di perangkat Anda",
+    "choose": "Pilih file",
+    "local": "Tidak ada yang diunggah: gambar dibuat di browser Anda",
+    "permissionTitle": "Izinkan akses ke video proyek",
+    "permissionText": "Browser Anda meminta konfirmasi sebelum membaca lagi file dari perangkat Anda",
+    "permission": "Izinkan akses",
+    "back": "Kembali ke editor",
+    "dragHint": "Seret gambar untuk membingkai ulang",
+    "frame": "Frame video",
+    "prevFrame": "Frame sebelumnya",
+    "nextFrame": "Frame berikutnya",
+    "moments": "Momen terbaik",
+    "other": "Pilih file lain",
+    "format": "Format",
+    "formats": {
+      "landscape": "YouTube",
+      "vertical": "Shorts · TikTok",
+      "square": "Instagram"
+    },
+    "text": "Judul",
+    "textPlaceholder": "Judul menarik Anda",
+    "defaultText": "*Judul* Anda di sini",
+    "accentHint": "Apit kata dengan tanda bintang untuk mewarnainya: *seperti ini*",
+    "size": "Ukuran teks",
+    "position": "Posisi",
+    "positions": {
+      "top": "Atas",
+      "center": "Tengah",
+      "bottom": "Bawah"
+    },
+    "alignCenter": "Rata tengah",
+    "alignLeft": "Rata kiri",
+    "uppercase": "Huruf kapital",
+    "tilt": "Teks miring",
+    "style": "Gaya judul",
+    "styles": {
+      "outline": "Garis tepi",
+      "shadow": "Bayangan",
+      "box": "Pita",
+      "highlight": "Stabilo"
+    },
+    "color": "Warna teks",
+    "accent": "Warna kata yang disorot",
+    "image": "Gambar",
+    "zoom": "Zoom",
+    "brightness": "Kecerahan",
+    "contrast": "Kontras",
+    "saturation": "Saturasi",
+    "shade": "Gelapkan tepi",
+    "reset": "Atur ulang",
+    "downloadJpg": "Unduh JPG",
+    "downloadPng": "Unduh PNG",
+    "sizeInfo": "{{ width }} × {{ height }} px · JPG paling cocok untuk YouTube (di bawah 2 MB)",
+    "saved": "Tersimpan: {{ name }}",
+    "loadError": "Proyek ini tidak bisa dibuka",
+    "readError": "File ini tidak bisa dibaca"
+  },
+  "seo": {
+    "home": {
+      "title": "LocalCutVideo — Editor video gratis di browser, tanpa unggah",
+      "description": "Edit video di browser: hening dipotong otomatis, subtitel AI, bingkai mengikuti wajah untuk TikTok dan Shorts, thumbnail. Gratis dan open source, video Anda tidak pernah meninggalkan komputer"
+    },
+    "thumbnail": {
+      "title": "Pembuat thumbnail YouTube gratis — LocalCutVideo",
+      "description": "Buat thumbnail YouTube, Shorts, atau Instagram dari video Anda: saran momen terbaik, judul besar dengan kata berwarna, JPG atau PNG. Gratis, di browser, tanpa unggah"
+    },
+    "changelog": {
+      "title": "Riwayat versi — LocalCutVideo",
+      "description": "Yang baru di LocalCutVideo, versi demi versi"
+    },
+    "legal": {
+      "title": "Pemberitahuan hukum — LocalCutVideo",
+      "description": "Penerbit dan hosting LocalCutVideo"
+    },
+    "privacy": {
+      "title": "Kebijakan privasi — LocalCutVideo",
+      "description": "LocalCutVideo tidak mengunggah apa pun: video, transkrip, dan proyek Anda tetap di perangkat Anda"
+    },
+    "terms": {
+      "title": "Ketentuan penggunaan — LocalCutVideo",
+      "description": "Ketentuan penggunaan LocalCutVideo, editor video gratis dan open source"
+    },
+    "app": {
+      "title": "Proyek — LocalCutVideo",
+      "description": "Proyek video Anda, tersimpan di browser"
+    },
+    "editor": {
+      "title": "Editor — LocalCutVideo",
+      "description": "Editor LocalCutVideo"
+    }
+  },
+  "tour": {
+    "label": "Tur panduan",
+    "help": "Tur panduan",
+    "count": "Langkah {{ n }} dari {{ total }}",
+    "skip": "Lewati tur",
+    "prev": "Kembali",
+    "next": "Lanjut",
+    "done": "Ayo mulai!",
+    "steps": {
+      "auto": {
+        "title": "Sekali klik: edit otomatis",
+        "text": "LocalCutVideo mengedit video untuk Anda: hening dan keraguan dihapus, subtitel, bingkai, dan zoom. Semuanya bisa diubah setelahnya"
+      },
+      "preview": {
+        "title": "Pratinjau",
+        "text": "Yang Anda lihat persis seperti yang akan diekspor. Klik, atau tekan Spasi, untuk memutar atau menjeda"
+      },
+      "timeline": {
+        "title": "Timeline",
+        "text": "Klik untuk berpindah dalam video. Seret di gelombang suara untuk memilih bagian"
+      },
+      "cut": {
+        "title": "Potong atau ubah kecepatan",
+        "text": "Saat ada bagian terpilih, Potong (X) menghapusnya dan Kecepatan memutarnya lebih cepat atau lambat. Ctrl+Z mengurungkan apa saja"
+      },
+      "transcript": {
+        "title": "Edit lewat teks",
+        "text": "Setelah ditranskripsi, menghapus kata akan memotong video. Anda juga bisa memperbaiki yang salah didengar AI"
+      },
+      "settings": {
+        "title": "Semua pengaturan",
+        "text": "Format (16:9, 9:16, persegi), potongan dan transisi, subtitel, teks, bingkai dan buram, suara dan musik"
+      },
+      "thumbnail": {
+        "title": "Thumbnail",
+        "text": "Buat thumbnail video Anda dari momen terbaiknya"
+      },
+      "export": {
+        "title": "Ekspor",
+        "text": "Simpan video sebagai MP4. Semuanya terjadi di perangkat Anda, tidak ada yang diunggah"
+      }
+    }
+  }
+}

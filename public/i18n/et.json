@@ -1,0 +1,895 @@
+{
+  "common": {
+    "videoFiles": "Videofailid",
+    "audioFiles": "Helifailid",
+    "cancel": "Tühista",
+    "close": "Sulge",
+    "retry": "Proovi uuesti",
+    "none": "Puudub",
+    "remove": "Eemalda"
+  },
+  "nav": {
+    "features": "Funktsioonid",
+    "privacy": "Privaatsus",
+    "faq": "KKK",
+    "changelog": "Muudatuste logi",
+    "language": "Keel",
+    "searchLanguage": "Otsi keelt",
+    "noLanguage": "Keelt ei leitud",
+    "install": "Paigalda rakendus",
+    "open": "Ava redaktor",
+    "menu": "Ava menüü",
+    "close": "Sulge menüü",
+    "thumbnail": "Pisipildid"
+  },
+  "theme": {
+    "system": "Süsteem",
+    "light": "Hele",
+    "dark": "Tume",
+    "label": "Teema"
+  },
+  "footer": {
+    "tagline": "Tasuta avatud lähtekoodiga videoredaktor, mis töötab täielikult sinu brauseris. Sinu failid ei lahku kunagi sinu arvutist",
+    "issues": "Teata probleemist",
+    "noTracking": "Küpsisteta, jälgimiseta",
+    "product": "Toode",
+    "legal": "Õiguslik teave"
+  },
+  "pwa": {
+    "update": "Saadaval on uus versioon",
+    "reload": "Laadi uuesti"
+  },
+  "landing": {
+    "hero": {
+      "badgeLocal": "100% kohalik, midagi ei laadita üles",
+      "badgeOpen": "Tasuta ja avatud lähtekoodiga",
+      "title1": "Monteeri oma videoid",
+      "title2": "Midagi ei lahku sinu arvutist",
+      "lead": "LocalCutVideo lõikab välja vaikused, transkribeerib Whisperiga, põletab sisse karaoke-subtiitrid ja kadreerib 16:9 ümber 9:16 formaati, täielikult sinu brauseris. Ei üleslaadimist, ei kontot, ei serverit",
+      "cta": "Ava redaktor",
+      "github": "Vaata GitHubis",
+      "hint": "Töötab kõige paremini Chrome'is või Edge'is arvutis",
+      "demo": "Proovi demovideoga"
+    },
+    "mock": {
+      "w1": "Niisiis täna",
+      "filler": "ee,",
+      "w2": "näitan teile",
+      "w3": "kuidas see töötab",
+      "line2": "Kõik töötab sinu enda arvutis, isegi tehisintellekt",
+      "line3": "Kustuta sõna ja video lõigatakse",
+      "cap1": "See jääb sinu",
+      "cap2": "arvutisse"
+    },
+    "stats": {
+      "upload": "baiti üles laaditud",
+      "local": "töödeldud sinu seadmes",
+      "languages": "liidese keelt",
+      "gpu": "kiirendatud AI ja kodeerimine"
+    },
+    "how": {
+      "eyebrow": "Kuidas see töötab",
+      "title": "Toorest materjalist postitamiseks valmis videoni kolme sammuga",
+      "open": {
+        "title": "Ava video",
+        "text": "Vali fail oma kettalt. Seda loetakse kohapeal: koopiat ei tehta, midagi ei laadita üles, isegi mitme gigabaidiste failide puhul"
+      },
+      "edit": {
+        "title": "Lase redaktoril töötada",
+        "text": "Vaikused tuvastatakse, kõne transkribeeritakse sõna-sõnalt ja nägusid jälgitakse, kõik kohapeal. Paranda mida iganes, muutes teksti"
+      },
+      "export": {
+        "title": "Ekspordi MP4",
+        "text": "Vali 16:9, 9:16 või 1:1. Video kodeerib sinu graafikakaart ja see kirjutatakse otse sinu kettale"
+      }
+    },
+    "features": {
+      "eyebrow": "Funktsioonid",
+      "title": "Kõik, mida vajad kaamerasse rääkimise videote jaoks",
+      "lead": "Loodud YouTube'i, TikToki, Reelsi ja Shortsi sisuloojatele, kes eelistavad oma toormaterjali mitte kuhugi üles laadida",
+      "silences": {
+        "title": "Vaikuste automaatne lõikamine",
+        "text": "Tuvastab pausid heli valjuse järgi ja eemaldab need, reguleeritava läve, minimaalse pikkuse ja hingamisruumiga"
+      },
+      "textEdit": {
+        "title": "Monteeri teksti kaudu",
+        "text": "Whisper annab igale sõnale ajatempli. Kustuta sõnu transkriptsioonist ja vastav videolõik lõigatakse välja"
+      },
+      "captions": {
+        "title": "Karaoke-subtiitrid",
+        "text": "Sõna-sõnalt animeeritud subtiitrid videosse põletatuna, karaoke-, puhtas või kastiga stiilis, sinu esiletõstuvärviga"
+      },
+      "framing": {
+        "title": "Automaatne kadreerimine 16:9 → 9:16",
+        "text": "Näojälgimine hoiab kõneleja kaadris, kui muudad horisontaalse video vertikaalseks"
+      },
+      "zoom": {
+        "title": "Nutikas suumimine",
+        "text": "Vahelduvad sissesuumimised igal lõikel muudavad hüppelõiked tahtlikuks ja hoiavad vaatajaid kinni"
+      },
+      "ducking": {
+        "title": "Heli ja muusika",
+        "text": "Keera helitugevust üles, ühtlusta klippe ja lisa taustamuusika, mis vaikib iseenesest, kui keegi räägib"
+      },
+      "recovery": {
+        "title": "Taastamine pärast krahhi",
+        "text": "Iga muudatus salvestatakse reaalajas sinu brauserisse. Ava vahekaart uuesti ja jätka täpselt sealt, kus pooleli jäid"
+      },
+      "offline": {
+        "title": "Töötab võrguühenduseta",
+        "text": "Paigalda see rakendusena. Kui AI-mudel on alla laaditud, töötab kogu redaktor ilma internetiühenduseta"
+      },
+      "export": {
+        "title": "Kiire riistvaraline eksport",
+        "text": "Kodeerimine kasutab WebCodecsit, sinu brauserisse ja graafikakaarti sisseehitatud videokodeerijat, aeglase tarkvaralise kodeerimise asemel"
+      },
+      "clips": {
+        "title": "Mitme klipi kokkupanek",
+        "text": "Lohista mitu võtet korraga: need ühendatakse üheks videoks sinu valitud järjekorras, ühise ajatelje ja transkriptsiooniga"
+      },
+      "inputs": {
+        "title": "MP4, MOV, WebM, MKV",
+        "text": "Avab sinu telefoni ja kaamera failid, sealhulgas iPhone'i HEVC-videod, kui sinu brauser suudab neid dekodeerida"
+      },
+      "languages": {
+        "title": "Mitmekeelne",
+        "text": "Liides räägib {{ count }} keelt ja Whisper transkribeerib kümneid keeli veel, automaatse keeletuvastusega"
+      }
+    },
+    "privacy": {
+      "eyebrow": "Privaatsus",
+      "title": "Null üleslaadimist, juba disainist",
+      "lead": "Sinu videot loetakse otse sinu kettalt. Helianalüüs, transkriptsioon, näojälgimine ja kodeerimine töötavad taustalõimedes (Web Workers) sinu arvutis. Lihtsalt pole serverit, kuhu sinu materjali saata",
+      "upload": "Mitte kunagi üleslaadimist: fail ei lahku kunagi sinu arvutist",
+      "account": "Kontota, küpsisteta, analüütikata",
+      "csp": "Range Content-Security-Policy lubab lehel suhelda ainult selle saidiga, mis pakub ka AI-mudeleid (Hugging Face on vaid varuvariant)",
+      "storage": "Projektid salvestatakse sinu brauseri kohalikku andmebaasi (IndexedDB) ja neid saab igal ajal kustutada",
+      "diagram": {
+        "machine": "Sinu arvuti",
+        "file": "Videofail",
+        "browser": "Sinu brauser",
+        "upload": "Üleslaadimine serverisse",
+        "model": "AI-mudeli allalaadimine (üks kord, vahemällu)"
+      }
+    },
+    "support": {
+      "eyebrow": "Ühilduvus",
+      "title": "Brauseritugi",
+      "ok": "Täielik",
+      "partial": "Osaline",
+      "full": "Kõik, sealhulgas taastamine pärast krahhi ja ekspordi otse kettale kirjutamine",
+      "firefox": "Monteerimine ja eksport töötavad. Pärast vahekaardi sulgemist palutakse sul video uuesti valida",
+      "safari": "Ainult uued versioonid. Vali video pärast uuesti laadimist uuesti; eksport laaditakse alla",
+      "mobile": "Telefonid ja tahvelarvutid",
+      "mobileText": "Töötab lühikeste klippidega, kuid mälupiirangute tõttu pole pikad videod usaldusväärsed"
+    },
+    "faq": {
+      "title": "Korduma kippuvad küsimused",
+      "free": {
+        "q": "Kas see on tõesti tasuta? Milles on konks?",
+        "a": "See on tasuta ja avatud lähtekoodiga. Kuna kogu töö toimub sinu arvutis, pole serverikulusid, mida maksta, seega pole sulle midagi müüa ega andmeid koguda"
+      },
+      "formats": {
+        "q": "Milliseid videoformaate saan avada?",
+        "a": "MP4, MOV, WebM ja MKV, kui sinu brauser suudab koodekit dekodeerida (H.264, HEVC, VP9, AV1 sõltuvalt brauserist ja süsteemist). Eksport on MP4-fail"
+      },
+      "browsers": {
+        "q": "Miks Chrome või Edge?",
+        "a": "Need toetavad File System Access API-t, mis laseb redaktoril sinu video pärast uuesti laadimist taas avada ja ekspordi otse kettale kirjutada. Ka teised brauserid töötavad, paari lisaklõpsuga"
+      },
+      "size": {
+        "q": "Kas faili suurusel on piirang?",
+        "a": "Üleslaadimise piirangut pole, sest midagi ei laadita üles. Videot loetakse kettalt väikeste tükkidena; praktiline piir on sinu arvuti mälu ja sinu kannatlikkus väga pikkade videotega"
+      },
+      "offline": {
+        "q": "Kas see töötab ilma internetita?",
+        "a": "Jah, kui see on kord laaditud. Paigalda see rakendusena (PWA) ja transkribeeri üks kord võrgus olles: Whisperi mudel jääb siis vahemällu ja kõik töötab võrguühenduseta"
+      },
+      "ai": {
+        "q": "Kus AI töötab?",
+        "a": "Sinu brauseris. Whisper töötab Transformers.js-iga sinu graafikakaardil (WebGPU) või protsessoril (WebAssembly) ja näotuvastus kasutab MediaPipe'i. Mudelid laaditakse alla üks kord, sinu heli ei saadeta kunagi"
+      }
+    },
+    "final": {
+      "title": "Sinu järgmine video, monteeritud minutitega",
+      "text": "Registreerimiseta, üleslaadimiseta, vesimärgita. Ava fail ja hakka monteerima"
+    },
+    "thumbnail": {
+      "eyebrow": "Uus · Pisipildid",
+      "title": "Ja sellega sobiv pisipilt",
+      "text": "Pisipiltide looja leiab sinu video kõige teravamad hetked. Lisa suur pealkiri värviliste sõnadega ja laadi see alla õiges suuruses",
+      "points": {
+        "moments": "Parimad hetked soovitatud",
+        "title": "Esiletõstetud sõnadega pealkiri, 4 stiili",
+        "formats": "YouTube 1280×720, Shorts ja ruut",
+        "local": "Tehtud sinu seadmes, midagi ei laadita üles"
+      },
+      "cta": "Loo pisipilt",
+      "mockTitle": "Minu esimene",
+      "mockAccent": "vlogi"
+    }
+  },
+  "changelog": {
+    "eyebrow": "Versioonid",
+    "title": "Muudatuste logi",
+    "lead": "Kõik LocalCutVideo versioonid, uusim eespool",
+    "current": "Sa kasutad versiooni",
+    "github": "Vaata GitHubis",
+    "releases": "Väljalasked GitHubis",
+    "latest": "Uusim",
+    "error": "Muudatuste logi ei õnnestunud laadida"
+  },
+  "projects": {
+    "title": "Sinu projektid",
+    "lead": "Projektid salvestatakse automaatselt sellesse brauserisse. Sinu videod jäävad sinna, kus nad sinu kettal on",
+    "resume": "Jätka sealt, kus pooleli jäid",
+    "reading": "Video lugemine…",
+    "drop": "Lohista oma videod siia",
+    "or": "või",
+    "open": "Ava videod",
+    "private": "Faili loetakse kohapeal, midagi ei laadita üles",
+    "noFsAccess": "Sinu brauser ei suuda faile seansside vahel meeles pidada: pärast vahekaardi sulgemist palutakse sul video uuesti valida. Chrome või Edge väldivad seda",
+    "recent": "Viimased projektid",
+    "empty": "Projekte veel pole. Alustamiseks ava video",
+    "delete": "Kustuta projekt",
+    "confirmDelete": "Kas kustutada projekt „{{ name }}“? Sinu kettal olevat videofaili see ei mõjuta",
+    "multi": "Mitu faili? Need pannakse kokku üheks videoks nimede järjekorras",
+    "importFile": "Ava projektifail (.lcv.json)",
+    "saveFile": "Salvesta projekt failina",
+    "imported": "Projekt avatud: jätkamiseks vali selle videod"
+  },
+  "errors": {
+    "notVideo": "See fail ei näi olevat video",
+    "codec": "Sinu brauser ei suuda selle video koodekit dekodeerida (HEVC/H.265 vajab Chrome'i või Edge'i HEVC-laiendust). Proovi see teisendada H.264 MP4-ks",
+    "noVideo": "Sellest failist ei leitud videorada",
+    "generic": "Selle faili lugemisel läks midagi valesti",
+    "transcribe": "Transkribeerimine ebaõnnestus. Proovi väiksemat mudelit või kontrolli esimeseks allalaadimiseks oma ühendust",
+    "export": "Eksport ebaõnnestus",
+    "faces": "Näojälgimine selle videoga ebaõnnestus",
+    "skipped": "Vahele jäetud (ei õnnestunud lugeda): {{ names }}",
+    "skippedCodec": "Vahele jäetud, see brauser ei toeta koodekit: {{ names }}. Proovi Chrome'i või teisenda H.264 MP4-ks",
+    "notProject": "See fail ei ole LocalCutVideo projekt",
+    "demo": "Demovideot ei õnnestunud laadida"
+  },
+  "languages": {
+    "en": "Inglise",
+    "fr": "Prantsuse",
+    "es": "Hispaania",
+    "it": "Itaalia",
+    "de": "Saksa",
+    "pt": "Portugali",
+    "nl": "Hollandi"
+  },
+  "editor": {
+    "back": "Tagasi projektide juurde",
+    "name": "Projekti nimi",
+    "undo": "Võta tagasi",
+    "redo": "Tee uuesti",
+    "missing": "Seda projekti enam ei ole",
+    "save": {
+      "saving": "Salvestamine…",
+      "saved": "Salvestatud kohapeal",
+      "error": "Salvestamata"
+    },
+    "reconnect": {
+      "loading": "Video avamine…",
+      "title": "Ühenda oma videod uuesti",
+      "allow": "Luba juurdepääs kõigile",
+      "select": "Vali",
+      "mismatch": "See ei näi olevat algne fail („{{ name }}“). Kas kasutada siiski?",
+      "intro": "Projekt on turvaliselt alles. Sinu privaatsuse huvides küsib brauser uuesti luba, enne kui redaktor saab sinu faile lugeda",
+      "allowOne": "Luba",
+      "privacy": "Sinu videoid loetakse sealt, kus nad kettal on, neid ei kopeerita ega laadita kunagi üles",
+      "status": {
+        "ready": "Ühendatud",
+        "permission": "Ootab sinu luba",
+        "moved": "Ei leitud: teisaldatud või ümber nimetatud?",
+        "missing": "Vali see uuesti (sinu brauser ei säilita juurdepääsu failidele)",
+        "loading": "Avamine…"
+      }
+    },
+    "preview": {
+      "cut": "Lõige",
+      "back": "5 s tagasi",
+      "play": "Esita",
+      "pause": "Paus",
+      "savedHint": "Lõigetega eemaldatud aeg",
+      "badge": "Kerge eelvaade · {{ q }}p",
+      "quality": "Eelvaate kvaliteet",
+      "qualityHint": "Kergem eelvaade hoiab redaktori sujuvana. Eksport kasutab alati täit kvaliteeti"
+    },
+    "timeline": {
+      "title": "Ajatelg",
+      "silence": "Vaikus",
+      "manual": "Käsitsi",
+      "text": "Tekst",
+      "hint": "Lohista lainekujul, et valida osa, seejärel Lõika või Kiirus · klõpsa lõikel, et servi kohandada · topeltklõps eemaldab",
+      "removeCut": "Eemalda lõige",
+      "zoom": "Ajatelje suum",
+      "analyzing": "Heli analüüsimine…",
+      "zoomIn": "Suumi sisse",
+      "zoomOut": "Suumi välja",
+      "fit": "Sobita",
+      "fitHint": "Näita kogu videot (vihje: Ctrl + rullik suumib)",
+      "manualCut": "Lõika käsitsi",
+      "markIn": "Algus",
+      "markOut": "Lõpp",
+      "markInHint": "Lõigatava osa algus esituspea kohal (I)",
+      "markOutHint": "Lõigatava osa lõpp esituspea kohal (O)",
+      "cutMarked": "Lõika",
+      "cutHint": "Eemalda osa alguse ja lõpu vahel (X)",
+      "clearMarks": "Tühjenda algus ja lõpp",
+      "marksMissing": "Määra esmalt algus (I) ja lõpp (O)",
+      "analysisError": "Heli ei õnnestunud analüüsida",
+      "selectedCut": "Valitud lõige",
+      "earlier": "Varem",
+      "later": "Hiljem",
+      "listen": "Kuula lõiget",
+      "speed": "Kiirus",
+      "speedHint": "Kiirenda või aeglusta osa alguse ja lõpu vahel",
+      "selectedSpeed": "Kiiruse muutus",
+      "removeSpeed": "Tagasi tavakiirusele",
+      "listenSpeed": "Esita kiiruse muutus",
+      "selectFirst": "Vali esmalt osa: lohista lainekujul või määra Algus ja Lõpp"
+    },
+    "transcript": {
+      "title": "Transkriptsioon",
+      "words": "{{ count }} sõna",
+      "fillers": "Eemalda täitesõnad ({{ count }})",
+      "restore": "Taasta kõik",
+      "selected": "{{ count }} valitud",
+      "cut": "Lõika / taasta",
+      "tip": "Klõpsa sõnal, et sinna hüpata. Lohista või tõstuklahv-klõpsa valimiseks, seejärel Delete lõikamiseks või Paranda (Enter), et parandada, mida Whisper valesti kuulis",
+      "emptyTitle": "Transkriptsiooni veel pole",
+      "emptyText": "Transkribeeri video, et seda teksti kaudu monteerida ja saada sõna-sõnalt subtiitrid",
+      "correct": "Paranda",
+      "correctTitle": "Mida tegelikult öeldi?",
+      "correctHint": "Kirjuta sõna või terve lause uuesti. Ajastus ja subtiitrid kohanduvad automaatselt",
+      "apply": "Rakenda"
+    },
+    "transcribe": {
+      "title": "Transkriptsioon (Whisper)",
+      "hint": "Töötab sinu seadmes. Mudel laaditakse alla üks kord ja jääb seejärel vahemällu",
+      "model": "Mudel",
+      "models": {
+        "tiny": "Kiire",
+        "base": "Tasakaalus",
+        "small": "Täpne"
+      },
+      "download": "Ühekordne allalaadimine {{ size }}",
+      "language": "Kõnekeel",
+      "auto": "Tuvasta automaatselt",
+      "run": "Transkribeeri",
+      "rerun": "Transkribeeri kõik uuesti",
+      "done": "{{ count }} sõna transkribeeritud",
+      "empty": "Selles videos kõnet ei leitud",
+      "stage": {
+        "audio": "Heli eraldamine…",
+        "download": "Mudeli allalaadimine…",
+        "transcribe": "Transkribeerimine…"
+      },
+      "missing": "Transkribeeri uued klipid ({{ count }})",
+      "rerunHint": "Alustab otsast ülaltoodud mudeli ja keelega",
+      "confirmAll": "Kas transkribeerida kõik uuesti? Sinu lõigatud või parandatud sõnad lähevad kaotsi",
+      "detected": "Tuvastatud keel: {{ language }}"
+    },
+    "tabs": {
+      "format": "Formaat",
+      "cuts": "Lõiked",
+      "captions": "Subtiitrid",
+      "framing": "Kadreerimine",
+      "audio": "Heli",
+      "clips": "Klipid",
+      "texts": "Tekstid"
+    },
+    "format": {
+      "title": "Väljundformaat",
+      "hint": "Video kärbitakse sobivaks. Kasuta kõneleja jälgimiseks Kadreerimist",
+      "landscape": "YouTube",
+      "vertical": "TikTok · Reels",
+      "square": "Voog",
+      "source": "Allikas:",
+      "resolution": "Eraldusvõime",
+      "fps": "Kaadrit sekundis",
+      "exportNote": "Eraldusvõime ja kaadrisagedus valitakse eksportimisel",
+      "rotation": "Pööramine",
+      "rotateLeft": "Pööra vasakule",
+      "rotateRight": "Pööra paremale",
+      "rotationHint": "Külili filmitud video jaoks. Kehtib kõigile klippidele",
+      "rotatedFaces": "Video pööratud: lülita Kadreerimises „Jälgi nägu“ uuesti sisse"
+    },
+    "cuts": {
+      "title": "Vaikuste tuvastamine",
+      "hint": "Eemaldab pausid. Langeta läve, kui sõnu lõigatakse",
+      "threshold": "Lävi",
+      "suggested": "Soovitatav selle salvestise jaoks: {{ value }} dB",
+      "minSilence": "Minimaalne vaikus",
+      "padding": "Hingamisruum",
+      "detect": "Tuvasta ja lõika vaikused",
+      "detected": "{{ count }} vaikust lõigatud",
+      "count": "lõiget",
+      "removed": "eemaldatud",
+      "final": "lõplik pikkus",
+      "clear": "Eemalda kõik lõiked",
+      "mode": "Leia pausid",
+      "modes": {
+        "audio": "Helitugevus",
+        "transcript": "Transkriptsioon"
+      },
+      "modeHint": "Transkriptsiooni režiim on täpne ka taustamüra või muusika korral",
+      "modeNeedsTranscript": "Transkribeeri video, et leida pausid sõnade järgi: täpsem mürarikastes kohtades",
+      "preset": "Rütm",
+      "presets": {
+        "gentle": "Loomulik",
+        "normal": "Tasakaalus",
+        "tight": "Dünaamiline"
+      },
+      "live": "Lõiked uuenevad reaalajas, kui seadeid muudad",
+      "silentClips": "{{ count }} klippi ilma häälteta: seal lõigatakse ainult tõeline tühi aeg"
+    },
+    "captions": {
+      "title": "Sissepõletatud subtiitrid",
+      "style": "Stiil",
+      "styles": {
+        "karaoke": "Karaoke",
+        "clean": "Puhas",
+        "boxed": "Kastis"
+      },
+      "position": "Asukoht",
+      "positions": {
+        "top": "Üleval",
+        "center": "Keskel",
+        "bottom": "All"
+      },
+      "size": "Suurus",
+      "words": "Sõnu subtiitri kohta",
+      "uppercase": "Suurtähed",
+      "highlight": "Esiletõstuvärv"
+    },
+    "framing": {
+      "title": "Automaatne kadreerimine",
+      "hint": "Jälgib nägusid, et hoida kõneleja kaadris, ideaalne 16:9 → 9:16 jaoks",
+      "center": "Keskel",
+      "face": "Jälgi nägu",
+      "analyzing": "Nägude jälgimine…",
+      "analyze": "Jälgi nägusid",
+      "reanalyze": "Jälgi nägusid uuesti",
+      "tracked": "{{ count }} asukohta jälgitud",
+      "found": "Nägu jälgitud: kadreering järgib kõnelejat",
+      "notFound": "Selles videos ei leitud nägu järjepidevalt",
+      "punch": "Nutikas suumimine",
+      "punchHint": "Vahetab kerget suumi igal lõikel või igal lausel, kui lõikeid pole, et video püsiks dünaamiline",
+      "zoom": "Suumi tugevus",
+      "firstTime": "„Jälgi nägu“ valimine analüüsib videot üks kord, kohapeal",
+      "beatsCuts": "Suum muutub {{ count }} korda, sinu lõigetel",
+      "beatsAuto": "Lõikeid veel pole: suum muutub {{ count }} korda, lausetel või iga 4 s järel"
+    },
+    "audio": {
+      "title": "Taustamuusika",
+      "hint": "Muusikat vaigistatakse automaatselt, kui keegi räägib (auto-ducking)",
+      "reconnect": "Ühenda „{{ name }}“ uuesti",
+      "pick": "Vali muusikafail",
+      "enabled": "Lisa videosse",
+      "volume": "Muusika helitugevus",
+      "ducking": "Vaigistus kõne ajal",
+      "duckingHint": "Kui palju muusikat vaigistatakse, kui keegi räägib"
+    },
+    "export": {
+      "button": "Ekspordi",
+      "title": "Ekspordi video",
+      "running": "Eksportimine…",
+      "eta": "Umbes {{ time }} jäänud",
+      "keepOpen": "Hoia see vahekaart avatud. Kodeerimine kasutab võimalusel sinu graafikakaarti",
+      "done": "Eksport lõpetatud",
+      "saved": "„{{ name }}“ salvestati sinu kettale {{ seconds }} sekundiga",
+      "downloaded": "„{{ name }}“ laaditi alla {{ seconds }} sekundiga",
+      "duration": "Kestus",
+      "from": "algselt {{ time }}",
+      "streamHint": "Valid ise, kuhu MP4 salvestada. See kirjutatakse otse kettale",
+      "downloadHint": "MP4 pannakse kokku kohapeal ja laaditakse seejärel alla",
+      "start": "Ekspordi MP4",
+      "saveProject": "Salvesta projekt",
+      "saveProjectHint": ".lcv.json-fail sinu montaažiga (ilma videota), et jätkata teises arvutis",
+      "projectSaved": "Projekt salvestatud .lcv.json-failina"
+    },
+    "clips": {
+      "title": "Klipid",
+      "hint": "Videod esitatakse järjest selles järjekorras. Lohista järjestuse muutmiseks: lõiked ja sõnad liiguvad oma klipiga kaasa",
+      "jump": "Mine selle klipi juurde",
+      "up": "Liiguta üles",
+      "down": "Liiguta alla",
+      "remove": "Eemalda klipp",
+      "add": "Lisa videoid",
+      "summary": "{{ count }} klippi · kokku {{ time }}",
+      "confirmRemove": "Kas eemaldada „{{ name }}“ projektist? Selle lõiked ja sõnad eemaldatakse samuti (Ctrl+Z võtab tagasi)",
+      "added": "{{ count }} klippi lisatud",
+      "addedTranscribe": "{{ count }} klippi lisatud. Transkribeeri uuesti, et neile subtiitrid lisada: juba transkribeeritud klipid säilivad",
+      "noVoice": "häält pole",
+      "voiceOn": "Hääl · klõpsa, kui keegi ei räägi",
+      "voiceOff": "Häält pole · klõpsa, kui keegi räägib"
+    },
+    "auto": {
+      "button": "Automaatmontaaž",
+      "cta": "Monteeri video automaatselt",
+      "transcribeOnly": "või ainult transkribeeri",
+      "heading": "Lase LocalCutVideol oma video monteerida",
+      "lead": "Ühe klõpsuga: vaikused ja kõhklused eemaldatud, subtiitrid, kadreering kõnelejale ja nutikas suumimine. Hiljem saad kõike muuta",
+      "target": "Kuhu sa selle postitad?",
+      "options": {
+        "silences": "Lõika vaikused",
+        "fillers": "Eemalda kõhklused (ee, õõ…)",
+        "captions": "Karaoke-subtiitrid",
+        "framing": "Jälgi nägu",
+        "framingNoCrop": "Pole vaja: see formaat näitab kogu pilti",
+        "zoom": "Nutikas suumimine"
+      },
+      "local": "Kõik töötab sinu seadmes. Videot ei laadita kunagi üles",
+      "start": "Alusta automaatmontaaži",
+      "running": "Sinu video monteerimine…",
+      "done": "Sinu video on monteeritud!",
+      "view": "Vaata tulemust",
+      "undo": "Võta automaatmontaaž tagasi",
+      "undone": "Projekt on tagasi selline, nagu see oli enne automaatmontaaži",
+      "summary": {
+        "cuts": "lõiget",
+        "removed": "eemaldatud",
+        "words": "sõna subtiitritega",
+        "silent": "{{ count }} klippi ilma häälteta: lõigati ainult tõeline tühi aeg"
+      },
+      "steps": {
+        "analyze": "Heli analüüsimine",
+        "transcribe": "Kõne transkribeerimine",
+        "fillers": "Kõhkluste eemaldamine",
+        "silences": "Vaikuste lõikamine",
+        "framing": "Näo jälgimine",
+        "style": "Subtiitrid ja nutikas suumimine",
+        "voice": "Häälte tuvastamine"
+      },
+      "status": {
+        "skipped": "vahele jäetud",
+        "error": "ebaõnnestus"
+      },
+      "voice": {
+        "title": "Kas videos keegi räägib?",
+        "auto": "Auto",
+        "yes": "Jah",
+        "no": "Ei",
+        "detectedYes": "Tuvastatud: keegi räägib",
+        "detectedNo": "Tuvastatud: häält pole",
+        "hint": "Häält pole: transkriptsiooni ega subtiitreid pole, lõigatakse ainult tõeline tühi aeg"
+      }
+    },
+    "mix": {
+      "title": "Video heli",
+      "hint": "Keera oma klippide heli valjemaks või vaiksemaks",
+      "volume": "Helitugevus",
+      "mute": "Vaigista",
+      "unmute": "Tühista vaigistus",
+      "volumeHint": "Kehtib eelvaatele ja ekspordile",
+      "boostHint": "Üle 100 % hoiab piiraja ära moonutused",
+      "normalize": "Ühtlusta klipid",
+      "normalizeHint": "Kõik klipid ühesuguse valjusega, filmitud lähedalt või kaugelt",
+      "denoise": "Vähenda taustamüra",
+      "denoiseHint": "Selgem hääl (tuul, kahin, ventilaatorid). Rakendatakse eksportimisel häälega klippidele. Kuula enne",
+      "listen": "Kuula 8 s tulemusest",
+      "stopListening": "Lõpeta kuulamine",
+      "preparing": "Ettevalmistamine…"
+    },
+    "thumbnail": "Pisipilt",
+    "transition": {
+      "title": "Üleminek lõigetel",
+      "none": "Järsk lõige",
+      "dip": "Kiire sulandumine",
+      "black": "Sulandumine musta",
+      "hint": "Esitatakse igal lõikel ja klipivahetusel (ning musta sulandumisel ka alguses ja lõpus). Nähtav esitamise ajal"
+    },
+    "texts": {
+      "title": "Tekstid video peal",
+      "hint": "Pealkirjad ja märkmed, mida näidatakse esituspea kohal. Pane sõnad tärnide vahele, et neid värvida",
+      "add": "Lisa tekst esituspea kohale",
+      "default": "Sinu *tekst*",
+      "timing": "Näidatakse",
+      "startHere": "Alusta siit",
+      "endHere": "Lõpeta siin",
+      "remove": "Eemalda see tekst"
+    },
+    "background": {
+      "title": "Taust",
+      "hint": "Hägustab tausta inimese taga, kes jääb teravaks. Arvutatakse sinu seadmes",
+      "none": "Terav",
+      "blur": "Hägune",
+      "strength": "Hägususe tugevus",
+      "error": "Tausta hägustamist ei õnnestunud selles seadmes käivitada"
+    }
+  },
+  "legal": {
+    "updated": "Viimati uuendatud: 1. november 2026",
+    "contact": "Kontakt",
+    "nav": {
+      "notice": "Õiguslik teave",
+      "privacy": "Privaatsus",
+      "terms": "Kasutustingimused"
+    },
+    "notice": {
+      "title": "Õiguslik teave",
+      "intro": "Prantsuse seadusega (LCEN-i artikkel 6, 21. juuni 2004. aasta seadus nr 2004-575) nõutav teave selle veebisaidi väljaandja ja majutaja kohta.",
+      "sections": [
+        {
+          "title": "Väljaandja",
+          "body": [
+            "Veebisaiti localcutvideo.mbonnici.fr („LocalCutVideo“) annab välja eraisik Maxence Bonnici mitteärilistel eesmärkidel.",
+            "Vastutav väljaandja: Maxence Bonnici.",
+            "Kontakt: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Majutus",
+          "body": [
+            "Veebisaiti majutab selle väljaandja Maxence Bonnici ise isiklikus serveris ja see on juurutatud Coolify platvormiga.",
+            "Kontakt: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Intellektuaalomand",
+          "body": [
+            "LocalCutVideo lähtekood on avatud ja avaldatud MIT-litsentsi alusel [GitHubis](https://github.com/ImMaxence/LocalCutVideo).",
+            "Rakenduse kasutatavad kolmandate osapoolte komponendid, AI-mudelid ja fondid jäävad nende autorite omandiks ja neid kasutatakse nende endi litsentside alusel, mis on loetletud [kasutustingimustes](/terms). Nimetatud kaubamärgid (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) kuuluvad nende omanikele."
+          ]
+        },
+        {
+          "title": "Vastutus",
+          "body": [
+            "Väljaandja püüab hoida veebisaidi kättesaadavana ja selle teabe täpsena, kuid ei saa kumbagi tagada. Rakenduse kasutamist reguleerivad [kasutustingimused](/terms)."
+          ]
+        },
+        {
+          "title": "Isikuandmed",
+          "body": [
+            "LocalCutVideo ei kogu mingeid isikuandmeid: videoid töödeldakse ainult sinu seadmes. Üksikasjad on toodud [privaatsuspoliitikas](/privacy)."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privaatsuspoliitika",
+      "intro": "LocalCutVideo on ehitatud nii, et sinu videod ei lahku kunagi sinu seadmest. See leht selgitab lihtsalt, mida töödeldakse ja kus.",
+      "sections": [
+        {
+          "title": "Lühidalt",
+          "body": [
+            "Üleslaadimist pole: sinu videoid, heli ja transkriptsioone töödeldakse sinu brauseris ja neid ei saadeta kunagi väljaandjale ega kellelegi teisele.",
+            "Kontota, küpsisteta, analüütikata, reklaamita."
+          ]
+        },
+        {
+          "title": "Mis jääb sinu seadmesse",
+          "body": [
+            "Sinu avatud video- ja helifaile loetakse otse sinu kettalt. Analüüs, transkriptsioon (Whisper), näojälgimine ja eksport arvutatakse kohapeal sinu brauseris.",
+            "Sinu projektid (lõiked, transkriptsioon, seaded) salvestatakse sinu brauseri kohalikku andmebaasi (IndexedDB) koos pisipildi ja analüüside vahemäluga. Väljaandjal pole neile juurdepääsu. Projekti saad kustutada projektide lehel või kustutada kõik, tühjendades selle saidi andmed oma brauseri seadetes."
+          ]
+        },
+        {
+          "title": "Kohalik salvestus",
+          "body": [
+            "Rakendus salvestab sinu liidese eelistused (keel, teema, viimati avatud projekt) brauseri kohalikku salvestusruumi ning hoiab oma faile ja allalaaditud AI-mudeleid brauseri vahemälus, et töötada võrguühenduseta. Need on teenuse jaoks hädavajalikud, neid ei kasutata kunagi sinu jälgimiseks ja seetõttu ei vaja need nõusolekuriba."
+          ]
+        },
+        {
+          "title": "Server",
+          "body": [
+            "Server edastab ainult rakenduse faile ega pea juurdepääsulogisid. Nagu iga veebiserver, saab see tehniliselt sinu IP-aadressi päringutele vastamiseks, kuid ei salvesta seda."
+          ]
+        },
+        {
+          "title": "Kolmandad osapooled",
+          "body": [
+            "Hugging Face: Whisperi mudelit pakub see sait nagu ka ülejäänud rakendust. Ainult siis, kui see pole siin saadaval, laaditakse see hoopis aadressilt huggingface.co; Hugging Face saab siis sinu IP-aadressi ja tavapärase brauseriteabe, kuid mitte kunagi sinu heli. Vaata nende [privaatsuspoliitikat](https://huggingface.co/privacy).",
+            "GitHub: ainult siis, kui järgid linki lähtekoodi hoidlasse.",
+            "Ühegi teise kolmanda osapoolega ühendust ei võeta: range Content-Security-Policy takistab tehniliselt lehel kuhugi mujale ühendust looma."
+          ]
+        },
+        {
+          "title": "Sinu õigused",
+          "body": [
+            "Isikuandmete kaitse üldmääruse (GDPR) alusel on sul õigus oma andmetega tutvuda, neid parandada ja kustutada ning esitada nende töötlemise suhtes vastuväiteid. Kuna väljaandjal pole sinu kohta mingeid andmeid, pole tavaliselt millegagi tutvuda, kuid võid esitada mis tahes küsimuse aadressil maxence.bonnici@outlook.fr. Samuti võid esitada kaebuse CNIL-ile ([cnil.fr](https://www.cnil.fr)) või oma riigi andmekaitseasutusele."
+          ]
+        },
+        {
+          "title": "Muudatused",
+          "body": [
+            "Seda poliitikat võidakse rakenduse arenedes uuendada. Viimase uuenduse kuupäev on näidatud selle lehe ülaosas."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Kasutustingimused",
+      "intro": "LocalCutVideot kasutades nõustud nende tingimustega. Need on lühikesed, sest teenus on lihtne: tasuta tööriist, mis töötab sinu brauseris.",
+      "sections": [
+        {
+          "title": "Teenus",
+          "body": [
+            "LocalCutVideo on tasuta videomontaaži rakendus, mis töötab täielikult sinu veebibrauseris. Seda pakutakse tasuta, ilma kontota, ning see võib muutuda, katkeda või lõppeda igal ajal ilma ette teatamata."
+          ]
+        },
+        {
+          "title": "Sinu sisu",
+          "body": [
+            "Sina jääd ainsaks omanikuks ja ainsaks vastutajaks videote, helide ja muusika eest, mida monteerid ja avaldad. Sul peavad olema vajalikud õigused (autoriõigus, muusikalitsentsid, filmitud inimeste õigus oma kujutisele).",
+            "Rakendust ei tohi kasutada ebaseaduslikel eesmärkidel."
+          ]
+        },
+        {
+          "title": "Automaatsed funktsioonid",
+          "body": [
+            "Transkriptsioon, subtiitrid, vaikuste tuvastamine ja automaatne kadreerimine luuakse automaatselt ja võivad sisaldada vigu. Kontrolli tulemust enne avaldamist."
+          ]
+        },
+        {
+          "title": "Sinu failid ja projektid",
+          "body": [
+            "Rakendus ei muuda kunagi sinu algseid faile. Projektid salvestatakse sinu brauserisse ja võivad kaduda, kui selle andmed kustutatakse või kui brauser vabastab ruumi: hoia alati oma algsed failid alles."
+          ]
+        },
+        {
+          "title": "Garantii ja vastutus",
+          "body": [
+            "Tarkvara pakutakse „sellisena, nagu see on“, ilma igasuguse garantiita, MIT-litsentsi alusel. Seadusega lubatud ulatuses ei saa väljaandjat pidada vastutavaks kahju eest, mis tuleneb rakenduse kasutamisest või selle kasutamise võimatusest (andmekadu, ekspordivead, kättesaamatus…)."
+          ]
+        },
+        {
+          "title": "Avatud lähtekood ja kolmandate osapoolte komponendid",
+          "body": [
+            "Lähtekood on saadaval MIT-litsentsi alusel [GitHubis](https://github.com/ImMaxence/LocalCutVideo).",
+            "LocalCutVideo tugineb järgmistele: Mediabunny (MPL-2.0), Transformers.js ja ONNX Runtime (Apache-2.0 ja MIT), OpenAI Whisperi mudelid (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ning fondid Inter ja Montserrat (SIL Open Font License)."
+          ]
+        },
+        {
+          "title": "Kohaldatav õigus",
+          "body": [
+            "Nendele tingimustele kohaldatakse Prantsuse õigust. Küsimused: maxence.bonnici@outlook.fr."
+          ]
+        }
+      ]
+    }
+  },
+  "thumbnail": {
+    "eyebrow": "Pisipiltide looja",
+    "title": "Pisipildid, millel tahetakse klõpsata",
+    "lead": "Vali oma video parim hetk, lisa mõjuv pealkiri ja laadi alla pilt, mis on valmis YouTube'i, Shortsi või Instagrami jaoks. Kõik toimub sinu seadmes",
+    "pick": "Lohista siia video või pilt",
+    "pickHint": "MP4, MOV, WebM, JPG, PNG… fail jääb sinu seadmesse",
+    "choose": "Vali fail",
+    "local": "Midagi ei laadita üles: pilt luuakse sinu brauseris",
+    "permissionTitle": "Luba juurdepääs projekti videole",
+    "permissionText": "Sinu brauser küsib kinnitust, enne kui faili sinu seadmest uuesti loetakse",
+    "permission": "Luba juurdepääs",
+    "back": "Tagasi redaktorisse",
+    "dragHint": "Lohista pilti, et seda uuesti kadreerida",
+    "frame": "Videokaader",
+    "prevFrame": "Eelmine kaader",
+    "nextFrame": "Järgmine kaader",
+    "moments": "Parimad hetked",
+    "other": "Vali teine fail",
+    "format": "Formaat",
+    "formats": {
+      "landscape": "YouTube",
+      "vertical": "Shorts · TikTok",
+      "square": "Instagram"
+    },
+    "text": "Pealkiri",
+    "textPlaceholder": "Sinu kaasahaarav pealkiri",
+    "defaultText": "Sinu *pealkiri* siia",
+    "accentHint": "Pane sõnad tärnide vahele, et neid värvida: *niimoodi*",
+    "size": "Teksti suurus",
+    "position": "Asukoht",
+    "positions": {
+      "top": "Üleval",
+      "center": "Keskel",
+      "bottom": "All"
+    },
+    "alignCenter": "Keskel",
+    "alignLeft": "Vasakul",
+    "uppercase": "Suurtähed",
+    "tilt": "Kaldus tekst",
+    "style": "Pealkirja stiil",
+    "styles": {
+      "outline": "Kontuur",
+      "shadow": "Vari",
+      "box": "Riba",
+      "highlight": "Marker"
+    },
+    "color": "Teksti värv",
+    "accent": "Esiletõstetud sõnade värv",
+    "image": "Pilt",
+    "zoom": "Suum",
+    "brightness": "Heledus",
+    "contrast": "Kontrastsus",
+    "saturation": "Küllastus",
+    "shade": "Tumenda servi",
+    "reset": "Lähtesta",
+    "downloadJpg": "Laadi alla JPG",
+    "downloadPng": "Laadi alla PNG",
+    "sizeInfo": "{{ width }} × {{ height }} px · JPG sobib YouTube'i jaoks kõige paremini (alla 2 MB)",
+    "saved": "Salvestatud: {{ name }}",
+    "loadError": "Seda projekti ei õnnestunud avada",
+    "readError": "Seda faili ei õnnestunud lugeda"
+  },
+  "seo": {
+    "home": {
+      "title": "LocalCutVideo — Tasuta videoredaktor brauseris, midagi ei laadita üles",
+      "description": "Monteeri oma videoid brauseris: vaikused lõigatakse automaatselt, AI-subtiitrid, näokadreering TikToki ja Shortsi jaoks, pisipildid. Tasuta ja avatud lähtekoodiga, sinu videod ei lahku kunagi sinu arvutist"
+    },
+    "thumbnail": {
+      "title": "Tasuta YouTube'i pisipiltide looja — LocalCutVideo",
+      "description": "Loo oma videost pisipilt YouTube'i, Shortsi või Instagrami jaoks: parimad hetked soovitatud, suur pealkiri värviliste sõnadega, JPG või PNG. Tasuta, brauseris, midagi ei laadita üles"
+    },
+    "changelog": {
+      "title": "Muudatuste logi — LocalCutVideo",
+      "description": "Mis on LocalCutVideos uut, versioon versiooni haaval"
+    },
+    "legal": {
+      "title": "Õiguslik teave — LocalCutVideo",
+      "description": "LocalCutVideo väljaandja ja majutus"
+    },
+    "privacy": {
+      "title": "Privaatsuspoliitika — LocalCutVideo",
+      "description": "LocalCutVideo ei laadi midagi üles: sinu videod, transkriptsioonid ja projektid jäävad sinu seadmesse"
+    },
+    "terms": {
+      "title": "Kasutustingimused — LocalCutVideo",
+      "description": "LocalCutVideo, tasuta ja avatud lähtekoodiga videoredaktori kasutustingimused"
+    },
+    "app": {
+      "title": "Projektid — LocalCutVideo",
+      "description": "Sinu videoprojektid, salvestatud sinu brauserisse"
+    },
+    "editor": {
+      "title": "Redaktor — LocalCutVideo",
+      "description": "LocalCutVideo redaktor"
+    }
+  },
+  "tour": {
+    "label": "Juhendatud tuur",
+    "help": "Juhendatud tuur",
+    "count": "Samm {{ n }}/{{ total }}",
+    "skip": "Jäta tuur vahele",
+    "prev": "Tagasi",
+    "next": "Edasi",
+    "done": "Alustame!",
+    "steps": {
+      "auto": {
+        "title": "Üks klõps: automaatmontaaž",
+        "text": "LocalCutVideo monteerib video sinu eest: vaikused ja kõhklused eemaldatud, subtiitrid, kadreering ja suum. Hiljem saad kõike muuta"
+      },
+      "preview": {
+        "title": "Eelvaade",
+        "text": "Mida näed, see täpselt eksporditakse. Klõpsa sellel või vajuta tühikut, et esitada või peatada"
+      },
+      "timeline": {
+        "title": "Ajatelg",
+        "text": "Klõpsa, et videos liikuda. Lohista lainekujul, et osa valida"
+      },
+      "cut": {
+        "title": "Lõika või muuda kiirust",
+        "text": "Kui osa on valitud, eemaldab Lõika (X) selle ja Kiirus esitab seda kiiremini või aeglasemalt. Ctrl+Z võtab kõik tagasi"
+      },
+      "transcript": {
+        "title": "Monteeri teksti kaudu",
+        "text": "Pärast transkribeerimist lõikab sõna kustutamine video. Saad ka parandada, mida AI valesti kuulis"
+      },
+      "settings": {
+        "title": "Kõik seaded",
+        "text": "Formaat (16:9, 9:16, ruut), lõiked ja üleminekud, subtiitrid, tekstid, kadreerimine ja hägustus, heli ja muusika"
+      },
+      "thumbnail": {
+        "title": "Pisipilt",
+        "text": "Loo oma video pisipilt selle parimatest hetkedest"
+      },
+      "export": {
+        "title": "Eksport",
+        "text": "Salvesta video MP4-na. Kõik toimub sinu seadmes, midagi ei laadita üles"
+      }
+    }
+  }
+}

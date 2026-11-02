@@ -1,0 +1,895 @@
+{
+  "common": {
+    "videoFiles": "Tệp video",
+    "audioFiles": "Tệp âm thanh",
+    "cancel": "Hủy",
+    "close": "Đóng",
+    "retry": "Thử lại",
+    "none": "Không có",
+    "remove": "Xóa"
+  },
+  "nav": {
+    "features": "Tính năng",
+    "privacy": "Quyền riêng tư",
+    "faq": "Hỏi đáp",
+    "changelog": "Thay đổi",
+    "language": "Ngôn ngữ",
+    "searchLanguage": "Tìm ngôn ngữ",
+    "noLanguage": "Không tìm thấy ngôn ngữ",
+    "install": "Cài đặt ứng dụng",
+    "open": "Mở trình chỉnh sửa",
+    "menu": "Mở menu",
+    "close": "Đóng menu",
+    "thumbnail": "Ảnh thu nhỏ"
+  },
+  "theme": {
+    "system": "Hệ thống",
+    "light": "Sáng",
+    "dark": "Tối",
+    "label": "Giao diện"
+  },
+  "footer": {
+    "tagline": "Trình chỉnh sửa video miễn phí, mã nguồn mở, chạy hoàn toàn trong trình duyệt. Tệp của bạn không bao giờ rời khỏi máy tính",
+    "issues": "Báo lỗi",
+    "noTracking": "Không cookie, không theo dõi",
+    "product": "Sản phẩm",
+    "legal": "Pháp lý"
+  },
+  "pwa": {
+    "update": "Đã có phiên bản mới",
+    "reload": "Tải lại"
+  },
+  "landing": {
+    "hero": {
+      "badgeLocal": "100% trên máy, không tải lên",
+      "badgeOpen": "Miễn phí & mã nguồn mở",
+      "title1": "Chỉnh sửa video của bạn",
+      "title2": "Không gì rời khỏi máy tính của bạn",
+      "lead": "LocalCutVideo cắt đoạn im lặng, chép lời bằng Whisper, gắn phụ đề karaoke và chuyển khung hình 16:9 sang 9:16, tất cả trong trình duyệt. Không tải lên, không tài khoản, không máy chủ",
+      "cta": "Mở trình chỉnh sửa",
+      "github": "Xem trên GitHub",
+      "hint": "Hoạt động tốt nhất trên Chrome hoặc Edge trên máy tính",
+      "demo": "Thử với video mẫu"
+    },
+    "mock": {
+      "w1": "Vậy hôm nay",
+      "filler": "ờm,",
+      "w2": "mình sẽ cho các bạn xem",
+      "w3": "nó hoạt động thế nào",
+      "line2": "Mọi thứ chạy trên máy của bạn, kể cả AI",
+      "line3": "Xóa một từ, video được cắt ngay",
+      "cap1": "Mọi thứ ở lại trên",
+      "cap2": "máy tính của bạn"
+    },
+    "stats": {
+      "upload": "byte được tải lên",
+      "local": "xử lý trên thiết bị của bạn",
+      "languages": "ngôn ngữ giao diện",
+      "gpu": "AI và mã hóa được tăng tốc"
+    },
+    "how": {
+      "eyebrow": "Cách hoạt động",
+      "title": "Từ cảnh quay thô đến video sẵn sàng đăng trong ba bước",
+      "open": {
+        "title": "Mở video",
+        "text": "Chọn một tệp trên ổ đĩa. Tệp được đọc tại chỗ: không sao chép, không tải lên, kể cả tệp nặng vài gigabyte"
+      },
+      "edit": {
+        "title": "Để trình chỉnh sửa làm việc",
+        "text": "Đoạn im lặng được phát hiện, lời nói được chép từng từ và khuôn mặt được theo dõi, tất cả ngay trên máy. Sửa bất cứ gì bằng cách chỉnh văn bản"
+      },
+      "export": {
+        "title": "Xuất MP4",
+        "text": "Chọn 16:9, 9:16 hoặc 1:1. Video được card đồ họa mã hóa và ghi thẳng vào ổ đĩa"
+      }
+    },
+    "features": {
+      "eyebrow": "Tính năng",
+      "title": "Mọi thứ bạn cần cho video nói trước ống kính",
+      "lead": "Dành cho nhà sáng tạo YouTube, TikTok, Reels và Shorts không muốn tải cảnh quay thô lên bất cứ đâu",
+      "silences": {
+        "title": "Tự động cắt im lặng",
+        "text": "Phát hiện khoảng ngắt dựa trên âm lượng rồi xóa chúng, có thể chỉnh ngưỡng, độ dài tối thiểu và khoảng lấy hơi"
+      },
+      "textEdit": {
+        "title": "Chỉnh sửa bằng văn bản",
+        "text": "Whisper gắn mốc thời gian cho từng từ. Xóa từ trong bản chép lời và đoạn video tương ứng sẽ bị cắt"
+      },
+      "captions": {
+        "title": "Phụ đề karaoke",
+        "text": "Phụ đề chuyển động từng từ được gắn vào video, kiểu karaoke, tối giản hoặc có khung, với màu nhấn bạn chọn"
+      },
+      "framing": {
+        "title": "Tự động căn khung 16:9 → 9:16",
+        "text": "Theo dõi khuôn mặt giữ người nói luôn trong khung khi bạn chuyển video ngang thành video dọc"
+      },
+      "zoom": {
+        "title": "Thu phóng thông minh",
+        "text": "Phóng to xen kẽ ở mỗi điểm cắt khiến jump cut trông có chủ ý và giữ chân người xem"
+      },
+      "ducking": {
+        "title": "Âm thanh & nhạc",
+        "text": "Tăng âm lượng, cân bằng các clip và thêm nhạc nền tự nhỏ lại mỗi khi có người nói"
+      },
+      "recovery": {
+        "title": "Khôi phục sau sự cố",
+        "text": "Mọi thay đổi được lưu vào trình duyệt theo thời gian thực. Mở lại thẻ và tiếp tục đúng chỗ bạn đã dừng"
+      },
+      "offline": {
+        "title": "Dùng ngoại tuyến",
+        "text": "Cài đặt như một ứng dụng. Khi mô hình AI đã tải về, toàn bộ trình chỉnh sửa chạy không cần internet"
+      },
+      "export": {
+        "title": "Xuất nhanh bằng phần cứng",
+        "text": "Việc mã hóa dùng WebCodecs, bộ mã hóa video tích hợp trong trình duyệt và card đồ họa, thay cho mã hóa phần mềm chậm chạp"
+      },
+      "clips": {
+        "title": "Ghép nhiều clip",
+        "text": "Thả nhiều cảnh quay cùng lúc: chúng được nối thành một video theo thứ tự bạn chọn, dùng chung dòng thời gian và bản chép lời"
+      },
+      "inputs": {
+        "title": "MP4, MOV, WebM, MKV",
+        "text": "Mở tệp từ điện thoại và máy ảnh, kể cả video HEVC từ iPhone nếu trình duyệt giải mã được"
+      },
+      "languages": {
+        "title": "Đa ngôn ngữ",
+        "text": "Giao diện có {{ count }} ngôn ngữ và Whisper chép lời thêm hàng chục ngôn ngữ khác, với tính năng tự nhận diện ngôn ngữ"
+      }
+    },
+    "privacy": {
+      "eyebrow": "Quyền riêng tư",
+      "title": "Không tải lên, ngay từ thiết kế",
+      "lead": "Video được đọc trực tiếp từ ổ đĩa. Phân tích âm thanh, chép lời, theo dõi khuôn mặt và mã hóa đều chạy trong luồng nền (Web Workers) trên máy của bạn. Đơn giản là không có máy chủ nào để gửi cảnh quay của bạn đến",
+      "upload": "Không bao giờ tải lên: tệp không bao giờ rời khỏi máy tính của bạn",
+      "account": "Không tài khoản, không cookie, không thống kê",
+      "csp": "Content-Security-Policy nghiêm ngặt chỉ cho phép trang giao tiếp với trang web này, nơi cũng cung cấp các mô hình AI (Hugging Face chỉ là dự phòng)",
+      "storage": "Dự án được lưu trong cơ sở dữ liệu cục bộ của trình duyệt (IndexedDB) và có thể xóa bất cứ lúc nào",
+      "diagram": {
+        "machine": "Máy tính của bạn",
+        "file": "Tệp video",
+        "browser": "Trình duyệt của bạn",
+        "upload": "Tải lên máy chủ",
+        "model": "Tải mô hình AI (một lần, lưu bộ nhớ đệm)"
+      }
+    },
+    "support": {
+      "eyebrow": "Tương thích",
+      "title": "Hỗ trợ trình duyệt",
+      "ok": "Đầy đủ",
+      "partial": "Một phần",
+      "full": "Mọi tính năng, kể cả khôi phục sau sự cố và ghi bản xuất thẳng vào ổ đĩa",
+      "firefox": "Chỉnh sửa và xuất đều chạy được. Sau khi đóng thẻ, bạn sẽ cần chọn lại video",
+      "safari": "Chỉ phiên bản mới. Chọn lại video sau khi tải lại trang; bản xuất được tải xuống",
+      "mobile": "Điện thoại & máy tính bảng",
+      "mobileText": "Dùng được với clip ngắn, nhưng giới hạn bộ nhớ khiến video dài kém ổn định"
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp",
+      "free": {
+        "q": "Thật sự miễn phí sao? Có gì khuất tất không?",
+        "a": "Nó miễn phí và mã nguồn mở. Vì mọi xử lý diễn ra trên máy tính của bạn nên không tốn chi phí máy chủ, không có gì để bán cho bạn và cũng không có dữ liệu nào để thu thập"
+      },
+      "formats": {
+        "q": "Tôi có thể mở những định dạng video nào?",
+        "a": "MP4, MOV, WebM và MKV, miễn là trình duyệt giải mã được codec (H.264, HEVC, VP9, AV1 tùy trình duyệt và hệ thống). Bản xuất là tệp MP4"
+      },
+      "browsers": {
+        "q": "Vì sao lại là Chrome hoặc Edge?",
+        "a": "Chúng hỗ trợ File System Access API, giúp trình chỉnh sửa mở lại video sau khi tải lại trang và ghi bản xuất thẳng vào ổ đĩa. Các trình duyệt khác vẫn dùng được, chỉ cần thêm vài cú nhấp"
+      },
+      "size": {
+        "q": "Có giới hạn dung lượng tệp không?",
+        "a": "Không có giới hạn tải lên vì chẳng có gì được tải lên. Video được đọc từ ổ đĩa theo từng phần nhỏ; giới hạn thực tế là bộ nhớ máy tính và sự kiên nhẫn của bạn với video rất dài"
+      },
+      "offline": {
+        "q": "Có dùng được khi không có internet không?",
+        "a": "Có, sau khi đã tải xong. Cài đặt dưới dạng ứng dụng (PWA) và chép lời một lần khi đang trực tuyến: mô hình Whisper sẽ được lưu bộ nhớ đệm và mọi thứ chạy ngoại tuyến"
+      },
+      "ai": {
+        "q": "AI chạy ở đâu?",
+        "a": "Trong trình duyệt của bạn. Whisper chạy bằng Transformers.js trên card đồ họa (WebGPU) hoặc bộ xử lý (WebAssembly), còn nhận diện khuôn mặt dùng MediaPipe. Mô hình chỉ tải một lần, âm thanh của bạn không bao giờ bị gửi đi"
+      }
+    },
+    "final": {
+      "title": "Video tiếp theo của bạn, chỉnh xong trong vài phút",
+      "text": "Không đăng ký, không tải lên, không hình mờ. Mở một tệp và bắt đầu chỉnh sửa"
+    },
+    "thumbnail": {
+      "eyebrow": "Mới · Ảnh thu nhỏ",
+      "title": "Và ảnh thu nhỏ đi kèm",
+      "text": "Công cụ tạo ảnh thu nhỏ tìm những khoảnh khắc sắc nét nhất trong video. Thêm tiêu đề lớn với chữ có màu và tải xuống đúng kích thước",
+      "points": {
+        "moments": "Gợi ý khoảnh khắc đẹp nhất",
+        "title": "Tiêu đề có từ nổi bật, 4 kiểu",
+        "formats": "YouTube 1280×720, Shorts và hình vuông",
+        "local": "Tạo trên thiết bị của bạn, không tải lên gì cả"
+      },
+      "cta": "Tạo ảnh thu nhỏ",
+      "mockTitle": "Vlog",
+      "mockAccent": "đầu tiên"
+    }
+  },
+  "changelog": {
+    "eyebrow": "Phiên bản",
+    "title": "Nhật ký thay đổi",
+    "lead": "Mọi phiên bản của LocalCutVideo, mới nhất trước",
+    "current": "Phiên bản bạn đang dùng:",
+    "github": "Xem trên GitHub",
+    "releases": "Bản phát hành trên GitHub",
+    "latest": "Mới nhất",
+    "error": "Không tải được nhật ký thay đổi"
+  },
+  "projects": {
+    "title": "Dự án của bạn",
+    "lead": "Dự án được tự động lưu trong trình duyệt này. Video của bạn vẫn nằm nguyên trên ổ đĩa",
+    "resume": "Tiếp tục từ chỗ đã dừng",
+    "reading": "Đang đọc video…",
+    "drop": "Thả video vào đây",
+    "or": "hoặc",
+    "open": "Mở video",
+    "private": "Tệp được đọc trên máy, không tải lên gì cả",
+    "noFsAccess": "Trình duyệt của bạn không nhớ được tệp giữa các phiên: sau khi đóng thẻ, bạn sẽ cần chọn lại video. Chrome hoặc Edge không gặp vấn đề này",
+    "recent": "Dự án gần đây",
+    "empty": "Chưa có dự án nào. Mở một video để bắt đầu",
+    "delete": "Xóa dự án",
+    "confirmDelete": "Xóa dự án “{{ name }}”? Tệp video trên ổ đĩa không bị ảnh hưởng",
+    "multi": "Nhiều tệp? Chúng được ghép thành một video theo thứ tự tên",
+    "importFile": "Mở tệp dự án (.lcv.json)",
+    "saveFile": "Lưu dự án thành tệp",
+    "imported": "Đã mở dự án: chọn các video của nó để tiếp tục"
+  },
+  "errors": {
+    "notVideo": "Tệp này có vẻ không phải video",
+    "codec": "Trình duyệt của bạn không giải mã được codec của video này (HEVC/H.265 cần Chrome, hoặc tiện ích HEVC trên Edge). Hãy thử chuyển sang MP4 H.264",
+    "noVideo": "Không tìm thấy luồng video trong tệp này",
+    "generic": "Đã xảy ra lỗi khi đọc tệp này",
+    "transcribe": "Chép lời thất bại. Hãy thử mô hình nhỏ hơn hoặc kiểm tra kết nối cho lần tải đầu tiên",
+    "export": "Xuất thất bại",
+    "faces": "Theo dõi khuôn mặt thất bại với video này",
+    "skipped": "Đã bỏ qua (không đọc được): {{ names }}",
+    "skippedCodec": "Đã bỏ qua, trình duyệt không hỗ trợ codec: {{ names }}. Hãy thử Chrome, hoặc chuyển sang MP4 H.264",
+    "notProject": "Tệp này không phải dự án LocalCutVideo",
+    "demo": "Không tải được video mẫu"
+  },
+  "languages": {
+    "en": "Tiếng Anh",
+    "fr": "Tiếng Pháp",
+    "es": "Tiếng Tây Ban Nha",
+    "it": "Tiếng Ý",
+    "de": "Tiếng Đức",
+    "pt": "Tiếng Bồ Đào Nha",
+    "nl": "Tiếng Hà Lan"
+  },
+  "editor": {
+    "back": "Quay lại dự án",
+    "name": "Tên dự án",
+    "undo": "Hoàn tác",
+    "redo": "Làm lại",
+    "missing": "Dự án này không còn tồn tại",
+    "save": {
+      "saving": "Đang lưu…",
+      "saved": "Đã lưu trên máy",
+      "error": "Chưa lưu"
+    },
+    "reconnect": {
+      "loading": "Đang mở video…",
+      "title": "Kết nối lại video của bạn",
+      "allow": "Cho phép truy cập tất cả",
+      "select": "Chọn",
+      "mismatch": "Tệp này có vẻ không phải tệp gốc (“{{ name }}”). Vẫn dùng chứ?",
+      "intro": "Dự án vẫn an toàn. Để bảo vệ quyền riêng tư, trình duyệt hỏi lại trước khi trình chỉnh sửa được đọc tệp của bạn",
+      "allowOne": "Cho phép",
+      "privacy": "Video được đọc tại chỗ trên ổ đĩa, không bao giờ bị sao chép hay tải lên",
+      "status": {
+        "ready": "Đã kết nối",
+        "permission": "Đang chờ bạn cho phép",
+        "moved": "Không tìm thấy: đã bị di chuyển hoặc đổi tên?",
+        "missing": "Chọn lại tệp (trình duyệt của bạn không giữ quyền truy cập tệp)",
+        "loading": "Đang mở…"
+      }
+    },
+    "preview": {
+      "cut": "Điểm cắt",
+      "back": "Lùi 5 giây",
+      "play": "Phát",
+      "pause": "Tạm dừng",
+      "savedHint": "Thời lượng đã cắt bỏ",
+      "badge": "Xem trước nhẹ · {{ q }}p",
+      "quality": "Chất lượng xem trước",
+      "qualityHint": "Bản xem trước nhẹ hơn giúp trình chỉnh sửa mượt mà. Bản xuất luôn dùng chất lượng đầy đủ"
+    },
+    "timeline": {
+      "title": "Dòng thời gian",
+      "silence": "Im lặng",
+      "manual": "Thủ công",
+      "text": "Văn bản",
+      "hint": "Kéo trên dạng sóng để chọn một đoạn, rồi Cắt hoặc Tốc độ · nhấp vào điểm cắt để chỉnh mép · nhấp đúp để xóa",
+      "removeCut": "Xóa điểm cắt",
+      "zoom": "Thu phóng dòng thời gian",
+      "analyzing": "Đang phân tích âm thanh…",
+      "zoomIn": "Phóng to",
+      "zoomOut": "Thu nhỏ",
+      "fit": "Vừa khung",
+      "fitHint": "Hiện toàn bộ video (mẹo: Ctrl + con lăn để thu phóng)",
+      "manualCut": "Cắt thủ công",
+      "markIn": "Bắt đầu",
+      "markOut": "Kết thúc",
+      "markInHint": "Điểm bắt đầu đoạn cần cắt, tại vị trí phát (I)",
+      "markOutHint": "Điểm kết thúc đoạn cần cắt, tại vị trí phát (O)",
+      "cutMarked": "Cắt",
+      "cutHint": "Xóa đoạn giữa điểm bắt đầu và kết thúc (X)",
+      "clearMarks": "Xóa điểm bắt đầu và kết thúc",
+      "marksMissing": "Hãy đặt điểm bắt đầu (I) và kết thúc (O) trước",
+      "analysisError": "Không phân tích được âm thanh",
+      "selectedCut": "Điểm cắt đã chọn",
+      "earlier": "Sớm hơn",
+      "later": "Muộn hơn",
+      "listen": "Nghe điểm cắt",
+      "speed": "Tốc độ",
+      "speedHint": "Tăng hoặc giảm tốc đoạn giữa điểm bắt đầu và kết thúc",
+      "selectedSpeed": "Đổi tốc độ",
+      "removeSpeed": "Trở về tốc độ bình thường",
+      "listenSpeed": "Phát đoạn đổi tốc độ",
+      "selectFirst": "Hãy chọn một đoạn trước: kéo trên dạng sóng, hoặc đặt Bắt đầu và Kết thúc"
+    },
+    "transcript": {
+      "title": "Bản chép lời",
+      "words": "{{ count }} từ",
+      "fillers": "Xóa từ đệm ({{ count }})",
+      "restore": "Khôi phục tất cả",
+      "selected": "Đã chọn {{ count }}",
+      "cut": "Cắt / khôi phục",
+      "tip": "Nhấp vào một từ để nhảy đến đó. Kéo hoặc Shift + nhấp để chọn, rồi nhấn Delete để cắt hoặc Sửa (Enter) để sửa chỗ Whisper nghe nhầm",
+      "emptyTitle": "Chưa có bản chép lời",
+      "emptyText": "Chép lời video để chỉnh sửa bằng văn bản và có phụ đề từng từ",
+      "correct": "Sửa",
+      "correctTitle": "Thật ra đã nói gì?",
+      "correctHint": "Gõ lại một từ hoặc cả câu. Thời gian và phụ đề tự điều chỉnh",
+      "apply": "Áp dụng"
+    },
+    "transcribe": {
+      "title": "Chép lời (Whisper)",
+      "hint": "Chạy trên thiết bị của bạn. Mô hình được tải một lần rồi lưu bộ nhớ đệm",
+      "model": "Mô hình",
+      "models": {
+        "tiny": "Nhanh",
+        "base": "Cân bằng",
+        "small": "Chính xác"
+      },
+      "download": "Tải một lần {{ size }}",
+      "language": "Ngôn ngữ nói",
+      "auto": "Tự nhận diện",
+      "run": "Chép lời",
+      "rerun": "Chép lời lại tất cả",
+      "done": "Đã chép {{ count }} từ",
+      "empty": "Không tìm thấy lời nói trong video này",
+      "stage": {
+        "audio": "Đang tách âm thanh…",
+        "download": "Đang tải mô hình…",
+        "transcribe": "Đang chép lời…"
+      },
+      "missing": "Chép lời các clip mới ({{ count }})",
+      "rerunHint": "Bắt đầu lại với mô hình và ngôn ngữ ở trên",
+      "confirmAll": "Chép lời lại tất cả? Những từ bạn đã cắt hoặc sửa sẽ bị mất",
+      "detected": "Ngôn ngữ nhận diện được: {{ language }}"
+    },
+    "tabs": {
+      "format": "Định dạng",
+      "cuts": "Điểm cắt",
+      "captions": "Phụ đề",
+      "framing": "Căn khung",
+      "audio": "Âm thanh",
+      "clips": "Clip",
+      "texts": "Chữ"
+    },
+    "format": {
+      "title": "Định dạng đầu ra",
+      "hint": "Video được cắt xén cho vừa khung. Dùng Căn khung để bám theo người nói",
+      "landscape": "YouTube",
+      "vertical": "TikTok · Reels",
+      "square": "Bảng tin",
+      "source": "Nguồn:",
+      "resolution": "Độ phân giải",
+      "fps": "Khung hình mỗi giây",
+      "exportNote": "Độ phân giải và tốc độ khung hình được chọn khi xuất",
+      "rotation": "Xoay",
+      "rotateLeft": "Xoay trái",
+      "rotateRight": "Xoay phải",
+      "rotationHint": "Dành cho video quay nghiêng. Áp dụng cho mọi clip",
+      "rotatedFaces": "Đã xoay video: hãy bật lại “Theo khuôn mặt” trong Căn khung"
+    },
+    "cuts": {
+      "title": "Phát hiện im lặng",
+      "hint": "Xóa các khoảng ngắt. Hạ ngưỡng nếu bị mất chữ",
+      "threshold": "Ngưỡng",
+      "suggested": "Gợi ý cho bản ghi này: {{ value }} dB",
+      "minSilence": "Im lặng tối thiểu",
+      "padding": "Khoảng lấy hơi",
+      "detect": "Phát hiện và cắt im lặng",
+      "detected": "Đã cắt {{ count }} đoạn im lặng",
+      "count": "điểm cắt",
+      "removed": "đã bỏ",
+      "final": "thời lượng cuối",
+      "clear": "Xóa mọi điểm cắt",
+      "mode": "Tìm khoảng ngắt theo",
+      "modes": {
+        "audio": "Âm lượng",
+        "transcript": "Bản chép lời"
+      },
+      "modeHint": "Chế độ bản chép lời vẫn chính xác dù có tiếng ồn hay nhạc nền",
+      "modeNeedsTranscript": "Chép lời video để tìm khoảng ngắt theo từ: chính xác hơn ở nơi ồn ào",
+      "preset": "Nhịp độ",
+      "presets": {
+        "gentle": "Tự nhiên",
+        "normal": "Cân bằng",
+        "tight": "Dồn dập"
+      },
+      "live": "Điểm cắt cập nhật ngay khi bạn đổi cài đặt",
+      "silentClips": "{{ count }} clip không có giọng nói: ở đó chỉ cắt khoảng trống thật sự"
+    },
+    "captions": {
+      "title": "Phụ đề gắn cứng",
+      "style": "Kiểu",
+      "styles": {
+        "karaoke": "Karaoke",
+        "clean": "Tối giản",
+        "boxed": "Có khung"
+      },
+      "position": "Vị trí",
+      "positions": {
+        "top": "Trên",
+        "center": "Giữa",
+        "bottom": "Dưới"
+      },
+      "size": "Cỡ chữ",
+      "words": "Số từ mỗi dòng phụ đề",
+      "uppercase": "Chữ in hoa",
+      "highlight": "Màu nhấn"
+    },
+    "framing": {
+      "title": "Tự động căn khung",
+      "hint": "Theo dõi khuôn mặt để giữ người nói trong khung, lý tưởng cho 16:9 → 9:16",
+      "center": "Căn giữa",
+      "face": "Theo khuôn mặt",
+      "analyzing": "Đang theo dõi khuôn mặt…",
+      "analyze": "Theo dõi khuôn mặt",
+      "reanalyze": "Theo dõi lại khuôn mặt",
+      "tracked": "Đã theo dõi {{ count }} vị trí",
+      "found": "Đã theo dõi khuôn mặt: khung hình bám theo người nói",
+      "notFound": "Không tìm thấy khuôn mặt ổn định trong video này",
+      "punch": "Thu phóng thông minh",
+      "punchHint": "Xen kẽ phóng to nhẹ ở mỗi điểm cắt, hoặc ở mỗi câu khi không có điểm cắt, để video luôn sống động",
+      "zoom": "Mức thu phóng",
+      "firstTime": "Chọn “Theo khuôn mặt” sẽ phân tích video một lần, ngay trên máy",
+      "beatsCuts": "Mức thu phóng đổi {{ count }} lần, tại các điểm cắt của bạn",
+      "beatsAuto": "Chưa có điểm cắt: mức thu phóng đổi {{ count }} lần, theo câu hoặc mỗi 4 giây"
+    },
+    "audio": {
+      "title": "Nhạc nền",
+      "hint": "Nhạc tự động nhỏ lại khi có người nói (auto-ducking)",
+      "reconnect": "Kết nối lại “{{ name }}”",
+      "pick": "Chọn tệp nhạc",
+      "enabled": "Đưa vào video",
+      "volume": "Âm lượng nhạc",
+      "ducking": "Giảm khi có lời nói",
+      "duckingHint": "Mức giảm nhạc khi có người nói"
+    },
+    "export": {
+      "button": "Xuất",
+      "title": "Xuất video",
+      "running": "Đang xuất…",
+      "eta": "Còn khoảng {{ time }}",
+      "keepOpen": "Hãy giữ thẻ này mở. Việc mã hóa dùng card đồ họa khi có thể",
+      "done": "Xuất xong",
+      "saved": "Đã lưu “{{ name }}” vào ổ đĩa trong {{ seconds }} giây",
+      "downloaded": "Đã tải “{{ name }}” trong {{ seconds }} giây",
+      "duration": "Thời lượng",
+      "from": "từ {{ time }}",
+      "streamHint": "Bạn sẽ chọn nơi lưu MP4. Tệp được ghi thẳng vào ổ đĩa",
+      "downloadHint": "MP4 được ghép trên máy rồi tải xuống",
+      "start": "Xuất MP4",
+      "saveProject": "Lưu dự án",
+      "saveProjectHint": "Tệp .lcv.json chứa phần chỉnh sửa (không kèm video), để tiếp tục trên máy khác",
+      "projectSaved": "Đã lưu dự án thành tệp .lcv.json"
+    },
+    "clips": {
+      "title": "Clip",
+      "hint": "Các video phát nối tiếp theo thứ tự này. Kéo để sắp xếp lại: điểm cắt và từ đi theo clip của chúng",
+      "jump": "Đến clip này",
+      "up": "Chuyển lên",
+      "down": "Chuyển xuống",
+      "remove": "Xóa clip",
+      "add": "Thêm video",
+      "summary": "{{ count }} clip · tổng {{ time }}",
+      "confirmRemove": "Xóa “{{ name }}” khỏi dự án? Điểm cắt và từ của clip cũng bị xóa (Ctrl+Z để hoàn tác)",
+      "added": "Đã thêm {{ count }} clip",
+      "addedTranscribe": "Đã thêm {{ count }} clip. Chép lời lại để thêm phụ đề: các clip đã chép lời vẫn được giữ",
+      "noVoice": "không giọng nói",
+      "voiceOn": "Có giọng nói · nhấp nếu không ai nói",
+      "voiceOff": "Không giọng nói · nhấp nếu có người nói"
+    },
+    "auto": {
+      "button": "Tự động chỉnh",
+      "cta": "Tự động chỉnh video",
+      "transcribeOnly": "hoặc chỉ chép lời",
+      "heading": "Để LocalCutVideo chỉnh video giúp bạn",
+      "lead": "Chỉ một cú nhấp: bỏ im lặng và tiếng ậm ừ, thêm phụ đề, căn khung theo người nói và thu phóng thông minh. Bạn có thể đổi mọi thứ sau đó",
+      "target": "Bạn sẽ đăng ở đâu?",
+      "options": {
+        "silences": "Cắt đoạn im lặng",
+        "fillers": "Bỏ tiếng ậm ừ (ờ, ừm…)",
+        "captions": "Phụ đề karaoke",
+        "framing": "Theo khuôn mặt",
+        "framingNoCrop": "Không cần: định dạng này hiện toàn bộ khung hình",
+        "zoom": "Thu phóng thông minh"
+      },
+      "local": "Mọi thứ chạy trên thiết bị của bạn. Video không bao giờ được tải lên",
+      "start": "Bắt đầu tự động chỉnh",
+      "running": "Đang chỉnh video của bạn…",
+      "done": "Video đã chỉnh xong!",
+      "view": "Xem kết quả",
+      "undo": "Hoàn tác tự động chỉnh",
+      "undone": "Dự án đã trở về như trước khi tự động chỉnh",
+      "summary": {
+        "cuts": "điểm cắt",
+        "removed": "đã bỏ",
+        "words": "từ có phụ đề",
+        "silent": "{{ count }} clip không có giọng nói: chỉ cắt khoảng trống thật sự"
+      },
+      "steps": {
+        "analyze": "Phân tích âm thanh",
+        "transcribe": "Chép lời nói",
+        "fillers": "Bỏ tiếng ậm ừ",
+        "silences": "Cắt đoạn im lặng",
+        "framing": "Theo khuôn mặt",
+        "style": "Phụ đề và thu phóng thông minh",
+        "voice": "Nhận diện giọng nói"
+      },
+      "status": {
+        "skipped": "đã bỏ qua",
+        "error": "thất bại"
+      },
+      "voice": {
+        "title": "Có ai nói trong video không?",
+        "auto": "Tự động",
+        "yes": "Có",
+        "no": "Không",
+        "detectedYes": "Nhận diện: có người nói",
+        "detectedNo": "Nhận diện: không có giọng nói",
+        "hint": "Không giọng nói: không chép lời, không phụ đề, chỉ cắt khoảng trống thật sự"
+      }
+    },
+    "mix": {
+      "title": "Âm thanh video",
+      "hint": "Tăng hoặc giảm âm thanh các clip",
+      "volume": "Âm lượng",
+      "mute": "Tắt tiếng",
+      "unmute": "Bật tiếng",
+      "volumeHint": "Áp dụng cho xem trước và bản xuất",
+      "boostHint": "Trên 100 %, bộ giới hạn ngăn tiếng bị rè",
+      "normalize": "Cân bằng âm lượng các clip",
+      "normalizeHint": "Mọi clip to như nhau, dù quay gần hay xa",
+      "denoise": "Giảm tiếng ồn nền",
+      "denoiseHint": "Giọng rõ hơn (gió, tiếng xì, quạt). Áp dụng khi xuất, cho các clip có giọng nói. Hãy nghe thử trước",
+      "listen": "Nghe thử 8 giây kết quả",
+      "stopListening": "Dừng nghe",
+      "preparing": "Đang chuẩn bị…"
+    },
+    "thumbnail": "Ảnh thu nhỏ",
+    "transition": {
+      "title": "Chuyển cảnh ở điểm cắt",
+      "none": "Cắt thẳng",
+      "dip": "Mờ nhanh",
+      "black": "Mờ dần sang đen",
+      "hint": "Phát ở mỗi điểm cắt và khi đổi clip (và ở đầu, cuối video với hiệu ứng mờ dần sang đen). Thấy được khi phát"
+    },
+    "texts": {
+      "title": "Chữ trên video",
+      "hint": "Tiêu đề và ghi chú hiển thị tại vị trí phát. Đặt từ giữa hai dấu sao để tô màu",
+      "add": "Thêm chữ tại vị trí phát",
+      "default": "*Chữ* của bạn",
+      "timing": "Hiển thị",
+      "startHere": "Bắt đầu tại đây",
+      "endHere": "Kết thúc tại đây",
+      "remove": "Xóa dòng chữ này"
+    },
+    "background": {
+      "title": "Hậu cảnh",
+      "hint": "Làm mờ hậu cảnh phía sau người, người vẫn sắc nét. Được tính trên thiết bị của bạn",
+      "none": "Sắc nét",
+      "blur": "Làm mờ",
+      "strength": "Độ mờ",
+      "error": "Không thể bật làm mờ hậu cảnh trên thiết bị này"
+    }
+  },
+  "legal": {
+    "updated": "Cập nhật lần cuối: 1 tháng 11 năm 2026",
+    "contact": "Liên hệ",
+    "nav": {
+      "notice": "Thông tin pháp lý",
+      "privacy": "Quyền riêng tư",
+      "terms": "Điều khoản sử dụng"
+    },
+    "notice": {
+      "title": "Thông tin pháp lý",
+      "intro": "Thông tin theo yêu cầu của luật Pháp (Điều 6 LCEN, luật số 2004-575 ngày 21 tháng 6 năm 2004) về đơn vị phát hành và lưu trữ trang web này.",
+      "sections": [
+        {
+          "title": "Đơn vị phát hành",
+          "body": [
+            "Trang web localcutvideo.mbonnici.fr (“LocalCutVideo”) do Maxence Bonnici, một cá nhân, phát hành phi thương mại.",
+            "Người chịu trách nhiệm xuất bản: Maxence Bonnici.",
+            "Liên hệ: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Lưu trữ",
+          "body": [
+            "Trang web do chính đơn vị phát hành, Maxence Bonnici, tự lưu trữ trên máy chủ cá nhân và triển khai bằng nền tảng Coolify.",
+            "Liên hệ: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Sở hữu trí tuệ",
+          "body": [
+            "Mã nguồn của LocalCutVideo là mã nguồn mở và được công bố theo giấy phép MIT trên [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
+            "Các thành phần bên thứ ba, mô hình AI và phông chữ mà ứng dụng sử dụng vẫn thuộc sở hữu của tác giả và được dùng theo giấy phép riêng của chúng, được liệt kê trong [điều khoản sử dụng](/terms). Các thương hiệu được nhắc đến (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) thuộc về chủ sở hữu tương ứng."
+          ]
+        },
+        {
+          "title": "Trách nhiệm",
+          "body": [
+            "Đơn vị phát hành cố gắng duy trì trang web hoạt động và thông tin chính xác, nhưng không thể bảo đảm cả hai. Việc sử dụng ứng dụng tuân theo [điều khoản sử dụng](/terms)."
+          ]
+        },
+        {
+          "title": "Dữ liệu cá nhân",
+          "body": [
+            "LocalCutVideo không thu thập bất kỳ dữ liệu cá nhân nào: video chỉ được xử lý trên thiết bị của bạn. Chi tiết có trong [chính sách quyền riêng tư](/privacy)."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Chính sách quyền riêng tư",
+      "intro": "LocalCutVideo được xây dựng để video của bạn không bao giờ rời khỏi thiết bị. Trang này giải thích đơn giản những gì được xử lý, và ở đâu.",
+      "sections": [
+        {
+          "title": "Tóm tắt",
+          "body": [
+            "Không tải lên: video, âm thanh và bản chép lời của bạn được xử lý trong trình duyệt và không bao giờ được gửi cho đơn vị phát hành hay bất kỳ ai.",
+            "Không tài khoản, không cookie, không thống kê, không quảng cáo."
+          ]
+        },
+        {
+          "title": "Những gì ở lại trên thiết bị",
+          "body": [
+            "Tệp video và âm thanh bạn mở được đọc trực tiếp từ ổ đĩa. Phân tích, chép lời (Whisper), theo dõi khuôn mặt và xuất video đều được trình duyệt tính toán ngay trên máy.",
+            "Dự án của bạn (điểm cắt, bản chép lời, cài đặt) được lưu trong cơ sở dữ liệu cục bộ của trình duyệt (IndexedDB), cùng một ảnh thu nhỏ và bộ nhớ đệm kết quả phân tích. Đơn vị phát hành không thể truy cập chúng. Bạn có thể xóa một dự án từ trang dự án, hoặc xóa tất cả bằng cách xóa dữ liệu của trang này trong cài đặt trình duyệt."
+          ]
+        },
+        {
+          "title": "Lưu trữ cục bộ",
+          "body": [
+            "Ứng dụng lưu tùy chọn giao diện của bạn (ngôn ngữ, giao diện sáng tối, dự án mở gần nhất) trong bộ nhớ cục bộ của trình duyệt, và giữ tệp của chính nó cùng các mô hình AI đã tải trong bộ nhớ đệm để có thể chạy ngoại tuyến. Những thứ này là thiết yếu cho dịch vụ, không bao giờ dùng để theo dõi bạn nên không cần biểu ngữ xin đồng ý."
+          ]
+        },
+        {
+          "title": "Máy chủ",
+          "body": [
+            "Máy chủ chỉ phân phối các tệp của ứng dụng và không lưu nhật ký truy cập. Như mọi máy chủ web, về mặt kỹ thuật nó nhận địa chỉ IP của bạn để trả lời yêu cầu, nhưng không lưu lại."
+          ]
+        },
+        {
+          "title": "Bên thứ ba",
+          "body": [
+            "Hugging Face: mô hình Whisper do trang web này cung cấp, giống như phần còn lại của ứng dụng. Chỉ khi không có sẵn ở đây, mô hình mới được tải từ huggingface.co; khi đó Hugging Face nhận địa chỉ IP và thông tin trình duyệt thông thường của bạn, nhưng không bao giờ nhận âm thanh của bạn. Xem [chính sách quyền riêng tư](https://huggingface.co/privacy) của họ.",
+            "GitHub: chỉ khi bạn nhấp vào liên kết đến kho mã nguồn.",
+            "Không liên hệ bên thứ ba nào khác: Content-Security-Policy nghiêm ngặt ngăn trang kết nối đến bất cứ nơi nào khác về mặt kỹ thuật."
+          ]
+        },
+        {
+          "title": "Quyền của bạn",
+          "body": [
+            "Theo GDPR, bạn có quyền truy cập, chỉnh sửa và xóa dữ liệu của mình, cũng như phản đối việc xử lý dữ liệu. Vì đơn vị phát hành không nắm giữ dữ liệu nào về bạn nên thường không có gì để truy cập, nhưng bạn có thể đặt câu hỏi tại maxence.bonnici@outlook.fr. Bạn cũng có thể khiếu nại với CNIL ([cnil.fr](https://www.cnil.fr)) hoặc cơ quan bảo vệ dữ liệu ở quốc gia của bạn."
+          ]
+        },
+        {
+          "title": "Thay đổi",
+          "body": [
+            "Chính sách này có thể được cập nhật khi ứng dụng phát triển. Ngày cập nhật gần nhất được hiển thị ở đầu trang."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Điều khoản sử dụng",
+      "intro": "Khi dùng LocalCutVideo, bạn chấp nhận các điều khoản này. Chúng ngắn gọn vì dịch vụ đơn giản: một công cụ miễn phí chạy trong trình duyệt của bạn.",
+      "sections": [
+        {
+          "title": "Dịch vụ",
+          "body": [
+            "LocalCutVideo là ứng dụng chỉnh sửa video miễn phí chạy hoàn toàn trong trình duyệt web của bạn. Ứng dụng được cung cấp miễn phí, không cần tài khoản, và có thể thay đổi, gián đoạn hoặc ngừng bất cứ lúc nào mà không báo trước."
+          ]
+        },
+        {
+          "title": "Nội dung của bạn",
+          "body": [
+            "Bạn vẫn là chủ sở hữu duy nhất và người chịu trách nhiệm duy nhất đối với video, âm thanh và nhạc mà bạn chỉnh sửa và đăng tải. Bạn phải có các quyền cần thiết (bản quyền, giấy phép âm nhạc, quyền hình ảnh của những người được quay).",
+            "Không được dùng ứng dụng cho mục đích trái pháp luật."
+          ]
+        },
+        {
+          "title": "Tính năng tự động",
+          "body": [
+            "Chép lời, phụ đề, phát hiện im lặng và tự động căn khung được tạo tự động và có thể có sai sót. Hãy kiểm tra kết quả trước khi đăng."
+          ]
+        },
+        {
+          "title": "Tệp và dự án của bạn",
+          "body": [
+            "Ứng dụng không bao giờ sửa đổi tệp gốc của bạn. Dự án được lưu trong trình duyệt và có thể mất nếu dữ liệu trình duyệt bị xóa hoặc trình duyệt giải phóng dung lượng: hãy luôn giữ tệp gốc."
+          ]
+        },
+        {
+          "title": "Bảo đảm và trách nhiệm",
+          "body": [
+            "Phần mềm được cung cấp “nguyên trạng”, không có bất kỳ bảo đảm nào, theo giấy phép MIT. Trong phạm vi pháp luật cho phép, đơn vị phát hành không chịu trách nhiệm về bất kỳ thiệt hại nào phát sinh từ việc sử dụng hoặc không thể sử dụng ứng dụng (mất dữ liệu, lỗi xuất, gián đoạn dịch vụ…)."
+          ]
+        },
+        {
+          "title": "Mã nguồn mở và thành phần bên thứ ba",
+          "body": [
+            "Mã nguồn có sẵn theo giấy phép MIT trên [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
+            "LocalCutVideo dựa trên: Mediabunny (MPL-2.0), Transformers.js và ONNX Runtime (Apache-2.0 và MIT), các mô hình Whisper của OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) và các phông chữ Inter và Montserrat (SIL Open Font License)."
+          ]
+        },
+        {
+          "title": "Luật áp dụng",
+          "body": [
+            "Các điều khoản này tuân theo luật Pháp. Câu hỏi: maxence.bonnici@outlook.fr."
+          ]
+        }
+      ]
+    }
+  },
+  "thumbnail": {
+    "eyebrow": "Công cụ tạo ảnh thu nhỏ",
+    "title": "Ảnh thu nhỏ khiến người xem muốn nhấp",
+    "lead": "Chọn khoảnh khắc đẹp nhất của video, thêm tiêu đề ấn tượng và tải ảnh sẵn sàng cho YouTube, Shorts hoặc Instagram. Mọi thứ diễn ra trên thiết bị của bạn",
+    "pick": "Thả video hoặc ảnh vào",
+    "pickHint": "MP4, MOV, WebM, JPG, PNG… tệp vẫn ở trên thiết bị của bạn",
+    "choose": "Chọn tệp",
+    "local": "Không tải lên gì cả: ảnh được tạo trong trình duyệt",
+    "permissionTitle": "Cho phép truy cập video của dự án",
+    "permissionText": "Trình duyệt cần bạn xác nhận trước khi đọc lại tệp từ thiết bị",
+    "permission": "Cho phép truy cập",
+    "back": "Quay lại trình chỉnh sửa",
+    "dragHint": "Kéo ảnh để căn lại khung",
+    "frame": "Khung hình video",
+    "prevFrame": "Khung hình trước",
+    "nextFrame": "Khung hình sau",
+    "moments": "Khoảnh khắc đẹp nhất",
+    "other": "Chọn tệp khác",
+    "format": "Định dạng",
+    "formats": {
+      "landscape": "YouTube",
+      "vertical": "Shorts · TikTok",
+      "square": "Instagram"
+    },
+    "text": "Tiêu đề",
+    "textPlaceholder": "Tiêu đề thu hút của bạn",
+    "defaultText": "*Tiêu đề* của bạn ở đây",
+    "accentHint": "Đặt từ giữa hai dấu sao để tô màu: *như thế này*",
+    "size": "Cỡ chữ",
+    "position": "Vị trí",
+    "positions": {
+      "top": "Trên",
+      "center": "Giữa",
+      "bottom": "Dưới"
+    },
+    "alignCenter": "Căn giữa",
+    "alignLeft": "Căn trái",
+    "uppercase": "Chữ in hoa",
+    "tilt": "Chữ nghiêng",
+    "style": "Kiểu tiêu đề",
+    "styles": {
+      "outline": "Viền chữ",
+      "shadow": "Đổ bóng",
+      "box": "Dải nền",
+      "highlight": "Bút dạ quang"
+    },
+    "color": "Màu chữ",
+    "accent": "Màu từ nổi bật",
+    "image": "Hình ảnh",
+    "zoom": "Thu phóng",
+    "brightness": "Độ sáng",
+    "contrast": "Độ tương phản",
+    "saturation": "Độ bão hòa",
+    "shade": "Làm tối viền",
+    "reset": "Đặt lại",
+    "downloadJpg": "Tải JPG",
+    "downloadPng": "Tải PNG",
+    "sizeInfo": "{{ width }} × {{ height }} px · JPG tốt nhất cho YouTube (dưới 2 MB)",
+    "saved": "Đã lưu: {{ name }}",
+    "loadError": "Không mở được dự án này",
+    "readError": "Không đọc được tệp này"
+  },
+  "seo": {
+    "home": {
+      "title": "LocalCutVideo — Trình chỉnh sửa video miễn phí trên trình duyệt, không tải lên",
+      "description": "Chỉnh sửa video ngay trong trình duyệt: tự động cắt im lặng, phụ đề bằng AI, căn khung theo khuôn mặt cho TikTok và Shorts, tạo ảnh thu nhỏ. Miễn phí, mã nguồn mở, video không bao giờ rời khỏi máy tính của bạn"
+    },
+    "thumbnail": {
+      "title": "Công cụ tạo ảnh thu nhỏ YouTube miễn phí — LocalCutVideo",
+      "description": "Tạo ảnh thu nhỏ YouTube, Shorts hoặc Instagram từ video: gợi ý khoảnh khắc đẹp nhất, tiêu đề lớn với chữ có màu, JPG hoặc PNG. Miễn phí, trên trình duyệt, không tải lên"
+    },
+    "changelog": {
+      "title": "Nhật ký thay đổi — LocalCutVideo",
+      "description": "Có gì mới trong LocalCutVideo, theo từng phiên bản"
+    },
+    "legal": {
+      "title": "Thông tin pháp lý — LocalCutVideo",
+      "description": "Đơn vị phát hành và lưu trữ LocalCutVideo"
+    },
+    "privacy": {
+      "title": "Chính sách quyền riêng tư — LocalCutVideo",
+      "description": "LocalCutVideo không tải lên gì cả: video, bản chép lời và dự án của bạn ở lại trên thiết bị"
+    },
+    "terms": {
+      "title": "Điều khoản sử dụng — LocalCutVideo",
+      "description": "Điều khoản sử dụng LocalCutVideo, trình chỉnh sửa video miễn phí và mã nguồn mở"
+    },
+    "app": {
+      "title": "Dự án — LocalCutVideo",
+      "description": "Các dự án video của bạn, lưu trong trình duyệt"
+    },
+    "editor": {
+      "title": "Trình chỉnh sửa — LocalCutVideo",
+      "description": "Trình chỉnh sửa LocalCutVideo"
+    }
+  },
+  "tour": {
+    "label": "Hướng dẫn nhanh",
+    "help": "Hướng dẫn nhanh",
+    "count": "Bước {{ n }} / {{ total }}",
+    "skip": "Bỏ qua hướng dẫn",
+    "prev": "Quay lại",
+    "next": "Tiếp",
+    "done": "Bắt đầu thôi!",
+    "steps": {
+      "auto": {
+        "title": "Một cú nhấp: tự động chỉnh",
+        "text": "LocalCutVideo chỉnh video giúp bạn: bỏ im lặng và tiếng ậm ừ, thêm phụ đề, căn khung và thu phóng. Bạn có thể đổi mọi thứ sau đó"
+      },
+      "preview": {
+        "title": "Xem trước",
+        "text": "Những gì bạn thấy chính là những gì sẽ được xuất. Nhấp vào hoặc nhấn Space để phát hay tạm dừng"
+      },
+      "timeline": {
+        "title": "Dòng thời gian",
+        "text": "Nhấp để di chuyển trong video. Kéo trên dạng sóng để chọn một đoạn"
+      },
+      "cut": {
+        "title": "Cắt hoặc đổi tốc độ",
+        "text": "Khi đã chọn một đoạn, Cắt (X) sẽ xóa nó còn Tốc độ phát nhanh hơn hoặc chậm hơn. Ctrl+Z hoàn tác mọi thứ"
+      },
+      "transcript": {
+        "title": "Chỉnh sửa bằng văn bản",
+        "text": "Sau khi chép lời, xóa một từ sẽ cắt video. Bạn cũng có thể sửa chỗ AI nghe nhầm"
+      },
+      "settings": {
+        "title": "Mọi cài đặt",
+        "text": "Định dạng (16:9, 9:16, vuông), điểm cắt và chuyển cảnh, phụ đề, chữ, căn khung và làm mờ, âm thanh và nhạc"
+      },
+      "thumbnail": {
+        "title": "Ảnh thu nhỏ",
+        "text": "Tạo ảnh thu nhỏ cho video từ những khoảnh khắc đẹp nhất"
+      },
+      "export": {
+        "title": "Xuất",
+        "text": "Lưu video thành MP4. Mọi thứ diễn ra trên thiết bị của bạn, không tải lên gì cả"
+      }
+    }
+  }
+}

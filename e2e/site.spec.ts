@@ -1,4 +1,5 @@
 import { test } from '@playwright/test';
+import { LANGUAGES } from '../src/app/core/languages';
 import { expect, watchErrors } from './helpers';
 
 test.describe('public site', () => {
@@ -38,7 +39,7 @@ test.describe('public site', () => {
   });
 
   test('keeps the header on one line in every language, install button included', async ({ page }) => {
-    for (const lang of ['en', 'fr', 'es', 'it', 'de']) {
+    for (const { code: lang } of LANGUAGES) {
       await page.goto(lang === 'en' ? '/' : `/${lang}`);
       await page.evaluate(() => {
         const e = Object.assign(new Event('beforeinstallprompt'), { prompt: () => undefined, userChoice: Promise.resolve({ outcome: 'dismissed' }) });
@@ -66,7 +67,7 @@ test.describe('public site', () => {
   test('serves robots.txt and a sitemap of every page in every language', async ({ request }) => {
     expect(await (await request.get('/robots.txt')).text()).toContain('Disallow: /app');
     const sitemap = await (await request.get('/sitemap.xml')).text();
-    expect(sitemap.match(/<loc>/g)).toHaveLength(30);
+    expect(sitemap.match(/<loc>/g)).toHaveLength(LANGUAGES.length * 6);
     expect(sitemap).toContain('<loc>https://localcutvideo.mbonnici.fr/it/terms</loc>');
   });
 

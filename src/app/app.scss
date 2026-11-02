@@ -79,7 +79,7 @@ main {
 }
 
 .tools {
-  margin-left: auto;
+  margin-inline-start: auto;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -304,7 +304,7 @@ main {
 
 .update-toast {
   position: fixed;
-  right: 20px;
+  inset-inline-end: 20px;
   bottom: 20px;
   z-index: 100;
   display: flex;

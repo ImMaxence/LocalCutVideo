@@ -1,22 +1,22 @@
 // Writes public/sitemap.xml: every public page in every language, with its alternates.
-// Run with `npm run sitemap` when a public page is added.
+// Run with `npm run sitemap` when a public page or a language is added.
 import { writeFileSync } from 'node:fs';
+import { LANGUAGES } from '../src/app/core/languages.ts';
 
 const SITE = 'https://localcutvideo.mbonnici.fr';
-const LANGS = ['en', 'fr', 'es', 'it', 'de'];
 const PAGES = ['/', '/thumbnail', '/changelog', '/legal', '/privacy', '/terms'];
 const url = (page, lang) => `${SITE}${lang === 'en' ? page : `/${lang}${page === '/' ? '' : page}`}`;
 const today = new Date().toISOString().slice(0, 10);
 
-const entries = PAGES.flatMap((page) =>
-  LANGS.map((lang) => {
-    const alternates = [...LANGS.map((l) => [l, url(page, l)]), ['x-default', url(page, 'en')]]
-      .map(([l, href]) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${href}"/>`)
-      .join('\n');
-    const priority = page === '/' ? '1.0' : page === '/thumbnail' ? '0.8' : '0.4';
-    return `  <url>\n    <loc>${url(page, lang)}</loc>\n    <lastmod>${today}</lastmod>\n    <priority>${priority}</priority>\n${alternates}\n  </url>`;
-  }),
-);
+const entries = PAGES.flatMap((page) => {
+  const alternates = [...LANGUAGES.flatMap((l) => l.hreflang.map((h) => [h, url(page, l.code)])), ['x-default', url(page, 'en')]]
+    .map(([l, href]) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${href}"/>`)
+    .join('\n');
+  const priority = page === '/' ? '1.0' : page === '/thumbnail' ? '0.8' : '0.4';
+  return LANGUAGES.map(
+    ({ code }) => `  <url>\n    <loc>${url(page, code)}</loc>\n    <lastmod>${today}</lastmod>\n    <priority>${priority}</priority>\n${alternates}\n  </url>`,
+  );
+});
 
 writeFileSync(
   new URL('../public/sitemap.xml', import.meta.url),

@@ -10,7 +10,7 @@
   @if (selected(); as cut) {
     <div class="cut-edit" role="group" [attr.aria-label]="'editor.timeline.selectedCut' | transloco" animate.enter="pop-in">
       @for (edge of edges; track edge.id) {
-        <span class="edge">
+        <span class="edge" dir="ltr">
           <span class="edge-label">{{ edge.label | transloco }}</span>
           <button class="btn ghost icon sm" type="button" (click)="nudge(edge.id, -1)" [title]="('editor.timeline.earlier' | transloco) + ' (−' + nudgeStep + ' s)'" [attr.aria-label]="(edge.label | transloco) + ' · ' + ('editor.timeline.earlier' | transloco)">
             <app-icon name="chevron-left" [size]="15" />
@@ -35,12 +35,12 @@
   } @else if (selectedSpeed(); as speed) {
     <div class="cut-edit speed-edit" role="group" [attr.aria-label]="'editor.timeline.selectedSpeed' | transloco" animate.enter="pop-in">
       <span class="edge-label"><app-icon name="gauge" [size]="14" /> {{ 'editor.timeline.speed' | transloco }}</span>
-      <span class="rates">
+      <span class="rates" dir="ltr">
         @for (r of rates; track r) {
           <button class="rate" type="button" [class.active]="speed.rate === r" (click)="store.setSpeedRate(speed.id, r)">{{ r }}×</button>
         }
       </span>
-      <span class="faint length">{{ formatTime(speed.end - speed.start, true) }} → {{ formatTime((speed.end - speed.start) / speed.rate, true) }}</span>
+      <span class="faint length" dir="ltr">{{ formatTime(speed.end - speed.start, true) }} → {{ formatTime((speed.end - speed.start) / speed.rate, true) }}</span>
       <button class="btn ghost icon sm" type="button" (click)="store.playAround(speed.start)" [title]="'editor.timeline.listenSpeed' | transloco" [attr.aria-label]="'editor.timeline.listenSpeed' | transloco">
         <app-icon name="play" [size]="14" />
       </button>
@@ -85,7 +85,8 @@
     </div>
   </div>
 </div>
-<div class="wave-wrap" (wheel)="onWheel($event)">
+<!-- Time runs left to right, in right-to-left languages too. -->
+<div class="wave-wrap" dir="ltr" (wheel)="onWheel($event)">
   <div #wave class="wave"></div>
   @if (!ready()) {
     <div class="loading">

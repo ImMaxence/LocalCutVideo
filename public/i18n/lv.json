@@ -1,0 +1,895 @@
+{
+  "common": {
+    "videoFiles": "Video faili",
+    "audioFiles": "Audio faili",
+    "cancel": "Atcelt",
+    "close": "Aizvērt",
+    "retry": "Mēģināt vēlreiz",
+    "none": "Nav",
+    "remove": "Noņemt"
+  },
+  "nav": {
+    "features": "Funkcijas",
+    "privacy": "Privātums",
+    "faq": "BUJ",
+    "changelog": "Izmaiņu žurnāls",
+    "language": "Valoda",
+    "searchLanguage": "Meklēt valodu",
+    "noLanguage": "Valoda netika atrasta",
+    "install": "Instalēt lietotni",
+    "open": "Atvērt redaktoru",
+    "menu": "Atvērt izvēlni",
+    "close": "Aizvērt izvēlni",
+    "thumbnail": "Sīktēli"
+  },
+  "theme": {
+    "system": "Sistēmas",
+    "light": "Gaišs",
+    "dark": "Tumšs",
+    "label": "Motīvs"
+  },
+  "footer": {
+    "tagline": "Bezmaksas atvērtā koda video redaktors, kas darbojas pilnībā tavā pārlūkā. Tavi faili nekad neatstāj tavu datoru",
+    "issues": "Ziņot par problēmu",
+    "noTracking": "Bez sīkdatnēm, bez izsekošanas",
+    "product": "Produkts",
+    "legal": "Juridiskā informācija"
+  },
+  "pwa": {
+    "update": "Pieejama jauna versija",
+    "reload": "Pārlādēt"
+  },
+  "landing": {
+    "hero": {
+      "badgeLocal": "100% lokāli, nekas netiek augšupielādēts",
+      "badgeOpen": "Bezmaksas un atvērtais kods",
+      "title1": "Rediģē savus video",
+      "title2": "Nekas neatstāj tavu datoru",
+      "lead": "LocalCutVideo izgriež klusumus, transkribē ar Whisper, iededzina karaoke subtitrus un pārkadrē 16:9 uz 9:16, pilnībā tavā pārlūkā. Bez augšupielādes, bez konta, bez servera",
+      "cta": "Atvērt redaktoru",
+      "github": "Skatīt GitHub",
+      "hint": "Vislabāk darbojas Chrome vai Edge datorā",
+      "demo": "Izmēģināt ar demo video"
+    },
+    "mock": {
+      "w1": "Tātad šodien",
+      "filler": "ēē,",
+      "w2": "es jums parādīšu",
+      "w3": "kā tas darbojas",
+      "line2": "Viss darbojas tavā datorā, pat mākslīgais intelekts",
+      "line3": "Izdzēs vārdu, un video tiek izgriezts",
+      "cap1": "Tas paliek tavā",
+      "cap2": "datorā"
+    },
+    "stats": {
+      "upload": "baiti augšupielādēti",
+      "local": "apstrādāts tavā ierīcē",
+      "languages": "saskarnes valodas",
+      "gpu": "paātrināts MI un kodēšana"
+    },
+    "how": {
+      "eyebrow": "Kā tas darbojas",
+      "title": "No neapstrādāta materiāla līdz publicēšanai gatavam video trīs soļos",
+      "open": {
+        "title": "Atver video",
+        "text": "Izvēlies failu savā diskā. Tas tiek nolasīts uz vietas: bez kopijas, bez augšupielādes, pat vairāku gigabaitu failiem"
+      },
+      "edit": {
+        "title": "Ļauj redaktoram strādāt",
+        "text": "Klusumi tiek atrasti, runa tiek transkribēta vārdu pa vārdam un sejas tiek izsekotas, viss lokāli. Labo jebko, rediģējot tekstu"
+      },
+      "export": {
+        "title": "Eksportē MP4",
+        "text": "Izvēlies 16:9, 9:16 vai 1:1. Video kodē tava videokarte, un tas tiek ierakstīts tieši tavā diskā"
+      }
+    },
+    "features": {
+      "eyebrow": "Funkcijas",
+      "title": "Viss, kas nepieciešams video, kuros runā kamerā",
+      "lead": "Radīts YouTube, TikTok, Reels un Shorts satura veidotājiem, kuri negrib savu neapstrādāto materiālu nekur augšupielādēt",
+      "silences": {
+        "title": "Automātiska klusumu izgriešana",
+        "text": "Atrod pauzes pēc skaņas skaļuma un izņem tās, ar regulējamu slieksni, minimālo garumu un elpas atstarpi"
+      },
+      "textEdit": {
+        "title": "Rediģēšana ar tekstu",
+        "text": "Whisper katram vārdam piešķir laika zīmogu. Izdzēs vārdus transkripcijā, un atbilstošā video daļa tiek izgriezta"
+      },
+      "captions": {
+        "title": "Karaoke subtitri",
+        "text": "Vārdu pa vārdam animēti subtitri, iededzināti video, karaoke, tīrā vai rāmja stilā, tavā izcēluma krāsā"
+      },
+      "framing": {
+        "title": "Automātiska kadrēšana 16:9 → 9:16",
+        "text": "Seju izsekošana notur runātāju kadrā, kad horizontālu video pārveido par vertikālu"
+      },
+      "zoom": {
+        "title": "Gudrā tālummaiņa",
+        "text": "Mainīga pietuvināšana pie katra griezuma padara lēciena griezumus apzinātus un notur skatītājus"
+      },
+      "ducking": {
+        "title": "Skaņa un mūzika",
+        "text": "Palielini skaļumu, izlīdzini klipus un pievieno fona mūziku, kas pati klusinās, kad kāds runā"
+      },
+      "recovery": {
+        "title": "Atjaunošana pēc avārijas",
+        "text": "Katra izmaiņa tiek saglabāta tavā pārlūkā reāllaikā. Atver cilni no jauna un turpini tieši tur, kur pārtrauci"
+      },
+      "offline": {
+        "title": "Darbojas bezsaistē",
+        "text": "Instalē to kā lietotni. Kad MI modelis ir lejupielādēts, viss redaktors darbojas bez interneta savienojuma"
+      },
+      "export": {
+        "title": "Ātrs aparatūras eksports",
+        "text": "Kodēšanai izmanto WebCodecs, tavā pārlūkā un videokartē iebūvēto video kodētāju, nevis lēnu programmatūras kodēšanu"
+      },
+      "clips": {
+        "title": "Vairāku klipu salikšana",
+        "text": "Iemet vairākus uzņēmumus uzreiz: tie tiek apvienoti vienā video tevis izvēlētajā secībā, ar kopīgu laika joslu un transkripciju"
+      },
+      "inputs": {
+        "title": "MP4, MOV, WebM, MKV",
+        "text": "Atver tava tālruņa un kameras failus, arī iPhone HEVC video, ja tavs pārlūks spēj tos dekodēt"
+      },
+      "languages": {
+        "title": "Daudzvalodu",
+        "text": "Saskarne runā {{ count }} valodās, un Whisper transkribē vēl desmitiem citu, ar automātisku valodas noteikšanu"
+      }
+    },
+    "privacy": {
+      "eyebrow": "Privātums",
+      "title": "Bez augšupielādes, jau pēc būtības",
+      "lead": "Tavs video tiek nolasīts tieši no tava diska. Audio analīze, transkripcija, seju izsekošana un kodēšana notiek fona pavedienos (Web Workers) tavā datorā. Vienkārši nav servera, uz kuru sūtīt tavu materiālu",
+      "upload": "Nekad nekādas augšupielādes: fails nekad neatstāj tavu datoru",
+      "account": "Bez konta, bez sīkdatnēm, bez analītikas",
+      "csp": "Stingra Content-Security-Policy ļauj lapai sazināties tikai ar šo vietni, kas nodrošina arī MI modeļus (Hugging Face ir tikai rezerve)",
+      "storage": "Projekti tiek saglabāti tava pārlūka lokālajā datubāzē (IndexedDB), un tos var izdzēst jebkurā brīdī",
+      "diagram": {
+        "machine": "Tavs dators",
+        "file": "Video fails",
+        "browser": "Tavs pārlūks",
+        "upload": "Augšupielāde serverī",
+        "model": "MI modeļa lejupielāde (vienreiz, kešatmiņā)"
+      }
+    },
+    "support": {
+      "eyebrow": "Saderība",
+      "title": "Pārlūku atbalsts",
+      "ok": "Pilns",
+      "partial": "Daļējs",
+      "full": "Viss, ieskaitot atjaunošanu pēc avārijas un eksporta ierakstīšanu tieši diskā",
+      "firefox": "Rediģēšana un eksports darbojas. Pēc cilnes aizvēršanas tev būs jāizvēlas video vēlreiz",
+      "safari": "Tikai jaunākās versijas. Pēc pārlādēšanas izvēlies video vēlreiz; eksports tiek lejupielādēts",
+      "mobile": "Tālruņi un planšetdatori",
+      "mobileText": "Darbojas īsiem klipiem, bet atmiņas ierobežojumu dēļ gari video nav uzticami"
+    },
+    "faq": {
+      "title": "Biežāk uzdotie jautājumi",
+      "free": {
+        "q": "Vai tas tiešām ir bezmaksas? Kur ir āķis?",
+        "a": "Tas ir bezmaksas un atvērtā koda. Tā kā viss darbs notiek tavā datorā, nav servera izmaksu, ko segt, tāpēc nav nekā, ko tev pārdot, un nav datu, ko vākt"
+      },
+      "formats": {
+        "q": "Kādus video formātus es varu atvērt?",
+        "a": "MP4, MOV, WebM un MKV, ja vien tavs pārlūks spēj dekodēt kodeku (H.264, HEVC, VP9, AV1 atkarībā no pārlūka un sistēmas). Eksports ir MP4 fails"
+      },
+      "browsers": {
+        "q": "Kāpēc Chrome vai Edge?",
+        "a": "Tie atbalsta File System Access API, kas ļauj redaktoram atkal atvērt tavu video pēc pārlādēšanas un ierakstīt eksportu tieši diskā. Citi pārlūki arī darbojas, ar dažiem papildu klikšķiem"
+      },
+      "size": {
+        "q": "Vai ir faila lieluma ierobežojums?",
+        "a": "Augšupielādes ierobežojuma nav, jo nekas netiek augšupielādēts. Video tiek nolasīts no diska mazās daļās; praktiskais ierobežojums ir datora atmiņa un tava pacietība ar ļoti gariem video"
+      },
+      "offline": {
+        "q": "Vai tas darbojas bez interneta?",
+        "a": "Jā, kad tas ir ielādēts. Instalē to kā lietotni (PWA) un transkribē vienreiz, kamēr esi tiešsaistē: Whisper modelis tad paliek kešatmiņā, un viss darbojas bezsaistē"
+      },
+      "ai": {
+        "q": "Kur darbojas MI?",
+        "a": "Tavā pārlūkā. Whisper darbojas ar Transformers.js tavā videokartē (WebGPU) vai procesorā (WebAssembly), bet seju noteikšanai izmanto MediaPipe. Modeļi tiek lejupielādēti vienreiz, tavs audio nekad netiek nosūtīts"
+      }
+    },
+    "final": {
+      "title": "Tavs nākamais video, rediģēts dažās minūtēs",
+      "text": "Bez reģistrācijas, bez augšupielādes, bez ūdenszīmes. Atver failu un sāc rediģēt"
+    },
+    "thumbnail": {
+      "eyebrow": "Jaunums · Sīktēli",
+      "title": "Un tam piemērots sīktēls",
+      "text": "Sīktēlu veidotājs atrod tava video asākos mirkļus. Pievieno lielu virsrakstu ar krāsainiem vārdiem un lejupielādē to pareizajā izmērā",
+      "points": {
+        "moments": "Ieteikti labākie mirkļi",
+        "title": "Virsraksts ar izceltiem vārdiem, 4 stili",
+        "formats": "YouTube 1280×720, Shorts un kvadrāts",
+        "local": "Izveidots tavā ierīcē, nekas netiek augšupielādēts"
+      },
+      "cta": "Izveidot sīktēlu",
+      "mockTitle": "Mans pirmais",
+      "mockAccent": "vlogs"
+    }
+  },
+  "changelog": {
+    "eyebrow": "Versijas",
+    "title": "Izmaiņu žurnāls",
+    "lead": "Visas LocalCutVideo versijas, jaunākā pirmā",
+    "current": "Tu izmanto",
+    "github": "Skatīt GitHub",
+    "releases": "Laidieni GitHub",
+    "latest": "Jaunākā",
+    "error": "Izmaiņu žurnālu neizdevās ielādēt"
+  },
+  "projects": {
+    "title": "Tavi projekti",
+    "lead": "Projekti tiek automātiski saglabāti šajā pārlūkā. Tavi video paliek tur, kur tie ir tavā diskā",
+    "resume": "Turpināt no vietas, kur pārtrauci",
+    "reading": "Nolasa video…",
+    "drop": "Iemet savus video šeit",
+    "or": "vai",
+    "open": "Atvērt video",
+    "private": "Fails tiek nolasīts lokāli, nekas netiek augšupielādēts",
+    "noFsAccess": "Tavs pārlūks nespēj atcerēties failus starp sesijām: pēc cilnes aizvēršanas tev būs jāizvēlas video vēlreiz. Chrome vai Edge to novērš",
+    "recent": "Nesenie projekti",
+    "empty": "Vēl nav neviena projekta. Atver video, lai sāktu",
+    "delete": "Dzēst projektu",
+    "confirmDelete": "Dzēst projektu “{{ name }}”? Video fails tavā diskā netiek ietekmēts",
+    "multi": "Vairāki faili? Tie tiek salikti vienā video nosaukumu secībā",
+    "importFile": "Atvērt projekta failu (.lcv.json)",
+    "saveFile": "Saglabāt projektu kā failu",
+    "imported": "Projekts atvērts: izvēlies tā video, lai turpinātu"
+  },
+  "errors": {
+    "notVideo": "Šis fails neizskatās pēc video",
+    "codec": "Tavs pārlūks nespēj dekodēt šī video kodeku (HEVC/H.265 nepieciešams Chrome vai HEVC paplašinājums Edge). Mēģini to pārveidot uz H.264 MP4",
+    "noVideo": "Šajā failā netika atrasts video celiņš",
+    "generic": "Nolasot šo failu, radās kļūda",
+    "transcribe": "Transkripcija neizdevās. Izmēģini mazāku modeli vai pārbaudi savienojumu pirmajai lejupielādei",
+    "export": "Eksports neizdevās",
+    "faces": "Seju izsekošana šim video neizdevās",
+    "skipped": "Izlaisti (neizdevās nolasīt): {{ names }}",
+    "skippedCodec": "Izlaisti, šis pārlūks neatbalsta kodeku: {{ names }}. Izmēģini Chrome vai pārveido uz H.264 MP4",
+    "notProject": "Šis fails nav LocalCutVideo projekts",
+    "demo": "Demo video neizdevās ielādēt"
+  },
+  "languages": {
+    "en": "Angļu",
+    "fr": "Franču",
+    "es": "Spāņu",
+    "it": "Itāļu",
+    "de": "Vācu",
+    "pt": "Portugāļu",
+    "nl": "Nīderlandiešu"
+  },
+  "editor": {
+    "back": "Atpakaļ uz projektiem",
+    "name": "Projekta nosaukums",
+    "undo": "Atsaukt",
+    "redo": "Atcelt atsaukšanu",
+    "missing": "Šis projekts vairs nepastāv",
+    "save": {
+      "saving": "Saglabā…",
+      "saved": "Saglabāts lokāli",
+      "error": "Nav saglabāts"
+    },
+    "reconnect": {
+      "loading": "Atver video…",
+      "title": "Atkal pievieno savus video",
+      "allow": "Atļaut piekļuvi visiem",
+      "select": "Izvēlēties",
+      "mismatch": "Šis neizskatās pēc oriģinālā faila (“{{ name }}”). Tomēr izmantot?",
+      "intro": "Projekts ir drošībā. Tava privātuma labad pārlūks vēlreiz jautā, pirms redaktors var nolasīt tavus failus",
+      "allowOne": "Atļaut",
+      "privacy": "Tavi video tiek nolasīti tur, kur tie ir diskā, tie nekad netiek kopēti vai augšupielādēti",
+      "status": {
+        "ready": "Pievienots",
+        "permission": "Gaida tavu atļauju",
+        "moved": "Nav atrasts: pārvietots vai pārdēvēts?",
+        "missing": "Izvēlies to vēlreiz (tavs pārlūks nesaglabā piekļuvi failiem)",
+        "loading": "Atver…"
+      }
+    },
+    "preview": {
+      "cut": "Griezums",
+      "back": "Atpakaļ 5 s",
+      "play": "Atskaņot",
+      "pause": "Pauze",
+      "savedHint": "Ar griezumiem noņemtais laiks",
+      "badge": "Viegls priekšskatījums · {{ q }}p",
+      "quality": "Priekšskatījuma kvalitāte",
+      "qualityHint": "Vieglāks priekšskatījums uztur redaktoru plūstošu. Eksports vienmēr izmanto pilnu kvalitāti"
+    },
+    "timeline": {
+      "title": "Laika josla",
+      "silence": "Klusums",
+      "manual": "Manuāli",
+      "text": "Teksts",
+      "hint": "Velc pa viļņu formu, lai atlasītu daļu, tad Izgriezt vai Ātrums · noklikšķini uz griezuma, lai pielāgotu malas · dubultklikšķis, lai noņemtu",
+      "removeCut": "Noņemt griezumu",
+      "zoom": "Laika joslas tālummaiņa",
+      "analyzing": "Analizē audio…",
+      "zoomIn": "Tuvināt",
+      "zoomOut": "Tālināt",
+      "fit": "Ietilpināt",
+      "fitHint": "Rādīt visu video (padoms: Ctrl + ritenītis tālummaiņai)",
+      "manualCut": "Griezt ar roku",
+      "markIn": "Sākums",
+      "markOut": "Beigas",
+      "markInHint": "Izgriežamās daļas sākums atskaņošanas galviņas vietā (I)",
+      "markOutHint": "Izgriežamās daļas beigas atskaņošanas galviņas vietā (O)",
+      "cutMarked": "Izgriezt",
+      "cutHint": "Noņemt daļu starp sākumu un beigām (X)",
+      "clearMarks": "Notīrīt sākumu un beigas",
+      "marksMissing": "Vispirms iestati sākumu (I) un beigas (O)",
+      "analysisError": "Audio neizdevās analizēt",
+      "selectedCut": "Atlasītais griezums",
+      "earlier": "Agrāk",
+      "later": "Vēlāk",
+      "listen": "Noklausīties griezumu",
+      "speed": "Ātrums",
+      "speedHint": "Paātrināt vai palēnināt daļu starp sākumu un beigām",
+      "selectedSpeed": "Ātruma maiņa",
+      "removeSpeed": "Atpakaļ uz parasto ātrumu",
+      "listenSpeed": "Atskaņot ātruma maiņu",
+      "selectFirst": "Vispirms atlasi daļu: velc pa viļņu formu vai iestati Sākumu un Beigas"
+    },
+    "transcript": {
+      "title": "Transkripcija",
+      "words": "{{ count }} vārdi",
+      "fillers": "Noņemt pildvārdus ({{ count }})",
+      "restore": "Atjaunot visu",
+      "selected": "Atlasīti: {{ count }}",
+      "cut": "Izgriezt / atjaunot",
+      "tip": "Noklikšķini uz vārda, lai pārietu uz to. Velc vai Shift + klikšķis, lai atlasītu, tad Delete, lai izgrieztu, vai Labot (Enter), lai izlabotu to, ko Whisper sadzirdēja nepareizi",
+      "emptyTitle": "Transkripcijas vēl nav",
+      "emptyText": "Transkribē video, lai to rediģētu ar tekstu un iegūtu subtitrus vārdu pa vārdam",
+      "correct": "Labot",
+      "correctTitle": "Kas patiesībā tika teikts?",
+      "correctHint": "Ieraksti vārdu vai visu teikumu no jauna. Laiki un subtitri pielāgojas automātiski",
+      "apply": "Lietot"
+    },
+    "transcribe": {
+      "title": "Transkripcija (Whisper)",
+      "hint": "Darbojas tavā ierīcē. Modelis tiek lejupielādēts vienreiz un pēc tam glabāts kešatmiņā",
+      "model": "Modelis",
+      "models": {
+        "tiny": "Ātrs",
+        "base": "Līdzsvarots",
+        "small": "Precīzs"
+      },
+      "download": "Vienreizēja lejupielāde {{ size }}",
+      "language": "Runātā valoda",
+      "auto": "Noteikt automātiski",
+      "run": "Transkribēt",
+      "rerun": "Transkribēt visu vēlreiz",
+      "done": "Transkribēti vārdi: {{ count }}",
+      "empty": "Šajā video netika atrasta runa",
+      "stage": {
+        "audio": "Izvelk audio…",
+        "download": "Lejupielādē modeli…",
+        "transcribe": "Transkribē…"
+      },
+      "missing": "Transkribēt jaunos klipus ({{ count }})",
+      "rerunHint": "Sāk no jauna ar iepriekš norādīto modeli un valodu",
+      "confirmAll": "Transkribēt visu vēlreiz? Tevis izgrieztie vai labotie vārdi tiks zaudēti",
+      "detected": "Noteiktā valoda: {{ language }}"
+    },
+    "tabs": {
+      "format": "Formāts",
+      "cuts": "Griezumi",
+      "captions": "Subtitri",
+      "framing": "Kadrēšana",
+      "audio": "Skaņa",
+      "clips": "Klipi",
+      "texts": "Teksti"
+    },
+    "format": {
+      "title": "Izvades formāts",
+      "hint": "Video tiek apgriezts, lai ietilptu. Izmanto Kadrēšanu, lai sekotu runātājam",
+      "landscape": "YouTube",
+      "vertical": "TikTok · Reels",
+      "square": "Plūsma",
+      "source": "Avots:",
+      "resolution": "Izšķirtspēja",
+      "fps": "Kadri sekundē",
+      "exportNote": "Izšķirtspēju un kadru ātrumu izvēlas eksportējot",
+      "rotation": "Pagriešana",
+      "rotateLeft": "Pagriezt pa kreisi",
+      "rotateRight": "Pagriezt pa labi",
+      "rotationHint": "Video, kas filmēts sāniski. Attiecas uz visiem klipiem",
+      "rotatedFaces": "Video pagriezts: Kadrēšanā vēlreiz ieslēdz “Sekot sejai”"
+    },
+    "cuts": {
+      "title": "Klusuma noteikšana",
+      "hint": "Noņem pauzes. Samazini slieksni, ja tiek nogriezti vārdi",
+      "threshold": "Slieksnis",
+      "suggested": "Ieteicams šim ierakstam: {{ value }} dB",
+      "minSilence": "Minimālais klusums",
+      "padding": "Elpas atstarpe",
+      "detect": "Atrast un izgriezt klusumus",
+      "detected": "Izgriezti klusumi: {{ count }}",
+      "count": "griezumi",
+      "removed": "noņemts",
+      "final": "galīgais garums",
+      "clear": "Noņemt visus griezumus",
+      "mode": "Meklēt pauzes pēc",
+      "modes": {
+        "audio": "Skaļuma",
+        "transcript": "Transkripcijas"
+      },
+      "modeHint": "Transkripcijas režīms ir precīzs pat ar fona troksni vai mūziku",
+      "modeNeedsTranscript": "Transkribē video, lai atrastu pauzes pēc vārdiem: precīzāk trokšņainās vietās",
+      "preset": "Ritms",
+      "presets": {
+        "gentle": "Dabisks",
+        "normal": "Līdzsvarots",
+        "tight": "Dinamisks"
+      },
+      "live": "Griezumi atjaunojas uzreiz, kad maini iestatījumus",
+      "silentClips": "Klipi bez balss: {{ count }}. Tajos tiek izgriezts tikai īsts tukšs laiks"
+    },
+    "captions": {
+      "title": "Iededzināti subtitri",
+      "style": "Stils",
+      "styles": {
+        "karaoke": "Karaoke",
+        "clean": "Tīrs",
+        "boxed": "Rāmī"
+      },
+      "position": "Novietojums",
+      "positions": {
+        "top": "Augšā",
+        "center": "Vidū",
+        "bottom": "Apakšā"
+      },
+      "size": "Izmērs",
+      "words": "Vārdi vienā subtitrā",
+      "uppercase": "Lielie burti",
+      "highlight": "Izcēluma krāsa"
+    },
+    "framing": {
+      "title": "Automātiska kadrēšana",
+      "hint": "Izseko sejas, lai runātājs paliktu kadrā, ideāli 16:9 → 9:16",
+      "center": "Centrēts",
+      "face": "Sekot sejai",
+      "analyzing": "Izseko sejas…",
+      "analyze": "Izsekot sejas",
+      "reanalyze": "Izsekot sejas vēlreiz",
+      "tracked": "Izsekotas pozīcijas: {{ count }}",
+      "found": "Seja izsekota: kadrējums seko runātājam",
+      "notFound": "Šajā video seja netika konsekventi atrasta",
+      "punch": "Gudrā tālummaiņa",
+      "punchHint": "Mijas viegla pietuvināšana pie katra griezuma vai katra teikuma, ja griezumu nav, lai video paliktu dinamisks",
+      "zoom": "Tālummaiņas stiprums",
+      "firstTime": "Izvēloties “Sekot sejai”, video tiek analizēts vienreiz, lokāli",
+      "beatsCuts": "Tālummaiņa mainās {{ count }} reizes, pie taviem griezumiem",
+      "beatsAuto": "Griezumu vēl nav: tālummaiņa mainās {{ count }} reizes, pie teikumiem vai ik pēc 4 s"
+    },
+    "audio": {
+      "title": "Fona mūzika",
+      "hint": "Mūzika tiek automātiski klusināta, kamēr kāds runā (auto-ducking)",
+      "reconnect": "Atkal pievienot “{{ name }}”",
+      "pick": "Izvēlēties mūzikas failu",
+      "enabled": "Iekļaut video",
+      "volume": "Mūzikas skaļums",
+      "ducking": "Klusināšana runas laikā",
+      "duckingHint": "Cik ļoti mūzika tiek klusināta, kad kāds runā"
+    },
+    "export": {
+      "button": "Eksportēt",
+      "title": "Eksportēt video",
+      "running": "Eksportē…",
+      "eta": "Atlicis apmēram {{ time }}",
+      "keepOpen": "Turi šo cilni atvērtu. Kodēšana, kad iespējams, izmanto tavu videokarti",
+      "done": "Eksports pabeigts",
+      "saved": "“{{ name }}” tika saglabāts tavā diskā {{ seconds }} s laikā",
+      "downloaded": "“{{ name }}” tika lejupielādēts {{ seconds }} s laikā",
+      "duration": "Ilgums",
+      "from": "no {{ time }}",
+      "streamHint": "Tu izvēlēsies, kur saglabāt MP4. Tas tiek ierakstīts tieši diskā",
+      "downloadHint": "MP4 tiek salikts lokāli un pēc tam lejupielādēts",
+      "start": "Eksportēt MP4",
+      "saveProject": "Saglabāt projektu",
+      "saveProjectHint": ".lcv.json fails ar tavu montāžu (bez video), lai turpinātu citā datorā",
+      "projectSaved": "Projekts saglabāts kā .lcv.json fails"
+    },
+    "clips": {
+      "title": "Klipi",
+      "hint": "Video tiek atskaņoti viens pēc otra šajā secībā. Velc, lai mainītu secību: griezumi un vārdi seko savam klipam",
+      "jump": "Pāriet uz šo klipu",
+      "up": "Pārvietot augšup",
+      "down": "Pārvietot lejup",
+      "remove": "Noņemt klipu",
+      "add": "Pievienot video",
+      "summary": "Klipi: {{ count }} · kopā {{ time }}",
+      "confirmRemove": "Noņemt “{{ name }}” no projekta? Tā griezumi un vārdi arī tiek noņemti (Ctrl+Z, lai atsauktu)",
+      "added": "Pievienoti klipi: {{ count }}",
+      "addedTranscribe": "Pievienoti klipi: {{ count }}. Transkribē vēlreiz, lai tiem pievienotu subtitrus: jau transkribētie klipi tiek saglabāti",
+      "noVoice": "bez balss",
+      "voiceOn": "Balss · noklikšķini, ja neviens nerunā",
+      "voiceOff": "Bez balss · noklikšķini, ja kāds runā"
+    },
+    "auto": {
+      "button": "Automātiskā montāža",
+      "cta": "Montēt video automātiski",
+      "transcribeOnly": "vai tikai transkribēt",
+      "heading": "Ļauj LocalCutVideo samontēt tavu video",
+      "lead": "Ar vienu klikšķi: noņemti klusumi un vilcināšanās, subtitri, kadrējums uz runātāju un gudrā tālummaiņa. Vēlāk visu var mainīt",
+      "target": "Kur tu to publicēsi?",
+      "options": {
+        "silences": "Izgriezt klusumus",
+        "fillers": "Noņemt vilcināšanos (ēē, mm…)",
+        "captions": "Karaoke subtitri",
+        "framing": "Sekot sejai",
+        "framingNoCrop": "Nav vajadzīgs: šis formāts rāda visu attēlu",
+        "zoom": "Gudrā tālummaiņa"
+      },
+      "local": "Viss notiek tavā ierīcē. Video nekad netiek augšupielādēts",
+      "start": "Sākt automātisko montāžu",
+      "running": "Montē tavu video…",
+      "done": "Tavs video ir samontēts!",
+      "view": "Skatīt rezultātu",
+      "undo": "Atsaukt automātisko montāžu",
+      "undone": "Projekts ir atjaunots tāds, kāds tas bija pirms automātiskās montāžas",
+      "summary": {
+        "cuts": "griezumi",
+        "removed": "noņemts",
+        "words": "vārdi ar subtitriem",
+        "silent": "Klipi bez balss: {{ count }}. Izgriezts tikai īsts tukšs laiks"
+      },
+      "steps": {
+        "analyze": "Audio analīze",
+        "transcribe": "Runas transkribēšana",
+        "fillers": "Vilcināšanās noņemšana",
+        "silences": "Klusumu izgriešana",
+        "framing": "Sekošana sejai",
+        "style": "Subtitri un gudrā tālummaiņa",
+        "voice": "Balsu noteikšana"
+      },
+      "status": {
+        "skipped": "izlaists",
+        "error": "neizdevās"
+      },
+      "voice": {
+        "title": "Vai video kāds runā?",
+        "auto": "Auto",
+        "yes": "Jā",
+        "no": "Nē",
+        "detectedYes": "Noteikts: kāds runā",
+        "detectedNo": "Noteikts: nav balss",
+        "hint": "Nav balss: nav transkripcijas un subtitru, tiek izgriezts tikai īsts tukšs laiks"
+      }
+    },
+    "mix": {
+      "title": "Video skaņa",
+      "hint": "Palielini vai samazini savu klipu skaņu",
+      "volume": "Skaļums",
+      "mute": "Izslēgt skaņu",
+      "unmute": "Ieslēgt skaņu",
+      "volumeHint": "Attiecas uz priekšskatījumu un eksportu",
+      "boostHint": "Virs 100 % ierobežotājs novērš kropļojumus",
+      "normalize": "Izlīdzināt klipus",
+      "normalizeHint": "Visi klipi vienādā skaļumā, filmēti tuvu vai tālu",
+      "denoise": "Samazināt fona troksni",
+      "denoiseHint": "Skaidrāka balss (vējš, šņākoņa, ventilatori). Tiek lietots eksportējot, klipiem ar balsi. Vispirms noklausies",
+      "listen": "Noklausīties 8 s no rezultāta",
+      "stopListening": "Pārtraukt klausīšanos",
+      "preparing": "Sagatavo…"
+    },
+    "thumbnail": "Sīktēls",
+    "transition": {
+      "title": "Pāreja pie griezumiem",
+      "none": "Ass griezums",
+      "dip": "Ātra pārplūde",
+      "black": "Pāreja uz melnu",
+      "hint": "Tiek atskaņota pie katra griezuma un klipa maiņas (un sākumā un beigās pārejai uz melnu). Redzama atskaņošanas laikā"
+    },
+    "texts": {
+      "title": "Teksti virs video",
+      "hint": "Virsraksti un piezīmes, kas tiek rādītas atskaņošanas galviņas vietā. Ieliec vārdus starp zvaigznītēm, lai tos iekrāsotu",
+      "add": "Pievienot tekstu atskaņošanas galviņas vietā",
+      "default": "Tavs *teksts*",
+      "timing": "Rāda",
+      "startHere": "Sākt šeit",
+      "endHere": "Beigt šeit",
+      "remove": "Noņemt šo tekstu"
+    },
+    "background": {
+      "title": "Fons",
+      "hint": "Izpludina fonu aiz cilvēka, kurš paliek ass. Aprēķināts tavā ierīcē",
+      "none": "Ass",
+      "blur": "Izpludināts",
+      "strength": "Izpludinājuma stiprums",
+      "error": "Fona izpludināšanu šajā ierīcē neizdevās palaist"
+    }
+  },
+  "legal": {
+    "updated": "Pēdējo reizi atjaunināts: 2026. gada 1. novembrī",
+    "contact": "Kontakti",
+    "nav": {
+      "notice": "Juridiskā informācija",
+      "privacy": "Privātums",
+      "terms": "Lietošanas noteikumi"
+    },
+    "notice": {
+      "title": "Juridiskā informācija",
+      "intro": "Francijas likumā (LCEN 6. pants, 2004. gada 21. jūnija likums Nr. 2004-575) prasītā informācija par šīs tīmekļa vietnes izdevēju un mitinātāju.",
+      "sections": [
+        {
+          "title": "Izdevējs",
+          "body": [
+            "Tīmekļa vietni localcutvideo.mbonnici.fr (“LocalCutVideo”) bez komerciāla nolūka izdod privātpersona Maxence Bonnici.",
+            "Atbildīgais izdevējs: Maxence Bonnici.",
+            "Kontakti: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Mitināšana",
+          "body": [
+            "Vietni mitina pats tās izdevējs Maxence Bonnici personīgā serverī, un tā tiek izvietota ar platformu Coolify.",
+            "Kontakti: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Intelektuālais īpašums",
+          "body": [
+            "LocalCutVideo pirmkods ir atvērts un publicēts ar MIT licenci vietnē [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
+            "Lietotnē izmantotās trešo pušu komponentes, MI modeļi un fonti joprojām pieder to autoriem un tiek izmantoti saskaņā ar to licencēm, kas uzskaitītas [lietošanas noteikumos](/terms). Minētās preču zīmes (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) pieder to īpašniekiem."
+          ]
+        },
+        {
+          "title": "Atbildība",
+          "body": [
+            "Izdevējs cenšas uzturēt vietni pieejamu un tās informāciju precīzu, bet nevar garantēt ne vienu, ne otru. Lietotnes izmantošanu regulē [lietošanas noteikumi](/terms)."
+          ]
+        },
+        {
+          "title": "Personas dati",
+          "body": [
+            "LocalCutVideo nevāc nekādus personas datus: video tiek apstrādāti tikai tavā ierīcē. Sīkāka informācija ir [privātuma politikā](/privacy)."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privātuma politika",
+      "intro": "LocalCutVideo ir veidots tā, lai tavi video nekad neatstātu tavu ierīci. Šī lapa vienkārši izskaidro, kas tiek apstrādāts un kur.",
+      "sections": [
+        {
+          "title": "Īsumā",
+          "body": [
+            "Bez augšupielādes: tavi video, audio un transkripcijas tiek apstrādāti tavā pārlūkā un nekad netiek nosūtīti izdevējam vai kādam citam.",
+            "Bez konta, bez sīkdatnēm, bez analītikas, bez reklāmām."
+          ]
+        },
+        {
+          "title": "Kas paliek tavā ierīcē",
+          "body": [
+            "Tevis atvērtie video un audio faili tiek nolasīti tieši no tava diska. Analīzi, transkripciju (Whisper), seju izsekošanu un eksportu lokāli aprēķina tavs pārlūks.",
+            "Tavi projekti (griezumi, transkripcija, iestatījumi) tiek saglabāti tava pārlūka lokālajā datubāzē (IndexedDB) kopā ar sīktēlu un analīžu kešatmiņu. Izdevējam tiem nav piekļuves. Projektu vari izdzēst projektu lapā vai izdzēst visu, notīrot šīs vietnes datus pārlūka iestatījumos."
+          ]
+        },
+        {
+          "title": "Lokālā krātuve",
+          "body": [
+            "Lietotne saglabā tavas saskarnes preferences (valoda, motīvs, pēdējais atvērtais projekts) pārlūka lokālajā krātuvē un glabā savus failus un lejupielādētos MI modeļus pārlūka kešatmiņā, lai varētu darboties bezsaistē. Tas ir nepieciešams pakalpojuma darbībai, nekad netiek izmantots tavai izsekošanai, un tāpēc nav vajadzīgs piekrišanas paziņojums."
+          ]
+        },
+        {
+          "title": "Serveris",
+          "body": [
+            "Serveris tikai piegādā lietotnes failus un neglabā piekļuves žurnālus. Kā jebkurš tīmekļa serveris tas tehniski saņem tavu IP adresi, lai atbildētu uz pieprasījumiem, bet to neglabā."
+          ]
+        },
+        {
+          "title": "Trešās puses",
+          "body": [
+            "Hugging Face: Whisper modeli nodrošina šī vietne, tāpat kā pārējo lietotni. Tikai tad, ja tas šeit nav pieejams, tas tiek lejupielādēts no huggingface.co; tad Hugging Face saņem tavu IP adresi un parasto pārlūka informāciju, bet nekad tavu audio. Skati viņu [privātuma politiku](https://huggingface.co/privacy).",
+            "GitHub: tikai tad, ja seko saitei uz pirmkoda repozitoriju.",
+            "Neviena cita trešā puse netiek uzrunāta: stingra Content-Security-Policy tehniski neļauj lapai savienoties nekur citur."
+          ]
+        },
+        {
+          "title": "Tavas tiesības",
+          "body": [
+            "Saskaņā ar VDAR tev ir tiesības piekļūt saviem datiem, tos labot un dzēst, kā arī iebilst pret to apstrādi. Tā kā izdevējam par tevi nav nekādu datu, parasti nav kam piekļūt, bet jebkuru jautājumu vari uzdot, rakstot uz maxence.bonnici@outlook.fr. Tu vari arī iesniegt sūdzību CNIL ([cnil.fr](https://www.cnil.fr)) vai savas valsts datu aizsardzības iestādei."
+          ]
+        },
+        {
+          "title": "Izmaiņas",
+          "body": [
+            "Šī politika var tikt atjaunināta, lietotnei attīstoties. Pēdējās atjaunināšanas datums ir norādīts šīs lapas augšpusē."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Lietošanas noteikumi",
+      "intro": "Izmantojot LocalCutVideo, tu piekrīti šiem noteikumiem. Tie ir īsi, jo pakalpojums ir vienkāršs: bezmaksas rīks, kas darbojas tavā pārlūkā.",
+      "sections": [
+        {
+          "title": "Pakalpojums",
+          "body": [
+            "LocalCutVideo ir bezmaksas video rediģēšanas lietotne, kas darbojas pilnībā tavā tīmekļa pārlūkā. Tā tiek nodrošināta bez maksas, bez konta, un tā var mainīties, tikt pārtraukta vai beigt darboties jebkurā laikā bez brīdinājuma."
+          ]
+        },
+        {
+          "title": "Tavs saturs",
+          "body": [
+            "Tu paliec vienīgais īpašnieks un vienīgais atbildīgais par video, skaņām un mūziku, ko rediģē un publicē. Tev jābūt nepieciešamajām tiesībām (autortiesības, mūzikas licences, filmēto cilvēku tiesības uz savu attēlu).",
+            "Lietotni nedrīkst izmantot nelikumīgiem mērķiem."
+          ]
+        },
+        {
+          "title": "Automātiskās funkcijas",
+          "body": [
+            "Transkripcija, subtitri, klusuma noteikšana un automātiskā kadrēšana tiek veidoti automātiski un var saturēt kļūdas. Pārbaudi rezultātu pirms publicēšanas."
+          ]
+        },
+        {
+          "title": "Tavi faili un projekti",
+          "body": [
+            "Lietotne nekad nemaina tavus oriģinālos failus. Projekti tiek glabāti tavā pārlūkā un var tikt zaudēti, ja tā dati tiek notīrīti vai ja pārlūks atbrīvo vietu: vienmēr saglabā savus oriģinālos failus."
+          ]
+        },
+        {
+          "title": "Garantija un atbildība",
+          "body": [
+            "Programmatūra tiek nodrošināta “tāda, kāda tā ir”, bez jebkādas garantijas, saskaņā ar MIT licenci. Ciktāl to pieļauj likums, izdevējs nevar tikt saukts pie atbildības par zaudējumiem, kas radušies, izmantojot lietotni vai nespējot to izmantot (datu zudums, eksporta kļūdas, nepieejamība…)."
+          ]
+        },
+        {
+          "title": "Atvērtais kods un trešo pušu komponentes",
+          "body": [
+            "Pirmkods ir pieejams ar MIT licenci vietnē [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
+            "LocalCutVideo balstās uz: Mediabunny (MPL-2.0), Transformers.js un ONNX Runtime (Apache-2.0 un MIT), OpenAI Whisper modeļiem (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) un fontiem Inter un Montserrat (SIL Open Font License)."
+          ]
+        },
+        {
+          "title": "Piemērojamie tiesību akti",
+          "body": [
+            "Šiem noteikumiem piemēro Francijas tiesību aktus. Jautājumi: maxence.bonnici@outlook.fr."
+          ]
+        }
+      ]
+    }
+  },
+  "thumbnail": {
+    "eyebrow": "Sīktēlu veidotājs",
+    "title": "Sīktēli, uz kuriem gribas klikšķināt",
+    "lead": "Izvēlies labāko sava video mirkli, pievieno trāpīgu virsrakstu un lejupielādē attēlu, kas gatavs YouTube, Shorts vai Instagram. Viss notiek tavā ierīcē",
+    "pick": "Iemet video vai attēlu",
+    "pickHint": "MP4, MOV, WebM, JPG, PNG… fails paliek tavā ierīcē",
+    "choose": "Izvēlēties failu",
+    "local": "Nekas netiek augšupielādēts: attēls tiek izveidots tavā pārlūkā",
+    "permissionTitle": "Atļaut piekļuvi projekta video",
+    "permissionText": "Tavs pārlūks lūdz apstiprinājumu, pirms atkal nolasīt failu no tavas ierīces",
+    "permission": "Atļaut piekļuvi",
+    "back": "Atpakaļ uz redaktoru",
+    "dragHint": "Velc attēlu, lai to pārkadrētu",
+    "frame": "Video kadrs",
+    "prevFrame": "Iepriekšējais kadrs",
+    "nextFrame": "Nākamais kadrs",
+    "moments": "Labākie mirkļi",
+    "other": "Izvēlēties citu failu",
+    "format": "Formāts",
+    "formats": {
+      "landscape": "YouTube",
+      "vertical": "Shorts · TikTok",
+      "square": "Instagram"
+    },
+    "text": "Virsraksts",
+    "textPlaceholder": "Tavs saistošais virsraksts",
+    "defaultText": "Tavs *virsraksts* šeit",
+    "accentHint": "Ieliec vārdus starp zvaigznītēm, lai tos iekrāsotu: *šādi*",
+    "size": "Teksta izmērs",
+    "position": "Novietojums",
+    "positions": {
+      "top": "Augšā",
+      "center": "Centrā",
+      "bottom": "Apakšā"
+    },
+    "alignCenter": "Centrēts",
+    "alignLeft": "Pa kreisi",
+    "uppercase": "Lielie burti",
+    "tilt": "Slīps teksts",
+    "style": "Virsraksta stils",
+    "styles": {
+      "outline": "Kontūra",
+      "shadow": "Ēna",
+      "box": "Josla",
+      "highlight": "Marķieris"
+    },
+    "color": "Teksta krāsa",
+    "accent": "Izcelto vārdu krāsa",
+    "image": "Attēls",
+    "zoom": "Tālummaiņa",
+    "brightness": "Spilgtums",
+    "contrast": "Kontrasts",
+    "saturation": "Piesātinājums",
+    "shade": "Aptumšot malas",
+    "reset": "Atiestatīt",
+    "downloadJpg": "Lejupielādēt JPG",
+    "downloadPng": "Lejupielādēt PNG",
+    "sizeInfo": "{{ width }} × {{ height }} px · JPG ir vislabākais YouTube (mazāk par 2 MB)",
+    "saved": "Saglabāts: {{ name }}",
+    "loadError": "Šo projektu neizdevās atvērt",
+    "readError": "Šo failu neizdevās nolasīt"
+  },
+  "seo": {
+    "home": {
+      "title": "LocalCutVideo — Bezmaksas video redaktors pārlūkā, nekas netiek augšupielādēts",
+      "description": "Rediģē savus video pārlūkā: klusumi tiek izgriezti automātiski, MI subtitri, sejas kadrēšana TikTok un Shorts, sīktēli. Bezmaksas un atvērtā koda, tavi video nekad neatstāj tavu datoru"
+    },
+    "thumbnail": {
+      "title": "Bezmaksas YouTube sīktēlu veidotājs — LocalCutVideo",
+      "description": "Izveido sīktēlu YouTube, Shorts vai Instagram no sava video: ieteikti labākie mirkļi, liels virsraksts ar krāsainiem vārdiem, JPG vai PNG. Bez maksas, pārlūkā, nekas netiek augšupielādēts"
+    },
+    "changelog": {
+      "title": "Izmaiņu žurnāls — LocalCutVideo",
+      "description": "Kas jauns LocalCutVideo, versiju pa versijai"
+    },
+    "legal": {
+      "title": "Juridiskā informācija — LocalCutVideo",
+      "description": "LocalCutVideo izdevējs un mitināšana"
+    },
+    "privacy": {
+      "title": "Privātuma politika — LocalCutVideo",
+      "description": "LocalCutVideo neko neaugšupielādē: tavi video, transkripcijas un projekti paliek tavā ierīcē"
+    },
+    "terms": {
+      "title": "Lietošanas noteikumi — LocalCutVideo",
+      "description": "Bezmaksas atvērtā koda video redaktora LocalCutVideo lietošanas noteikumi"
+    },
+    "app": {
+      "title": "Projekti — LocalCutVideo",
+      "description": "Tavi video projekti, saglabāti tavā pārlūkā"
+    },
+    "editor": {
+      "title": "Redaktors — LocalCutVideo",
+      "description": "LocalCutVideo redaktors"
+    }
+  },
+  "tour": {
+    "label": "Ievadceļvedis",
+    "help": "Ievadceļvedis",
+    "count": "{{ n }}. solis no {{ total }}",
+    "skip": "Izlaist ceļvedi",
+    "prev": "Atpakaļ",
+    "next": "Tālāk",
+    "done": "Sākam!",
+    "steps": {
+      "auto": {
+        "title": "Viens klikšķis: automātiskā montāža",
+        "text": "LocalCutVideo samontē video tavā vietā: noņemti klusumi un vilcināšanās, subtitri, kadrējums un tālummaiņa. Vēlāk visu var mainīt"
+      },
+      "preview": {
+        "title": "Priekšskatījums",
+        "text": "Tas, ko redzi, ir tieši tas, kas tiks eksportēts. Noklikšķini uz tā vai nospied atstarpi, lai atskaņotu vai apturētu"
+      },
+      "timeline": {
+        "title": "Laika josla",
+        "text": "Noklikšķini, lai pārvietotos pa video. Velc pa viļņu formu, lai atlasītu daļu"
+      },
+      "cut": {
+        "title": "Izgriez vai maini ātrumu",
+        "text": "Kad daļa ir atlasīta, Izgriezt (X) to noņem, bet Ātrums to atskaņo ātrāk vai lēnāk. Ctrl+Z atsauc jebko"
+      },
+      "transcript": {
+        "title": "Rediģēšana ar tekstu",
+        "text": "Pēc transkribēšanas vārda dzēšana izgriež video. Tu vari arī izlabot to, ko MI sadzirdēja nepareizi"
+      },
+      "settings": {
+        "title": "Visi iestatījumi",
+        "text": "Formāts (16:9, 9:16, kvadrāts), griezumi un pārejas, subtitri, teksti, kadrēšana un izpludināšana, skaņa un mūzika"
+      },
+      "thumbnail": {
+        "title": "Sīktēls",
+        "text": "Izveido sava video sīktēlu no tā labākajiem mirkļiem"
+      },
+      "export": {
+        "title": "Eksports",
+        "text": "Saglabā video kā MP4. Viss notiek tavā ierīcē, nekas netiek augšupielādēts"
+      }
+    }
+  }
+}

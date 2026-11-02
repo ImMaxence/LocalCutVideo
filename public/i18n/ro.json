@@ -1,0 +1,895 @@
+{
+  "common": {
+    "videoFiles": "Fișiere video",
+    "audioFiles": "Fișiere audio",
+    "cancel": "Anulează",
+    "close": "Închide",
+    "retry": "Reîncearcă",
+    "none": "Niciunul",
+    "remove": "Elimină"
+  },
+  "nav": {
+    "features": "Funcții",
+    "privacy": "Confidențialitate",
+    "faq": "Întrebări",
+    "changelog": "Noutăți",
+    "language": "Limbă",
+    "searchLanguage": "Caută o limbă",
+    "noLanguage": "Nicio limbă găsită",
+    "install": "Instalează aplicația",
+    "open": "Deschide editorul",
+    "menu": "Deschide meniul",
+    "close": "Închide meniul",
+    "thumbnail": "Miniaturi"
+  },
+  "theme": {
+    "system": "Sistem",
+    "light": "Luminos",
+    "dark": "Întunecat",
+    "label": "Temă"
+  },
+  "footer": {
+    "tagline": "Un editor video gratuit și open source care rulează în întregime în browser. Fișierele tale nu părăsesc niciodată computerul",
+    "issues": "Raportează o problemă",
+    "noTracking": "Fără cookie-uri, fără urmărire",
+    "product": "Produs",
+    "legal": "Informații legale"
+  },
+  "pwa": {
+    "update": "Este disponibilă o versiune nouă",
+    "reload": "Reîncarcă"
+  },
+  "landing": {
+    "hero": {
+      "badgeLocal": "100% local, zero încărcări",
+      "badgeOpen": "Gratuit și open source",
+      "title1": "Editează-ți videoclipurile",
+      "title2": "Nimic nu părăsește computerul tău",
+      "lead": "LocalCutVideo taie pauzele, transcrie cu Whisper, inscripționează subtitrări karaoke și reîncadrează 16:9 în 9:16, totul în browser. Fără încărcare, fără cont, fără server",
+      "cta": "Deschide editorul",
+      "github": "Vezi pe GitHub",
+      "hint": "Funcționează cel mai bine în Chrome sau Edge, pe computer",
+      "demo": "Încearcă cu un videoclip demo"
+    },
+    "mock": {
+      "w1": "Deci azi",
+      "filler": "ăă,",
+      "w2": "o să vă arăt",
+      "w3": "cum funcționează",
+      "line2": "Totul rulează pe propriul tău computer, chiar și IA",
+      "line3": "Șterge un cuvânt și videoclipul e tăiat",
+      "cap1": "Asta rămâne pe",
+      "cap2": "computerul tău"
+    },
+    "stats": {
+      "upload": "octeți încărcați",
+      "local": "procesat pe dispozitivul tău",
+      "languages": "limbi ale interfeței",
+      "gpu": "IA și codare accelerate"
+    },
+    "how": {
+      "eyebrow": "Cum funcționează",
+      "title": "De la filmarea brută la un videoclip gata de postat în trei pași",
+      "open": {
+        "title": "Deschide un videoclip",
+        "text": "Alege un fișier de pe disc. Este citit pe loc: fără copiere, fără încărcare, chiar și pentru fișiere de câțiva gigaocteți"
+      },
+      "edit": {
+        "title": "Lasă editorul să lucreze",
+        "text": "Pauzele sunt detectate, vorbirea e transcrisă cuvânt cu cuvânt, iar fețele sunt urmărite, totul local. Corectează orice editând textul"
+      },
+      "export": {
+        "title": "Exportă MP4-ul",
+        "text": "Alege 16:9, 9:16 sau 1:1. Videoclipul este codat de placa video și scris direct pe disc"
+      }
+    },
+    "features": {
+      "eyebrow": "Funcții",
+      "title": "Tot ce îți trebuie pentru videoclipuri în care vorbești la cameră",
+      "lead": "Creat pentru creatorii de pe YouTube, TikTok, Reels și Shorts care preferă să nu încarce nicăieri filmările brute",
+      "silences": {
+        "title": "Tăierea automată a pauzelor",
+        "text": "Detectează pauzele după volumul sunetului și le elimină, cu prag, durată minimă și marjă de respirație reglabile"
+      },
+      "textEdit": {
+        "title": "Editare prin text",
+        "text": "Whisper dă fiecărui cuvânt un marcaj de timp. Șterge cuvinte din transcriere și porțiunea video corespunzătoare e tăiată"
+      },
+      "captions": {
+        "title": "Subtitrări karaoke",
+        "text": "Subtitrări animate cuvânt cu cuvânt, inscripționate în videoclip, în stil karaoke, simplu sau în casetă, cu culoarea ta de evidențiere"
+      },
+      "framing": {
+        "title": "Încadrare automată 16:9 → 9:16",
+        "text": "Urmărirea feței ține vorbitorul în cadru când transformi un videoclip orizontal într-unul vertical"
+      },
+      "zoom": {
+        "title": "Zoom inteligent",
+        "text": "Zoom-urile alternante la fiecare tăietură fac ca jump cut-urile să pară intenționate și țin spectatorii atenți"
+      },
+      "ducking": {
+        "title": "Sunet și muzică",
+        "text": "Dă volumul mai tare, egalizează clipurile și adaugă muzică de fundal care se dă singură mai încet când vorbește cineva"
+      },
+      "recovery": {
+        "title": "Recuperare după blocare",
+        "text": "Fiecare modificare e salvată în browser în timp real. Redeschide fila și continuă exact de unde ai rămas"
+      },
+      "offline": {
+        "title": "Funcționează offline",
+        "text": "Instalează-l ca aplicație. Odată descărcat modelul IA, întregul editor funcționează fără conexiune la internet"
+      },
+      "export": {
+        "title": "Export hardware rapid",
+        "text": "Codarea folosește WebCodecs, encoderul video integrat în browser și în placa video, în locul unei codări software lente"
+      },
+      "clips": {
+        "title": "Asamblare din mai multe clipuri",
+        "text": "Trage mai multe duble deodată: sunt unite într-un singur videoclip, în ordinea aleasă, cu o cronologie și o transcriere comune"
+      },
+      "inputs": {
+        "title": "MP4, MOV, WebM, MKV",
+        "text": "Deschide fișierele de pe telefon și cameră, inclusiv filmările HEVC de pe iPhone, când browserul le poate decoda"
+      },
+      "languages": {
+        "title": "Multilingv",
+        "text": "Interfața vorbește {{ count }} de limbi, iar Whisper transcrie alte zeci, cu detectarea automată a limbii"
+      }
+    },
+    "privacy": {
+      "eyebrow": "Confidențialitate",
+      "title": "Zero încărcări, din principiu",
+      "lead": "Videoclipul tău e citit direct de pe disc. Analiza audio, transcrierea, urmărirea feței și codarea rulează în fire de fundal (Web Workers) pe computerul tău. Pur și simplu nu există niciun server către care să fie trimisă filmarea ta",
+      "upload": "Nicio încărcare, niciodată: fișierul nu părăsește computerul",
+      "account": "Fără cont, fără cookie-uri, fără statistici",
+      "csp": "O Content-Security-Policy strictă permite paginii să comunice doar cu acest site, care furnizează și modelele IA (Hugging Face e doar o rezervă)",
+      "storage": "Proiectele sunt salvate în baza de date locală a browserului (IndexedDB) și pot fi șterse oricând",
+      "diagram": {
+        "machine": "Computerul tău",
+        "file": "Fișier video",
+        "browser": "Browserul tău",
+        "upload": "Încărcare pe un server",
+        "model": "Descărcarea modelului IA (o dată, în cache)"
+      }
+    },
+    "support": {
+      "eyebrow": "Compatibilitate",
+      "title": "Browsere compatibile",
+      "ok": "Complet",
+      "partial": "Parțial",
+      "full": "Totul, inclusiv recuperarea după blocare și scrierea exportului direct pe disc",
+      "firefox": "Editarea și exportul funcționează. După închiderea filei, va trebui să selectezi din nou videoclipul",
+      "safari": "Doar versiunile recente. Selectează din nou videoclipul după reîncărcare; exportul se descarcă",
+      "mobile": "Telefoane și tablete",
+      "mobileText": "Funcționează pentru clipuri scurte, dar limitele de memorie fac videoclipurile lungi nesigure"
+    },
+    "faq": {
+      "title": "Întrebări frecvente",
+      "free": {
+        "q": "Chiar e gratuit? Unde e șmecheria?",
+        "a": "Este gratuit și open source. Pentru că toată munca se face pe computerul tău, nu există costuri de server de plătit, deci nu e nimic de vândut și nicio dată de colectat"
+      },
+      "formats": {
+        "q": "Ce formate video pot deschide?",
+        "a": "MP4, MOV, WebM și MKV, cu condiția ca browserul să poată decoda codecul (H.264, HEVC, VP9, AV1, în funcție de browser și de sistem). Exportul este un fișier MP4"
+      },
+      "browsers": {
+        "q": "De ce Chrome sau Edge?",
+        "a": "Acestea acceptă File System Access API, care permite editorului să redeschidă videoclipul după reîncărcare și să scrie exportul direct pe disc. Celelalte browsere funcționează și ele, cu câteva clicuri în plus"
+      },
+      "size": {
+        "q": "Există o limită de mărime a fișierului?",
+        "a": "Nu există limită de încărcare, fiindcă nu se încarcă nimic. Videoclipul e citit de pe disc în bucăți mici; limita practică este memoria computerului și răbdarea ta cu videoclipurile foarte lungi"
+      },
+      "offline": {
+        "q": "Funcționează fără internet?",
+        "a": "Da, odată încărcat. Instalează-l ca aplicație (PWA) și fă o transcriere cât ești online: modelul Whisper rămâne apoi în cache și totul funcționează offline"
+      },
+      "ai": {
+        "q": "Unde rulează IA?",
+        "a": "În browserul tău. Whisper rulează cu Transformers.js pe placa video (WebGPU) sau pe procesor (WebAssembly), iar detectarea fețelor folosește MediaPipe. Modelele se descarcă o singură dată, sunetul tău nu e trimis niciodată"
+      }
+    },
+    "final": {
+      "title": "Următorul tău videoclip, editat în câteva minute",
+      "text": "Fără înregistrare, fără încărcare, fără filigran. Deschide un fișier și începe editarea"
+    },
+    "thumbnail": {
+      "eyebrow": "Nou · Miniaturi",
+      "title": "Și miniatura potrivită",
+      "text": "Generatorul de miniaturi găsește cele mai clare momente din videoclip. Adaugă un titlu mare cu cuvinte colorate și descarc-o la mărimea potrivită",
+      "points": {
+        "moments": "Cele mai bune momente sugerate",
+        "title": "Titlu cu cuvinte evidențiate, 4 stiluri",
+        "formats": "YouTube 1280×720, Shorts și pătrat",
+        "local": "Creată pe dispozitivul tău, nimic nu se încarcă"
+      },
+      "cta": "Creează o miniatură",
+      "mockTitle": "Primul meu",
+      "mockAccent": "vlog"
+    }
+  },
+  "changelog": {
+    "eyebrow": "Versiuni",
+    "title": "Noutăți",
+    "lead": "Toate versiunile LocalCutVideo, cea mai nouă prima",
+    "current": "Folosești versiunea",
+    "github": "Vezi pe GitHub",
+    "releases": "Versiuni pe GitHub",
+    "latest": "Cea mai nouă",
+    "error": "Noutățile nu au putut fi încărcate"
+  },
+  "projects": {
+    "title": "Proiectele tale",
+    "lead": "Proiectele sunt salvate automat în acest browser. Videoclipurile rămân unde sunt pe disc",
+    "resume": "Continuă de unde ai rămas",
+    "reading": "Se citește videoclipul…",
+    "drop": "Trage videoclipurile aici",
+    "or": "sau",
+    "open": "Deschide videoclipuri",
+    "private": "Fișierul e citit local, nimic nu se încarcă",
+    "noFsAccess": "Browserul tău nu poate reține fișierele între sesiuni: după închiderea filei, va trebui să selectezi din nou videoclipul. Chrome sau Edge evită asta",
+    "recent": "Proiecte recente",
+    "empty": "Niciun proiect încă. Deschide un videoclip pentru a începe",
+    "delete": "Șterge proiectul",
+    "confirmDelete": "Ștergi proiectul „{{ name }}”? Fișierul video de pe disc nu este afectat",
+    "multi": "Mai multe fișiere? Sunt asamblate într-un singur videoclip, în ordinea numelor",
+    "importFile": "Deschide un fișier de proiect (.lcv.json)",
+    "saveFile": "Salvează proiectul ca fișier",
+    "imported": "Proiect deschis: selectează videoclipurile lui pentru a continua"
+  },
+  "errors": {
+    "notVideo": "Acest fișier nu pare a fi un videoclip",
+    "codec": "Browserul nu poate decoda codecul acestui videoclip (HEVC/H.265 necesită Chrome sau extensia HEVC în Edge). Încearcă să-l convertești în MP4 H.264",
+    "noVideo": "Nu s-a găsit nicio pistă video în acest fișier",
+    "generic": "A apărut o eroare la citirea acestui fișier",
+    "transcribe": "Transcrierea a eșuat. Încearcă un model mai mic sau verifică-ți conexiunea pentru prima descărcare",
+    "export": "Exportul a eșuat",
+    "faces": "Urmărirea feței a eșuat pentru acest videoclip",
+    "skipped": "Omise (nu au putut fi citite): {{ names }}",
+    "skippedCodec": "Omise, codec neacceptat de acest browser: {{ names }}. Încearcă Chrome sau convertește în MP4 H.264",
+    "notProject": "Acest fișier nu este un proiect LocalCutVideo",
+    "demo": "Videoclipul demo nu a putut fi încărcat"
+  },
+  "languages": {
+    "en": "Engleză",
+    "fr": "Franceză",
+    "es": "Spaniolă",
+    "it": "Italiană",
+    "de": "Germană",
+    "pt": "Portugheză",
+    "nl": "Neerlandeză"
+  },
+  "editor": {
+    "back": "Înapoi la proiecte",
+    "name": "Numele proiectului",
+    "undo": "Anulează",
+    "redo": "Refă",
+    "missing": "Acest proiect nu mai există",
+    "save": {
+      "saving": "Se salvează…",
+      "saved": "Salvat local",
+      "error": "Nesalvat"
+    },
+    "reconnect": {
+      "loading": "Se deschide videoclipul…",
+      "title": "Reconectează videoclipurile",
+      "allow": "Permite accesul la toate",
+      "select": "Selectează",
+      "mismatch": "Acesta nu pare a fi fișierul original („{{ name }}”). Îl folosești totuși?",
+      "intro": "Proiectul e în siguranță. Pentru confidențialitatea ta, browserul cere din nou permisiunea înainte ca editorul să-ți poată citi fișierele",
+      "allowOne": "Permite",
+      "privacy": "Videoclipurile sunt citite de unde se află pe disc, niciodată copiate sau încărcate",
+      "status": {
+        "ready": "Conectat",
+        "permission": "Se așteaptă permisiunea ta",
+        "moved": "Negăsit: mutat sau redenumit?",
+        "missing": "Selectează-l din nou (browserul nu păstrează accesul la fișiere)",
+        "loading": "Se deschide…"
+      }
+    },
+    "preview": {
+      "cut": "Tăietură",
+      "back": "Înapoi 5 s",
+      "play": "Redă",
+      "pause": "Pauză",
+      "savedHint": "Timp eliminat prin tăieturi",
+      "badge": "Previzualizare ușoară · {{ q }}p",
+      "quality": "Calitatea previzualizării",
+      "qualityHint": "O previzualizare mai ușoară menține editorul fluid. Exportul folosește mereu calitatea maximă"
+    },
+    "timeline": {
+      "title": "Cronologie",
+      "silence": "Pauză",
+      "manual": "Manual",
+      "text": "Text",
+      "hint": "Trage pe forma de undă pentru a selecta o porțiune, apoi Taie sau Viteză · clic pe o tăietură pentru a-i ajusta marginile · dublu clic pentru a o elimina",
+      "removeCut": "Elimină tăietura",
+      "zoom": "Zoom pe cronologie",
+      "analyzing": "Se analizează sunetul…",
+      "zoomIn": "Mărește",
+      "zoomOut": "Micșorează",
+      "fit": "Încadrează",
+      "fitHint": "Arată tot videoclipul (sfat: Ctrl + rotița pentru zoom)",
+      "manualCut": "Tăiere manuală",
+      "markIn": "Început",
+      "markOut": "Sfârșit",
+      "markInHint": "Începutul porțiunii de tăiat, la cursorul de redare (I)",
+      "markOutHint": "Sfârșitul porțiunii de tăiat, la cursorul de redare (O)",
+      "cutMarked": "Taie",
+      "cutHint": "Elimină porțiunea dintre început și sfârșit (X)",
+      "clearMarks": "Șterge începutul și sfârșitul",
+      "marksMissing": "Setează mai întâi un început (I) și un sfârșit (O)",
+      "analysisError": "Sunetul nu a putut fi analizat",
+      "selectedCut": "Tăietura selectată",
+      "earlier": "Mai devreme",
+      "later": "Mai târziu",
+      "listen": "Ascultă tăietura",
+      "speed": "Viteză",
+      "speedHint": "Accelerează sau încetinește porțiunea dintre început și sfârșit",
+      "selectedSpeed": "Schimbare de viteză",
+      "removeSpeed": "Revino la viteza normală",
+      "listenSpeed": "Redă schimbarea de viteză",
+      "selectFirst": "Selectează mai întâi o porțiune: trage pe forma de undă sau setează Începutul și Sfârșitul"
+    },
+    "transcript": {
+      "title": "Transcriere",
+      "words": "{{ count }} cuvinte",
+      "fillers": "Elimină cuvintele de umplutură ({{ count }})",
+      "restore": "Restaurează tot",
+      "selected": "{{ count }} selectate",
+      "cut": "Taie / restaurează",
+      "tip": "Clic pe un cuvânt pentru a sări la el. Trage sau Shift + clic pentru a selecta, apoi Delete pentru a tăia sau Corectează (Enter) pentru a repara ce a auzit greșit Whisper",
+      "emptyTitle": "Nicio transcriere încă",
+      "emptyText": "Transcrie videoclipul pentru a-l edita prin text și a obține subtitrări cuvânt cu cuvânt",
+      "correct": "Corectează",
+      "correctTitle": "Ce s-a spus de fapt?",
+      "correctHint": "Rescrie un cuvânt sau o propoziție întreagă. Temporizarea și subtitrările se ajustează automat",
+      "apply": "Aplică"
+    },
+    "transcribe": {
+      "title": "Transcriere (Whisper)",
+      "hint": "Rulează pe dispozitivul tău. Modelul se descarcă o dată, apoi rămâne în cache",
+      "model": "Model",
+      "models": {
+        "tiny": "Rapid",
+        "base": "Echilibrat",
+        "small": "Precis"
+      },
+      "download": "Descărcare unică de {{ size }}",
+      "language": "Limba vorbită",
+      "auto": "Detectează automat",
+      "run": "Transcrie",
+      "rerun": "Transcrie totul din nou",
+      "done": "{{ count }} cuvinte transcrise",
+      "empty": "Nu s-a găsit vorbire în acest videoclip",
+      "stage": {
+        "audio": "Se extrage sunetul…",
+        "download": "Se descarcă modelul…",
+        "transcribe": "Se transcrie…"
+      },
+      "missing": "Transcrie clipurile noi ({{ count }})",
+      "rerunHint": "Reia de la zero cu modelul și limba de mai sus",
+      "confirmAll": "Transcrii totul din nou? Cuvintele tăiate sau corectate se vor pierde",
+      "detected": "Limba detectată: {{ language }}"
+    },
+    "tabs": {
+      "format": "Format",
+      "cuts": "Tăieturi",
+      "captions": "Subtitrări",
+      "framing": "Încadrare",
+      "audio": "Sunet",
+      "clips": "Clipuri",
+      "texts": "Texte"
+    },
+    "format": {
+      "title": "Format de ieșire",
+      "hint": "Videoclipul e decupat ca să se potrivească. Folosește Încadrarea pentru a urmări vorbitorul",
+      "landscape": "YouTube",
+      "vertical": "TikTok · Reels",
+      "square": "Feed",
+      "source": "Sursă:",
+      "resolution": "Rezoluție",
+      "fps": "Cadre pe secundă",
+      "exportNote": "Rezoluția și frecvența cadrelor se aleg la export",
+      "rotation": "Rotire",
+      "rotateLeft": "Rotește la stânga",
+      "rotateRight": "Rotește la dreapta",
+      "rotationHint": "Pentru un videoclip filmat lateral. Se aplică tuturor clipurilor",
+      "rotatedFaces": "Videoclip rotit: activează din nou „Urmărește fața” în Încadrare"
+    },
+    "cuts": {
+      "title": "Detectarea pauzelor",
+      "hint": "Elimină pauzele. Coboară pragul dacă sunt tăiate cuvinte",
+      "threshold": "Prag",
+      "suggested": "Sugerat pentru această înregistrare: {{ value }} dB",
+      "minSilence": "Pauză minimă",
+      "padding": "Marjă de respirație",
+      "detect": "Detectează și taie pauzele",
+      "detected": "{{ count }} pauze tăiate",
+      "count": "tăieturi",
+      "removed": "eliminat",
+      "final": "durată finală",
+      "clear": "Elimină toate tăieturile",
+      "mode": "Găsește pauzele după",
+      "modes": {
+        "audio": "Volum",
+        "transcript": "Transcriere"
+      },
+      "modeHint": "Modul transcriere e precis chiar și cu zgomot sau muzică de fundal",
+      "modeNeedsTranscript": "Transcrie videoclipul pentru a găsi pauzele după cuvinte: mai precis în locuri zgomotoase",
+      "preset": "Ritm",
+      "presets": {
+        "gentle": "Natural",
+        "normal": "Echilibrat",
+        "tight": "Dinamic"
+      },
+      "live": "Tăieturile se actualizează în timp real pe măsură ce schimbi setările",
+      "silentClips": "{{ count }} clip(uri) fără voce: acolo se taie doar timpii morți reali"
+    },
+    "captions": {
+      "title": "Subtitrări inscripționate",
+      "style": "Stil",
+      "styles": {
+        "karaoke": "Karaoke",
+        "clean": "Simplu",
+        "boxed": "În casetă"
+      },
+      "position": "Poziție",
+      "positions": {
+        "top": "Sus",
+        "center": "Mijloc",
+        "bottom": "Jos"
+      },
+      "size": "Mărime",
+      "words": "Cuvinte pe subtitrare",
+      "uppercase": "Majuscule",
+      "highlight": "Culoare de evidențiere"
+    },
+    "framing": {
+      "title": "Încadrare automată",
+      "hint": "Urmărește fețele ca vorbitorul să rămână în cadru, ideal pentru 16:9 → 9:16",
+      "center": "Centrat",
+      "face": "Urmărește fața",
+      "analyzing": "Se urmăresc fețele…",
+      "analyze": "Urmărește fețele",
+      "reanalyze": "Urmărește din nou fețele",
+      "tracked": "{{ count }} poziții urmărite",
+      "found": "Față urmărită: încadrarea urmează vorbitorul",
+      "notFound": "Nu s-a găsit constant nicio față în acest videoclip",
+      "punch": "Zoom inteligent",
+      "punchHint": "Alternează un zoom ușor la fiecare tăietură sau, dacă nu sunt tăieturi, la fiecare propoziție, ca videoclipul să rămână dinamic",
+      "zoom": "Intensitatea zoomului",
+      "firstTime": "Alegerea „Urmărește fața” analizează videoclipul o dată, local",
+      "beatsCuts": "Zoomul se schimbă de {{ count }} ori, la tăieturile tale",
+      "beatsAuto": "Încă nu sunt tăieturi: zoomul se schimbă de {{ count }} ori, la propoziții sau la fiecare 4 s"
+    },
+    "audio": {
+      "title": "Muzică de fundal",
+      "hint": "Muzica e coborâtă automat cât timp vorbește cineva (auto-ducking)",
+      "reconnect": "Reconectează „{{ name }}”",
+      "pick": "Alege un fișier de muzică",
+      "enabled": "Include în videoclip",
+      "volume": "Volumul muzicii",
+      "ducking": "Coborâre în timpul vorbirii",
+      "duckingHint": "Cât de mult scade muzica atunci când vorbește cineva"
+    },
+    "export": {
+      "button": "Exportă",
+      "title": "Exportă videoclipul",
+      "running": "Se exportă…",
+      "eta": "Mai sunt aproximativ {{ time }}",
+      "keepOpen": "Ține această filă deschisă. Codarea folosește placa video când e posibil",
+      "done": "Export finalizat",
+      "saved": "„{{ name }}” a fost salvat pe disc în {{ seconds }} s",
+      "downloaded": "„{{ name }}” a fost descărcat în {{ seconds }} s",
+      "duration": "Durată",
+      "from": "din {{ time }}",
+      "streamHint": "Vei alege unde să salvezi MP4-ul. Este scris direct pe disc",
+      "downloadHint": "MP4-ul e asamblat local, apoi descărcat",
+      "start": "Exportă MP4",
+      "saveProject": "Salvează proiectul",
+      "saveProjectHint": "Un fișier .lcv.json cu editarea ta (fără videoclip), pentru a continua pe alt computer",
+      "projectSaved": "Proiect salvat ca fișier .lcv.json"
+    },
+    "clips": {
+      "title": "Clipuri",
+      "hint": "Videoclipurile sunt redate unul după altul, în această ordine. Trage pentru a reordona: tăieturile și cuvintele își urmează clipul",
+      "jump": "Mergi la acest clip",
+      "up": "Mută în sus",
+      "down": "Mută în jos",
+      "remove": "Elimină clipul",
+      "add": "Adaugă videoclipuri",
+      "summary": "{{ count }} clip(uri) · {{ time }} în total",
+      "confirmRemove": "Elimini „{{ name }}” din proiect? Tăieturile și cuvintele lui sunt eliminate și ele (Ctrl+Z pentru anulare)",
+      "added": "{{ count }} clip(uri) adăugat(e)",
+      "addedTranscribe": "{{ count }} clip(uri) adăugat(e). Transcrie din nou pentru a le subtitra: clipurile deja transcrise sunt păstrate",
+      "noVoice": "fără voce",
+      "voiceOn": "Voce · clic dacă nu vorbește nimeni",
+      "voiceOff": "Fără voce · clic dacă vorbește cineva"
+    },
+    "auto": {
+      "button": "Editare automată",
+      "cta": "Editează automat videoclipul",
+      "transcribeOnly": "sau doar transcrie",
+      "heading": "Lasă LocalCutVideo să-ți editeze videoclipul",
+      "lead": "Cu un clic: pauze și ezitări eliminate, subtitrări, încadrare pe vorbitor și zoom inteligent. Poți schimba totul după aceea",
+      "target": "Unde îl vei posta?",
+      "options": {
+        "silences": "Taie pauzele",
+        "fillers": "Elimină ezitările (ăă, mmm…)",
+        "captions": "Subtitrări karaoke",
+        "framing": "Urmărește fața",
+        "framingNoCrop": "Nu e nevoie: acest format arată toată imaginea",
+        "zoom": "Zoom inteligent"
+      },
+      "local": "Totul rulează pe dispozitivul tău. Videoclipul nu e încărcat niciodată",
+      "start": "Pornește editarea automată",
+      "running": "Se editează videoclipul…",
+      "done": "Videoclipul tău e gata!",
+      "view": "Vezi rezultatul",
+      "undo": "Anulează editarea automată",
+      "undone": "Proiectul a revenit la starea dinaintea editării automate",
+      "summary": {
+        "cuts": "tăieturi",
+        "removed": "eliminat",
+        "words": "cuvinte subtitrate",
+        "silent": "{{ count }} clip(uri) fără voce: s-au tăiat doar timpii morți reali"
+      },
+      "steps": {
+        "analyze": "Analiza sunetului",
+        "transcribe": "Transcrierea vorbirii",
+        "fillers": "Eliminarea ezitărilor",
+        "silences": "Tăierea pauzelor",
+        "framing": "Urmărirea feței",
+        "style": "Subtitrări și zoom inteligent",
+        "voice": "Detectarea vocilor"
+      },
+      "status": {
+        "skipped": "omis",
+        "error": "eșuat"
+      },
+      "voice": {
+        "title": "Vorbește cineva în videoclip?",
+        "auto": "Auto",
+        "yes": "Da",
+        "no": "Nu",
+        "detectedYes": "Detectat: cineva vorbește",
+        "detectedNo": "Detectat: fără voce",
+        "hint": "Fără voce: fără transcriere sau subtitrări, se taie doar timpii morți reali"
+      }
+    },
+    "mix": {
+      "title": "Sunetul videoclipului",
+      "hint": "Dă mai tare sau mai încet sunetul clipurilor",
+      "volume": "Volum",
+      "mute": "Dezactivează sunetul",
+      "unmute": "Activează sunetul",
+      "volumeHint": "Se aplică previzualizării și exportului",
+      "boostHint": "Peste 100 %, un limitator previne distorsiunea",
+      "normalize": "Egalizează clipurile",
+      "normalizeHint": "Toate clipurile la același volum, filmate de aproape sau de departe",
+      "denoise": "Reduce zgomotul de fundal",
+      "denoiseHint": "Voce mai clară (vânt, fâșâit, ventilatoare). Aplicat la export, pe clipurile cu voce. Ascultă mai întâi",
+      "listen": "Ascultă 8 s din rezultat",
+      "stopListening": "Oprește ascultarea",
+      "preparing": "Se pregătește…"
+    },
+    "thumbnail": "Miniatură",
+    "transition": {
+      "title": "Tranziție la tăieturi",
+      "none": "Tăietură bruscă",
+      "dip": "Fade rapid",
+      "black": "Fade în negru",
+      "hint": "Apare la fiecare tăietură și schimbare de clip (și la început și la sfârșit cu fade în negru). Vizibil în timpul redării"
+    },
+    "texts": {
+      "title": "Texte peste videoclip",
+      "hint": "Titluri și notițe afișate la cursorul de redare. Pune cuvinte între asteriscuri pentru a le colora",
+      "add": "Adaugă un text la cursorul de redare",
+      "default": "*Textul* tău",
+      "timing": "Afișat",
+      "startHere": "Începe aici",
+      "endHere": "Termină aici",
+      "remove": "Elimină acest text"
+    },
+    "background": {
+      "title": "Fundal",
+      "hint": "Estompează fundalul din spatele persoanei, care rămâne clară. Calculat pe dispozitivul tău",
+      "none": "Clar",
+      "blur": "Estompat",
+      "strength": "Intensitatea estompării",
+      "error": "Estomparea fundalului nu a putut porni pe acest dispozitiv"
+    }
+  },
+  "legal": {
+    "updated": "Ultima actualizare: 1 noiembrie 2026",
+    "contact": "Contact",
+    "nav": {
+      "notice": "Mențiuni legale",
+      "privacy": "Confidențialitate",
+      "terms": "Termeni de utilizare"
+    },
+    "notice": {
+      "title": "Mențiuni legale",
+      "intro": "Informații impuse de legea franceză (articolul 6 din LCEN, legea nr. 2004-575 din 21 iunie 2004) despre editorul și găzduitorul acestui site.",
+      "sections": [
+        {
+          "title": "Editor",
+          "body": [
+            "Site-ul localcutvideo.mbonnici.fr („LocalCutVideo”) este publicat de Maxence Bonnici, persoană fizică, în scop necomercial.",
+            "Director de publicare: Maxence Bonnici.",
+            "Contact: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Găzduire",
+          "body": [
+            "Site-ul este găzduit chiar de editorul său, Maxence Bonnici, pe un server personal, și implementat cu platforma Coolify.",
+            "Contact: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Proprietate intelectuală",
+          "body": [
+            "Codul sursă al LocalCutVideo este deschis și publicat sub licența MIT pe [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
+            "Componentele terțe, modelele IA și fonturile folosite de aplicație rămân proprietatea autorilor lor și sunt folosite conform propriilor licențe, enumerate în [termenii de utilizare](/terms). Mărcile citate (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) aparțin proprietarilor lor."
+          ]
+        },
+        {
+          "title": "Răspundere",
+          "body": [
+            "Editorul se străduiește să mențină site-ul disponibil și informațiile corecte, dar nu poate garanta niciuna dintre ele. Utilizarea aplicației este reglementată de [termenii de utilizare](/terms)."
+          ]
+        },
+        {
+          "title": "Date personale",
+          "body": [
+            "LocalCutVideo nu colectează nicio dată personală: videoclipurile sunt procesate doar pe dispozitivul tău. Detaliile se află în [politica de confidențialitate](/privacy)."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Politica de confidențialitate",
+      "intro": "LocalCutVideo este construit astfel încât videoclipurile tale să nu părăsească niciodată dispozitivul. Această pagină explică simplu ce se procesează și unde.",
+      "sections": [
+        {
+          "title": "Pe scurt",
+          "body": [
+            "Fără încărcare: videoclipurile, sunetul și transcrierile tale sunt procesate în browser și nu sunt trimise niciodată editorului sau altcuiva.",
+            "Fără cont, fără cookie-uri, fără statistici, fără publicitate."
+          ]
+        },
+        {
+          "title": "Ce rămâne pe dispozitivul tău",
+          "body": [
+            "Fișierele video și audio pe care le deschizi sunt citite direct de pe disc. Analiza, transcrierea (Whisper), urmărirea feței și exportul sunt calculate local de browser.",
+            "Proiectele tale (tăieturi, transcriere, setări) sunt salvate în baza de date locală a browserului (IndexedDB), împreună cu o miniatură și un cache de analize. Editorul nu are acces la ele. Poți șterge un proiect din pagina de proiecte sau poți șterge tot golind datele acestui site din setările browserului."
+          ]
+        },
+        {
+          "title": "Stocare locală",
+          "body": [
+            "Aplicația păstrează preferințele de interfață (limbă, temă, ultimul proiect deschis) în stocarea locală a browserului și își ține propriile fișiere și modelele IA descărcate în cache-ul browserului, ca să poată funcționa offline. Acestea sunt strict necesare serviciului, nu sunt folosite niciodată pentru a te urmări și, prin urmare, nu necesită un banner de consimțământ."
+          ]
+        },
+        {
+          "title": "Server",
+          "body": [
+            "Serverul doar livrează fișierele aplicației și nu păstrează jurnale de acces. Ca orice server web, primește tehnic adresa ta IP pentru a răspunde la cereri, dar nu o stochează."
+          ]
+        },
+        {
+          "title": "Terți",
+          "body": [
+            "Hugging Face: modelul Whisper este furnizat de acest site, ca restul aplicației. Doar dacă nu este disponibil aici, este descărcat în schimb de pe huggingface.co; Hugging Face primește atunci adresa ta IP și informațiile obișnuite ale browserului, dar niciodată sunetul tău. Vezi [politica lor de confidențialitate](https://huggingface.co/privacy).",
+            "GitHub: doar dacă urmezi un link către depozitul codului sursă.",
+            "Niciun alt terț nu este contactat: o Content-Security-Policy strictă împiedică tehnic pagina să se conecteze în altă parte."
+          ]
+        },
+        {
+          "title": "Drepturile tale",
+          "body": [
+            "Conform GDPR, ai dreptul de acces, rectificare și ștergere a datelor tale, precum și dreptul de a te opune prelucrării lor. Cum editorul nu deține nicio dată despre tine, de obicei nu există nimic de accesat, dar poți pune orice întrebare la maxence.bonnici@outlook.fr. Poți depune și o plângere la CNIL ([cnil.fr](https://www.cnil.fr)) sau la autoritatea de protecție a datelor din țara ta."
+          ]
+        },
+        {
+          "title": "Modificări",
+          "body": [
+            "Această politică poate fi actualizată pe măsură ce aplicația evoluează. Data ultimei actualizări este afișată în partea de sus a acestei pagini."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Termeni de utilizare",
+      "intro": "Folosind LocalCutVideo, accepți acești termeni. Sunt scurți pentru că serviciul este simplu: un instrument gratuit care rulează în browser.",
+      "sections": [
+        {
+          "title": "Serviciul",
+          "body": [
+            "LocalCutVideo este o aplicație gratuită de editare video care rulează în întregime în browserul tău web. Este oferită gratuit, fără cont, și poate evolua, fi întreruptă sau oprită oricând, fără preaviz."
+          ]
+        },
+        {
+          "title": "Conținutul tău",
+          "body": [
+            "Rămâi singurul proprietar și singurul responsabil pentru videoclipurile, sunetele și muzica pe care le editezi și le publici. Trebuie să deții drepturile necesare (drepturi de autor, licențe muzicale, dreptul la imagine al persoanelor filmate).",
+            "Aplicația nu trebuie folosită în scopuri ilegale."
+          ]
+        },
+        {
+          "title": "Funcții automate",
+          "body": [
+            "Transcrierea, subtitrările, detectarea pauzelor și încadrarea automată sunt generate automat și pot conține erori. Verifică rezultatul înainte de a-l publica."
+          ]
+        },
+        {
+          "title": "Fișierele și proiectele tale",
+          "body": [
+            "Aplicația nu îți modifică niciodată fișierele originale. Proiectele sunt stocate în browser și se pot pierde dacă datele acestuia sunt șterse sau dacă browserul eliberează spațiu: păstrează întotdeauna fișierele originale."
+          ]
+        },
+        {
+          "title": "Garanție și răspundere",
+          "body": [
+            "Software-ul este furnizat „ca atare”, fără nicio garanție, sub licența MIT. În limita permisă de lege, editorul nu poate fi tras la răspundere pentru niciun prejudiciu rezultat din utilizarea sau imposibilitatea utilizării aplicației (pierderi de date, erori de export, indisponibilitate…)."
+          ]
+        },
+        {
+          "title": "Open source și componente terțe",
+          "body": [
+            "Codul sursă este disponibil sub licența MIT pe [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
+            "LocalCutVideo se bazează pe: Mediabunny (MPL-2.0), Transformers.js și ONNX Runtime (Apache-2.0 și MIT), modelele Whisper de la OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) și fonturile Inter și Montserrat (SIL Open Font License)."
+          ]
+        },
+        {
+          "title": "Legea aplicabilă",
+          "body": [
+            "Acești termeni sunt guvernați de legea franceză. Întrebări: maxence.bonnici@outlook.fr."
+          ]
+        }
+      ]
+    }
+  },
+  "thumbnail": {
+    "eyebrow": "Generator de miniaturi",
+    "title": "Miniaturi pe care oamenii vor să dea clic",
+    "lead": "Alege cel mai bun moment din videoclip, adaugă un titlu de impact și descarcă o imagine gata pentru YouTube, Shorts sau Instagram. Totul se petrece pe dispozitivul tău",
+    "pick": "Trage un videoclip sau o imagine",
+    "pickHint": "MP4, MOV, WebM, JPG, PNG… fișierul rămâne pe dispozitivul tău",
+    "choose": "Alege un fișier",
+    "local": "Nimic nu se încarcă: imaginea e creată în browser",
+    "permissionTitle": "Permite accesul la videoclipul proiectului",
+    "permissionText": "Browserul cere o confirmare înainte de a citi din nou fișierul de pe dispozitiv",
+    "permission": "Permite accesul",
+    "back": "Înapoi la editor",
+    "dragHint": "Trage imaginea pentru a o reîncadra",
+    "frame": "Cadru video",
+    "prevFrame": "Cadrul anterior",
+    "nextFrame": "Cadrul următor",
+    "moments": "Cele mai bune momente",
+    "other": "Alege alt fișier",
+    "format": "Format",
+    "formats": {
+      "landscape": "YouTube",
+      "vertical": "Shorts · TikTok",
+      "square": "Instagram"
+    },
+    "text": "Titlu",
+    "textPlaceholder": "Titlul tău atrăgător",
+    "defaultText": "*Titlul* tău aici",
+    "accentHint": "Pune cuvinte între asteriscuri pentru a le colora: *așa*",
+    "size": "Mărimea textului",
+    "position": "Poziție",
+    "positions": {
+      "top": "Sus",
+      "center": "Centru",
+      "bottom": "Jos"
+    },
+    "alignCenter": "Centrat",
+    "alignLeft": "Stânga",
+    "uppercase": "Majuscule",
+    "tilt": "Text înclinat",
+    "style": "Stilul titlului",
+    "styles": {
+      "outline": "Contur",
+      "shadow": "Umbră",
+      "box": "Banderolă",
+      "highlight": "Marker"
+    },
+    "color": "Culoarea textului",
+    "accent": "Culoarea cuvintelor evidențiate",
+    "image": "Imagine",
+    "zoom": "Zoom",
+    "brightness": "Luminozitate",
+    "contrast": "Contrast",
+    "saturation": "Saturație",
+    "shade": "Întunecă marginile",
+    "reset": "Resetează",
+    "downloadJpg": "Descarcă JPG",
+    "downloadPng": "Descarcă PNG",
+    "sizeInfo": "{{ width }} × {{ height }} px · JPG e cel mai bun pentru YouTube (sub 2 MB)",
+    "saved": "Salvat: {{ name }}",
+    "loadError": "Acest proiect nu a putut fi deschis",
+    "readError": "Acest fișier nu a putut fi citit"
+  },
+  "seo": {
+    "home": {
+      "title": "LocalCutVideo — Editor video gratuit în browser, nimic nu se încarcă",
+      "description": "Editează-ți videoclipurile în browser: pauze tăiate automat, subtitrări cu IA, încadrare pe față pentru TikTok și Shorts, miniaturi. Gratuit și open source, videoclipurile tale nu părăsesc niciodată computerul"
+    },
+    "thumbnail": {
+      "title": "Generator gratuit de miniaturi YouTube — LocalCutVideo",
+      "description": "Creează o miniatură pentru YouTube, Shorts sau Instagram din videoclipul tău: cele mai bune momente sugerate, titlu mare cu cuvinte colorate, JPG sau PNG. Gratuit, în browser, nimic nu se încarcă"
+    },
+    "changelog": {
+      "title": "Noutăți — LocalCutVideo",
+      "description": "Ce e nou în LocalCutVideo, versiune cu versiune"
+    },
+    "legal": {
+      "title": "Mențiuni legale — LocalCutVideo",
+      "description": "Editorul și găzduirea LocalCutVideo"
+    },
+    "privacy": {
+      "title": "Politica de confidențialitate — LocalCutVideo",
+      "description": "LocalCutVideo nu încarcă nimic: videoclipurile, transcrierile și proiectele tale rămân pe dispozitiv"
+    },
+    "terms": {
+      "title": "Termeni de utilizare — LocalCutVideo",
+      "description": "Termenii de utilizare ai LocalCutVideo, un editor video gratuit și open source"
+    },
+    "app": {
+      "title": "Proiecte — LocalCutVideo",
+      "description": "Proiectele tale video, salvate în browser"
+    },
+    "editor": {
+      "title": "Editor — LocalCutVideo",
+      "description": "Editorul LocalCutVideo"
+    }
+  },
+  "tour": {
+    "label": "Tur ghidat",
+    "help": "Tur ghidat",
+    "count": "Pasul {{ n }} din {{ total }}",
+    "skip": "Sari peste tur",
+    "prev": "Înapoi",
+    "next": "Înainte",
+    "done": "Să începem!",
+    "steps": {
+      "auto": {
+        "title": "Un clic: editarea automată",
+        "text": "LocalCutVideo editează videoclipul în locul tău: pauze și ezitări eliminate, subtitrări, încadrare și zoom. Poți schimba totul după aceea"
+      },
+      "preview": {
+        "title": "Previzualizarea",
+        "text": "Ce vezi este exact ce va fi exportat. Dă clic pe ea sau apasă Spațiu pentru redare sau pauză"
+      },
+      "timeline": {
+        "title": "Cronologia",
+        "text": "Dă clic pentru a te deplasa prin videoclip. Trage pe forma de undă pentru a selecta o porțiune"
+      },
+      "cut": {
+        "title": "Taie sau schimbă viteza",
+        "text": "Cu o porțiune selectată, Taie (X) o elimină, iar Viteză o redă mai repede sau mai încet. Ctrl+Z anulează orice"
+      },
+      "transcript": {
+        "title": "Editare prin text",
+        "text": "După transcriere, ștergerea unui cuvânt taie videoclipul. Poți corecta și ce a auzit greșit IA"
+      },
+      "settings": {
+        "title": "Toate setările",
+        "text": "Format (16:9, 9:16, pătrat), tăieturi și tranziții, subtitrări, texte, încadrare și estompare, sunet și muzică"
+      },
+      "thumbnail": {
+        "title": "Miniatura",
+        "text": "Creează miniatura videoclipului din cele mai bune momente ale lui"
+      },
+      "export": {
+        "title": "Export",
+        "text": "Salvează videoclipul ca MP4. Totul se petrece pe dispozitivul tău, nimic nu se încarcă"
+      }
+    }
+  }
+}

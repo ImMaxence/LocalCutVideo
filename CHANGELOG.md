@@ -2,6 +2,14 @@
 
 All notable changes to LocalCutVideo. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning: [SemVer](https://semver.org/).
 
+## [0.15.0] - 2026-11-02
+
+### Added
+- Interface and public pages in 44 languages, each with its own URL, language alternates and sitemap entries
+- Right-to-left layout for Arabic, Hebrew, Persian and Urdu
+- Language picker with a search field and language names in the current language
+- Browser language detection for regional variants (pt-BR / pt-PT, simplified / traditional Chinese, Norwegian, Filipino…)
+
 ## [0.14.0] - 2026-11-01
 
 ### Added

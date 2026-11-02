@@ -253,7 +253,7 @@ h3 {
   padding: 0;
   border: 0;
   background: none;
-  text-align: left;
+  text-align: start;
   cursor: pointer;
 }
 
@@ -368,7 +368,7 @@ h3 {
   background: var(--bg-elev);
   color: var(--text);
   font-size: 13px;
-  text-align: left;
+  text-align: start;
   cursor: pointer;
   .excerpt {
     overflow: hidden;

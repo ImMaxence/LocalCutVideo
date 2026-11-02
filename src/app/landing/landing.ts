@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslocoPipe } from '@jsverse/transloco';
+import { LANGUAGES } from '../core/languages';
 import { REPO_URL } from '../core/version';
 import { Icon } from '../shared/icon';
 import { LocalizePipe } from '../shared/localize';
@@ -20,6 +21,7 @@ interface Feature {
 })
 export class Landing {
   protected readonly repoUrl = REPO_URL;
+  protected readonly languageCount = LANGUAGES.length;
 
   protected readonly features: Feature[] = [
     { key: 'silences', icon: 'scissors' },

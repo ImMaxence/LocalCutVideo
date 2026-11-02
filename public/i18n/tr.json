@@ -1,0 +1,895 @@
+{
+  "common": {
+    "videoFiles": "Video dosyaları",
+    "audioFiles": "Ses dosyaları",
+    "cancel": "İptal",
+    "close": "Kapat",
+    "retry": "Yeniden dene",
+    "none": "Yok",
+    "remove": "Kaldır"
+  },
+  "nav": {
+    "features": "Özellikler",
+    "privacy": "Gizlilik",
+    "faq": "SSS",
+    "changelog": "Değişiklikler",
+    "language": "Dil",
+    "searchLanguage": "Dil ara",
+    "noLanguage": "Dil bulunamadı",
+    "install": "Uygulamayı yükle",
+    "open": "Düzenleyiciyi aç",
+    "menu": "Menüyü aç",
+    "close": "Menüyü kapat",
+    "thumbnail": "Kapak görselleri"
+  },
+  "theme": {
+    "system": "Sistem",
+    "light": "Açık",
+    "dark": "Koyu",
+    "label": "Tema"
+  },
+  "footer": {
+    "tagline": "Tamamen tarayıcınızda çalışan ücretsiz ve açık kaynaklı bir video düzenleyici. Dosyalarınız bilgisayarınızdan hiç çıkmaz",
+    "issues": "Sorun bildir",
+    "noTracking": "Çerez yok, takip yok",
+    "product": "Ürün",
+    "legal": "Yasal"
+  },
+  "pwa": {
+    "update": "Yeni bir sürüm var",
+    "reload": "Yeniden yükle"
+  },
+  "landing": {
+    "hero": {
+      "badgeLocal": "%100 yerel, sıfır yükleme",
+      "badgeOpen": "Ücretsiz ve açık kaynak",
+      "title1": "Videolarınızı düzenleyin",
+      "title2": "Hiçbir şey bilgisayarınızdan çıkmaz",
+      "lead": "LocalCutVideo sessizlikleri keser, Whisper ile yazıya döker, karaoke altyazıları videoya işler ve 16:9'u 9:16'ya yeniden çerçeveler; hepsi tarayıcınızda. Yükleme yok, hesap yok, sunucu yok",
+      "cta": "Düzenleyiciyi aç",
+      "github": "GitHub'da gör",
+      "hint": "En iyi bilgisayarda Chrome veya Edge ile çalışır",
+      "demo": "Demo videoyla dene"
+    },
+    "mock": {
+      "w1": "Evet bugün",
+      "filler": "ııı,",
+      "w2": "nasıl çalıştığını",
+      "w3": "size göstereceğim",
+      "line2": "Her şey kendi bilgisayarınızda çalışır, yapay zekâ bile",
+      "line3": "Bir kelimeyi silin, video kesilsin",
+      "cap1": "Bu sizin",
+      "cap2": "bilgisayarınızda kalır"
+    },
+    "stats": {
+      "upload": "bayt yüklendi",
+      "local": "cihazınızda işlenir",
+      "languages": "arayüz dili",
+      "gpu": "hızlandırılmış YZ ve kodlama"
+    },
+    "how": {
+      "eyebrow": "Nasıl çalışır",
+      "title": "Ham çekimden paylaşıma hazır videoya üç adımda",
+      "open": {
+        "title": "Bir video açın",
+        "text": "Diskinizden bir dosya seçin. Olduğu yerde okunur: kopya yok, yükleme yok, gigabaytlarca büyük dosyalarda bile"
+      },
+      "edit": {
+        "title": "Düzenleyici çalışsın",
+        "text": "Sessizlikler algılanır, konuşma kelime kelime yazıya dökülür ve yüzler takip edilir; hepsi yerel olarak. Metni düzenleyerek her şeyi düzeltin"
+      },
+      "export": {
+        "title": "MP4'ü dışa aktarın",
+        "text": "16:9, 9:16 veya 1:1 seçin. Video ekran kartınız tarafından kodlanır ve doğrudan diskinize yazılır"
+      }
+    },
+    "features": {
+      "eyebrow": "Özellikler",
+      "title": "Kameraya konuşulan videolar için ihtiyacınız olan her şey",
+      "lead": "Ham çekimlerini hiçbir yere yüklemek istemeyen YouTube, TikTok, Reels ve Shorts içerik üreticileri için tasarlandı",
+      "silences": {
+        "title": "Sessizlikleri otomatik kes",
+        "text": "Duraklamaları ses yüksekliğinden algılar ve kaldırır; eşik, minimum süre ve nefes payı ayarlanabilir"
+      },
+      "textEdit": {
+        "title": "Metinle düzenleme",
+        "text": "Whisper her kelimeye bir zaman damgası verir. Dökümde kelimeleri silin, videonun ilgili kısmı kesilsin"
+      },
+      "captions": {
+        "title": "Karaoke altyazılar",
+        "text": "Kelime kelime animasyonlu altyazılar videoya işlenir; karaoke, sade veya kutulu stillerde, seçtiğiniz vurgu rengiyle"
+      },
+      "framing": {
+        "title": "Otomatik çerçeveleme 16:9 → 9:16",
+        "text": "Yüz takibi, yatay bir videoyu dikeye çevirdiğinizde konuşan kişiyi kadrajda tutar"
+      },
+      "zoom": {
+        "title": "Akıllı yakınlaştırma",
+        "text": "Her kesimde dönüşümlü yakınlaştırmalar jump cut'ları bilinçli gösterir ve izleyicileri tutar"
+      },
+      "ducking": {
+        "title": "Ses ve müzik",
+        "text": "Sesi yükseltin, kliplerinizi dengeleyin ve biri konuştuğunda kendiliğinden kısılan bir arka plan müziği ekleyin"
+      },
+      "recovery": {
+        "title": "Çökme sonrası kurtarma",
+        "text": "Her değişiklik tarayıcınıza anında kaydedilir. Sekmeyi yeniden açın ve tam kaldığınız yerden devam edin"
+      },
+      "offline": {
+        "title": "Çevrimdışı çalışır",
+        "text": "Uygulama olarak yükleyin. YZ modeli bir kez indirildikten sonra tüm düzenleyici internet bağlantısı olmadan çalışır"
+      },
+      "export": {
+        "title": "Hızlı donanım ile dışa aktarma",
+        "text": "Kodlama, yavaş yazılımsal kodlama yerine tarayıcınıza ve ekran kartınıza yerleşik video kodlayıcı WebCodecs'i kullanır"
+      },
+      "clips": {
+        "title": "Çoklu klip birleştirme",
+        "text": "Birden çok çekimi aynı anda bırakın: seçtiğiniz sırayla, ortak zaman çizelgesi ve dökümle tek bir videoda birleşirler"
+      },
+      "inputs": {
+        "title": "MP4, MOV, WebM, MKV",
+        "text": "Telefonunuzun ve kameranızın dosyalarını açar; tarayıcınız çözebiliyorsa iPhone HEVC videoları da dahil"
+      },
+      "languages": {
+        "title": "Çok dilli",
+        "text": "Arayüz {{ count }} dil konuşur ve Whisper otomatik dil algılamayla onlarca dili daha yazıya döker"
+      }
+    },
+    "privacy": {
+      "eyebrow": "Gizlilik",
+      "title": "Tasarımı gereği sıfır yükleme",
+      "lead": "Videonuz doğrudan diskinizden okunur. Ses analizi, yazıya dökme, yüz takibi ve kodlama bilgisayarınızdaki arka plan iş parçacıklarında (Web Workers) çalışır. Çekimlerinizin gönderileceği bir sunucu yoktur",
+      "upload": "Asla yükleme yok: dosya bilgisayarınızdan hiç çıkmaz",
+      "account": "Hesap yok, çerez yok, istatistik yok",
+      "csp": "Katı bir Content-Security-Policy, sayfanın yalnızca YZ modellerini de sunan bu siteyle iletişim kurmasına izin verir (Hugging Face yalnızca yedektir)",
+      "storage": "Projeler tarayıcınızın yerel veritabanında (IndexedDB) saklanır ve istediğiniz zaman silinebilir",
+      "diagram": {
+        "machine": "Bilgisayarınız",
+        "file": "Video dosyası",
+        "browser": "Tarayıcınız",
+        "upload": "Sunucuya yükleme",
+        "model": "YZ modeli indirme (bir kez, önbellekte)"
+      }
+    },
+    "support": {
+      "eyebrow": "Uyumluluk",
+      "title": "Tarayıcı desteği",
+      "ok": "Tam",
+      "partial": "Kısmi",
+      "full": "Çökme sonrası kurtarma ve dışa aktarımın doğrudan diske yazılması dahil her şey",
+      "firefox": "Düzenleme ve dışa aktarma çalışır. Sekmeyi kapattıktan sonra videoyu yeniden seçmeniz istenir",
+      "safari": "Yalnızca yeni sürümler. Yeniden yüklemeden sonra videoyu tekrar seçin; dışa aktarım indirilir",
+      "mobile": "Telefonlar ve tabletler",
+      "mobileText": "Kısa kliplerde çalışır, ancak bellek sınırları uzun videoları güvenilmez kılar"
+    },
+    "faq": {
+      "title": "Sık sorulan sorular",
+      "free": {
+        "q": "Gerçekten ücretsiz mi? İşin püf noktası ne?",
+        "a": "Ücretsiz ve açık kaynaklı. Tüm iş bilgisayarınızda yapıldığından ödenecek bir sunucu maliyeti yoktur; bu yüzden size satacak bir şey, toplanacak bir veri de yoktur"
+      },
+      "formats": {
+        "q": "Hangi video biçimlerini açabilirim?",
+        "a": "Tarayıcınız codec'i çözebildiği sürece MP4, MOV, WebM ve MKV (tarayıcınıza ve sisteminize göre H.264, HEVC, VP9, AV1). Dışa aktarım bir MP4 dosyasıdır"
+      },
+      "browsers": {
+        "q": "Neden Chrome veya Edge?",
+        "a": "File System Access API'yi desteklerler; bu API, düzenleyicinin yeniden yüklemeden sonra videonuzu tekrar açmasını ve dışa aktarımı doğrudan diske yazmasını sağlar. Diğer tarayıcılar da birkaç ek tıklamayla çalışır"
+      },
+      "size": {
+        "q": "Dosya boyutu sınırı var mı?",
+        "a": "Hiçbir şey yüklenmediği için yükleme sınırı yoktur. Video diskten küçük parçalar halinde okunur; pratik sınır bilgisayarınızın belleği ve çok uzun videolardaki sabrınızdır"
+      },
+      "offline": {
+        "q": "İnternetsiz çalışır mı?",
+        "a": "Evet, bir kez yüklendikten sonra. Uygulama (PWA) olarak yükleyin ve çevrimiçiyken bir kez yazıya dökün: Whisper modeli önbelleğe alınır ve her şey çevrimdışı çalışır"
+      },
+      "ai": {
+        "q": "Yapay zekâ nerede çalışır?",
+        "a": "Tarayıcınızda. Whisper, Transformers.js ile ekran kartınızda (WebGPU) veya işlemcinizde (WebAssembly) çalışır; yüz algılama ise MediaPipe kullanır. Modeller bir kez indirilir, sesiniz asla gönderilmez"
+      }
+    },
+    "final": {
+      "title": "Bir sonraki videonuz, dakikalar içinde düzenlenmiş",
+      "text": "Kayıt yok, yükleme yok, filigran yok. Bir dosya açın ve düzenlemeye başlayın"
+    },
+    "thumbnail": {
+      "eyebrow": "Yeni · Kapak görselleri",
+      "title": "Ve ona uygun kapak görseli",
+      "text": "Kapak görseli aracı videonuzun en net anlarını bulur. Renkli kelimelerle büyük bir başlık ekleyin ve doğru boyutta indirin",
+      "points": {
+        "moments": "En iyi anlar önerilir",
+        "title": "Vurgulu kelimelerle başlık, 4 stil",
+        "formats": "YouTube 1280×720, Shorts ve kare",
+        "local": "Cihazınızda yapılır, hiçbir şey yüklenmez"
+      },
+      "cta": "Kapak görseli oluştur",
+      "mockTitle": "İlk",
+      "mockAccent": "vlogum"
+    }
+  },
+  "changelog": {
+    "eyebrow": "Sürümler",
+    "title": "Değişiklikler",
+    "lead": "LocalCutVideo'nun tüm sürümleri, en yenisi başta",
+    "current": "Kullandığınız sürüm",
+    "github": "GitHub'da gör",
+    "releases": "GitHub sürümleri",
+    "latest": "En yeni",
+    "error": "Değişiklik listesi yüklenemedi"
+  },
+  "projects": {
+    "title": "Projeleriniz",
+    "lead": "Projeler bu tarayıcıya otomatik olarak kaydedilir. Videolarınız diskinizde bulundukları yerde kalır",
+    "resume": "Kaldığınız yerden devam edin",
+    "reading": "Video okunuyor…",
+    "drop": "Videolarınızı buraya bırakın",
+    "or": "veya",
+    "open": "Video aç",
+    "private": "Dosya yerel olarak okunur, hiçbir şey yüklenmez",
+    "noFsAccess": "Tarayıcınız dosyaları oturumlar arasında hatırlayamaz: sekmeyi kapattıktan sonra videoyu yeniden seçmeniz istenir. Chrome veya Edge bunu önler",
+    "recent": "Son projeler",
+    "empty": "Henüz proje yok. Başlamak için bir video açın",
+    "delete": "Projeyi sil",
+    "confirmDelete": "“{{ name }}” projesi silinsin mi? Diskinizdeki video dosyası etkilenmez",
+    "multi": "Birden çok dosya mı? Ad sırasına göre tek bir videoda birleştirilir",
+    "importFile": "Bir proje dosyası aç (.lcv.json)",
+    "saveFile": "Projeyi dosya olarak kaydet",
+    "imported": "Proje açıldı: devam etmek için videolarını seçin"
+  },
+  "errors": {
+    "notVideo": "Bu dosya bir videoya benzemiyor",
+    "codec": "Tarayıcınız bu videonun codec'ini çözemiyor (HEVC/H.265 için Chrome veya Edge'de HEVC uzantısı gerekir). H.264 MP4'e dönüştürmeyi deneyin",
+    "noVideo": "Bu dosyada video izi bulunamadı",
+    "generic": "Bu dosya okunurken bir sorun oluştu",
+    "transcribe": "Yazıya dökme başarısız oldu. Daha küçük bir model deneyin veya ilk indirme için bağlantınızı kontrol edin",
+    "export": "Dışa aktarma başarısız oldu",
+    "faces": "Bu videoda yüz takibi başarısız oldu",
+    "skipped": "Atlandı (okunamadı): {{ names }}",
+    "skippedCodec": "Atlandı, codec bu tarayıcıda desteklenmiyor: {{ names }}. Chrome'u deneyin veya H.264 MP4'e dönüştürün",
+    "notProject": "Bu dosya bir LocalCutVideo projesi değil",
+    "demo": "Demo video yüklenemedi"
+  },
+  "languages": {
+    "en": "İngilizce",
+    "fr": "Fransızca",
+    "es": "İspanyolca",
+    "it": "İtalyanca",
+    "de": "Almanca",
+    "pt": "Portekizce",
+    "nl": "Felemenkçe"
+  },
+  "editor": {
+    "back": "Projelere dön",
+    "name": "Proje adı",
+    "undo": "Geri al",
+    "redo": "Yinele",
+    "missing": "Bu proje artık mevcut değil",
+    "save": {
+      "saving": "Kaydediliyor…",
+      "saved": "Yerel olarak kaydedildi",
+      "error": "Kaydedilmedi"
+    },
+    "reconnect": {
+      "loading": "Video açılıyor…",
+      "title": "Videolarınızı yeniden bağlayın",
+      "allow": "Tümüne erişime izin ver",
+      "select": "Seç",
+      "mismatch": "Bu, orijinal dosyaya (“{{ name }}”) benzemiyor. Yine de kullanılsın mı?",
+      "intro": "Proje güvende. Gizliliğiniz için tarayıcı, düzenleyici dosyalarınızı okumadan önce yeniden izin ister",
+      "allowOne": "İzin ver",
+      "privacy": "Videolarınız diskinizde bulundukları yerden okunur, asla kopyalanmaz veya yüklenmez",
+      "status": {
+        "ready": "Bağlandı",
+        "permission": "İzniniz bekleniyor",
+        "moved": "Bulunamadı: taşındı mı veya adı mı değişti?",
+        "missing": "Yeniden seçin (tarayıcınız dosya erişimini saklamaz)",
+        "loading": "Açılıyor…"
+      }
+    },
+    "preview": {
+      "cut": "Kesim",
+      "back": "5 sn geri",
+      "play": "Oynat",
+      "pause": "Duraklat",
+      "savedHint": "Kesimlerle çıkarılan süre",
+      "badge": "Hafif önizleme · {{ q }}p",
+      "quality": "Önizleme kalitesi",
+      "qualityHint": "Daha hafif bir önizleme düzenleyiciyi akıcı tutar. Dışa aktarım her zaman tam kaliteyi kullanır"
+    },
+    "timeline": {
+      "title": "Zaman çizelgesi",
+      "silence": "Sessizlik",
+      "manual": "Manuel",
+      "text": "Metin",
+      "hint": "Bir bölüm seçmek için dalga formunda sürükleyin, ardından Kes veya Hız · kenarlarını ayarlamak için bir kesime tıklayın · kaldırmak için çift tıklayın",
+      "removeCut": "Kesimi kaldır",
+      "zoom": "Zaman çizelgesi yakınlaştırma",
+      "analyzing": "Ses analiz ediliyor…",
+      "zoomIn": "Yakınlaştır",
+      "zoomOut": "Uzaklaştır",
+      "fit": "Sığdır",
+      "fitHint": "Tüm videoyu göster (ipucu: yakınlaştırmak için Ctrl + tekerlek)",
+      "manualCut": "Elle kes",
+      "markIn": "Başlangıç",
+      "markOut": "Bitiş",
+      "markInHint": "Kesilecek bölümün başlangıcı, oynatma konumunda (I)",
+      "markOutHint": "Kesilecek bölümün bitişi, oynatma konumunda (O)",
+      "cutMarked": "Kes",
+      "cutHint": "Başlangıç ile bitiş arasındaki bölümü kaldır (X)",
+      "clearMarks": "Başlangıç ve bitişi temizle",
+      "marksMissing": "Önce bir başlangıç (I) ve bir bitiş (O) belirleyin",
+      "analysisError": "Ses analiz edilemedi",
+      "selectedCut": "Seçili kesim",
+      "earlier": "Daha erken",
+      "later": "Daha geç",
+      "listen": "Kesimi dinle",
+      "speed": "Hız",
+      "speedHint": "Başlangıç ile bitiş arasındaki bölümü hızlandır veya yavaşlat",
+      "selectedSpeed": "Hız değişikliği",
+      "removeSpeed": "Normal hıza dön",
+      "listenSpeed": "Hız değişikliğini oynat",
+      "selectFirst": "Önce bir bölüm seçin: dalga formunda sürükleyin veya Başlangıç ve Bitiş belirleyin"
+    },
+    "transcript": {
+      "title": "Döküm",
+      "words": "{{ count }} kelime",
+      "fillers": "Dolgu kelimelerini kaldır ({{ count }})",
+      "restore": "Tümünü geri yükle",
+      "selected": "{{ count }} seçili",
+      "cut": "Kes / geri yükle",
+      "tip": "Bir kelimeye gitmek için tıklayın. Seçmek için sürükleyin veya Shift ile tıklayın, ardından kesmek için Delete'e ya da Whisper'ın yanlış duyduğunu düzeltmek için Düzelt'e (Enter) basın",
+      "emptyTitle": "Henüz döküm yok",
+      "emptyText": "Videoyu metinle düzenlemek ve kelime kelime altyazı almak için yazıya dökün",
+      "correct": "Düzelt",
+      "correctTitle": "Gerçekte ne söylendi?",
+      "correctHint": "Bir kelimeyi veya tüm cümleyi yeniden yazın. Zamanlamalar ve altyazılar otomatik olarak ayarlanır",
+      "apply": "Uygula"
+    },
+    "transcribe": {
+      "title": "Yazıya dökme (Whisper)",
+      "hint": "Cihazınızda çalışır. Model bir kez indirilir, sonra önbellekte tutulur",
+      "model": "Model",
+      "models": {
+        "tiny": "Hızlı",
+        "base": "Dengeli",
+        "small": "Hassas"
+      },
+      "download": "Tek seferlik indirme: {{ size }}",
+      "language": "Konuşulan dil",
+      "auto": "Otomatik algıla",
+      "run": "Yazıya dök",
+      "rerun": "Tümünü yeniden yazıya dök",
+      "done": "{{ count }} kelime yazıya döküldü",
+      "empty": "Bu videoda konuşma bulunamadı",
+      "stage": {
+        "audio": "Ses çıkarılıyor…",
+        "download": "Model indiriliyor…",
+        "transcribe": "Yazıya dökülüyor…"
+      },
+      "missing": "Yeni klipleri yazıya dök ({{ count }})",
+      "rerunHint": "Yukarıdaki model ve dille baştan başlar",
+      "confirmAll": "Her şey yeniden yazıya dökülsün mü? Kestiğiniz veya düzelttiğiniz kelimeler kaybolur",
+      "detected": "Algılanan dil: {{ language }}"
+    },
+    "tabs": {
+      "format": "Biçim",
+      "cuts": "Kesimler",
+      "captions": "Altyazılar",
+      "framing": "Çerçeveleme",
+      "audio": "Ses",
+      "clips": "Klipler",
+      "texts": "Metinler"
+    },
+    "format": {
+      "title": "Çıktı biçimi",
+      "hint": "Video sığması için kırpılır. Konuşan kişiyi takip etmek için Çerçeveleme'yi kullanın",
+      "landscape": "YouTube",
+      "vertical": "TikTok · Reels",
+      "square": "Akış",
+      "source": "Kaynak:",
+      "resolution": "Çözünürlük",
+      "fps": "Saniyedeki kare sayısı",
+      "exportNote": "Çözünürlük ve kare hızı dışa aktarırken seçilir",
+      "rotation": "Döndürme",
+      "rotateLeft": "Sola döndür",
+      "rotateRight": "Sağa döndür",
+      "rotationHint": "Yan çekilmiş bir video için. Tüm kliplere uygulanır",
+      "rotatedFaces": "Video döndürüldü: Çerçeveleme'de “Yüzü takip et”i yeniden açın"
+    },
+    "cuts": {
+      "title": "Sessizlik algılama",
+      "hint": "Duraklamaları kaldırır. Kelimeler kesiliyorsa eşiği düşürün",
+      "threshold": "Eşik",
+      "suggested": "Bu kayıt için önerilen: {{ value }} dB",
+      "minSilence": "Minimum sessizlik",
+      "padding": "Nefes payı",
+      "detect": "Sessizlikleri algıla ve kes",
+      "detected": "{{ count }} sessizlik kesildi",
+      "count": "kesim",
+      "removed": "çıkarıldı",
+      "final": "son süre",
+      "clear": "Tüm kesimleri kaldır",
+      "mode": "Duraklamaları bul:",
+      "modes": {
+        "audio": "Ses seviyesi",
+        "transcript": "Döküm"
+      },
+      "modeHint": "Döküm modu arka plan gürültüsü veya müzik olsa bile hassastır",
+      "modeNeedsTranscript": "Duraklamaları kelimelerden bulmak için videoyu yazıya dökün: gürültülü yerlerde daha hassas",
+      "preset": "Ritim",
+      "presets": {
+        "gentle": "Doğal",
+        "normal": "Dengeli",
+        "tight": "Dinamik"
+      },
+      "live": "Ayarları değiştirdikçe kesimler anında güncellenir",
+      "silentClips": "Sessiz {{ count }} klip: oralarda yalnızca gerçek boşluklar kesilir"
+    },
+    "captions": {
+      "title": "Videoya işlenmiş altyazılar",
+      "style": "Stil",
+      "styles": {
+        "karaoke": "Karaoke",
+        "clean": "Sade",
+        "boxed": "Kutulu"
+      },
+      "position": "Konum",
+      "positions": {
+        "top": "Üst",
+        "center": "Orta",
+        "bottom": "Alt"
+      },
+      "size": "Boyut",
+      "words": "Altyazı başına kelime",
+      "uppercase": "Büyük harf",
+      "highlight": "Vurgu rengi"
+    },
+    "framing": {
+      "title": "Otomatik çerçeveleme",
+      "hint": "Konuşanı kadrajda tutmak için yüzleri takip eder, 16:9 → 9:16 için ideal",
+      "center": "Ortalanmış",
+      "face": "Yüzü takip et",
+      "analyzing": "Yüzler takip ediliyor…",
+      "analyze": "Yüzleri takip et",
+      "reanalyze": "Yüzleri yeniden takip et",
+      "tracked": "{{ count }} konum takip edildi",
+      "found": "Yüz takip edildi: çerçeve konuşanı izliyor",
+      "notFound": "Bu videoda tutarlı bir yüz bulunamadı",
+      "punch": "Akıllı yakınlaştırma",
+      "punchHint": "Video dinamik kalsın diye her kesimde, kesim yoksa her cümlede hafif bir yakınlaştırmayı dönüşümlü uygular",
+      "zoom": "Yakınlaştırma miktarı",
+      "firstTime": "“Yüzü takip et”i seçmek videoyu bir kez yerel olarak analiz eder",
+      "beatsCuts": "Yakınlaştırma kesimlerinizde {{ count }} kez değişir",
+      "beatsAuto": "Henüz kesim yok: yakınlaştırma cümlelerde veya 4 saniyede bir {{ count }} kez değişir"
+    },
+    "audio": {
+      "title": "Arka plan müziği",
+      "hint": "Biri konuşurken müzik otomatik olarak kısılır (auto-ducking)",
+      "reconnect": "“{{ name }}” dosyasını yeniden bağla",
+      "pick": "Bir müzik dosyası seç",
+      "enabled": "Videoya ekle",
+      "volume": "Müzik ses seviyesi",
+      "ducking": "Konuşma sırasında kısma",
+      "duckingHint": "Biri konuştuğunda müziğin ne kadar kısılacağı"
+    },
+    "export": {
+      "button": "Dışa aktar",
+      "title": "Videoyu dışa aktar",
+      "running": "Dışa aktarılıyor…",
+      "eta": "Yaklaşık {{ time }} kaldı",
+      "keepOpen": "Bu sekmeyi açık tutun. Kodlama mümkün olduğunda ekran kartınızı kullanır",
+      "done": "Dışa aktarma tamamlandı",
+      "saved": "“{{ name }}” {{ seconds }} sn içinde diskinize kaydedildi",
+      "downloaded": "“{{ name }}” {{ seconds }} sn içinde indirildi",
+      "duration": "Süre",
+      "from": "önceden {{ time }}",
+      "streamHint": "MP4'ün nereye kaydedileceğini siz seçersiniz. Doğrudan diske yazılır",
+      "downloadHint": "MP4 yerel olarak birleştirilir, ardından indirilir",
+      "start": "MP4 dışa aktar",
+      "saveProject": "Projeyi kaydet",
+      "saveProjectHint": "Başka bir bilgisayarda devam etmek için düzenlemenizi içeren bir .lcv.json dosyası (içinde video yok)",
+      "projectSaved": "Proje .lcv.json dosyası olarak kaydedildi"
+    },
+    "clips": {
+      "title": "Klipler",
+      "hint": "Videolar bu sırayla art arda oynatılır. Sıralamak için sürükleyin: kesimler ve kelimeler klipleriyle birlikte taşınır",
+      "jump": "Bu klibe git",
+      "up": "Yukarı taşı",
+      "down": "Aşağı taşı",
+      "remove": "Klibi kaldır",
+      "add": "Video ekle",
+      "summary": "{{ count }} klip · toplam {{ time }}",
+      "confirmRemove": "“{{ name }}” projeden kaldırılsın mı? Kesimleri ve kelimeleri de kaldırılır (geri almak için Ctrl+Z)",
+      "added": "{{ count }} klip eklendi",
+      "addedTranscribe": "{{ count }} klip eklendi. Altyazı eklemek için yeniden yazıya dökün: zaten dökülmüş klipler korunur",
+      "noVoice": "ses yok",
+      "voiceOn": "Ses var · kimse konuşmuyorsa tıklayın",
+      "voiceOff": "Ses yok · biri konuşuyorsa tıklayın"
+    },
+    "auto": {
+      "button": "Otomatik düzenle",
+      "cta": "Videoyu otomatik düzenle",
+      "transcribeOnly": "veya yalnızca yazıya dök",
+      "heading": "Videonuzu LocalCutVideo düzenlesin",
+      "lead": "Tek tıkla: sessizlikler ve duraksamalar kaldırılır, altyazılar, konuşana çerçeveleme ve akıllı yakınlaştırma. Sonra her şeyi değiştirebilirsiniz",
+      "target": "Nerede paylaşacaksınız?",
+      "options": {
+        "silences": "Sessizlikleri kes",
+        "fillers": "Duraksamaları kaldır (ııı, eee…)",
+        "captions": "Karaoke altyazılar",
+        "framing": "Yüzü takip et",
+        "framingNoCrop": "Gerek yok: bu biçim tüm görüntüyü gösterir",
+        "zoom": "Akıllı yakınlaştırma"
+      },
+      "local": "Her şey cihazınızda çalışır. Video asla yüklenmez",
+      "start": "Otomatik düzenlemeyi başlat",
+      "running": "Videonuz düzenleniyor…",
+      "done": "Videonuz düzenlendi!",
+      "view": "Sonucu gör",
+      "undo": "Otomatik düzenlemeyi geri al",
+      "undone": "Proje, otomatik düzenlemeden önceki haline döndü",
+      "summary": {
+        "cuts": "kesim",
+        "removed": "çıkarıldı",
+        "words": "altyazılı kelime",
+        "silent": "Sessiz {{ count }} klip: yalnızca gerçek boşluklar kesildi"
+      },
+      "steps": {
+        "analyze": "Ses analiz ediliyor",
+        "transcribe": "Konuşma yazıya dökülüyor",
+        "fillers": "Duraksamalar kaldırılıyor",
+        "silences": "Sessizlikler kesiliyor",
+        "framing": "Yüz takip ediliyor",
+        "style": "Altyazılar ve akıllı yakınlaştırma",
+        "voice": "Sesler algılanıyor"
+      },
+      "status": {
+        "skipped": "atlandı",
+        "error": "başarısız"
+      },
+      "voice": {
+        "title": "Videoda biri konuşuyor mu?",
+        "auto": "Otomatik",
+        "yes": "Evet",
+        "no": "Hayır",
+        "detectedYes": "Algılandı: biri konuşuyor",
+        "detectedNo": "Algılandı: ses yok",
+        "hint": "Ses yok: döküm ve altyazı yok, yalnızca gerçek boşluklar kesilir"
+      }
+    },
+    "mix": {
+      "title": "Video sesi",
+      "hint": "Kliplerinizin sesini açın veya kısın",
+      "volume": "Ses seviyesi",
+      "mute": "Sessize al",
+      "unmute": "Sesi aç",
+      "volumeHint": "Önizlemeye ve dışa aktarıma uygulanır",
+      "boostHint": "%100'ün üzerinde bir sınırlayıcı bozulmayı önler",
+      "normalize": "Klipleri dengele",
+      "normalizeHint": "Yakından veya uzaktan çekilmiş olsun, tüm klipler aynı ses yüksekliğinde",
+      "denoise": "Arka plan gürültüsünü azalt",
+      "denoiseHint": "Daha net ses (rüzgâr, cızırtı, fanlar). Dışa aktarırken sesli kliplere uygulanır. Önce dinleyin",
+      "listen": "Sonucun 8 sn'sini dinle",
+      "stopListening": "Dinlemeyi durdur",
+      "preparing": "Hazırlanıyor…"
+    },
+    "thumbnail": "Kapak görseli",
+    "transition": {
+      "title": "Kesimlerde geçiş",
+      "none": "Sert kesim",
+      "dip": "Hızlı geçiş",
+      "black": "Siyaha kararma",
+      "hint": "Her kesimde ve klip değişiminde (siyaha kararmada başta ve sonda da) oynar. Oynatırken görünür"
+    },
+    "texts": {
+      "title": "Video üzerindeki metinler",
+      "hint": "Oynatma konumunda gösterilen başlıklar ve notlar. Renklendirmek için kelimeleri yıldız işaretleri arasına alın",
+      "add": "Oynatma konumuna metin ekle",
+      "default": "Sizin *metniniz*",
+      "timing": "Gösterilme",
+      "startHere": "Burada başla",
+      "endHere": "Burada bitir",
+      "remove": "Bu metni kaldır"
+    },
+    "background": {
+      "title": "Arka plan",
+      "hint": "Kişinin arkasındaki arka planı bulanıklaştırır, kişi net kalır. Cihazınızda hesaplanır",
+      "none": "Net",
+      "blur": "Bulanık",
+      "strength": "Bulanıklık gücü",
+      "error": "Arka plan bulanıklaştırma bu cihazda başlatılamadı"
+    }
+  },
+  "legal": {
+    "updated": "Son güncelleme: 1 Kasım 2026",
+    "contact": "İletişim",
+    "nav": {
+      "notice": "Yasal bildirim",
+      "privacy": "Gizlilik",
+      "terms": "Kullanım koşulları"
+    },
+    "notice": {
+      "title": "Yasal bildirim",
+      "intro": "Fransız yasalarının (LCEN 6. madde, 21 Haziran 2004 tarihli 2004-575 sayılı kanun) bu web sitesinin yayıncısı ve barındırıcısı hakkında gerektirdiği bilgiler.",
+      "sections": [
+        {
+          "title": "Yayıncı",
+          "body": [
+            "localcutvideo.mbonnici.fr web sitesi (“LocalCutVideo”), özel bir kişi olan Maxence Bonnici tarafından ticari olmayan amaçla yayımlanmaktadır.",
+            "Yayın sorumlusu: Maxence Bonnici.",
+            "İletişim: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Barındırma",
+          "body": [
+            "Web sitesi, yayıncısı Maxence Bonnici tarafından kişisel bir sunucuda barındırılır ve Coolify platformuyla yayına alınır.",
+            "İletişim: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Fikri mülkiyet",
+          "body": [
+            "LocalCutVideo'nun kaynak kodu açıktır ve MIT lisansıyla [GitHub](https://github.com/ImMaxence/LocalCutVideo) üzerinde yayımlanmıştır.",
+            "Uygulamanın kullandığı üçüncü taraf bileşenler, YZ modelleri ve yazı tipleri sahiplerinin mülkü olmaya devam eder ve [kullanım koşullarında](/terms) listelenen kendi lisanslarıyla kullanılır. Anılan markalar (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) sahiplerine aittir."
+          ]
+        },
+        {
+          "title": "Sorumluluk",
+          "body": [
+            "Yayıncı web sitesini erişilebilir ve bilgilerini doğru tutmaya çalışır, ancak ikisini de garanti edemez. Uygulamanın kullanımı [kullanım koşullarına](/terms) tabidir."
+          ]
+        },
+        {
+          "title": "Kişisel veriler",
+          "body": [
+            "LocalCutVideo hiçbir kişisel veri toplamaz: videolar yalnızca cihazınızda işlenir. Ayrıntılar [gizlilik politikasında](/privacy) yer alır."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Gizlilik politikası",
+      "intro": "LocalCutVideo, videolarınız cihazınızdan hiç çıkmayacak şekilde tasarlandı. Bu sayfa neyin, nerede işlendiğini sade bir dille açıklar.",
+      "sections": [
+        {
+          "title": "Kısaca",
+          "body": [
+            "Yükleme yok: videolarınız, sesiniz ve dökümleriniz tarayıcınızda işlenir ve asla yayıncıya ya da başka birine gönderilmez.",
+            "Hesap yok, çerez yok, istatistik yok, reklam yok."
+          ]
+        },
+        {
+          "title": "Cihazınızda kalanlar",
+          "body": [
+            "Açtığınız video ve ses dosyaları doğrudan diskinizden okunur. Analiz, yazıya dökme (Whisper), yüz takibi ve dışa aktarma tarayıcınız tarafından yerel olarak hesaplanır.",
+            "Projeleriniz (kesimler, döküm, ayarlar), bir kapak görseli ve analiz önbelleğiyle birlikte tarayıcınızın yerel veritabanında (IndexedDB) saklanır. Yayıncının bunlara erişimi yoktur. Bir projeyi projeler sayfasından silebilir veya tarayıcı ayarlarından bu sitenin verilerini temizleyerek her şeyi silebilirsiniz."
+          ]
+        },
+        {
+          "title": "Yerel depolama",
+          "body": [
+            "Uygulama arayüz tercihlerinizi (dil, tema, son açılan proje) tarayıcının yerel depolamasında saklar; çevrimdışı çalışabilmek için de kendi dosyalarını ve indirilen YZ modellerini tarayıcı önbelleğinde tutar. Bunlar hizmet için kesinlikle gereklidir, sizi takip etmek için asla kullanılmaz ve bu nedenle onay bandı gerektirmez."
+          ]
+        },
+        {
+          "title": "Sunucu",
+          "body": [
+            "Sunucu yalnızca uygulamanın dosyalarını sunar ve erişim kaydı tutmaz. Her web sunucusu gibi, isteklere yanıt vermek için teknik olarak IP adresinizi alır, ancak saklamaz."
+          ]
+        },
+        {
+          "title": "Üçüncü taraflar",
+          "body": [
+            "Hugging Face: Whisper modeli, uygulamanın geri kalanı gibi bu site tarafından sunulur. Yalnızca burada mevcut değilse bunun yerine huggingface.co'dan indirilir; bu durumda Hugging Face IP adresinizi ve standart tarayıcı bilgilerini alır, ancak sesinizi asla almaz. Onların [gizlilik politikasına](https://huggingface.co/privacy) bakın.",
+            "GitHub: yalnızca kaynak kod deposuna giden bir bağlantıyı izlerseniz.",
+            "Başka hiçbir üçüncü tarafla iletişim kurulmaz: katı bir Content-Security-Policy, sayfanın başka herhangi bir yere bağlanmasını teknik olarak engeller."
+          ]
+        },
+        {
+          "title": "Haklarınız",
+          "body": [
+            "GDPR kapsamında verilerinize erişme, bunları düzeltme ve silme ile işlenmelerine itiraz etme hakkına sahipsiniz. Yayıncı sizinle ilgili hiçbir veri tutmadığından genellikle erişilecek bir şey yoktur, ancak her türlü sorunuzu maxence.bonnici@outlook.fr adresine iletebilirsiniz. Ayrıca CNIL'e ([cnil.fr](https://www.cnil.fr)) veya ülkenizin veri koruma otoritesine şikâyette bulunabilirsiniz."
+          ]
+        },
+        {
+          "title": "Değişiklikler",
+          "body": [
+            "Bu politika uygulama geliştikçe güncellenebilir. Son güncelleme tarihi bu sayfanın en üstünde gösterilir."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Kullanım koşulları",
+      "intro": "LocalCutVideo'yu kullanarak bu koşulları kabul edersiniz. Hizmet basit olduğu için kısadırlar: tarayıcınızda çalışan ücretsiz bir araç.",
+      "sections": [
+        {
+          "title": "Hizmet",
+          "body": [
+            "LocalCutVideo, tamamen web tarayıcınızda çalışan ücretsiz bir video düzenleme uygulamasıdır. Ücretsiz ve hesapsız sunulur; herhangi bir zamanda bildirimde bulunmadan değişebilir, kesintiye uğrayabilir veya sona erebilir."
+          ]
+        },
+        {
+          "title": "İçeriğiniz",
+          "body": [
+            "Düzenlediğiniz ve yayımladığınız videoların, seslerin ve müziklerin tek sahibi ve tek sorumlusu siz olmaya devam edersiniz. Gerekli haklara (telif hakkı, müzik lisansları, çekilen kişilerin görüntü hakları) sahip olmalısınız.",
+            "Uygulama yasa dışı amaçlarla kullanılmamalıdır."
+          ]
+        },
+        {
+          "title": "Otomatik özellikler",
+          "body": [
+            "Yazıya dökme, altyazılar, sessizlik algılama ve otomatik çerçeveleme otomatik olarak üretilir ve hata içerebilir. Yayımlamadan önce sonucu kontrol edin."
+          ]
+        },
+        {
+          "title": "Dosyalarınız ve projeleriniz",
+          "body": [
+            "Uygulama orijinal dosyalarınızı asla değiştirmez. Projeler tarayıcınızda saklanır ve tarayıcı verileri temizlenirse veya tarayıcı yer açarsa kaybolabilir: orijinal dosyalarınızı her zaman saklayın."
+          ]
+        },
+        {
+          "title": "Garanti ve sorumluluk",
+          "body": [
+            "Yazılım, MIT lisansı kapsamında hiçbir garanti olmaksızın “olduğu gibi” sunulur. Yasaların izin verdiği ölçüde yayıncı, uygulamanın kullanımından veya kullanılamamasından doğan hiçbir zarardan (veri kaybı, dışa aktarma hataları, erişilemezlik…) sorumlu tutulamaz."
+          ]
+        },
+        {
+          "title": "Açık kaynak ve üçüncü taraf bileşenler",
+          "body": [
+            "Kaynak kod, MIT lisansıyla [GitHub](https://github.com/ImMaxence/LocalCutVideo) üzerinde mevcuttur.",
+            "LocalCutVideo şunlara dayanır: Mediabunny (MPL-2.0), Transformers.js ve ONNX Runtime (Apache-2.0 ve MIT), OpenAI'ın Whisper modelleri (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ile Inter ve Montserrat yazı tipleri (SIL Open Font License)."
+          ]
+        },
+        {
+          "title": "Uygulanacak hukuk",
+          "body": [
+            "Bu koşullar Fransız hukukuna tabidir. Sorular: maxence.bonnici@outlook.fr."
+          ]
+        }
+      ]
+    }
+  },
+  "thumbnail": {
+    "eyebrow": "Kapak görseli aracı",
+    "title": "Tıklanmak isteyen kapak görselleri",
+    "lead": "Videonuzun en iyi anını seçin, çarpıcı bir başlık ekleyin ve YouTube, Shorts veya Instagram için hazır bir görsel indirin. Her şey cihazınızda olur",
+    "pick": "Bir video veya görsel bırakın",
+    "pickHint": "MP4, MOV, WebM, JPG, PNG… dosya cihazınızda kalır",
+    "choose": "Dosya seç",
+    "local": "Hiçbir şey yüklenmez: görsel tarayıcınızda oluşturulur",
+    "permissionTitle": "Projenin videosuna erişime izin verin",
+    "permissionText": "Tarayıcınız, dosyayı cihazınızdan yeniden okumadan önce onay ister",
+    "permission": "Erişime izin ver",
+    "back": "Düzenleyiciye dön",
+    "dragHint": "Yeniden çerçevelemek için görseli sürükleyin",
+    "frame": "Video karesi",
+    "prevFrame": "Önceki kare",
+    "nextFrame": "Sonraki kare",
+    "moments": "En iyi anlar",
+    "other": "Başka bir dosya seç",
+    "format": "Biçim",
+    "formats": {
+      "landscape": "YouTube",
+      "vertical": "Shorts · TikTok",
+      "square": "Instagram"
+    },
+    "text": "Başlık",
+    "textPlaceholder": "Dikkat çekici başlığınız",
+    "defaultText": "*Başlığınız* burada",
+    "accentHint": "Renklendirmek için kelimeleri yıldız işaretleri arasına alın: *böyle*",
+    "size": "Metin boyutu",
+    "position": "Konum",
+    "positions": {
+      "top": "Üst",
+      "center": "Orta",
+      "bottom": "Alt"
+    },
+    "alignCenter": "Ortalanmış",
+    "alignLeft": "Sola",
+    "uppercase": "Büyük harfler",
+    "tilt": "Eğik metin",
+    "style": "Başlık stili",
+    "styles": {
+      "outline": "Kontur",
+      "shadow": "Gölge",
+      "box": "Şerit",
+      "highlight": "Fosforlu kalem"
+    },
+    "color": "Metin rengi",
+    "accent": "Vurgulu kelimelerin rengi",
+    "image": "Görsel",
+    "zoom": "Yakınlaştırma",
+    "brightness": "Parlaklık",
+    "contrast": "Kontrast",
+    "saturation": "Doygunluk",
+    "shade": "Kenarları karart",
+    "reset": "Sıfırla",
+    "downloadJpg": "JPG indir",
+    "downloadPng": "PNG indir",
+    "sizeInfo": "{{ width }} × {{ height }} px · YouTube için en iyisi JPG (2 MB altı)",
+    "saved": "Kaydedildi: {{ name }}",
+    "loadError": "Bu proje açılamadı",
+    "readError": "Bu dosya okunamadı"
+  },
+  "seo": {
+    "home": {
+      "title": "LocalCutVideo — Tarayıcıda ücretsiz video düzenleyici, hiçbir şey yüklenmez",
+      "description": "Videolarınızı tarayıcıda düzenleyin: sessizlikler otomatik kesilir, yapay zekâ altyazıları, TikTok ve Shorts için yüze çerçeveleme, kapak görselleri. Ücretsiz ve açık kaynak, videolarınız bilgisayarınızdan hiç çıkmaz"
+    },
+    "thumbnail": {
+      "title": "Ücretsiz YouTube kapak görseli aracı — LocalCutVideo",
+      "description": "Videonuzdan YouTube, Shorts veya Instagram kapak görseli yapın: en iyi anlar önerilir, renkli kelimelerle büyük başlık, JPG veya PNG. Ücretsiz, tarayıcıda, hiçbir şey yüklenmez"
+    },
+    "changelog": {
+      "title": "Değişiklikler — LocalCutVideo",
+      "description": "LocalCutVideo'daki yenilikler, sürüm sürüm"
+    },
+    "legal": {
+      "title": "Yasal bildirim — LocalCutVideo",
+      "description": "LocalCutVideo'nun yayıncısı ve barındırılması"
+    },
+    "privacy": {
+      "title": "Gizlilik politikası — LocalCutVideo",
+      "description": "LocalCutVideo hiçbir şey yüklemez: videolarınız, dökümleriniz ve projeleriniz cihazınızda kalır"
+    },
+    "terms": {
+      "title": "Kullanım koşulları — LocalCutVideo",
+      "description": "Ücretsiz ve açık kaynaklı video düzenleyici LocalCutVideo'nun kullanım koşulları"
+    },
+    "app": {
+      "title": "Projeler — LocalCutVideo",
+      "description": "Tarayıcınıza kaydedilen video projeleriniz"
+    },
+    "editor": {
+      "title": "Düzenleyici — LocalCutVideo",
+      "description": "LocalCutVideo düzenleyicisi"
+    }
+  },
+  "tour": {
+    "label": "Rehberli tur",
+    "help": "Rehberli tur",
+    "count": "Adım {{ n }} / {{ total }}",
+    "skip": "Turu atla",
+    "prev": "Geri",
+    "next": "İleri",
+    "done": "Haydi başlayalım!",
+    "steps": {
+      "auto": {
+        "title": "Tek tık: otomatik düzenleme",
+        "text": "LocalCutVideo videoyu sizin için düzenler: sessizlikler ve duraksamalar kaldırılır, altyazılar, çerçeveleme ve yakınlaştırma. Sonra her şeyi değiştirebilirsiniz"
+      },
+      "preview": {
+        "title": "Önizleme",
+        "text": "Gördüğünüz tam olarak dışa aktarılacak olandır. Oynatmak veya duraklatmak için üzerine tıklayın ya da Boşluk tuşuna basın"
+      },
+      "timeline": {
+        "title": "Zaman çizelgesi",
+        "text": "Videoda gezinmek için tıklayın. Bir bölüm seçmek için dalga formunda sürükleyin"
+      },
+      "cut": {
+        "title": "Kesin veya hızı değiştirin",
+        "text": "Bir bölüm seçiliyken Kes (X) onu kaldırır, Hız ise daha hızlı veya daha yavaş oynatır. Ctrl+Z her şeyi geri alır"
+      },
+      "transcript": {
+        "title": "Metinle düzenleme",
+        "text": "Yazıya döküldükten sonra bir kelimeyi silmek videoyu keser. Yapay zekânın yanlış duyduğunu da düzeltebilirsiniz"
+      },
+      "settings": {
+        "title": "Tüm ayarlar",
+        "text": "Biçim (16:9, 9:16, kare), kesimler ve geçişler, altyazılar, metinler, çerçeveleme ve bulanıklık, ses ve müzik"
+      },
+      "thumbnail": {
+        "title": "Kapak görseli",
+        "text": "Videonuzun kapak görselini en iyi anlarından oluşturun"
+      },
+      "export": {
+        "title": "Dışa aktar",
+        "text": "Videoyu MP4 olarak kaydedin. Her şey cihazınızda olur, hiçbir şey yüklenmez"
+      }
+    }
+  }
+}

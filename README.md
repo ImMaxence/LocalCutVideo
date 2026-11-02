@@ -53,9 +53,9 @@
 | **Fast export** | Hardware encoding with WebCodecs, MP4 muxing with Mediabunny, streamed straight to disk. |
 | **Crash recovery** | Every change is auto-saved to IndexedDB; the video file is reconnected on reopen. |
 | **PWA** | Installable, works offline, "Open with LocalCutVideo" for video files. |
-| **5 languages** | English, French, Spanish, Italian, German, each public page with its own URL (`/fr`, `/es`…). Light / dark / system theme. |
+| **44 languages** | From English and French to Japanese, Arabic or Swahili, each public page with its own URL (`/fr`, `/pt-br`, `/zh-cn`…); right-to-left layout for Arabic, Hebrew, Persian and Urdu. Light / dark / system theme. |
 | **SEO** | Public pages prerendered at build time (Angular SSG) with titles, descriptions, canonical and `hreflang` links, schema.org data, `sitemap.xml`, `robots.txt` and `llms.txt` for AI assistants. |
-| **Legal pages** | Legal notice, privacy policy and terms of use, in the 5 languages. |
+| **Legal pages** | Legal notice, privacy policy and terms of use, in every language. |
 
 ## Screenshots
 

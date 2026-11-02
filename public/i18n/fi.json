@@ -1,0 +1,895 @@
+{
+  "common": {
+    "videoFiles": "Videotiedostot",
+    "audioFiles": "Äänitiedostot",
+    "cancel": "Peruuta",
+    "close": "Sulje",
+    "retry": "Yritä uudelleen",
+    "none": "Ei mitään",
+    "remove": "Poista"
+  },
+  "nav": {
+    "features": "Ominaisuudet",
+    "privacy": "Yksityisyys",
+    "faq": "UKK",
+    "changelog": "Muutosloki",
+    "language": "Kieli",
+    "searchLanguage": "Hae kieltä",
+    "noLanguage": "Kieltä ei löytynyt",
+    "install": "Asenna sovellus",
+    "open": "Avaa editori",
+    "menu": "Avaa valikko",
+    "close": "Sulje valikko",
+    "thumbnail": "Pikkukuvat"
+  },
+  "theme": {
+    "system": "Järjestelmä",
+    "light": "Vaalea",
+    "dark": "Tumma",
+    "label": "Teema"
+  },
+  "footer": {
+    "tagline": "Ilmainen avoimen lähdekoodin videoeditori, joka toimii kokonaan selaimessasi. Tiedostosi eivät koskaan poistu tietokoneeltasi",
+    "issues": "Ilmoita ongelmasta",
+    "noTracking": "Ei evästeitä, ei seurantaa",
+    "product": "Tuote",
+    "legal": "Oikeudelliset tiedot"
+  },
+  "pwa": {
+    "update": "Uusi versio on saatavilla",
+    "reload": "Lataa uudelleen"
+  },
+  "landing": {
+    "hero": {
+      "badgeLocal": "100 % paikallinen, ei latauksia palvelimelle",
+      "badgeOpen": "Ilmainen ja avointa lähdekoodia",
+      "title1": "Muokkaa videoitasi",
+      "title2": "Mikään ei poistu tietokoneeltasi",
+      "lead": "LocalCutVideo leikkaa hiljaiset kohdat, litteroi Whisperillä, polttaa karaoketekstitykset ja rajaa 16:9-videon muotoon 9:16, kokonaan selaimessasi. Ei latauksia, ei tiliä, ei palvelinta",
+      "cta": "Avaa editori",
+      "github": "Katso GitHubissa",
+      "hint": "Toimii parhaiten Chromella tai Edgellä tietokoneella",
+      "demo": "Kokeile esittelyvideolla"
+    },
+    "mock": {
+      "w1": "Eli tänään",
+      "filler": "öö,",
+      "w2": "näytän teille",
+      "w3": "miten se toimii",
+      "line2": "Kaikki toimii omalla koneellasi, jopa tekoäly",
+      "line3": "Poista sana, niin video leikataan",
+      "cap1": "Tämä pysyy",
+      "cap2": "tietokoneellasi"
+    },
+    "stats": {
+      "upload": "tavua ladattu palvelimelle",
+      "local": "käsitelty laitteellasi",
+      "languages": "käyttöliittymän kieltä",
+      "gpu": "kiihdytetty tekoäly ja koodaus"
+    },
+    "how": {
+      "eyebrow": "Näin se toimii",
+      "title": "Raakamateriaalista julkaisuvalmiiksi videoksi kolmessa vaiheessa",
+      "open": {
+        "title": "Avaa video",
+        "text": "Valitse tiedosto levyltäsi. Se luetaan paikallaan: ei kopiota, ei latausta, vaikka tiedosto olisi useita gigatavuja"
+      },
+      "edit": {
+        "title": "Anna editorin tehdä työ",
+        "text": "Hiljaiset kohdat tunnistetaan, puhe litteroidaan sana sanalta ja kasvoja seurataan, kaikki paikallisesti. Korjaa mitä tahansa muokkaamalla tekstiä"
+      },
+      "export": {
+        "title": "Vie MP4-tiedosto",
+        "text": "Valitse 16:9, 9:16 tai 1:1. Näytönohjaimesi koodaa videon ja se kirjoitetaan suoraan levyllesi"
+      }
+    },
+    "features": {
+      "eyebrow": "Ominaisuudet",
+      "title": "Kaikki mitä tarvitset puhevideoihin",
+      "lead": "Tehty YouTube-, TikTok-, Reels- ja Shorts-sisällöntuottajille, jotka eivät halua ladata raakamateriaaliaan minnekään",
+      "silences": {
+        "title": "Hiljaisuuksien automaattinen leikkaus",
+        "text": "Tunnistaa tauot äänenvoimakkuudesta ja poistaa ne, säädettävällä kynnyksellä, vähimmäispituudella ja hengitystilalla"
+      },
+      "textEdit": {
+        "title": "Muokkaa tekstin kautta",
+        "text": "Whisper antaa jokaiselle sanalle aikaleiman. Poista sanoja litteroinnista, niin vastaava kohta videosta leikataan"
+      },
+      "captions": {
+        "title": "Karaoketekstitykset",
+        "text": "Sana sanalta animoidut tekstitykset poltettuna videoon, karaoke-, pelkistetyllä tai laatikkotyylillä, omalla korostusvärilläsi"
+      },
+      "framing": {
+        "title": "Automaattinen rajaus 16:9 → 9:16",
+        "text": "Kasvojen seuranta pitää puhujan kuvassa, kun muutat vaakavideon pystyvideoksi"
+      },
+      "zoom": {
+        "title": "Älykäs zoomaus",
+        "text": "Vuorottelevat lähennykset jokaisessa leikkauksessa saavat hyppyleikkaukset näyttämään tarkoituksellisilta ja pitävät katsojat mukana"
+      },
+      "ducking": {
+        "title": "Ääni ja musiikki",
+        "text": "Nosta äänenvoimakkuutta, tasoita leikkeet ja lisää taustamusiikki, joka hiljenee itsestään aina kun joku puhuu"
+      },
+      "recovery": {
+        "title": "Palautus kaatumisen jälkeen",
+        "text": "Jokainen muutos tallennetaan selaimeesi reaaliajassa. Avaa välilehti uudelleen ja jatka täsmälleen siitä, mihin jäit"
+      },
+      "offline": {
+        "title": "Toimii ilman verkkoa",
+        "text": "Asenna se sovellukseksi. Kun tekoälymalli on ladattu, koko editori toimii ilman internetyhteyttä"
+      },
+      "export": {
+        "title": "Nopea laitteistovienti",
+        "text": "Koodaus käyttää WebCodecsia, selaimeesi ja näytönohjaimeesi sisäänrakennettua videokooderia, hitaan ohjelmistokoodauksen sijaan"
+      },
+      "clips": {
+        "title": "Useiden leikkeiden kokoaminen",
+        "text": "Pudota useita ottoja kerralla: ne yhdistetään yhdeksi videoksi valitsemassasi järjestyksessä, yhteisellä aikajanalla ja litteroinnilla"
+      },
+      "inputs": {
+        "title": "MP4, MOV, WebM, MKV",
+        "text": "Avaa puhelimesi ja kamerasi tiedostot, myös iPhonen HEVC-videot, kun selaimesi pystyy purkamaan ne"
+      },
+      "languages": {
+        "title": "Monikielinen",
+        "text": "Käyttöliittymä puhuu {{ count }} kieltä ja Whisper litteroi kymmeniä muita, automaattisella kielentunnistuksella"
+      }
+    },
+    "privacy": {
+      "eyebrow": "Yksityisyys",
+      "title": "Ei latauksia, suunnittelun lähtökohtana",
+      "lead": "Videosi luetaan suoraan levyltäsi. Äänianalyysi, litterointi, kasvojen seuranta ja koodaus toimivat taustasäikeissä (Web Workers) koneellasi. Palvelinta, jolle materiaalisi lähetettäisiin, ei yksinkertaisesti ole",
+      "upload": "Ei koskaan latauksia: tiedosto ei koskaan poistu tietokoneeltasi",
+      "account": "Ei tiliä, ei evästeitä, ei analytiikkaa",
+      "csp": "Tiukka Content-Security-Policy sallii sivun viestiä vain tämän sivuston kanssa, joka toimittaa myös tekoälymallit (Hugging Face on vain varalla)",
+      "storage": "Projektit tallennetaan selaimesi paikalliseen tietokantaan (IndexedDB), ja ne voi poistaa milloin tahansa",
+      "diagram": {
+        "machine": "Tietokoneesi",
+        "file": "Videotiedosto",
+        "browser": "Selaimesi",
+        "upload": "Lataus palvelimelle",
+        "model": "Tekoälymallin lataus (kerran, välimuistiin)"
+      }
+    },
+    "support": {
+      "eyebrow": "Yhteensopivuus",
+      "title": "Selaintuki",
+      "ok": "Täysi",
+      "partial": "Osittainen",
+      "full": "Kaikki, myös palautus kaatumisen jälkeen ja viennin kirjoitus suoraan levylle",
+      "firefox": "Muokkaus ja vienti toimivat. Kun olet sulkenut välilehden, sinua pyydetään valitsemaan video uudelleen",
+      "safari": "Vain uudet versiot. Valitse video uudelleen sivun päivityksen jälkeen; vienti ladataan",
+      "mobile": "Puhelimet ja tabletit",
+      "mobileText": "Toimii lyhyillä leikkeillä, mutta muistirajoitusten vuoksi pitkät videot eivät ole luotettavia"
+    },
+    "faq": {
+      "title": "Usein kysytyt kysymykset",
+      "free": {
+        "q": "Onko se todella ilmainen? Missä on juju?",
+        "a": "Se on ilmainen ja avointa lähdekoodia. Koska kaikki työ tehdään tietokoneellasi, palvelinkuluja ei ole, joten sinulle ei ole mitään myytävää eikä tietoja kerättävää"
+      },
+      "formats": {
+        "q": "Mitä videomuotoja voin avata?",
+        "a": "MP4, MOV, WebM ja MKV, kunhan selaimesi pystyy purkamaan koodekin (H.264, HEVC, VP9, AV1 selaimesta ja järjestelmästä riippuen). Vienti on MP4-tiedosto"
+      },
+      "browsers": {
+        "q": "Miksi Chrome tai Edge?",
+        "a": "Ne tukevat File System Access API:a, jonka avulla editori voi avata videosi uudelleen sivun päivityksen jälkeen ja kirjoittaa viennin suoraan levylle. Muutkin selaimet toimivat muutamalla lisäklikkauksella"
+      },
+      "size": {
+        "q": "Onko tiedostokoolla rajaa?",
+        "a": "Latausrajaa ei ole, koska mitään ei ladata. Video luetaan levyltä pieninä paloina; käytännön raja on tietokoneesi muisti ja kärsivällisyytesi hyvin pitkien videoiden kanssa"
+      },
+      "offline": {
+        "q": "Toimiiko se ilman internetiä?",
+        "a": "Kyllä, kun se on kerran ladattu. Asenna se sovellukseksi (PWA) ja litteroi kerran verkossa ollessasi: Whisper-malli tallentuu välimuistiin ja kaikki toimii ilman verkkoa"
+      },
+      "ai": {
+        "q": "Missä tekoäly toimii?",
+        "a": "Selaimessasi. Whisper toimii Transformers.js:n avulla näytönohjaimellasi (WebGPU) tai suorittimellasi (WebAssembly), ja kasvojentunnistus käyttää MediaPipea. Mallit ladataan kerran, ääntäsi ei lähetetä koskaan"
+      }
+    },
+    "final": {
+      "title": "Seuraava videosi, muokattuna minuuteissa",
+      "text": "Ei rekisteröitymistä, ei latauksia, ei vesileimaa. Avaa tiedosto ja aloita muokkaus"
+    },
+    "thumbnail": {
+      "eyebrow": "Uutta · Pikkukuvat",
+      "title": "Ja siihen sopiva pikkukuva",
+      "text": "Pikkukuvatyökalu löytää videosi terävimmät hetket. Lisää iso otsikko värillisillä sanoilla ja lataa se oikeassa koossa",
+      "points": {
+        "moments": "Parhaat hetket ehdotetaan",
+        "title": "Otsikko korostetuilla sanoilla, 4 tyyliä",
+        "formats": "YouTube 1280×720, Shorts ja neliö",
+        "local": "Tehdään laitteellasi, mitään ei ladata"
+      },
+      "cta": "Tee pikkukuva",
+      "mockTitle": "Ensimmäinen",
+      "mockAccent": "vlogini"
+    }
+  },
+  "changelog": {
+    "eyebrow": "Versiot",
+    "title": "Muutosloki",
+    "lead": "Kaikki LocalCutVideon versiot, uusin ensin",
+    "current": "Käytät versiota",
+    "github": "Katso GitHubissa",
+    "releases": "Julkaisut GitHubissa",
+    "latest": "Uusin",
+    "error": "Muutoslokia ei voitu ladata"
+  },
+  "projects": {
+    "title": "Projektisi",
+    "lead": "Projektit tallennetaan automaattisesti tähän selaimeen. Videosi pysyvät siellä missä ne ovat levylläsi",
+    "resume": "Jatka siitä, mihin jäit",
+    "reading": "Luetaan videota…",
+    "drop": "Pudota videosi tähän",
+    "or": "tai",
+    "open": "Avaa videoita",
+    "private": "Tiedosto luetaan paikallisesti, mitään ei ladata",
+    "noFsAccess": "Selaimesi ei pysty muistamaan tiedostoja istuntojen välillä: välilehden sulkemisen jälkeen sinua pyydetään valitsemaan video uudelleen. Chrome tai Edge välttävät tämän",
+    "recent": "Viimeisimmät projektit",
+    "empty": "Ei vielä projekteja. Avaa video aloittaaksesi",
+    "delete": "Poista projekti",
+    "confirmDelete": "Poistetaanko projekti ”{{ name }}”? Levylläsi olevaan videotiedostoon ei kosketa",
+    "multi": "Useita tiedostoja? Ne kootaan yhdeksi videoksi nimijärjestyksessä",
+    "importFile": "Avaa projektitiedosto (.lcv.json)",
+    "saveFile": "Tallenna projekti tiedostoksi",
+    "imported": "Projekti avattu: valitse sen videot jatkaaksesi"
+  },
+  "errors": {
+    "notVideo": "Tämä tiedosto ei näytä olevan video",
+    "codec": "Selaimesi ei pysty purkamaan tämän videon koodekkia (HEVC/H.265 vaatii Chromen tai Edgen HEVC-laajennuksen). Kokeile muuntaa se H.264 MP4 -muotoon",
+    "noVideo": "Tiedostosta ei löytynyt videoraitaa",
+    "generic": "Tiedoston lukemisessa tapahtui virhe",
+    "transcribe": "Litterointi epäonnistui. Kokeile pienempää mallia tai tarkista yhteytesi ensimmäistä latausta varten",
+    "export": "Vienti epäonnistui",
+    "faces": "Kasvojen seuranta epäonnistui tässä videossa",
+    "skipped": "Ohitettu (ei voitu lukea): {{ names }}",
+    "skippedCodec": "Ohitettu, tämä selain ei tue koodekkia: {{ names }}. Kokeile Chromea tai muunna H.264 MP4 -muotoon",
+    "notProject": "Tämä tiedosto ei ole LocalCutVideo-projekti",
+    "demo": "Esittelyvideota ei voitu ladata"
+  },
+  "languages": {
+    "en": "englanti",
+    "fr": "ranska",
+    "es": "espanja",
+    "it": "italia",
+    "de": "saksa",
+    "pt": "portugali",
+    "nl": "hollanti"
+  },
+  "editor": {
+    "back": "Takaisin projekteihin",
+    "name": "Projektin nimi",
+    "undo": "Kumoa",
+    "redo": "Tee uudelleen",
+    "missing": "Tätä projektia ei ole enää olemassa",
+    "save": {
+      "saving": "Tallennetaan…",
+      "saved": "Tallennettu paikallisesti",
+      "error": "Ei tallennettu"
+    },
+    "reconnect": {
+      "loading": "Avataan videota…",
+      "title": "Yhdistä videosi uudelleen",
+      "allow": "Salli pääsy kaikkiin",
+      "select": "Valitse",
+      "mismatch": "Tämä ei näytä alkuperäiseltä tiedostolta (”{{ name }}”). Käytetäänkö silti?",
+      "intro": "Projekti on tallessa. Yksityisyytesi vuoksi selain kysyy uudelleen, ennen kuin editori saa lukea tiedostojasi",
+      "allowOne": "Salli",
+      "privacy": "Videosi luetaan siellä, missä ne ovat levylläsi, niitä ei koskaan kopioida eikä ladata",
+      "status": {
+        "ready": "Yhdistetty",
+        "permission": "Odotetaan lupaasi",
+        "moved": "Ei löydy: siirretty tai nimetty uudelleen?",
+        "missing": "Valitse se uudelleen (selaimesi ei säilytä pääsyä tiedostoihin)",
+        "loading": "Avataan…"
+      }
+    },
+    "preview": {
+      "cut": "Leikkaus",
+      "back": "5 s taaksepäin",
+      "play": "Toista",
+      "pause": "Tauko",
+      "savedHint": "Leikkauksilla poistettu aika",
+      "badge": "Kevyt esikatselu · {{ q }}p",
+      "quality": "Esikatselun laatu",
+      "qualityHint": "Kevyempi esikatselu pitää editorin sujuvana. Vienti käyttää aina täyttä laatua"
+    },
+    "timeline": {
+      "title": "Aikajana",
+      "silence": "Hiljaisuus",
+      "manual": "Manuaalinen",
+      "text": "Teksti",
+      "hint": "Vedä aaltomuodolla valitaksesi kohdan, sitten Leikkaa tai Nopeus · napsauta leikkausta säätääksesi reunoja · kaksoisnapsauta poistaaksesi",
+      "removeCut": "Poista leikkaus",
+      "zoom": "Aikajanan zoomaus",
+      "analyzing": "Analysoidaan ääntä…",
+      "zoomIn": "Lähennä",
+      "zoomOut": "Loitonna",
+      "fit": "Sovita",
+      "fitHint": "Näytä koko video (vinkki: Ctrl + rulla zoomaa)",
+      "manualCut": "Leikkaa käsin",
+      "markIn": "Alku",
+      "markOut": "Loppu",
+      "markInHint": "Leikattavan kohdan alku toistokohdassa (I)",
+      "markOutHint": "Leikattavan kohdan loppu toistokohdassa (O)",
+      "cutMarked": "Leikkaa",
+      "cutHint": "Poista kohta alun ja lopun väliltä (X)",
+      "clearMarks": "Tyhjennä alku ja loppu",
+      "marksMissing": "Aseta ensin alku (I) ja loppu (O)",
+      "analysisError": "Ääntä ei voitu analysoida",
+      "selectedCut": "Valittu leikkaus",
+      "earlier": "Aiemmin",
+      "later": "Myöhemmin",
+      "listen": "Kuuntele leikkaus",
+      "speed": "Nopeus",
+      "speedHint": "Nopeuta tai hidasta alun ja lopun välistä kohtaa",
+      "selectedSpeed": "Nopeuden muutos",
+      "removeSpeed": "Takaisin normaaliin nopeuteen",
+      "listenSpeed": "Toista nopeuden muutos",
+      "selectFirst": "Valitse ensin kohta: vedä aaltomuodolla tai aseta Alku ja Loppu"
+    },
+    "transcript": {
+      "title": "Litterointi",
+      "words": "{{ count }} sanaa",
+      "fillers": "Poista täytesanat ({{ count }})",
+      "restore": "Palauta kaikki",
+      "selected": "{{ count }} valittu",
+      "cut": "Leikkaa / palauta",
+      "tip": "Napsauta sanaa siirtyäksesi siihen. Vedä tai vaihto-napsauta valitaksesi, sitten Delete leikkaa tai Korjaa (Enter) korjaa sen, minkä Whisper kuuli väärin",
+      "emptyTitle": "Ei vielä litterointia",
+      "emptyText": "Litteroi video, niin voit muokata sitä tekstin kautta ja saat tekstitykset sana sanalta",
+      "correct": "Korjaa",
+      "correctTitle": "Mitä oikeasti sanottiin?",
+      "correctHint": "Kirjoita sana tai koko lause uudelleen. Ajoitukset ja tekstitykset mukautuvat automaattisesti",
+      "apply": "Käytä"
+    },
+    "transcribe": {
+      "title": "Litterointi (Whisper)",
+      "hint": "Toimii laitteellasi. Malli ladataan kerran ja tallennetaan sitten välimuistiin",
+      "model": "Malli",
+      "models": {
+        "tiny": "Nopea",
+        "base": "Tasapainoinen",
+        "small": "Tarkka"
+      },
+      "download": "Kertalataus {{ size }}",
+      "language": "Puhuttu kieli",
+      "auto": "Tunnista automaattisesti",
+      "run": "Litteroi",
+      "rerun": "Litteroi kaikki uudelleen",
+      "done": "{{ count }} sanaa litteroitu",
+      "empty": "Videosta ei löytynyt puhetta",
+      "stage": {
+        "audio": "Erotetaan ääntä…",
+        "download": "Ladataan mallia…",
+        "transcribe": "Litteroidaan…"
+      },
+      "missing": "Litteroi uudet leikkeet ({{ count }})",
+      "rerunHint": "Aloittaa alusta yllä olevalla mallilla ja kielellä",
+      "confirmAll": "Litteroidaanko kaikki uudelleen? Leikkaamasi tai korjaamasi sanat menetetään",
+      "detected": "Tunnistettu kieli: {{ language }}"
+    },
+    "tabs": {
+      "format": "Muoto",
+      "cuts": "Leikkaukset",
+      "captions": "Tekstitys",
+      "framing": "Rajaus",
+      "audio": "Ääni",
+      "clips": "Leikkeet",
+      "texts": "Tekstit"
+    },
+    "format": {
+      "title": "Tulostusmuoto",
+      "hint": "Video rajataan sopivaksi. Käytä Rajausta seurataksesi puhujaa",
+      "landscape": "YouTube",
+      "vertical": "TikTok · Reels",
+      "square": "Syöte",
+      "source": "Lähde:",
+      "resolution": "Resoluutio",
+      "fps": "Kuvaa sekunnissa",
+      "exportNote": "Resoluutio ja kuvanopeus valitaan viennin yhteydessä",
+      "rotation": "Kierto",
+      "rotateLeft": "Kierrä vasemmalle",
+      "rotateRight": "Kierrä oikealle",
+      "rotationHint": "Sivuttain kuvatulle videolle. Koskee kaikkia leikkeitä",
+      "rotatedFaces": "Video kierretty: ota ”Seuraa kasvoja” uudelleen käyttöön Rajauksessa"
+    },
+    "cuts": {
+      "title": "Hiljaisuuksien tunnistus",
+      "hint": "Poistaa tauot. Laske kynnystä, jos sanoja leikkautuu",
+      "threshold": "Kynnys",
+      "suggested": "Ehdotus tälle tallenteelle: {{ value }} dB",
+      "minSilence": "Vähimmäishiljaisuus",
+      "padding": "Hengitystila",
+      "detect": "Tunnista ja leikkaa hiljaisuudet",
+      "detected": "{{ count }} hiljaisuutta leikattu",
+      "count": "leikkausta",
+      "removed": "poistettu",
+      "final": "lopullinen kesto",
+      "clear": "Poista kaikki leikkaukset",
+      "mode": "Etsi tauot",
+      "modes": {
+        "audio": "Äänenvoimakkuus",
+        "transcript": "Litterointi"
+      },
+      "modeHint": "Litterointitila on tarkka myös taustamelun tai musiikin kanssa",
+      "modeNeedsTranscript": "Litteroi video löytääksesi tauot sanojen perusteella: tarkempi meluisissa paikoissa",
+      "preset": "Rytmi",
+      "presets": {
+        "gentle": "Luonnollinen",
+        "normal": "Tasapainoinen",
+        "tight": "Dynaaminen"
+      },
+      "live": "Leikkaukset päivittyvät reaaliajassa, kun muutat asetuksia",
+      "silentClips": "{{ count }} leike(ttä) ilman puhetta: niistä leikataan vain todellinen tyhjä aika"
+    },
+    "captions": {
+      "title": "Poltetut tekstitykset",
+      "style": "Tyyli",
+      "styles": {
+        "karaoke": "Karaoke",
+        "clean": "Pelkistetty",
+        "boxed": "Laatikko"
+      },
+      "position": "Sijainti",
+      "positions": {
+        "top": "Ylhäällä",
+        "center": "Keskellä",
+        "bottom": "Alhaalla"
+      },
+      "size": "Koko",
+      "words": "Sanoja tekstitystä kohden",
+      "uppercase": "Isot kirjaimet",
+      "highlight": "Korostusväri"
+    },
+    "framing": {
+      "title": "Automaattinen rajaus",
+      "hint": "Seuraa kasvoja pitääkseen puhujan kuvassa, ihanteellinen muunnokseen 16:9 → 9:16",
+      "center": "Keskitetty",
+      "face": "Seuraa kasvoja",
+      "analyzing": "Seurataan kasvoja…",
+      "analyze": "Seuraa kasvoja",
+      "reanalyze": "Seuraa kasvoja uudelleen",
+      "tracked": "{{ count }} sijaintia seurattu",
+      "found": "Kasvot seurattu: rajaus seuraa puhujaa",
+      "notFound": "Videosta ei löytynyt kasvoja johdonmukaisesti",
+      "punch": "Älykäs zoomaus",
+      "punchHint": "Vaihtelee kevyttä zoomausta jokaisessa leikkauksessa, tai jokaisessa lauseessa kun leikkauksia ei ole, jotta video pysyy dynaamisena",
+      "zoom": "Zoomauksen voimakkuus",
+      "firstTime": "Kun valitset ”Seuraa kasvoja”, video analysoidaan kerran paikallisesti",
+      "beatsCuts": "Zoomaus vaihtuu {{ count }} kertaa, leikkauksissasi",
+      "beatsAuto": "Ei vielä leikkauksia: zoomaus vaihtuu {{ count }} kertaa, lauseissa tai 4 s välein"
+    },
+    "audio": {
+      "title": "Taustamusiikki",
+      "hint": "Musiikki hiljenee automaattisesti, kun joku puhuu (auto-ducking)",
+      "reconnect": "Yhdistä ”{{ name }}” uudelleen",
+      "pick": "Valitse musiikkitiedosto",
+      "enabled": "Sisällytä videoon",
+      "volume": "Musiikin äänenvoimakkuus",
+      "ducking": "Hiljennys puheen aikana",
+      "duckingHint": "Kuinka paljon musiikki hiljenee, kun joku puhuu"
+    },
+    "export": {
+      "button": "Vie",
+      "title": "Vie video",
+      "running": "Viedään…",
+      "eta": "Noin {{ time }} jäljellä",
+      "keepOpen": "Pidä tämä välilehti auki. Koodaus käyttää näytönohjaintasi aina kun mahdollista",
+      "done": "Vienti valmis",
+      "saved": "”{{ name }}” tallennettiin levyllesi {{ seconds }} sekunnissa",
+      "downloaded": "”{{ name }}” ladattiin {{ seconds }} sekunnissa",
+      "duration": "Kesto",
+      "from": "alun perin {{ time }}",
+      "streamHint": "Valitset itse, mihin MP4 tallennetaan. Se kirjoitetaan suoraan levylle",
+      "downloadHint": "MP4 kootaan paikallisesti ja ladataan sitten",
+      "start": "Vie MP4",
+      "saveProject": "Tallenna projekti",
+      "saveProjectHint": ".lcv.json-tiedosto muokkauksistasi (ilman videota), jotta voit jatkaa toisella tietokoneella",
+      "projectSaved": "Projekti tallennettu .lcv.json-tiedostoksi"
+    },
+    "clips": {
+      "title": "Leikkeet",
+      "hint": "Videot toistetaan peräkkäin tässä järjestyksessä. Vedä järjestääksesi: leikkaukset ja sanat seuraavat leikettään",
+      "jump": "Siirry tähän leikkeeseen",
+      "up": "Siirrä ylös",
+      "down": "Siirrä alas",
+      "remove": "Poista leike",
+      "add": "Lisää videoita",
+      "summary": "{{ count }} leike(ttä) · yhteensä {{ time }}",
+      "confirmRemove": "Poistetaanko ”{{ name }}” projektista? Sen leikkaukset ja sanat poistetaan myös (Ctrl+Z kumoaa)",
+      "added": "{{ count }} leike(ttä) lisätty",
+      "addedTranscribe": "{{ count }} leike(ttä) lisätty. Litteroi uudelleen tekstittääksesi ne: jo litteroidut leikkeet säilyvät",
+      "noVoice": "ei puhetta",
+      "voiceOn": "Puhetta · napsauta, jos kukaan ei puhu",
+      "voiceOff": "Ei puhetta · napsauta, jos joku puhuu"
+    },
+    "auto": {
+      "button": "Automaattinen muokkaus",
+      "cta": "Muokkaa video automaattisesti",
+      "transcribeOnly": "tai pelkkä litterointi",
+      "heading": "Anna LocalCutVideon muokata videosi",
+      "lead": "Yhdellä napsautuksella: hiljaisuudet ja epäröinnit poistettu, tekstitykset, rajaus puhujaan ja älykäs zoomaus. Voit muuttaa kaikkea jälkikäteen",
+      "target": "Mihin julkaiset sen?",
+      "options": {
+        "silences": "Leikkaa hiljaisuudet",
+        "fillers": "Poista epäröinnit (öö, tota…)",
+        "captions": "Karaoketekstitykset",
+        "framing": "Seuraa kasvoja",
+        "framingNoCrop": "Ei tarpeen: tämä muoto näyttää koko kuvan",
+        "zoom": "Älykäs zoomaus"
+      },
+      "local": "Kaikki toimii laitteellasi. Videota ei koskaan ladata",
+      "start": "Aloita automaattinen muokkaus",
+      "running": "Videotasi muokataan…",
+      "done": "Videosi on muokattu!",
+      "view": "Katso tulos",
+      "undo": "Kumoa automaattinen muokkaus",
+      "undone": "Projekti on palautettu automaattista muokkausta edeltäneeseen tilaan",
+      "summary": {
+        "cuts": "leikkausta",
+        "removed": "poistettu",
+        "words": "sanaa tekstitetty",
+        "silent": "{{ count }} leike(ttä) ilman puhetta: vain todellinen tyhjä aika leikattiin"
+      },
+      "steps": {
+        "analyze": "Analysoidaan ääntä",
+        "transcribe": "Litteroidaan puhetta",
+        "fillers": "Poistetaan epäröintejä",
+        "silences": "Leikataan hiljaisuuksia",
+        "framing": "Seurataan kasvoja",
+        "style": "Tekstitykset ja älykäs zoomaus",
+        "voice": "Tunnistetaan puhetta"
+      },
+      "status": {
+        "skipped": "ohitettu",
+        "error": "epäonnistui"
+      },
+      "voice": {
+        "title": "Puhuuko videossa joku?",
+        "auto": "Auto",
+        "yes": "Kyllä",
+        "no": "Ei",
+        "detectedYes": "Tunnistettu: joku puhuu",
+        "detectedNo": "Tunnistettu: ei puhetta",
+        "hint": "Ei puhetta: ei litterointia eikä tekstityksiä, vain todellinen tyhjä aika leikataan"
+      }
+    },
+    "mix": {
+      "title": "Videon ääni",
+      "hint": "Nosta tai laske leikkeidesi ääntä",
+      "volume": "Äänenvoimakkuus",
+      "mute": "Mykistä",
+      "unmute": "Poista mykistys",
+      "volumeHint": "Koskee esikatselua ja vientiä",
+      "boostHint": "Yli 100 %:ssa limitteri estää säröytymisen",
+      "normalize": "Tasoita leikkeet",
+      "normalizeHint": "Kaikki leikkeet samalla äänenvoimakkuudella, kuvattiin ne läheltä tai kaukaa",
+      "denoise": "Vähennä taustamelua",
+      "denoiseHint": "Selkeämpi ääni (tuuli, kohina, tuulettimet). Käytetään viennissä leikkeisiin, joissa on puhetta. Kuuntele ensin",
+      "listen": "Kuuntele 8 s tuloksesta",
+      "stopListening": "Lopeta kuuntelu",
+      "preparing": "Valmistellaan…"
+    },
+    "thumbnail": "Pikkukuva",
+    "transition": {
+      "title": "Siirtymä leikkauksissa",
+      "none": "Suora leikkaus",
+      "dip": "Nopea ristihäivytys",
+      "black": "Häivytys mustaan",
+      "hint": "Toistuu jokaisessa leikkauksessa ja leikkeen vaihdossa (sekä alussa ja lopussa häivytyksessä mustaan). Näkyy toiston aikana"
+    },
+    "texts": {
+      "title": "Tekstit videon päällä",
+      "hint": "Otsikot ja muistiinpanot näytetään toistokohdassa. Laita sanoja tähtien väliin värittääksesi ne",
+      "add": "Lisää teksti toistokohtaan",
+      "default": "Sinun *tekstisi*",
+      "timing": "Näkyvissä",
+      "startHere": "Aloita tästä",
+      "endHere": "Lopeta tähän",
+      "remove": "Poista tämä teksti"
+    },
+    "background": {
+      "title": "Tausta",
+      "hint": "Sumentaa henkilön takana olevan taustan, henkilö pysyy terävänä. Lasketaan laitteellasi",
+      "none": "Terävä",
+      "blur": "Sumennettu",
+      "strength": "Sumennuksen voimakkuus",
+      "error": "Taustan sumennusta ei voitu käynnistää tällä laitteella"
+    }
+  },
+  "legal": {
+    "updated": "Päivitetty viimeksi: 1. marraskuuta 2026",
+    "contact": "Yhteystiedot",
+    "nav": {
+      "notice": "Oikeudelliset tiedot",
+      "privacy": "Yksityisyys",
+      "terms": "Käyttöehdot"
+    },
+    "notice": {
+      "title": "Oikeudelliset tiedot",
+      "intro": "Ranskan lain (LCEN-lain 6 artikla, laki nro 2004-575, 21. kesäkuuta 2004) edellyttämät tiedot tämän sivuston julkaisijasta ja ylläpitäjästä.",
+      "sections": [
+        {
+          "title": "Julkaisija",
+          "body": [
+            "Sivuston localcutvideo.mbonnici.fr (”LocalCutVideo”) julkaisee yksityishenkilö Maxence Bonnici ei-kaupallisesti.",
+            "Vastaava julkaisija: Maxence Bonnici.",
+            "Yhteystiedot: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Ylläpito",
+          "body": [
+            "Sivustoa ylläpitää julkaisija Maxence Bonnici itse henkilökohtaisella palvelimella, ja se otetaan käyttöön Coolify-alustalla.",
+            "Yhteystiedot: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Immateriaalioikeudet",
+          "body": [
+            "LocalCutVideon lähdekoodi on avointa ja julkaistu MIT-lisenssillä [GitHubissa](https://github.com/ImMaxence/LocalCutVideo).",
+            "Sovelluksen käyttämät kolmansien osapuolten komponentit, tekoälymallit ja fontit ovat edelleen tekijöidensä omaisuutta, ja niitä käytetään niiden omien lisenssien mukaisesti, jotka on lueteltu [käyttöehdoissa](/terms). Mainitut tavaramerkit (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) kuuluvat omistajilleen."
+          ]
+        },
+        {
+          "title": "Vastuu",
+          "body": [
+            "Julkaisija pyrkii pitämään sivuston saatavilla ja sen tiedot oikeina, mutta ei voi taata kumpaakaan. Sovelluksen käyttöä koskevat [käyttöehdot](/terms)."
+          ]
+        },
+        {
+          "title": "Henkilötiedot",
+          "body": [
+            "LocalCutVideo ei kerää mitään henkilötietoja: videot käsitellään vain laitteellasi. Lisätiedot ovat [tietosuojakäytännössä](/privacy)."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Tietosuojakäytäntö",
+      "intro": "LocalCutVideo on rakennettu niin, että videosi eivät koskaan poistu laitteeltasi. Tällä sivulla kerrotaan selkeästi, mitä käsitellään ja missä.",
+      "sections": [
+        {
+          "title": "Lyhyesti",
+          "body": [
+            "Ei latauksia: videosi, äänesi ja litterointisi käsitellään selaimessasi, eikä niitä koskaan lähetetä julkaisijalle tai kenellekään muulle.",
+            "Ei tiliä, ei evästeitä, ei analytiikkaa, ei mainontaa."
+          ]
+        },
+        {
+          "title": "Mitä laitteellesi jää",
+          "body": [
+            "Avaamasi video- ja äänitiedostot luetaan suoraan levyltäsi. Analyysi, litterointi (Whisper), kasvojen seuranta ja vienti lasketaan paikallisesti selaimessasi.",
+            "Projektisi (leikkaukset, litterointi, asetukset) tallennetaan selaimesi paikalliseen tietokantaan (IndexedDB) yhdessä pikkukuvan ja analyysien välimuistin kanssa. Julkaisijalla ei ole niihin pääsyä. Voit poistaa projektin projektisivulla tai poistaa kaiken tyhjentämällä tämän sivuston tiedot selaimesi asetuksista."
+          ]
+        },
+        {
+          "title": "Paikallinen tallennus",
+          "body": [
+            "Sovellus tallentaa käyttöliittymäasetuksesi (kieli, teema, viimeksi avattu projekti) selaimen paikalliseen tallennustilaan ja säilyttää omat tiedostonsa ja ladatut tekoälymallit selaimen välimuistissa, jotta se toimii ilman verkkoa. Nämä ovat palvelulle välttämättömiä, niitä ei koskaan käytetä sinun seuraamiseesi, eikä niille siksi tarvita suostumusbanneria."
+          ]
+        },
+        {
+          "title": "Palvelin",
+          "body": [
+            "Palvelin vain toimittaa sovelluksen tiedostot eikä pidä käyttölokeja. Kuten mikä tahansa verkkopalvelin, se vastaanottaa teknisesti IP-osoitteesi vastatakseen pyyntöihin, mutta ei tallenna sitä."
+          ]
+        },
+        {
+          "title": "Kolmannet osapuolet",
+          "body": [
+            "Hugging Face: Whisper-mallin toimittaa tämä sivusto, kuten muunkin sovelluksen. Vain jos malli ei ole täällä saatavilla, se ladataan sen sijaan osoitteesta huggingface.co; Hugging Face saa silloin IP-osoitteesi ja tavanomaiset selaintiedot, mutta ei koskaan ääntäsi. Katso heidän [tietosuojakäytäntönsä](https://huggingface.co/privacy).",
+            "GitHub: vain jos seuraat linkkiä lähdekoodin tietovarastoon.",
+            "Muihin kolmansiin osapuoliin ei oteta yhteyttä: tiukka Content-Security-Policy estää teknisesti sivua muodostamasta yhteyttä minnekään muualle."
+          ]
+        },
+        {
+          "title": "Oikeutesi",
+          "body": [
+            "Tietosuoja-asetuksen (GDPR) nojalla sinulla on oikeus tarkastaa, oikaista ja poistaa tietosi sekä vastustaa niiden käsittelyä. Koska julkaisijalla ei ole sinusta mitään tietoja, tarkastettavaa ei yleensä ole, mutta voit esittää kysymyksiä osoitteeseen maxence.bonnici@outlook.fr. Voit myös tehdä valituksen CNIL:lle ([cnil.fr](https://www.cnil.fr)) tai oman maasi tietosuojaviranomaiselle."
+          ]
+        },
+        {
+          "title": "Muutokset",
+          "body": [
+            "Tätä käytäntöä voidaan päivittää sovelluksen kehittyessä. Viimeisimmän päivityksen päivämäärä näkyy tämän sivun yläosassa."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Käyttöehdot",
+      "intro": "Käyttämällä LocalCutVideota hyväksyt nämä ehdot. Ne ovat lyhyet, koska palvelu on yksinkertainen: ilmainen työkalu, joka toimii selaimessasi.",
+      "sections": [
+        {
+          "title": "Palvelu",
+          "body": [
+            "LocalCutVideo on ilmainen videonmuokkaussovellus, joka toimii kokonaan verkkoselaimessasi. Se tarjotaan maksutta ja ilman tiliä, ja se voi muuttua, keskeytyä tai loppua milloin tahansa ilman ennakkoilmoitusta."
+          ]
+        },
+        {
+          "title": "Sisältösi",
+          "body": [
+            "Olet edelleen ainoa omistaja ja ainoa vastuussa oleva muokkaamiesi ja julkaisemiesi videoiden, äänten ja musiikin osalta. Sinulla on oltava tarvittavat oikeudet (tekijänoikeudet, musiikkilisenssit, kuvattujen henkilöiden oikeus omaan kuvaansa).",
+            "Sovellusta ei saa käyttää laittomiin tarkoituksiin."
+          ]
+        },
+        {
+          "title": "Automaattiset toiminnot",
+          "body": [
+            "Litterointi, tekstitykset, hiljaisuuksien tunnistus ja automaattinen rajaus tuotetaan automaattisesti, ja niissä voi olla virheitä. Tarkista tulos ennen sen julkaisemista."
+          ]
+        },
+        {
+          "title": "Tiedostosi ja projektisi",
+          "body": [
+            "Sovellus ei koskaan muuta alkuperäisiä tiedostojasi. Projektit tallennetaan selaimeesi, ja ne voivat kadota, jos selaimen tiedot tyhjennetään tai selain vapauttaa tilaa: säilytä aina alkuperäiset tiedostosi."
+          ]
+        },
+        {
+          "title": "Takuu ja vastuu",
+          "body": [
+            "Ohjelmisto toimitetaan ”sellaisenaan”, ilman minkäänlaista takuuta, MIT-lisenssin mukaisesti. Lain sallimissa rajoissa julkaisija ei ole vastuussa vahingoista, jotka johtuvat sovelluksen käytöstä tai siitä, ettei sitä voida käyttää (tietojen menetys, vientivirheet, käyttökatkokset…)."
+          ]
+        },
+        {
+          "title": "Avoin lähdekoodi ja kolmansien osapuolten komponentit",
+          "body": [
+            "Lähdekoodi on saatavilla MIT-lisenssillä [GitHubissa](https://github.com/ImMaxence/LocalCutVideo).",
+            "LocalCutVideo perustuu seuraaviin: Mediabunny (MPL-2.0), Transformers.js ja ONNX Runtime (Apache-2.0 ja MIT), OpenAI:n Whisper-mallit (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) sekä Inter- ja Montserrat-fontit (SIL Open Font License)."
+          ]
+        },
+        {
+          "title": "Sovellettava laki",
+          "body": [
+            "Näihin ehtoihin sovelletaan Ranskan lakia. Kysymykset: maxence.bonnici@outlook.fr."
+          ]
+        }
+      ]
+    }
+  },
+  "thumbnail": {
+    "eyebrow": "Pikkukuvatyökalu",
+    "title": "Pikkukuvia, joita tekee mieli klikata",
+    "lead": "Valitse videosi paras hetki, lisää iskevä otsikko ja lataa kuva valmiina YouTubeen, Shortsiin tai Instagramiin. Kaikki tapahtuu laitteellasi",
+    "pick": "Pudota video tai kuva",
+    "pickHint": "MP4, MOV, WebM, JPG, PNG… tiedosto pysyy laitteellasi",
+    "choose": "Valitse tiedosto",
+    "local": "Mitään ei ladata: kuva tehdään selaimessasi",
+    "permissionTitle": "Salli pääsy projektin videoon",
+    "permissionText": "Selaimesi pyytää vahvistusta ennen kuin tiedosto luetaan laitteeltasi uudelleen",
+    "permission": "Salli pääsy",
+    "back": "Takaisin editoriin",
+    "dragHint": "Vedä kuvaa rajataksesi sen uudelleen",
+    "frame": "Videon ruutu",
+    "prevFrame": "Edellinen ruutu",
+    "nextFrame": "Seuraava ruutu",
+    "moments": "Parhaat hetket",
+    "other": "Valitse toinen tiedosto",
+    "format": "Muoto",
+    "formats": {
+      "landscape": "YouTube",
+      "vertical": "Shorts · TikTok",
+      "square": "Instagram"
+    },
+    "text": "Otsikko",
+    "textPlaceholder": "Houkutteleva otsikkosi",
+    "defaultText": "Sinun *otsikkosi* tähän",
+    "accentHint": "Laita sanoja tähtien väliin värittääksesi ne: *näin*",
+    "size": "Tekstin koko",
+    "position": "Sijainti",
+    "positions": {
+      "top": "Ylhäällä",
+      "center": "Keskellä",
+      "bottom": "Alhaalla"
+    },
+    "alignCenter": "Keskitetty",
+    "alignLeft": "Vasemmalla",
+    "uppercase": "Isot kirjaimet",
+    "tilt": "Kallistettu teksti",
+    "style": "Otsikon tyyli",
+    "styles": {
+      "outline": "Ääriviiva",
+      "shadow": "Varjo",
+      "box": "Banneri",
+      "highlight": "Korostuskynä"
+    },
+    "color": "Tekstin väri",
+    "accent": "Korostettujen sanojen väri",
+    "image": "Kuva",
+    "zoom": "Zoomaus",
+    "brightness": "Kirkkaus",
+    "contrast": "Kontrasti",
+    "saturation": "Kylläisyys",
+    "shade": "Tummenna reunoja",
+    "reset": "Palauta",
+    "downloadJpg": "Lataa JPG",
+    "downloadPng": "Lataa PNG",
+    "sizeInfo": "{{ width }} × {{ height }} px · JPG on paras YouTubelle (alle 2 Mt)",
+    "saved": "Tallennettu: {{ name }}",
+    "loadError": "Projektia ei voitu avata",
+    "readError": "Tiedostoa ei voitu lukea"
+  },
+  "seo": {
+    "home": {
+      "title": "LocalCutVideo — Ilmainen videoeditori selaimessa, mitään ei ladata",
+      "description": "Muokkaa videoitasi selaimessa: hiljaisuudet leikataan automaattisesti, tekoälytekstitykset, kasvorajaus TikTokiin ja Shortsiin, pikkukuvat. Ilmainen ja avointa lähdekoodia, videosi eivät koskaan poistu tietokoneeltasi"
+    },
+    "thumbnail": {
+      "title": "Ilmainen YouTube-pikkukuvatyökalu — LocalCutVideo",
+      "description": "Tee videostasi pikkukuva YouTubeen, Shortsiin tai Instagramiin: parhaat hetket ehdotetaan, iso otsikko värillisillä sanoilla, JPG tai PNG. Ilmainen, selaimessa, mitään ei ladata"
+    },
+    "changelog": {
+      "title": "Muutosloki — LocalCutVideo",
+      "description": "LocalCutVideon uutuudet versio versiolta"
+    },
+    "legal": {
+      "title": "Oikeudelliset tiedot — LocalCutVideo",
+      "description": "LocalCutVideon julkaisija ja ylläpito"
+    },
+    "privacy": {
+      "title": "Tietosuojakäytäntö — LocalCutVideo",
+      "description": "LocalCutVideo ei lataa mitään: videosi, litterointisi ja projektisi pysyvät laitteellasi"
+    },
+    "terms": {
+      "title": "Käyttöehdot — LocalCutVideo",
+      "description": "Ilmaisen avoimen lähdekoodin videoeditorin LocalCutVideon käyttöehdot"
+    },
+    "app": {
+      "title": "Projektit — LocalCutVideo",
+      "description": "Videoprojektisi, tallennettuna selaimeesi"
+    },
+    "editor": {
+      "title": "Editori — LocalCutVideo",
+      "description": "LocalCutVideon editori"
+    }
+  },
+  "tour": {
+    "label": "Opastettu kierros",
+    "help": "Opastettu kierros",
+    "count": "Vaihe {{ n }}/{{ total }}",
+    "skip": "Ohita kierros",
+    "prev": "Takaisin",
+    "next": "Seuraava",
+    "done": "Aloitetaan!",
+    "steps": {
+      "auto": {
+        "title": "Yksi napsautus: automaattinen muokkaus",
+        "text": "LocalCutVideo muokkaa videon puolestasi: hiljaisuudet ja epäröinnit poistettu, tekstitykset, rajaus ja zoomaus. Voit muuttaa kaikkea jälkikäteen"
+      },
+      "preview": {
+        "title": "Esikatselu",
+        "text": "Näkemäsi on täsmälleen sitä, mitä viedään. Napsauta sitä tai paina välilyöntiä toistaaksesi tai keskeyttääksesi"
+      },
+      "timeline": {
+        "title": "Aikajana",
+        "text": "Napsauta liikkuaksesi videossa. Vedä aaltomuodolla valitaksesi kohdan"
+      },
+      "cut": {
+        "title": "Leikkaa tai muuta nopeutta",
+        "text": "Kun kohta on valittu, Leikkaa (X) poistaa sen ja Nopeus toistaa sen nopeammin tai hitaammin. Ctrl+Z kumoaa mitä tahansa"
+      },
+      "transcript": {
+        "title": "Muokkaa tekstin kautta",
+        "text": "Litteroinnin jälkeen sanan poistaminen leikkaa videon. Voit myös korjata sen, minkä tekoäly kuuli väärin"
+      },
+      "settings": {
+        "title": "Kaikki asetukset",
+        "text": "Muoto (16:9, 9:16, neliö), leikkaukset ja siirtymät, tekstitykset, tekstit, rajaus ja sumennus, ääni ja musiikki"
+      },
+      "thumbnail": {
+        "title": "Pikkukuva",
+        "text": "Tee videollesi pikkukuva sen parhaista hetkistä"
+      },
+      "export": {
+        "title": "Vienti",
+        "text": "Tallenna video MP4-muodossa. Kaikki tapahtuu laitteellasi, mitään ei ladata"
+      }
+    }
+  }
+}

@@ -31,7 +31,7 @@
     font-size: 14px;
   }
   .go {
-    margin-left: auto;
+    margin-inline-start: auto;
     color: var(--accent);
   }
 }
@@ -190,7 +190,7 @@
 .card-actions {
   position: absolute;
   top: 8px;
-  right: 8px;
+  inset-inline-end: 8px;
   display: flex;
   gap: 4px;
   opacity: 0;

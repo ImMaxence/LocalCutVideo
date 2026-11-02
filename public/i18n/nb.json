@@ -1,0 +1,895 @@
+{
+  "common": {
+    "videoFiles": "Videofiler",
+    "audioFiles": "Lydfiler",
+    "cancel": "Avbryt",
+    "close": "Lukk",
+    "retry": "Prøv igjen",
+    "none": "Ingen",
+    "remove": "Fjern"
+  },
+  "nav": {
+    "features": "Funksjoner",
+    "privacy": "Personvern",
+    "faq": "Spørsmål",
+    "changelog": "Endringslogg",
+    "language": "Språk",
+    "searchLanguage": "Søk etter et språk",
+    "noLanguage": "Fant ikke noe språk",
+    "install": "Installer appen",
+    "open": "Åpne editoren",
+    "menu": "Åpne menyen",
+    "close": "Lukk menyen",
+    "thumbnail": "Miniatyrbilder"
+  },
+  "theme": {
+    "system": "System",
+    "light": "Lyst",
+    "dark": "Mørkt",
+    "label": "Tema"
+  },
+  "footer": {
+    "tagline": "Et gratis videoredigeringsverktøy med åpen kildekode som kjører helt i nettleseren din. Filene dine forlater aldri datamaskinen din",
+    "issues": "Rapporter et problem",
+    "noTracking": "Ingen informasjonskapsler, ingen sporing",
+    "product": "Produkt",
+    "legal": "Juridisk"
+  },
+  "pwa": {
+    "update": "En ny versjon er tilgjengelig",
+    "reload": "Last inn på nytt"
+  },
+  "landing": {
+    "hero": {
+      "badgeLocal": "100 % lokalt, ingen opplasting",
+      "badgeOpen": "Gratis og åpen kildekode",
+      "title1": "Rediger videoene dine",
+      "title2": "Ingenting forlater datamaskinen din",
+      "lead": "LocalCutVideo klipper bort stillhet, transkriberer med Whisper, brenner inn karaoketekster og beskjærer 16:9 til 9:16, helt i nettleseren din. Ingen opplasting, ingen konto, ingen server",
+      "cta": "Åpne redigeringsverktøyet",
+      "github": "Se på GitHub",
+      "hint": "Fungerer best i Chrome eller Edge på en datamaskin",
+      "demo": "Prøv med en demovideo"
+    },
+    "mock": {
+      "w1": "Så i dag",
+      "filler": "eh,",
+      "w2": "skal jeg vise dere",
+      "w3": "hvordan det fungerer",
+      "line2": "Alt kjører på din egen maskin, til og med KI-en",
+      "line3": "Slett et ord, så klippes videoen",
+      "cap1": "Dette blir på din",
+      "cap2": "datamaskin"
+    },
+    "stats": {
+      "upload": "byte lastet opp",
+      "local": "behandlet på enheten din",
+      "languages": "språk i grensesnittet",
+      "gpu": "akselerert KI og koding"
+    },
+    "how": {
+      "eyebrow": "Slik fungerer det",
+      "title": "Fra råopptak til en video klar for publisering i tre trinn",
+      "open": {
+        "title": "Åpne en video",
+        "text": "Velg en fil på disken din. Den leses der den ligger: ingen kopi, ingen opplasting, selv for filer på flere gigabyte"
+      },
+      "edit": {
+        "title": "La verktøyet jobbe",
+        "text": "Stillhet oppdages, tale transkriberes ord for ord og ansikter følges, alt lokalt. Rett hva som helst ved å redigere teksten"
+      },
+      "export": {
+        "title": "Eksporter MP4-filen",
+        "text": "Velg 16:9, 9:16 eller 1:1. Videoen kodes av skjermkortet ditt og skrives rett til disken din"
+      }
+    },
+    "features": {
+      "eyebrow": "Funksjoner",
+      "title": "Alt du trenger for videoer der noen snakker til kamera",
+      "lead": "Laget for skapere på YouTube, TikTok, Reels og Shorts som helst ikke vil laste opp råopptakene sine noe sted",
+      "silences": {
+        "title": "Klipp bort stillhet automatisk",
+        "text": "Finner pauser ut fra lydnivået og fjerner dem, med justerbar terskel, minstelengde og pusterom"
+      },
+      "textEdit": {
+        "title": "Rediger via tekst",
+        "text": "Whisper gir hvert ord et tidsstempel. Slett ord i transkripsjonen, så klippes den tilsvarende delen av videoen"
+      },
+      "captions": {
+        "title": "Karaoketekster",
+        "text": "Animerte tekster ord for ord brent inn i videoen, i stilene karaoke, ren eller med boks, i din uthevingsfarge"
+      },
+      "framing": {
+        "title": "Automatisk beskjæring 16:9 → 9:16",
+        "text": "Ansiktssporing holder den som snakker i bildet når du gjør en liggende video om til en stående"
+      },
+      "zoom": {
+        "title": "Smart zoom",
+        "text": "Vekslende innzooming ved hvert klipp får jump cuts til å se tilsiktede ut og holder på seerne"
+      },
+      "ducking": {
+        "title": "Lyd og musikk",
+        "text": "Skru opp volumet, jevn ut klippene og legg til bakgrunnsmusikk som senker seg selv når noen snakker"
+      },
+      "recovery": {
+        "title": "Gjenoppretting etter krasj",
+        "text": "Hver endring lagres i nettleseren i sanntid. Åpne fanen igjen og fortsett akkurat der du slapp"
+      },
+      "offline": {
+        "title": "Fungerer uten nett",
+        "text": "Installer det som en app. Når KI-modellen er lastet ned, fungerer hele verktøyet uten internettforbindelse"
+      },
+      "export": {
+        "title": "Rask maskinvareeksport",
+        "text": "Kodingen bruker WebCodecs, videokoderen som er innebygd i nettleseren og skjermkortet ditt, i stedet for treg programvarekoding"
+      },
+      "clips": {
+        "title": "Sett sammen flere klipp",
+        "text": "Slipp flere opptak samtidig: de settes sammen til én video, i den rekkefølgen du velger, med felles tidslinje og transkripsjon"
+      },
+      "inputs": {
+        "title": "MP4, MOV, WebM, MKV",
+        "text": "Åpner filene fra mobilen og kameraet ditt, også HEVC-videoer fra iPhone når nettleseren kan dekode dem"
+      },
+      "languages": {
+        "title": "Flerspråklig",
+        "text": "Grensesnittet snakker {{ count }} språk, og Whisper transkriberer dusinvis til, med automatisk språkgjenkjenning"
+      }
+    },
+    "privacy": {
+      "eyebrow": "Personvern",
+      "title": "Ingen opplasting, fra grunnen av",
+      "lead": "Videoen din leses direkte fra disken din. Lydanalyse, transkripsjon, ansiktssporing og koding kjører i bakgrunnstråder (Web Workers) på maskinen din. Det finnes rett og slett ingen server å sende opptakene dine til",
+      "upload": "Aldri noen opplasting: filen forlater aldri datamaskinen din",
+      "account": "Ingen konto, ingen informasjonskapsler, ingen statistikk",
+      "csp": "En streng Content-Security-Policy lar bare siden snakke med dette nettstedet, som også leverer KI-modellene (Hugging Face er bare en reserve)",
+      "storage": "Prosjekter lagres i nettleserens lokale database (IndexedDB) og kan slettes når som helst",
+      "diagram": {
+        "machine": "Datamaskinen din",
+        "file": "Videofil",
+        "browser": "Nettleseren din",
+        "upload": "Opplasting til en server",
+        "model": "Nedlasting av KI-modellen (én gang, i hurtigbuffer)"
+      }
+    },
+    "support": {
+      "eyebrow": "Kompatibilitet",
+      "title": "Nettleserstøtte",
+      "ok": "Full",
+      "partial": "Delvis",
+      "full": "Alt, også gjenoppretting etter krasj og eksport skrevet rett til disken",
+      "firefox": "Redigering og eksport fungerer. Når du har lukket fanen, må du velge videoen på nytt",
+      "safari": "Bare nyere versjoner. Velg videoen på nytt etter omlasting; eksporten lastes ned",
+      "mobile": "Mobiler og nettbrett",
+      "mobileText": "Fungerer for korte klipp, men minnegrenser gjør lange videoer upålitelige"
+    },
+    "faq": {
+      "title": "Ofte stilte spørsmål",
+      "free": {
+        "q": "Er det virkelig gratis? Hvor er haken?",
+        "a": "Det er gratis og åpen kildekode. Siden alt arbeidet skjer på datamaskinen din, finnes det ingen serverkostnader å betale, så det er ingenting å selge deg og ingen data å samle inn"
+      },
+      "formats": {
+        "q": "Hvilke videoformater kan jeg åpne?",
+        "a": "MP4, MOV, WebM og MKV, så lenge nettleseren kan dekode kodeken (H.264, HEVC, VP9, AV1 avhengig av nettleser og system). Eksporten er en MP4-fil"
+      },
+      "browsers": {
+        "q": "Hvorfor Chrome eller Edge?",
+        "a": "De støtter File System Access API, som lar verktøyet åpne videoen igjen etter en omlasting og skrive eksporten rett til disken. Andre nettlesere fungerer også, med noen ekstra klikk"
+      },
+      "size": {
+        "q": "Finnes det en grense for filstørrelse?",
+        "a": "Det finnes ingen opplastingsgrense, siden ingenting lastes opp. Videoen leses fra disken i små biter; den praktiske grensen er minnet på datamaskinen og tålmodigheten din med svært lange videoer"
+      },
+      "offline": {
+        "q": "Fungerer det uten internett?",
+        "a": "Ja, når det først er lastet inn. Installer det som app (PWA) og transkriber én gang mens du er tilkoblet: Whisper-modellen lagres da i hurtigbufferen, og alt fungerer uten nett"
+      },
+      "ai": {
+        "q": "Hvor kjører KI-en?",
+        "a": "I nettleseren din. Whisper kjører med Transformers.js på skjermkortet (WebGPU) eller prosessoren (WebAssembly), og ansiktsgjenkjenningen bruker MediaPipe. Modellene lastes ned én gang, lyden din sendes aldri"
+      }
+    },
+    "final": {
+      "title": "Den neste videoen din, redigert på få minutter",
+      "text": "Ingen registrering, ingen opplasting, ingen vannmerke. Åpne en fil og begynn å redigere"
+    },
+    "thumbnail": {
+      "eyebrow": "Nytt · Miniatyrbilder",
+      "title": "Og miniatyrbildet som hører til",
+      "text": "Miniatyrverktøyet finner de skarpeste øyeblikkene i videoen din. Legg til en stor tittel med fargede ord og last det ned i riktig størrelse",
+      "points": {
+        "moments": "Beste øyeblikk foreslått",
+        "title": "Tittel med uthevede ord, 4 stiler",
+        "formats": "YouTube 1280×720, Shorts og kvadrat",
+        "local": "Laget på enheten din, ingenting lastes opp"
+      },
+      "cta": "Lag et miniatyrbilde",
+      "mockTitle": "Min første",
+      "mockAccent": "vlogg"
+    }
+  },
+  "changelog": {
+    "eyebrow": "Versjoner",
+    "title": "Endringslogg",
+    "lead": "Alle versjoner av LocalCutVideo, den nyeste først",
+    "current": "Du bruker",
+    "github": "Se på GitHub",
+    "releases": "Utgivelser på GitHub",
+    "latest": "Nyeste",
+    "error": "Endringsloggen kunne ikke lastes inn"
+  },
+  "projects": {
+    "title": "Prosjektene dine",
+    "lead": "Prosjekter lagres automatisk i denne nettleseren. Videoene dine blir liggende der de er på disken",
+    "resume": "Fortsett der du slapp",
+    "reading": "Leser videoen …",
+    "drop": "Slipp videoene dine her",
+    "or": "eller",
+    "open": "Åpne videoer",
+    "private": "Filen leses lokalt, ingenting lastes opp",
+    "noFsAccess": "Nettleseren din kan ikke huske filer mellom økter: når du har lukket fanen, må du velge videoen på nytt. Chrome eller Edge unngår dette",
+    "recent": "Nylige prosjekter",
+    "empty": "Ingen prosjekter ennå. Åpne en video for å komme i gang",
+    "delete": "Slett prosjektet",
+    "confirmDelete": "Slette prosjektet «{{ name }}»? Videofilen på disken din påvirkes ikke",
+    "multi": "Flere filer? De settes sammen til én video, i navnerekkefølge",
+    "importFile": "Åpne en prosjektfil (.lcv.json)",
+    "saveFile": "Lagre prosjektet som en fil",
+    "imported": "Prosjektet er åpnet: velg videoene for å fortsette"
+  },
+  "errors": {
+    "notVideo": "Denne filen ser ikke ut til å være en video",
+    "codec": "Nettleseren din kan ikke dekode kodeken i denne videoen (HEVC/H.265 krever Chrome, eller HEVC-utvidelsen i Edge). Prøv å konvertere den til H.264 MP4",
+    "noVideo": "Fant ikke noe videospor i denne filen",
+    "generic": "Noe gikk galt under lesingen av denne filen",
+    "transcribe": "Transkripsjonen mislyktes. Prøv en mindre modell, eller sjekk tilkoblingen for den første nedlastingen",
+    "export": "Eksporten mislyktes",
+    "faces": "Ansiktssporingen mislyktes for denne videoen",
+    "skipped": "Hoppet over (kunne ikke leses): {{ names }}",
+    "skippedCodec": "Hoppet over, kodeken støttes ikke av denne nettleseren: {{ names }}. Prøv Chrome, eller konverter til H.264 MP4",
+    "notProject": "Denne filen er ikke et LocalCutVideo-prosjekt",
+    "demo": "Demovideoen kunne ikke lastes inn"
+  },
+  "languages": {
+    "en": "Engelsk",
+    "fr": "Fransk",
+    "es": "Spansk",
+    "it": "Italiensk",
+    "de": "Tysk",
+    "pt": "Portugisisk",
+    "nl": "Nederlandsk"
+  },
+  "editor": {
+    "back": "Tilbake til prosjektene",
+    "name": "Prosjektnavn",
+    "undo": "Angre",
+    "redo": "Gjør om",
+    "missing": "Dette prosjektet finnes ikke lenger",
+    "save": {
+      "saving": "Lagrer …",
+      "saved": "Lagret lokalt",
+      "error": "Ikke lagret"
+    },
+    "reconnect": {
+      "loading": "Åpner videoen …",
+      "title": "Koble til videoene dine igjen",
+      "allow": "Gi tilgang til alle",
+      "select": "Velg",
+      "mismatch": "Dette ser ikke ut som originalfilen («{{ name }}»). Bruke den likevel?",
+      "intro": "Prosjektet er trygt. Av hensyn til personvernet ditt spør nettleseren på nytt før verktøyet kan lese filene dine",
+      "allowOne": "Tillat",
+      "privacy": "Videoene dine leses der de ligger på disken, de kopieres eller lastes aldri opp",
+      "status": {
+        "ready": "Tilkoblet",
+        "permission": "Venter på tillatelsen din",
+        "moved": "Ikke funnet: flyttet eller gitt nytt navn?",
+        "missing": "Velg den på nytt (nettleseren din husker ikke filtilgangen)",
+        "loading": "Åpner …"
+      }
+    },
+    "preview": {
+      "cut": "Klipp",
+      "back": "Tilbake 5 s",
+      "play": "Spill av",
+      "pause": "Pause",
+      "savedHint": "Tid fjernet med klipp",
+      "badge": "Lett forhåndsvisning · {{ q }}p",
+      "quality": "Kvalitet på forhåndsvisningen",
+      "qualityHint": "En lettere forhåndsvisning holder verktøyet smidig. Eksporten bruker alltid full kvalitet"
+    },
+    "timeline": {
+      "title": "Tidslinje",
+      "silence": "Stillhet",
+      "manual": "Manuell",
+      "text": "Tekst",
+      "hint": "Dra på bølgeformen for å markere en del, deretter Klipp eller Hastighet · klikk på et klipp for å justere kantene · dobbeltklikk for å fjerne",
+      "removeCut": "Fjern klippet",
+      "zoom": "Zoom på tidslinjen",
+      "analyzing": "Analyserer lyden …",
+      "zoomIn": "Zoom inn",
+      "zoomOut": "Zoom ut",
+      "fit": "Tilpass",
+      "fitHint": "Vis hele videoen (tips: Ctrl + rullehjul for å zoome)",
+      "manualCut": "Klipp for hånd",
+      "markIn": "Start",
+      "markOut": "Slutt",
+      "markInHint": "Starten på delen som skal klippes, ved avspillingshodet (I)",
+      "markOutHint": "Slutten på delen som skal klippes, ved avspillingshodet (O)",
+      "cutMarked": "Klipp",
+      "cutHint": "Fjern delen mellom start og slutt (X)",
+      "clearMarks": "Fjern start og slutt",
+      "marksMissing": "Angi først en start (I) og en slutt (O)",
+      "analysisError": "Lyden kunne ikke analyseres",
+      "selectedCut": "Valgt klipp",
+      "earlier": "Tidligere",
+      "later": "Senere",
+      "listen": "Lytt til klippet",
+      "speed": "Hastighet",
+      "speedHint": "Gjør delen mellom start og slutt raskere eller saktere",
+      "selectedSpeed": "Hastighetsendring",
+      "removeSpeed": "Tilbake til normal hastighet",
+      "listenSpeed": "Spill av hastighetsendringen",
+      "selectFirst": "Marker først en del: dra på bølgeformen, eller angi Start og Slutt"
+    },
+    "transcript": {
+      "title": "Transkripsjon",
+      "words": "{{ count }} ord",
+      "fillers": "Fjern fyllord ({{ count }})",
+      "restore": "Gjenopprett alt",
+      "selected": "{{ count }} markert",
+      "cut": "Klipp / gjenopprett",
+      "tip": "Klikk på et ord for å hoppe dit. Dra eller skift-klikk for å markere, deretter Delete for å klippe eller Rett (Enter) for å korrigere det Whisper hørte feil",
+      "emptyTitle": "Ingen transkripsjon ennå",
+      "emptyText": "Transkriber videoen for å redigere den via tekst og få tekster ord for ord",
+      "correct": "Rett",
+      "correctTitle": "Hva ble egentlig sagt?",
+      "correctHint": "Skriv inn et ord eller en hel setning på nytt. Tider og tekster tilpasses automatisk",
+      "apply": "Bruk"
+    },
+    "transcribe": {
+      "title": "Transkripsjon (Whisper)",
+      "hint": "Kjører på enheten din. Modellen lastes ned én gang og lagres så i hurtigbufferen",
+      "model": "Modell",
+      "models": {
+        "tiny": "Rask",
+        "base": "Balansert",
+        "small": "Nøyaktig"
+      },
+      "download": "Engangsnedlasting på {{ size }}",
+      "language": "Talespråk",
+      "auto": "Gjenkjenn automatisk",
+      "run": "Transkriber",
+      "rerun": "Transkriber alt på nytt",
+      "done": "{{ count }} ord transkribert",
+      "empty": "Fant ingen tale i denne videoen",
+      "stage": {
+        "audio": "Henter ut lyden …",
+        "download": "Laster ned modellen …",
+        "transcribe": "Transkriberer …"
+      },
+      "missing": "Transkriber de nye klippene ({{ count }})",
+      "rerunHint": "Starter på nytt med modellen og språket ovenfor",
+      "confirmAll": "Transkribere alt på nytt? Ordene du har klippet bort eller rettet, går tapt",
+      "detected": "Gjenkjent språk: {{ language }}"
+    },
+    "tabs": {
+      "format": "Format",
+      "cuts": "Klipp",
+      "captions": "Tekster",
+      "framing": "Beskjæring",
+      "audio": "Lyd",
+      "clips": "Klippliste",
+      "texts": "Tekstfelt"
+    },
+    "format": {
+      "title": "Utdataformat",
+      "hint": "Videoen beskjæres for å passe. Bruk Beskjæring for å følge den som snakker",
+      "landscape": "YouTube",
+      "vertical": "TikTok · Reels",
+      "square": "Feed",
+      "source": "Kilde:",
+      "resolution": "Oppløsning",
+      "fps": "Bilder per sekund",
+      "exportNote": "Oppløsning og bildefrekvens velges ved eksport",
+      "rotation": "Rotasjon",
+      "rotateLeft": "Roter mot venstre",
+      "rotateRight": "Roter mot høyre",
+      "rotationHint": "For en video som er filmet på siden. Gjelder alle klipp",
+      "rotatedFaces": "Videoen er rotert: slå på «Følg ansiktet» igjen under Beskjæring"
+    },
+    "cuts": {
+      "title": "Stillhetsgjenkjenning",
+      "hint": "Fjerner pausene. Senk terskelen hvis ord blir klippet",
+      "threshold": "Terskel",
+      "suggested": "Foreslått for dette opptaket: {{ value }} dB",
+      "minSilence": "Minste stillhet",
+      "padding": "Pusterom",
+      "detect": "Finn og klipp bort stillhet",
+      "detected": "{{ count }} stillheter klippet bort",
+      "count": "klipp",
+      "removed": "fjernet",
+      "final": "endelig lengde",
+      "clear": "Fjern alle klipp",
+      "mode": "Finn pauser via",
+      "modes": {
+        "audio": "Volum",
+        "transcript": "Transkripsjon"
+      },
+      "modeHint": "Transkripsjonsmodusen er nøyaktig selv med bakgrunnsstøy eller musikk",
+      "modeNeedsTranscript": "Transkriber videoen for å finne pauser ut fra ordene: mer nøyaktig på støyende steder",
+      "preset": "Rytme",
+      "presets": {
+        "gentle": "Naturlig",
+        "normal": "Balansert",
+        "tight": "Dynamisk"
+      },
+      "live": "Klippene oppdateres fortløpende mens du endrer innstillingene",
+      "silentClips": "{{ count }} klipp uten stemme: der klippes bare ekte dødtid bort"
+    },
+    "captions": {
+      "title": "Innbrente tekster",
+      "style": "Stil",
+      "styles": {
+        "karaoke": "Karaoke",
+        "clean": "Ren",
+        "boxed": "Boks"
+      },
+      "position": "Plassering",
+      "positions": {
+        "top": "Øverst",
+        "center": "Midten",
+        "bottom": "Nederst"
+      },
+      "size": "Størrelse",
+      "words": "Ord per tekstlinje",
+      "uppercase": "Store bokstaver",
+      "highlight": "Uthevingsfarge"
+    },
+    "framing": {
+      "title": "Automatisk beskjæring",
+      "hint": "Følger ansikter for å holde den som snakker i bildet, ideelt for 16:9 → 9:16",
+      "center": "Sentrert",
+      "face": "Følg ansiktet",
+      "analyzing": "Sporer ansikter …",
+      "analyze": "Spor ansikter",
+      "reanalyze": "Spor ansikter på nytt",
+      "tracked": "{{ count }} posisjoner sporet",
+      "found": "Ansiktet er sporet: beskjæringen følger den som snakker",
+      "notFound": "Fant ikke noe ansikt konsekvent i denne videoen",
+      "punch": "Smart zoom",
+      "punchHint": "Veksler mellom en lett zoom ved hvert klipp, eller ved hver setning når det ikke finnes klipp, slik at videoen holder seg dynamisk",
+      "zoom": "Zoomstyrke",
+      "firstTime": "Når du velger «Følg ansiktet», analyseres videoen én gang, lokalt",
+      "beatsCuts": "Zoomen endres {{ count }} ganger, ved klippene dine",
+      "beatsAuto": "Ingen klipp ennå: zoomen endres {{ count }} ganger, ved setninger eller hvert 4. sekund"
+    },
+    "audio": {
+      "title": "Bakgrunnsmusikk",
+      "hint": "Musikken senkes automatisk mens noen snakker (auto-ducking)",
+      "reconnect": "Koble til «{{ name }}» igjen",
+      "pick": "Velg en musikkfil",
+      "enabled": "Ta med i videoen",
+      "volume": "Musikkvolum",
+      "ducking": "Senking under tale",
+      "duckingHint": "Hvor mye musikken senkes når noen snakker"
+    },
+    "export": {
+      "button": "Eksporter",
+      "title": "Eksporter videoen",
+      "running": "Eksporterer …",
+      "eta": "Omtrent {{ time }} igjen",
+      "keepOpen": "Hold denne fanen åpen. Kodingen bruker skjermkortet ditt når det er mulig",
+      "done": "Eksporten er ferdig",
+      "saved": "«{{ name }}» ble lagret på disken din på {{ seconds }} s",
+      "downloaded": "«{{ name }}» ble lastet ned på {{ seconds }} s",
+      "duration": "Varighet",
+      "from": "fra {{ time }}",
+      "streamHint": "Du velger hvor MP4-filen skal lagres. Den skrives rett til disken",
+      "downloadHint": "MP4-filen settes sammen lokalt og lastes deretter ned",
+      "start": "Eksporter MP4",
+      "saveProject": "Lagre prosjektet",
+      "saveProjectHint": "En .lcv.json-fil med redigeringen din (uten videoen), for å fortsette på en annen datamaskin",
+      "projectSaved": "Prosjektet er lagret som en .lcv.json-fil"
+    },
+    "clips": {
+      "title": "Klipp",
+      "hint": "Videoene spilles av etter hverandre i denne rekkefølgen. Dra for å endre rekkefølgen: klipp og ord følger klippet sitt",
+      "jump": "Gå til dette klippet",
+      "up": "Flytt opp",
+      "down": "Flytt ned",
+      "remove": "Fjern klippet",
+      "add": "Legg til videoer",
+      "summary": "{{ count }} klipp · {{ time }} totalt",
+      "confirmRemove": "Fjerne «{{ name }}» fra prosjektet? Klippene og ordene i det fjernes også (Ctrl+Z for å angre)",
+      "added": "{{ count }} klipp lagt til",
+      "addedTranscribe": "{{ count }} klipp lagt til. Transkriber på nytt for å gi dem tekster: klipp som allerede er transkribert, beholdes",
+      "noVoice": "ingen stemme",
+      "voiceOn": "Stemme · klikk hvis ingen snakker",
+      "voiceOff": "Ingen stemme · klikk hvis noen snakker"
+    },
+    "auto": {
+      "button": "Autoredigering",
+      "cta": "Rediger videoen automatisk",
+      "transcribeOnly": "eller bare transkriber",
+      "heading": "La LocalCutVideo redigere videoen din",
+      "lead": "Med ett klikk: stillhet og nøling fjernet, tekster, beskjæring på den som snakker og smart zoom. Du kan endre alt etterpå",
+      "target": "Hvor skal du publisere den?",
+      "options": {
+        "silences": "Klipp bort stillheten",
+        "fillers": "Fjern nøling (eh, ehm …)",
+        "captions": "Karaoketekster",
+        "framing": "Følg ansiktet",
+        "framingNoCrop": "Ikke nødvendig: dette formatet viser hele bildet",
+        "zoom": "Smart zoom"
+      },
+      "local": "Alt kjører på enheten din. Videoen lastes aldri opp",
+      "start": "Start autoredigeringen",
+      "running": "Redigerer videoen din …",
+      "done": "Videoen din er redigert!",
+      "view": "Se resultatet",
+      "undo": "Angre autoredigeringen",
+      "undone": "Prosjektet er tilbake slik det var før autoredigeringen",
+      "summary": {
+        "cuts": "klipp",
+        "removed": "fjernet",
+        "words": "ord med tekst",
+        "silent": "{{ count }} klipp uten stemme: bare ekte dødtid ble klippet bort"
+      },
+      "steps": {
+        "analyze": "Analyserer lyden",
+        "transcribe": "Transkriberer talen",
+        "fillers": "Fjerner nøling",
+        "silences": "Klipper bort stillheten",
+        "framing": "Følger ansiktet",
+        "style": "Tekster og smart zoom",
+        "voice": "Gjenkjenner stemmer"
+      },
+      "status": {
+        "skipped": "hoppet over",
+        "error": "mislyktes"
+      },
+      "voice": {
+        "title": "Snakker noen i videoen?",
+        "auto": "Auto",
+        "yes": "Ja",
+        "no": "Nei",
+        "detectedYes": "Gjenkjent: noen snakker",
+        "detectedNo": "Gjenkjent: ingen stemme",
+        "hint": "Ingen stemme: ingen transkripsjon eller tekster, bare ekte dødtid klippes bort"
+      }
+    },
+    "mix": {
+      "title": "Lyd i videoen",
+      "hint": "Skru lyden i klippene opp eller ned",
+      "volume": "Volum",
+      "mute": "Demp",
+      "unmute": "Slå på lyden",
+      "volumeHint": "Gjelder forhåndsvisningen og eksporten",
+      "boostHint": "Over 100 % hindrer en begrenser forvrengning",
+      "normalize": "Jevn ut klippene",
+      "normalizeHint": "Alle klipp med samme lydnivå, filmet nært eller langt unna",
+      "denoise": "Reduser bakgrunnsstøy",
+      "denoiseHint": "Klarere stemme (vind, sus, vifter). Brukes ved eksport, på klipp med stemme. Lytt først",
+      "listen": "Lytt til 8 s av resultatet",
+      "stopListening": "Slutt å lytte",
+      "preparing": "Forbereder …"
+    },
+    "thumbnail": "Miniatyrbilde",
+    "transition": {
+      "title": "Overgang ved klipp",
+      "none": "Hardt klipp",
+      "dip": "Rask overtoning",
+      "black": "Ton til svart",
+      "hint": "Spilles ved hvert klipp og klippbytte (og i starten og slutten med ton til svart). Synlig under avspilling"
+    },
+    "texts": {
+      "title": "Tekst over videoen",
+      "hint": "Titler og notater som vises ved avspillingshodet. Sett ord mellom stjerner for å farge dem",
+      "add": "Legg til en tekst ved avspillingshodet",
+      "default": "Din *tekst*",
+      "timing": "Vises",
+      "startHere": "Start her",
+      "endHere": "Slutt her",
+      "remove": "Fjern denne teksten"
+    },
+    "background": {
+      "title": "Bakgrunn",
+      "hint": "Gjør bakgrunnen bak personen uskarp, mens personen forblir skarp. Beregnes på enheten din",
+      "none": "Skarp",
+      "blur": "Uskarp",
+      "strength": "Uskarphetsgrad",
+      "error": "Bakgrunnsuskarpheten kunne ikke starte på denne enheten"
+    }
+  },
+  "legal": {
+    "updated": "Sist oppdatert: 1. november 2026",
+    "contact": "Kontakt",
+    "nav": {
+      "notice": "Juridisk informasjon",
+      "privacy": "Personvern",
+      "terms": "Bruksvilkår"
+    },
+    "notice": {
+      "title": "Juridisk informasjon",
+      "intro": "Opplysninger som kreves etter fransk lov (artikkel 6 i LCEN, lov nr. 2004-575 av 21. juni 2004) om utgiveren og verten for dette nettstedet.",
+      "sections": [
+        {
+          "title": "Utgiver",
+          "body": [
+            "Nettstedet localcutvideo.mbonnici.fr («LocalCutVideo») utgis av Maxence Bonnici, privatperson, uten kommersielt formål.",
+            "Ansvarlig redaktør: Maxence Bonnici.",
+            "Kontakt: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Vertskap",
+          "body": [
+            "Nettstedet driftes av utgiveren selv, Maxence Bonnici, på en privat server, og publiseres med plattformen Coolify.",
+            "Kontakt: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Immaterielle rettigheter",
+          "body": [
+            "Kildekoden til LocalCutVideo er åpen og publisert under MIT-lisensen på [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
+            "Tredjepartskomponenter, KI-modeller og skrifttyper som applikasjonen bruker, tilhører fortsatt opphavspersonene sine og brukes under sine egne lisenser, som er oppført i [bruksvilkårene](/terms). Nevnte varemerker (Whisper, MediaPipe, Hugging Face, Chrome, Edge …) tilhører sine eiere."
+          ]
+        },
+        {
+          "title": "Ansvar",
+          "body": [
+            "Utgiveren gjør sitt beste for å holde nettstedet tilgjengelig og opplysningene riktige, men kan ikke garantere noen av delene. Bruken av applikasjonen reguleres av [bruksvilkårene](/terms)."
+          ]
+        },
+        {
+          "title": "Personopplysninger",
+          "body": [
+            "LocalCutVideo samler ikke inn noen personopplysninger: videoer behandles bare på enheten din. Detaljene står i [personvernerklæringen](/privacy)."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Personvernerklæring",
+      "intro": "LocalCutVideo er laget slik at videoene dine aldri forlater enheten din. Denne siden forklarer enkelt hva som behandles, og hvor.",
+      "sections": [
+        {
+          "title": "Kort fortalt",
+          "body": [
+            "Ingen opplasting: videoene, lyden og transkripsjonene dine behandles i nettleseren og sendes aldri til utgiveren eller noen andre.",
+            "Ingen konto, ingen informasjonskapsler, ingen statistikk, ingen reklame."
+          ]
+        },
+        {
+          "title": "Det som blir på enheten din",
+          "body": [
+            "Video- og lydfilene du åpner, leses direkte fra disken din. Analyse, transkripsjon (Whisper), ansiktssporing og eksport beregnes lokalt av nettleseren din.",
+            "Prosjektene dine (klipp, transkripsjon, innstillinger) lagres i nettleserens lokale database (IndexedDB), sammen med et miniatyrbilde og en hurtigbuffer med analyser. Utgiveren har ikke tilgang til dem. Du kan slette et prosjekt på prosjektsiden, eller slette alt ved å fjerne dataene for dette nettstedet i nettleserinnstillingene."
+          ]
+        },
+        {
+          "title": "Lokal lagring",
+          "body": [
+            "Applikasjonen lagrer innstillingene dine for grensesnittet (språk, tema, sist åpnede prosjekt) i nettleserens lokale lagring, og beholder sine egne filer og de nedlastede KI-modellene i nettleserens hurtigbuffer for å kunne fungere uten nett. Dette er strengt nødvendig for tjenesten, brukes aldri til å spore deg og krever derfor ikke noe samtykkebanner."
+          ]
+        },
+        {
+          "title": "Server",
+          "body": [
+            "Serveren leverer bare applikasjonens filer og lagrer ingen tilgangslogger. Som alle nettservere mottar den teknisk sett IP-adressen din for å svare på forespørsler, men lagrer den ikke."
+          ]
+        },
+        {
+          "title": "Tredjeparter",
+          "body": [
+            "Hugging Face: Whisper-modellen leveres av dette nettstedet, i likhet med resten av applikasjonen. Bare hvis den ikke er tilgjengelig her, lastes den i stedet ned fra huggingface.co; Hugging Face mottar da IP-adressen din og vanlig nettleserinformasjon, men aldri lyden din. Se deres [personvernerklæring](https://huggingface.co/privacy).",
+            "GitHub: bare hvis du følger en lenke til kildekodelageret.",
+            "Ingen andre tredjeparter kontaktes: en streng Content-Security-Policy hindrer teknisk siden i å koble til noe annet sted."
+          ]
+        },
+        {
+          "title": "Rettighetene dine",
+          "body": [
+            "Etter personvernforordningen (GDPR) har du rett til innsyn i, retting og sletting av dataene dine, og rett til å protestere mot behandlingen av dem. Siden utgiveren ikke har noen data om deg, er det som regel ingenting å få innsyn i, men du kan stille alle spørsmål til maxence.bonnici@outlook.fr. Du kan også klage til CNIL ([cnil.fr](https://www.cnil.fr)) eller til datatilsynet i landet ditt."
+          ]
+        },
+        {
+          "title": "Endringer",
+          "body": [
+            "Denne erklæringen kan bli oppdatert når applikasjonen utvikler seg. Datoen for siste oppdatering står øverst på siden."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Bruksvilkår",
+      "intro": "Ved å bruke LocalCutVideo godtar du disse vilkårene. De er korte fordi tjenesten er enkel: et gratis verktøy som kjører i nettleseren din.",
+      "sections": [
+        {
+          "title": "Tjenesten",
+          "body": [
+            "LocalCutVideo er en gratis applikasjon for videoredigering som kjører helt i nettleseren din. Den tilbys kostnadsfritt, uten konto, og kan endres, avbrytes eller avsluttes når som helst uten varsel."
+          ]
+        },
+        {
+          "title": "Innholdet ditt",
+          "body": [
+            "Du er fortsatt eneeier av og eneansvarlig for videoene, lydene og musikken du redigerer og publiserer. Du må ha de nødvendige rettighetene (opphavsrett, musikklisenser, retten til eget bilde for personene som filmes).",
+            "Applikasjonen skal ikke brukes til ulovlige formål."
+          ]
+        },
+        {
+          "title": "Automatiske funksjoner",
+          "body": [
+            "Transkripsjon, tekster, stillhetsgjenkjenning og automatisk beskjæring lages automatisk og kan inneholde feil. Kontroller resultatet før du publiserer det."
+          ]
+        },
+        {
+          "title": "Filene og prosjektene dine",
+          "body": [
+            "Applikasjonen endrer aldri originalfilene dine. Prosjekter lagres i nettleseren og kan gå tapt hvis dataene der slettes, eller hvis nettleseren frigjør plass: ta alltid vare på originalfilene dine."
+          ]
+        },
+        {
+          "title": "Garanti og ansvar",
+          "body": [
+            "Programvaren leveres «som den er», uten noen form for garanti, under MIT-lisensen. I den grad loven tillater det, kan utgiveren ikke holdes ansvarlig for skade som skyldes bruk av, eller manglende mulighet til å bruke, applikasjonen (datatap, eksportfeil, utilgjengelighet …)."
+          ]
+        },
+        {
+          "title": "Åpen kildekode og tredjepartskomponenter",
+          "body": [
+            "Kildekoden er tilgjengelig under MIT-lisensen på [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
+            "LocalCutVideo bygger på: Mediabunny (MPL-2.0), Transformers.js og ONNX Runtime (Apache-2.0 og MIT), Whisper-modellene fra OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) og skrifttypene Inter og Montserrat (SIL Open Font License)."
+          ]
+        },
+        {
+          "title": "Lovvalg",
+          "body": [
+            "Disse vilkårene reguleres av fransk lov. Spørsmål: maxence.bonnici@outlook.fr."
+          ]
+        }
+      ]
+    }
+  },
+  "thumbnail": {
+    "eyebrow": "Miniatyrverktøy",
+    "title": "Miniatyrbilder folk har lyst til å klikke på",
+    "lead": "Velg det beste øyeblikket i videoen din, legg til en slagkraftig tittel og last ned et bilde klart for YouTube, Shorts eller Instagram. Alt skjer på enheten din",
+    "pick": "Slipp en video eller et bilde",
+    "pickHint": "MP4, MOV, WebM, JPG, PNG … filen blir på enheten din",
+    "choose": "Velg en fil",
+    "local": "Ingenting lastes opp: bildet lages i nettleseren din",
+    "permissionTitle": "Gi tilgang til prosjektets video",
+    "permissionText": "Nettleseren ber om en bekreftelse før filen leses fra enheten din igjen",
+    "permission": "Gi tilgang",
+    "back": "Tilbake til redigeringsverktøyet",
+    "dragHint": "Dra i bildet for å beskjære det på nytt",
+    "frame": "Videobilde",
+    "prevFrame": "Forrige bilde",
+    "nextFrame": "Neste bilde",
+    "moments": "Beste øyeblikk",
+    "other": "Velg en annen fil",
+    "format": "Format",
+    "formats": {
+      "landscape": "YouTube",
+      "vertical": "Shorts · TikTok",
+      "square": "Instagram"
+    },
+    "text": "Tittel",
+    "textPlaceholder": "Den fengende tittelen din",
+    "defaultText": "Din *tittel* her",
+    "accentHint": "Sett ord mellom stjerner for å farge dem: *slik*",
+    "size": "Tekststørrelse",
+    "position": "Plassering",
+    "positions": {
+      "top": "Øverst",
+      "center": "Midten",
+      "bottom": "Nederst"
+    },
+    "alignCenter": "Sentrert",
+    "alignLeft": "Venstre",
+    "uppercase": "Store bokstaver",
+    "tilt": "Skrå tekst",
+    "style": "Tittelstil",
+    "styles": {
+      "outline": "Kontur",
+      "shadow": "Skygge",
+      "box": "Banner",
+      "highlight": "Markeringstusj"
+    },
+    "color": "Tekstfarge",
+    "accent": "Farge på uthevede ord",
+    "image": "Bilde",
+    "zoom": "Zoom",
+    "brightness": "Lysstyrke",
+    "contrast": "Kontrast",
+    "saturation": "Metning",
+    "shade": "Gjør kantene mørkere",
+    "reset": "Tilbakestill",
+    "downloadJpg": "Last ned JPG",
+    "downloadPng": "Last ned PNG",
+    "sizeInfo": "{{ width }} × {{ height }} px · JPG er best for YouTube (under 2 MB)",
+    "saved": "Lagret: {{ name }}",
+    "loadError": "Prosjektet kunne ikke åpnes",
+    "readError": "Filen kunne ikke leses"
+  },
+  "seo": {
+    "home": {
+      "title": "LocalCutVideo — Gratis videoredigering i nettleseren, ingenting lastes opp",
+      "description": "Rediger videoene dine i nettleseren: stillhet klippes bort automatisk, KI-tekster, ansiktsbeskjæring for TikTok og Shorts, miniatyrbilder. Gratis og åpen kildekode, videoene dine forlater aldri datamaskinen din"
+    },
+    "thumbnail": {
+      "title": "Gratis verktøy for YouTube-miniatyrbilder — LocalCutVideo",
+      "description": "Lag et miniatyrbilde for YouTube, Shorts eller Instagram fra videoen din: beste øyeblikk foreslått, stor tittel med fargede ord, JPG eller PNG. Gratis, i nettleseren, ingenting lastes opp"
+    },
+    "changelog": {
+      "title": "Endringslogg — LocalCutVideo",
+      "description": "Nytt i LocalCutVideo, versjon for versjon"
+    },
+    "legal": {
+      "title": "Juridisk informasjon — LocalCutVideo",
+      "description": "Utgiver og vertskap for LocalCutVideo"
+    },
+    "privacy": {
+      "title": "Personvernerklæring — LocalCutVideo",
+      "description": "LocalCutVideo laster ikke opp noe: videoene, transkripsjonene og prosjektene dine blir på enheten din"
+    },
+    "terms": {
+      "title": "Bruksvilkår — LocalCutVideo",
+      "description": "Bruksvilkår for LocalCutVideo, et gratis videoredigeringsverktøy med åpen kildekode"
+    },
+    "app": {
+      "title": "Prosjekter — LocalCutVideo",
+      "description": "Videoprosjektene dine, lagret i nettleseren din"
+    },
+    "editor": {
+      "title": "Redigering — LocalCutVideo",
+      "description": "Redigeringsverktøyet i LocalCutVideo"
+    }
+  },
+  "tour": {
+    "label": "Omvisning",
+    "help": "Omvisning",
+    "count": "Trinn {{ n }} av {{ total }}",
+    "skip": "Hopp over omvisningen",
+    "prev": "Tilbake",
+    "next": "Neste",
+    "done": "Sett i gang!",
+    "steps": {
+      "auto": {
+        "title": "Ett klikk: autoredigeringen",
+        "text": "LocalCutVideo redigerer videoen for deg: stillhet og nøling fjernet, tekster, beskjæring og zoom. Du kan endre alt etterpå"
+      },
+      "preview": {
+        "title": "Forhåndsvisningen",
+        "text": "Det du ser, er nøyaktig det som eksporteres. Klikk på den, eller trykk på mellomrom, for å spille av eller sette på pause"
+      },
+      "timeline": {
+        "title": "Tidslinjen",
+        "text": "Klikk for å bevege deg i videoen. Dra på bølgeformen for å markere en del"
+      },
+      "cut": {
+        "title": "Klipp eller endre hastigheten",
+        "text": "Når en del er markert, fjerner Klipp (X) den, og Hastighet spiller den av raskere eller saktere. Ctrl+Z angrer hva som helst"
+      },
+      "transcript": {
+        "title": "Rediger via tekst",
+        "text": "Når videoen er transkribert, klipper du videoen ved å slette et ord. Du kan også rette det KI-en hørte feil"
+      },
+      "settings": {
+        "title": "Alle innstillingene",
+        "text": "Format (16:9, 9:16, kvadrat), klipp og overganger, tekster, tekstfelt, beskjæring og uskarphet, lyd og musikk"
+      },
+      "thumbnail": {
+        "title": "Miniatyrbildet",
+        "text": "Lag miniatyrbildet til videoen din ut fra de beste øyeblikkene"
+      },
+      "export": {
+        "title": "Eksporter",
+        "text": "Lagre videoen som MP4. Alt skjer på enheten din, ingenting lastes opp"
+      }
+    }
+  }
+}

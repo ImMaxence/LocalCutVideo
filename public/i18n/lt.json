@@ -1,0 +1,895 @@
+{
+  "common": {
+    "videoFiles": "Vaizdo įrašų failai",
+    "audioFiles": "Garso failai",
+    "cancel": "Atšaukti",
+    "close": "Uždaryti",
+    "retry": "Bandyti dar kartą",
+    "none": "Nėra",
+    "remove": "Pašalinti"
+  },
+  "nav": {
+    "features": "Funkcijos",
+    "privacy": "Privatumas",
+    "faq": "DUK",
+    "changelog": "Pakeitimų žurnalas",
+    "language": "Kalba",
+    "searchLanguage": "Ieškoti kalbos",
+    "noLanguage": "Kalba nerasta",
+    "install": "Įdiegti programėlę",
+    "open": "Atidaryti redaktorių",
+    "menu": "Atidaryti meniu",
+    "close": "Uždaryti meniu",
+    "thumbnail": "Miniatiūros"
+  },
+  "theme": {
+    "system": "Sistemos",
+    "light": "Šviesi",
+    "dark": "Tamsi",
+    "label": "Tema"
+  },
+  "footer": {
+    "tagline": "Nemokamas atvirojo kodo vaizdo įrašų redaktorius, veikiantis tik jūsų naršyklėje. Jūsų failai niekada nepalieka jūsų kompiuterio",
+    "issues": "Pranešti apie problemą",
+    "noTracking": "Jokių slapukų, jokio sekimo",
+    "product": "Produktas",
+    "legal": "Teisinė informacija"
+  },
+  "pwa": {
+    "update": "Yra nauja versija",
+    "reload": "Įkelti iš naujo"
+  },
+  "landing": {
+    "hero": {
+      "badgeLocal": "100 % vietoje, niekas neįkeliama",
+      "badgeOpen": "Nemokama ir atvirojo kodo",
+      "title1": "Redaguokite savo vaizdo įrašus",
+      "title2": "Niekas nepalieka jūsų kompiuterio",
+      "lead": "LocalCutVideo iškerpa tylą, transkribuoja su Whisper, įrašo karaoke subtitrus ir perkadruoja 16:9 į 9:16, viskas jūsų naršyklėje. Jokio įkėlimo, jokios paskyros, jokio serverio",
+      "cta": "Atidaryti redaktorių",
+      "github": "Žiūrėti GitHub",
+      "hint": "Geriausiai veikia su Chrome arba Edge kompiuteryje",
+      "demo": "Išbandyti su demonstraciniu įrašu"
+    },
+    "mock": {
+      "w1": "Taigi šiandien",
+      "filler": "ėė,",
+      "w2": "aš jums parodysiu",
+      "w3": "kaip tai veikia",
+      "line2": "Viskas veikia jūsų kompiuteryje, net dirbtinis intelektas",
+      "line3": "Ištrinkite žodį ir vaizdo įrašas iškerpamas",
+      "cap1": "Tai lieka jūsų",
+      "cap2": "kompiuteryje"
+    },
+    "stats": {
+      "upload": "įkeltų baitų",
+      "local": "apdorojama jūsų įrenginyje",
+      "languages": "sąsajos kalbos",
+      "gpu": "spartinamas DI ir kodavimas"
+    },
+    "how": {
+      "eyebrow": "Kaip tai veikia",
+      "title": "Nuo neapdorotos medžiagos iki paskelbti paruošto vaizdo įrašo per tris žingsnius",
+      "open": {
+        "title": "Atidarykite vaizdo įrašą",
+        "text": "Pasirinkite failą diske. Jis skaitomas vietoje: jokios kopijos, jokio įkėlimo, net kelių gigabaitų failams"
+      },
+      "edit": {
+        "title": "Leiskite redaktoriui dirbti",
+        "text": "Tyla aptinkama, kalba transkribuojama žodis po žodžio, veidai sekami, ir visa tai vietoje. Pataisykite bet ką redaguodami tekstą"
+      },
+      "export": {
+        "title": "Eksportuokite MP4",
+        "text": "Pasirinkite 16:9, 9:16 arba 1:1. Vaizdo įrašą užkoduoja jūsų vaizdo plokštė ir jis įrašomas tiesiai į jūsų diską"
+      }
+    },
+    "features": {
+      "eyebrow": "Funkcijos",
+      "title": "Viskas, ko reikia vaizdo įrašams, kuriuose kalbama į kamerą",
+      "lead": "Sukurta YouTube, TikTok, Reels ir Shorts kūrėjams, kurie nenori niekur įkelti savo neapdorotos medžiagos",
+      "silences": {
+        "title": "Automatinis tylos iškirpimas",
+        "text": "Aptinka pauzes pagal garso stiprumą ir jas pašalina, su reguliuojama riba, mažiausia trukme ir atokvėpio tarpu"
+      },
+      "textEdit": {
+        "title": "Redagavimas tekstu",
+        "text": "Whisper kiekvienam žodžiui suteikia laiko žymą. Ištrinkite žodžius transkripcijoje ir atitinkama vaizdo įrašo dalis iškerpama"
+      },
+      "captions": {
+        "title": "Karaoke subtitrai",
+        "text": "Žodis po žodžio animuoti subtitrai, įrašyti į vaizdo įrašą, karaoke, švariu arba rėmelio stiliumi, jūsų paryškinimo spalva"
+      },
+      "framing": {
+        "title": "Automatinis kadravimas 16:9 → 9:16",
+        "text": "Veido sekimas išlaiko kalbantįjį kadre, kai horizontalų vaizdo įrašą paverčiate vertikaliu"
+      },
+      "zoom": {
+        "title": "Išmanusis priartinimas",
+        "text": "Kintantys priartinimai ties kiekvienu kirpimu paverčia šuolinius kirpimus sąmoningais ir išlaiko žiūrovų dėmesį"
+      },
+      "ducking": {
+        "title": "Garsas ir muzika",
+        "text": "Pagarsinkite, suvienodinkite klipus ir pridėkite foninę muziką, kuri pati pritilsta, kai kas nors kalba"
+      },
+      "recovery": {
+        "title": "Atkūrimas po strigties",
+        "text": "Kiekvienas pakeitimas išsaugomas naršyklėje realiuoju laiku. Vėl atidarykite skirtuką ir tęskite tiksliai ten, kur baigėte"
+      },
+      "offline": {
+        "title": "Veikia neprisijungus",
+        "text": "Įdiekite kaip programėlę. Kai DI modelis atsisiųstas, visas redaktorius veikia be interneto ryšio"
+      },
+      "export": {
+        "title": "Greitas aparatinis eksportas",
+        "text": "Kodavimui naudojamas WebCodecs, į naršyklę ir vaizdo plokštę įmontuotas vaizdo koderis, o ne lėtas programinis kodavimas"
+      },
+      "clips": {
+        "title": "Kelių klipų sujungimas",
+        "text": "Įmeskite kelis dublius iš karto: jie sujungiami į vieną vaizdo įrašą jūsų pasirinkta tvarka, su bendra laiko juosta ir transkripcija"
+      },
+      "inputs": {
+        "title": "MP4, MOV, WebM, MKV",
+        "text": "Atidaro jūsų telefono ir kameros failus, įskaitant iPhone HEVC vaizdo įrašus, jei naršyklė gali juos iškoduoti"
+      },
+      "languages": {
+        "title": "Daugiakalbis",
+        "text": "Sąsaja kalba {{ count }} kalbomis, o Whisper transkribuoja dar dešimtis kitų, su automatiniu kalbos atpažinimu"
+      }
+    },
+    "privacy": {
+      "eyebrow": "Privatumas",
+      "title": "Jokio įkėlimo, nuo pat pradžių",
+      "lead": "Jūsų vaizdo įrašas skaitomas tiesiai iš disko. Garso analizė, transkripcija, veido sekimas ir kodavimas vyksta foninėse gijose (Web Workers) jūsų kompiuteryje. Paprasčiausiai nėra serverio, į kurį būtų galima siųsti jūsų medžiagą",
+      "upload": "Jokio įkėlimo, niekada: failas niekada nepalieka jūsų kompiuterio",
+      "account": "Jokios paskyros, slapukų ar analitikos",
+      "csp": "Griežta Content-Security-Policy leidžia puslapiui bendrauti tik su šia svetaine, kuri taip pat teikia DI modelius (Hugging Face yra tik atsarginis variantas)",
+      "storage": "Projektai saugomi vietinėje naršyklės duomenų bazėje (IndexedDB) ir gali būti ištrinti bet kada",
+      "diagram": {
+        "machine": "Jūsų kompiuteris",
+        "file": "Vaizdo įrašo failas",
+        "browser": "Jūsų naršyklė",
+        "upload": "Įkėlimas į serverį",
+        "model": "DI modelio atsisiuntimas (vieną kartą, į podėlį)"
+      }
+    },
+    "support": {
+      "eyebrow": "Suderinamumas",
+      "title": "Naršyklių palaikymas",
+      "ok": "Visiškas",
+      "partial": "Dalinis",
+      "full": "Viskas, įskaitant atkūrimą po strigties ir eksporto įrašymą tiesiai į diską",
+      "firefox": "Redagavimas ir eksportas veikia. Uždarius skirtuką reikės iš naujo pasirinkti vaizdo įrašą",
+      "safari": "Tik naujos versijos. Įkėlę iš naujo, vėl pasirinkite vaizdo įrašą; eksportas atsisiunčiamas",
+      "mobile": "Telefonai ir planšetės",
+      "mobileText": "Tinka trumpiems klipams, bet dėl atminties apribojimų ilgi vaizdo įrašai nepatikimi"
+    },
+    "faq": {
+      "title": "Dažnai užduodami klausimai",
+      "free": {
+        "q": "Ar tikrai nemokama? Kur kabliukas?",
+        "a": "Tai nemokama ir atvirojo kodo programa. Kadangi visas darbas vyksta jūsų kompiuteryje, nereikia mokėti už serverius, todėl nėra ko jums parduoti ir nėra duomenų rinkti"
+      },
+      "formats": {
+        "q": "Kokius vaizdo formatus galiu atidaryti?",
+        "a": "MP4, MOV, WebM ir MKV, jei naršyklė gali iškoduoti kodeką (H.264, HEVC, VP9, AV1 priklausomai nuo naršyklės ir sistemos). Eksportuojamas MP4 failas"
+      },
+      "browsers": {
+        "q": "Kodėl Chrome arba Edge?",
+        "a": "Jie palaiko File System Access API, kuri leidžia redaktoriui vėl atidaryti vaizdo įrašą po įkėlimo iš naujo ir įrašyti eksportą tiesiai į diską. Kitos naršyklės taip pat veikia, tik su keliais papildomais paspaudimais"
+      },
+      "size": {
+        "q": "Ar yra failo dydžio apribojimas?",
+        "a": "Įkėlimo apribojimo nėra, nes niekas neįkeliama. Vaizdo įrašas skaitomas iš disko mažomis dalimis; praktinė riba yra jūsų kompiuterio atmintis ir kantrybė su labai ilgais vaizdo įrašais"
+      },
+      "offline": {
+        "q": "Ar veikia be interneto?",
+        "a": "Taip, kai jau įkelta. Įdiekite kaip programėlę (PWA) ir vieną kartą transkribuokite prisijungę: Whisper modelis išsaugomas podėlyje ir viskas veikia neprisijungus"
+      },
+      "ai": {
+        "q": "Kur veikia DI?",
+        "a": "Jūsų naršyklėje. Whisper veikia su Transformers.js jūsų vaizdo plokštėje (WebGPU) arba procesoriuje (WebAssembly), o veidų aptikimui naudojamas MediaPipe. Modeliai atsisiunčiami vieną kartą, jūsų garsas niekada nesiunčiamas"
+      }
+    },
+    "final": {
+      "title": "Kitas jūsų vaizdo įrašas, sumontuotas per kelias minutes",
+      "text": "Jokios registracijos, jokio įkėlimo, jokio vandens ženklo. Atidarykite failą ir pradėkite redaguoti"
+    },
+    "thumbnail": {
+      "eyebrow": "Nauja · Miniatiūros",
+      "title": "Ir prie jo tinkanti miniatiūra",
+      "text": "Miniatiūrų kūrimo įrankis suranda ryškiausias jūsų vaizdo įrašo akimirkas. Pridėkite didelį pavadinimą su spalvotais žodžiais ir atsisiųskite tinkamo dydžio",
+      "points": {
+        "moments": "Siūlomos geriausios akimirkos",
+        "title": "Pavadinimas su paryškintais žodžiais, 4 stiliai",
+        "formats": "YouTube 1280×720, Shorts ir kvadratas",
+        "local": "Sukurta jūsų įrenginyje, niekas neįkeliama"
+      },
+      "cta": "Sukurti miniatiūrą",
+      "mockTitle": "Mano pirmasis",
+      "mockAccent": "vlogas"
+    }
+  },
+  "changelog": {
+    "eyebrow": "Versijos",
+    "title": "Pakeitimų žurnalas",
+    "lead": "Visos LocalCutVideo versijos, naujausia pirma",
+    "current": "Jūs naudojate",
+    "github": "Žiūrėti GitHub",
+    "releases": "Leidimai GitHub",
+    "latest": "Naujausia",
+    "error": "Nepavyko įkelti pakeitimų žurnalo"
+  },
+  "projects": {
+    "title": "Jūsų projektai",
+    "lead": "Projektai automatiškai išsaugomi šioje naršyklėje. Jūsų vaizdo įrašai lieka ten, kur yra jūsų diske",
+    "resume": "Tęsti ten, kur baigėte",
+    "reading": "Skaitomas vaizdo įrašas…",
+    "drop": "Įmeskite vaizdo įrašus čia",
+    "or": "arba",
+    "open": "Atidaryti vaizdo įrašus",
+    "private": "Failas skaitomas vietoje, niekas neįkeliama",
+    "noFsAccess": "Jūsų naršyklė negali įsiminti failų tarp seansų: uždarius skirtuką reikės iš naujo pasirinkti vaizdo įrašą. Chrome arba Edge to išvengia",
+    "recent": "Naujausi projektai",
+    "empty": "Projektų dar nėra. Atidarykite vaizdo įrašą ir pradėkite",
+    "delete": "Ištrinti projektą",
+    "confirmDelete": "Ištrinti projektą „{{ name }}“? Vaizdo įrašo failas jūsų diske nepaliečiamas",
+    "multi": "Keli failai? Jie sujungiami į vieną vaizdo įrašą pavadinimų tvarka",
+    "importFile": "Atidaryti projekto failą (.lcv.json)",
+    "saveFile": "Išsaugoti projektą kaip failą",
+    "imported": "Projektas atidarytas: pasirinkite jo vaizdo įrašus, kad tęstumėte"
+  },
+  "errors": {
+    "notVideo": "Šis failas neatrodo kaip vaizdo įrašas",
+    "codec": "Jūsų naršyklė negali iškoduoti šio vaizdo įrašo kodeko (HEVC/H.265 reikia Chrome arba Edge HEVC plėtinio). Pabandykite konvertuoti į H.264 MP4",
+    "noVideo": "Šiame faile nerastas vaizdo takelis",
+    "generic": "Skaitant šį failą įvyko klaida",
+    "transcribe": "Transkripcija nepavyko. Išbandykite mažesnį modelį arba patikrinkite ryšį pirmajam atsisiuntimui",
+    "export": "Eksportas nepavyko",
+    "faces": "Šiame vaizdo įraše veido sekimas nepavyko",
+    "skipped": "Praleista (nepavyko perskaityti): {{ names }}",
+    "skippedCodec": "Praleista, ši naršyklė nepalaiko kodeko: {{ names }}. Išbandykite Chrome arba konvertuokite į H.264 MP4",
+    "notProject": "Šis failas nėra LocalCutVideo projektas",
+    "demo": "Nepavyko įkelti demonstracinio vaizdo įrašo"
+  },
+  "languages": {
+    "en": "Anglų",
+    "fr": "Prancūzų",
+    "es": "Ispanų",
+    "it": "Italų",
+    "de": "Vokiečių",
+    "pt": "Portugalų",
+    "nl": "Olandų"
+  },
+  "editor": {
+    "back": "Atgal į projektus",
+    "name": "Projekto pavadinimas",
+    "undo": "Anuliuoti",
+    "redo": "Pakartoti",
+    "missing": "Šio projekto nebėra",
+    "save": {
+      "saving": "Išsaugoma…",
+      "saved": "Išsaugota vietoje",
+      "error": "Neišsaugota"
+    },
+    "reconnect": {
+      "loading": "Atidaromas vaizdo įrašas…",
+      "title": "Iš naujo prijunkite vaizdo įrašus",
+      "allow": "Leisti prieigą prie visų",
+      "select": "Pasirinkti",
+      "mismatch": "Tai neatrodo kaip originalus failas („{{ name }}“). Vis tiek naudoti?",
+      "intro": "Projektas saugus. Dėl jūsų privatumo naršyklė dar kartą klausia leidimo, kad redaktorius galėtų skaityti jūsų failus",
+      "allowOne": "Leisti",
+      "privacy": "Jūsų vaizdo įrašai skaitomi ten, kur yra diske, ir niekada nekopijuojami ar neįkeliami",
+      "status": {
+        "ready": "Prijungta",
+        "permission": "Laukiama jūsų leidimo",
+        "moved": "Nerasta: perkelta ar pervadinta?",
+        "missing": "Pasirinkite dar kartą (jūsų naršyklė neišsaugo prieigos prie failų)",
+        "loading": "Atidaroma…"
+      }
+    },
+    "preview": {
+      "cut": "Kirpimas",
+      "back": "Atgal 5 s",
+      "play": "Leisti",
+      "pause": "Pristabdyti",
+      "savedHint": "Kirpimais pašalintas laikas",
+      "badge": "Lengva peržiūra · {{ q }}p",
+      "quality": "Peržiūros kokybė",
+      "qualityHint": "Lengvesnė peržiūra padeda redaktoriui veikti sklandžiai. Eksportui visada naudojama visa kokybė"
+    },
+    "timeline": {
+      "title": "Laiko juosta",
+      "silence": "Tyla",
+      "manual": "Rankinis",
+      "text": "Tekstas",
+      "hint": "Vilkite bangos formoje, kad pažymėtumėte dalį, tada Iškirpti arba Greitis · spustelėkite kirpimą, kad pakoreguotumėte kraštus · dukart spustelėkite, kad pašalintumėte",
+      "removeCut": "Pašalinti kirpimą",
+      "zoom": "Laiko juostos mastelis",
+      "analyzing": "Analizuojamas garsas…",
+      "zoomIn": "Priartinti",
+      "zoomOut": "Atitolinti",
+      "fit": "Pritaikyti",
+      "fitHint": "Rodyti visą vaizdo įrašą (patarimas: Ctrl + ratukas keičia mastelį)",
+      "manualCut": "Kirpti rankiniu būdu",
+      "markIn": "Pradžia",
+      "markOut": "Pabaiga",
+      "markInHint": "Kerpamos dalies pradžia ties grojimo žyme (I)",
+      "markOutHint": "Kerpamos dalies pabaiga ties grojimo žyme (O)",
+      "cutMarked": "Iškirpti",
+      "cutHint": "Pašalinti dalį tarp pradžios ir pabaigos (X)",
+      "clearMarks": "Išvalyti pradžią ir pabaigą",
+      "marksMissing": "Pirmiausia nustatykite pradžią (I) ir pabaigą (O)",
+      "analysisError": "Nepavyko išanalizuoti garso",
+      "selectedCut": "Pasirinktas kirpimas",
+      "earlier": "Anksčiau",
+      "later": "Vėliau",
+      "listen": "Klausyti kirpimo",
+      "speed": "Greitis",
+      "speedHint": "Pagreitinti arba sulėtinti dalį tarp pradžios ir pabaigos",
+      "selectedSpeed": "Greičio keitimas",
+      "removeSpeed": "Grąžinti įprastą greitį",
+      "listenSpeed": "Paleisti greičio keitimą",
+      "selectFirst": "Pirmiausia pažymėkite dalį: vilkite bangos formoje arba nustatykite Pradžią ir Pabaigą"
+    },
+    "transcript": {
+      "title": "Transkripcija",
+      "words": "Žodžių: {{ count }}",
+      "fillers": "Pašalinti įterpinius ({{ count }})",
+      "restore": "Atkurti viską",
+      "selected": "Pažymėta: {{ count }}",
+      "cut": "Iškirpti / atkurti",
+      "tip": "Spustelėkite žodį, kad pereitumėte prie jo. Vilkite arba spustelėkite su Shift, kad pažymėtumėte, tada Delete, kad iškirptumėte, arba Taisyti (Enter), kad pataisytumėte tai, ką Whisper išgirdo neteisingai",
+      "emptyTitle": "Transkripcijos dar nėra",
+      "emptyText": "Transkribuokite vaizdo įrašą, kad galėtumėte jį redaguoti tekstu ir gauti subtitrus žodis po žodžio",
+      "correct": "Taisyti",
+      "correctTitle": "Kas iš tikrųjų buvo pasakyta?",
+      "correctHint": "Iš naujo įveskite žodį arba visą sakinį. Laikai ir subtitrai prisitaiko automatiškai",
+      "apply": "Taikyti"
+    },
+    "transcribe": {
+      "title": "Transkripcija (Whisper)",
+      "hint": "Veikia jūsų įrenginyje. Modelis atsisiunčiamas vieną kartą ir laikomas podėlyje",
+      "model": "Modelis",
+      "models": {
+        "tiny": "Greitas",
+        "base": "Subalansuotas",
+        "small": "Tikslus"
+      },
+      "download": "Vienkartinis atsisiuntimas {{ size }}",
+      "language": "Šnekamoji kalba",
+      "auto": "Atpažinti automatiškai",
+      "run": "Transkribuoti",
+      "rerun": "Transkribuoti viską iš naujo",
+      "done": "Transkribuota žodžių: {{ count }}",
+      "empty": "Šiame vaizdo įraše kalbos nerasta",
+      "stage": {
+        "audio": "Išgaunamas garsas…",
+        "download": "Atsisiunčiamas modelis…",
+        "transcribe": "Transkribuojama…"
+      },
+      "missing": "Transkribuoti naujus klipus ({{ count }})",
+      "rerunHint": "Pradeda iš naujo su aukščiau nurodytu modeliu ir kalba",
+      "confirmAll": "Transkribuoti viską iš naujo? Jūsų iškirpti ar pataisyti žodžiai bus prarasti",
+      "detected": "Atpažinta kalba: {{ language }}"
+    },
+    "tabs": {
+      "format": "Formatas",
+      "cuts": "Kirpimai",
+      "captions": "Subtitrai",
+      "framing": "Kadravimas",
+      "audio": "Garsas",
+      "clips": "Klipai",
+      "texts": "Tekstai"
+    },
+    "format": {
+      "title": "Išvesties formatas",
+      "hint": "Vaizdo įrašas apkarpomas, kad tilptų. Naudokite Kadravimą, kad sektumėte kalbantįjį",
+      "landscape": "YouTube",
+      "vertical": "TikTok · Reels",
+      "square": "Srautas",
+      "source": "Šaltinis:",
+      "resolution": "Raiška",
+      "fps": "Kadrai per sekundę",
+      "exportNote": "Raiška ir kadrų dažnis pasirenkami eksportuojant",
+      "rotation": "Pasukimas",
+      "rotateLeft": "Pasukti į kairę",
+      "rotateRight": "Pasukti į dešinę",
+      "rotationHint": "Vaizdo įrašui, nufilmuotam pasukus telefoną. Taikoma visiems klipams",
+      "rotatedFaces": "Vaizdo įrašas pasuktas: Kadravime vėl įjunkite „Sekti veidą“"
+    },
+    "cuts": {
+      "title": "Tylos aptikimas",
+      "hint": "Pašalina pauzes. Sumažinkite ribą, jei nukerpami žodžiai",
+      "threshold": "Riba",
+      "suggested": "Rekomenduojama šiam įrašui: {{ value }} dB",
+      "minSilence": "Mažiausia tyla",
+      "padding": "Atokvėpio tarpas",
+      "detect": "Aptikti ir iškirpti tylą",
+      "detected": "Iškirpta tylos vietų: {{ count }}",
+      "count": "kirpimai",
+      "removed": "pašalinta",
+      "final": "galutinė trukmė",
+      "clear": "Pašalinti visus kirpimus",
+      "mode": "Ieškoti pauzių pagal",
+      "modes": {
+        "audio": "Garsumą",
+        "transcript": "Transkripciją"
+      },
+      "modeHint": "Transkripcijos režimas tikslus net esant foniniam triukšmui ar muzikai",
+      "modeNeedsTranscript": "Transkribuokite vaizdo įrašą, kad pauzės būtų randamos pagal žodžius: tiksliau triukšmingose vietose",
+      "preset": "Ritmas",
+      "presets": {
+        "gentle": "Natūralus",
+        "normal": "Subalansuotas",
+        "tight": "Dinamiškas"
+      },
+      "live": "Kirpimai atnaujinami iškart, kai keičiate nustatymus",
+      "silentClips": "Klipų be balso: {{ count }}. Juose iškerpamas tik tikras tuščias laikas"
+    },
+    "captions": {
+      "title": "Įrašyti subtitrai",
+      "style": "Stilius",
+      "styles": {
+        "karaoke": "Karaoke",
+        "clean": "Švarus",
+        "boxed": "Rėmelyje"
+      },
+      "position": "Padėtis",
+      "positions": {
+        "top": "Viršuje",
+        "center": "Viduryje",
+        "bottom": "Apačioje"
+      },
+      "size": "Dydis",
+      "words": "Žodžių viename subtitre",
+      "uppercase": "Didžiosios raidės",
+      "highlight": "Paryškinimo spalva"
+    },
+    "framing": {
+      "title": "Automatinis kadravimas",
+      "hint": "Seka veidus, kad kalbantysis liktų kadre, idealu 16:9 → 9:16",
+      "center": "Centre",
+      "face": "Sekti veidą",
+      "analyzing": "Sekami veidai…",
+      "analyze": "Sekti veidus",
+      "reanalyze": "Sekti veidus iš naujo",
+      "tracked": "Sekamų padėčių: {{ count }}",
+      "found": "Veidas sekamas: kadras seka kalbantįjį",
+      "notFound": "Šiame vaizdo įraše veidas nuosekliai nerastas",
+      "punch": "Išmanusis priartinimas",
+      "punchHint": "Kaitalioja nedidelį priartinimą ties kiekvienu kirpimu arba kiekvienu sakiniu, kai kirpimų nėra, kad vaizdo įrašas išliktų dinamiškas",
+      "zoom": "Priartinimo stiprumas",
+      "firstTime": "Pasirinkus „Sekti veidą“, vaizdo įrašas vieną kartą išanalizuojamas vietoje",
+      "beatsCuts": "Priartinimas keičiasi {{ count }} kartų, ties jūsų kirpimais",
+      "beatsAuto": "Kirpimų dar nėra: priartinimas keičiasi {{ count }} kartų, ties sakiniais arba kas 4 s"
+    },
+    "audio": {
+      "title": "Foninė muzika",
+      "hint": "Muzika automatiškai pritildoma, kai kas nors kalba (auto-ducking)",
+      "reconnect": "Iš naujo prijungti „{{ name }}“",
+      "pick": "Pasirinkti muzikos failą",
+      "enabled": "Įtraukti į vaizdo įrašą",
+      "volume": "Muzikos garsumas",
+      "ducking": "Pritildymas kalbant",
+      "duckingHint": "Kiek pritildoma muzika, kai kas nors kalba"
+    },
+    "export": {
+      "button": "Eksportuoti",
+      "title": "Eksportuoti vaizdo įrašą",
+      "running": "Eksportuojama…",
+      "eta": "Liko maždaug {{ time }}",
+      "keepOpen": "Laikykite šį skirtuką atidarytą. Kai įmanoma, kodavimui naudojama vaizdo plokštė",
+      "done": "Eksportas baigtas",
+      "saved": "„{{ name }}“ išsaugotas jūsų diske per {{ seconds }} s",
+      "downloaded": "„{{ name }}“ atsisiųstas per {{ seconds }} s",
+      "duration": "Trukmė",
+      "from": "iš {{ time }}",
+      "streamHint": "Pasirinksite, kur išsaugoti MP4. Jis įrašomas tiesiai į diską",
+      "downloadHint": "MP4 sujungiamas vietoje ir tada atsisiunčiamas",
+      "start": "Eksportuoti MP4",
+      "saveProject": "Išsaugoti projektą",
+      "saveProjectHint": ".lcv.json failas su jūsų montažu (be vaizdo įrašo), kad galėtumėte tęsti kitame kompiuteryje",
+      "projectSaved": "Projektas išsaugotas kaip .lcv.json failas"
+    },
+    "clips": {
+      "title": "Klipai",
+      "hint": "Vaizdo įrašai rodomi vienas po kito šia tvarka. Vilkite, kad pakeistumėte tvarką: kirpimai ir žodžiai keliauja kartu su klipu",
+      "jump": "Eiti į šį klipą",
+      "up": "Perkelti aukštyn",
+      "down": "Perkelti žemyn",
+      "remove": "Pašalinti klipą",
+      "add": "Pridėti vaizdo įrašų",
+      "summary": "Klipų: {{ count }} · iš viso {{ time }}",
+      "confirmRemove": "Pašalinti „{{ name }}“ iš projekto? Jo kirpimai ir žodžiai taip pat bus pašalinti (Ctrl+Z, kad anuliuotumėte)",
+      "added": "Pridėta klipų: {{ count }}",
+      "addedTranscribe": "Pridėta klipų: {{ count }}. Transkribuokite iš naujo, kad jiems būtų sukurti subtitrai: jau transkribuoti klipai išsaugomi",
+      "noVoice": "be balso",
+      "voiceOn": "Balsas · spustelėkite, jei niekas nekalba",
+      "voiceOff": "Be balso · spustelėkite, jei kas nors kalba"
+    },
+    "auto": {
+      "button": "Automatinis montažas",
+      "cta": "Sumontuoti automatiškai",
+      "transcribeOnly": "arba tik transkribuoti",
+      "heading": "Leiskite LocalCutVideo sumontuoti jūsų vaizdo įrašą",
+      "lead": "Vienu paspaudimu: pašalinta tyla ir dvejonės, subtitrai, kadravimas į kalbantįjį ir išmanusis priartinimas. Vėliau viską galite pakeisti",
+      "target": "Kur jį skelbsite?",
+      "options": {
+        "silences": "Iškirpti tylą",
+        "fillers": "Pašalinti dvejones (ėė, mm…)",
+        "captions": "Karaoke subtitrai",
+        "framing": "Sekti veidą",
+        "framingNoCrop": "Nereikia: šis formatas rodo visą vaizdą",
+        "zoom": "Išmanusis priartinimas"
+      },
+      "local": "Viskas vyksta jūsų įrenginyje. Vaizdo įrašas niekada neįkeliamas",
+      "start": "Pradėti automatinį montažą",
+      "running": "Montuojamas jūsų vaizdo įrašas…",
+      "done": "Jūsų vaizdo įrašas sumontuotas!",
+      "view": "Žiūrėti rezultatą",
+      "undo": "Anuliuoti automatinį montažą",
+      "undone": "Projektas grąžintas į būseną prieš automatinį montažą",
+      "summary": {
+        "cuts": "kirpimai",
+        "removed": "pašalinta",
+        "words": "žodžių su subtitrais",
+        "silent": "Klipų be balso: {{ count }}. Iškirptas tik tikras tuščias laikas"
+      },
+      "steps": {
+        "analyze": "Analizuojamas garsas",
+        "transcribe": "Transkribuojama kalba",
+        "fillers": "Šalinamos dvejonės",
+        "silences": "Iškerpama tyla",
+        "framing": "Sekamas veidas",
+        "style": "Subtitrai ir išmanusis priartinimas",
+        "voice": "Aptinkami balsai"
+      },
+      "status": {
+        "skipped": "praleista",
+        "error": "nepavyko"
+      },
+      "voice": {
+        "title": "Ar vaizdo įraše kas nors kalba?",
+        "auto": "Auto",
+        "yes": "Taip",
+        "no": "Ne",
+        "detectedYes": "Aptikta: kažkas kalba",
+        "detectedNo": "Aptikta: balso nėra",
+        "hint": "Be balso: jokios transkripcijos ar subtitrų, iškerpamas tik tikras tuščias laikas"
+      }
+    },
+    "mix": {
+      "title": "Vaizdo įrašo garsas",
+      "hint": "Pagarsinkite arba patildykite savo klipus",
+      "volume": "Garsumas",
+      "mute": "Nutildyti",
+      "unmute": "Įjungti garsą",
+      "volumeHint": "Taikoma peržiūrai ir eksportui",
+      "boostHint": "Virš 100 % ribotuvas apsaugo nuo iškraipymų",
+      "normalize": "Suvienodinti klipus",
+      "normalizeHint": "Visi klipai vienodo garsumo, filmuoti iš arti ar iš toli",
+      "denoise": "Sumažinti foninį triukšmą",
+      "denoiseHint": "Aiškesnis balsas (vėjas, šnypštimas, ventiliatoriai). Taikoma eksportuojant klipams su balsu. Pirmiausia pasiklausykite",
+      "listen": "Klausyti 8 s rezultato",
+      "stopListening": "Nebeklausyti",
+      "preparing": "Ruošiama…"
+    },
+    "thumbnail": "Miniatiūra",
+    "transition": {
+      "title": "Perėjimas ties kirpimais",
+      "none": "Staigus kirpimas",
+      "dip": "Greitas perėjimas",
+      "black": "Užtemdymas",
+      "hint": "Rodomas ties kiekvienu kirpimu ir klipo pakeitimu (o su užtemdymu ir pradžioje bei pabaigoje). Matomas grojant"
+    },
+    "texts": {
+      "title": "Tekstai virš vaizdo įrašo",
+      "hint": "Pavadinimai ir pastabos, rodomi ties grojimo žyme. Įrašykite žodžius tarp žvaigždučių, kad juos nuspalvintumėte",
+      "add": "Pridėti tekstą ties grojimo žyme",
+      "default": "Jūsų *tekstas*",
+      "timing": "Rodoma",
+      "startHere": "Pradėti čia",
+      "endHere": "Baigti čia",
+      "remove": "Pašalinti šį tekstą"
+    },
+    "background": {
+      "title": "Fonas",
+      "hint": "Sulieja foną už žmogaus, kuris lieka ryškus. Apskaičiuojama jūsų įrenginyje",
+      "none": "Ryškus",
+      "blur": "Suliejamas",
+      "strength": "Suliejimo stiprumas",
+      "error": "Šiame įrenginyje nepavyko paleisti fono suliejimo"
+    }
+  },
+  "legal": {
+    "updated": "Paskutinį kartą atnaujinta: 2026 m. lapkričio 1 d.",
+    "contact": "Kontaktai",
+    "nav": {
+      "notice": "Teisinė informacija",
+      "privacy": "Privatumas",
+      "terms": "Naudojimo sąlygos"
+    },
+    "notice": {
+      "title": "Teisinė informacija",
+      "intro": "Prancūzijos įstatymo (LCEN 6 straipsnis, 2004 m. birželio 21 d. įstatymas Nr. 2004-575) reikalaujama informacija apie šios svetainės leidėją ir prieglobos teikėją.",
+      "sections": [
+        {
+          "title": "Leidėjas",
+          "body": [
+            "Svetainę localcutvideo.mbonnici.fr („LocalCutVideo“) nekomerciniais tikslais leidžia privatus asmuo Maxence Bonnici.",
+            "Už leidybą atsakingas asmuo: Maxence Bonnici.",
+            "Kontaktai: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Priegloba",
+          "body": [
+            "Svetainę talpina pats jos leidėjas Maxence Bonnici asmeniniame serveryje, o ji diegiama naudojant Coolify platformą.",
+            "Kontaktai: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Intelektinė nuosavybė",
+          "body": [
+            "LocalCutVideo pirminis kodas yra atviras ir paskelbtas pagal MIT licenciją [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
+            "Programėlės naudojami trečiųjų šalių komponentai, DI modeliai ir šriftai lieka jų autorių nuosavybe ir naudojami pagal jų pačių licencijas, išvardytas [naudojimo sąlygose](/terms). Minimi prekių ženklai (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) priklauso jų savininkams."
+          ]
+        },
+        {
+          "title": "Atsakomybė",
+          "body": [
+            "Leidėjas stengiasi, kad svetainė būtų pasiekiama, o jos informacija tiksli, tačiau negali to garantuoti. Programėlės naudojimą reglamentuoja [naudojimo sąlygos](/terms)."
+          ]
+        },
+        {
+          "title": "Asmens duomenys",
+          "body": [
+            "LocalCutVideo nerenka jokių asmens duomenų: vaizdo įrašai apdorojami tik jūsų įrenginyje. Išsamiau aprašyta [privatumo politikoje](/privacy)."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privatumo politika",
+      "intro": "LocalCutVideo sukurta taip, kad jūsų vaizdo įrašai niekada nepaliktų jūsų įrenginio. Šiame puslapyje paprastai paaiškinama, kas apdorojama ir kur.",
+      "sections": [
+        {
+          "title": "Trumpai",
+          "body": [
+            "Jokio įkėlimo: jūsų vaizdo įrašai, garsas ir transkripcijos apdorojami jūsų naršyklėje ir niekada nesiunčiami leidėjui ar kam nors kitam.",
+            "Jokios paskyros, slapukų, analitikos ar reklamos."
+          ]
+        },
+        {
+          "title": "Kas lieka jūsų įrenginyje",
+          "body": [
+            "Jūsų atidaryti vaizdo ir garso failai skaitomi tiesiai iš disko. Analizė, transkripcija (Whisper), veido sekimas ir eksportas apskaičiuojami vietoje jūsų naršyklėje.",
+            "Jūsų projektai (kirpimai, transkripcija, nustatymai) saugomi vietinėje naršyklės duomenų bazėje (IndexedDB) kartu su miniatiūra ir analizės podėliu. Leidėjas neturi prie jų prieigos. Projektą galite ištrinti projektų puslapyje arba ištrinti viską išvalę šios svetainės duomenis naršyklės nustatymuose."
+          ]
+        },
+        {
+          "title": "Vietinė saugykla",
+          "body": [
+            "Programėlė saugo jūsų sąsajos nuostatas (kalbą, temą, paskutinį atidarytą projektą) naršyklės vietinėje saugykloje, o savo failus ir atsisiųstus DI modelius laiko naršyklės podėlyje, kad galėtų veikti neprisijungus. Tai būtina paslaugai veikti, niekada nenaudojama jums sekti, todėl sutikimo reklamjuostė nereikalinga."
+          ]
+        },
+        {
+          "title": "Serveris",
+          "body": [
+            "Serveris tik pateikia programėlės failus ir nesaugo prieigos žurnalų. Kaip ir bet kuris žiniatinklio serveris, jis techniškai gauna jūsų IP adresą, kad galėtų atsakyti į užklausas, bet jo nesaugo."
+          ]
+        },
+        {
+          "title": "Trečiosios šalys",
+          "body": [
+            "Hugging Face: Whisper modelį teikia ši svetainė, kaip ir likusią programėlės dalį. Tik jei jis čia nepasiekiamas, jis atsisiunčiamas iš huggingface.co; tada Hugging Face gauna jūsų IP adresą ir įprastą naršyklės informaciją, bet niekada jūsų garso. Žr. jų [privatumo politiką](https://huggingface.co/privacy).",
+            "GitHub: tik jei paspaudžiate nuorodą į pirminio kodo saugyklą.",
+            "Jokia kita trečioji šalis nekontaktuojama: griežta Content-Security-Policy techniškai neleidžia puslapiui jungtis niekur kitur."
+          ]
+        },
+        {
+          "title": "Jūsų teisės",
+          "body": [
+            "Pagal BDAR turite teisę susipažinti su savo duomenimis, juos ištaisyti ir ištrinti bei nesutikti, kad jie būtų tvarkomi. Kadangi leidėjas neturi jokių duomenų apie jus, paprastai nėra su kuo susipažinti, tačiau bet kokį klausimą galite užduoti adresu maxence.bonnici@outlook.fr. Taip pat galite pateikti skundą CNIL ([cnil.fr](https://www.cnil.fr)) arba savo šalies duomenų apsaugos institucijai."
+          ]
+        },
+        {
+          "title": "Pakeitimai",
+          "body": [
+            "Ši politika gali būti atnaujinta tobulėjant programėlei. Paskutinio atnaujinimo data nurodyta šio puslapio viršuje."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Naudojimo sąlygos",
+      "intro": "Naudodami LocalCutVideo sutinkate su šiomis sąlygomis. Jos trumpos, nes paslauga paprasta: nemokamas įrankis, veikiantis jūsų naršyklėje.",
+      "sections": [
+        {
+          "title": "Paslauga",
+          "body": [
+            "LocalCutVideo yra nemokama vaizdo įrašų redagavimo programėlė, veikianti tik jūsų žiniatinklio naršyklėje. Ji teikiama nemokamai, be paskyros, ir gali keistis, būti nutraukta arba sustabdyta bet kuriuo metu be įspėjimo."
+          ]
+        },
+        {
+          "title": "Jūsų turinys",
+          "body": [
+            "Jūs liekate vieninteliu vaizdo įrašų, garsų ir muzikos, kuriuos redaguojate ir skelbiate, savininku ir vieninteliu už juos atsakingu asmeniu. Turite turėti reikiamas teises (autorių teises, muzikos licencijas, filmuojamų žmonių teisę į atvaizdą).",
+            "Programėlės negalima naudoti neteisėtiems tikslams."
+          ]
+        },
+        {
+          "title": "Automatinės funkcijos",
+          "body": [
+            "Transkripcija, subtitrai, tylos aptikimas ir automatinis kadravimas sukuriami automatiškai ir gali turėti klaidų. Prieš skelbdami patikrinkite rezultatą."
+          ]
+        },
+        {
+          "title": "Jūsų failai ir projektai",
+          "body": [
+            "Programėlė niekada nekeičia jūsų originalių failų. Projektai saugomi jūsų naršyklėje ir gali būti prarasti, jei jos duomenys išvalomi arba naršyklė atlaisvina vietos: visada pasilikite originalius failus."
+          ]
+        },
+        {
+          "title": "Garantija ir atsakomybė",
+          "body": [
+            "Programinė įranga teikiama „tokia, kokia yra“, be jokių garantijų, pagal MIT licenciją. Kiek leidžia įstatymai, leidėjas negali būti laikomas atsakingu už žalą, atsiradusią naudojant programėlę ar negalint jos naudoti (duomenų praradimas, eksporto klaidos, nepasiekiamumas…)."
+          ]
+        },
+        {
+          "title": "Atvirasis kodas ir trečiųjų šalių komponentai",
+          "body": [
+            "Pirminis kodas pasiekiamas pagal MIT licenciją [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
+            "LocalCutVideo remiasi: Mediabunny (MPL-2.0), Transformers.js ir ONNX Runtime (Apache-2.0 ir MIT), OpenAI Whisper modeliais (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ir šriftais Inter bei Montserrat (SIL Open Font License)."
+          ]
+        },
+        {
+          "title": "Taikytina teisė",
+          "body": [
+            "Šioms sąlygoms taikoma Prancūzijos teisė. Klausimai: maxence.bonnici@outlook.fr."
+          ]
+        }
+      ]
+    }
+  },
+  "thumbnail": {
+    "eyebrow": "Miniatiūrų kūrimo įrankis",
+    "title": "Miniatiūros, ant kurių norisi spustelėti",
+    "lead": "Pasirinkite geriausią vaizdo įrašo akimirką, pridėkite įtaigų pavadinimą ir atsisiųskite paveikslėlį, paruoštą YouTube, Shorts ar Instagram. Viskas vyksta jūsų įrenginyje",
+    "pick": "Įmeskite vaizdo įrašą arba paveikslėlį",
+    "pickHint": "MP4, MOV, WebM, JPG, PNG… failas lieka jūsų įrenginyje",
+    "choose": "Pasirinkti failą",
+    "local": "Niekas neįkeliama: paveikslėlis sukuriamas jūsų naršyklėje",
+    "permissionTitle": "Leisti prieigą prie projekto vaizdo įrašo",
+    "permissionText": "Jūsų naršyklė prašo patvirtinimo prieš vėl skaitydama failą iš jūsų įrenginio",
+    "permission": "Leisti prieigą",
+    "back": "Atgal į redaktorių",
+    "dragHint": "Vilkite paveikslėlį, kad jį perkadruotumėte",
+    "frame": "Vaizdo kadras",
+    "prevFrame": "Ankstesnis kadras",
+    "nextFrame": "Kitas kadras",
+    "moments": "Geriausios akimirkos",
+    "other": "Pasirinkti kitą failą",
+    "format": "Formatas",
+    "formats": {
+      "landscape": "YouTube",
+      "vertical": "Shorts · TikTok",
+      "square": "Instagram"
+    },
+    "text": "Pavadinimas",
+    "textPlaceholder": "Jūsų patrauklus pavadinimas",
+    "defaultText": "Jūsų *pavadinimas* čia",
+    "accentHint": "Įrašykite žodžius tarp žvaigždučių, kad juos nuspalvintumėte: *štai taip*",
+    "size": "Teksto dydis",
+    "position": "Padėtis",
+    "positions": {
+      "top": "Viršuje",
+      "center": "Centre",
+      "bottom": "Apačioje"
+    },
+    "alignCenter": "Centre",
+    "alignLeft": "Kairėje",
+    "uppercase": "Didžiosios raidės",
+    "tilt": "Pasviręs tekstas",
+    "style": "Pavadinimo stilius",
+    "styles": {
+      "outline": "Kontūras",
+      "shadow": "Šešėlis",
+      "box": "Juosta",
+      "highlight": "Žymeklis"
+    },
+    "color": "Teksto spalva",
+    "accent": "Paryškintų žodžių spalva",
+    "image": "Paveikslėlis",
+    "zoom": "Mastelis",
+    "brightness": "Šviesumas",
+    "contrast": "Kontrastas",
+    "saturation": "Sodrumas",
+    "shade": "Patamsinti kraštus",
+    "reset": "Atstatyti",
+    "downloadJpg": "Atsisiųsti JPG",
+    "downloadPng": "Atsisiųsti PNG",
+    "sizeInfo": "{{ width }} × {{ height }} px · YouTube geriausia JPG (mažiau nei 2 MB)",
+    "saved": "Išsaugota: {{ name }}",
+    "loadError": "Nepavyko atidaryti šio projekto",
+    "readError": "Nepavyko perskaityti šio failo"
+  },
+  "seo": {
+    "home": {
+      "title": "LocalCutVideo — Nemokamas vaizdo redaktorius naršyklėje, niekas neįkeliama",
+      "description": "Redaguokite vaizdo įrašus naršyklėje: tyla iškerpama automatiškai, DI subtitrai, veido kadravimas TikTok ir Shorts, miniatiūros. Nemokama ir atvirojo kodo, jūsų vaizdo įrašai niekada nepalieka jūsų kompiuterio"
+    },
+    "thumbnail": {
+      "title": "Nemokamas YouTube miniatiūrų kūrimo įrankis — LocalCutVideo",
+      "description": "Sukurkite YouTube, Shorts ar Instagram miniatiūrą iš savo vaizdo įrašo: siūlomos geriausios akimirkos, didelis pavadinimas su spalvotais žodžiais, JPG arba PNG. Nemokamai, naršyklėje, niekas neįkeliama"
+    },
+    "changelog": {
+      "title": "Pakeitimų žurnalas — LocalCutVideo",
+      "description": "Kas naujo LocalCutVideo, versija po versijos"
+    },
+    "legal": {
+      "title": "Teisinė informacija — LocalCutVideo",
+      "description": "LocalCutVideo leidėjas ir priegloba"
+    },
+    "privacy": {
+      "title": "Privatumo politika — LocalCutVideo",
+      "description": "LocalCutVideo nieko neįkelia: jūsų vaizdo įrašai, transkripcijos ir projektai lieka jūsų įrenginyje"
+    },
+    "terms": {
+      "title": "Naudojimo sąlygos — LocalCutVideo",
+      "description": "Nemokamo atvirojo kodo vaizdo redaktoriaus LocalCutVideo naudojimo sąlygos"
+    },
+    "app": {
+      "title": "Projektai — LocalCutVideo",
+      "description": "Jūsų vaizdo įrašų projektai, išsaugoti naršyklėje"
+    },
+    "editor": {
+      "title": "Redaktorius — LocalCutVideo",
+      "description": "LocalCutVideo redaktorius"
+    }
+  },
+  "tour": {
+    "label": "Įvadinis turas",
+    "help": "Įvadinis turas",
+    "count": "{{ n }} žingsnis iš {{ total }}",
+    "skip": "Praleisti turą",
+    "prev": "Atgal",
+    "next": "Toliau",
+    "done": "Pirmyn!",
+    "steps": {
+      "auto": {
+        "title": "Vienas paspaudimas: automatinis montažas",
+        "text": "LocalCutVideo sumontuoja vaizdo įrašą už jus: pašalinta tyla ir dvejonės, subtitrai, kadravimas ir priartinimas. Vėliau viską galite pakeisti"
+      },
+      "preview": {
+        "title": "Peržiūra",
+        "text": "Tai, ką matote, bus tiksliai eksportuota. Spustelėkite ją arba paspauskite tarpo klavišą, kad paleistumėte ar pristabdytumėte"
+      },
+      "timeline": {
+        "title": "Laiko juosta",
+        "text": "Spustelėkite, kad judėtumėte vaizdo įraše. Vilkite bangos formoje, kad pažymėtumėte dalį"
+      },
+      "cut": {
+        "title": "Iškirpkite arba pakeiskite greitį",
+        "text": "Pažymėjus dalį, Iškirpti (X) ją pašalina, o Greitis ją paleidžia greičiau arba lėčiau. Ctrl+Z anuliuoja bet ką"
+      },
+      "transcript": {
+        "title": "Redagavimas tekstu",
+        "text": "Po transkripcijos ištrynus žodį iškerpamas vaizdo įrašas. Taip pat galite pataisyti tai, ką DI išgirdo neteisingai"
+      },
+      "settings": {
+        "title": "Visi nustatymai",
+        "text": "Formatas (16:9, 9:16, kvadratas), kirpimai ir perėjimai, subtitrai, tekstai, kadravimas ir suliejimas, garsas ir muzika"
+      },
+      "thumbnail": {
+        "title": "Miniatiūra",
+        "text": "Sukurkite vaizdo įrašo miniatiūrą iš geriausių jo akimirkų"
+      },
+      "export": {
+        "title": "Eksportas",
+        "text": "Išsaugokite vaizdo įrašą kaip MP4. Viskas vyksta jūsų įrenginyje, niekas neįkeliama"
+      }
+    }
+  }
+}

@@ -1,0 +1,895 @@
+{
+  "common": {
+    "videoFiles": "Video soubory",
+    "audioFiles": "Zvukové soubory",
+    "cancel": "Zrušit",
+    "close": "Zavřít",
+    "retry": "Zkusit znovu",
+    "none": "Žádné",
+    "remove": "Odebrat"
+  },
+  "nav": {
+    "features": "Funkce",
+    "privacy": "Soukromí",
+    "faq": "Časté dotazy",
+    "changelog": "Změny",
+    "language": "Jazyk",
+    "searchLanguage": "Hledat jazyk",
+    "noLanguage": "Žádný jazyk nenalezen",
+    "install": "Nainstalovat aplikaci",
+    "open": "Otevřít editor",
+    "menu": "Otevřít nabídku",
+    "close": "Zavřít nabídku",
+    "thumbnail": "Náhledy"
+  },
+  "theme": {
+    "system": "Systém",
+    "light": "Světlý",
+    "dark": "Tmavý",
+    "label": "Motiv"
+  },
+  "footer": {
+    "tagline": "Bezplatný open-source editor videa, který běží celý ve vašem prohlížeči. Vaše soubory nikdy neopustí váš počítač",
+    "issues": "Nahlásit problém",
+    "noTracking": "Žádné cookies, žádné sledování",
+    "product": "Produkt",
+    "legal": "Právní informace"
+  },
+  "pwa": {
+    "update": "Je k dispozici nová verze",
+    "reload": "Načíst znovu"
+  },
+  "landing": {
+    "hero": {
+      "badgeLocal": "100 % lokálně, nic se nenahrává",
+      "badgeOpen": "Zdarma a open source",
+      "title1": "Střihejte svá videa",
+      "title2": "Nic neopustí váš počítač",
+      "lead": "LocalCutVideo vystřihne ticho, přepíše řeč pomocí Whisperu, vypálí karaoke titulky a překadruje 16:9 na 9:16, a to celé ve vašem prohlížeči. Žádné nahrávání, žádný účet, žádný server",
+      "cta": "Otevřít editor",
+      "github": "Zobrazit na GitHubu",
+      "hint": "Nejlépe funguje v Chrome nebo Edge na počítači",
+      "demo": "Vyzkoušet na ukázkovém videu"
+    },
+    "mock": {
+      "w1": "Takže dneska",
+      "filler": "ehm,",
+      "w2": "vám ukážu",
+      "w3": "jak to funguje",
+      "line2": "Vše běží na vašem počítači, dokonce i AI",
+      "line3": "Smažte slovo a video se střihne",
+      "cap1": "Tohle zůstává ve vašem",
+      "cap2": "počítači"
+    },
+    "stats": {
+      "upload": "nahraných bajtů",
+      "local": "zpracováno ve vašem zařízení",
+      "languages": "jazyků rozhraní",
+      "gpu": "zrychlená AI a kódování"
+    },
+    "how": {
+      "eyebrow": "Jak to funguje",
+      "title": "Od surového záznamu k videu připravenému ke zveřejnění ve třech krocích",
+      "open": {
+        "title": "Otevřete video",
+        "text": "Vyberte soubor na disku. Čte se přímo na místě: žádná kopie, žádné nahrávání, ani u souborů o velikosti několika gigabajtů"
+      },
+      "edit": {
+        "title": "Nechte editor pracovat",
+        "text": "Ticho se rozpozná, řeč se přepíše slovo po slově a obličeje se sledují, vše lokálně. Cokoli opravíte úpravou textu"
+      },
+      "export": {
+        "title": "Exportujte MP4",
+        "text": "Zvolte 16:9, 9:16 nebo 1:1. Video zakóduje vaše grafická karta a zapíše se přímo na disk"
+      }
+    },
+    "features": {
+      "eyebrow": "Funkce",
+      "title": "Vše, co potřebujete pro videa, kde mluvíte do kamery",
+      "lead": "Vytvořeno pro tvůrce na YouTube, TikToku, Reels a Shorts, kteří nechtějí nikam nahrávat svůj surový záznam",
+      "silences": {
+        "title": "Automatické vystřižení ticha",
+        "text": "Rozpozná pauzy podle hlasitosti zvuku a odstraní je, s nastavitelným prahem, minimální délkou a prostorem na nádech"
+      },
+      "textEdit": {
+        "title": "Střih pomocí textu",
+        "text": "Whisper přiřadí každému slovu časovou značku. Smažte slova v přepisu a odpovídající část videa se vystřihne"
+      },
+      "captions": {
+        "title": "Karaoke titulky",
+        "text": "Titulky animované slovo po slově vypálené do videa, ve stylu karaoke, čistém nebo v rámečku, ve vaší barvě zvýraznění"
+      },
+      "framing": {
+        "title": "Automatické kadrování 16:9 → 9:16",
+        "text": "Sledování obličeje udrží mluvčího v záběru, když z vodorovného videa uděláte svislé"
+      },
+      "zoom": {
+        "title": "Chytrý zoom",
+        "text": "Střídavé přiblížení u každého střihu dodá jump cutům záměrný vzhled a udrží diváky u videa"
+      },
+      "ducking": {
+        "title": "Zvuk a hudba",
+        "text": "Zesilte zvuk, vyrovnejte klipy a přidejte hudbu v pozadí, která se sama ztlumí, kdykoli někdo mluví"
+      },
+      "recovery": {
+        "title": "Obnova po pádu",
+        "text": "Každá změna se v reálném čase ukládá do prohlížeče. Otevřete kartu znovu a pokračujte přesně tam, kde jste skončili"
+      },
+      "offline": {
+        "title": "Funguje offline",
+        "text": "Nainstalujte si ho jako aplikaci. Jakmile se stáhne model AI, celý editor funguje bez připojení k internetu"
+      },
+      "export": {
+        "title": "Rychlý hardwarový export",
+        "text": "Kódování využívá WebCodecs, kodér videa vestavěný v prohlížeči a grafické kartě, místo pomalého softwarového kódování"
+      },
+      "clips": {
+        "title": "Spojení více klipů",
+        "text": "Přetáhněte několik záběrů najednou: spojí se do jednoho videa v pořadí, které zvolíte, se společnou časovou osou a přepisem"
+      },
+      "inputs": {
+        "title": "MP4, MOV, WebM, MKV",
+        "text": "Otevře soubory z telefonu i fotoaparátu, včetně videí HEVC z iPhonu, pokud je prohlížeč umí dekódovat"
+      },
+      "languages": {
+        "title": "Vícejazyčné",
+        "text": "Rozhraní mluví {{ count }} jazyky a Whisper přepisuje desítky dalších, s automatickým rozpoznáním jazyka"
+      }
+    },
+    "privacy": {
+      "eyebrow": "Soukromí",
+      "title": "Žádné nahrávání, už z principu",
+      "lead": "Vaše video se čte přímo z disku. Analýza zvuku, přepis, sledování obličeje i kódování běží ve vláknech na pozadí (Web Workers) na vašem počítači. Prostě neexistuje server, kam by se váš záznam posílal",
+      "upload": "Nikdy žádné nahrávání: soubor nikdy neopustí váš počítač",
+      "account": "Žádný účet, žádné cookies, žádné statistiky",
+      "csp": "Přísná Content-Security-Policy dovolí stránce komunikovat jen s tímto webem, který poskytuje i modely AI (Hugging Face je jen záloha)",
+      "storage": "Projekty se ukládají do místní databáze prohlížeče (IndexedDB) a můžete je kdykoli smazat",
+      "diagram": {
+        "machine": "Váš počítač",
+        "file": "Video soubor",
+        "browser": "Váš prohlížeč",
+        "upload": "Nahrání na server",
+        "model": "Stažení modelu AI (jednou, do mezipaměti)"
+      }
+    },
+    "support": {
+      "eyebrow": "Kompatibilita",
+      "title": "Podpora prohlížečů",
+      "ok": "Plná",
+      "partial": "Částečná",
+      "full": "Vše, včetně obnovy po pádu a zápisu exportu přímo na disk",
+      "firefox": "Střih i export fungují. Po zavření karty budete muset video vybrat znovu",
+      "safari": "Pouze nové verze. Po opětovném načtení video vyberte znovu; export se stáhne",
+      "mobile": "Telefony a tablety",
+      "mobileText": "Funguje pro krátké klipy, ale kvůli omezené paměti nejsou dlouhá videa spolehlivá"
+    },
+    "faq": {
+      "title": "Časté dotazy",
+      "free": {
+        "q": "Je to opravdu zdarma? Kde je háček?",
+        "a": "Je to zdarma a open source. Protože veškerá práce probíhá na vašem počítači, nejsou žádné náklady na servery, takže vám není co prodávat a nejsou žádná data ke sběru"
+      },
+      "formats": {
+        "q": "Jaké formáty videa můžu otevřít?",
+        "a": "MP4, MOV, WebM a MKV, pokud prohlížeč umí dekódovat kodek (H.264, HEVC, VP9, AV1 podle prohlížeče a systému). Exportuje se soubor MP4"
+      },
+      "browsers": {
+        "q": "Proč Chrome nebo Edge?",
+        "a": "Podporují File System Access API, které editoru umožní po opětovném načtení znovu otevřít video a zapsat export přímo na disk. Ostatní prohlížeče fungují také, jen s pár kliknutími navíc"
+      },
+      "size": {
+        "q": "Je nějaký limit velikosti souboru?",
+        "a": "Limit nahrávání není, protože se nic nenahrává. Video se čte z disku po malých částech; praktickým limitem je paměť počítače a vaše trpělivost u velmi dlouhých videí"
+      },
+      "offline": {
+        "q": "Funguje to bez internetu?",
+        "a": "Ano, jakmile se načte. Nainstalujte ho jako aplikaci (PWA) a jednou proveďte přepis online: model Whisper se uloží do mezipaměti a vše pak funguje offline"
+      },
+      "ai": {
+        "q": "Kde běží AI?",
+        "a": "Ve vašem prohlížeči. Whisper běží s Transformers.js na grafické kartě (WebGPU) nebo procesoru (WebAssembly) a rozpoznávání obličejů využívá MediaPipe. Modely se stahují jednou, váš zvuk se nikdy neodesílá"
+      }
+    },
+    "final": {
+      "title": "Vaše další video, sestříhané za pár minut",
+      "text": "Žádná registrace, žádné nahrávání, žádný vodoznak. Otevřete soubor a začněte stříhat"
+    },
+    "thumbnail": {
+      "eyebrow": "Novinka · Náhledy",
+      "title": "A k tomu náhledový obrázek",
+      "text": "Tvůrce náhledů najde nejostřejší momenty vašeho videa. Přidejte velký titulek s barevnými slovy a stáhněte ho ve správné velikosti",
+      "points": {
+        "moments": "Navržené nejlepší momenty",
+        "title": "Titulek se zvýrazněnými slovy, 4 styly",
+        "formats": "YouTube 1280×720, Shorts a čtverec",
+        "local": "Vytvořeno ve vašem zařízení, nic se nenahrává"
+      },
+      "cta": "Vytvořit náhled",
+      "mockTitle": "Můj první",
+      "mockAccent": "vlog"
+    }
+  },
+  "changelog": {
+    "eyebrow": "Verze",
+    "title": "Změny",
+    "lead": "Všechny verze LocalCutVideo, od nejnovější",
+    "current": "Používáte verzi",
+    "github": "Zobrazit na GitHubu",
+    "releases": "Vydání na GitHubu",
+    "latest": "Nejnovější",
+    "error": "Seznam změn se nepodařilo načíst"
+  },
+  "projects": {
+    "title": "Vaše projekty",
+    "lead": "Projekty se automaticky ukládají v tomto prohlížeči. Vaše videa zůstávají tam, kde jsou na disku",
+    "resume": "Pokračovat, kde jste skončili",
+    "reading": "Načítání videa…",
+    "drop": "Přetáhněte sem svá videa",
+    "or": "nebo",
+    "open": "Otevřít videa",
+    "private": "Soubor se čte lokálně, nic se nenahrává",
+    "noFsAccess": "Váš prohlížeč si nedokáže pamatovat soubory mezi relacemi: po zavření karty budete muset video vybrat znovu. Chrome nebo Edge to nemají",
+    "recent": "Nedávné projekty",
+    "empty": "Zatím žádné projekty. Začněte otevřením videa",
+    "delete": "Smazat projekt",
+    "confirmDelete": "Smazat projekt „{{ name }}“? Video soubor na disku zůstane beze změny",
+    "multi": "Více souborů? Spojí se do jednoho videa v pořadí podle názvu",
+    "importFile": "Otevřít soubor projektu (.lcv.json)",
+    "saveFile": "Uložit projekt jako soubor",
+    "imported": "Projekt otevřen: pro pokračování vyberte jeho videa"
+  },
+  "errors": {
+    "notVideo": "Tento soubor nevypadá jako video",
+    "codec": "Váš prohlížeč neumí dekódovat kodek tohoto videa (HEVC/H.265 vyžaduje Chrome nebo rozšíření HEVC v Edge). Zkuste ho převést na H.264 MP4",
+    "noVideo": "V tomto souboru nebyla nalezena žádná video stopa",
+    "generic": "Při čtení souboru se něco pokazilo",
+    "transcribe": "Přepis se nezdařil. Zkuste menší model nebo zkontrolujte připojení pro první stažení",
+    "export": "Export se nezdařil",
+    "faces": "Sledování obličeje u tohoto videa selhalo",
+    "skipped": "Přeskočeno (nelze přečíst): {{ names }}",
+    "skippedCodec": "Přeskočeno, kodek tento prohlížeč nepodporuje: {{ names }}. Zkuste Chrome nebo převeďte na H.264 MP4",
+    "notProject": "Tento soubor není projekt LocalCutVideo",
+    "demo": "Ukázkové video se nepodařilo načíst"
+  },
+  "languages": {
+    "en": "Angličtina",
+    "fr": "Francouzština",
+    "es": "Španělština",
+    "it": "Italština",
+    "de": "Němčina",
+    "pt": "Portugalština",
+    "nl": "Nizozemština"
+  },
+  "editor": {
+    "back": "Zpět na projekty",
+    "name": "Název projektu",
+    "undo": "Zpět",
+    "redo": "Znovu",
+    "missing": "Tento projekt už neexistuje",
+    "save": {
+      "saving": "Ukládání…",
+      "saved": "Uloženo lokálně",
+      "error": "Neuloženo"
+    },
+    "reconnect": {
+      "loading": "Otevírání videa…",
+      "title": "Znovu připojte svá videa",
+      "allow": "Povolit přístup ke všem",
+      "select": "Vybrat",
+      "mismatch": "Toto nevypadá jako původní soubor („{{ name }}“). Přesto použít?",
+      "intro": "Projekt je v bezpečí. Kvůli vašemu soukromí se prohlížeč znovu zeptá, než editor smí číst vaše soubory",
+      "allowOne": "Povolit",
+      "privacy": "Vaše videa se čtou tam, kde jsou na disku, nikdy se nekopírují ani nenahrávají",
+      "status": {
+        "ready": "Připojeno",
+        "permission": "Čeká se na vaše povolení",
+        "moved": "Nenalezeno: přesunuto nebo přejmenováno?",
+        "missing": "Vyberte ho znovu (prohlížeč si přístup k souborům nepamatuje)",
+        "loading": "Otevírání…"
+      }
+    },
+    "preview": {
+      "cut": "Střih",
+      "back": "Zpět o 5 s",
+      "play": "Přehrát",
+      "pause": "Pozastavit",
+      "savedHint": "Čas odstraněný střihy",
+      "badge": "Odlehčený náhled · {{ q }}p",
+      "quality": "Kvalita náhledu",
+      "qualityHint": "Odlehčený náhled udrží editor plynulý. Export vždy používá plnou kvalitu"
+    },
+    "timeline": {
+      "title": "Časová osa",
+      "silence": "Ticho",
+      "manual": "Ručně",
+      "text": "Text",
+      "hint": "Tažením po vlně vyberte část, pak Vystřihnout nebo Rychlost · kliknutím na střih upravíte jeho okraje · dvojklikem ho odstraníte",
+      "removeCut": "Odstranit střih",
+      "zoom": "Přiblížení časové osy",
+      "analyzing": "Analýza zvuku…",
+      "zoomIn": "Přiblížit",
+      "zoomOut": "Oddálit",
+      "fit": "Přizpůsobit",
+      "fitHint": "Zobrazit celé video (tip: Ctrl + kolečko pro zoom)",
+      "manualCut": "Střih ručně",
+      "markIn": "Začátek",
+      "markOut": "Konec",
+      "markInHint": "Začátek části ke střihu, na pozici přehrávání (I)",
+      "markOutHint": "Konec části ke střihu, na pozici přehrávání (O)",
+      "cutMarked": "Vystřihnout",
+      "cutHint": "Odstranit část mezi začátkem a koncem (X)",
+      "clearMarks": "Vymazat začátek a konec",
+      "marksMissing": "Nejdřív nastavte začátek (I) a konec (O)",
+      "analysisError": "Zvuk se nepodařilo analyzovat",
+      "selectedCut": "Vybraný střih",
+      "earlier": "Dříve",
+      "later": "Později",
+      "listen": "Poslechnout střih",
+      "speed": "Rychlost",
+      "speedHint": "Zrychlit nebo zpomalit část mezi začátkem a koncem",
+      "selectedSpeed": "Změna rychlosti",
+      "removeSpeed": "Zpět na normální rychlost",
+      "listenSpeed": "Přehrát změnu rychlosti",
+      "selectFirst": "Nejdřív vyberte část: táhněte po vlně, nebo nastavte Začátek a Konec"
+    },
+    "transcript": {
+      "title": "Přepis",
+      "words": "Slov: {{ count }}",
+      "fillers": "Odstranit vycpávková slova ({{ count }})",
+      "restore": "Obnovit vše",
+      "selected": "Vybráno: {{ count }}",
+      "cut": "Vystřihnout / obnovit",
+      "tip": "Kliknutím na slovo na něj přeskočíte. Tažením nebo Shift + kliknutím vyberte, pak Delete pro vystřižení nebo Opravit (Enter) pro opravu toho, co Whisper slyšel špatně",
+      "emptyTitle": "Zatím žádný přepis",
+      "emptyText": "Přepište video, abyste ho mohli stříhat pomocí textu a získat titulky slovo po slově",
+      "correct": "Opravit",
+      "correctTitle": "Co bylo doopravdy řečeno?",
+      "correctHint": "Napište znovu slovo nebo celou větu. Časování i titulky se upraví automaticky",
+      "apply": "Použít"
+    },
+    "transcribe": {
+      "title": "Přepis (Whisper)",
+      "hint": "Běží ve vašem zařízení. Model se stáhne jednou a pak zůstane v mezipaměti",
+      "model": "Model",
+      "models": {
+        "tiny": "Rychlý",
+        "base": "Vyvážený",
+        "small": "Přesný"
+      },
+      "download": "Jednorázové stažení {{ size }}",
+      "language": "Mluvený jazyk",
+      "auto": "Rozpoznat automaticky",
+      "run": "Přepsat",
+      "rerun": "Přepsat vše znovu",
+      "done": "Přepsaných slov: {{ count }}",
+      "empty": "V tomto videu nebyla nalezena řeč",
+      "stage": {
+        "audio": "Extrahování zvuku…",
+        "download": "Stahování modelu…",
+        "transcribe": "Přepisování…"
+      },
+      "missing": "Přepsat nové klipy ({{ count }})",
+      "rerunHint": "Začne znovu s modelem a jazykem výše",
+      "confirmAll": "Přepsat vše znovu? Slova, která jste vystřihli nebo opravili, budou ztracena",
+      "detected": "Rozpoznaný jazyk: {{ language }}"
+    },
+    "tabs": {
+      "format": "Formát",
+      "cuts": "Střihy",
+      "captions": "Titulky",
+      "framing": "Kadrování",
+      "audio": "Zvuk",
+      "clips": "Klipy",
+      "texts": "Texty"
+    },
+    "format": {
+      "title": "Výstupní formát",
+      "hint": "Video se ořízne, aby se vešlo. Kadrováním můžete sledovat mluvčího",
+      "landscape": "YouTube",
+      "vertical": "TikTok · Reels",
+      "square": "Feed",
+      "source": "Zdroj:",
+      "resolution": "Rozlišení",
+      "fps": "Snímků za sekundu",
+      "exportNote": "Rozlišení a snímkovou frekvenci zvolíte při exportu",
+      "rotation": "Otočení",
+      "rotateLeft": "Otočit doleva",
+      "rotateRight": "Otočit doprava",
+      "rotationHint": "Pro video natočené bokem. Platí pro všechny klipy",
+      "rotatedFaces": "Video otočeno: v Kadrování znovu zapněte „Sledovat obličej“"
+    },
+    "cuts": {
+      "title": "Rozpoznání ticha",
+      "hint": "Odstraní pauzy. Pokud se useknou slova, snižte práh",
+      "threshold": "Práh",
+      "suggested": "Doporučeno pro tento záznam: {{ value }} dB",
+      "minSilence": "Minimální ticho",
+      "padding": "Prostor na nádech",
+      "detect": "Rozpoznat a vystřihnout ticho",
+      "detected": "Vystřižená ticha: {{ count }}",
+      "count": "střihy",
+      "removed": "odstraněno",
+      "final": "výsledná délka",
+      "clear": "Odstranit všechny střihy",
+      "mode": "Hledat pauzy podle",
+      "modes": {
+        "audio": "Hlasitosti",
+        "transcript": "Přepisu"
+      },
+      "modeHint": "Režim podle přepisu je přesný i s hlukem nebo hudbou v pozadí",
+      "modeNeedsTranscript": "Přepište video, abyste hledali pauzy podle slov: přesnější v hlučném prostředí",
+      "preset": "Rytmus",
+      "presets": {
+        "gentle": "Přirozený",
+        "normal": "Vyvážený",
+        "tight": "Dynamický"
+      },
+      "live": "Střihy se aktualizují živě při změně nastavení",
+      "silentClips": "Klipy bez hlasu: {{ count }}. Vystřihne se v nich jen skutečné hluché místo"
+    },
+    "captions": {
+      "title": "Vypálené titulky",
+      "style": "Styl",
+      "styles": {
+        "karaoke": "Karaoke",
+        "clean": "Čistý",
+        "boxed": "V rámečku"
+      },
+      "position": "Umístění",
+      "positions": {
+        "top": "Nahoře",
+        "center": "Uprostřed",
+        "bottom": "Dole"
+      },
+      "size": "Velikost",
+      "words": "Slov na titulek",
+      "uppercase": "Velká písmena",
+      "highlight": "Barva zvýraznění"
+    },
+    "framing": {
+      "title": "Automatické kadrování",
+      "hint": "Sleduje obličeje, aby mluvčí zůstal v záběru, ideální pro 16:9 → 9:16",
+      "center": "Na střed",
+      "face": "Sledovat obličej",
+      "analyzing": "Sledování obličejů…",
+      "analyze": "Sledovat obličeje",
+      "reanalyze": "Znovu sledovat obličeje",
+      "tracked": "Sledovaných pozic: {{ count }}",
+      "found": "Obličej sledován: záběr následuje mluvčího",
+      "notFound": "V tomto videu nebyl obličej spolehlivě nalezen",
+      "punch": "Chytrý zoom",
+      "punchHint": "Střídá mírné přiblížení u každého střihu, nebo u každé věty, když střihy nejsou, aby video zůstalo dynamické",
+      "zoom": "Síla přiblížení",
+      "firstTime": "Volba „Sledovat obličej“ video jednou lokálně analyzuje",
+      "beatsCuts": "Zoom se změní {{ count }}×, u vašich střihů",
+      "beatsAuto": "Zatím žádné střihy: zoom se změní {{ count }}×, u vět nebo každé 4 s"
+    },
+    "audio": {
+      "title": "Hudba v pozadí",
+      "hint": "Hudba se automaticky ztlumí, když někdo mluví (auto-ducking)",
+      "reconnect": "Znovu připojit „{{ name }}“",
+      "pick": "Vybrat hudební soubor",
+      "enabled": "Zahrnout do videa",
+      "volume": "Hlasitost hudby",
+      "ducking": "Ztlumení při řeči",
+      "duckingHint": "Jak moc se hudba ztlumí, když někdo mluví"
+    },
+    "export": {
+      "button": "Exportovat",
+      "title": "Exportovat video",
+      "running": "Exportování…",
+      "eta": "Zbývá asi {{ time }}",
+      "keepOpen": "Nechte tuto kartu otevřenou. Kódování využívá grafickou kartu, kdykoli je to možné",
+      "done": "Export dokončen",
+      "saved": "„{{ name }}“ bylo uloženo na disk za {{ seconds }} s",
+      "downloaded": "„{{ name }}“ bylo staženo za {{ seconds }} s",
+      "duration": "Délka",
+      "from": "z {{ time }}",
+      "streamHint": "Vyberete, kam MP4 uložit. Zapisuje se přímo na disk",
+      "downloadHint": "MP4 se sestaví lokálně a pak stáhne",
+      "start": "Exportovat MP4",
+      "saveProject": "Uložit projekt",
+      "saveProjectHint": "Soubor .lcv.json s vaším střihem (bez videa), abyste mohli pokračovat na jiném počítači",
+      "projectSaved": "Projekt uložen jako soubor .lcv.json"
+    },
+    "clips": {
+      "title": "Klipy",
+      "hint": "Videa se přehrávají za sebou v tomto pořadí. Tažením změníte pořadí: střihy a slova zůstávají u svého klipu",
+      "jump": "Přejít na tento klip",
+      "up": "Posunout nahoru",
+      "down": "Posunout dolů",
+      "remove": "Odebrat klip",
+      "add": "Přidat videa",
+      "summary": "Klipy: {{ count }} · celkem {{ time }}",
+      "confirmRemove": "Odebrat „{{ name }}“ z projektu? Jeho střihy a slova se také odstraní (Ctrl+Z pro vrácení)",
+      "added": "Přidané klipy: {{ count }}",
+      "addedTranscribe": "Přidané klipy: {{ count }}. Přepište znovu, abyste je otitulkovali: již přepsané klipy zůstanou zachovány",
+      "noVoice": "bez hlasu",
+      "voiceOn": "Hlas · klikněte, pokud nikdo nemluví",
+      "voiceOff": "Bez hlasu · klikněte, pokud někdo mluví"
+    },
+    "auto": {
+      "button": "Automatický střih",
+      "cta": "Sestříhat video automaticky",
+      "transcribeOnly": "nebo jen přepsat",
+      "heading": "Nechte LocalCutVideo sestříhat vaše video",
+      "lead": "Jedním kliknutím: odstraněné ticho a zaváhání, titulky, kadrování na mluvčího a chytrý zoom. Vše můžete později změnit",
+      "target": "Kam ho zveřejníte?",
+      "options": {
+        "silences": "Vystřihnout ticho",
+        "fillers": "Odstranit zaváhání (ehm, ééé…)",
+        "captions": "Karaoke titulky",
+        "framing": "Sledovat obličej",
+        "framingNoCrop": "Není potřeba: tento formát ukazuje celý obraz",
+        "zoom": "Chytrý zoom"
+      },
+      "local": "Vše běží ve vašem zařízení. Video se nikdy nenahrává",
+      "start": "Spustit automatický střih",
+      "running": "Stříhání videa…",
+      "done": "Vaše video je sestříhané!",
+      "view": "Zobrazit výsledek",
+      "undo": "Vrátit automatický střih",
+      "undone": "Projekt je zpět ve stavu před automatickým střihem",
+      "summary": {
+        "cuts": "střihy",
+        "removed": "odstraněno",
+        "words": "otitulkovaných slov",
+        "silent": "Klipy bez hlasu: {{ count }}. Vystřiženo bylo jen skutečné hluché místo"
+      },
+      "steps": {
+        "analyze": "Analýza zvuku",
+        "transcribe": "Přepis řeči",
+        "fillers": "Odstranění zaváhání",
+        "silences": "Vystřižení ticha",
+        "framing": "Sledování obličeje",
+        "style": "Titulky a chytrý zoom",
+        "voice": "Rozpoznání hlasů"
+      },
+      "status": {
+        "skipped": "přeskočeno",
+        "error": "selhalo"
+      },
+      "voice": {
+        "title": "Mluví ve videu někdo?",
+        "auto": "Auto",
+        "yes": "Ano",
+        "no": "Ne",
+        "detectedYes": "Rozpoznáno: někdo mluví",
+        "detectedNo": "Rozpoznáno: bez hlasu",
+        "hint": "Bez hlasu: žádný přepis ani titulky, vystřihne se jen skutečné hluché místo"
+      }
+    },
+    "mix": {
+      "title": "Zvuk videa",
+      "hint": "Zesilte nebo zeslabte zvuk svých klipů",
+      "volume": "Hlasitost",
+      "mute": "Ztlumit",
+      "unmute": "Zapnout zvuk",
+      "volumeHint": "Platí pro náhled i export",
+      "boostHint": "Nad 100 % zabrání limiter zkreslení",
+      "normalize": "Vyrovnat klipy",
+      "normalizeHint": "Všechny klipy se stejnou hlasitostí, natočené zblízka i zdálky",
+      "denoise": "Potlačit šum v pozadí",
+      "denoiseHint": "Čistší hlas (vítr, šum, ventilátory). Použije se při exportu u klipů s hlasem. Nejdřív si poslechněte",
+      "listen": "Poslechnout 8 s výsledku",
+      "stopListening": "Přestat poslouchat",
+      "preparing": "Příprava…"
+    },
+    "thumbnail": "Náhled",
+    "transition": {
+      "title": "Přechod u střihů",
+      "none": "Ostrý střih",
+      "dip": "Rychlé prolnutí",
+      "black": "Stmívačka",
+      "hint": "Přehraje se u každého střihu a změny klipu (a se stmívačkou i na začátku a konci). Viditelné při přehrávání"
+    },
+    "texts": {
+      "title": "Texty přes video",
+      "hint": "Titulky a poznámky zobrazené na pozici přehrávání. Slova dejte mezi hvězdičky, abyste je obarvili",
+      "add": "Přidat text na pozici přehrávání",
+      "default": "Váš *text*",
+      "timing": "Zobrazeno",
+      "startHere": "Začít tady",
+      "endHere": "Skončit tady",
+      "remove": "Odstranit tento text"
+    },
+    "background": {
+      "title": "Pozadí",
+      "hint": "Rozmaže pozadí za osobou, která zůstane ostrá. Počítá se ve vašem zařízení",
+      "none": "Ostré",
+      "blur": "Rozmazané",
+      "strength": "Síla rozmazání",
+      "error": "Rozmazání pozadí se na tomto zařízení nepodařilo spustit"
+    }
+  },
+  "legal": {
+    "updated": "Poslední aktualizace: 1. listopadu 2026",
+    "contact": "Kontakt",
+    "nav": {
+      "notice": "Právní upozornění",
+      "privacy": "Soukromí",
+      "terms": "Podmínky použití"
+    },
+    "notice": {
+      "title": "Právní upozornění",
+      "intro": "Informace vyžadované francouzským právem (článek 6 zákona LCEN, zákon č. 2004-575 ze dne 21. června 2004) o provozovateli a poskytovateli hostingu tohoto webu.",
+      "sections": [
+        {
+          "title": "Provozovatel",
+          "body": [
+            "Web localcutvideo.mbonnici.fr („LocalCutVideo“) provozuje Maxence Bonnici, soukromá osoba, na nekomerční bázi.",
+            "Odpovědná osoba: Maxence Bonnici.",
+            "Kontakt: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Hosting",
+          "body": [
+            "Web hostuje sám jeho provozovatel, Maxence Bonnici, na osobním serveru a nasazuje ho pomocí platformy Coolify.",
+            "Kontakt: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Duševní vlastnictví",
+          "body": [
+            "Zdrojový kód LocalCutVideo je otevřený a zveřejněný pod licencí MIT na [GitHubu](https://github.com/ImMaxence/LocalCutVideo).",
+            "Komponenty třetích stran, modely AI a písma, které aplikace používá, zůstávají majetkem svých autorů a používají se podle jejich vlastních licencí uvedených v [podmínkách použití](/terms). Zmíněné ochranné známky (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) patří jejich vlastníkům."
+          ]
+        },
+        {
+          "title": "Odpovědnost",
+          "body": [
+            "Provozovatel se snaží udržovat web dostupný a jeho informace přesné, nemůže však zaručit ani jedno. Používání aplikace se řídí [podmínkami použití](/terms)."
+          ]
+        },
+        {
+          "title": "Osobní údaje",
+          "body": [
+            "LocalCutVideo neshromažďuje žádné osobní údaje: videa se zpracovávají pouze ve vašem zařízení. Podrobnosti najdete v [zásadách ochrany soukromí](/privacy)."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Zásady ochrany soukromí",
+      "intro": "LocalCutVideo je navrženo tak, aby vaše videa nikdy neopustila vaše zařízení. Tato stránka jednoduše vysvětluje, co se zpracovává a kde.",
+      "sections": [
+        {
+          "title": "Ve zkratce",
+          "body": [
+            "Žádné nahrávání: vaše videa, zvuk a přepisy se zpracovávají ve vašem prohlížeči a nikdy se neodesílají provozovateli ani nikomu jinému.",
+            "Žádný účet, žádné cookies, žádné statistiky, žádná reklama."
+          ]
+        },
+        {
+          "title": "Co zůstává ve vašem zařízení",
+          "body": [
+            "Video a zvukové soubory, které otevřete, se čtou přímo z disku. Analýzu, přepis (Whisper), sledování obličeje i export počítá lokálně váš prohlížeč.",
+            "Vaše projekty (střihy, přepis, nastavení) se ukládají do místní databáze prohlížeče (IndexedDB) spolu s náhledem a mezipamětí analýz. Provozovatel k nim nemá přístup. Projekt můžete smazat na stránce projektů nebo smazat vše vymazáním dat tohoto webu v nastavení prohlížeče."
+          ]
+        },
+        {
+          "title": "Místní úložiště",
+          "body": [
+            "Aplikace ukládá vaše předvolby rozhraní (jazyk, motiv, naposledy otevřený projekt) do místního úložiště prohlížeče a své vlastní soubory a stažené modely AI drží v mezipaměti prohlížeče, aby fungovala offline. To je pro službu nezbytně nutné, nikdy se to nepoužívá ke sledování a proto to nevyžaduje lištu se souhlasem."
+          ]
+        },
+        {
+          "title": "Server",
+          "body": [
+            "Server pouze doručuje soubory aplikace a nevede přístupové protokoly. Jako každý webový server technicky přijímá vaši IP adresu, aby mohl odpovídat na požadavky, ale neukládá ji."
+          ]
+        },
+        {
+          "title": "Třetí strany",
+          "body": [
+            "Hugging Face: model Whisper poskytuje tento web, stejně jako zbytek aplikace. Pouze pokud zde není k dispozici, stáhne se místo toho z huggingface.co; Hugging Face pak obdrží vaši IP adresu a běžné informace o prohlížeči, ale nikdy váš zvuk. Viz jejich [zásady ochrany soukromí](https://huggingface.co/privacy).",
+            "GitHub: pouze pokud kliknete na odkaz do repozitáře se zdrojovým kódem.",
+            "Žádná jiná třetí strana se nekontaktuje: přísná Content-Security-Policy technicky brání stránce připojit se kamkoli jinam."
+          ]
+        },
+        {
+          "title": "Vaše práva",
+          "body": [
+            "Podle GDPR máte právo na přístup ke svým údajům, jejich opravu a výmaz a právo vznést námitku proti jejich zpracování. Protože provozovatel o vás nemá žádné údaje, obvykle není k čemu přistupovat, ale jakýkoli dotaz můžete poslat na maxence.bonnici@outlook.fr. Můžete také podat stížnost u CNIL ([cnil.fr](https://www.cnil.fr)) nebo u úřadu pro ochranu osobních údajů ve své zemi."
+          ]
+        },
+        {
+          "title": "Změny",
+          "body": [
+            "Tyto zásady se mohou s vývojem aplikace aktualizovat. Datum poslední aktualizace je uvedeno v horní části stránky."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Podmínky použití",
+      "intro": "Používáním LocalCutVideo přijímáte tyto podmínky. Jsou krátké, protože služba je jednoduchá: bezplatný nástroj běžící ve vašem prohlížeči.",
+      "sections": [
+        {
+          "title": "Služba",
+          "body": [
+            "LocalCutVideo je bezplatná aplikace pro střih videa, která běží celá ve vašem webovém prohlížeči. Poskytuje se zdarma, bez účtu, a může se kdykoli bez upozornění změnit, přerušit nebo ukončit."
+          ]
+        },
+        {
+          "title": "Váš obsah",
+          "body": [
+            "Zůstáváte jediným vlastníkem a jedinou odpovědnou osobou za videa, zvuky a hudbu, které upravujete a zveřejňujete. Musíte mít potřebná práva (autorská práva, hudební licence, práva natáčených osob k jejich podobě).",
+            "Aplikace se nesmí používat k nezákonným účelům."
+          ]
+        },
+        {
+          "title": "Automatické funkce",
+          "body": [
+            "Přepis, titulky, rozpoznání ticha a automatické kadrování vznikají automaticky a mohou obsahovat chyby. Před zveřejněním výsledek zkontrolujte."
+          ]
+        },
+        {
+          "title": "Vaše soubory a projekty",
+          "body": [
+            "Aplikace nikdy nemění vaše původní soubory. Projekty se ukládají v prohlížeči a mohou se ztratit, pokud se jeho data vymažou nebo prohlížeč uvolní místo: vždy si ponechte původní soubory."
+          ]
+        },
+        {
+          "title": "Záruka a odpovědnost",
+          "body": [
+            "Software se poskytuje „tak, jak je“, bez jakékoli záruky, pod licencí MIT. V rozsahu povoleném zákonem nenese provozovatel odpovědnost za škody vzniklé používáním aplikace nebo nemožností ji používat (ztráta dat, chyby exportu, nedostupnost…)."
+          ]
+        },
+        {
+          "title": "Open source a komponenty třetích stran",
+          "body": [
+            "Zdrojový kód je k dispozici pod licencí MIT na [GitHubu](https://github.com/ImMaxence/LocalCutVideo).",
+            "LocalCutVideo stojí na: Mediabunny (MPL-2.0), Transformers.js a ONNX Runtime (Apache-2.0 a MIT), modelech Whisper od OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) a písmech Inter a Montserrat (SIL Open Font License)."
+          ]
+        },
+        {
+          "title": "Rozhodné právo",
+          "body": [
+            "Tyto podmínky se řídí francouzským právem. Dotazy: maxence.bonnici@outlook.fr."
+          ]
+        }
+      ]
+    }
+  },
+  "thumbnail": {
+    "eyebrow": "Tvůrce náhledů",
+    "title": "Náhledy, na které chce každý kliknout",
+    "lead": "Vyberte nejlepší okamžik videa, přidejte výrazný titulek a stáhněte obrázek připravený pro YouTube, Shorts nebo Instagram. Vše probíhá ve vašem zařízení",
+    "pick": "Přetáhněte video nebo obrázek",
+    "pickHint": "MP4, MOV, WebM, JPG, PNG… soubor zůstane ve vašem zařízení",
+    "choose": "Vybrat soubor",
+    "local": "Nic se nenahrává: obrázek vzniká ve vašem prohlížeči",
+    "permissionTitle": "Povolit přístup k videu projektu",
+    "permissionText": "Prohlížeč žádá o potvrzení, než znovu přečte soubor z vašeho zařízení",
+    "permission": "Povolit přístup",
+    "back": "Zpět do editoru",
+    "dragHint": "Tažením obrázek překadrujete",
+    "frame": "Snímek videa",
+    "prevFrame": "Předchozí snímek",
+    "nextFrame": "Další snímek",
+    "moments": "Nejlepší okamžiky",
+    "other": "Vybrat jiný soubor",
+    "format": "Formát",
+    "formats": {
+      "landscape": "YouTube",
+      "vertical": "Shorts · TikTok",
+      "square": "Instagram"
+    },
+    "text": "Titulek",
+    "textPlaceholder": "Váš poutavý titulek",
+    "defaultText": "Váš *titulek* sem",
+    "accentHint": "Slova dejte mezi hvězdičky, abyste je obarvili: *takhle*",
+    "size": "Velikost textu",
+    "position": "Umístění",
+    "positions": {
+      "top": "Nahoře",
+      "center": "Uprostřed",
+      "bottom": "Dole"
+    },
+    "alignCenter": "Na střed",
+    "alignLeft": "Vlevo",
+    "uppercase": "Velká písmena",
+    "tilt": "Nakloněný text",
+    "style": "Styl titulku",
+    "styles": {
+      "outline": "Obrys",
+      "shadow": "Stín",
+      "box": "Pruh",
+      "highlight": "Zvýrazňovač"
+    },
+    "color": "Barva textu",
+    "accent": "Barva zvýrazněných slov",
+    "image": "Obrázek",
+    "zoom": "Přiblížení",
+    "brightness": "Jas",
+    "contrast": "Kontrast",
+    "saturation": "Sytost",
+    "shade": "Ztmavit okraje",
+    "reset": "Obnovit",
+    "downloadJpg": "Stáhnout JPG",
+    "downloadPng": "Stáhnout PNG",
+    "sizeInfo": "{{ width }} × {{ height }} px · pro YouTube je nejlepší JPG (pod 2 MB)",
+    "saved": "Uloženo: {{ name }}",
+    "loadError": "Tento projekt se nepodařilo otevřít",
+    "readError": "Tento soubor se nepodařilo přečíst"
+  },
+  "seo": {
+    "home": {
+      "title": "LocalCutVideo — Bezplatný editor videa v prohlížeči, nic se nenahrává",
+      "description": "Střihejte videa v prohlížeči: automatické vystřižení ticha, titulky pomocí AI, kadrování na obličej pro TikTok a Shorts, náhledy. Zdarma a open source, vaše videa nikdy neopustí váš počítač"
+    },
+    "thumbnail": {
+      "title": "Bezplatný tvůrce náhledů pro YouTube — LocalCutVideo",
+      "description": "Vytvořte z videa náhled pro YouTube, Shorts nebo Instagram: navržené nejlepší okamžiky, velký titulek s barevnými slovy, JPG nebo PNG. Zdarma, v prohlížeči, nic se nenahrává"
+    },
+    "changelog": {
+      "title": "Změny — LocalCutVideo",
+      "description": "Co je nového v LocalCutVideo, verze po verzi"
+    },
+    "legal": {
+      "title": "Právní upozornění — LocalCutVideo",
+      "description": "Provozovatel a hosting LocalCutVideo"
+    },
+    "privacy": {
+      "title": "Zásady ochrany soukromí — LocalCutVideo",
+      "description": "LocalCutVideo nic nenahrává: vaše videa, přepisy a projekty zůstávají ve vašem zařízení"
+    },
+    "terms": {
+      "title": "Podmínky použití — LocalCutVideo",
+      "description": "Podmínky použití LocalCutVideo, bezplatného open-source editoru videa"
+    },
+    "app": {
+      "title": "Projekty — LocalCutVideo",
+      "description": "Vaše video projekty, uložené v prohlížeči"
+    },
+    "editor": {
+      "title": "Editor — LocalCutVideo",
+      "description": "Editor LocalCutVideo"
+    }
+  },
+  "tour": {
+    "label": "Průvodce",
+    "help": "Průvodce",
+    "count": "Krok {{ n }} z {{ total }}",
+    "skip": "Přeskočit průvodce",
+    "prev": "Zpět",
+    "next": "Další",
+    "done": "Jdeme na to!",
+    "steps": {
+      "auto": {
+        "title": "Jedno kliknutí: automatický střih",
+        "text": "LocalCutVideo video sestříhá za vás: odstraněné ticho a zaváhání, titulky, kadrování a zoom. Vše můžete později změnit"
+      },
+      "preview": {
+        "title": "Náhled",
+        "text": "Co vidíte, to se přesně vyexportuje. Kliknutím nebo mezerníkem přehrajete či pozastavíte"
+      },
+      "timeline": {
+        "title": "Časová osa",
+        "text": "Kliknutím se pohybujete videem. Tažením po vlně vyberete část"
+      },
+      "cut": {
+        "title": "Vystřihnout nebo změnit rychlost",
+        "text": "S vybranou částí ji Vystřihnout (X) odstraní a Rychlost ji přehraje rychleji či pomaleji. Ctrl+Z vrátí cokoli"
+      },
+      "transcript": {
+        "title": "Střih pomocí textu",
+        "text": "Po přepisu smazání slova vystřihne video. Můžete také opravit, co AI slyšela špatně"
+      },
+      "settings": {
+        "title": "Všechna nastavení",
+        "text": "Formát (16:9, 9:16, čtverec), střihy a přechody, titulky, texty, kadrování a rozmazání, zvuk a hudba"
+      },
+      "thumbnail": {
+        "title": "Náhled",
+        "text": "Vytvořte náhled videa z jeho nejlepších okamžiků"
+      },
+      "export": {
+        "title": "Export",
+        "text": "Uložte video jako MP4. Vše probíhá ve vašem zařízení, nic se nenahrává"
+      }
+    }
+  }
+}

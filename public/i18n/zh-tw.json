@@ -1,0 +1,895 @@
+{
+  "common": {
+    "videoFiles": "影片檔案",
+    "audioFiles": "音訊檔案",
+    "cancel": "取消",
+    "close": "關閉",
+    "retry": "重試",
+    "none": "無",
+    "remove": "移除"
+  },
+  "nav": {
+    "features": "功能",
+    "privacy": "隱私",
+    "faq": "常見問題",
+    "changelog": "更新紀錄",
+    "language": "語言",
+    "searchLanguage": "搜尋語言",
+    "noLanguage": "找不到語言",
+    "install": "安裝應用程式",
+    "open": "開啟編輯器",
+    "menu": "開啟選單",
+    "close": "關閉選單",
+    "thumbnail": "縮圖"
+  },
+  "theme": {
+    "system": "跟隨系統",
+    "light": "淺色",
+    "dark": "深色",
+    "label": "主題"
+  },
+  "footer": {
+    "tagline": "完全在瀏覽器中執行的免費開源影片編輯器。你的檔案永遠不會離開你的電腦",
+    "issues": "回報問題",
+    "noTracking": "無 Cookie，無追蹤",
+    "product": "產品",
+    "legal": "法律資訊"
+  },
+  "pwa": {
+    "update": "有新版本可用",
+    "reload": "重新載入"
+  },
+  "landing": {
+    "hero": {
+      "badgeLocal": "100% 本機處理，零上傳",
+      "badgeOpen": "免費開源",
+      "title1": "剪輯你的影片",
+      "title2": "一切都不離開你的電腦",
+      "lead": "LocalCutVideo 自動剪掉靜音、用 Whisper 聽寫語音、燒錄卡拉 OK 字幕，並把 16:9 重新構圖成 9:16，全都在瀏覽器中完成。不用上傳，不用帳號，沒有伺服器",
+      "cta": "開啟編輯器",
+      "github": "在 GitHub 上查看",
+      "hint": "在電腦上使用 Chrome 或 Edge 效果最好",
+      "demo": "用範例影片試試看"
+    },
+    "mock": {
+      "w1": "那麼今天",
+      "filler": "嗯，",
+      "w2": "我來跟大家示範",
+      "w3": "它是怎麼運作的",
+      "line2": "一切都在你自己的電腦上執行，連 AI 也是",
+      "line3": "刪掉一個詞，影片就剪好了",
+      "cap1": "這些都留在你的",
+      "cap2": "電腦上"
+    },
+    "stats": {
+      "upload": "上傳位元組",
+      "local": "在你的裝置上處理",
+      "languages": "介面語言",
+      "gpu": "AI 與編碼加速"
+    },
+    "how": {
+      "eyebrow": "使用方式",
+      "title": "三個步驟，把原始素材變成可發布的影片",
+      "open": {
+        "title": "開啟影片",
+        "text": "從磁碟選擇一個檔案。檔案直接在原處讀取：不複製、不上傳，即使是好幾 GB 的檔案也一樣"
+      },
+      "edit": {
+        "title": "交給編輯器處理",
+        "text": "偵測靜音、逐字聽寫語音、追蹤人臉，全部在本機完成。修改文字就能修正任何地方"
+      },
+      "export": {
+        "title": "匯出 MP4",
+        "text": "選擇 16:9、9:16 或 1:1。影片由你的顯示卡編碼，並直接寫入磁碟"
+      }
+    },
+    "features": {
+      "eyebrow": "功能",
+      "title": "對著鏡頭說話的影片所需的一切",
+      "lead": "專為不想把原始素材上傳到任何地方的 YouTube、TikTok、Reels 和 Shorts 創作者打造",
+      "silences": {
+        "title": "自動剪掉靜音",
+        "text": "依音量偵測停頓並刪除，可調整門檻、最短長度與換氣空間"
+      },
+      "textEdit": {
+        "title": "用文字剪輯",
+        "text": "Whisper 為每個詞加上時間戳記。在逐字稿中刪掉詞語，對應的影片片段就會被剪掉"
+      },
+      "captions": {
+        "title": "卡拉 OK 字幕",
+        "text": "逐字動畫字幕直接燒錄進影片，提供卡拉 OK、簡潔和底框樣式，並可自選醒目色"
+      },
+      "framing": {
+        "title": "自動構圖 16:9 → 9:16",
+        "text": "把橫向影片轉成直式時，人臉追蹤讓說話者始終留在畫面中"
+      },
+      "zoom": {
+        "title": "智慧縮放",
+        "text": "每次剪接交替推近，讓跳接看起來是刻意的，並留住觀眾"
+      },
+      "ducking": {
+        "title": "聲音與音樂",
+        "text": "調大音量、讓各片段音量一致，並加入有人說話時會自動降低的背景音樂"
+      },
+      "recovery": {
+        "title": "當機復原",
+        "text": "每次修改都即時儲存在瀏覽器中。重新開啟分頁，就能從剛才停下的地方接著做"
+      },
+      "offline": {
+        "title": "離線可用",
+        "text": "可安裝成應用程式。AI 模型下載後，整個編輯器不用連網也能使用"
+      },
+      "export": {
+        "title": "快速硬體匯出",
+        "text": "編碼使用 WebCodecs，也就是瀏覽器和顯示卡內建的影片編碼器，而不是緩慢的軟體編碼"
+      },
+      "clips": {
+        "title": "多片段組合",
+        "text": "一次拖入多個鏡頭：依你選擇的順序合成一支影片，共用時間軸與逐字稿"
+      },
+      "inputs": {
+        "title": "MP4、MOV、WebM、MKV",
+        "text": "可開啟手機和相機拍的檔案；瀏覽器能解碼時，也包括 iPhone 的 HEVC 影片"
+      },
+      "languages": {
+        "title": "多語言",
+        "text": "介面支援 {{ count }} 種語言，Whisper 還能聽寫數十種其他語言，並自動偵測語言"
+      }
+    },
+    "privacy": {
+      "eyebrow": "隱私",
+      "title": "從設計上就零上傳",
+      "lead": "影片直接從你的磁碟讀取。音訊分析、聽寫、人臉追蹤和編碼都在你電腦上的背景執行緒（Web Workers）中執行。根本沒有可以接收你素材的伺服器",
+      "upload": "絕不上傳：檔案永遠不會離開你的電腦",
+      "account": "無帳號、無 Cookie、無統計",
+      "csp": "嚴格的 Content-Security-Policy 只允許頁面與本站通訊，AI 模型也由本站提供（Hugging Face 只是備援）",
+      "storage": "專案儲存在瀏覽器的本機資料庫（IndexedDB）中，可隨時刪除",
+      "diagram": {
+        "machine": "你的電腦",
+        "file": "影片檔案",
+        "browser": "你的瀏覽器",
+        "upload": "上傳到伺服器",
+        "model": "下載 AI 模型（只需一次，已快取）"
+      }
+    },
+    "support": {
+      "eyebrow": "相容性",
+      "title": "瀏覽器支援",
+      "ok": "完整",
+      "partial": "部分",
+      "full": "全部功能，包括當機復原和直接寫入磁碟的匯出",
+      "firefox": "可以剪輯和匯出。關閉分頁後需要重新選擇影片",
+      "safari": "僅限較新版本。重新載入後請重新選擇影片；匯出會以下載方式儲存",
+      "mobile": "手機和平板",
+      "mobileText": "短片段可以使用，但受記憶體限制，長影片不夠穩定"
+    },
+    "faq": {
+      "title": "常見問題",
+      "free": {
+        "q": "真的免費嗎？有什麼陷阱？",
+        "a": "它免費而且開源。所有處理都在你的電腦上完成，沒有伺服器成本，所以沒有東西要賣你，也沒有資料可收集"
+      },
+      "formats": {
+        "q": "可以開啟哪些影片格式？",
+        "a": "MP4、MOV、WebM 和 MKV，前提是瀏覽器能解碼其編碼格式（依瀏覽器和系統而定：H.264、HEVC、VP9、AV1）。匯出為 MP4 檔案"
+      },
+      "browsers": {
+        "q": "為什麼推薦 Chrome 或 Edge？",
+        "a": "它們支援 File System Access API，讓編輯器在重新載入後能再次開啟影片，並把匯出直接寫入磁碟。其他瀏覽器也能用，只是要多點幾下"
+      },
+      "size": {
+        "q": "有檔案大小限制嗎？",
+        "a": "什麼都不上傳，所以沒有上傳限制。影片以小區塊從磁碟讀取；實際限制在於電腦記憶體，以及你對超長影片的耐心"
+      },
+      "offline": {
+        "q": "沒有網路也能用嗎？",
+        "a": "可以，載入過一次就行。把它安裝成應用程式（PWA），並在連網時聽寫一次：Whisper 模型會被快取，之後一切都能離線執行"
+      },
+      "ai": {
+        "q": "AI 在哪裡執行？",
+        "a": "在你的瀏覽器裡。Whisper 透過 Transformers.js 在顯示卡（WebGPU）或處理器（WebAssembly）上執行，人臉偵測使用 MediaPipe。模型只下載一次，你的音訊從不外傳"
+      }
+    },
+    "final": {
+      "title": "你的下一支影片，幾分鐘就剪好",
+      "text": "不用註冊、不用上傳、沒有浮水印。開啟檔案就能開始剪輯"
+    },
+    "thumbnail": {
+      "eyebrow": "新功能 · 縮圖",
+      "title": "再配上一張縮圖",
+      "text": "縮圖工具會找出影片中最清晰的瞬間。加上有彩色字詞的大標題，再以合適尺寸下載",
+      "points": {
+        "moments": "推薦最佳瞬間",
+        "title": "醒目字詞標題，4 種樣式",
+        "formats": "YouTube 1280×720、Shorts 和正方形",
+        "local": "在你的裝置上製作，不上傳任何內容"
+      },
+      "cta": "製作縮圖",
+      "mockTitle": "我的第一支",
+      "mockAccent": "Vlog"
+    }
+  },
+  "changelog": {
+    "eyebrow": "版本",
+    "title": "更新紀錄",
+    "lead": "LocalCutVideo 的所有版本，最新的在前",
+    "current": "目前版本：",
+    "github": "在 GitHub 上查看",
+    "releases": "GitHub 發行版本",
+    "latest": "最新",
+    "error": "無法載入更新紀錄"
+  },
+  "projects": {
+    "title": "你的專案",
+    "lead": "專案會自動儲存在這個瀏覽器中。你的影片仍留在磁碟上的原位置",
+    "resume": "從上次停下的地方繼續",
+    "reading": "正在讀取影片…",
+    "drop": "把影片拖到這裡",
+    "or": "或",
+    "open": "開啟影片",
+    "private": "檔案在本機讀取，不會上傳任何內容",
+    "noFsAccess": "你的瀏覽器無法在工作階段之間記住檔案：關閉分頁後需要重新選擇影片。使用 Chrome 或 Edge 就能避免",
+    "recent": "最近的專案",
+    "empty": "還沒有專案。開啟一支影片開始吧",
+    "delete": "刪除專案",
+    "confirmDelete": "要刪除專案「{{ name }}」嗎？磁碟上的影片檔案不受影響",
+    "multi": "多個檔案？會依檔名順序組合成一支影片",
+    "importFile": "開啟專案檔（.lcv.json）",
+    "saveFile": "將專案儲存為檔案",
+    "imported": "專案已開啟：請選擇它的影片以繼續"
+  },
+  "errors": {
+    "notVideo": "這個檔案看起來不是影片",
+    "codec": "你的瀏覽器無法解碼這支影片的編碼格式（HEVC/H.265 需要 Chrome，或 Edge 的 HEVC 擴充功能）。請嘗試轉換為 H.264 MP4",
+    "noVideo": "這個檔案中找不到影片軌",
+    "generic": "讀取這個檔案時發生問題",
+    "transcribe": "聽寫失敗。請試試較小的模型，或檢查首次下載時的網路連線",
+    "export": "匯出失敗",
+    "faces": "這支影片的人臉追蹤失敗",
+    "skipped": "已略過（無法讀取）：{{ names }}",
+    "skippedCodec": "已略過，這個瀏覽器不支援其編碼格式：{{ names }}。請試試 Chrome，或轉換為 H.264 MP4",
+    "notProject": "這個檔案不是 LocalCutVideo 專案",
+    "demo": "無法載入範例影片"
+  },
+  "languages": {
+    "en": "英文",
+    "fr": "法文",
+    "es": "西班牙文",
+    "it": "義大利文",
+    "de": "德文",
+    "pt": "葡萄牙文",
+    "nl": "荷蘭文"
+  },
+  "editor": {
+    "back": "返回專案",
+    "name": "專案名稱",
+    "undo": "復原",
+    "redo": "重做",
+    "missing": "這個專案已不存在",
+    "save": {
+      "saving": "正在儲存…",
+      "saved": "已儲存在本機",
+      "error": "未儲存"
+    },
+    "reconnect": {
+      "loading": "正在開啟影片…",
+      "title": "重新連結你的影片",
+      "allow": "全部允許存取",
+      "select": "選擇",
+      "mismatch": "這似乎不是原始檔案（「{{ name }}」）。仍要使用嗎？",
+      "intro": "專案安然無恙。為了保護你的隱私，編輯器讀取檔案前瀏覽器會再次請求授權",
+      "allowOne": "允許",
+      "privacy": "影片在磁碟上的原位置讀取，絕不複製或上傳",
+      "status": {
+        "ready": "已連結",
+        "permission": "等待你的授權",
+        "moved": "找不到：被移動或重新命名了？",
+        "missing": "請重新選擇（你的瀏覽器不會保留檔案存取權）",
+        "loading": "正在開啟…"
+      }
+    },
+    "preview": {
+      "cut": "剪接",
+      "back": "倒退 5 秒",
+      "play": "播放",
+      "pause": "暫停",
+      "savedHint": "剪掉的時間",
+      "badge": "輕量預覽 · {{ q }}p",
+      "quality": "預覽畫質",
+      "qualityHint": "較輕量的預覽讓編輯器保持流暢。匯出一律使用完整畫質"
+    },
+    "timeline": {
+      "title": "時間軸",
+      "silence": "靜音",
+      "manual": "手動",
+      "text": "文字",
+      "hint": "在波形上拖曳選取片段，再選擇剪掉或變速 · 點擊剪接點調整邊緣 · 按兩下移除",
+      "removeCut": "移除剪接",
+      "zoom": "時間軸縮放",
+      "analyzing": "正在分析音訊…",
+      "zoomIn": "放大",
+      "zoomOut": "縮小",
+      "fit": "符合",
+      "fitHint": "顯示整支影片（提示：Ctrl + 滾輪縮放）",
+      "manualCut": "手動剪接",
+      "markIn": "起點",
+      "markOut": "終點",
+      "markInHint": "在播放頭處設定要剪掉部分的起點（I）",
+      "markOutHint": "在播放頭處設定要剪掉部分的終點（O）",
+      "cutMarked": "剪掉",
+      "cutHint": "移除起點與終點之間的部分（X）",
+      "clearMarks": "清除起點和終點",
+      "marksMissing": "請先設定起點（I）和終點（O）",
+      "analysisError": "無法分析音訊",
+      "selectedCut": "已選取的剪接",
+      "earlier": "提前",
+      "later": "延後",
+      "listen": "試聽剪接",
+      "speed": "速度",
+      "speedHint": "加快或放慢起點與終點之間的部分",
+      "selectedSpeed": "變速",
+      "removeSpeed": "恢復正常速度",
+      "listenSpeed": "播放變速片段",
+      "selectFirst": "請先選取片段：在波形上拖曳，或設定起點和終點"
+    },
+    "transcript": {
+      "title": "逐字稿",
+      "words": "{{ count }} 個詞",
+      "fillers": "刪除贅詞（{{ count }}）",
+      "restore": "全部還原",
+      "selected": "已選取 {{ count }} 個",
+      "cut": "剪掉 / 還原",
+      "tip": "點擊詞語即可跳到該處。拖曳或按住 Shift 點擊來選取，然後按 Delete 剪掉，或按「修正」（Enter）修正 Whisper 聽錯的內容",
+      "emptyTitle": "還沒有逐字稿",
+      "emptyText": "聽寫影片後即可用文字剪輯，並取得逐字字幕",
+      "correct": "修正",
+      "correctTitle": "實際說的是什麼？",
+      "correctHint": "重新輸入一個詞或整句話。時間和字幕會自動調整",
+      "apply": "套用"
+    },
+    "transcribe": {
+      "title": "聽寫（Whisper）",
+      "hint": "在你的裝置上執行。模型只需下載一次，之後會被快取",
+      "model": "模型",
+      "models": {
+        "tiny": "快速",
+        "base": "均衡",
+        "small": "精準"
+      },
+      "download": "一次性下載 {{ size }}",
+      "language": "說話語言",
+      "auto": "自動偵測",
+      "run": "聽寫",
+      "rerun": "全部重新聽寫",
+      "done": "已聽寫 {{ count }} 個詞",
+      "empty": "這支影片中沒有偵測到語音",
+      "stage": {
+        "audio": "正在擷取音訊…",
+        "download": "正在下載模型…",
+        "transcribe": "正在聽寫…"
+      },
+      "missing": "聽寫新片段（{{ count }}）",
+      "rerunHint": "使用上方的模型和語言重新開始",
+      "confirmAll": "要全部重新聽寫嗎？你剪掉或修正過的詞語將會遺失",
+      "detected": "偵測到的語言：{{ language }}"
+    },
+    "tabs": {
+      "format": "畫面比例",
+      "cuts": "剪接",
+      "captions": "字幕",
+      "framing": "構圖",
+      "audio": "聲音",
+      "clips": "片段",
+      "texts": "文字"
+    },
+    "format": {
+      "title": "輸出比例",
+      "hint": "影片會被裁切以符合比例。使用構圖功能可跟隨說話者",
+      "landscape": "YouTube",
+      "vertical": "TikTok · Reels",
+      "square": "動態消息",
+      "source": "原始：",
+      "resolution": "解析度",
+      "fps": "每秒影格數",
+      "exportNote": "解析度和影格率在匯出時選擇",
+      "rotation": "旋轉",
+      "rotateLeft": "向左旋轉",
+      "rotateRight": "向右旋轉",
+      "rotationHint": "用於側拍的影片。套用到所有片段",
+      "rotatedFaces": "影片已旋轉：請在構圖中重新開啟「跟隨人臉」"
+    },
+    "cuts": {
+      "title": "靜音偵測",
+      "hint": "移除停頓。如果詞語被切掉，請調低門檻",
+      "threshold": "門檻",
+      "suggested": "這段錄音的建議值：{{ value }} dB",
+      "minSilence": "最短靜音",
+      "padding": "換氣空間",
+      "detect": "偵測並剪掉靜音",
+      "detected": "已剪掉 {{ count }} 處靜音",
+      "count": "處剪接",
+      "removed": "已剪掉",
+      "final": "最終長度",
+      "clear": "移除所有剪接",
+      "mode": "尋找停頓的依據",
+      "modes": {
+        "audio": "音量",
+        "transcript": "逐字稿"
+      },
+      "modeHint": "即使有背景噪音或音樂，逐字稿模式也很精準",
+      "modeNeedsTranscript": "聽寫影片後即可依詞語尋找停頓：在吵雜環境中更精準",
+      "preset": "節奏",
+      "presets": {
+        "gentle": "自然",
+        "normal": "均衡",
+        "tight": "緊湊"
+      },
+      "live": "調整設定時，剪接會即時更新",
+      "silentClips": "{{ count }} 個無人聲片段：這些片段只剪掉真正的空白"
+    },
+    "captions": {
+      "title": "燒錄字幕",
+      "style": "樣式",
+      "styles": {
+        "karaoke": "卡拉 OK",
+        "clean": "簡潔",
+        "boxed": "底框"
+      },
+      "position": "位置",
+      "positions": {
+        "top": "上方",
+        "center": "中間",
+        "bottom": "下方"
+      },
+      "size": "大小",
+      "words": "每則字幕詞數",
+      "uppercase": "大寫",
+      "highlight": "醒目色"
+    },
+    "framing": {
+      "title": "自動構圖",
+      "hint": "追蹤人臉讓說話者始終留在畫面中，非常適合 16:9 → 9:16",
+      "center": "置中",
+      "face": "跟隨人臉",
+      "analyzing": "正在追蹤人臉…",
+      "analyze": "追蹤人臉",
+      "reanalyze": "重新追蹤人臉",
+      "tracked": "已追蹤 {{ count }} 個位置",
+      "found": "已追蹤到人臉：構圖會跟隨說話者",
+      "notFound": "這支影片中沒有穩定偵測到人臉",
+      "punch": "智慧縮放",
+      "punchHint": "在每次剪接處（沒有剪接時則在每句話處）交替輕微推近，讓影片保持動感",
+      "zoom": "縮放幅度",
+      "firstTime": "選擇「跟隨人臉」會在本機分析一次影片",
+      "beatsCuts": "縮放在你的剪接處切換 {{ count }} 次",
+      "beatsAuto": "還沒有剪接：縮放依句子或每 4 秒切換 {{ count }} 次"
+    },
+    "audio": {
+      "title": "背景音樂",
+      "hint": "有人說話時音樂會自動降低（自動閃避）",
+      "reconnect": "重新連結「{{ name }}」",
+      "pick": "選擇音樂檔案",
+      "enabled": "加入影片",
+      "volume": "音樂音量",
+      "ducking": "說話時降低",
+      "duckingHint": "有人說話時音樂降低的幅度"
+    },
+    "export": {
+      "button": "匯出",
+      "title": "匯出影片",
+      "running": "正在匯出…",
+      "eta": "大約還需 {{ time }}",
+      "keepOpen": "請保持此分頁開啟。編碼會盡可能使用你的顯示卡",
+      "done": "匯出完成",
+      "saved": "「{{ name }}」已在 {{ seconds }} 秒內儲存到磁碟",
+      "downloaded": "「{{ name }}」已在 {{ seconds }} 秒內下載",
+      "duration": "長度",
+      "from": "原長度 {{ time }}",
+      "streamHint": "你可以選擇 MP4 的儲存位置，檔案會直接寫入磁碟",
+      "downloadHint": "MP4 在本機合成，然後下載",
+      "start": "匯出 MP4",
+      "saveProject": "儲存專案",
+      "saveProjectHint": "包含剪輯內容的 .lcv.json 檔案（不含影片），可在另一台電腦上繼續",
+      "projectSaved": "專案已儲存為 .lcv.json 檔案"
+    },
+    "clips": {
+      "title": "片段",
+      "hint": "影片會依此順序接連播放。拖曳即可調整順序：剪接和詞語會跟著所屬片段移動",
+      "jump": "跳到此片段",
+      "up": "上移",
+      "down": "下移",
+      "remove": "移除片段",
+      "add": "新增影片",
+      "summary": "{{ count }} 個片段 · 共 {{ time }}",
+      "confirmRemove": "要從專案中移除「{{ name }}」嗎？它的剪接和詞語也會一併移除（Ctrl+Z 可復原）",
+      "added": "已新增 {{ count }} 個片段",
+      "addedTranscribe": "已新增 {{ count }} 個片段。重新聽寫即可為它們加上字幕：已聽寫的片段會保留",
+      "noVoice": "無人聲",
+      "voiceOn": "有人聲 · 若沒人說話請點擊",
+      "voiceOff": "無人聲 · 若有人說話請點擊"
+    },
+    "auto": {
+      "button": "一鍵剪輯",
+      "cta": "一鍵剪輯影片",
+      "transcribeOnly": "或只聽寫",
+      "heading": "讓 LocalCutVideo 幫你剪輯",
+      "lead": "一鍵完成：去除靜音和猶豫的停頓、加上字幕、構圖對準說話者、智慧縮放。之後一切都能修改",
+      "target": "你要發布到哪裡？",
+      "options": {
+        "silences": "剪掉靜音",
+        "fillers": "去除猶豫停頓（嗯、那個…）",
+        "captions": "卡拉 OK 字幕",
+        "framing": "跟隨人臉",
+        "framingNoCrop": "不需要：此比例會顯示完整畫面",
+        "zoom": "智慧縮放"
+      },
+      "local": "一切都在你的裝置上執行，影片絕不上傳",
+      "start": "開始一鍵剪輯",
+      "running": "正在剪輯你的影片…",
+      "done": "影片剪好了！",
+      "view": "查看結果",
+      "undo": "復原一鍵剪輯",
+      "undone": "專案已還原到一鍵剪輯之前的狀態",
+      "summary": {
+        "cuts": "處剪接",
+        "removed": "已剪掉",
+        "words": "個詞已加字幕",
+        "silent": "{{ count }} 個無人聲片段：只剪掉了真正的空白"
+      },
+      "steps": {
+        "analyze": "分析音訊",
+        "transcribe": "聽寫語音",
+        "fillers": "去除猶豫停頓",
+        "silences": "剪掉靜音",
+        "framing": "跟隨人臉",
+        "style": "字幕和智慧縮放",
+        "voice": "偵測人聲"
+      },
+      "status": {
+        "skipped": "已略過",
+        "error": "失敗"
+      },
+      "voice": {
+        "title": "影片裡有人說話嗎？",
+        "auto": "自動",
+        "yes": "有",
+        "no": "沒有",
+        "detectedYes": "偵測結果：有人說話",
+        "detectedNo": "偵測結果：無人聲",
+        "hint": "無人聲：不聽寫也不加字幕，只剪掉真正的空白"
+      }
+    },
+    "mix": {
+      "title": "影片聲音",
+      "hint": "調高或調低片段的聲音",
+      "volume": "音量",
+      "mute": "靜音",
+      "unmute": "取消靜音",
+      "volumeHint": "套用於預覽和匯出",
+      "boostHint": "超過 100 % 時，限幅器會防止破音",
+      "normalize": "統一片段音量",
+      "normalizeHint": "不論近拍或遠拍，所有片段音量一致",
+      "denoise": "降低背景噪音",
+      "denoiseHint": "讓人聲更清楚（風聲、嘶嘶聲、風扇聲）。匯出時套用於有人聲的片段。請先試聽",
+      "listen": "試聽 8 秒效果",
+      "stopListening": "停止試聽",
+      "preparing": "正在準備…"
+    },
+    "thumbnail": "縮圖",
+    "transition": {
+      "title": "剪接處轉場",
+      "none": "硬切",
+      "dip": "快速淡化",
+      "black": "淡出至黑畫面",
+      "hint": "在每次剪接和片段切換時播放（淡出至黑畫面時，開頭和結尾也會出現）。播放時可見"
+    },
+    "texts": {
+      "title": "影片上的文字",
+      "hint": "在播放頭位置顯示的標題和註解。用星號包住詞語即可上色",
+      "add": "在播放頭處新增文字",
+      "default": "你的*文字*",
+      "timing": "顯示時段",
+      "startHere": "從這裡開始",
+      "endHere": "在這裡結束",
+      "remove": "移除此文字"
+    },
+    "background": {
+      "title": "背景",
+      "hint": "模糊人物身後的背景，人物保持清晰。在你的裝置上計算",
+      "none": "清晰",
+      "blur": "模糊",
+      "strength": "模糊強度",
+      "error": "這台裝置無法啟動背景模糊"
+    }
+  },
+  "legal": {
+    "updated": "最後更新：2026 年 11 月 1 日",
+    "contact": "聯絡方式",
+    "nav": {
+      "notice": "法律聲明",
+      "privacy": "隱私",
+      "terms": "使用條款"
+    },
+    "notice": {
+      "title": "法律聲明",
+      "intro": "依據法國法律（2004 年 6 月 21 日第 2004-575 號法律 LCEN 第 6 條）須公布的本網站發布者與代管資訊。",
+      "sections": [
+        {
+          "title": "發布者",
+          "body": [
+            "網站 localcutvideo.mbonnici.fr（「LocalCutVideo」）由個人 Maxence Bonnici 以非營利方式發布。",
+            "發行負責人：Maxence Bonnici。",
+            "聯絡方式：maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "代管",
+          "body": [
+            "本網站由發布者 Maxence Bonnici 自行代管於個人伺服器，並透過 Coolify 平台部署。",
+            "聯絡方式：maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "智慧財產權",
+          "body": [
+            "LocalCutVideo 的原始碼為開源，以 MIT 授權發布於 [GitHub](https://github.com/ImMaxence/LocalCutVideo)。",
+            "應用程式所使用的第三方元件、AI 模型和字型仍屬其作者所有，並依其各自的授權使用，詳見[使用條款](/terms)。所提及的品牌（Whisper、MediaPipe、Hugging Face、Chrome、Edge 等）歸其各自所有者所有。"
+          ]
+        },
+        {
+          "title": "責任",
+          "body": [
+            "發布者會盡力維持網站可用、資訊正確，但無法對此提供保證。應用程式的使用受[使用條款](/terms)規範。"
+          ]
+        },
+        {
+          "title": "個人資料",
+          "body": [
+            "LocalCutVideo 不蒐集任何個人資料：影片只在你的裝置上處理。詳情請參閱[隱私權政策](/privacy)。"
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "隱私權政策",
+      "intro": "LocalCutVideo 的設計讓你的影片永遠不會離開你的裝置。本頁用淺白的方式說明處理了什麼，以及在哪裡處理。",
+      "sections": [
+        {
+          "title": "簡單來說",
+          "body": [
+            "不上傳：你的影片、音訊和逐字稿都在瀏覽器中處理，絕不會傳送給發布者或任何其他人。",
+            "無帳號、無 Cookie、無統計、無廣告。"
+          ]
+        },
+        {
+          "title": "留在你裝置上的內容",
+          "body": [
+            "你開啟的影片和音訊檔案直接從磁碟讀取。分析、聽寫（Whisper）、人臉追蹤和匯出都由你的瀏覽器在本機計算。",
+            "你的專案（剪接、逐字稿、設定）連同一張縮圖和分析快取，一起儲存在瀏覽器的本機資料庫（IndexedDB）中。發布者無法存取。你可以在專案頁面刪除專案，或在瀏覽器設定中清除本站資料以刪除全部內容。"
+          ]
+        },
+        {
+          "title": "本機儲存空間",
+          "body": [
+            "應用程式會把你的介面偏好（語言、主題、最近開啟的專案）存在瀏覽器的本機儲存空間，並把自身檔案和已下載的 AI 模型保存在瀏覽器快取中，以便離線使用。這些是服務絕對必要的，從不用於追蹤你，因此不需要同意橫幅。"
+          ]
+        },
+        {
+          "title": "伺服器",
+          "body": [
+            "伺服器只負責提供應用程式檔案，不保留存取紀錄。與任何網頁伺服器一樣，它在技術上會接收你的 IP 位址以回應請求，但不會儲存。"
+          ]
+        },
+        {
+          "title": "第三方",
+          "body": [
+            "Hugging Face：Whisper 模型與應用程式的其他部分一樣由本站提供。只有本站無法提供時，才會改從 huggingface.co 下載；此時 Hugging Face 會收到你的 IP 位址和一般瀏覽器資訊，但絕不會收到你的音訊。請參閱其[隱私權政策](https://huggingface.co/privacy)。",
+            "GitHub：僅在你點擊指向原始碼儲存庫的連結時。",
+            "不會連絡任何其他第三方：嚴格的 Content-Security-Policy 在技術上阻止頁面連線到其他任何地方。"
+          ]
+        },
+        {
+          "title": "你的權利",
+          "body": [
+            "依據 GDPR，你有權存取、更正和刪除你的資料，並有權反對其處理。由於發布者並未持有任何關於你的資料，通常沒有可供存取的內容，但你可以將任何問題寄至 maxence.bonnici@outlook.fr。你也可以向 CNIL（[cnil.fr](https://www.cnil.fr)）或你所在國家的資料保護機關提出申訴。"
+          ]
+        },
+        {
+          "title": "變更",
+          "body": [
+            "本政策可能會隨應用程式的發展而更新。最後更新日期顯示在本頁頂端。"
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "使用條款",
+      "intro": "使用 LocalCutVideo 即表示你接受這些條款。服務很簡單，所以條款也很短：一個在瀏覽器中執行的免費工具。",
+      "sections": [
+        {
+          "title": "服務",
+          "body": [
+            "LocalCutVideo 是一款完全在網頁瀏覽器中執行的免費影片剪輯應用程式。它免費提供、不需帳號，並可能隨時變更、中斷或停止，恕不另行通知。"
+          ]
+        },
+        {
+          "title": "你的內容",
+          "body": [
+            "你仍是所剪輯和發布之影片、聲音和音樂的唯一所有者與唯一責任人。你必須擁有必要的權利（著作權、音樂授權、被拍攝者的肖像權）。",
+            "不得將本應用程式用於非法目的。"
+          ]
+        },
+        {
+          "title": "自動功能",
+          "body": [
+            "聽寫、字幕、靜音偵測和自動構圖均為自動產生，可能有錯誤。發布前請檢查結果。"
+          ]
+        },
+        {
+          "title": "你的檔案和專案",
+          "body": [
+            "應用程式從不修改你的原始檔案。專案儲存在瀏覽器中，若瀏覽器資料被清除或瀏覽器釋放空間，專案可能會遺失：請務必保留原始檔案。"
+          ]
+        },
+        {
+          "title": "擔保與責任",
+          "body": [
+            "本軟體依 MIT 授權「按現狀」提供，不附帶任何形式的擔保。在法律允許的範圍內，發布者對於因使用或無法使用本應用程式而造成的任何損害（資料遺失、匯出錯誤、服務無法使用等）概不負責。"
+          ]
+        },
+        {
+          "title": "開源與第三方元件",
+          "body": [
+            "原始碼以 MIT 授權發布於 [GitHub](https://github.com/ImMaxence/LocalCutVideo)。",
+            "LocalCutVideo 使用以下元件：Mediabunny（MPL-2.0）、Transformers.js 和 ONNX Runtime（Apache-2.0 和 MIT）、OpenAI 的 Whisper 模型（MIT）、MediaPipe（Apache-2.0）、Wavesurfer.js（BSD-3-Clause）、Dexie.js（Apache-2.0）、Angular（MIT），以及 Inter 和 Montserrat 字型（SIL Open Font License）。"
+          ]
+        },
+        {
+          "title": "準據法",
+          "body": [
+            "本條款受法國法律管轄。如有疑問：maxence.bonnici@outlook.fr。"
+          ]
+        }
+      ]
+    }
+  },
+  "thumbnail": {
+    "eyebrow": "縮圖工具",
+    "title": "讓人忍不住點進來的縮圖",
+    "lead": "挑選影片中最好的瞬間，加上吸睛的標題，下載適用於 YouTube、Shorts 或 Instagram 的圖片。一切都在你的裝置上完成",
+    "pick": "拖入影片或圖片",
+    "pickHint": "MP4、MOV、WebM、JPG、PNG… 檔案留在你的裝置上",
+    "choose": "選擇檔案",
+    "local": "不上傳任何內容：圖片在瀏覽器中產生",
+    "permissionTitle": "允許存取專案影片",
+    "permissionText": "再次從裝置讀取檔案前，瀏覽器會請求確認",
+    "permission": "允許存取",
+    "back": "返回編輯器",
+    "dragHint": "拖曳圖片以重新構圖",
+    "frame": "影片畫格",
+    "prevFrame": "上一個畫格",
+    "nextFrame": "下一個畫格",
+    "moments": "最佳瞬間",
+    "other": "選擇其他檔案",
+    "format": "比例",
+    "formats": {
+      "landscape": "YouTube",
+      "vertical": "Shorts · TikTok",
+      "square": "Instagram"
+    },
+    "text": "標題",
+    "textPlaceholder": "你的吸睛標題",
+    "defaultText": "在這裡寫*標題*",
+    "accentHint": "用星號包住詞語即可上色：*像這樣*",
+    "size": "文字大小",
+    "position": "位置",
+    "positions": {
+      "top": "上方",
+      "center": "置中",
+      "bottom": "下方"
+    },
+    "alignCenter": "置中",
+    "alignLeft": "靠左",
+    "uppercase": "大寫字母",
+    "tilt": "傾斜文字",
+    "style": "標題樣式",
+    "styles": {
+      "outline": "外框",
+      "shadow": "陰影",
+      "box": "橫幅",
+      "highlight": "螢光筆"
+    },
+    "color": "文字顏色",
+    "accent": "醒目字詞顏色",
+    "image": "圖片",
+    "zoom": "縮放",
+    "brightness": "亮度",
+    "contrast": "對比",
+    "saturation": "飽和度",
+    "shade": "壓暗邊緣",
+    "reset": "重設",
+    "downloadJpg": "下載 JPG",
+    "downloadPng": "下載 PNG",
+    "sizeInfo": "{{ width }} × {{ height }} 像素 · YouTube 最適合用 JPG（小於 2 MB）",
+    "saved": "已儲存：{{ name }}",
+    "loadError": "無法開啟這個專案",
+    "readError": "無法讀取這個檔案"
+  },
+  "seo": {
+    "home": {
+      "title": "LocalCutVideo — 瀏覽器中的免費影片編輯器，不上傳任何內容",
+      "description": "在瀏覽器中剪輯影片：自動剪掉靜音、AI 字幕、為 TikTok 和 Shorts 自動跟隨人臉構圖、製作縮圖。免費開源，你的影片永遠不會離開你的電腦"
+    },
+    "thumbnail": {
+      "title": "免費 YouTube 縮圖製作工具 — LocalCutVideo",
+      "description": "用你的影片製作 YouTube、Shorts 或 Instagram 縮圖：推薦最佳瞬間、有彩色字詞的大標題、JPG 或 PNG。免費、在瀏覽器中完成、不上傳任何內容"
+    },
+    "changelog": {
+      "title": "更新紀錄 — LocalCutVideo",
+      "description": "LocalCutVideo 各版本的新變化"
+    },
+    "legal": {
+      "title": "法律聲明 — LocalCutVideo",
+      "description": "LocalCutVideo 的發布者與代管"
+    },
+    "privacy": {
+      "title": "隱私權政策 — LocalCutVideo",
+      "description": "LocalCutVideo 不上傳任何內容：你的影片、逐字稿和專案都留在你的裝置上"
+    },
+    "terms": {
+      "title": "使用條款 — LocalCutVideo",
+      "description": "免費開源影片編輯器 LocalCutVideo 的使用條款"
+    },
+    "app": {
+      "title": "專案 — LocalCutVideo",
+      "description": "儲存在瀏覽器中的影片專案"
+    },
+    "editor": {
+      "title": "編輯器 — LocalCutVideo",
+      "description": "LocalCutVideo 編輯器"
+    }
+  },
+  "tour": {
+    "label": "導覽",
+    "help": "導覽",
+    "count": "第 {{ n }} 步，共 {{ total }} 步",
+    "skip": "略過導覽",
+    "prev": "上一步",
+    "next": "下一步",
+    "done": "開始吧！",
+    "steps": {
+      "auto": {
+        "title": "一鍵：自動剪輯",
+        "text": "LocalCutVideo 幫你剪輯影片：去除靜音和猶豫停頓、字幕、構圖和縮放。之後一切都能修改"
+      },
+      "preview": {
+        "title": "預覽",
+        "text": "看到的就是會匯出的內容。點擊預覽或按空白鍵即可播放或暫停"
+      },
+      "timeline": {
+        "title": "時間軸",
+        "text": "點擊即可在影片中移動。在波形上拖曳可選取片段"
+      },
+      "cut": {
+        "title": "剪掉或變速",
+        "text": "選取片段後，剪掉（X）會刪除它，變速可讓它播放得更快或更慢。Ctrl+Z 可復原任何操作"
+      },
+      "transcript": {
+        "title": "用文字剪輯",
+        "text": "聽寫完成後，刪掉一個詞就會剪掉對應影片。你也可以修正 AI 聽錯的內容"
+      },
+      "settings": {
+        "title": "所有設定",
+        "text": "比例（16:9、9:16、正方形）、剪接和轉場、字幕、文字、構圖和模糊、聲音和音樂"
+      },
+      "thumbnail": {
+        "title": "縮圖",
+        "text": "用影片中的最佳瞬間製作縮圖"
+      },
+      "export": {
+        "title": "匯出",
+        "text": "將影片儲存為 MP4。一切都在你的裝置上完成，不上傳任何內容"
+      }
+    }
+  }
+}

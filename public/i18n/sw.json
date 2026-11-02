@@ -1,0 +1,895 @@
+{
+  "common": {
+    "videoFiles": "Faili za video",
+    "audioFiles": "Faili za sauti",
+    "cancel": "Ghairi",
+    "close": "Funga",
+    "retry": "Jaribu tena",
+    "none": "Hakuna",
+    "remove": "Ondoa"
+  },
+  "nav": {
+    "features": "Vipengele",
+    "privacy": "Faragha",
+    "faq": "Maswali",
+    "changelog": "Mabadiliko",
+    "language": "Lugha",
+    "searchLanguage": "Tafuta lugha",
+    "noLanguage": "Hakuna lugha iliyopatikana",
+    "install": "Sakinisha programu",
+    "open": "Fungua kihariri",
+    "menu": "Fungua menyu",
+    "close": "Funga menyu",
+    "thumbnail": "Picha za jalada"
+  },
+  "theme": {
+    "system": "Mfumo",
+    "light": "Mwanga",
+    "dark": "Giza",
+    "label": "Mandhari"
+  },
+  "footer": {
+    "tagline": "Kihariri video cha bure na cha chanzo huria kinachofanya kazi kikamilifu ndani ya kivinjari chako. Faili zako haziondoki kamwe kwenye kompyuta yako",
+    "issues": "Ripoti tatizo",
+    "noTracking": "Hakuna vidakuzi, hakuna ufuatiliaji",
+    "product": "Bidhaa",
+    "legal": "Kisheria"
+  },
+  "pwa": {
+    "update": "Toleo jipya linapatikana",
+    "reload": "Pakia upya"
+  },
+  "landing": {
+    "hero": {
+      "badgeLocal": "100% ndani ya kifaa, bila kupakia",
+      "badgeOpen": "Bure na chanzo huria",
+      "title1": "Hariri video zako",
+      "title2": "Hakuna kinachoondoka kwenye kompyuta yako",
+      "lead": "LocalCutVideo hukata ukimya, hugeuza usemi kuwa maandishi kwa Whisper, huongeza manukuu ya karaoke na hupanga upya 16:9 kuwa 9:16, yote ndani ya kivinjari chako. Hakuna kupakia, hakuna akaunti, hakuna seva",
+      "cta": "Fungua kihariri",
+      "github": "Tazama kwenye GitHub",
+      "hint": "Bora zaidi kwenye Chrome au Edge kwenye kompyuta",
+      "demo": "Jaribu kwa video ya mfano"
+    },
+    "mock": {
+      "w1": "Basi leo",
+      "filler": "aah,",
+      "w2": "nitawaonyesha",
+      "w3": "jinsi inavyofanya kazi",
+      "line2": "Kila kitu kinafanya kazi kwenye kompyuta yako, hata AI",
+      "line3": "Futa neno moja, video inakatwa",
+      "cap1": "Inabaki kwenye",
+      "cap2": "kompyuta yako"
+    },
+    "stats": {
+      "upload": "baiti zilizopakiwa",
+      "local": "huchakatwa kwenye kifaa chako",
+      "languages": "lugha za kiolesura",
+      "gpu": "AI na usimbaji vilivyoharakishwa"
+    },
+    "how": {
+      "eyebrow": "Jinsi inavyofanya kazi",
+      "title": "Kutoka picha ghafi hadi video tayari kuchapishwa, kwa hatua tatu",
+      "open": {
+        "title": "Fungua video",
+        "text": "Chagua faili kwenye diski yako. Inasomwa pale ilipo: hainakiliwi, haipakiwi, hata ikiwa na gigabaiti kadhaa"
+      },
+      "edit": {
+        "title": "Acha kihariri kifanye kazi",
+        "text": "Ukimya hugunduliwa, usemi huandikwa neno kwa neno na nyuso hufuatiliwa, yote ndani ya kifaa. Rekebisha chochote kwa kuhariri maandishi"
+      },
+      "export": {
+        "title": "Hamisha MP4",
+        "text": "Chagua 16:9, 9:16 au 1:1. Kadi yako ya michoro husimba video na kuiandika moja kwa moja kwenye diski yako"
+      }
+    },
+    "features": {
+      "eyebrow": "Vipengele",
+      "title": "Kila unachohitaji kwa video za kuzungumza mbele ya kamera",
+      "lead": "Imetengenezwa kwa watayarishi wa YouTube, TikTok, Reels na Shorts ambao hawataki kupakia picha zao ghafi popote",
+      "silences": {
+        "title": "Kukata ukimya kiotomatiki",
+        "text": "Vituo hugunduliwa kwa kiwango cha sauti na kuondolewa, kwa kizingiti, muda wa chini na nafasi ya kupumua unavyoweza kurekebisha"
+      },
+      "textEdit": {
+        "title": "Hariri kwa maandishi",
+        "text": "Whisper huweka muda kwa kila neno. Futa maneno kwenye nakala ya maandishi na sehemu inayolingana ya video inakatwa"
+      },
+      "captions": {
+        "title": "Manukuu ya karaoke",
+        "text": "Manukuu yanayosonga neno kwa neno yamechomwa ndani ya video, kwa mtindo wa karaoke, rahisi au ndani ya kisanduku, kwa rangi ya kuangazia unayoipenda"
+      },
+      "framing": {
+        "title": "Upangaji wa fremu kiotomatiki 16:9 → 9:16",
+        "text": "Ufuatiliaji wa uso humweka mzungumzaji ndani ya fremu unapogeuza video ya mlalo kuwa wima"
+      },
+      "zoom": {
+        "title": "Kukuza kwa akili",
+        "text": "Kukuza kwa kubadilishana kwenye kila kata hufanya miruko ionekane imekusudiwa na huwafanya watazamaji waendelee kutazama"
+      },
+      "ducking": {
+        "title": "Sauti na muziki",
+        "text": "Ongeza sauti, sawazisha klipu na ongeza muziki wa usuli unaopungua wenyewe mtu anapozungumza"
+      },
+      "recovery": {
+        "title": "Kurejesha baada ya hitilafu",
+        "text": "Kila badiliko huhifadhiwa papo hapo kwenye kivinjari chako. Fungua kichupo tena na uendelee pale ulipoachia"
+      },
+      "offline": {
+        "title": "Hufanya kazi bila mtandao",
+        "text": "Isakinishe kama programu. Mara modeli ya AI ikishapakuliwa, kihariri kizima hufanya kazi bila intaneti"
+      },
+      "export": {
+        "title": "Uhamishaji wa haraka kwa maunzi",
+        "text": "Usimbaji hutumia WebCodecs, kisimbaji video kilichojengwa ndani ya kivinjari na kadi yako ya michoro, badala ya usimbaji wa polepole wa programu"
+      },
+      "clips": {
+        "title": "Kuunganisha klipu nyingi",
+        "text": "Dondosha picha kadhaa kwa pamoja: zinaunganishwa kuwa video moja, kwa mpangilio unaouchagua, zikiwa na mstari mmoja wa muda na nakala moja ya maandishi"
+      },
+      "inputs": {
+        "title": "MP4, MOV, WebM, MKV",
+        "text": "Hufungua faili kutoka kwa simu na kamera yako, ikiwemo video za HEVC za iPhone ikiwa kivinjari chako kinaweza kuzisimbua"
+      },
+      "languages": {
+        "title": "Lugha nyingi",
+        "text": "Kiolesura kinapatikana kwa lugha {{ count }} na Whisper huandika makumi ya nyingine, na hugundua lugha kiotomatiki"
+      }
+    },
+    "privacy": {
+      "eyebrow": "Faragha",
+      "title": "Hakuna kupakia, tangu mwanzo wa muundo",
+      "lead": "Video yako inasomwa moja kwa moja kutoka kwenye diski. Uchambuzi wa sauti, uandishi, ufuatiliaji wa uso na usimbaji vyote hufanyika kwenye nyuzi za usuli (Web Workers) kwenye kompyuta yako. Hakuna kabisa seva ya kutuma picha zako",
+      "upload": "Hakuna kupakia kamwe: faili haiondoki kwenye kompyuta yako",
+      "account": "Hakuna akaunti, hakuna vidakuzi, hakuna takwimu",
+      "csp": "Content-Security-Policy kali huruhusu ukurasa kuwasiliana na tovuti hii pekee, ambayo pia hutoa modeli za AI (Hugging Face ni akiba tu)",
+      "storage": "Miradi huhifadhiwa kwenye hifadhidata ya ndani ya kivinjari chako (IndexedDB) na inaweza kufutwa wakati wowote",
+      "diagram": {
+        "machine": "Kompyuta yako",
+        "file": "Faili ya video",
+        "browser": "Kivinjari chako",
+        "upload": "Kupakia kwenye seva",
+        "model": "Kupakua modeli ya AI (mara moja, huhifadhiwa)"
+      }
+    },
+    "support": {
+      "eyebrow": "Uoanifu",
+      "title": "Usaidizi wa vivinjari",
+      "ok": "Kamili",
+      "partial": "Sehemu",
+      "full": "Kila kitu, ikiwemo kurejesha baada ya hitilafu na kuandika uhamishaji moja kwa moja kwenye diski",
+      "firefox": "Kuhariri na kuhamisha hufanya kazi. Baada ya kufunga kichupo, unahitaji kuchagua video tena",
+      "safari": "Matoleo mapya tu. Chagua video tena baada ya kupakia upya; uhamishaji hupakuliwa",
+      "mobile": "Simu na kompyuta kibao",
+      "mobileText": "Hufanya kazi kwa klipu fupi, lakini mipaka ya kumbukumbu hufanya video ndefu zisiaminike"
+    },
+    "faq": {
+      "title": "Maswali yanayoulizwa mara kwa mara",
+      "free": {
+        "q": "Je, ni bure kweli? Kuna mtego gani?",
+        "a": "Ni bure na chanzo huria. Kwa kuwa kazi yote hufanyika kwenye kompyuta yako, hakuna gharama za seva, kwa hiyo hakuna cha kukuuzia wala data ya kukusanya"
+      },
+      "formats": {
+        "q": "Ninaweza kufungua miundo gani ya video?",
+        "a": "MP4, MOV, WebM na MKV, mradi kivinjari chako kinaweza kusimbua kodeki (H.264, HEVC, VP9, AV1 kulingana na kivinjari na mfumo). Uhamishaji ni faili ya MP4"
+      },
+      "browsers": {
+        "q": "Kwa nini Chrome au Edge?",
+        "a": "Vinaunga mkono File System Access API, inayoruhusu kihariri kufungua tena video yako baada ya kupakia upya na kuandika uhamishaji moja kwa moja kwenye diski. Vivinjari vingine pia hufanya kazi, kwa mibofyo michache ya ziada"
+      },
+      "size": {
+        "q": "Je, kuna kikomo cha ukubwa wa faili?",
+        "a": "Hakuna kikomo cha kupakia kwa sababu hakuna kinachopakiwa. Video husomwa kutoka kwenye diski kipande kwa kipande; kikomo halisi ni kumbukumbu ya kompyuta yako na subira yako kwa video ndefu sana"
+      },
+      "offline": {
+        "q": "Je, inafanya kazi bila intaneti?",
+        "a": "Ndiyo, mara ikishapakiwa. Isakinishe kama programu (PWA) na uandike mara moja ukiwa mtandaoni: modeli ya Whisper huhifadhiwa na kila kitu kitafanya kazi bila mtandao"
+      },
+      "ai": {
+        "q": "AI inafanya kazi wapi?",
+        "a": "Ndani ya kivinjari chako. Whisper hufanya kazi kwa Transformers.js kwenye kadi yako ya michoro (WebGPU) au kichakataji (WebAssembly), na ugunduzi wa uso hutumia MediaPipe. Modeli hupakuliwa mara moja, sauti yako haitumwi kamwe"
+      }
+    },
+    "final": {
+      "title": "Video yako ijayo, imehaririwa kwa dakika chache",
+      "text": "Hakuna usajili, hakuna kupakia, hakuna alama ya maji. Fungua faili na uanze kuhariri"
+    },
+    "thumbnail": {
+      "eyebrow": "Mpya · Picha za jalada",
+      "title": "Na picha ya jalada inayoendana nayo",
+      "text": "Kitengeneza picha za jalada hutafuta matukio makali zaidi ya video yako. Ongeza kichwa kikubwa chenye maneno ya rangi na ukipakue kwa ukubwa sahihi",
+      "points": {
+        "moments": "Matukio bora yanayopendekezwa",
+        "title": "Kichwa chenye maneno yaliyoangaziwa, mitindo 4",
+        "formats": "YouTube 1280×720, Shorts na mraba",
+        "local": "Hutengenezwa kwenye kifaa chako, bila kupakia chochote"
+      },
+      "cta": "Tengeneza picha ya jalada",
+      "mockTitle": "Vlog yangu",
+      "mockAccent": "ya kwanza"
+    }
+  },
+  "changelog": {
+    "eyebrow": "Matoleo",
+    "title": "Mabadiliko",
+    "lead": "Matoleo yote ya LocalCutVideo, la karibuni zaidi kwanza",
+    "current": "Unatumia",
+    "github": "Tazama kwenye GitHub",
+    "releases": "Matoleo kwenye GitHub",
+    "latest": "La karibuni",
+    "error": "Imeshindwa kupakia orodha ya mabadiliko"
+  },
+  "projects": {
+    "title": "Miradi yako",
+    "lead": "Miradi huhifadhiwa kiotomatiki kwenye kivinjari hiki. Video zako hubaki pale zilipo kwenye diski",
+    "resume": "Endelea pale ulipoachia",
+    "reading": "Inasoma video…",
+    "drop": "Dondosha video zako hapa",
+    "or": "au",
+    "open": "Fungua video",
+    "private": "Faili husomwa ndani ya kifaa, hakuna kinachopakiwa",
+    "noFsAccess": "Kivinjari chako hakiwezi kukumbuka faili kati ya vipindi: baada ya kufunga kichupo, unahitaji kuchagua video tena. Chrome au Edge huepuka hili",
+    "recent": "Miradi ya hivi karibuni",
+    "empty": "Bado hakuna mradi. Fungua video ili uanze",
+    "delete": "Futa mradi",
+    "confirmDelete": "Ufute mradi “{{ name }}”? Faili ya video kwenye diski yako haitaguswa",
+    "multi": "Faili kadhaa? Zitaunganishwa kuwa video moja, kwa mpangilio wa majina",
+    "importFile": "Fungua faili ya mradi (.lcv.json)",
+    "saveFile": "Hifadhi mradi kama faili",
+    "imported": "Mradi umefunguliwa: chagua video zake ili uendelee"
+  },
+  "errors": {
+    "notVideo": "Faili hii haionekani kuwa video",
+    "codec": "Kivinjari chako hakiwezi kusimbua kodeki ya video hii (HEVC/H.265 inahitaji Chrome, au kiendelezi cha HEVC kwenye Edge). Jaribu kuibadilisha kuwa MP4 ya H.264",
+    "noVideo": "Hakuna wimbo wa video uliopatikana kwenye faili hii",
+    "generic": "Hitilafu imetokea wakati wa kusoma faili hii",
+    "transcribe": "Uandishi umeshindwa. Jaribu modeli ndogo zaidi au angalia muunganisho wako kwa upakuaji wa kwanza",
+    "export": "Uhamishaji umeshindwa",
+    "faces": "Ufuatiliaji wa uso umeshindwa kwenye video hii",
+    "skipped": "Zimerukwa (hazisomeki): {{ names }}",
+    "skippedCodec": "Zimerukwa, kodeki haitumiki kwenye kivinjari hiki: {{ names }}. Jaribu Chrome, au badilisha kuwa MP4 ya H.264",
+    "notProject": "Faili hii si mradi wa LocalCutVideo",
+    "demo": "Imeshindwa kupakia video ya mfano"
+  },
+  "languages": {
+    "en": "Kiingereza",
+    "fr": "Kifaransa",
+    "es": "Kihispania",
+    "it": "Kiitaliano",
+    "de": "Kijerumani",
+    "pt": "Kireno",
+    "nl": "Kiholanzi"
+  },
+  "editor": {
+    "back": "Rudi kwenye miradi",
+    "name": "Jina la mradi",
+    "undo": "Tendua",
+    "redo": "Rudia",
+    "missing": "Mradi huu haupo tena",
+    "save": {
+      "saving": "Inahifadhi…",
+      "saved": "Imehifadhiwa ndani ya kifaa",
+      "error": "Haijahifadhiwa"
+    },
+    "reconnect": {
+      "loading": "Inafungua video…",
+      "title": "Unganisha tena video zako",
+      "allow": "Ruhusu ufikiaji wa zote",
+      "select": "Chagua",
+      "mismatch": "Hii haionekani kuwa faili asili (“{{ name }}”). Uitumie hata hivyo?",
+      "intro": "Mradi uko salama. Kwa ajili ya faragha yako, kivinjari huomba ruhusa tena kabla kihariri hakijasoma faili zako",
+      "allowOne": "Ruhusu",
+      "privacy": "Video zako husomwa pale zilipo kwenye diski, hazinakiliwi wala kupakiwa kamwe",
+      "status": {
+        "ready": "Imeunganishwa",
+        "permission": "Inasubiri ruhusa yako",
+        "moved": "Haipatikani: imehamishwa au imebadilishwa jina?",
+        "missing": "Chagua tena (kivinjari chako hakikumbuki ufikiaji wa faili)",
+        "loading": "Inafungua…"
+      }
+    },
+    "preview": {
+      "cut": "Kata",
+      "back": "Rudi nyuma sekunde 5",
+      "play": "Cheza",
+      "pause": "Sitisha",
+      "savedHint": "Muda ulioondolewa na makato",
+      "badge": "Onyesho jepesi · {{ q }}p",
+      "quality": "Ubora wa onyesho",
+      "qualityHint": "Onyesho jepesi zaidi huweka kihariri kiende vizuri. Uhamishaji hutumia ubora kamili kila wakati"
+    },
+    "timeline": {
+      "title": "Mstari wa muda",
+      "silence": "Ukimya",
+      "manual": "Kwa mkono",
+      "text": "Maandishi",
+      "hint": "Buruta kwenye wimbi la sauti ili kuchagua sehemu, kisha Kata au Kasi · bofya kato ili kurekebisha kingo zake · bofya mara mbili kuliondoa",
+      "removeCut": "Ondoa kato",
+      "zoom": "Kukuza mstari wa muda",
+      "analyzing": "Inachambua sauti…",
+      "zoomIn": "Kuza",
+      "zoomOut": "Punguza",
+      "fit": "Tosheleza",
+      "fitHint": "Onyesha video nzima (kidokezo: Ctrl + gurudumu ili kukuza)",
+      "manualCut": "Kukata kwa mkono",
+      "markIn": "Mwanzo",
+      "markOut": "Mwisho",
+      "markInHint": "Mwanzo wa sehemu ya kukata, kwenye kichwa cha kucheza (I)",
+      "markOutHint": "Mwisho wa sehemu ya kukata, kwenye kichwa cha kucheza (O)",
+      "cutMarked": "Kata",
+      "cutHint": "Ondoa sehemu kati ya mwanzo na mwisho (X)",
+      "clearMarks": "Futa mwanzo na mwisho",
+      "marksMissing": "Weka kwanza mwanzo (I) na mwisho (O)",
+      "analysisError": "Imeshindwa kuchambua sauti",
+      "selectedCut": "Kato lililochaguliwa",
+      "earlier": "Mapema zaidi",
+      "later": "Baadaye",
+      "listen": "Sikiliza kato",
+      "speed": "Kasi",
+      "speedHint": "Harakisha au punguza kasi ya sehemu kati ya mwanzo na mwisho",
+      "selectedSpeed": "Badiliko la kasi",
+      "removeSpeed": "Rudisha kasi ya kawaida",
+      "listenSpeed": "Cheza badiliko la kasi",
+      "selectFirst": "Chagua sehemu kwanza: buruta kwenye wimbi la sauti, au weka Mwanzo na Mwisho"
+    },
+    "transcript": {
+      "title": "Nakala ya maandishi",
+      "words": "maneno {{ count }}",
+      "fillers": "Ondoa maneno ya kujaza ({{ count }})",
+      "restore": "Rejesha yote",
+      "selected": "{{ count }} yamechaguliwa",
+      "cut": "Kata / rejesha",
+      "tip": "Bofya neno ili kwenda hapo. Buruta au bofya kwa Shift ili kuchagua, kisha Delete ili kukata au Sahihisha (Enter) ili kurekebisha kile Whisper ilichosikia vibaya",
+      "emptyTitle": "Bado hakuna nakala ya maandishi",
+      "emptyText": "Andika video ili uihariri kwa maandishi na upate manukuu neno kwa neno",
+      "correct": "Sahihisha",
+      "correctTitle": "Nini kilisemwa hasa?",
+      "correctHint": "Andika upya neno moja au sentensi nzima. Muda na manukuu hurekebishwa yenyewe",
+      "apply": "Tumia"
+    },
+    "transcribe": {
+      "title": "Uandishi (Whisper)",
+      "hint": "Hufanya kazi kwenye kifaa chako. Modeli hupakuliwa mara moja, kisha huhifadhiwa",
+      "model": "Modeli",
+      "models": {
+        "tiny": "Haraka",
+        "base": "Sawia",
+        "small": "Sahihi"
+      },
+      "download": "Upakuaji wa mara moja wa {{ size }}",
+      "language": "Lugha inayozungumzwa",
+      "auto": "Gundua kiotomatiki",
+      "run": "Andika",
+      "rerun": "Andika upya yote",
+      "done": "Maneno {{ count }} yameandikwa",
+      "empty": "Hakuna usemi uliopatikana kwenye video hii",
+      "stage": {
+        "audio": "Inatoa sauti…",
+        "download": "Inapakua modeli…",
+        "transcribe": "Inaandika…"
+      },
+      "missing": "Andika klipu mpya ({{ count }})",
+      "rerunHint": "Huanza upya kwa modeli na lugha zilizo hapo juu",
+      "confirmAll": "Uandike upya yote? Maneno uliyokata au kusahihisha yatapotea",
+      "detected": "Lugha iliyogunduliwa: {{ language }}"
+    },
+    "tabs": {
+      "format": "Muundo",
+      "cuts": "Makato",
+      "captions": "Manukuu",
+      "framing": "Fremu",
+      "audio": "Sauti",
+      "clips": "Klipu",
+      "texts": "Maandishi"
+    },
+    "format": {
+      "title": "Muundo wa matokeo",
+      "hint": "Video hupunguzwa ili itoshee. Tumia Fremu kumfuata mzungumzaji",
+      "landscape": "YouTube",
+      "vertical": "TikTok · Reels",
+      "square": "Mlisho",
+      "source": "Chanzo:",
+      "resolution": "Ubora wa picha",
+      "fps": "Fremu kwa sekunde",
+      "exportNote": "Ubora wa picha na kasi ya fremu huchaguliwa wakati wa kuhamisha",
+      "rotation": "Mzunguko",
+      "rotateLeft": "Zungusha kushoto",
+      "rotateRight": "Zungusha kulia",
+      "rotationHint": "Kwa video iliyorekodiwa kwa ubavu. Inatumika kwa klipu zote",
+      "rotatedFaces": "Video imezungushwa: washa tena “Fuata uso” kwenye Fremu"
+    },
+    "cuts": {
+      "title": "Kugundua ukimya",
+      "hint": "Huondoa vituo. Punguza kizingiti ikiwa maneno yanakatwa",
+      "threshold": "Kizingiti",
+      "suggested": "Inapendekezwa kwa rekodi hii: {{ value }} dB",
+      "minSilence": "Ukimya wa chini kabisa",
+      "padding": "Nafasi ya kupumua",
+      "detect": "Gundua na ukate ukimya",
+      "detected": "Ukimya {{ count }} umekatwa",
+      "count": "makato",
+      "removed": "imeondolewa",
+      "final": "urefu wa mwisho",
+      "clear": "Ondoa makato yote",
+      "mode": "Tafuta vituo kwa",
+      "modes": {
+        "audio": "Kiwango cha sauti",
+        "transcript": "Nakala ya maandishi"
+      },
+      "modeHint": "Hali ya nakala ya maandishi hubaki sahihi hata kukiwa na kelele au muziki wa usuli",
+      "modeNeedsTranscript": "Andika video ili kupata vituo kutoka kwa maneno: ni sahihi zaidi mahali penye kelele",
+      "preset": "Mwendo",
+      "presets": {
+        "gentle": "Asilia",
+        "normal": "Sawia",
+        "tight": "Wa kasi"
+      },
+      "live": "Makato husasishwa papo hapo unapobadilisha mipangilio",
+      "silentClips": "Klipu {{ count }} bila sauti ya mtu: huko ni muda mtupu halisi tu unaokatwa"
+    },
+    "captions": {
+      "title": "Manukuu yaliyochomwa",
+      "style": "Mtindo",
+      "styles": {
+        "karaoke": "Karaoke",
+        "clean": "Rahisi",
+        "boxed": "Kisanduku"
+      },
+      "position": "Mahali",
+      "positions": {
+        "top": "Juu",
+        "center": "Katikati",
+        "bottom": "Chini"
+      },
+      "size": "Ukubwa",
+      "words": "Maneno kwa kila nukuu",
+      "uppercase": "Herufi kubwa",
+      "highlight": "Rangi ya kuangazia"
+    },
+    "framing": {
+      "title": "Upangaji wa fremu kiotomatiki",
+      "hint": "Hufuatilia nyuso ili kumweka mzungumzaji ndani ya fremu, bora kwa 16:9 → 9:16",
+      "center": "Katikati",
+      "face": "Fuata uso",
+      "analyzing": "Inafuatilia nyuso…",
+      "analyze": "Fuatilia nyuso",
+      "reanalyze": "Fuatilia nyuso upya",
+      "tracked": "Nafasi {{ count }} zimefuatiliwa",
+      "found": "Uso umefuatiliwa: fremu inamfuata mzungumzaji",
+      "notFound": "Hakuna uso uliogunduliwa kwa uthabiti kwenye video hii",
+      "punch": "Kukuza kwa akili",
+      "punchHint": "Hubadilishana kukuza kidogo kwenye kila kato, au kwenye kila sentensi kama hakuna makato, ili video ibaki hai",
+      "zoom": "Nguvu ya kukuza",
+      "firstTime": "Ukichagua “Fuata uso”, video huchambuliwa mara moja, ndani ya kifaa",
+      "beatsCuts": "Kukuza hubadilika mara {{ count }}, kwenye makato yako",
+      "beatsAuto": "Bado hakuna makato: kukuza hubadilika mara {{ count }}, kwenye sentensi au kila sekunde 4"
+    },
+    "audio": {
+      "title": "Muziki wa usuli",
+      "hint": "Muziki hupungua wenyewe wakati mtu anazungumza (auto-ducking)",
+      "reconnect": "Unganisha tena “{{ name }}”",
+      "pick": "Chagua faili ya muziki",
+      "enabled": "Jumuisha kwenye video",
+      "volume": "Sauti ya muziki",
+      "ducking": "Kupungua wakati wa kuzungumza",
+      "duckingHint": "Kiasi muziki unavyopungua mtu anapozungumza"
+    },
+    "export": {
+      "button": "Hamisha",
+      "title": "Hamisha video",
+      "running": "Inahamisha…",
+      "eta": "Takriban {{ time }} zimebaki",
+      "keepOpen": "Acha kichupo hiki wazi. Usimbaji hutumia kadi yako ya michoro inapowezekana",
+      "done": "Uhamishaji umekamilika",
+      "saved": "“{{ name }}” imehifadhiwa kwenye diski yako kwa sekunde {{ seconds }}",
+      "downloaded": "“{{ name }}” imepakuliwa kwa sekunde {{ seconds }}",
+      "duration": "Muda",
+      "from": "kutoka {{ time }}",
+      "streamHint": "Wewe unachagua mahali pa kuhifadhi MP4. Inaandikwa moja kwa moja kwenye diski",
+      "downloadHint": "MP4 hutengenezwa ndani ya kifaa, kisha hupakuliwa",
+      "start": "Hamisha MP4",
+      "saveProject": "Hifadhi mradi",
+      "saveProjectHint": "Faili ya .lcv.json yenye uhariri wako (video haimo ndani), ili kuendelea kwenye kompyuta nyingine",
+      "projectSaved": "Mradi umehifadhiwa kama faili ya .lcv.json"
+    },
+    "clips": {
+      "title": "Klipu",
+      "hint": "Video hucheza moja baada ya nyingine kwa mpangilio huu. Buruta ili kupanga upya: makato na maneno hufuata klipu yao",
+      "jump": "Nenda kwenye klipu hii",
+      "up": "Sogeza juu",
+      "down": "Sogeza chini",
+      "remove": "Ondoa klipu",
+      "add": "Ongeza video",
+      "summary": "Klipu {{ count }} · jumla {{ time }}",
+      "confirmRemove": "Uondoe “{{ name }}” kwenye mradi? Makato na maneno yake pia yataondolewa (Ctrl+Z ili kutendua)",
+      "added": "Klipu {{ count }} zimeongezwa",
+      "addedTranscribe": "Klipu {{ count }} zimeongezwa. Andika tena ili kuziwekea manukuu: klipu zilizokwisha andikwa zinabaki",
+      "noVoice": "bila sauti ya mtu",
+      "voiceOn": "Ina sauti ya mtu · bofya ikiwa hakuna anayezungumza",
+      "voiceOff": "Haina sauti ya mtu · bofya ikiwa mtu anazungumza"
+    },
+    "auto": {
+      "button": "Uhariri otomatiki",
+      "cta": "Hariri video kiotomatiki",
+      "transcribeOnly": "au andika tu",
+      "heading": "Acha LocalCutVideo ihariri video yako",
+      "lead": "Kwa mbofyo mmoja: ukimya na kusita vinaondolewa, manukuu yanaongezwa, fremu inamfuata mzungumzaji na kukuza kwa akili. Unaweza kubadilisha kila kitu baadaye",
+      "target": "Utaichapisha wapi?",
+      "options": {
+        "silences": "Kata ukimya",
+        "fillers": "Ondoa kusita (aah, eeh…)",
+        "captions": "Manukuu ya karaoke",
+        "framing": "Fuata uso",
+        "framingNoCrop": "Haihitajiki: muundo huu unaonyesha picha nzima",
+        "zoom": "Kukuza kwa akili"
+      },
+      "local": "Kila kitu hufanyika kwenye kifaa chako. Video haipakiwi kamwe",
+      "start": "Anza uhariri otomatiki",
+      "running": "Inahariri video yako…",
+      "done": "Video yako imehaririwa!",
+      "view": "Tazama matokeo",
+      "undo": "Tendua uhariri otomatiki",
+      "undone": "Mradi umerudishwa kama ulivyokuwa kabla ya uhariri otomatiki",
+      "summary": {
+        "cuts": "makato",
+        "removed": "imeondolewa",
+        "words": "maneno yenye manukuu",
+        "silent": "Klipu {{ count }} bila sauti ya mtu: muda mtupu halisi tu umekatwa"
+      },
+      "steps": {
+        "analyze": "Inachambua sauti",
+        "transcribe": "Inaandika usemi",
+        "fillers": "Inaondoa kusita",
+        "silences": "Inakata ukimya",
+        "framing": "Inafuata uso",
+        "style": "Manukuu na kukuza kwa akili",
+        "voice": "Inagundua sauti za watu"
+      },
+      "status": {
+        "skipped": "imerukwa",
+        "error": "imeshindwa"
+      },
+      "voice": {
+        "title": "Je, kuna mtu anayezungumza kwenye video?",
+        "auto": "Otomatiki",
+        "yes": "Ndiyo",
+        "no": "Hapana",
+        "detectedYes": "Imegunduliwa: mtu anazungumza",
+        "detectedNo": "Imegunduliwa: hakuna sauti ya mtu",
+        "hint": "Bila sauti ya mtu: hakuna nakala ya maandishi wala manukuu, muda mtupu halisi tu ndio unaokatwa"
+      }
+    },
+    "mix": {
+      "title": "Sauti ya video",
+      "hint": "Ongeza au punguza sauti ya klipu zako",
+      "volume": "Kiwango cha sauti",
+      "mute": "Nyamazisha",
+      "unmute": "Rejesha sauti",
+      "volumeHint": "Inatumika kwenye onyesho na uhamishaji",
+      "boostHint": "Zaidi ya 100 %, kidhibiti huzuia sauti isikwaruze",
+      "normalize": "Sawazisha klipu",
+      "normalizeHint": "Kiwango sawa cha sauti kwa kila klipu, iwe ilirekodiwa karibu au mbali",
+      "denoise": "Punguza kelele za usuli",
+      "denoiseHint": "Sauti iliyo wazi zaidi (upepo, mzomeo, feni). Inatumika wakati wa kuhamisha, kwenye klipu zenye sauti ya mtu. Sikiliza kwanza",
+      "listen": "Sikiliza sekunde 8 za matokeo",
+      "stopListening": "Acha kusikiliza",
+      "preparing": "Inaandaa…"
+    },
+    "thumbnail": "Picha ya jalada",
+    "transition": {
+      "title": "Mpito kwenye makato",
+      "none": "Kato la moja kwa moja",
+      "dip": "Kufifia haraka",
+      "black": "Kufifia hadi weusi",
+      "hint": "Hucheza kwenye kila kato na kila mabadiliko ya klipu (na mwanzoni na mwishoni kwa kufifia hadi weusi). Huonekana wakati wa kucheza"
+    },
+    "texts": {
+      "title": "Maandishi juu ya video",
+      "hint": "Vichwa na maelezo yanayoonyeshwa kwenye kichwa cha kucheza. Weka maneno kati ya nyota ili kuyapa rangi",
+      "add": "Ongeza maandishi kwenye kichwa cha kucheza",
+      "default": "*Maandishi* yako",
+      "timing": "Huonyeshwa",
+      "startHere": "Anza hapa",
+      "endHere": "Maliza hapa",
+      "remove": "Ondoa maandishi haya"
+    },
+    "background": {
+      "title": "Usuli",
+      "hint": "Hutia ukungu usuli nyuma ya mtu, ambaye hubaki wazi. Huhesabiwa kwenye kifaa chako",
+      "none": "Wazi",
+      "blur": "Ukungu",
+      "strength": "Nguvu ya ukungu",
+      "error": "Imeshindwa kuanzisha ukungu wa usuli kwenye kifaa hiki"
+    }
+  },
+  "legal": {
+    "updated": "Ilisasishwa mwisho: 1 Novemba 2026",
+    "contact": "Wasiliana",
+    "nav": {
+      "notice": "Taarifa ya kisheria",
+      "privacy": "Faragha",
+      "terms": "Masharti ya matumizi"
+    },
+    "notice": {
+      "title": "Taarifa ya kisheria",
+      "intro": "Taarifa zinazohitajika na sheria ya Ufaransa (Kifungu cha 6 cha LCEN, sheria Na. 2004-575 ya 21 Juni 2004) kuhusu mchapishaji na mwenyeji wa tovuti hii.",
+      "sections": [
+        {
+          "title": "Mchapishaji",
+          "body": [
+            "Tovuti localcutvideo.mbonnici.fr (“LocalCutVideo”) inachapishwa na Maxence Bonnici, mtu binafsi, bila madhumuni ya kibiashara.",
+            "Mkurugenzi wa uchapishaji: Maxence Bonnici.",
+            "Mawasiliano: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Upangishaji",
+          "body": [
+            "Tovuti inapangishwa na mchapishaji wake mwenyewe, Maxence Bonnici, kwenye seva binafsi, na inasambazwa kwa jukwaa la Coolify.",
+            "Mawasiliano: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Haki miliki",
+          "body": [
+            "Msimbo chanzo wa LocalCutVideo ni chanzo huria na umechapishwa chini ya leseni ya MIT kwenye [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
+            "Vipengele vya wahusika wengine, modeli za AI na fonti zinazotumiwa na programu zinabaki mali ya waandishi wao na zinatumika chini ya leseni zao, zilizoorodheshwa kwenye [masharti ya matumizi](/terms). Chapa zilizotajwa (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) ni mali ya wamiliki wao."
+          ]
+        },
+        {
+          "title": "Dhima",
+          "body": [
+            "Mchapishaji hujitahidi kuweka tovuti ipatikane na taarifa zake ziwe sahihi, lakini hawezi kuhakikisha yoyote kati ya hayo. Matumizi ya programu yanatawaliwa na [masharti ya matumizi](/terms)."
+          ]
+        },
+        {
+          "title": "Data binafsi",
+          "body": [
+            "LocalCutVideo haikusanyi data yoyote binafsi: video huchakatwa kwenye kifaa chako pekee. Maelezo yako kwenye [sera ya faragha](/privacy)."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Sera ya faragha",
+      "intro": "LocalCutVideo imeundwa ili video zako zisiondoke kamwe kwenye kifaa chako. Ukurasa huu unaeleza kwa lugha rahisi kinachochakatwa, na wapi.",
+      "sections": [
+        {
+          "title": "Kwa ufupi",
+          "body": [
+            "Hakuna kupakia: video, sauti na nakala zako za maandishi huchakatwa ndani ya kivinjari chako, na hazitumwi kamwe kwa mchapishaji wala kwa mtu yeyote.",
+            "Hakuna akaunti, hakuna vidakuzi, hakuna takwimu, hakuna matangazo."
+          ]
+        },
+        {
+          "title": "Kinachobaki kwenye kifaa chako",
+          "body": [
+            "Faili za video na sauti unazofungua husomwa moja kwa moja kutoka kwenye diski yako. Uchambuzi, uandishi (Whisper), ufuatiliaji wa uso na uhamishaji huhesabiwa ndani ya kivinjari chako.",
+            "Miradi yako (makato, nakala ya maandishi, mipangilio) huhifadhiwa kwenye hifadhidata ya ndani ya kivinjari chako (IndexedDB), pamoja na picha ndogo na akiba ya uchambuzi. Mchapishaji hana ufikiaji wake. Unaweza kufuta mradi kutoka ukurasa wa miradi, au kufuta kila kitu kwa kufuta data ya tovuti hii kwenye mipangilio ya kivinjari chako."
+          ]
+        },
+        {
+          "title": "Hifadhi ya ndani",
+          "body": [
+            "Programu huhifadhi mapendeleo yako ya kiolesura (lugha, mandhari, mradi uliofunguliwa mwisho) kwenye hifadhi ya ndani ya kivinjari, na huweka faili zake zenyewe na modeli za AI zilizopakuliwa kwenye akiba ya kivinjari ili ifanye kazi bila mtandao. Hizi ni muhimu kabisa kwa huduma, hazitumiki kamwe kukufuatilia, kwa hiyo hakuna bango la idhini linalohitajika."
+          ]
+        },
+        {
+          "title": "Seva",
+          "body": [
+            "Seva hutoa tu faili za programu na haihifadhi kumbukumbu za ufikiaji. Kama seva yoyote ya wavuti, kiufundi hupokea anwani yako ya IP ili kujibu maombi, lakini haiihifadhi."
+          ]
+        },
+        {
+          "title": "Wahusika wengine",
+          "body": [
+            "Hugging Face: modeli ya Whisper hutolewa na tovuti hii, kama sehemu nyingine ya programu. Ikiwa tu haipatikani hapa ndipo inapakuliwa kutoka huggingface.co; wakati huo Hugging Face hupokea anwani yako ya IP na taarifa za kawaida za kivinjari, lakini kamwe si sauti yako. Tazama [sera yao ya faragha](https://huggingface.co/privacy).",
+            "GitHub: ikiwa tu utafuata kiungo cha hazina ya msimbo chanzo.",
+            "Hakuna mhusika mwingine anayewasiliana naye: Content-Security-Policy kali kiufundi huzuia ukurasa kuunganishwa mahali pengine popote."
+          ]
+        },
+        {
+          "title": "Haki zako",
+          "body": [
+            "Chini ya GDPR, una haki ya kufikia, kusahihisha na kufuta data yako, na kupinga uchakataji wake. Kwa kuwa mchapishaji hana data yoyote kukuhusu, kwa kawaida hakuna cha kufikia, lakini unaweza kuuliza swali lolote kupitia maxence.bonnici@outlook.fr. Unaweza pia kuwasilisha malalamiko kwa CNIL ([cnil.fr](https://www.cnil.fr)) au mamlaka ya ulinzi wa data ya nchi yako."
+          ]
+        },
+        {
+          "title": "Mabadiliko",
+          "body": [
+            "Sera hii inaweza kusasishwa kadiri programu inavyobadilika. Tarehe ya sasisho la mwisho iko juu ya ukurasa huu."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Masharti ya matumizi",
+      "intro": "Kwa kutumia LocalCutVideo, unakubali masharti haya. Ni mafupi kwa sababu huduma ni rahisi: zana ya bure inayofanya kazi ndani ya kivinjari chako.",
+      "sections": [
+        {
+          "title": "Huduma",
+          "body": [
+            "LocalCutVideo ni programu ya bure ya kuhariri video inayofanya kazi kikamilifu ndani ya kivinjari chako cha wavuti. Inatolewa bila malipo, bila akaunti, na inaweza kubadilika, kukatizwa au kusimama wakati wowote bila taarifa."
+          ]
+        },
+        {
+          "title": "Maudhui yako",
+          "body": [
+            "Unabaki kuwa mmiliki pekee na mwenye jukumu pekee la video, sauti na muziki unaohariri na kuchapisha. Lazima uwe na haki zinazohitajika (hakimiliki, leseni za muziki, haki za picha za watu waliorekodiwa).",
+            "Programu haipaswi kutumika kwa madhumuni yasiyo halali."
+          ]
+        },
+        {
+          "title": "Vipengele vya kiotomatiki",
+          "body": [
+            "Uandishi, manukuu, ugunduzi wa ukimya na upangaji wa fremu kiotomatiki hutengenezwa kiotomatiki na vinaweza kuwa na makosa. Kagua matokeo kabla ya kuyachapisha."
+          ]
+        },
+        {
+          "title": "Faili na miradi yako",
+          "body": [
+            "Programu haibadilishi kamwe faili zako asili. Miradi huhifadhiwa kwenye kivinjari chako na inaweza kupotea ikiwa data yake itafutwa au ikiwa kivinjari kitaongeza nafasi: hifadhi faili zako asili kila wakati."
+          ]
+        },
+        {
+          "title": "Dhamana na dhima",
+          "body": [
+            "Programu inatolewa “kama ilivyo”, bila dhamana ya aina yoyote, chini ya leseni ya MIT. Kwa kiwango kinachoruhusiwa na sheria, mchapishaji hatawajibika kwa uharibifu wowote unaotokana na kutumia, au kushindwa kutumia, programu (kupoteza data, hitilafu za uhamishaji, kutopatikana…)."
+          ]
+        },
+        {
+          "title": "Chanzo huria na vipengele vya wahusika wengine",
+          "body": [
+            "Msimbo chanzo unapatikana chini ya leseni ya MIT kwenye [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
+            "LocalCutVideo inategemea: Mediabunny (MPL-2.0), Transformers.js na ONNX Runtime (Apache-2.0 na MIT), modeli za Whisper za OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) na fonti za Inter na Montserrat (SIL Open Font License)."
+          ]
+        },
+        {
+          "title": "Sheria inayotumika",
+          "body": [
+            "Masharti haya yanatawaliwa na sheria ya Ufaransa. Maswali: maxence.bonnici@outlook.fr."
+          ]
+        }
+      ]
+    }
+  },
+  "thumbnail": {
+    "eyebrow": "Kitengeneza picha za jalada",
+    "title": "Picha za jalada zinazovutia kubofya",
+    "lead": "Chagua tukio bora la video yako, ongeza kichwa kinachovutia na upakue picha tayari kwa YouTube, Shorts au Instagram. Kila kitu hufanyika kwenye kifaa chako",
+    "pick": "Dondosha video au picha",
+    "pickHint": "MP4, MOV, WebM, JPG, PNG… faili inabaki kwenye kifaa chako",
+    "choose": "Chagua faili",
+    "local": "Hakuna kinachopakiwa: picha hutengenezwa ndani ya kivinjari chako",
+    "permissionTitle": "Ruhusu ufikiaji wa video ya mradi",
+    "permissionText": "Kivinjari chako huomba uthibitisho kabla ya kusoma tena faili kutoka kwenye kifaa chako",
+    "permission": "Ruhusu ufikiaji",
+    "back": "Rudi kwenye kihariri",
+    "dragHint": "Buruta picha ili kuipanga upya",
+    "frame": "Fremu ya video",
+    "prevFrame": "Fremu iliyotangulia",
+    "nextFrame": "Fremu inayofuata",
+    "moments": "Matukio bora",
+    "other": "Chagua faili nyingine",
+    "format": "Muundo",
+    "formats": {
+      "landscape": "YouTube",
+      "vertical": "Shorts · TikTok",
+      "square": "Instagram"
+    },
+    "text": "Kichwa",
+    "textPlaceholder": "Kichwa chako cha kuvutia",
+    "defaultText": "*Kichwa* chako hapa",
+    "accentHint": "Weka maneno kati ya nyota ili kuyapa rangi: *hivi*",
+    "size": "Ukubwa wa maandishi",
+    "position": "Mahali",
+    "positions": {
+      "top": "Juu",
+      "center": "Katikati",
+      "bottom": "Chini"
+    },
+    "alignCenter": "Katikati",
+    "alignLeft": "Kushoto",
+    "uppercase": "Herufi kubwa",
+    "tilt": "Maandishi yaliyoinama",
+    "style": "Mtindo wa kichwa",
+    "styles": {
+      "outline": "Mstari wa nje",
+      "shadow": "Kivuli",
+      "box": "Bango",
+      "highlight": "Kialamisho"
+    },
+    "color": "Rangi ya maandishi",
+    "accent": "Rangi ya neno lililoangaziwa",
+    "image": "Picha",
+    "zoom": "Kukuza",
+    "brightness": "Mwangaza",
+    "contrast": "Utofautishaji",
+    "saturation": "Ukolezi",
+    "shade": "Fifisha kingo",
+    "reset": "Weka upya",
+    "downloadJpg": "Pakua JPG",
+    "downloadPng": "Pakua PNG",
+    "sizeInfo": "{{ width }} × {{ height }} px · JPG ni bora kwa YouTube (chini ya MB 2)",
+    "saved": "Imehifadhiwa: {{ name }}",
+    "loadError": "Imeshindwa kufungua mradi huu",
+    "readError": "Imeshindwa kusoma faili hii"
+  },
+  "seo": {
+    "home": {
+      "title": "LocalCutVideo — Kihariri video cha bure kwenye kivinjari, bila kupakia",
+      "description": "Hariri video zako kwenye kivinjari: ukimya hukatwa kiotomatiki, manukuu ya AI, fremu inayofuata uso kwa TikTok na Shorts, picha za jalada. Bure na chanzo huria, video zako haziondoki kamwe kwenye kompyuta yako"
+    },
+    "thumbnail": {
+      "title": "Kitengeneza picha za jalada za YouTube bure — LocalCutVideo",
+      "description": "Tengeneza picha ya jalada ya YouTube, Shorts au Instagram kutoka kwa video yako: matukio bora yanayopendekezwa, kichwa kikubwa chenye maneno ya rangi, JPG au PNG. Bure, kwenye kivinjari, bila kupakia"
+    },
+    "changelog": {
+      "title": "Mabadiliko — LocalCutVideo",
+      "description": "Kilicho kipya katika LocalCutVideo, toleo kwa toleo"
+    },
+    "legal": {
+      "title": "Taarifa ya kisheria — LocalCutVideo",
+      "description": "Mchapishaji na upangishaji wa LocalCutVideo"
+    },
+    "privacy": {
+      "title": "Sera ya faragha — LocalCutVideo",
+      "description": "LocalCutVideo haipakii chochote: video, nakala za maandishi na miradi yako hubaki kwenye kifaa chako"
+    },
+    "terms": {
+      "title": "Masharti ya matumizi — LocalCutVideo",
+      "description": "Masharti ya matumizi ya LocalCutVideo, kihariri video cha bure na cha chanzo huria"
+    },
+    "app": {
+      "title": "Miradi — LocalCutVideo",
+      "description": "Miradi yako ya video, imehifadhiwa kwenye kivinjari chako"
+    },
+    "editor": {
+      "title": "Kihariri — LocalCutVideo",
+      "description": "Kihariri cha LocalCutVideo"
+    }
+  },
+  "tour": {
+    "label": "Ziara ya mwongozo",
+    "help": "Ziara ya mwongozo",
+    "count": "Hatua {{ n }} kati ya {{ total }}",
+    "skip": "Ruka ziara",
+    "prev": "Nyuma",
+    "next": "Inayofuata",
+    "done": "Twende!",
+    "steps": {
+      "auto": {
+        "title": "Mbofyo mmoja: uhariri otomatiki",
+        "text": "LocalCutVideo inakuhariria video: ukimya na kusita vinaondolewa, manukuu, fremu na kukuza. Unaweza kubadilisha kila kitu baadaye"
+      },
+      "preview": {
+        "title": "Onyesho",
+        "text": "Unachokiona ndicho hasa kitakachohamishwa. Bofya juu yake, au bonyeza Space, ili kucheza au kusitisha"
+      },
+      "timeline": {
+        "title": "Mstari wa muda",
+        "text": "Bofya ili kusogea ndani ya video. Buruta kwenye wimbi la sauti ili kuchagua sehemu"
+      },
+      "cut": {
+        "title": "Kata au badilisha kasi",
+        "text": "Ukichagua sehemu, Kata (X) huiondoa na Kasi huifanya iende haraka au polepole zaidi. Ctrl+Z hutendua chochote"
+      },
+      "transcript": {
+        "title": "Hariri kwa maandishi",
+        "text": "Baada ya kuandikwa, video hukatwa unapofuta neno. Unaweza pia kusahihisha kile AI ilichosikia vibaya"
+      },
+      "settings": {
+        "title": "Mipangilio yote",
+        "text": "Muundo (16:9, 9:16, mraba), makato na mipito, manukuu, maandishi, fremu na ukungu, sauti na muziki"
+      },
+      "thumbnail": {
+        "title": "Picha ya jalada",
+        "text": "Tengeneza picha ya jalada ya video yako kutoka kwa matukio yake bora"
+      },
+      "export": {
+        "title": "Hamisha",
+        "text": "Hifadhi video kama MP4. Kila kitu hufanyika kwenye kifaa chako, bila kupakia chochote"
+      }
+    }
+  }
+}

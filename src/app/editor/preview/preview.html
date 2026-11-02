@@ -1,6 +1,7 @@
-<div class="stage">
+<!-- Same direction as the export (a worker canvas), so the subtitles look the same. -->
+<div class="stage" dir="ltr">
   <canvas #canvas [width]="size().width" [height]="size().height" (click)="store.togglePlay()"></canvas>
-  <span class="preview-badge" [title]="'editor.preview.qualityHint' | transloco">
+  <span class="preview-badge" dir="auto" [title]="'editor.preview.qualityHint' | transloco">
     <app-icon name="zap" [size]="12" /> {{ 'editor.preview.badge' | transloco: { q: store.previewQuality() } }}
   </span>
 </div>
@@ -27,12 +28,12 @@
     <button class="btn primary icon play" type="button" (click)="store.togglePlay()" [attr.aria-label]="(store.playing() ? 'editor.preview.pause' : 'editor.preview.play') | transloco">
       <app-icon [name]="store.playing() ? 'pause' : 'play'" [size]="18" />
     </button>
-    <span class="time">
+    <span class="time" dir="ltr">
       <b>{{ formatTime(outputTime(), true) }}</b>
       <span class="faint">/ {{ formatTime(store.outputDuration(), true) }}</span>
     </span>
     @if (store.duration() - store.outputDuration() > 0.05) {
-      <span class="saved" [title]="'editor.preview.savedHint' | transloco">
+      <span class="saved" dir="ltr" [title]="'editor.preview.savedHint' | transloco">
         <app-icon name="scissors" [size]="13" />
         −{{ formatTime(store.duration() - store.outputDuration()) }}
       </span>

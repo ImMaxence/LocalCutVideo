@@ -1,0 +1,895 @@
+{
+  "common": {
+    "videoFiles": "Videofájlok",
+    "audioFiles": "Hangfájlok",
+    "cancel": "Mégse",
+    "close": "Bezárás",
+    "retry": "Újra",
+    "none": "Nincs",
+    "remove": "Eltávolítás"
+  },
+  "nav": {
+    "features": "Funkciók",
+    "privacy": "Adatvédelem",
+    "faq": "GYIK",
+    "changelog": "Változások",
+    "language": "Nyelv",
+    "searchLanguage": "Nyelv keresése",
+    "noLanguage": "Nincs ilyen nyelv",
+    "install": "Alkalmazás telepítése",
+    "open": "Szerkesztő indítása",
+    "menu": "Menü megnyitása",
+    "close": "Menü bezárása",
+    "thumbnail": "Bélyegképek"
+  },
+  "theme": {
+    "system": "Rendszer",
+    "light": "Világos",
+    "dark": "Sötét",
+    "label": "Téma"
+  },
+  "footer": {
+    "tagline": "Ingyenes, nyílt forráskódú videószerkesztő, amely teljes egészében a böngésződben fut. A fájljaid sosem hagyják el a számítógépedet",
+    "issues": "Hiba bejelentése",
+    "noTracking": "Nincs süti, nincs követés",
+    "product": "Termék",
+    "legal": "Jogi információk"
+  },
+  "pwa": {
+    "update": "Új verzió érhető el",
+    "reload": "Újratöltés"
+  },
+  "landing": {
+    "hero": {
+      "badgeLocal": "100% helyi, nulla feltöltés",
+      "badgeOpen": "Ingyenes és nyílt forráskódú",
+      "title1": "Szerkeszd a videóidat",
+      "title2": "Semmi sem hagyja el a gépedet",
+      "lead": "A LocalCutVideo kivágja a csendet, Whisperrel átírja a beszédet, karaoke-feliratokat éget be, és 16:9-ből 9:16-ra vágja a képet, mindezt a böngésződben. Nincs feltöltés, nincs fiók, nincs szerver",
+      "cta": "Szerkesztő megnyitása",
+      "github": "Megtekintés a GitHubon",
+      "hint": "Számítógépen, Chrome-ban vagy Edge-ben működik a legjobban",
+      "demo": "Kipróbálás egy bemutatóvideóval"
+    },
+    "mock": {
+      "w1": "Szóval ma",
+      "filler": "öö,",
+      "w2": "megmutatom nektek,",
+      "w3": "hogyan működik",
+      "line2": "Minden a saját gépeden fut, még a mesterséges intelligencia is",
+      "line3": "Törölj egy szót, és a videó kivágódik",
+      "cap1": "Ez a",
+      "cap2": "gépeden marad"
+    },
+    "stats": {
+      "upload": "feltöltött bájt",
+      "local": "az eszközödön feldolgozva",
+      "languages": "nyelvű felület",
+      "gpu": "gyorsított MI és kódolás"
+    },
+    "how": {
+      "eyebrow": "Hogyan működik",
+      "title": "A nyers felvételtől a posztolásra kész videóig három lépésben",
+      "open": {
+        "title": "Nyiss meg egy videót",
+        "text": "Válassz egy fájlt a lemezedről. Helyben olvassa be: nincs másolat, nincs feltöltés, még több gigabájtos fájloknál sem"
+      },
+      "edit": {
+        "title": "Hagyd dolgozni a szerkesztőt",
+        "text": "A csend felismerése, a beszéd szóról szóra történő átírása és az arcok követése mind helyben történik. Bármit kijavíthatsz a szöveg szerkesztésével"
+      },
+      "export": {
+        "title": "Exportáld az MP4-et",
+        "text": "Válaszd a 16:9, 9:16 vagy 1:1 formátumot. A videót a videokártyád kódolja, és közvetlenül a lemezedre kerül"
+      }
+    },
+    "features": {
+      "eyebrow": "Funkciók",
+      "title": "Minden, ami a kamerába beszélős videókhoz kell",
+      "lead": "YouTube-, TikTok-, Reels- és Shorts-alkotóknak készült, akik inkább sehova sem töltenék fel a nyers felvételeiket",
+      "silences": {
+        "title": "Csend automatikus kivágása",
+        "text": "A hangerő alapján felismeri a szüneteket és eltávolítja őket, állítható küszöbbel, minimális hosszal és levegővételi ráhagyással"
+      },
+      "textEdit": {
+        "title": "Szerkesztés szövegből",
+        "text": "A Whisper minden szóhoz időbélyeget rendel. Törölj szavakat az átiratból, és a hozzájuk tartozó videórész kivágódik"
+      },
+      "captions": {
+        "title": "Karaoke-feliratok",
+        "text": "Szóról szóra animált, a videóba égetett feliratok karaoke, letisztult vagy dobozos stílusban, a saját kiemelőszíneddel"
+      },
+      "framing": {
+        "title": "Automatikus képkivágás 16:9 → 9:16",
+        "text": "Az arckövetés képben tartja a beszélőt, amikor egy fekvő videót állóvá alakítasz"
+      },
+      "zoom": {
+        "title": "Okos zoom",
+        "text": "A vágásonként váltakozó ráközelítések szándékossá teszik a jump cutokat, és a nézőket is ott tartják"
+      },
+      "ducking": {
+        "title": "Hang és zene",
+        "text": "Hangosítsd fel, egyenlítsd ki a klipjeidet, és adj hozzá háttérzenét, amely magától elhalkul, amikor valaki beszél"
+      },
+      "recovery": {
+        "title": "Helyreállítás összeomlás után",
+        "text": "Minden változtatás valós időben mentődik a böngésződben. Nyisd meg újra a lapot, és folytasd pontosan ott, ahol abbahagytad"
+      },
+      "offline": {
+        "title": "Offline is működik",
+        "text": "Telepítsd alkalmazásként. Miután letöltődött az MI-modell, a teljes szerkesztő internetkapcsolat nélkül is működik"
+      },
+      "export": {
+        "title": "Gyors hardveres exportálás",
+        "text": "A kódolás a WebCodecs-et, a böngésződbe és a videokártyádba épített videókódolót használja a lassú szoftveres kódolás helyett"
+      },
+      "clips": {
+        "title": "Több klip összefűzése",
+        "text": "Húzz be egyszerre több felvételt: egyetlen videóvá fűződnek a választott sorrendben, közös idővonallal és átirattal"
+      },
+      "inputs": {
+        "title": "MP4, MOV, WebM, MKV",
+        "text": "Megnyitja a telefonod és a kamerád fájljait, köztük az iPhone HEVC-videóit is, ha a böngésződ dekódolni tudja őket"
+      },
+      "languages": {
+        "title": "Többnyelvű",
+        "text": "A felület {{ count }} nyelven beszél, a Whisper pedig további tucatnyi nyelvet ír át, automatikus nyelvfelismeréssel"
+      }
+    },
+    "privacy": {
+      "eyebrow": "Adatvédelem",
+      "title": "Nulla feltöltés, alapelvből",
+      "lead": "A videód közvetlenül a lemezedről töltődik be. A hangelemzés, az átírás, az arckövetés és a kódolás háttérszálakon (Web Workers) fut a gépeden. Egyszerűen nincs szerver, ahová a felvételeidet küldeni lehetne",
+      "upload": "Soha nincs feltöltés: a fájl sosem hagyja el a számítógépedet",
+      "account": "Nincs fiók, nincs süti, nincs statisztika",
+      "csp": "Egy szigorú Content-Security-Policy csak ezzel az oldallal engedi kommunikálni a lapot, amely az MI-modelleket is szolgáltatja (a Hugging Face csak tartalék)",
+      "storage": "A projektek a böngésződ helyi adatbázisában (IndexedDB) tárolódnak, és bármikor törölhetők",
+      "diagram": {
+        "machine": "A számítógéped",
+        "file": "Videofájl",
+        "browser": "A böngésződ",
+        "upload": "Feltöltés egy szerverre",
+        "model": "Az MI-modell letöltése (egyszer, gyorsítótárba)"
+      }
+    },
+    "support": {
+      "eyebrow": "Kompatibilitás",
+      "title": "Böngészőtámogatás",
+      "ok": "Teljes",
+      "partial": "Részleges",
+      "full": "Minden, beleértve az összeomlás utáni helyreállítást és az export közvetlen lemezre írását is",
+      "firefox": "A szerkesztés és az exportálás működik. A lap bezárása után újra ki kell választanod a videót",
+      "safari": "Csak az újabb verziók. Újratöltés után válaszd ki újra a videót; az export letöltésként érkezik",
+      "mobile": "Telefonok és táblagépek",
+      "mobileText": "Rövid klipekhez működik, de a memóriakorlátok miatt a hosszú videók nem megbízhatók"
+    },
+    "faq": {
+      "title": "Gyakori kérdések",
+      "free": {
+        "q": "Tényleg ingyenes? Hol a csapda?",
+        "a": "Ingyenes és nyílt forráskódú. Mivel minden munka a te gépeden zajlik, nincs szerverköltség, amit ki kellene fizetni, így nincs mit eladni neked, és nincs adat, amit gyűjteni kellene"
+      },
+      "formats": {
+        "q": "Milyen videóformátumokat nyithatok meg?",
+        "a": "MP4, MOV, WebM és MKV, amennyiben a böngésződ dekódolni tudja a kodeket (H.264, HEVC, VP9, AV1 a böngészőtől és a rendszertől függően). Az export MP4-fájl"
+      },
+      "browsers": {
+        "q": "Miért Chrome vagy Edge?",
+        "a": "Támogatják a File System Access API-t, amellyel a szerkesztő újratöltés után újra megnyithatja a videódat, és közvetlenül a lemezre írhatja az exportot. Más böngészők is működnek, néhány extra kattintással"
+      },
+      "size": {
+        "q": "Van fájlméret-korlát?",
+        "a": "Feltöltési korlát nincs, mert semmi sem töltődik fel. A videó kis darabokban töltődik be a lemezről; a gyakorlati korlát a számítógéped memóriája és a türelmed a nagyon hosszú videóknál"
+      },
+      "offline": {
+        "q": "Működik internet nélkül?",
+        "a": "Igen, ha egyszer betöltődött. Telepítsd alkalmazásként (PWA), és online állapotban végezz el egy átírást: a Whisper-modell ezután a gyorsítótárban marad, és minden offline működik"
+      },
+      "ai": {
+        "q": "Hol fut az MI?",
+        "a": "A böngésződben. A Whisper a Transformers.js segítségével fut a videokártyádon (WebGPU) vagy a processzorodon (WebAssembly), az arcfelismerés pedig a MediaPipe-ot használja. A modellek egyszer töltődnek le, a hangod soha nem kerül elküldésre"
+      }
+    },
+    "final": {
+      "title": "A következő videód percek alatt megvágva",
+      "text": "Nincs regisztráció, nincs feltöltés, nincs vízjel. Nyiss meg egy fájlt, és kezdj el szerkeszteni"
+    },
+    "thumbnail": {
+      "eyebrow": "Új · Bélyegképek",
+      "title": "És hozzá a bélyegkép",
+      "text": "A bélyegkép-készítő megtalálja a videód legélesebb pillanatait. Adj hozzá egy nagy címet színes szavakkal, és töltsd le a megfelelő méretben",
+      "points": {
+        "moments": "Javasolt legjobb pillanatok",
+        "title": "Cím kiemelt szavakkal, 4 stílus",
+        "formats": "YouTube 1280×720, Shorts és négyzet",
+        "local": "Az eszközödön készül, semmi sem töltődik fel"
+      },
+      "cta": "Bélyegkép készítése",
+      "mockTitle": "Az első",
+      "mockAccent": "vlogom"
+    }
+  },
+  "changelog": {
+    "eyebrow": "Verziók",
+    "title": "Változások",
+    "lead": "A LocalCutVideo összes verziója, a legújabbal kezdve",
+    "current": "Jelenlegi verziód:",
+    "github": "Megtekintés a GitHubon",
+    "releases": "Kiadások a GitHubon",
+    "latest": "Legújabb",
+    "error": "A változáslistát nem sikerült betölteni"
+  },
+  "projects": {
+    "title": "Projektjeid",
+    "lead": "A projektek automatikusan mentődnek ebben a böngészőben. A videóid ott maradnak, ahol vannak a lemezeden",
+    "resume": "Folytatás ott, ahol abbahagytad",
+    "reading": "Videó beolvasása…",
+    "drop": "Húzd ide a videóidat",
+    "or": "vagy",
+    "open": "Videók megnyitása",
+    "private": "A fájl helyben töltődik be, semmi sem töltődik fel",
+    "noFsAccess": "A böngésződ nem tudja megjegyezni a fájlokat a munkamenetek között: a lap bezárása után újra ki kell választanod a videót. A Chrome és az Edge ezt elkerüli",
+    "recent": "Legutóbbi projektek",
+    "empty": "Még nincs projekted. Kezdésként nyiss meg egy videót",
+    "delete": "Projekt törlése",
+    "confirmDelete": "Törlöd a(z) „{{ name }}” projektet? A lemezeden lévő videofájl érintetlen marad",
+    "multi": "Több fájl? Egy videóvá fűződnek össze, név szerinti sorrendben",
+    "importFile": "Projektfájl megnyitása (.lcv.json)",
+    "saveFile": "Projekt mentése fájlba",
+    "imported": "Projekt megnyitva: a folytatáshoz válaszd ki a videóit"
+  },
+  "errors": {
+    "notVideo": "Ez a fájl nem tűnik videónak",
+    "codec": "A böngésződ nem tudja dekódolni ennek a videónak a kodekjét (a HEVC/H.265-höz Chrome vagy az Edge HEVC-bővítménye kell). Próbáld H.264 MP4-re konvertálni",
+    "noVideo": "Ebben a fájlban nem található videósáv",
+    "generic": "Hiba történt a fájl beolvasása közben",
+    "transcribe": "Az átírás nem sikerült. Próbálj kisebb modellt, vagy ellenőrizd a kapcsolatot az első letöltéshez",
+    "export": "Az exportálás nem sikerült",
+    "faces": "Az arckövetés nem sikerült ennél a videónál",
+    "skipped": "Kihagyva (nem olvasható): {{ names }}",
+    "skippedCodec": "Kihagyva, ez a böngésző nem támogatja a kodeket: {{ names }}. Próbáld a Chrome-ot, vagy konvertáld H.264 MP4-re",
+    "notProject": "Ez a fájl nem LocalCutVideo-projekt",
+    "demo": "A bemutatóvideót nem sikerült betölteni"
+  },
+  "languages": {
+    "en": "Angol",
+    "fr": "Francia",
+    "es": "Spanyol",
+    "it": "Olasz",
+    "de": "Német",
+    "pt": "Portugál",
+    "nl": "Holland"
+  },
+  "editor": {
+    "back": "Vissza a projektekhez",
+    "name": "Projekt neve",
+    "undo": "Visszavonás",
+    "redo": "Újra",
+    "missing": "Ez a projekt már nem létezik",
+    "save": {
+      "saving": "Mentés…",
+      "saved": "Helyben mentve",
+      "error": "Nincs mentve"
+    },
+    "reconnect": {
+      "loading": "Videó megnyitása…",
+      "title": "Csatlakoztasd újra a videóidat",
+      "allow": "Hozzáférés engedélyezése mindhez",
+      "select": "Kiválasztás",
+      "mismatch": "Ez nem tűnik az eredeti fájlnak („{{ name }}”). Mégis használod?",
+      "intro": "A projekt biztonságban van. Az adatvédelmed érdekében a böngésző újra engedélyt kér, mielőtt a szerkesztő beolvashatná a fájljaidat",
+      "allowOne": "Engedélyezés",
+      "privacy": "A videóid ott töltődnek be, ahol a lemezeden vannak, soha nem másolódnak vagy töltődnek fel",
+      "status": {
+        "ready": "Csatlakoztatva",
+        "permission": "Az engedélyedre vár",
+        "moved": "Nem található: áthelyezted vagy átnevezted?",
+        "missing": "Válaszd ki újra (a böngésződ nem őrzi meg a fájlhozzáférést)",
+        "loading": "Megnyitás…"
+      }
+    },
+    "preview": {
+      "cut": "Vágás",
+      "back": "Vissza 5 mp",
+      "play": "Lejátszás",
+      "pause": "Szünet",
+      "savedHint": "Vágásokkal eltávolított idő",
+      "badge": "Könnyített előnézet · {{ q }}p",
+      "quality": "Előnézet minősége",
+      "qualityHint": "A könnyebb előnézet gördülékenyen tartja a szerkesztőt. Az export mindig teljes minőséget használ"
+    },
+    "timeline": {
+      "title": "Idővonal",
+      "silence": "Csend",
+      "manual": "Kézi",
+      "text": "Szöveg",
+      "hint": "Húzd végig a hullámformán egy rész kijelöléséhez, majd Vágás vagy Sebesség · kattints egy vágásra a szélei igazításához · dupla kattintással eltávolítod",
+      "removeCut": "Vágás eltávolítása",
+      "zoom": "Idővonal nagyítása",
+      "analyzing": "Hang elemzése…",
+      "zoomIn": "Nagyítás",
+      "zoomOut": "Kicsinyítés",
+      "fit": "Igazítás",
+      "fitHint": "Teljes videó megjelenítése (tipp: Ctrl + görgő a nagyításhoz)",
+      "manualCut": "Kézi vágás",
+      "markIn": "Kezdet",
+      "markOut": "Vég",
+      "markInHint": "A kivágandó rész kezdete a lejátszófejnél (I)",
+      "markOutHint": "A kivágandó rész vége a lejátszófejnél (O)",
+      "cutMarked": "Vágás",
+      "cutHint": "A kezdet és a vég közötti rész eltávolítása (X)",
+      "clearMarks": "Kezdet és vég törlése",
+      "marksMissing": "Előbb állíts be egy kezdetet (I) és egy véget (O)",
+      "analysisError": "A hangot nem sikerült elemezni",
+      "selectedCut": "Kijelölt vágás",
+      "earlier": "Korábban",
+      "later": "Később",
+      "listen": "Vágás meghallgatása",
+      "speed": "Sebesség",
+      "speedHint": "A kezdet és a vég közötti rész gyorsítása vagy lassítása",
+      "selectedSpeed": "Sebességváltozás",
+      "removeSpeed": "Vissza a normál sebességre",
+      "listenSpeed": "Sebességváltozás lejátszása",
+      "selectFirst": "Előbb jelölj ki egy részt: húzd végig a hullámformán, vagy állítsd be a Kezdetet és a Véget"
+    },
+    "transcript": {
+      "title": "Átirat",
+      "words": "{{ count }} szó",
+      "fillers": "Töltelékszavak eltávolítása ({{ count }})",
+      "restore": "Összes visszaállítása",
+      "selected": "{{ count }} kijelölve",
+      "cut": "Vágás / visszaállítás",
+      "tip": "Kattints egy szóra, hogy odaugorj. Húzással vagy Shift + kattintással jelölj ki, majd Delete a vágáshoz, vagy Javítás (Enter) annak javításához, amit a Whisper félrehallott",
+      "emptyTitle": "Még nincs átirat",
+      "emptyText": "Írd át a videót, hogy szövegből szerkeszthesd, és szóról szóra haladó feliratokat kapj",
+      "correct": "Javítás",
+      "correctTitle": "Mi hangzott el valójában?",
+      "correctHint": "Írd be újra a szót vagy az egész mondatot. Az időzítés és a feliratok automatikusan igazodnak",
+      "apply": "Alkalmazás"
+    },
+    "transcribe": {
+      "title": "Átírás (Whisper)",
+      "hint": "Az eszközödön fut. A modell egyszer töltődik le, utána a gyorsítótárban marad",
+      "model": "Modell",
+      "models": {
+        "tiny": "Gyors",
+        "base": "Kiegyensúlyozott",
+        "small": "Pontos"
+      },
+      "download": "Egyszeri letöltés: {{ size }}",
+      "language": "Beszélt nyelv",
+      "auto": "Automatikus felismerés",
+      "run": "Átírás",
+      "rerun": "Minden újraírása",
+      "done": "{{ count }} szó átírva",
+      "empty": "Ebben a videóban nem található beszéd",
+      "stage": {
+        "audio": "Hang kinyerése…",
+        "download": "Modell letöltése…",
+        "transcribe": "Átírás folyamatban…"
+      },
+      "missing": "Az új klipek átírása ({{ count }})",
+      "rerunHint": "Elölről kezdi a fenti modellel és nyelvvel",
+      "confirmAll": "Mindent újraírsz? A kivágott vagy javított szavak elvesznek",
+      "detected": "Felismert nyelv: {{ language }}"
+    },
+    "tabs": {
+      "format": "Formátum",
+      "cuts": "Vágások",
+      "captions": "Feliratok",
+      "framing": "Képkivágás",
+      "audio": "Hang",
+      "clips": "Klipek",
+      "texts": "Szövegek"
+    },
+    "format": {
+      "title": "Kimeneti formátum",
+      "hint": "A videó a méretre lesz vágva. A Képkivágással követheted a beszélőt",
+      "landscape": "YouTube",
+      "vertical": "TikTok · Reels",
+      "square": "Hírfolyam",
+      "source": "Forrás:",
+      "resolution": "Felbontás",
+      "fps": "Képkocka másodpercenként",
+      "exportNote": "A felbontást és a képkockasebességet exportáláskor választod ki",
+      "rotation": "Forgatás",
+      "rotateLeft": "Forgatás balra",
+      "rotateRight": "Forgatás jobbra",
+      "rotationHint": "Oldalra fordítva felvett videóhoz. Minden klipre vonatkozik",
+      "rotatedFaces": "A videó elforgatva: kapcsold be újra az „Arc követése” opciót a Képkivágásban"
+    },
+    "cuts": {
+      "title": "Csendfelismerés",
+      "hint": "Eltávolítja a szüneteket. Csökkentsd a küszöböt, ha szavak vágódnak le",
+      "threshold": "Küszöb",
+      "suggested": "Javasolt ehhez a felvételhez: {{ value }} dB",
+      "minSilence": "Minimális csend",
+      "padding": "Levegővételi ráhagyás",
+      "detect": "Csend felismerése és kivágása",
+      "detected": "{{ count }} csend kivágva",
+      "count": "vágás",
+      "removed": "eltávolítva",
+      "final": "végső hossz",
+      "clear": "Összes vágás eltávolítása",
+      "mode": "Szünetek keresése",
+      "modes": {
+        "audio": "Hangerő alapján",
+        "transcript": "Átirat alapján"
+      },
+      "modeHint": "Az átirat mód háttérzaj vagy zene mellett is pontos",
+      "modeNeedsTranscript": "Írd át a videót, hogy a szünetek a szavak alapján legyenek megtalálva: zajos helyeken pontosabb",
+      "preset": "Ritmus",
+      "presets": {
+        "gentle": "Természetes",
+        "normal": "Kiegyensúlyozott",
+        "tight": "Dinamikus"
+      },
+      "live": "A vágások élőben frissülnek, ahogy a beállításokat módosítod",
+      "silentClips": "{{ count }} klip hang nélkül: ott csak a valódi üresjárat vágódik ki"
+    },
+    "captions": {
+      "title": "Beégetett feliratok",
+      "style": "Stílus",
+      "styles": {
+        "karaoke": "Karaoke",
+        "clean": "Letisztult",
+        "boxed": "Dobozos"
+      },
+      "position": "Elhelyezés",
+      "positions": {
+        "top": "Fent",
+        "center": "Középen",
+        "bottom": "Lent"
+      },
+      "size": "Méret",
+      "words": "Szavak feliratonként",
+      "uppercase": "Nagybetűk",
+      "highlight": "Kiemelőszín"
+    },
+    "framing": {
+      "title": "Automatikus képkivágás",
+      "hint": "Követi az arcokat, hogy a beszélő képben maradjon, ideális 16:9 → 9:16 átalakításhoz",
+      "center": "Középre",
+      "face": "Arc követése",
+      "analyzing": "Arcok követése…",
+      "analyze": "Arcok követése",
+      "reanalyze": "Arcok újbóli követése",
+      "tracked": "{{ count }} pozíció követve",
+      "found": "Arc követve: a képkivágás követi a beszélőt",
+      "notFound": "Ebben a videóban nem található következetesen arc",
+      "punch": "Okos zoom",
+      "punchHint": "Minden vágásnál, vagy vágás hiányában minden mondatnál enyhe ráközelítést vált, hogy a videó dinamikus maradjon",
+      "zoom": "Zoom erőssége",
+      "firstTime": "Az „Arc követése” választása egyszer, helyben elemzi a videót",
+      "beatsCuts": "A zoom {{ count }} alkalommal vált, a vágásaidnál",
+      "beatsAuto": "Még nincs vágás: a zoom {{ count }} alkalommal vált, mondatoknál vagy 4 mp-enként"
+    },
+    "audio": {
+      "title": "Háttérzene",
+      "hint": "A zene automatikusan elhalkul, amíg valaki beszél (auto-ducking)",
+      "reconnect": "„{{ name }}” újracsatlakoztatása",
+      "pick": "Zenefájl kiválasztása",
+      "enabled": "Hozzáadás a videóhoz",
+      "volume": "Zene hangereje",
+      "ducking": "Halkítás beszéd közben",
+      "duckingHint": "Mennyire halkul el a zene, amikor valaki beszél"
+    },
+    "export": {
+      "button": "Exportálás",
+      "title": "Videó exportálása",
+      "running": "Exportálás…",
+      "eta": "Körülbelül {{ time }} van hátra",
+      "keepOpen": "Hagyd nyitva ezt a lapot. A kódolás lehetőség szerint a videokártyádat használja",
+      "done": "Exportálás kész",
+      "saved": "„{{ name }}” {{ seconds }} mp alatt mentve a lemezedre",
+      "downloaded": "„{{ name }}” {{ seconds }} mp alatt letöltve",
+      "duration": "Időtartam",
+      "from": "eredetileg {{ time }}",
+      "streamHint": "Te választod ki, hová mentse az MP4-et. Közvetlenül a lemezre íródik",
+      "downloadHint": "Az MP4 helyben áll össze, majd letöltődik",
+      "start": "MP4 exportálása",
+      "saveProject": "Projekt mentése",
+      "saveProjectHint": "Egy .lcv.json-fájl a szerkesztéseddel (videó nélkül), hogy egy másik gépen folytathasd",
+      "projectSaved": "Projekt mentve .lcv.json-fájlként"
+    },
+    "clips": {
+      "title": "Klipek",
+      "hint": "A videók egymás után, ebben a sorrendben játszódnak le. Húzással rendezheted át őket: a vágások és a szavak követik a klipjüket",
+      "jump": "Ugrás ehhez a kliphez",
+      "up": "Mozgatás fel",
+      "down": "Mozgatás le",
+      "remove": "Klip eltávolítása",
+      "add": "Videók hozzáadása",
+      "summary": "{{ count }} klip · összesen {{ time }}",
+      "confirmRemove": "Eltávolítod a(z) „{{ name }}” klipet a projektből? A vágásai és szavai is törlődnek (Ctrl+Z a visszavonáshoz)",
+      "added": "{{ count }} klip hozzáadva",
+      "addedTranscribe": "{{ count }} klip hozzáadva. Írd át újra, hogy feliratot kapjanak: a már átírt klipek megmaradnak",
+      "noVoice": "nincs hang",
+      "voiceOn": "Beszéd · kattints, ha senki sem beszél",
+      "voiceOff": "Nincs beszéd · kattints, ha valaki beszél"
+    },
+    "auto": {
+      "button": "Automatikus vágás",
+      "cta": "Videó automatikus megvágása",
+      "transcribeOnly": "vagy csak átírás",
+      "heading": "Hagyd, hogy a LocalCutVideo megvágja a videódat",
+      "lead": "Egyetlen kattintással: csend és tétovázás eltávolítva, feliratok, képkivágás a beszélőre és okos zoom. Utána bármit módosíthatsz",
+      "target": "Hová fogod posztolni?",
+      "options": {
+        "silences": "Csend kivágása",
+        "fillers": "Tétovázások eltávolítása (öö, hmm…)",
+        "captions": "Karaoke-feliratok",
+        "framing": "Arc követése",
+        "framingNoCrop": "Nem szükséges: ez a formátum a teljes képet mutatja",
+        "zoom": "Okos zoom"
+      },
+      "local": "Minden az eszközödön fut. A videó soha nem töltődik fel",
+      "start": "Automatikus vágás indítása",
+      "running": "A videód vágása…",
+      "done": "A videód elkészült!",
+      "view": "Eredmény megtekintése",
+      "undo": "Automatikus vágás visszavonása",
+      "undone": "A projekt visszaállt az automatikus vágás előtti állapotra",
+      "summary": {
+        "cuts": "vágás",
+        "removed": "eltávolítva",
+        "words": "feliratozott szó",
+        "silent": "{{ count }} klip hang nélkül: csak a valódi üresjárat lett kivágva"
+      },
+      "steps": {
+        "analyze": "Hang elemzése",
+        "transcribe": "Beszéd átírása",
+        "fillers": "Tétovázások eltávolítása",
+        "silences": "Csend kivágása",
+        "framing": "Arc követése",
+        "style": "Feliratok és okos zoom",
+        "voice": "Hangok felismerése"
+      },
+      "status": {
+        "skipped": "kihagyva",
+        "error": "sikertelen"
+      },
+      "voice": {
+        "title": "Beszél valaki a videóban?",
+        "auto": "Auto",
+        "yes": "Igen",
+        "no": "Nem",
+        "detectedYes": "Felismerve: valaki beszél",
+        "detectedNo": "Felismerve: nincs beszéd",
+        "hint": "Nincs beszéd: nincs átirat és felirat, csak a valódi üresjárat vágódik ki"
+      }
+    },
+    "mix": {
+      "title": "A videó hangja",
+      "hint": "Hangosítsd fel vagy halkítsd le a klipjeid hangját",
+      "volume": "Hangerő",
+      "mute": "Némítás",
+      "unmute": "Némítás feloldása",
+      "volumeHint": "Az előnézetre és az exportra is vonatkozik",
+      "boostHint": "100 % felett egy limiter megakadályozza a torzítást",
+      "normalize": "Klipek kiegyenlítése",
+      "normalizeHint": "Minden klip ugyanolyan hangos, akár közelről, akár távolról vették fel",
+      "denoise": "Háttérzaj csökkentése",
+      "denoiseHint": "Tisztább hang (szél, sistergés, ventilátorok). Exportáláskor, a beszédet tartalmazó klipeken alkalmazva. Előbb hallgasd meg",
+      "listen": "8 mp meghallgatása az eredményből",
+      "stopListening": "Hallgatás leállítása",
+      "preparing": "Előkészítés…"
+    },
+    "thumbnail": "Bélyegkép",
+    "transition": {
+      "title": "Átmenet a vágásoknál",
+      "none": "Kemény vágás",
+      "dip": "Gyors áttűnés",
+      "black": "Elsötétítés",
+      "hint": "Minden vágásnál és klipváltásnál lejátszódik (elsötétítésnél az elején és a végén is). Lejátszás közben látható"
+    },
+    "texts": {
+      "title": "Szövegek a videón",
+      "hint": "A lejátszófejnél megjelenő címek és jegyzetek. Tedd a szavakat csillagok közé, hogy kiszínezd őket",
+      "add": "Szöveg hozzáadása a lejátszófejnél",
+      "default": "A *szöveged*",
+      "timing": "Megjelenik",
+      "startHere": "Kezdés itt",
+      "endHere": "Befejezés itt",
+      "remove": "Szöveg eltávolítása"
+    },
+    "background": {
+      "title": "Háttér",
+      "hint": "Elmossa a háttért a személy mögött, aki éles marad. Az eszközödön számolódik",
+      "none": "Éles",
+      "blur": "Elmosott",
+      "strength": "Elmosás erőssége",
+      "error": "A háttér elmosása nem indítható el ezen az eszközön"
+    }
+  },
+  "legal": {
+    "updated": "Utolsó frissítés: 2026. november 1.",
+    "contact": "Kapcsolat",
+    "nav": {
+      "notice": "Impresszum",
+      "privacy": "Adatvédelem",
+      "terms": "Felhasználási feltételek"
+    },
+    "notice": {
+      "title": "Impresszum",
+      "intro": "A francia jog által előírt információk (az LCEN 6. cikke, a 2004. június 21-i 2004-575. sz. törvény) a weboldal kiadójáról és tárhelyszolgáltatójáról.",
+      "sections": [
+        {
+          "title": "Kiadó",
+          "body": [
+            "A localcutvideo.mbonnici.fr weboldalt („LocalCutVideo”) Maxence Bonnici magánszemély adja ki, nem kereskedelmi céllal.",
+            "Felelős kiadó: Maxence Bonnici.",
+            "Kapcsolat: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Tárhely",
+          "body": [
+            "A weboldalt maga a kiadó, Maxence Bonnici üzemelteti egy saját szerveren, és a Coolify platformmal telepíti.",
+            "Kapcsolat: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Szellemi tulajdon",
+          "body": [
+            "A LocalCutVideo forráskódja nyílt, és MIT-licenc alatt érhető el a [GitHubon](https://github.com/ImMaxence/LocalCutVideo).",
+            "Az alkalmazás által használt külső komponensek, MI-modellek és betűtípusok a szerzőik tulajdonában maradnak, és a saját licencük szerint használatosak, amelyeket a [felhasználási feltételek](/terms) sorolnak fel. Az említett védjegyek (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) tulajdonosaikéi."
+          ]
+        },
+        {
+          "title": "Felelősség",
+          "body": [
+            "A kiadó igyekszik elérhetővé és pontossá tenni a weboldalt és annak információit, de egyiket sem tudja garantálni. Az alkalmazás használatára a [felhasználási feltételek](/terms) vonatkoznak."
+          ]
+        },
+        {
+          "title": "Személyes adatok",
+          "body": [
+            "A LocalCutVideo semmilyen személyes adatot nem gyűjt: a videók kizárólag az eszközödön kerülnek feldolgozásra. A részleteket az [adatvédelmi tájékoztató](/privacy) tartalmazza."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Adatvédelmi tájékoztató",
+      "intro": "A LocalCutVideo úgy készült, hogy a videóid soha ne hagyják el az eszközödet. Ez az oldal egyszerűen elmagyarázza, mi és hol kerül feldolgozásra.",
+      "sections": [
+        {
+          "title": "Röviden",
+          "body": [
+            "Nincs feltöltés: a videóid, a hanganyagod és az átirataid a böngésződben kerülnek feldolgozásra, és soha nem jutnak el a kiadóhoz vagy bárki máshoz.",
+            "Nincs fiók, nincs süti, nincs statisztika, nincs reklám."
+          ]
+        },
+        {
+          "title": "Ami az eszközödön marad",
+          "body": [
+            "A megnyitott video- és hangfájlok közvetlenül a lemezedről töltődnek be. Az elemzést, az átírást (Whisper), az arckövetést és az exportálást a böngésződ helyben számolja ki.",
+            "A projektjeid (vágások, átirat, beállítások) a böngésződ helyi adatbázisában (IndexedDB) tárolódnak egy bélyegképpel és az elemzések gyorsítótárával együtt. A kiadó nem fér hozzájuk. Egy projektet a projektek oldalon törölhetsz, vagy mindent törölhetsz, ha a böngésző beállításaiban kiüríted ennek az oldalnak az adatait."
+          ]
+        },
+        {
+          "title": "Helyi tárolás",
+          "body": [
+            "Az alkalmazás a felületi beállításaidat (nyelv, téma, utoljára megnyitott projekt) a böngésző helyi tárolójában őrzi, a saját fájljait és a letöltött MI-modelleket pedig a böngésző gyorsítótárában tartja, hogy offline is működjön. Ezek a szolgáltatáshoz feltétlenül szükségesek, soha nem szolgálnak a követésedre, ezért nem igényelnek hozzájárulási sávot."
+          ]
+        },
+        {
+          "title": "Szerver",
+          "body": [
+            "A szerver csak az alkalmazás fájljait szolgálja ki, és nem vezet hozzáférési naplót. Mint minden webszerver, technikailag megkapja az IP-címedet, hogy válaszolni tudjon a kérésekre, de nem tárolja."
+          ]
+        },
+        {
+          "title": "Harmadik felek",
+          "body": [
+            "Hugging Face: a Whisper-modellt ez az oldal szolgáltatja, akárcsak az alkalmazás többi részét. Csak ha itt nem érhető el, akkor töltődik le helyette a huggingface.co-ról; ekkor a Hugging Face megkapja az IP-címedet és a szokásos böngészőadatokat, de a hangodat soha. Lásd az [adatvédelmi tájékoztatójukat](https://huggingface.co/privacy).",
+            "GitHub: csak ha a forráskód-tárolóra mutató linkre kattintasz.",
+            "Más harmadik féllel nem történik kapcsolatfelvétel: egy szigorú Content-Security-Policy technikailag megakadályozza, hogy a lap bárhová máshová csatlakozzon."
+          ]
+        },
+        {
+          "title": "Jogaid",
+          "body": [
+            "A GDPR alapján jogod van az adataidhoz való hozzáféréshez, azok helyesbítéséhez és törléséhez, valamint tiltakozhatsz a kezelésük ellen. Mivel a kiadó semmilyen adatot nem tárol rólad, általában nincs mihez hozzáférni, de bármilyen kérdést feltehetsz a maxence.bonnici@outlook.fr címen. Panaszt is tehetsz a CNIL-nél ([cnil.fr](https://www.cnil.fr)) vagy a saját országod adatvédelmi hatóságánál."
+          ]
+        },
+        {
+          "title": "Változások",
+          "body": [
+            "Ez a tájékoztató az alkalmazás fejlődésével frissülhet. Az utolsó frissítés dátuma az oldal tetején látható."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Felhasználási feltételek",
+      "intro": "A LocalCutVideo használatával elfogadod ezeket a feltételeket. Rövidek, mert a szolgáltatás egyszerű: egy ingyenes eszköz, amely a böngésződben fut.",
+      "sections": [
+        {
+          "title": "Szolgáltatás",
+          "body": [
+            "A LocalCutVideo egy ingyenes videószerkesztő alkalmazás, amely teljes egészében a webböngésződben fut. Díjmentesen, fiók nélkül érhető el, és bármikor, előzetes értesítés nélkül változhat, szünetelhet vagy megszűnhet."
+          ]
+        },
+        {
+          "title": "A tartalmad",
+          "body": [
+            "Továbbra is te vagy az egyedüli tulajdonosa és felelőse az általad szerkesztett és közzétett videóknak, hangoknak és zenéknek. Rendelkezned kell a szükséges jogokkal (szerzői jog, zenei licencek, a felvett személyek képmáshoz fűződő joga).",
+            "Az alkalmazás nem használható jogellenes célokra."
+          ]
+        },
+        {
+          "title": "Automatikus funkciók",
+          "body": [
+            "Az átírás, a feliratok, a csendfelismerés és az automatikus képkivágás automatikusan készül, és hibákat tartalmazhat. Közzététel előtt ellenőrizd az eredményt."
+          ]
+        },
+        {
+          "title": "Fájljaid és projektjeid",
+          "body": [
+            "Az alkalmazás soha nem módosítja az eredeti fájljaidat. A projektek a böngésződben tárolódnak, és elveszhetnek, ha az adatai törlődnek, vagy ha a böngésző helyet szabadít fel: mindig őrizd meg az eredeti fájljaidat."
+          ]
+        },
+        {
+          "title": "Garancia és felelősség",
+          "body": [
+            "A szoftver „ahogy van” állapotban, mindenféle garancia nélkül, MIT-licenc alatt érhető el. A törvény által megengedett mértékben a kiadó nem vonható felelősségre az alkalmazás használatából vagy használhatatlanságából eredő károkért (adatvesztés, exportálási hibák, elérhetetlenség…)."
+          ]
+        },
+        {
+          "title": "Nyílt forráskód és külső komponensek",
+          "body": [
+            "A forráskód MIT-licenc alatt érhető el a [GitHubon](https://github.com/ImMaxence/LocalCutVideo).",
+            "A LocalCutVideo a következőkre épül: Mediabunny (MPL-2.0), Transformers.js és ONNX Runtime (Apache-2.0 és MIT), az OpenAI Whisper-modelljei (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT), valamint az Inter és a Montserrat betűtípus (SIL Open Font License)."
+          ]
+        },
+        {
+          "title": "Irányadó jog",
+          "body": [
+            "Ezekre a feltételekre a francia jog az irányadó. Kérdések: maxence.bonnici@outlook.fr."
+          ]
+        }
+      ]
+    }
+  },
+  "thumbnail": {
+    "eyebrow": "Bélyegkép-készítő",
+    "title": "Bélyegképek, amelyekre kattintani akarnak",
+    "lead": "Válaszd ki a videód legjobb pillanatát, adj hozzá egy ütős címet, és tölts le egy YouTube-ra, Shortsra vagy Instagramra kész képet. Minden az eszközödön történik",
+    "pick": "Húzz ide egy videót vagy képet",
+    "pickHint": "MP4, MOV, WebM, JPG, PNG… a fájl az eszközödön marad",
+    "choose": "Fájl kiválasztása",
+    "local": "Semmi sem töltődik fel: a kép a böngésződben készül",
+    "permissionTitle": "Hozzáférés engedélyezése a projekt videójához",
+    "permissionText": "A böngésződ megerősítést kér, mielőtt újra beolvasná a fájlt az eszközödről",
+    "permission": "Hozzáférés engedélyezése",
+    "back": "Vissza a szerkesztőhöz",
+    "dragHint": "Húzd a képet az újrakomponáláshoz",
+    "frame": "Videóképkocka",
+    "prevFrame": "Előző képkocka",
+    "nextFrame": "Következő képkocka",
+    "moments": "Legjobb pillanatok",
+    "other": "Másik fájl kiválasztása",
+    "format": "Formátum",
+    "formats": {
+      "landscape": "YouTube",
+      "vertical": "Shorts · TikTok",
+      "square": "Instagram"
+    },
+    "text": "Cím",
+    "textPlaceholder": "A figyelemfelkeltő címed",
+    "defaultText": "A *címed* ide",
+    "accentHint": "Tedd a szavakat csillagok közé, hogy kiszínezd őket: *így*",
+    "size": "Szövegméret",
+    "position": "Elhelyezés",
+    "positions": {
+      "top": "Fent",
+      "center": "Középen",
+      "bottom": "Lent"
+    },
+    "alignCenter": "Középre",
+    "alignLeft": "Balra",
+    "uppercase": "Nagybetűk",
+    "tilt": "Döntött szöveg",
+    "style": "Cím stílusa",
+    "styles": {
+      "outline": "Körvonal",
+      "shadow": "Árnyék",
+      "box": "Szalag",
+      "highlight": "Szövegkiemelő"
+    },
+    "color": "Szöveg színe",
+    "accent": "Kiemelt szavak színe",
+    "image": "Kép",
+    "zoom": "Nagyítás",
+    "brightness": "Fényerő",
+    "contrast": "Kontraszt",
+    "saturation": "Telítettség",
+    "shade": "Szélek sötétítése",
+    "reset": "Visszaállítás",
+    "downloadJpg": "JPG letöltése",
+    "downloadPng": "PNG letöltése",
+    "sizeInfo": "{{ width }} × {{ height }} px · YouTube-ra a JPG a legjobb (2 MB alatt)",
+    "saved": "Mentve: {{ name }}",
+    "loadError": "Ezt a projektet nem sikerült megnyitni",
+    "readError": "Ezt a fájlt nem sikerült beolvasni"
+  },
+  "seo": {
+    "home": {
+      "title": "LocalCutVideo — Ingyenes videószerkesztő a böngészőben, semmi sem töltődik fel",
+      "description": "Szerkeszd a videóidat a böngészőben: automatikusan kivágott csend, MI-feliratok, arcra igazított képkivágás TikTokra és Shortsra, bélyegképek. Ingyenes és nyílt forráskódú, a videóid sosem hagyják el a gépedet"
+    },
+    "thumbnail": {
+      "title": "Ingyenes YouTube bélyegkép-készítő — LocalCutVideo",
+      "description": "Készíts YouTube-, Shorts- vagy Instagram-bélyegképet a videódból: javasolt legjobb pillanatok, nagy cím színes szavakkal, JPG vagy PNG. Ingyen, a böngészőben, semmi sem töltődik fel"
+    },
+    "changelog": {
+      "title": "Változások — LocalCutVideo",
+      "description": "A LocalCutVideo újdonságai verzióról verzióra"
+    },
+    "legal": {
+      "title": "Impresszum — LocalCutVideo",
+      "description": "A LocalCutVideo kiadója és tárhelye"
+    },
+    "privacy": {
+      "title": "Adatvédelmi tájékoztató — LocalCutVideo",
+      "description": "A LocalCutVideo semmit sem tölt fel: a videóid, átirataid és projektjeid az eszközödön maradnak"
+    },
+    "terms": {
+      "title": "Felhasználási feltételek — LocalCutVideo",
+      "description": "A LocalCutVideo, egy ingyenes és nyílt forráskódú videószerkesztő felhasználási feltételei"
+    },
+    "app": {
+      "title": "Projektek — LocalCutVideo",
+      "description": "A videóprojektjeid, a böngésződben mentve"
+    },
+    "editor": {
+      "title": "Szerkesztő — LocalCutVideo",
+      "description": "LocalCutVideo szerkesztő"
+    }
+  },
+  "tour": {
+    "label": "Bemutató",
+    "help": "Bemutató",
+    "count": "{{ n }}. lépés / {{ total }}",
+    "skip": "Bemutató kihagyása",
+    "prev": "Vissza",
+    "next": "Tovább",
+    "done": "Kezdjük!",
+    "steps": {
+      "auto": {
+        "title": "Egy kattintás: az automatikus vágás",
+        "text": "A LocalCutVideo megvágja helyetted a videót: csend és tétovázás eltávolítva, feliratok, képkivágás és zoom. Utána bármit módosíthatsz"
+      },
+      "preview": {
+        "title": "Az előnézet",
+        "text": "Amit látsz, pontosan az kerül exportálásra. Kattints rá, vagy nyomd meg a szóközt a lejátszáshoz vagy szüneteltetéshez"
+      },
+      "timeline": {
+        "title": "Az idővonal",
+        "text": "Kattintással mozoghatsz a videóban. Húzd végig a hullámformán egy rész kijelöléséhez"
+      },
+      "cut": {
+        "title": "Vágás vagy sebességváltás",
+        "text": "Kijelölt résznél a Vágás (X) eltávolítja, a Sebesség gyorsabban vagy lassabban játssza le. A Ctrl+Z bármit visszavon"
+      },
+      "transcript": {
+        "title": "Szerkesztés szövegből",
+        "text": "Átírás után egy szó törlése kivágja a videó részletét. Azt is kijavíthatod, amit az MI félrehallott"
+      },
+      "settings": {
+        "title": "Minden beállítás",
+        "text": "Formátum (16:9, 9:16, négyzet), vágások és átmenetek, feliratok, szövegek, képkivágás és elmosás, hang és zene"
+      },
+      "thumbnail": {
+        "title": "A bélyegkép",
+        "text": "Készíts bélyegképet a videódhoz a legjobb pillanataiból"
+      },
+      "export": {
+        "title": "Exportálás",
+        "text": "Mentsd a videót MP4-ként. Minden az eszközödön történik, semmi sem töltődik fel"
+      }
+    }
+  }
+}

@@ -35,8 +35,9 @@
                 <time class="faint">{{ r.date }}</time>
               </header>
               @for (s of r.sections; track s.title) {
-                <h3 [class]="s.title.toLowerCase()">{{ s.title }}</h3>
-                <ul>
+                <!-- The release notes are written in English only. -->
+                <h3 [class]="s.title.toLowerCase()" lang="en">{{ s.title }}</h3>
+                <ul lang="en" dir="ltr">
                   @for (item of s.items; track $index) {
                     <li>
                       @for (seg of item; track $index) {

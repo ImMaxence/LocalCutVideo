@@ -78,7 +78,7 @@ export interface SelectOption {
       font-size: 14px;
       font-weight: 550;
       cursor: pointer;
-      text-align: left;
+      text-align: start;
       transition: border-color 0.15s, box-shadow 0.15s;
       &:hover {
         border-color: var(--border-strong);

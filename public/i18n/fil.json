@@ -1,0 +1,895 @@
+{
+  "common": {
+    "videoFiles": "Mga video file",
+    "audioFiles": "Mga audio file",
+    "cancel": "Kanselahin",
+    "close": "Isara",
+    "retry": "Subukan ulit",
+    "none": "Wala",
+    "remove": "Alisin"
+  },
+  "nav": {
+    "features": "Mga feature",
+    "privacy": "Privacy",
+    "faq": "FAQ",
+    "changelog": "Mga pagbabago",
+    "language": "Wika",
+    "searchLanguage": "Maghanap ng wika",
+    "noLanguage": "Walang nahanap na wika",
+    "install": "I-install ang app",
+    "open": "Buksan ang editor",
+    "menu": "Buksan ang menu",
+    "close": "Isara ang menu",
+    "thumbnail": "Mga thumbnail"
+  },
+  "theme": {
+    "system": "System",
+    "light": "Maliwanag",
+    "dark": "Madilim",
+    "label": "Tema"
+  },
+  "footer": {
+    "tagline": "Libre at open-source na video editor na buong tumatakbo sa iyong browser. Hindi kailanman lumalabas ang mga file mo sa iyong computer",
+    "issues": "Mag-ulat ng problema",
+    "noTracking": "Walang cookies, walang tracking",
+    "product": "Produkto",
+    "legal": "Legal"
+  },
+  "pwa": {
+    "update": "May bagong bersyon",
+    "reload": "I-reload"
+  },
+  "landing": {
+    "hero": {
+      "badgeLocal": "100% lokal, walang upload",
+      "badgeOpen": "Libre at open source",
+      "title1": "I-edit ang mga video mo",
+      "title2": "Walang lumalabas sa iyong computer",
+      "lead": "Pinuputol ng LocalCutVideo ang mga katahimikan, ginagawang teksto ang salita gamit ang Whisper, naglalagay ng karaoke subtitle, at nire-reframe ang 16:9 bilang 9:16, lahat sa loob ng iyong browser. Walang upload, walang account, walang server",
+      "cta": "Buksan ang editor",
+      "github": "Tingnan sa GitHub",
+      "hint": "Pinakamahusay sa Chrome o Edge sa computer",
+      "demo": "Subukan gamit ang demo video"
+    },
+    "mock": {
+      "w1": "So ngayong araw",
+      "filler": "ahm,",
+      "w2": "ipapakita ko sa inyo",
+      "w3": "kung paano ito gumagana",
+      "line2": "Lahat ay tumatakbo sa sarili mong computer, pati ang AI",
+      "line3": "Burahin ang isang salita, napuputol ang video",
+      "cap1": "Nananatili ito sa iyong",
+      "cap2": "computer"
+    },
+    "stats": {
+      "upload": "byte na na-upload",
+      "local": "pinoproseso sa device mo",
+      "languages": "wika ng interface",
+      "gpu": "pinabilis na AI at encoding"
+    },
+    "how": {
+      "eyebrow": "Paano ito gumagana",
+      "title": "Mula sa raw footage hanggang sa video na handang i-post, sa tatlong hakbang",
+      "open": {
+        "title": "Magbukas ng video",
+        "text": "Pumili ng file sa disk mo. Binabasa ito sa mismong lugar: walang kopya, walang upload, kahit ilang gigabyte pa ang file"
+      },
+      "edit": {
+        "title": "Hayaang magtrabaho ang editor",
+        "text": "Natutukoy ang mga katahimikan, ginagawang teksto ang salita nang bawat salita, at sinusundan ang mga mukha, lahat sa lokal. Ayusin ang kahit ano sa pag-edit ng teksto"
+      },
+      "export": {
+        "title": "I-export ang MP4",
+        "text": "Pumili ng 16:9, 9:16 o 1:1. Ine-encode ng iyong graphics card ang video at direktang isinusulat sa disk mo"
+      }
+    },
+    "features": {
+      "eyebrow": "Mga feature",
+      "title": "Lahat ng kailangan mo para sa mga video na nagsasalita sa camera",
+      "lead": "Ginawa para sa mga creator ng YouTube, TikTok, Reels at Shorts na ayaw i-upload kahit saan ang kanilang raw footage",
+      "silences": {
+        "title": "Awtomatikong pagputol ng katahimikan",
+        "text": "Natutukoy ang mga paghinto batay sa lakas ng tunog at inaalis ang mga ito, na may naaayos na threshold, pinakamaikling haba at puwang sa paghinga"
+      },
+      "textEdit": {
+        "title": "Mag-edit gamit ang teksto",
+        "text": "Binibigyan ng Whisper ng timestamp ang bawat salita. Burahin ang mga salita sa transcript at mapuputol ang katugmang bahagi ng video"
+      },
+      "captions": {
+        "title": "Karaoke subtitles",
+        "text": "Mga subtitle na gumagalaw bawat salita na nakabaon sa video, sa istilong karaoke, simple o naka-box, sa kulay ng highlight na gusto mo"
+      },
+      "framing": {
+        "title": "Awtomatikong framing 16:9 → 9:16",
+        "text": "Pinapanatili ng face tracking ang nagsasalita sa frame kapag ginawa mong patayo ang pahigang video"
+      },
+      "zoom": {
+        "title": "Smart zoom",
+        "text": "Ang salit-salitang pag-zoom sa bawat putol ay nagpapamukhang sinadya ang mga jump cut at pinapanatiling nanonood ang mga tao"
+      },
+      "ducking": {
+        "title": "Tunog at musika",
+        "text": "Lakasan ang volume, pantayin ang mga clip, at magdagdag ng background music na kusang humihina kapag may nagsasalita"
+      },
+      "recovery": {
+        "title": "Pagbawi pagkatapos mag-crash",
+        "text": "Nase-save agad sa browser mo ang bawat pagbabago. Buksan muli ang tab at ituloy mismo kung saan ka huminto"
+      },
+      "offline": {
+        "title": "Gumagana offline",
+        "text": "I-install ito bilang app. Kapag na-download na ang AI model, gumagana ang buong editor kahit walang internet"
+      },
+      "export": {
+        "title": "Mabilis na hardware export",
+        "text": "Ginagamit ng encoding ang WebCodecs, ang video encoder na nasa iyong browser at graphics card, sa halip na mabagal na software encoding"
+      },
+      "clips": {
+        "title": "Pagsasama-sama ng maraming clip",
+        "text": "Mag-drop ng ilang take nang sabay: pinagsasama ang mga ito sa iisang video, sa pagkakasunod na pipiliin mo, na may iisang timeline at transcript"
+      },
+      "inputs": {
+        "title": "MP4, MOV, WebM, MKV",
+        "text": "Binubuksan ang mga file mula sa iyong phone at camera, kasama ang mga HEVC video ng iPhone kung kaya itong i-decode ng browser mo"
+      },
+      "languages": {
+        "title": "Maraming wika",
+        "text": "Available ang interface sa {{ count }} na wika at nagta-transcribe ang Whisper ng dose-dosenang iba pa, na may awtomatikong pagtukoy ng wika"
+      }
+    },
+    "privacy": {
+      "eyebrow": "Privacy",
+      "title": "Walang upload, mula pa sa disenyo",
+      "lead": "Direktang binabasa ang video mo mula sa disk. Ang pagsusuri ng audio, transcription, face tracking at encoding ay tumatakbo lahat sa mga background thread (Web Workers) sa iyong computer. Talagang walang server na mapagpapadalhan ng footage mo",
+      "upload": "Kailanman walang upload: hindi kailanman lumalabas ang file sa iyong computer",
+      "account": "Walang account, walang cookies, walang analytics",
+      "csp": "Pinapayagan lang ng mahigpit na Content-Security-Policy ang page na makipag-ugnayan sa site na ito, na siya ring nagbibigay ng mga AI model (backup lang ang Hugging Face)",
+      "storage": "Sine-save ang mga proyekto sa lokal na database ng browser mo (IndexedDB) at mabubura anumang oras",
+      "diagram": {
+        "machine": "Ang computer mo",
+        "file": "Video file",
+        "browser": "Ang browser mo",
+        "upload": "Pag-upload sa server",
+        "model": "Pag-download ng AI model (isang beses, naka-cache)"
+      }
+    },
+    "support": {
+      "eyebrow": "Compatibility",
+      "title": "Suporta sa browser",
+      "ok": "Buo",
+      "partial": "Bahagya",
+      "full": "Lahat, kasama ang pagbawi pagkatapos mag-crash at pagsulat ng export direkta sa disk",
+      "firefox": "Gumagana ang pag-edit at pag-export. Pagkatapos isara ang tab, kailangan mong piliin ulit ang video",
+      "safari": "Mga bagong bersyon lang. Piliin ulit ang video pagkatapos mag-reload; dina-download ang export",
+      "mobile": "Mga phone at tablet",
+      "mobileText": "Gumagana sa maiikling clip, pero dahil sa limitasyon ng memory, hindi maaasahan ang mahahabang video"
+    },
+    "faq": {
+      "title": "Mga madalas itanong",
+      "free": {
+        "q": "Libre ba talaga? Ano ang kapalit?",
+        "a": "Libre ito at open source. Dahil nangyayari ang lahat ng trabaho sa iyong computer, walang gastos sa server, kaya walang ibebenta sa iyo at walang datos na kokolektahin"
+      },
+      "formats": {
+        "q": "Anong mga format ng video ang mabubuksan ko?",
+        "a": "MP4, MOV, WebM at MKV, basta kaya ng browser mo na i-decode ang codec (H.264, HEVC, VP9, AV1 depende sa browser at system). MP4 file ang export"
+      },
+      "browsers": {
+        "q": "Bakit Chrome o Edge?",
+        "a": "Sinusuportahan nila ang File System Access API, na nagpapahintulot sa editor na buksan muli ang video mo pagkatapos mag-reload at isulat ang export direkta sa disk. Gumagana rin ang ibang browser, may ilang dagdag na click lang"
+      },
+      "size": {
+        "q": "May limitasyon ba sa laki ng file?",
+        "a": "Walang limitasyon sa upload dahil walang ina-upload. Binabasa ang video mula sa disk nang paunti-unti; ang praktikal na limitasyon ay ang memory ng computer mo at ang pasensya mo sa napakahahabang video"
+      },
+      "offline": {
+        "q": "Gumagana ba ito nang walang internet?",
+        "a": "Oo, kapag na-load na. I-install ito bilang app (PWA) at mag-transcribe nang isang beses habang online: maka-cache ang Whisper model at gagana ang lahat offline"
+      },
+      "ai": {
+        "q": "Saan tumatakbo ang AI?",
+        "a": "Sa browser mo. Tumatakbo ang Whisper gamit ang Transformers.js sa iyong graphics card (WebGPU) o processor (WebAssembly), at MediaPipe ang ginagamit sa face detection. Isang beses lang dina-download ang mga model, hindi kailanman ipinapadala ang audio mo"
+      }
+    },
+    "final": {
+      "title": "Ang susunod mong video, na-edit sa ilang minuto",
+      "text": "Walang sign-up, walang upload, walang watermark. Magbukas ng file at magsimulang mag-edit"
+    },
+    "thumbnail": {
+      "eyebrow": "Bago · Mga thumbnail",
+      "title": "At ang thumbnail na babagay dito",
+      "text": "Hinahanap ng thumbnail maker ang pinakamalinaw na sandali ng video mo. Magdagdag ng malaking pamagat na may makukulay na salita at i-download ito sa tamang laki",
+      "points": {
+        "moments": "Mga mungkahing pinakamagandang sandali",
+        "title": "Pamagat na may naka-highlight na salita, 4 na istilo",
+        "formats": "YouTube 1280×720, Shorts at parisukat",
+        "local": "Ginawa sa device mo, walang ina-upload"
+      },
+      "cta": "Gumawa ng thumbnail",
+      "mockTitle": "Aking unang",
+      "mockAccent": "vlog"
+    }
+  },
+  "changelog": {
+    "eyebrow": "Mga release",
+    "title": "Mga pagbabago",
+    "lead": "Lahat ng bersyon ng LocalCutVideo, pinakabago muna",
+    "current": "Ginagamit mo ang",
+    "github": "Tingnan sa GitHub",
+    "releases": "Mga release sa GitHub",
+    "latest": "Pinakabago",
+    "error": "Hindi ma-load ang listahan ng mga pagbabago"
+  },
+  "projects": {
+    "title": "Mga proyekto mo",
+    "lead": "Awtomatikong sine-save ang mga proyekto sa browser na ito. Nananatili ang mga video mo kung nasaan sila sa disk",
+    "resume": "Ituloy kung saan ka huminto",
+    "reading": "Binabasa ang video…",
+    "drop": "I-drop dito ang mga video mo",
+    "or": "o",
+    "open": "Buksan ang mga video",
+    "private": "Binabasa nang lokal ang file, walang ina-upload",
+    "noFsAccess": "Hindi kayang tandaan ng browser mo ang mga file sa pagitan ng mga session: pagkatapos isara ang tab, kailangan mong piliin ulit ang video. Naiiwasan ito ng Chrome o Edge",
+    "recent": "Mga kamakailang proyekto",
+    "empty": "Wala pang proyekto. Magbukas ng video para magsimula",
+    "delete": "Burahin ang proyekto",
+    "confirmDelete": "Burahin ang proyektong “{{ name }}”? Hindi maaapektuhan ang video file sa disk mo",
+    "multi": "Maraming file? Pagsasamahin sila sa iisang video, ayon sa pagkakasunod ng pangalan",
+    "importFile": "Magbukas ng project file (.lcv.json)",
+    "saveFile": "I-save ang proyekto bilang file",
+    "imported": "Nabuksan ang proyekto: piliin ang mga video nito para magpatuloy"
+  },
+  "errors": {
+    "notVideo": "Mukhang hindi video ang file na ito",
+    "codec": "Hindi ma-decode ng browser mo ang codec ng video na ito (kailangan ng HEVC/H.265 ang Chrome, o ang HEVC extension sa Edge). Subukang i-convert ito sa H.264 MP4",
+    "noVideo": "Walang nahanap na video track sa file na ito",
+    "generic": "Nagkaproblema habang binabasa ang file na ito",
+    "transcribe": "Nabigo ang transcription. Subukan ang mas maliit na model o tingnan ang koneksyon mo para sa unang pag-download",
+    "export": "Nabigo ang pag-export",
+    "faces": "Nabigo ang face tracking sa video na ito",
+    "skipped": "Nilaktawan (hindi mabasa): {{ names }}",
+    "skippedCodec": "Nilaktawan, hindi suportado ng browser na ito ang codec: {{ names }}. Subukan ang Chrome, o i-convert sa H.264 MP4",
+    "notProject": "Hindi proyekto ng LocalCutVideo ang file na ito",
+    "demo": "Hindi ma-load ang demo video"
+  },
+  "languages": {
+    "en": "Ingles",
+    "fr": "Pranses",
+    "es": "Espanyol",
+    "it": "Italyano",
+    "de": "Aleman",
+    "pt": "Portuges",
+    "nl": "Dutch"
+  },
+  "editor": {
+    "back": "Bumalik sa mga proyekto",
+    "name": "Pangalan ng proyekto",
+    "undo": "I-undo",
+    "redo": "I-redo",
+    "missing": "Wala na ang proyektong ito",
+    "save": {
+      "saving": "Sine-save…",
+      "saved": "Naka-save nang lokal",
+      "error": "Hindi na-save"
+    },
+    "reconnect": {
+      "loading": "Binubuksan ang video…",
+      "title": "Ikonekta ulit ang mga video mo",
+      "allow": "Payagan ang access sa lahat",
+      "select": "Piliin",
+      "mismatch": "Mukhang hindi ito ang orihinal na file (“{{ name }}”). Gamitin pa rin?",
+      "intro": "Ligtas ang proyekto. Para sa privacy mo, humihingi ulit ng pahintulot ang browser bago mabasa ng editor ang mga file mo",
+      "allowOne": "Payagan",
+      "privacy": "Binabasa ang mga video mo kung nasaan sila sa disk, hindi kailanman kinokopya o ina-upload",
+      "status": {
+        "ready": "Nakakonekta",
+        "permission": "Naghihintay ng pahintulot mo",
+        "moved": "Hindi mahanap: inilipat o pinalitan ang pangalan?",
+        "missing": "Piliin ulit (hindi tinatandaan ng browser mo ang access sa file)",
+        "loading": "Binubuksan…"
+      }
+    },
+    "preview": {
+      "cut": "Putol",
+      "back": "Atras 5 s",
+      "play": "I-play",
+      "pause": "I-pause",
+      "savedHint": "Oras na inalis ng mga putol",
+      "badge": "Magaang preview · {{ q }}p",
+      "quality": "Kalidad ng preview",
+      "qualityHint": "Pinapanatiling maayos ng mas magaang preview ang editor. Laging buong kalidad ang ginagamit ng export"
+    },
+    "timeline": {
+      "title": "Timeline",
+      "silence": "Katahimikan",
+      "manual": "Manwal",
+      "text": "Teksto",
+      "hint": "I-drag sa waveform para pumili ng bahagi, tapos Putulin o Bilis · i-click ang isang putol para ayusin ang mga gilid · i-double click para alisin",
+      "removeCut": "Alisin ang putol",
+      "zoom": "Zoom ng timeline",
+      "analyzing": "Sinusuri ang audio…",
+      "zoomIn": "I-zoom in",
+      "zoomOut": "I-zoom out",
+      "fit": "Ikasya",
+      "fitHint": "Ipakita ang buong video (tip: Ctrl + wheel para mag-zoom)",
+      "manualCut": "Manwal na pagputol",
+      "markIn": "Simula",
+      "markOut": "Wakas",
+      "markInHint": "Simula ng bahaging puputulin, sa playhead (I)",
+      "markOutHint": "Wakas ng bahaging puputulin, sa playhead (O)",
+      "cutMarked": "Putulin",
+      "cutHint": "Alisin ang bahagi sa pagitan ng simula at wakas (X)",
+      "clearMarks": "I-clear ang simula at wakas",
+      "marksMissing": "Magtakda muna ng simula (I) at wakas (O)",
+      "analysisError": "Hindi masuri ang audio",
+      "selectedCut": "Napiling putol",
+      "earlier": "Mas maaga",
+      "later": "Mas huli",
+      "listen": "Pakinggan ang putol",
+      "speed": "Bilis",
+      "speedHint": "Pabilisin o pabagalin ang bahagi sa pagitan ng simula at wakas",
+      "selectedSpeed": "Pagbabago ng bilis",
+      "removeSpeed": "Ibalik sa normal na bilis",
+      "listenSpeed": "I-play ang pagbabago ng bilis",
+      "selectFirst": "Pumili muna ng bahagi: i-drag sa waveform, o magtakda ng Simula at Wakas"
+    },
+    "transcript": {
+      "title": "Transcript",
+      "words": "{{ count }} salita",
+      "fillers": "Alisin ang mga filler ({{ count }})",
+      "restore": "Ibalik lahat",
+      "selected": "{{ count }} ang napili",
+      "cut": "Putulin / ibalik",
+      "tip": "I-click ang isang salita para tumalon doon. I-drag o i-Shift-click para pumili, tapos Delete para putulin o Itama (Enter) para ayusin ang maling narinig ni Whisper",
+      "emptyTitle": "Wala pang transcript",
+      "emptyText": "I-transcribe ang video para ma-edit ito gamit ang teksto at magkaroon ng subtitle bawat salita",
+      "correct": "Itama",
+      "correctTitle": "Ano talaga ang sinabi?",
+      "correctHint": "I-type ulit ang isang salita o buong pangungusap. Kusang naaayos ang timing at mga subtitle",
+      "apply": "Ilapat"
+    },
+    "transcribe": {
+      "title": "Transcription (Whisper)",
+      "hint": "Tumatakbo sa device mo. Isang beses dina-download ang model, tapos naka-cache na",
+      "model": "Model",
+      "models": {
+        "tiny": "Mabilis",
+        "base": "Balanse",
+        "small": "Tumpak"
+      },
+      "download": "Isang beses na pag-download ng {{ size }}",
+      "language": "Wikang sinasalita",
+      "auto": "Kusang tukuyin",
+      "run": "I-transcribe",
+      "rerun": "I-transcribe ulit lahat",
+      "done": "{{ count }} salita ang na-transcribe",
+      "empty": "Walang nahanap na pananalita sa video na ito",
+      "stage": {
+        "audio": "Kinukuha ang audio…",
+        "download": "Dina-download ang model…",
+        "transcribe": "Nagta-transcribe…"
+      },
+      "missing": "I-transcribe ang mga bagong clip ({{ count }})",
+      "rerunHint": "Nagsisimula ulit gamit ang model at wika sa itaas",
+      "confirmAll": "I-transcribe ulit lahat? Mawawala ang mga salitang pinutol o itinama mo",
+      "detected": "Natukoy na wika: {{ language }}"
+    },
+    "tabs": {
+      "format": "Format",
+      "cuts": "Mga putol",
+      "captions": "Subtitle",
+      "framing": "Framing",
+      "audio": "Tunog",
+      "clips": "Mga clip",
+      "texts": "Mga teksto"
+    },
+    "format": {
+      "title": "Output format",
+      "hint": "Kinokrop ang video para magkasya. Gamitin ang Framing para sundan ang nagsasalita",
+      "landscape": "YouTube",
+      "vertical": "TikTok · Reels",
+      "square": "Feed",
+      "source": "Pinagmulan:",
+      "resolution": "Resolution",
+      "fps": "Frame bawat segundo",
+      "exportNote": "Pinipili ang resolution at frame rate sa pag-export",
+      "rotation": "Pag-ikot",
+      "rotateLeft": "Iikot pakaliwa",
+      "rotateRight": "Iikot pakanan",
+      "rotationHint": "Para sa video na kinunan nang patagilid. Nalalapat sa lahat ng clip",
+      "rotatedFaces": "Inikot ang video: i-on ulit ang “Sundan ang mukha” sa Framing"
+    },
+    "cuts": {
+      "title": "Pagtukoy ng katahimikan",
+      "hint": "Inaalis ang mga paghinto. Babaan ang threshold kung may mga salitang naputol",
+      "threshold": "Threshold",
+      "suggested": "Mungkahi para sa recording na ito: {{ value }} dB",
+      "minSilence": "Pinakamaikling katahimikan",
+      "padding": "Puwang sa paghinga",
+      "detect": "Tukuyin at putulin ang mga katahimikan",
+      "detected": "{{ count }} katahimikan ang naputol",
+      "count": "putol",
+      "removed": "inalis",
+      "final": "huling haba",
+      "clear": "Alisin lahat ng putol",
+      "mode": "Hanapin ang mga paghinto gamit ang",
+      "modes": {
+        "audio": "Volume",
+        "transcript": "Transcript"
+      },
+      "modeHint": "Tumpak ang transcript mode kahit may ingay o musika sa background",
+      "modeNeedsTranscript": "I-transcribe ang video para mahanap ang mga paghinto mula sa mga salita: mas tumpak sa maiingay na lugar",
+      "preset": "Ritmo",
+      "presets": {
+        "gentle": "Natural",
+        "normal": "Balanse",
+        "tight": "Masigla"
+      },
+      "live": "Nag-a-update agad ang mga putol habang binabago mo ang settings",
+      "silentClips": "{{ count }} clip na walang boses: tunay na bakanteng oras lang ang pinuputol doon"
+    },
+    "captions": {
+      "title": "Nakabaong subtitle",
+      "style": "Istilo",
+      "styles": {
+        "karaoke": "Karaoke",
+        "clean": "Simple",
+        "boxed": "Naka-box"
+      },
+      "position": "Posisyon",
+      "positions": {
+        "top": "Itaas",
+        "center": "Gitna",
+        "bottom": "Ibaba"
+      },
+      "size": "Laki",
+      "words": "Salita bawat subtitle",
+      "uppercase": "Malalaking titik",
+      "highlight": "Kulay ng highlight"
+    },
+    "framing": {
+      "title": "Awtomatikong framing",
+      "hint": "Sinusundan ang mga mukha para manatili sa frame ang nagsasalita, mainam para sa 16:9 → 9:16",
+      "center": "Nasa gitna",
+      "face": "Sundan ang mukha",
+      "analyzing": "Sinusundan ang mga mukha…",
+      "analyze": "Sundan ang mga mukha",
+      "reanalyze": "Sundan ulit ang mga mukha",
+      "tracked": "{{ count }} posisyon ang nasundan",
+      "found": "Nasundan ang mukha: sinusundan ng framing ang nagsasalita",
+      "notFound": "Walang mukhang palaging nakita sa video na ito",
+      "punch": "Smart zoom",
+      "punchHint": "Nagsasalit-salit ng bahagyang zoom sa bawat putol, o sa bawat pangungusap kapag walang putol, para manatiling masigla ang video",
+      "zoom": "Lakas ng zoom",
+      "firstTime": "Kapag pinili ang “Sundan ang mukha”, sinusuri ang video nang isang beses, nang lokal",
+      "beatsCuts": "Nagbabago ang zoom nang {{ count }} beses, sa mga putol mo",
+      "beatsAuto": "Wala pang putol: nagbabago ang zoom nang {{ count }} beses, sa mga pangungusap o bawat 4 s"
+    },
+    "audio": {
+      "title": "Background music",
+      "hint": "Kusang humihina ang musika habang may nagsasalita (auto-ducking)",
+      "reconnect": "Ikonekta ulit ang “{{ name }}”",
+      "pick": "Pumili ng music file",
+      "enabled": "Isama sa video",
+      "volume": "Volume ng musika",
+      "ducking": "Paghina habang nagsasalita",
+      "duckingHint": "Gaano humihina ang musika kapag may nagsasalita"
+    },
+    "export": {
+      "button": "I-export",
+      "title": "I-export ang video",
+      "running": "Nag-e-export…",
+      "eta": "Mga {{ time }} pa",
+      "keepOpen": "Panatilihing bukas ang tab na ito. Ginagamit ng encoding ang iyong graphics card kung maaari",
+      "done": "Tapos na ang export",
+      "saved": "Na-save ang “{{ name }}” sa disk mo sa loob ng {{ seconds }} s",
+      "downloaded": "Na-download ang “{{ name }}” sa loob ng {{ seconds }} s",
+      "duration": "Haba",
+      "from": "mula {{ time }}",
+      "streamHint": "Ikaw ang pipili kung saan ise-save ang MP4. Direkta itong isinusulat sa disk",
+      "downloadHint": "Binubuo nang lokal ang MP4, tapos dina-download",
+      "start": "I-export ang MP4",
+      "saveProject": "I-save ang proyekto",
+      "saveProjectHint": "Isang .lcv.json file na may pag-edit mo (walang video sa loob), para maituloy sa ibang computer",
+      "projectSaved": "Na-save ang proyekto bilang .lcv.json file"
+    },
+    "clips": {
+      "title": "Mga clip",
+      "hint": "Magkakasunod na nagpe-play ang mga video ayon sa pagkakasunod na ito. I-drag para ayusin ulit: sumusunod ang mga putol at salita sa kanilang clip",
+      "jump": "Pumunta sa clip na ito",
+      "up": "Ilipat pataas",
+      "down": "Ilipat pababa",
+      "remove": "Alisin ang clip",
+      "add": "Magdagdag ng video",
+      "summary": "{{ count }} clip · {{ time }} lahat",
+      "confirmRemove": "Alisin ang “{{ name }}” sa proyekto? Aalisin din ang mga putol at salita nito (Ctrl+Z para i-undo)",
+      "added": "{{ count }} clip ang naidagdag",
+      "addedTranscribe": "{{ count }} clip ang naidagdag. I-transcribe ulit para malagyan sila ng subtitle: pinapanatili ang mga clip na na-transcribe na",
+      "noVoice": "walang boses",
+      "voiceOn": "May boses · i-click kung walang nagsasalita",
+      "voiceOff": "Walang boses · i-click kung may nagsasalita"
+    },
+    "auto": {
+      "button": "Auto edit",
+      "cta": "I-auto edit ang video",
+      "transcribeOnly": "o i-transcribe lang",
+      "heading": "Hayaan ang LocalCutVideo na i-edit ang video mo",
+      "lead": "Sa isang click: inalis ang katahimikan at pag-aalinlangan, may subtitle, naka-frame sa nagsasalita at may smart zoom. Mababago mo ang lahat pagkatapos",
+      "target": "Saan mo ito ipo-post?",
+      "options": {
+        "silences": "Putulin ang mga katahimikan",
+        "fillers": "Alisin ang pag-aalinlangan (ahm, eh…)",
+        "captions": "Karaoke subtitles",
+        "framing": "Sundan ang mukha",
+        "framingNoCrop": "Hindi kailangan: ipinapakita ng format na ito ang buong larawan",
+        "zoom": "Smart zoom"
+      },
+      "local": "Lahat ay tumatakbo sa device mo. Hindi kailanman ina-upload ang video",
+      "start": "Simulan ang auto edit",
+      "running": "Ine-edit ang video mo…",
+      "done": "Na-edit na ang video mo!",
+      "view": "Tingnan ang resulta",
+      "undo": "I-undo ang auto edit",
+      "undone": "Bumalik ang proyekto sa dati bago ang auto edit",
+      "summary": {
+        "cuts": "putol",
+        "removed": "inalis",
+        "words": "salitang may subtitle",
+        "silent": "{{ count }} clip na walang boses: tunay na bakanteng oras lang ang pinutol"
+      },
+      "steps": {
+        "analyze": "Sinusuri ang audio",
+        "transcribe": "Tina-transcribe ang pananalita",
+        "fillers": "Inaalis ang pag-aalinlangan",
+        "silences": "Pinuputol ang mga katahimikan",
+        "framing": "Sinusundan ang mukha",
+        "style": "Subtitle at smart zoom",
+        "voice": "Tinutukoy ang mga boses"
+      },
+      "status": {
+        "skipped": "nilaktawan",
+        "error": "nabigo"
+      },
+      "voice": {
+        "title": "May nagsasalita ba sa video?",
+        "auto": "Auto",
+        "yes": "Oo",
+        "no": "Hindi",
+        "detectedYes": "Natukoy: may nagsasalita",
+        "detectedNo": "Natukoy: walang boses",
+        "hint": "Walang boses: walang transcript o subtitle, tunay na bakanteng oras lang ang pinuputol"
+      }
+    },
+    "mix": {
+      "title": "Tunog ng video",
+      "hint": "Lakasan o hinaan ang tunog ng mga clip mo",
+      "volume": "Volume",
+      "mute": "I-mute",
+      "unmute": "I-unmute",
+      "volumeHint": "Nalalapat sa preview at export",
+      "boostHint": "Lampas 100 %, pinipigilan ng limiter ang pagkabasag ng tunog",
+      "normalize": "Pantayin ang mga clip",
+      "normalizeHint": "Pare-parehong lakas ng bawat clip, kinunan man nang malapit o malayo",
+      "denoise": "Bawasan ang ingay sa background",
+      "denoiseHint": "Mas malinaw na boses (hangin, sitsit, bentilador). Inilalapat sa export, sa mga clip na may boses. Pakinggan muna",
+      "listen": "Pakinggan ang 8 s ng resulta",
+      "stopListening": "Itigil ang pakikinig",
+      "preparing": "Inihahanda…"
+    },
+    "thumbnail": "Thumbnail",
+    "transition": {
+      "title": "Transition sa mga putol",
+      "none": "Diretsong putol",
+      "dip": "Mabilis na fade",
+      "black": "Fade sa itim",
+      "hint": "Nagpe-play sa bawat putol at pagpapalit ng clip (at sa simula at wakas kapag fade sa itim). Makikita habang nagpe-play"
+    },
+    "texts": {
+      "title": "Mga teksto sa ibabaw ng video",
+      "hint": "Mga pamagat at tala na ipinapakita sa playhead. Ilagay ang mga salita sa pagitan ng mga asterisk para kulayan ang mga ito",
+      "add": "Magdagdag ng teksto sa playhead",
+      "default": "Ang iyong *teksto*",
+      "timing": "Ipinapakita",
+      "startHere": "Magsimula rito",
+      "endHere": "Magtapos dito",
+      "remove": "Alisin ang tekstong ito"
+    },
+    "background": {
+      "title": "Background",
+      "hint": "Pinapalabo ang background sa likod ng tao, na nananatiling malinaw. Kinakalkula sa device mo",
+      "none": "Malinaw",
+      "blur": "Malabo",
+      "strength": "Lakas ng pagpapalabo",
+      "error": "Hindi masimulan ang pagpapalabo ng background sa device na ito"
+    }
+  },
+  "legal": {
+    "updated": "Huling na-update: Nobyembre 1, 2026",
+    "contact": "Makipag-ugnayan",
+    "nav": {
+      "notice": "Legal na abiso",
+      "privacy": "Privacy",
+      "terms": "Mga tuntunin ng paggamit"
+    },
+    "notice": {
+      "title": "Legal na abiso",
+      "intro": "Impormasyong hinihingi ng batas ng France (Artikulo 6 ng LCEN, batas blg. 2004-575 ng Hunyo 21, 2004) tungkol sa publisher at host ng website na ito.",
+      "sections": [
+        {
+          "title": "Publisher",
+          "body": [
+            "Ang website na localcutvideo.mbonnici.fr (“LocalCutVideo”) ay inilalathala ni Maxence Bonnici, isang pribadong indibidwal, nang hindi pangkomersyo.",
+            "Direktor ng publikasyon: Maxence Bonnici.",
+            "Makipag-ugnayan: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Hosting",
+          "body": [
+            "Ang website ay self-hosted ng publisher nito, si Maxence Bonnici, sa isang personal na server, at idine-deploy gamit ang platform na Coolify.",
+            "Makipag-ugnayan: maxence.bonnici@outlook.fr"
+          ]
+        },
+        {
+          "title": "Intelektwal na pag-aari",
+          "body": [
+            "Open source ang source code ng LocalCutVideo at inilathala sa ilalim ng MIT license sa [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
+            "Ang mga third-party na component, AI model at font na ginagamit ng app ay nananatiling pag-aari ng kanilang mga may-akda at ginagamit sa ilalim ng sarili nilang mga lisensya, na nakalista sa [mga tuntunin ng paggamit](/terms). Ang mga nabanggit na brand (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) ay pag-aari ng kanilang mga may-ari."
+          ]
+        },
+        {
+          "title": "Pananagutan",
+          "body": [
+            "Sinisikap ng publisher na panatilihing available ang website at tumpak ang impormasyon nito, pero hindi niya magagarantiya ang alinman. Ang paggamit ng app ay sakop ng [mga tuntunin ng paggamit](/terms)."
+          ]
+        },
+        {
+          "title": "Personal na datos",
+          "body": [
+            "Hindi nangongolekta ang LocalCutVideo ng anumang personal na datos: sa device mo lang pinoproseso ang mga video. Nasa [patakaran sa privacy](/privacy) ang mga detalye."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Patakaran sa privacy",
+      "intro": "Ginawa ang LocalCutVideo para hindi kailanman lumabas ang mga video mo sa iyong device. Ipinapaliwanag ng page na ito nang simple kung ano ang pinoproseso, at kung saan.",
+      "sections": [
+        {
+          "title": "Sa madaling salita",
+          "body": [
+            "Walang upload: pinoproseso sa browser mo ang iyong mga video, audio at transcript, at hindi kailanman ipinapadala sa publisher o kaninuman.",
+            "Walang account, walang cookies, walang analytics, walang ads."
+          ]
+        },
+        {
+          "title": "Ano ang nananatili sa device mo",
+          "body": [
+            "Direktang binabasa mula sa disk mo ang mga video at audio file na binubuksan mo. Kinakalkula nang lokal ng browser mo ang pagsusuri, transcription (Whisper), face tracking at pag-export.",
+            "Sine-save ang mga proyekto mo (mga putol, transcript, settings) sa lokal na database ng browser mo (IndexedDB), kasama ang isang thumbnail at cache ng mga pagsusuri. Walang access dito ang publisher. Maaari kang magbura ng proyekto mula sa page ng mga proyekto, o burahin lahat sa pag-clear ng datos ng site na ito sa settings ng browser."
+          ]
+        },
+        {
+          "title": "Lokal na storage",
+          "body": [
+            "Iniimbak ng app ang mga preference mo sa interface (wika, tema, huling binuksang proyekto) sa lokal na storage ng browser, at itinatabi ang sarili nitong mga file at ang mga na-download na AI model sa cache ng browser para gumana offline. Mahigpit na kailangan ang mga ito para sa serbisyo, hindi kailanman ginagamit para i-track ka, kaya hindi na kailangan ng consent banner."
+          ]
+        },
+        {
+          "title": "Server",
+          "body": [
+            "Ihinahatid lang ng server ang mga file ng app at hindi ito nag-iimbak ng access log. Tulad ng anumang web server, teknikal nitong natatanggap ang IP address mo para sagutin ang mga request, pero hindi ito iniimbak."
+          ]
+        },
+        {
+          "title": "Mga third party",
+          "body": [
+            "Hugging Face: ang Whisper model ay ibinibigay ng site na ito, gaya ng ibang bahagi ng app. Kung hindi lang ito available dito, saka ito dina-download mula sa huggingface.co; matatanggap noon ng Hugging Face ang IP address mo at karaniwang impormasyon ng browser, pero hindi kailanman ang audio mo. Tingnan ang kanilang [patakaran sa privacy](https://huggingface.co/privacy).",
+            "GitHub: kung susundan mo lang ang link papunta sa source code repository.",
+            "Walang ibang third party na kinokontak: teknikal na pinipigilan ng mahigpit na Content-Security-Policy ang page na kumonekta saanman."
+          ]
+        },
+        {
+          "title": "Mga karapatan mo",
+          "body": [
+            "Sa ilalim ng GDPR, may karapatan kang i-access, itama at burahin ang datos mo, at tumutol sa pagproseso nito. Dahil walang hawak na datos tungkol sa iyo ang publisher, kadalasan ay walang maa-access, pero maaari kang magtanong ng kahit ano sa maxence.bonnici@outlook.fr. Maaari ka ring maghain ng reklamo sa CNIL ([cnil.fr](https://www.cnil.fr)) o sa awtoridad sa proteksyon ng datos ng iyong bansa."
+          ]
+        },
+        {
+          "title": "Mga pagbabago",
+          "body": [
+            "Maaaring ma-update ang patakarang ito habang umuunlad ang app. Nakalagay sa itaas ng page na ito ang petsa ng huling update."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Mga tuntunin ng paggamit",
+      "intro": "Sa paggamit ng LocalCutVideo, tinatanggap mo ang mga tuntuning ito. Maiikli ang mga ito dahil simple ang serbisyo: isang libreng tool na tumatakbo sa iyong browser.",
+      "sections": [
+        {
+          "title": "Serbisyo",
+          "body": [
+            "Ang LocalCutVideo ay isang libreng app sa pag-edit ng video na buong tumatakbo sa iyong web browser. Ibinibigay ito nang walang bayad, walang account, at maaaring magbago, maputol o huminto anumang oras nang walang abiso."
+          ]
+        },
+        {
+          "title": "Ang iyong nilalaman",
+          "body": [
+            "Ikaw pa rin ang nag-iisang may-ari at nag-iisang responsable sa mga video, tunog at musikang ine-edit at inilalathala mo. Dapat ay hawak mo ang mga kinakailangang karapatan (copyright, lisensya sa musika, karapatan sa larawan ng mga taong kinunan).",
+            "Hindi dapat gamitin ang app para sa mga layuning labag sa batas."
+          ]
+        },
+        {
+          "title": "Mga awtomatikong feature",
+          "body": [
+            "Awtomatikong nabubuo ang transcription, mga subtitle, pagtukoy ng katahimikan at awtomatikong framing, at maaaring may mga mali. Tingnan ang resulta bago ito ilathala."
+          ]
+        },
+        {
+          "title": "Ang iyong mga file at proyekto",
+          "body": [
+            "Hindi kailanman binabago ng app ang iyong mga orihinal na file. Iniimbak ang mga proyekto sa browser mo at maaaring mawala kung ma-clear ang datos nito o kung magbakante ng espasyo ang browser: laging itago ang iyong mga orihinal na file."
+          ]
+        },
+        {
+          "title": "Warranty at pananagutan",
+          "body": [
+            "Ibinibigay ang software “as is”, nang walang anumang uri ng warranty, sa ilalim ng MIT license. Hangga't pinapayagan ng batas, hindi mananagot ang publisher sa anumang pinsalang dulot ng paggamit, o ng hindi magamit, ang app (pagkawala ng datos, mga error sa export, hindi pagiging available…)."
+          ]
+        },
+        {
+          "title": "Open source at mga third-party na component",
+          "body": [
+            "Available ang source code sa ilalim ng MIT license sa [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
+            "Umaasa ang LocalCutVideo sa: Mediabunny (MPL-2.0), Transformers.js at ONNX Runtime (Apache-2.0 at MIT), ang mga Whisper model ng OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) at ang mga font na Inter at Montserrat (SIL Open Font License)."
+          ]
+        },
+        {
+          "title": "Namamahalang batas",
+          "body": [
+            "Sakop ng batas ng France ang mga tuntuning ito. Mga tanong: maxence.bonnici@outlook.fr."
+          ]
+        }
+      ]
+    }
+  },
+  "thumbnail": {
+    "eyebrow": "Thumbnail maker",
+    "title": "Mga thumbnail na gustong i-click ng mga tao",
+    "lead": "Piliin ang pinakamagandang sandali ng video mo, magdagdag ng matinding pamagat at mag-download ng larawang handa para sa YouTube, Shorts o Instagram. Lahat ay nangyayari sa device mo",
+    "pick": "Mag-drop ng video o larawan",
+    "pickHint": "MP4, MOV, WebM, JPG, PNG… nananatili sa device mo ang file",
+    "choose": "Pumili ng file",
+    "local": "Walang ina-upload: sa browser mo ginagawa ang larawan",
+    "permissionTitle": "Payagan ang access sa video ng proyekto",
+    "permissionText": "Humihingi ng kumpirmasyon ang browser mo bago basahin ulit ang file mula sa device mo",
+    "permission": "Payagan ang access",
+    "back": "Bumalik sa editor",
+    "dragHint": "I-drag ang larawan para i-reframe ito",
+    "frame": "Frame ng video",
+    "prevFrame": "Nakaraang frame",
+    "nextFrame": "Susunod na frame",
+    "moments": "Pinakamagandang sandali",
+    "other": "Pumili ng ibang file",
+    "format": "Format",
+    "formats": {
+      "landscape": "YouTube",
+      "vertical": "Shorts · TikTok",
+      "square": "Instagram"
+    },
+    "text": "Pamagat",
+    "textPlaceholder": "Ang iyong kaakit-akit na pamagat",
+    "defaultText": "Ang iyong *pamagat* dito",
+    "accentHint": "Ilagay ang mga salita sa pagitan ng mga asterisk para kulayan: *ganito*",
+    "size": "Laki ng teksto",
+    "position": "Posisyon",
+    "positions": {
+      "top": "Itaas",
+      "center": "Gitna",
+      "bottom": "Ibaba"
+    },
+    "alignCenter": "Nasa gitna",
+    "alignLeft": "Kaliwa",
+    "uppercase": "Malalaking titik",
+    "tilt": "Nakatagilid na teksto",
+    "style": "Istilo ng pamagat",
+    "styles": {
+      "outline": "Outline",
+      "shadow": "Anino",
+      "box": "Banner",
+      "highlight": "Marker"
+    },
+    "color": "Kulay ng teksto",
+    "accent": "Kulay ng naka-highlight na salita",
+    "image": "Larawan",
+    "zoom": "Zoom",
+    "brightness": "Liwanag",
+    "contrast": "Contrast",
+    "saturation": "Saturation",
+    "shade": "Padilimin ang mga gilid",
+    "reset": "I-reset",
+    "downloadJpg": "I-download ang JPG",
+    "downloadPng": "I-download ang PNG",
+    "sizeInfo": "{{ width }} × {{ height }} px · JPG ang pinakamainam para sa YouTube (wala pang 2 MB)",
+    "saved": "Na-save: {{ name }}",
+    "loadError": "Hindi mabuksan ang proyektong ito",
+    "readError": "Hindi mabasa ang file na ito"
+  },
+  "seo": {
+    "home": {
+      "title": "LocalCutVideo — Libreng video editor sa browser, walang ina-upload",
+      "description": "I-edit ang mga video mo sa browser: kusang pinuputol ang katahimikan, AI subtitles, framing sa mukha para sa TikTok at Shorts, mga thumbnail. Libre at open source, hindi kailanman lumalabas ang mga video mo sa iyong computer"
+    },
+    "thumbnail": {
+      "title": "Libreng YouTube thumbnail maker — LocalCutVideo",
+      "description": "Gumawa ng thumbnail para sa YouTube, Shorts o Instagram mula sa video mo: mga mungkahing pinakamagandang sandali, malaking pamagat na may makukulay na salita, JPG o PNG. Libre, sa browser, walang ina-upload"
+    },
+    "changelog": {
+      "title": "Mga pagbabago — LocalCutVideo",
+      "description": "Ano ang bago sa LocalCutVideo, bawat bersyon"
+    },
+    "legal": {
+      "title": "Legal na abiso — LocalCutVideo",
+      "description": "Publisher at hosting ng LocalCutVideo"
+    },
+    "privacy": {
+      "title": "Patakaran sa privacy — LocalCutVideo",
+      "description": "Walang ina-upload ang LocalCutVideo: nananatili sa device mo ang iyong mga video, transcript at proyekto"
+    },
+    "terms": {
+      "title": "Mga tuntunin ng paggamit — LocalCutVideo",
+      "description": "Mga tuntunin ng paggamit ng LocalCutVideo, isang libre at open-source na video editor"
+    },
+    "app": {
+      "title": "Mga proyekto — LocalCutVideo",
+      "description": "Ang iyong mga video project, naka-save sa browser mo"
+    },
+    "editor": {
+      "title": "Editor — LocalCutVideo",
+      "description": "Editor ng LocalCutVideo"
+    }
+  },
+  "tour": {
+    "label": "Gabay na tour",
+    "help": "Gabay na tour",
+    "count": "Hakbang {{ n }} ng {{ total }}",
+    "skip": "Laktawan ang tour",
+    "prev": "Bumalik",
+    "next": "Susunod",
+    "done": "Tara na!",
+    "steps": {
+      "auto": {
+        "title": "Isang click: ang auto edit",
+        "text": "Ine-edit ng LocalCutVideo ang video para sa iyo: inalis ang katahimikan at pag-aalinlangan, may subtitle, framing at zoom. Mababago mo ang lahat pagkatapos"
+      },
+      "preview": {
+        "title": "Ang preview",
+        "text": "Kung ano ang nakikita mo, iyon mismo ang ie-export. I-click ito, o pindutin ang Space, para mag-play o mag-pause"
+      },
+      "timeline": {
+        "title": "Ang timeline",
+        "text": "Mag-click para gumalaw sa video. I-drag sa waveform para pumili ng bahagi"
+      },
+      "cut": {
+        "title": "Putulin o baguhin ang bilis",
+        "text": "Kapag may napiling bahagi, inaalis ito ng Putulin (X) at pinapatakbo ito ng Bilis nang mas mabilis o mas mabagal. Ina-undo ng Ctrl+Z ang kahit ano"
+      },
+      "transcript": {
+        "title": "Mag-edit gamit ang teksto",
+        "text": "Kapag na-transcribe na, napuputol ang video kapag binura mo ang isang salita. Maaari mo ring itama ang maling narinig ng AI"
+      },
+      "settings": {
+        "title": "Lahat ng settings",
+        "text": "Format (16:9, 9:16, parisukat), mga putol at transition, subtitle, teksto, framing at blur, tunog at musika"
+      },
+      "thumbnail": {
+        "title": "Ang thumbnail",
+        "text": "Gawin ang thumbnail ng video mo mula sa pinakamagagandang sandali nito"
+      },
+      "export": {
+        "title": "I-export",
+        "text": "I-save ang video bilang MP4. Lahat ay nangyayari sa device mo, walang ina-upload"
+      }
+    }
+  }
+}

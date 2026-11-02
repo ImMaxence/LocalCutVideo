@@ -4,16 +4,9 @@ import { Injectable, inject } from '@angular/core';
 import { type CanMatchFn, type ResolveFn, Router } from '@angular/router';
 import { type Translation, type TranslocoLoader, TranslocoService } from '@jsverse/transloco';
 import { map } from 'rxjs';
+import { LANGUAGES, type LangCode, languageFor } from './languages';
 
-export const LANGUAGES = [
-  { code: 'en', label: 'English' },
-  { code: 'fr', label: 'Français' },
-  { code: 'es', label: 'Español' },
-  { code: 'it', label: 'Italiano' },
-  { code: 'de', label: 'Deutsch' },
-] as const;
-
-export type LangCode = (typeof LANGUAGES)[number]['code'];
+export { LANGUAGES, type LangCode } from './languages';
 
 /**
  * Public pages have one URL per language: English at the root (/changelog), the others under
@@ -25,6 +18,8 @@ export const PREFIXED_LANGS = LANGUAGES.map((l) => l.code).filter((c) => c !== D
 
 const STORAGE_KEY = 'lcv-lang';
 const CODES = LANGUAGES.map((l) => l.code) as string[];
+/** Language segment at the start of a path: /fr, /pt-br, /fil. */
+const SEGMENT = /^\/([a-z]{2,3}(?:-[a-z]{2})?)(\/.*)?$/;
 
 /** Language for the app pages: the user's choice, else the browser's, else English. */
 export function detectLanguage(): LangCode {
@@ -36,8 +31,8 @@ export function detectLanguage(): LangCode {
   }
   const browser = typeof navigator === 'undefined' ? [] : (navigator.languages ?? [navigator.language]);
   for (const lang of browser) {
-    const code = lang.slice(0, 2).toLowerCase();
-    if (CODES.includes(code)) return code as LangCode;
+    const code = languageFor(lang);
+    if (code) return code;
   }
   return DEFAULT_LANG;
 }
@@ -48,7 +43,7 @@ export function detectLanguage(): LangCode {
  */
 export function initialLanguage(): LangCode {
   if (typeof location === 'undefined' || typeof document === 'undefined') return DEFAULT_LANG;
-  const prefix = /^\/([a-z]{2})(\/|$)/.exec(location.pathname)?.[1];
+  const prefix = SEGMENT.exec(location.pathname)?.[1];
   if (prefix && (PREFIXED_LANGS as string[]).includes(prefix)) return prefix as LangCode;
   if (/^\/(thumbnail|changelog|legal|privacy|terms)?\/?$/.test(location.pathname)) return DEFAULT_LANG;
   return detectLanguage();
@@ -63,11 +58,18 @@ export function localizedPath(path: string, lang: string): string {
 /** Public page path without its language: '/fr/changelog' → '/changelog'. */
 export function unlocalizedPath(url: string): string {
   const path = url.split(/[?#]/)[0];
-  const match = /^\/([a-z]{2})(\/.*)?$/.exec(path);
+  const match = SEGMENT.exec(path);
   return match && (PREFIXED_LANGS as string[]).includes(match[1]) ? match[2] || '/' : path || '/';
 }
 
-/** Matches the language segment of /fr/…, /es/…, etc. */
+/** `<html lang>` and `dir` of a language: <html lang="ar" dir="rtl">. */
+export function applyLanguage(document: Document, lang: string): void {
+  const language = LANGUAGES.find((l) => l.code === lang) ?? LANGUAGES[0];
+  document.documentElement.lang = language.tag;
+  document.documentElement.dir = 'rtl' in language ? 'rtl' : 'ltr';
+}
+
+/** Matches the language segment of /fr/…, /pt-br/…, etc. */
 export const languageSegment: CanMatchFn = (_route, segments) => (PREFIXED_LANGS as string[]).includes(segments[0]?.path ?? '');
 
 /** Activates the language of a public page (and loads it) before the page renders. */
@@ -75,7 +77,7 @@ export const languageResolver: ResolveFn<boolean> = (route) => {
   const lang = (route.paramMap.get('lang') ?? DEFAULT_LANG) as LangCode;
   const transloco = inject(TranslocoService);
   transloco.setActiveLang(lang);
-  inject(DOCUMENT).documentElement.lang = lang;
+  applyLanguage(inject(DOCUMENT), lang);
   return transloco.load(lang).pipe(map(() => true));
 };
 
@@ -95,7 +97,7 @@ export class LanguageService {
   private readonly document = inject(DOCUMENT);
 
   constructor() {
-    this.document.documentElement.lang = this.transloco.getActiveLang();
+    applyLanguage(this.document, this.transloco.getActiveLang());
   }
 
   get active(): LangCode {
@@ -118,6 +120,6 @@ export class LanguageService {
       return;
     }
     this.transloco.setActiveLang(lang);
-    this.document.documentElement.lang = lang;
+    applyLanguage(this.document, lang);
   }
 }

@@ -70,7 +70,7 @@
     <div class="stats" [appReveal]="3">
       <div><b>0</b><span>{{ 'landing.stats.upload' | transloco }}</span></div>
       <div><b>100%</b><span>{{ 'landing.stats.local' | transloco }}</span></div>
-      <div><b>5</b><span>{{ 'landing.stats.languages' | transloco }}</span></div>
+      <div><b>{{ languageCount }}</b><span>{{ 'landing.stats.languages' | transloco }}</span></div>
       <div><b>GPU</b><span>{{ 'landing.stats.gpu' | transloco }}</span></div>
     </div>
   </div>
@@ -106,7 +106,7 @@
         <article class="card feature" [appReveal]="$index % 3">
           <span class="ficon"><app-icon [name]="f.icon" [size]="20" /></span>
           <h3>{{ 'landing.features.' + f.key + '.title' | transloco }}</h3>
-          <p class="muted">{{ 'landing.features.' + f.key + '.text' | transloco }}</p>
+          <p class="muted">{{ 'landing.features.' + f.key + '.text' | transloco: { count: languageCount } }}</p>
         </article>
       }
     </div>
