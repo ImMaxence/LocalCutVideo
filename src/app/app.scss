@@ -309,18 +309,46 @@ main {
   z-index: 100;
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 10px 10px 10px 16px;
-  border-radius: 14px;
+  gap: 16px;
+  max-width: min(560px, calc(100vw - 40px));
+  padding: 16px 16px 16px 20px;
+  border-radius: 18px;
   background: var(--bg-elev);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-lg);
-  font-size: 14px;
-  font-weight: 550;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
   color: var(--accent);
   animation: drawer 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  app-icon,
+  .btn {
+    flex: none;
+  }
   span {
+    min-width: 0;
     color: var(--text);
+  }
+  /* On a phone: the width of the screen, the text on top and a button easy to reach. */
+  @media (max-width: 560px) {
+    inset-inline: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    flex-wrap: wrap;
+    gap: 14px 12px;
+    max-width: none;
+    padding: 18px;
+    span {
+      flex: 1 1 0;
+    }
+    .btn {
+      flex: 1 0 100%;
+    }
+  }
+  /* Keeps the tab bar of the editor usable on phones. */
+  @media (max-width: 760px) {
+    &.above-tabs {
+      bottom: calc(80px + env(safe-area-inset-bottom));
+    }
   }
 }
 

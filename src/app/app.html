@@ -131,10 +131,10 @@
 }
 
 @if (pwa.updateReady()) {
-  <div class="update-toast" role="status">
-    <app-icon name="sparkles" />
+  <div class="update-toast" [class.above-tabs]="fullscreen()" role="status">
+    <app-icon name="sparkles" [size]="24" />
     <span>{{ 'pwa.update' | transloco }}</span>
-    <button class="btn sm primary" type="button" (click)="pwa.reload()">{{ 'pwa.reload' | transloco }}</button>
+    <button class="btn lg primary" type="button" (click)="pwa.reload()">{{ 'pwa.reload' | transloco }}</button>
   </div>
 }
 

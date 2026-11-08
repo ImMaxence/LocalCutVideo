@@ -2,6 +2,14 @@
 
 All notable changes to LocalCutVideo. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning: [SemVer](https://semver.org/).
 
+## [1.1.3] - 2026-11-08
+
+### Changed
+- "New version" notice is larger
+
+### Fixed
+- "New version" notice misplaced on phones: it now spans the screen and stays above the editor's tabs
+
 ## [1.1.2] - 2026-11-08
 
 ### Changed
