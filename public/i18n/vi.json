@@ -142,7 +142,7 @@
       },
       "aiImage": {
         "title": "Ảnh AI cho hình thu nhỏ của bạn",
-        "text": "Mô tả một bức ảnh và Janus Pro sẽ vẽ trên card đồ họa của bạn, miễn phí và không gửi đi bất cứ thứ gì. Tải xuống một lần 1,6 GB, trên máy tính có Chrome hoặc Edge"
+        "text": "Mô tả một bức ảnh và SANA-Sprint sẽ vẽ trên card đồ họa của bạn, miễn phí và không gửi đi bất cứ thứ gì. Tải xuống một lần 3,1 GB, trên máy tính có Chrome hoặc Edge"
       }
     },
     "privacy": {
@@ -196,7 +196,7 @@
       },
       "ai": {
         "q": "Làm sao AI chạy được mà không cần máy chủ?",
-        "a": "Các mô hình AI (Whisper cho phụ đề, MediaPipe cho khuôn mặt) được tải về một lần, sau đó máy tính của bạn tự chạy chúng. Giọng nói và hình ảnh của bạn không bao giờ rời khỏi máy. Janus Pro, mô hình vẽ ảnh AI cho hình thu nhỏ, hoạt động theo cách tương tự: khoảng 1,6 GB, chỉ tải xuống nếu bạn sử dụng"
+        "a": "Các mô hình AI (Whisper cho phụ đề, MediaPipe cho khuôn mặt) được tải về một lần, sau đó máy tính của bạn tự chạy chúng. Giọng nói và hình ảnh của bạn không bao giờ rời khỏi máy. SANA-Sprint, mô hình vẽ ảnh AI cho hình thu nhỏ, hoạt động theo cách tương tự: khoảng 3,1 GB, chỉ tải xuống nếu bạn sử dụng"
       },
       "capcut": {
         "q": "Khác gì so với CapCut?",
@@ -238,6 +238,15 @@
         "offline": "Chạy không cần mạng"
       },
       "note": "CapCut là nhãn hiệu của chủ sở hữu. LocalCutVideo là dự án độc lập, không liên kết với CapCut hay ByteDance"
+    },
+    "ai": {
+      "eyebrow": "Bên trong",
+      "title": "Các mô hình AI thực hiện công việc",
+      "lead": "Chúng chạy trên máy tính của bạn: video và mô tả của bạn không bao giờ được gửi đến dịch vụ AI",
+      "whisper": "Hiểu giọng nói và viết phụ đề bằng hàng chục ngôn ngữ",
+      "sana": "Vẽ ảnh cho hình thu nhỏ từ một câu, tối đa 1344×768",
+      "mediapipe": "Tìm khuôn mặt để giữ trong khung hình và tách người khỏi nền",
+      "rnnoise": "Loại bỏ tiếng ồn nền khỏi giọng nói"
     }
   },
   "changelog": {
@@ -667,7 +676,7 @@
           "title": "Sở hữu trí tuệ",
           "body": [
             "Mã nguồn của LocalCutVideo là mã nguồn mở và được công bố theo giấy phép MIT trên [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Các thành phần bên thứ ba, mô hình AI và phông chữ mà ứng dụng sử dụng vẫn thuộc sở hữu của tác giả và được dùng theo giấy phép riêng của chúng, được liệt kê trong [điều khoản sử dụng](/terms). Các thương hiệu được nhắc đến (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) thuộc về chủ sở hữu tương ứng."
+            "Các thành phần bên thứ ba, mô hình AI và phông chữ mà ứng dụng sử dụng vẫn thuộc sở hữu của tác giả và được dùng theo giấy phép riêng của chúng, được liệt kê trong [điều khoản sử dụng](/terms). Các thương hiệu được nhắc đến (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) thuộc về chủ sở hữu tương ứng."
           ]
         },
         {
@@ -698,7 +707,7 @@
         {
           "title": "Những gì ở lại trên thiết bị",
           "body": [
-            "Tệp video và âm thanh bạn mở được đọc trực tiếp từ ổ đĩa. Phân tích, chép lời (Whisper), theo dõi khuôn mặt và xuất video đều được trình duyệt tính toán ngay trên máy. Ảnh AI cho hình thu nhỏ (Janus Pro) cũng được tính toán cục bộ: mô tả của bạn và ảnh không bao giờ được gửi đi.",
+            "Tệp video và âm thanh bạn mở được đọc trực tiếp từ ổ đĩa. Phân tích, chép lời (Whisper), theo dõi khuôn mặt và xuất video đều được trình duyệt tính toán ngay trên máy. Ảnh AI cho hình thu nhỏ (SANA-Sprint) cũng được tính toán cục bộ: mô tả của bạn và ảnh không bao giờ được gửi đi.",
             "Dự án của bạn (điểm cắt, bản chép lời, cài đặt) được lưu trong cơ sở dữ liệu cục bộ của trình duyệt (IndexedDB), cùng một ảnh thu nhỏ và bộ nhớ đệm kết quả phân tích. Đơn vị phát hành không thể truy cập chúng. Bạn có thể xóa một dự án từ trang dự án, hoặc xóa tất cả bằng cách xóa dữ liệu của trang này trong cài đặt trình duyệt."
           ]
         },
@@ -776,8 +785,8 @@
           "title": "Mã nguồn mở và thành phần bên thứ ba",
           "body": [
             "Mã nguồn có sẵn theo giấy phép MIT trên [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo dựa trên: Mediabunny (MPL-2.0), Transformers.js và ONNX Runtime (Apache-2.0 và MIT), các mô hình Whisper của OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) và các phông chữ Inter và Montserrat (SIL Open Font License).",
-            "Trình tạo ảnh AI sử dụng mô hình Janus Pro của DeepSeek theo [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), giấy phép này cũng áp dụng cho bạn. Bạn cam kết không sử dụng mô hình: vi phạm pháp luật hoặc quyền của người khác; cho mục đích quân sự; để bóc lột hoặc gây hại cho trẻ vị thành niên; để tạo hoặc phát tán thông tin sai lệch nhằm gây hại, nội dung không phù hợp theo quy định hiện hành hoặc dữ liệu cá nhân khi chưa được phép; để phỉ báng hoặc quấy rối; cho các quyết định hoàn toàn tự động ảnh hưởng đến quyền của một người; để phân biệt đối xử hoặc gây hại cho người khác vì hành vi, đặc điểm cá nhân hoặc các nhóm được pháp luật bảo vệ; hoặc để lợi dụng điểm yếu của một nhóm người. DeepSeek không yêu cầu quyền đối với ảnh bạn tạo: bạn chịu trách nhiệm về ảnh và cách sử dụng chúng. Mô hình được cung cấp nguyên trạng, không có bảo đảm."
+            "LocalCutVideo dựa trên: Mediabunny (MPL-2.0), Transformers.js và ONNX Runtime (Apache-2.0 và MIT), các mô hình Whisper của OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) và các phông chữ Inter và Montserrat (SIL Open Font License).",
+            "Trình tạo ảnh AI sử dụng mô hình SANA-Sprint 0.6B của NVIDIA (Apache-2.0) và Gemma 2 của Google để đọc mô tả của bạn. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Điều khoản sử dụng Gemma](https://ai.google.dev/gemma/terms) và [Chính sách sử dụng bị cấm của Gemma](https://ai.google.dev/gemma/prohibited_use_policy) áp dụng cho bạn và là một phần của các điều khoản này: bạn cam kết không sử dụng trình tạo cho mục đích bị cấm hoặc vi phạm pháp luật. Google không yêu cầu quyền đối với ảnh bạn tạo: chỉ bạn chịu trách nhiệm về ảnh và cách sử dụng chúng. Các mô hình được cung cấp nguyên trạng, không có bảo đảm."
           ]
         },
         {
@@ -852,17 +861,18 @@
     "readError": "Không đọc được tệp này",
     "ai": {
       "title": "Tạo ảnh bằng AI",
-      "text": "Mô tả ảnh bằng tiếng Anh. Card đồ họa của bạn sẽ tạo ảnh, không có gì được gửi đi",
+      "text": "Mô tả ảnh. Tiếng Anh là đáng tin cậy nhất. Card đồ họa của bạn sẽ tạo ảnh, không có gì được gửi đi",
       "prompt": "Mô tả ảnh",
-      "placeholder": "A neon-lit city street at night, cinematic",
+      "placeholder": "A bear in a pine forest at sunrise",
       "run": "Tạo",
       "again": "Tạo ảnh khác",
-      "size": "Tải xuống một lần {{ size }}. Ảnh vuông 384 px, phù hợp nhất làm nền",
+      "size": "Tải xuống một lần {{ size }}. Khoảng một phút mỗi ảnh",
       "generating": "Đang tạo ảnh…",
       "unsupported": "Cần Chrome hoặc Edge trên máy tính có card đồ họa đời mới",
       "error": "Không thể tạo ảnh. Card đồ họa của bạn có thể thiếu bộ nhớ",
       "terms": "Khi tạo ảnh, bạn chấp nhận điều khoản sử dụng của mô hình",
-      "downloadError": "Không thể tải mô hình AI. Hãy thử lại sau vài phút"
+      "downloadError": "Không thể tải mô hình AI. Hãy thử lại sau vài phút",
+      "history": "Ảnh bạn đã tạo"
     }
   },
   "seo": {

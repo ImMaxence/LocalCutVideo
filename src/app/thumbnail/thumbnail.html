@@ -38,6 +38,7 @@
               <app-icon name="sparkles" [size]="16" /> {{ 'thumbnail.ai.run' | transloco }}
             </button>
             <small class="faint">{{ 'thumbnail.ai.size' | transloco: { size: aiDownloadSize } }}</small>
+            <small class="ai-model"><app-icon name="cpu" [size]="13" /> {{ 'editor.transcribe.model' | transloco }} · SANA-Sprint 0.6B (NVIDIA) · {{ aiOutputSize().width }}×{{ aiOutputSize().height }}</small>
             <small><a class="ai-terms" [routerLink]="'/terms' | localize">{{ 'thumbnail.ai.terms' | transloco }}</a></small>
           }
           <ng-container *ngTemplateOutlet="aiStatus" />
@@ -46,6 +47,7 @@
         }
       </section>
     </div>
+    <ng-container *ngTemplateOutlet="aiGallery" />
     <p class="local muted"><app-icon name="lock" [size]="14" /> {{ 'thumbnail.local' | transloco }}</p>
   } @else {
     <div class="workspace">
@@ -116,12 +118,24 @@
           </div>
         }
         <div class="stage-actions">
-          @if (aiGenerated() && !aiProgress()) {
-            <button class="btn auto sm" type="button" (click)="generate()"><app-icon name="sparkles" [size]="15" /> {{ 'thumbnail.ai.again' | transloco }}</button>
-          }
           <button class="btn ghost sm" type="button" (click)="startOver()"><app-icon name="folder" [size]="15" /> {{ 'thumbnail.other' | transloco }}</button>
         </div>
+        @if (aiGenerated()) {
+          <div class="ai-edit">
+            <label class="label" for="thumb-prompt-again">{{ 'thumbnail.ai.prompt' | transloco }}</label>
+            <textarea id="thumb-prompt-again" rows="2" maxlength="300" [value]="aiPrompt()" (input)="setPrompt($event)" [disabled]="!!aiProgress()"></textarea>
+            <div class="ai-edit-row">
+              <small class="ai-model"><app-icon name="cpu" [size]="13" /> {{ 'editor.transcribe.model' | transloco }} · SANA-Sprint 0.6B (NVIDIA) · {{ aiOutputSize().width }}×{{ aiOutputSize().height }}</small>
+              @if (!aiProgress()) {
+                <button class="btn auto sm" type="button" [disabled]="!aiPrompt().trim()" (click)="generate()"><app-icon name="sparkles" [size]="15" /> {{ 'thumbnail.ai.again' | transloco }}</button>
+              }
+            </div>
+          </div>
+        }
         <ng-container *ngTemplateOutlet="aiStatus" />
+        @if (aiGenerated()) {
+          <ng-container *ngTemplateOutlet="aiGallery" />
+        }
       </div>
 
       <aside class="panel card">
@@ -242,6 +256,26 @@
     <p class="error" role="alert"><app-icon name="alert" [size]="15" /> {{ e | transloco }}</p>
   }
 </section>
+
+<ng-template #aiGallery>
+  @if (aiImages().length) {
+    <div class="moments ai-gallery">
+      <span class="label"><app-icon name="sparkles" [size]="14" /> {{ 'thumbnail.ai.history' | transloco }}</span>
+      <div class="strip">
+        @for (image of aiImages(); track image.id) {
+          <div class="ai-thumb">
+            <button type="button" class="moment" [class.active]="aiActive() === image.id" (click)="show(image)" [title]="image.prompt">
+              <img [src]="image.url" [alt]="image.prompt" />
+            </button>
+            <button type="button" class="ai-remove" (click)="removeAiImage(image)" [attr.aria-label]="'common.remove' | transloco" [title]="'common.remove' | transloco">
+              <app-icon name="x" [size]="12" />
+            </button>
+          </div>
+        }
+      </div>
+    </div>
+  }
+</ng-template>
 
 <ng-template #aiStatus>
   @if (aiProgress(); as task) {

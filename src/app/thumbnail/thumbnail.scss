@@ -55,6 +55,62 @@
   }
 }
 
+.ai-model {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.ai-edit {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+  .label {
+    font-size: 13px;
+    font-weight: 650;
+    color: var(--text-muted);
+  }
+  textarea {
+    width: 100%;
+    resize: vertical;
+  }
+}
+
+.ai-edit-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.ai-gallery {
+  margin-top: 14px;
+}
+
+.ai-thumb {
+  position: relative;
+  flex: none;
+}
+
+.ai-remove {
+  position: absolute;
+  top: 4px;
+  inset-inline-end: 4px;
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgb(0 0 0 / 65%);
+  color: #fff;
+  cursor: pointer;
+}
+
 .ai-terms {
   color: var(--text-muted);
   text-decoration: underline;

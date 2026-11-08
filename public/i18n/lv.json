@@ -142,7 +142,7 @@
       },
       "aiImage": {
         "title": "AI attēli taviem sīktēliem",
-        "text": "Apraksti attēlu, un Janus Pro to uzzīmēs tavā videokartē bez maksas un neko nenosūtot. Vienreizēja 1,6 GB lejupielāde, datorā ar Chrome vai Edge"
+        "text": "Apraksti attēlu, un SANA-Sprint to uzzīmēs tavā videokartē bez maksas un neko nenosūtot. Vienreizēja 3,1 GB lejupielāde, datorā ar Chrome vai Edge"
       }
     },
     "privacy": {
@@ -196,7 +196,7 @@
       },
       "ai": {
         "q": "Kā mākslīgais intelekts var darboties bez servera?",
-        "a": "MI modeļi (Whisper subtitriem, MediaPipe sejām) tiek lejupielādēti vienreiz, un pēc tam tos darbina tavs dators. Tava balss un attēli to nekad nepamet. Janus Pro, kas zīmē sīktēlu AI attēlus, darbojas tāpat: aptuveni 1,6 GB, kas tiek lejupielādēti tikai tad, ja to izmanto"
+        "a": "MI modeļi (Whisper subtitriem, MediaPipe sejām) tiek lejupielādēti vienreiz, un pēc tam tos darbina tavs dators. Tava balss un attēli to nekad nepamet. SANA-Sprint, kas zīmē sīktēlu AI attēlus, darbojas tāpat: aptuveni 3,1 GB, kas tiek lejupielādēti tikai tad, ja to izmanto"
       },
       "capcut": {
         "q": "Ar ko tas atšķiras no CapCut?",
@@ -238,6 +238,15 @@
         "offline": "Darbojas bez interneta"
       },
       "note": "CapCut ir tā īpašnieka preču zīme. LocalCutVideo ir neatkarīgs projekts, kas nav saistīts ar CapCut vai ByteDance"
+    },
+    "ai": {
+      "eyebrow": "Zem pārsega",
+      "title": "AI modeļi, kas paveic darbu",
+      "lead": "Tie darbojas tavā datorā: tavi video un apraksti nekad netiek sūtīti AI pakalpojumam",
+      "whisper": "Saprot runu un raksta subtitrus desmitiem valodu",
+      "sana": "Pēc teikuma zīmē attēlus taviem sīktēliem, līdz 1344×768",
+      "mediapipe": "Atrod sejas, notur tās kadrā un atdala cilvēku no fona",
+      "rnnoise": "Noņem fona troksni no balss"
     }
   },
   "changelog": {
@@ -667,7 +676,7 @@
           "title": "Intelektuālais īpašums",
           "body": [
             "LocalCutVideo pirmkods ir atvērts un publicēts ar MIT licenci vietnē [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Lietotnē izmantotās trešo pušu komponentes, MI modeļi un fonti joprojām pieder to autoriem un tiek izmantoti saskaņā ar to licencēm, kas uzskaitītas [lietošanas noteikumos](/terms). Minētās preču zīmes (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) pieder to īpašniekiem."
+            "Lietotnē izmantotās trešo pušu komponentes, MI modeļi un fonti joprojām pieder to autoriem un tiek izmantoti saskaņā ar to licencēm, kas uzskaitītas [lietošanas noteikumos](/terms). Minētās preču zīmes (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) pieder to īpašniekiem."
           ]
         },
         {
@@ -698,7 +707,7 @@
         {
           "title": "Kas paliek tavā ierīcē",
           "body": [
-            "Tevis atvērtie video un audio faili tiek nolasīti tieši no tava diska. Analīzi, transkripciju (Whisper), seju izsekošanu un eksportu lokāli aprēķina tavs pārlūks. Sīktēlu AI attēli (Janus Pro) arī tiek aprēķināti lokāli: tavs apraksts un attēls nekad netiek nosūtīti.",
+            "Tevis atvērtie video un audio faili tiek nolasīti tieši no tava diska. Analīzi, transkripciju (Whisper), seju izsekošanu un eksportu lokāli aprēķina tavs pārlūks. Sīktēlu AI attēli (SANA-Sprint) arī tiek aprēķināti lokāli: tavs apraksts un attēls nekad netiek nosūtīti.",
             "Tavi projekti (griezumi, transkripcija, iestatījumi) tiek saglabāti tava pārlūka lokālajā datubāzē (IndexedDB) kopā ar sīktēlu un analīžu kešatmiņu. Izdevējam tiem nav piekļuves. Projektu vari izdzēst projektu lapā vai izdzēst visu, notīrot šīs vietnes datus pārlūka iestatījumos."
           ]
         },
@@ -776,8 +785,8 @@
           "title": "Atvērtais kods un trešo pušu komponentes",
           "body": [
             "Pirmkods ir pieejams ar MIT licenci vietnē [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo balstās uz: Mediabunny (MPL-2.0), Transformers.js un ONNX Runtime (Apache-2.0 un MIT), OpenAI Whisper modeļiem (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) un fontiem Inter un Montserrat (SIL Open Font License).",
-            "AI attēlu ģenerators izmanto DeepSeek modeli Janus Pro saskaņā ar licenci [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), kas attiecas arī uz tevi. Tu apņemies to neizmantot: pārkāpjot likumu vai citu personu tiesības; militāriem mērķiem; nepilngadīgo izmantošanai vai kaitējumam; lai radītu vai izplatītu viltus informāciju ar nolūku kaitēt, saskaņā ar piemērojamiem noteikumiem nepiemērotu saturu vai personas datus bez atļaujas; lai apmelotu vai uzmāktos; pilnībā automatizētiem lēmumiem, kas ietekmē personas tiesības; lai diskriminētu vai kaitētu cilvēkiem viņu uzvedības, personisko īpašību vai ar likumu aizsargātu kategoriju dēļ; vai lai izmantotu kādas cilvēku grupas neaizsargātību. DeepSeek nepretendē uz tiesībām uz taviem attēliem: tu esi atbildīgs par tiem un to izmantošanu. Modelis tiek nodrošināts tāds, kāds tas ir, bez garantijām."
+            "LocalCutVideo balstās uz: Mediabunny (MPL-2.0), Transformers.js un ONNX Runtime (Apache-2.0 un MIT), OpenAI Whisper modeļiem (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) un fontiem Inter un Montserrat (SIL Open Font License).",
+            "AI attēlu ģenerators izmanto NVIDIA modeli SANA-Sprint 0.6B (Apache-2.0) un tava apraksta lasīšanai Google modeli Gemma 2. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma lietošanas noteikumi](https://ai.google.dev/gemma/terms) un [Gemma aizliegtās lietošanas politika](https://ai.google.dev/gemma/prohibited_use_policy) attiecas uz tevi un ir šo noteikumu daļa: tu apņemies neizmantot ģeneratoru aizliegtos veidos vai pārkāpjot likumu. Google nepretendē uz tiesībām uz taviem attēliem: tikai tu esi atbildīgs par tiem un to izmantošanu. Modeļi tiek nodrošināti tādi, kādi tie ir, bez garantijām."
           ]
         },
         {
@@ -852,17 +861,18 @@
     "readError": "Šo failu neizdevās nolasīt",
     "ai": {
       "title": "Izveidot attēlu ar AI",
-      "text": "Apraksti attēlu angļu valodā. To izveido tava videokarte, nekas netiek nosūtīts",
+      "text": "Apraksti attēlu. Angļu valoda ir visuzticamākā. To izveido tava videokarte, nekas netiek nosūtīts",
       "prompt": "Apraksti attēlu",
-      "placeholder": "A neon-lit city street at night, cinematic",
+      "placeholder": "A bear in a pine forest at sunrise",
       "run": "Izveidot",
       "again": "Izveidot vēl vienu",
-      "size": "Vienreizēja lejupielāde {{ size }}. Kvadrātveida 384 px attēls, vislabāk fonam",
+      "size": "Vienreizēja lejupielāde {{ size }}. Apmēram minūte vienam attēlam",
       "generating": "Veido attēlu…",
       "unsupported": "Nepieciešams Chrome vai Edge datorā ar jaunu videokarti",
       "error": "Attēlu neizdevās izveidot. Iespējams, videokartei trūkst atmiņas",
       "terms": "Veidojot attēlu, tu piekrīti modeļa lietošanas noteikumiem",
-      "downloadError": "AI modeli neizdevās lejupielādēt. Mēģini vēlreiz pēc dažām minūtēm"
+      "downloadError": "AI modeli neizdevās lejupielādēt. Mēģini vēlreiz pēc dažām minūtēm",
+      "history": "Tevis izveidotie attēli"
     }
   },
   "seo": {

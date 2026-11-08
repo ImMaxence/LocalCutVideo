@@ -32,7 +32,7 @@
 | **Texts and transitions** | Titles and notes over the video (same styles as the thumbnails); quick fade or fade to black at every cut. |
 | **Background blur** | The background behind the person is blurred, the person stays sharp (MediaPipe selfie segmentation). |
 | **Project files** | Save a project as a `.lcv.json` file (the edit, without the video) and open it on another computer. |
-| **Thumbnail maker** | Suggests the sharpest moments of the video, adds a big title with highlighted words (4 styles), color boost and reframing; downloads JPG / PNG for YouTube, Shorts or a square post. The picture can also be generated from a sentence by Janus Pro on your own graphics card (WebGPU, one-time 1.6 GB download from Hugging Face). |
+| **Thumbnail maker** | Suggests the sharpest moments of the video, adds a big title with highlighted words (4 styles), color boost and reframing; downloads JPG / PNG for YouTube, Shorts or a square post. The picture can also be generated from a sentence by SANA-Sprint 0.6B on your own graphics card, up to 1344×768 (WebGPU, one-time 3.1 GB download from Hugging Face). |
 | **Zero upload** | The video is read in place from your disk (File System Access API). Nothing is sent anywhere. |
 | **Multi-clip** | Import several takes at once: they play back to back in one project. Reorder, add or remove clips; cuts and words follow their clip. |
 | **Input formats** | MP4, MOV, WebM, MKV. H.264 everywhere; HEVC (iPhone) when the browser can decode it (Chrome, or Edge with the HEVC extension). |
@@ -223,6 +223,6 @@ The first build downloads them (about 1.5 GB for the three); Docker keeps that s
 
 ## License
 
-[MIT](LICENSE) © Maxence Bonnici. Third-party libraries and models keep their own licenses (Mediabunny: MPL-2.0, Transformers.js, MediaPipe and Dexie: Apache-2.0, Wavesurfer.js: BSD-3-Clause, Whisper models: MIT, Janus Pro model: [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), with use restrictions, Montserrat and Inter fonts: OFL).
+[MIT](LICENSE) © Maxence Bonnici. Third-party libraries and models keep their own licenses (Mediabunny: MPL-2.0, Transformers.js, MediaPipe and Dexie: Apache-2.0, Wavesurfer.js: BSD-3-Clause, Whisper models: MIT, SANA-Sprint 0.6B: Apache-2.0, its Gemma 2 text encoder: [Gemma Terms of Use](https://ai.google.dev/gemma/terms), Montserrat and Inter fonts: OFL).
 
 CapCut is a trademark of its owner. LocalCutVideo is an independent project, not affiliated with CapCut or ByteDance.

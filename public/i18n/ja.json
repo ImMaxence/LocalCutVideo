@@ -142,7 +142,7 @@
       },
       "aiImage": {
         "title": "サムネイル用のAI画像",
-        "text": "画像の内容を入力すると、Janus Pro がお使いのグラフィックカードで無料で描きます。何も送信されません。Chrome または Edge を搭載したパソコンで初回のみ 1.6 GB をダウンロードします"
+        "text": "画像の内容を入力すると、SANA-Sprint がお使いのグラフィックカードで無料で描きます。何も送信されません。Chrome または Edge を搭載したパソコンで初回のみ 3.1 GB をダウンロードします"
       }
     },
     "privacy": {
@@ -196,7 +196,7 @@
       },
       "ai": {
         "q": "サーバーなしで AI が動くのはなぜ？",
-        "a": "AI モデル（字幕用の Whisper、顔検出用の MediaPipe）を一度ダウンロードしたら、あとはあなたのパソコンが実行します。声や映像が外に出ることはありません。サムネイルのAI画像を描く Janus Pro も同じ仕組みです。約 1.6 GB で、使用する場合にのみダウンロードされます"
+        "a": "AI モデル（字幕用の Whisper、顔検出用の MediaPipe）を一度ダウンロードしたら、あとはあなたのパソコンが実行します。声や映像が外に出ることはありません。サムネイルのAI画像を描く SANA-Sprint も同じ仕組みです。約 3.1 GB で、使用する場合にのみダウンロードされます"
       },
       "capcut": {
         "q": "CapCut との違いは？",
@@ -238,6 +238,15 @@
         "offline": "インターネットなしで動作"
       },
       "note": "CapCut はその所有者の商標です。LocalCutVideo は独立したプロジェクトであり、CapCut および ByteDance とは関係ありません"
+    },
+    "ai": {
+      "eyebrow": "内部の仕組み",
+      "title": "処理を担うAIモデル",
+      "lead": "お使いのパソコン上で動作します。動画や説明文がAIサービスに送信されることはありません",
+      "whisper": "音声を理解し、数十の言語で字幕を作成します",
+      "sana": "文章からサムネイル用の画像を最大 1344×768 で描きます",
+      "mediapipe": "顔を検出してフレーム内に収め、人物を背景から切り離します",
+      "rnnoise": "音声から背景ノイズを除去します"
     }
   },
   "changelog": {
@@ -667,7 +676,7 @@
           "title": "知的財産",
           "body": [
             "LocalCutVideo のソースコードはオープンソースで、MIT ライセンスのもと [GitHub](https://github.com/ImMaxence/LocalCutVideo) で公開されています。",
-            "アプリが使用するサードパーティのコンポーネント、AI モデル、フォントはそれぞれの作者に帰属し、[利用規約](/terms)に記載された各ライセンスに従って使用しています。記載のブランド（Whisper、MediaPipe、Janus Pro、DeepSeek、Hugging Face、Chrome、Edge など）は各所有者に帰属します。"
+            "アプリが使用するサードパーティのコンポーネント、AI モデル、フォントはそれぞれの作者に帰属し、[利用規約](/terms)に記載された各ライセンスに従って使用しています。記載のブランド（Whisper、MediaPipe、SANA-Sprint、NVIDIA、Gemma、Google、Hugging Face、Chrome、Edge など）は各所有者に帰属します。"
           ]
         },
         {
@@ -698,7 +707,7 @@
         {
           "title": "デバイスに残るもの",
           "body": [
-            "開いた動画ファイルや音声ファイルはディスクから直接読み込まれます。解析、文字起こし（Whisper）、顔追跡、書き出しは、ブラウザーがローカルで処理します。サムネイルのAI画像（Janus Pro）もローカルで処理され、説明文と画像が送信されることはありません。",
+            "開いた動画ファイルや音声ファイルはディスクから直接読み込まれます。解析、文字起こし（Whisper）、顔追跡、書き出しは、ブラウザーがローカルで処理します。サムネイルのAI画像（SANA-Sprint）もローカルで処理され、説明文と画像が送信されることはありません。",
             "プロジェクト（カット、文字起こし、設定）は、サムネイルと解析結果のキャッシュとともに、ブラウザーのローカルデータベース（IndexedDB）に保存されます。運営者はこれらにアクセスできません。プロジェクトはプロジェクトページから削除でき、ブラウザーの設定でこのサイトのデータを消去すればすべて削除できます。"
           ]
         },
@@ -776,8 +785,8 @@
           "title": "オープンソースとサードパーティのコンポーネント",
           "body": [
             "ソースコードは MIT ライセンスのもと [GitHub](https://github.com/ImMaxence/LocalCutVideo) で公開されています。",
-            "LocalCutVideo は以下に依存しています：Mediabunny（MPL-2.0）、Transformers.js と ONNX Runtime（Apache-2.0 と MIT）、OpenAI の Whisper モデル（MIT）、Janus Pro (DeepSeek Model License)、MediaPipe（Apache-2.0）、Wavesurfer.js（BSD-3-Clause）、Dexie.js（Apache-2.0）、Angular（MIT）、Inter と Montserrat フォント（SIL Open Font License）。",
-            "AI画像生成には DeepSeek の Janus Pro モデルを使用しており、お客様にも適用される [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL) に従います。お客様は、次の目的で使用しないことに同意するものとします。法令または他者の権利に違反すること、軍事目的、未成年者の搾取または加害、他者を害する目的の虚偽情報・適用規制上不適切なコンテンツ・無断の個人情報の作成または拡散、中傷または嫌がらせ、個人の権利に影響する完全自動の意思決定、行動・個人的特性・法的に保護された属性に基づく差別または加害、特定の集団の脆弱性の悪用。DeepSeek は生成された画像に対する権利を主張しません。画像とその利用についてはお客様が責任を負います。本モデルは現状のまま、無保証で提供されます。"
+            "LocalCutVideo は以下に依存しています：Mediabunny（MPL-2.0）、Transformers.js と ONNX Runtime（Apache-2.0 と MIT）、OpenAI の Whisper モデル（MIT）、SANA-Sprint (NVIDIA, Apache-2.0)、Gemma 2 (Google)、MediaPipe（Apache-2.0）、Wavesurfer.js（BSD-3-Clause）、Dexie.js（Apache-2.0）、Angular（MIT）、Inter と Montserrat フォント（SIL Open Font License）。",
+            "AI画像生成には NVIDIA の SANA-Sprint 0.6B モデル（Apache-2.0）を使用し、説明文の読み取りには Google の Gemma 2 を使用しています。 Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma 利用規約](https://ai.google.dev/gemma/terms)および[Gemma 禁止用途ポリシー](https://ai.google.dev/gemma/prohibited_use_policy)はお客様にも適用され、本規約の一部を構成します。お客様は、禁止された用途または法令に違反する形で本機能を使用しないことに同意するものとします。Google は生成された画像に対する権利を主張しません。画像とその利用についてはお客様のみが責任を負います。モデルは現状のまま、無保証で提供されます。"
           ]
         },
         {
@@ -852,17 +861,18 @@
     "readError": "このファイルを読み込めませんでした",
     "ai": {
       "title": "AIで画像を生成",
-      "text": "画像の内容を英語で入力してください。お使いのグラフィックカードが作成し、何も送信されません",
+      "text": "画像の内容を入力してください。最も確実なのは英語です。お使いのグラフィックカードが作成し、何も送信されません",
       "prompt": "画像の説明",
-      "placeholder": "A neon-lit city street at night, cinematic",
+      "placeholder": "A bear in a pine forest at sunrise",
       "run": "生成",
       "again": "別の画像を生成",
-      "size": "初回のみ {{ size }} をダウンロード。384 px の正方形画像で、背景に最適です",
+      "size": "初回のみ {{ size }} をダウンロード。1枚あたり約1分",
       "generating": "画像を作成しています…",
       "unsupported": "新しいグラフィックカードを搭載したパソコンの Chrome または Edge が必要です",
       "error": "画像を生成できませんでした。グラフィックカードのメモリが不足している可能性があります",
       "terms": "画像を生成すると、モデルの利用規約に同意したことになります",
-      "downloadError": "AIモデルをダウンロードできませんでした。数分後にもう一度お試しください"
+      "downloadError": "AIモデルをダウンロードできませんでした。数分後にもう一度お試しください",
+      "history": "生成した画像"
     }
   },
   "seo": {

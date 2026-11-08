@@ -142,7 +142,7 @@
       },
       "aiImage": {
         "title": "AI-bilder till dina miniatyrer",
-        "text": "Beskriv en bild så ritar Janus Pro den på ditt grafikkort, gratis och utan att något skickas. Engångsnedladdning på 1,6 GB, på en dator med Chrome eller Edge"
+        "text": "Beskriv en bild så ritar SANA-Sprint den på ditt grafikkort, gratis och utan att något skickas. Engångsnedladdning på 3,1 GB, på en dator med Chrome eller Edge"
       }
     },
     "privacy": {
@@ -196,7 +196,7 @@
       },
       "ai": {
         "q": "Hur kan AI:n köras utan server?",
-        "a": "AI-modellerna (Whisper för undertexter, MediaPipe för ansikten) laddas ner en gång, sedan kör din dator dem. Din röst och dina bilder lämnar den aldrig. Janus Pro, som ritar miniatyrernas AI-bilder, fungerar på samma sätt: cirka 1,6 GB som bara laddas ned om du använder det"
+        "a": "AI-modellerna (Whisper för undertexter, MediaPipe för ansikten) laddas ner en gång, sedan kör din dator dem. Din röst och dina bilder lämnar den aldrig. SANA-Sprint, som ritar miniatyrernas AI-bilder, fungerar på samma sätt: cirka 3,1 GB som bara laddas ned om du använder det"
       },
       "capcut": {
         "q": "Vad är skillnaden mot CapCut?",
@@ -238,6 +238,15 @@
         "offline": "Fungerar utan internet"
       },
       "note": "CapCut är ett varumärke som tillhör sin ägare. LocalCutVideo är ett oberoende projekt utan koppling till CapCut eller ByteDance"
+    },
+    "ai": {
+      "eyebrow": "Under huven",
+      "title": "AI-modellerna som gör jobbet",
+      "lead": "De körs på din egen dator: dina videor och beskrivningar skickas aldrig till en AI-tjänst",
+      "whisper": "Förstår tal och skriver undertexterna, på dussintals språk",
+      "sana": "Ritar bilderna till dina miniatyrer utifrån en mening, upp till 1344×768",
+      "mediapipe": "Hittar ansikten för att hålla dem i bild och skiljer personen från bakgrunden",
+      "rnnoise": "Tar bort bakgrundsljud från rösten"
     }
   },
   "changelog": {
@@ -667,7 +676,7 @@
           "title": "Immateriella rättigheter",
           "body": [
             "Källkoden till LocalCutVideo är öppen och publicerad under MIT-licensen på [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Komponenter från tredje part, AI-modeller och typsnitt som applikationen använder tillhör sina upphovspersoner och används enligt sina egna licenser, som listas i [användarvillkoren](/terms). Nämnda varumärken (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) tillhör sina ägare."
+            "Komponenter från tredje part, AI-modeller och typsnitt som applikationen använder tillhör sina upphovspersoner och används enligt sina egna licenser, som listas i [användarvillkoren](/terms). Nämnda varumärken (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) tillhör sina ägare."
           ]
         },
         {
@@ -698,7 +707,7 @@
         {
           "title": "Det som stannar på din enhet",
           "body": [
-            "Video- och ljudfilerna du öppnar läses direkt från din disk. Analys, transkription (Whisper), ansiktsspårning och export beräknas lokalt av din webbläsare. Miniatyrernas AI-bilder (Janus Pro) beräknas också lokalt: din beskrivning och bilden skickas aldrig.",
+            "Video- och ljudfilerna du öppnar läses direkt från din disk. Analys, transkription (Whisper), ansiktsspårning och export beräknas lokalt av din webbläsare. Miniatyrernas AI-bilder (SANA-Sprint) beräknas också lokalt: din beskrivning och bilden skickas aldrig.",
             "Dina projekt (klipp, transkription, inställningar) sparas i webbläsarens lokala databas (IndexedDB), tillsammans med en miniatyrbild och en cache med analyser. Utgivaren har ingen åtkomst till dem. Du kan radera ett projekt på projektsidan, eller radera allt genom att rensa den här webbplatsens data i webbläsarens inställningar."
           ]
         },
@@ -776,8 +785,8 @@
           "title": "Öppen källkod och komponenter från tredje part",
           "body": [
             "Källkoden finns tillgänglig under MIT-licensen på [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo bygger på: Mediabunny (MPL-2.0), Transformers.js och ONNX Runtime (Apache-2.0 och MIT), Whisper-modellerna från OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) och typsnitten Inter och Montserrat (SIL Open Font License).",
-            "AI-bildgeneratorn använder modellen Janus Pro från DeepSeek, under [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), som gäller för dig. Du förbinder dig att inte använda den: i strid med lag eller andras rättigheter; för militära ändamål; för att utnyttja eller skada minderåriga; för att skapa eller sprida falsk information avsedd att skada, innehåll som är olämpligt enligt tillämpliga regler eller personuppgifter utan tillstånd; för att förtala eller trakassera; för helt automatiserade beslut som påverkar en persons rättigheter; för att diskriminera eller skada människor på grund av deras beteende, personliga egenskaper eller lagskyddade kategorier; eller för att utnyttja en grupp människors sårbarheter. DeepSeek gör inga anspråk på bilderna du skapar: du ansvarar för dem och för hur du använder dem. Modellen tillhandahålls i befintligt skick, utan garanti."
+            "LocalCutVideo bygger på: Mediabunny (MPL-2.0), Transformers.js och ONNX Runtime (Apache-2.0 och MIT), Whisper-modellerna från OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) och typsnitten Inter och Montserrat (SIL Open Font License).",
+            "AI-bildgeneratorn använder modellen SANA-Sprint 0.6B från NVIDIA (Apache-2.0) och, för att läsa din beskrivning, Gemma 2 från Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Användarvillkoren för Gemma](https://ai.google.dev/gemma/terms) och [policyn för förbjuden användning av Gemma](https://ai.google.dev/gemma/prohibited_use_policy) gäller för dig och ingår i dessa villkor: du förbinder dig att inte använda generatorn för förbjuden användning eller i strid med lag. Google gör inga anspråk på bilderna du skapar: du ensam ansvarar för dem och för hur du använder dem. Modellerna tillhandahålls i befintligt skick, utan garanti."
           ]
         },
         {
@@ -852,17 +861,18 @@
     "readError": "Filen kunde inte läsas",
     "ai": {
       "title": "Skapa en bild med AI",
-      "text": "Beskriv bilden på engelska. Ditt grafikkort skapar den, inget skickas",
+      "text": "Beskriv bilden. Engelska är mest tillförlitligt. Ditt grafikkort skapar den, inget skickas",
       "prompt": "Beskriv bilden",
-      "placeholder": "A neon-lit city street at night, cinematic",
+      "placeholder": "A bear in a pine forest at sunrise",
       "run": "Skapa",
       "again": "Skapa en till",
-      "size": "Engångsnedladdning {{ size }}. Kvadratisk bild på 384 px, passar bäst som bakgrund",
+      "size": "Engångsnedladdning {{ size }}. Ungefär en minut per bild",
       "generating": "Skapar bilden…",
       "unsupported": "Kräver Chrome eller Edge på en dator med modernt grafikkort",
       "error": "Bilden kunde inte skapas. Ditt grafikkort kan ha för lite minne",
       "terms": "Genom att skapa en bild godkänner du modellens användarvillkor",
-      "downloadError": "AI-modellen kunde inte laddas ned. Försök igen om några minuter"
+      "downloadError": "AI-modellen kunde inte laddas ned. Försök igen om några minuter",
+      "history": "Dina skapade bilder"
     }
   },
   "seo": {

@@ -142,7 +142,7 @@
       },
       "aiImage": {
         "title": "Obrazy AI do Twoich miniatur",
-        "text": "Opisz obraz, a Janus Pro narysuje go na Twojej karcie graficznej, za darmo i bez wysyłania czegokolwiek. Jednorazowe pobranie 1,6 GB, na komputerze z Chrome lub Edge"
+        "text": "Opisz obraz, a SANA-Sprint narysuje go na Twojej karcie graficznej, za darmo i bez wysyłania czegokolwiek. Jednorazowe pobranie 3,1 GB, na komputerze z Chrome lub Edge"
       }
     },
     "privacy": {
@@ -196,7 +196,7 @@
       },
       "ai": {
         "q": "Jak AI może działać bez serwera?",
-        "a": "Modele AI (Whisper do napisów, MediaPipe do twarzy) pobierane są raz, a potem uruchamia je twój komputer. Twój głos i obraz nigdy go nie opuszczają. Janus Pro, który rysuje obrazy AI do miniatur, działa tak samo: około 1,6 GB, pobierane tylko wtedy, gdy z niego korzystasz"
+        "a": "Modele AI (Whisper do napisów, MediaPipe do twarzy) pobierane są raz, a potem uruchamia je twój komputer. Twój głos i obraz nigdy go nie opuszczają. SANA-Sprint, który rysuje obrazy AI do miniatur, działa tak samo: około 3,1 GB, pobierane tylko wtedy, gdy z niego korzystasz"
       },
       "capcut": {
         "q": "Czym to się różni od CapCut?",
@@ -238,6 +238,15 @@
         "offline": "Działa bez internetu"
       },
       "note": "CapCut jest znakiem towarowym swojego właściciela. LocalCutVideo to niezależny projekt, niezwiązany z CapCut ani z ByteDance"
+    },
+    "ai": {
+      "eyebrow": "Pod maską",
+      "title": "Modele AI, które wykonują pracę",
+      "lead": "Działają na Twoim komputerze: Twoje filmy i opisy nigdy nie trafiają do usługi AI",
+      "whisper": "Rozumie mowę i pisze napisy w dziesiątkach języków",
+      "sana": "Rysuje obrazy do Twoich miniatur na podstawie zdania, do 1344×768",
+      "mediapipe": "Znajduje twarze, utrzymuje je w kadrze i oddziela osobę od tła",
+      "rnnoise": "Usuwa szum tła z głosu"
     }
   },
   "changelog": {
@@ -667,7 +676,7 @@
           "title": "Własność intelektualna",
           "body": [
             "Kod źródłowy LocalCutVideo jest otwarty i opublikowany na licencji MIT na [GitHubie](https://github.com/ImMaxence/LocalCutVideo).",
-            "Komponenty firm trzecich, modele AI i czcionki używane przez aplikację pozostają własnością ich autorów i są używane na ich własnych licencjach, wymienionych w [warunkach korzystania](/terms). Wymienione marki (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) należą do ich właścicieli."
+            "Komponenty firm trzecich, modele AI i czcionki używane przez aplikację pozostają własnością ich autorów i są używane na ich własnych licencjach, wymienionych w [warunkach korzystania](/terms). Wymienione marki (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) należą do ich właścicieli."
           ]
         },
         {
@@ -698,7 +707,7 @@
         {
           "title": "Co zostaje na Twoim urządzeniu",
           "body": [
-            "Otwierane przez Ciebie pliki wideo i audio są odczytywane bezpośrednio z dysku. Analiza, transkrypcja (Whisper), śledzenie twarzy i eksport są obliczane lokalnie przez przeglądarkę. Obrazy AI do miniatur (Janus Pro) są również obliczane lokalnie: Twój opis i obraz nigdy nie są wysyłane.",
+            "Otwierane przez Ciebie pliki wideo i audio są odczytywane bezpośrednio z dysku. Analiza, transkrypcja (Whisper), śledzenie twarzy i eksport są obliczane lokalnie przez przeglądarkę. Obrazy AI do miniatur (SANA-Sprint) są również obliczane lokalnie: Twój opis i obraz nigdy nie są wysyłane.",
             "Twoje projekty (cięcia, transkrypcja, ustawienia) są zapisywane w lokalnej bazie danych przeglądarki (IndexedDB) wraz z miniaturą i pamięcią podręczną analiz. Wydawca nie ma do nich dostępu. Możesz usunąć projekt na stronie projektów albo usunąć wszystko, czyszcząc dane tej witryny w ustawieniach przeglądarki."
           ]
         },
@@ -776,8 +785,8 @@
           "title": "Otwarty kod i komponenty firm trzecich",
           "body": [
             "Kod źródłowy jest dostępny na licencji MIT na [GitHubie](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo korzysta z: Mediabunny (MPL-2.0), Transformers.js i ONNX Runtime (Apache-2.0 i MIT), modeli Whisper od OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) oraz czcionek Inter i Montserrat (SIL Open Font License).",
-            "Generator obrazów AI korzysta z modelu Janus Pro firmy DeepSeek na podstawie licencji [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), która ma zastosowanie również do Ciebie. Zobowiązujesz się nie używać go: z naruszeniem prawa lub praw innych osób; do celów wojskowych; do wykorzystywania lub krzywdzenia nieletnich; do tworzenia lub rozpowszechniania fałszywych informacji mających szkodzić innym, treści niewłaściwych w świetle obowiązujących przepisów lub danych osobowych bez upoważnienia; do zniesławiania lub nękania; do w pełni zautomatyzowanych decyzji wpływających na prawa danej osoby; do dyskryminowania lub krzywdzenia ludzi ze względu na ich zachowanie, cechy osobiste lub kategorie chronione prawem; ani do wykorzystywania słabości grupy osób. DeepSeek nie rości sobie praw do generowanych przez Ciebie obrazów: odpowiadasz za nie i za sposób ich użycia. Model jest udostępniany w stanie, w jakim się znajduje, bez gwarancji."
+            "LocalCutVideo korzysta z: Mediabunny (MPL-2.0), Transformers.js i ONNX Runtime (Apache-2.0 i MIT), modeli Whisper od OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) oraz czcionek Inter i Montserrat (SIL Open Font License).",
+            "Generator obrazów AI korzysta z modelu SANA-Sprint 0.6B firmy NVIDIA (Apache-2.0), a do odczytania Twojego opisu z modelu Gemma 2 firmy Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Warunki korzystania z Gemma](https://ai.google.dev/gemma/terms) i [zasady zabronionego użycia Gemma](https://ai.google.dev/gemma/prohibited_use_policy) mają zastosowanie do Ciebie i stanowią część niniejszych warunków: zobowiązujesz się nie używać generatora do zabronionych celów ani z naruszeniem prawa. Google nie rości sobie praw do generowanych przez Ciebie obrazów: wyłącznie Ty odpowiadasz za nie i za sposób ich użycia. Modele są udostępniane w stanie, w jakim się znajdują, bez gwarancji."
           ]
         },
         {
@@ -852,17 +861,18 @@
     "readError": "Nie udało się odczytać tego pliku",
     "ai": {
       "title": "Wygeneruj obraz z AI",
-      "text": "Opisz obraz po angielsku. Tworzy go Twoja karta graficzna, nic nie jest wysyłane",
+      "text": "Opisz obraz. Angielski jest najbardziej niezawodny. Tworzy go Twoja karta graficzna, nic nie jest wysyłane",
       "prompt": "Opisz obraz",
-      "placeholder": "A neon-lit city street at night, cinematic",
+      "placeholder": "A bear in a pine forest at sunrise",
       "run": "Generuj",
       "again": "Wygeneruj kolejny",
-      "size": "Jednorazowe pobranie {{ size }}. Kwadratowy obraz 384 px, najlepszy jako tło",
+      "size": "Jednorazowe pobranie {{ size }}. Około minuty na obraz",
       "generating": "Tworzenie obrazu…",
       "unsupported": "Wymaga Chrome lub Edge na komputerze z nowszą kartą graficzną",
       "error": "Nie udało się wygenerować obrazu. Karcie graficznej może brakować pamięci",
       "terms": "Generując obraz, akceptujesz warunki korzystania z modelu",
-      "downloadError": "Nie udało się pobrać modelu AI. Spróbuj ponownie za kilka minut"
+      "downloadError": "Nie udało się pobrać modelu AI. Spróbuj ponownie za kilka minut",
+      "history": "Twoje wygenerowane obrazy"
     }
   },
   "seo": {

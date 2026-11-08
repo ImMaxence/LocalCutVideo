@@ -142,7 +142,7 @@
       },
       "aiImage": {
         "title": "Küçük resimleriniz için yapay zekâ görselleri",
-        "text": "Bir görseli anlatın, Janus Pro onu grafik kartınızda ücretsiz ve hiçbir şey göndermeden çizsin. Chrome veya Edge yüklü bir bilgisayarda tek seferlik 1,6 GB indirme"
+        "text": "Bir görseli anlatın, SANA-Sprint onu grafik kartınızda ücretsiz ve hiçbir şey göndermeden çizsin. Chrome veya Edge yüklü bir bilgisayarda tek seferlik 3,1 GB indirme"
       }
     },
     "privacy": {
@@ -196,7 +196,7 @@
       },
       "ai": {
         "q": "Yapay zekâ sunucu olmadan nasıl çalışıyor?",
-        "a": "Yapay zekâ modelleri (altyazılar için Whisper, yüzler için MediaPipe) bir kez indirilir, sonra bilgisayarınız onları çalıştırır. Sesiniz ve görüntüleriniz oradan asla çıkmaz. Küçük resimlerin yapay zekâ görsellerini çizen Janus Pro da aynı şekilde çalışır: yaklaşık 1,6 GB, yalnızca kullanırsanız indirilir"
+        "a": "Yapay zekâ modelleri (altyazılar için Whisper, yüzler için MediaPipe) bir kez indirilir, sonra bilgisayarınız onları çalıştırır. Sesiniz ve görüntüleriniz oradan asla çıkmaz. Küçük resimlerin yapay zekâ görsellerini çizen SANA-Sprint da aynı şekilde çalışır: yaklaşık 3,1 GB, yalnızca kullanırsanız indirilir"
       },
       "capcut": {
         "q": "CapCut'tan farkı ne?",
@@ -238,6 +238,15 @@
         "offline": "İnternetsiz çalışır"
       },
       "note": "CapCut, sahibinin ticari markasıdır. LocalCutVideo, CapCut veya ByteDance ile bağlantısı olmayan bağımsız bir projedir"
+    },
+    "ai": {
+      "eyebrow": "Kaputun altında",
+      "title": "İşi yapan yapay zekâ modelleri",
+      "lead": "Kendi bilgisayarınızda çalışırlar: videolarınız ve açıklamalarınız asla bir yapay zekâ hizmetine gönderilmez",
+      "whisper": "Konuşmayı anlar ve onlarca dilde altyazı yazar",
+      "sana": "Bir cümleden küçük resimlerinizin görsellerini çizer, 1344×768 boyutuna kadar",
+      "mediapipe": "Yüzleri bulup kadrada tutar ve kişiyi arka plandan ayırır",
+      "rnnoise": "Sesten arka plan gürültüsünü temizler"
     }
   },
   "changelog": {
@@ -667,7 +676,7 @@
           "title": "Fikri mülkiyet",
           "body": [
             "LocalCutVideo'nun kaynak kodu açıktır ve MIT lisansıyla [GitHub](https://github.com/ImMaxence/LocalCutVideo) üzerinde yayımlanmıştır.",
-            "Uygulamanın kullandığı üçüncü taraf bileşenler, YZ modelleri ve yazı tipleri sahiplerinin mülkü olmaya devam eder ve [kullanım koşullarında](/terms) listelenen kendi lisanslarıyla kullanılır. Anılan markalar (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) sahiplerine aittir."
+            "Uygulamanın kullandığı üçüncü taraf bileşenler, YZ modelleri ve yazı tipleri sahiplerinin mülkü olmaya devam eder ve [kullanım koşullarında](/terms) listelenen kendi lisanslarıyla kullanılır. Anılan markalar (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) sahiplerine aittir."
           ]
         },
         {
@@ -698,7 +707,7 @@
         {
           "title": "Cihazınızda kalanlar",
           "body": [
-            "Açtığınız video ve ses dosyaları doğrudan diskinizden okunur. Analiz, yazıya dökme (Whisper), yüz takibi ve dışa aktarma tarayıcınız tarafından yerel olarak hesaplanır. Küçük resimlerin yapay zekâ görselleri (Janus Pro) de yerel olarak hesaplanır: açıklamanız ve görsel asla gönderilmez.",
+            "Açtığınız video ve ses dosyaları doğrudan diskinizden okunur. Analiz, yazıya dökme (Whisper), yüz takibi ve dışa aktarma tarayıcınız tarafından yerel olarak hesaplanır. Küçük resimlerin yapay zekâ görselleri (SANA-Sprint) de yerel olarak hesaplanır: açıklamanız ve görsel asla gönderilmez.",
             "Projeleriniz (kesimler, döküm, ayarlar), bir kapak görseli ve analiz önbelleğiyle birlikte tarayıcınızın yerel veritabanında (IndexedDB) saklanır. Yayıncının bunlara erişimi yoktur. Bir projeyi projeler sayfasından silebilir veya tarayıcı ayarlarından bu sitenin verilerini temizleyerek her şeyi silebilirsiniz."
           ]
         },
@@ -776,8 +785,8 @@
           "title": "Açık kaynak ve üçüncü taraf bileşenler",
           "body": [
             "Kaynak kod, MIT lisansıyla [GitHub](https://github.com/ImMaxence/LocalCutVideo) üzerinde mevcuttur.",
-            "LocalCutVideo şunlara dayanır: Mediabunny (MPL-2.0), Transformers.js ve ONNX Runtime (Apache-2.0 ve MIT), OpenAI'ın Whisper modelleri (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ile Inter ve Montserrat yazı tipleri (SIL Open Font License).",
-            "Yapay zekâ görsel oluşturucusu, DeepSeek'in Janus Pro modelini sizin için de geçerli olan [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL) kapsamında kullanır. Modeli şu amaçlarla kullanmamayı kabul edersiniz: yasaları veya başkalarının haklarını ihlal ederek; askerî amaçlarla; reşit olmayanları istismar etmek veya onlara zarar vermek için; zarar vermeyi amaçlayan yanlış bilgileri, geçerli düzenlemelere göre uygunsuz içerikleri veya izinsiz kişisel verileri oluşturmak ya da yaymak için; karalamak veya taciz etmek için; bir kişinin haklarını etkileyen tamamen otomatik kararlar için; insanları davranışları, kişisel özellikleri veya yasayla korunan kategoriler nedeniyle ayrımcılığa uğratmak ya da onlara zarar vermek için; veya bir insan grubunun zayıflıklarından yararlanmak için. DeepSeek oluşturduğunuz görseller üzerinde hak iddia etmez: bunlardan ve kullanımlarından siz sorumlusunuz. Model olduğu gibi, garantisiz sunulur."
+            "LocalCutVideo şunlara dayanır: Mediabunny (MPL-2.0), Transformers.js ve ONNX Runtime (Apache-2.0 ve MIT), OpenAI'ın Whisper modelleri (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ile Inter ve Montserrat yazı tipleri (SIL Open Font License).",
+            "Yapay zekâ görsel oluşturucusu, NVIDIA'nın SANA-Sprint 0.6B modelini (Apache-2.0) ve açıklamanızı okumak için Google'ın Gemma 2 modelini kullanır. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma Kullanım Koşulları](https://ai.google.dev/gemma/terms) ve [Gemma Yasaklanmış Kullanım Politikası](https://ai.google.dev/gemma/prohibited_use_policy) sizin için de geçerlidir ve bu koşulların parçasıdır: oluşturucuyu yasaklanmış amaçlarla veya yasalara aykırı şekilde kullanmamayı kabul edersiniz. Google, oluşturduğunuz görseller üzerinde hak iddia etmez: bunlardan ve kullanımlarından yalnızca siz sorumlusunuz. Modeller olduğu gibi, garantisiz sunulur."
           ]
         },
         {
@@ -852,17 +861,18 @@
     "readError": "Bu dosya okunamadı",
     "ai": {
       "title": "Yapay zekâ ile görsel oluştur",
-      "text": "Görseli İngilizce anlatın. Grafik kartınız oluşturur, hiçbir şey gönderilmez",
+      "text": "Görseli anlatın. En güvenilir dil İngilizcedir. Grafik kartınız oluşturur, hiçbir şey gönderilmez",
       "prompt": "Görseli anlatın",
-      "placeholder": "A neon-lit city street at night, cinematic",
+      "placeholder": "A bear in a pine forest at sunrise",
       "run": "Oluştur",
       "again": "Başka bir tane oluştur",
-      "size": "Tek seferlik indirme {{ size }}. 384 px kare görsel, en iyi arka plan olarak kullanılır",
+      "size": "Tek seferlik indirme {{ size }}. Görsel başına yaklaşık bir dakika",
       "generating": "Görsel oluşturuluyor…",
       "unsupported": "Yeni bir grafik kartına sahip bilgisayarda Chrome veya Edge gerekir",
       "error": "Görsel oluşturulamadı. Grafik kartınızın belleği yetersiz olabilir",
       "terms": "Bir görsel oluşturarak modelin kullanım koşullarını kabul edersiniz",
-      "downloadError": "Yapay zekâ modeli indirilemedi. Birkaç dakika sonra yeniden deneyin"
+      "downloadError": "Yapay zekâ modeli indirilemedi. Birkaç dakika sonra yeniden deneyin",
+      "history": "Oluşturduğunuz görseller"
     }
   },
   "seo": {

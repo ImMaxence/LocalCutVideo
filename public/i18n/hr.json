@@ -142,7 +142,7 @@
       },
       "aiImage": {
         "title": "AI slike za vaše minijature",
-        "text": "Opišite sliku i Janus Pro će je nacrtati na vašoj grafičkoj kartici, besplatno i bez slanja ičega. Jednokratno preuzimanje od 1,6 GB, na računalu s Chromeom ili Edgeom"
+        "text": "Opišite sliku i SANA-Sprint će je nacrtati na vašoj grafičkoj kartici, besplatno i bez slanja ičega. Jednokratno preuzimanje od 3,1 GB, na računalu s Chromeom ili Edgeom"
       }
     },
     "privacy": {
@@ -196,7 +196,7 @@
       },
       "ai": {
         "q": "Kako UI može raditi bez poslužitelja?",
-        "a": "Modeli UI-ja (Whisper za titlove, MediaPipe za lica) preuzimaju se jednom, a zatim ih pokreće vaše računalo. Vaš glas i vaše slike nikad ga ne napuštaju. Janus Pro, koji crta AI slike za minijature, radi na isti način: oko 1,6 GB, preuzima se samo ako ga koristite"
+        "a": "Modeli UI-ja (Whisper za titlove, MediaPipe za lica) preuzimaju se jednom, a zatim ih pokreće vaše računalo. Vaš glas i vaše slike nikad ga ne napuštaju. SANA-Sprint, koji crta AI slike za minijature, radi na isti način: oko 3,1 GB, preuzima se samo ako ga koristite"
       },
       "capcut": {
         "q": "Koja je razlika u odnosu na CapCut?",
@@ -238,6 +238,15 @@
         "offline": "Radi bez interneta"
       },
       "note": "CapCut je zaštitni znak svojeg vlasnika. LocalCutVideo je neovisan projekt, nepovezan s CapCutom ili tvrtkom ByteDance"
+    },
+    "ai": {
+      "eyebrow": "Ispod haube",
+      "title": "AI modeli koji obavljaju posao",
+      "lead": "Rade na vašem računalu: vaši videozapisi i opisi nikada se ne šalju AI usluzi",
+      "whisper": "Razumije govor i piše titlove na desecima jezika",
+      "sana": "Prema rečenici crta slike za vaše minijature, do 1344×768",
+      "mediapipe": "Pronalazi lica, drži ih u kadru i odvaja osobu od pozadine",
+      "rnnoise": "Uklanja pozadinsku buku iz glasa"
     }
   },
   "changelog": {
@@ -667,7 +676,7 @@
           "title": "Intelektualno vlasništvo",
           "body": [
             "Izvorni kod LocalCutVidea otvoren je i objavljen pod licencom MIT na [GitHubu](https://github.com/ImMaxence/LocalCutVideo).",
-            "Komponente trećih strana, modeli UI i fontovi koje aplikacija koristi ostaju vlasništvo svojih autora i koriste se prema vlastitim licencama, navedenima u [uvjetima korištenja](/terms). Navedeni zaštitni znakovi (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) pripadaju svojim vlasnicima."
+            "Komponente trećih strana, modeli UI i fontovi koje aplikacija koristi ostaju vlasništvo svojih autora i koriste se prema vlastitim licencama, navedenima u [uvjetima korištenja](/terms). Navedeni zaštitni znakovi (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) pripadaju svojim vlasnicima."
           ]
         },
         {
@@ -698,7 +707,7 @@
         {
           "title": "Što ostaje na vašem uređaju",
           "body": [
-            "Video i audio datoteke koje otvorite čitaju se izravno s diska. Analizu, transkripciju (Whisper), praćenje lica i izvoz lokalno izračunava vaš preglednik. AI slike za minijature (Janus Pro) također se izračunavaju lokalno: vaš opis i slika nikada se ne šalju.",
+            "Video i audio datoteke koje otvorite čitaju se izravno s diska. Analizu, transkripciju (Whisper), praćenje lica i izvoz lokalno izračunava vaš preglednik. AI slike za minijature (SANA-Sprint) također se izračunavaju lokalno: vaš opis i slika nikada se ne šalju.",
             "Vaši projekti (rezovi, transkripcija, postavke) spremaju se u lokalnu bazu podataka preglednika (IndexedDB), zajedno s minijaturom i predmemorijom analiza. Izdavač im nema pristup. Projekt možete izbrisati na stranici projekata ili izbrisati sve brisanjem podataka ove web-lokacije u postavkama preglednika."
           ]
         },
@@ -776,8 +785,8 @@
           "title": "Otvoreni kod i komponente trećih strana",
           "body": [
             "Izvorni kod dostupan je pod licencom MIT na [GitHubu](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo se oslanja na: Mediabunny (MPL-2.0), Transformers.js i ONNX Runtime (Apache-2.0 i MIT), OpenAI-jeve modele Whisper (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) te fontove Inter i Montserrat (SIL Open Font License).",
-            "Generator AI slika koristi model Janus Pro tvrtke DeepSeek prema licenci [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), koja se primjenjuje i na vas. Obvezujete se da ga nećete koristiti: protivno zakonu ili pravima drugih; u vojne svrhe; za iskorištavanje ili nanošenje štete maloljetnicima; za stvaranje ili širenje lažnih informacija s ciljem nanošenja štete, sadržaja neprikladnog prema važećim propisima ili osobnih podataka bez ovlaštenja; za klevetu ili uznemiravanje; za potpuno automatizirane odluke koje utječu na prava osobe; za diskriminaciju ili nanošenje štete ljudima zbog njihova ponašanja, osobnih obilježja ili zakonom zaštićenih kategorija; niti za iskorištavanje ranjivosti skupine ljudi. DeepSeek ne polaže prava na slike koje izradite: vi ste odgovorni za njih i za način njihove upotrebe. Model se pruža takav kakav jest, bez jamstva."
+            "LocalCutVideo se oslanja na: Mediabunny (MPL-2.0), Transformers.js i ONNX Runtime (Apache-2.0 i MIT), OpenAI-jeve modele Whisper (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) te fontove Inter i Montserrat (SIL Open Font License).",
+            "Generator AI slika koristi model SANA-Sprint 0.6B tvrtke NVIDIA (Apache-2.0) i, za čitanje vašeg opisa, Gemma 2 tvrtke Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Uvjeti korištenja Gemme](https://ai.google.dev/gemma/terms) i [pravila o zabranjenoj upotrebi Gemme](https://ai.google.dev/gemma/prohibited_use_policy) primjenjuju se i na vas i dio su ovih uvjeta: obvezujete se da generator nećete koristiti za zabranjenu upotrebu ili protivno zakonu. Google ne polaže prava na slike koje izradite: isključivo ste vi odgovorni za njih i za način njihove upotrebe. Modeli se pružaju takvi kakvi jesu, bez jamstva."
           ]
         },
         {
@@ -852,17 +861,18 @@
     "readError": "Ova datoteka nije se mogla pročitati",
     "ai": {
       "title": "Izradi sliku pomoću AI-ja",
-      "text": "Opišite sliku na engleskom. Izrađuje je vaša grafička kartica, ništa se ne šalje",
+      "text": "Opišite sliku. Engleski je najpouzdaniji. Izrađuje je vaša grafička kartica, ništa se ne šalje",
       "prompt": "Opišite sliku",
-      "placeholder": "A neon-lit city street at night, cinematic",
+      "placeholder": "A bear in a pine forest at sunrise",
       "run": "Izradi",
       "again": "Izradi drugu",
-      "size": "Jednokratno preuzimanje {{ size }}. Kvadratna slika od 384 px, najbolja kao pozadina",
+      "size": "Jednokratno preuzimanje {{ size }}. Otprilike minuta po slici",
       "generating": "Izrada slike…",
       "unsupported": "Potreban je Chrome ili Edge na računalu s novijom grafičkom karticom",
       "error": "Sliku nije bilo moguće izraditi. Grafičkoj kartici možda nedostaje memorije",
       "terms": "Izradom slike prihvaćate uvjete korištenja modela",
-      "downloadError": "AI model nije bilo moguće preuzeti. Pokušajte ponovno za nekoliko minuta"
+      "downloadError": "AI model nije bilo moguće preuzeti. Pokušajte ponovno za nekoliko minuta",
+      "history": "Vaše izrađene slike"
     }
   },
   "seo": {

@@ -13,12 +13,15 @@ import {
   viewChild,
 } from '@angular/core';
 import { NgTemplateOutlet } from '@angular/common';
+import type { Remote } from 'comlink';
 import { RouterLink } from '@angular/router';
 import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
 import { db, getClipFile } from '../core/db';
 import { downloadBlob, queryReadPermission, requestReadPermission } from '../core/file-access';
 import { WorkersService, proxy } from '../core/workers.service';
-import type { ImageProgress } from '../workers/worker-types';
+import { ProgressEaser } from '../engine/progress';
+import { sanaSize } from '../engine/sana';
+import type { ImageProgress, ImageWorkerApi } from '../workers/worker-types';
 import { type AspectFormat, type Project, type Rotation, migrateProject } from '../engine/model';
 import { type Ctx2D, loadCaptionFont, rotatedSize, rotationMatrix } from '../engine/render';
 import { placeClips } from '../engine/sequence';
@@ -43,6 +46,15 @@ interface Source {
   name: string;
 }
 
+/** A generated picture of the history. */
+interface AiImage {
+  id: number;
+  url: string;
+  blob: Blob;
+  prompt: string;
+  format: AspectFormat;
+}
+
 interface Still {
   image: CanvasImageSource;
   width: number;
@@ -59,8 +71,14 @@ const PREVIEW_LONG_SIDE = 960;
 const MOMENTS = 8;
 const IMAGE_FILE = /\.(png|jpe?g|webp|gif|avif|bmp)$/i;
 
+/** Share of the generation reached at the end of each phase. */
+const AI_PHASES = { text: 0.2, step: 0.45, steps: 0.7 };
+const AI_TICK_MS = 200;
+
 /** One-time download of the image model. */
-const AI_DOWNLOAD_SIZE = '≈ 1.6 GB';
+const AI_DOWNLOAD_SIZE = '≈ 3.1 GB';
+/** Generated pictures kept on this device. */
+const AI_HISTORY = 24;
 
 /** What Transformers.js and the browser say when Hugging Face refuses or cannot serve the model. */
 const MODEL_DOWNLOAD_FAILURE = /huggingface\.co\/|Failed to fetch|NetworkError/i;
@@ -137,6 +155,10 @@ export class Thumbnail {
   protected readonly aiProgress = signal<ImageProgress | null>(null);
   /** The picture on screen comes from the AI: it can be generated again. */
   protected readonly aiGenerated = signal(false);
+  /** The generated pictures, most recent first. */
+  protected readonly aiImages = signal<AiImage[]>([]);
+  protected readonly aiActive = signal<number | null>(null);
+  protected readonly aiOutputSize = computed(() => sanaSize(this.settings().format));
 
   protected readonly project = signal<Project | null>(null);
   protected readonly loadingProject = signal(false);
@@ -160,6 +182,7 @@ export class Thumbnail {
 
   private readonly fontReady = signal(false);
   private textTouched = false;
+  private aiCancelled = false;
   private scanToken = 0;
   private drag: { x: number; y: number; sx: number; sy: number } | null = null;
   private savedTimer = 0;
@@ -189,10 +212,14 @@ export class Thumbnail {
       drawThumbnail(canvas.getContext('2d') as unknown as Ctx2D, still.image, still.width, still.height, s, width, height);
     });
 
-    afterNextRender(() => void hasImageGpu().then((ok) => this.aiSupported.set(ok)));
+    afterNextRender(() => {
+      void hasImageGpu().then((ok) => this.aiSupported.set(ok));
+      void this.loadAiImages();
+    });
 
     inject(DestroyRef).onDestroy(() => {
       this.workers.releaseImage();
+      this.aiImages().forEach((image) => URL.revokeObjectURL(image.url));
       this.scanToken++;
       clearTimeout(this.savedTimer);
       clearTimeout(this.holdTimer);
@@ -262,6 +289,7 @@ export class Thumbnail {
     this.scanToken++;
     this.error.set(null);
     this.aiGenerated.set(false);
+    this.aiActive.set(null);
     this.still.set(null);
     this.moments.set([]);
     const kind = file.type.startsWith('image/') || IMAGE_FILE.test(file.name) ? 'image' : 'video';
@@ -482,22 +510,91 @@ export class Thumbnail {
     const prompt = this.aiPrompt().trim();
     if (!prompt || this.aiProgress()) return;
     this.error.set(null);
-    this.aiProgress.set({ stage: 'load', progress: 0 });
+    this.aiProgress.set({ stage: 'download', progress: 0 });
+    this.aiCancelled = false;
+    const format = this.settings().format;
+    const easer = new ProgressEaser();
+    const ticker = setInterval(() => {
+      if (this.aiProgress()?.stage === 'generate') this.aiProgress.set({ stage: 'generate', progress: easer.value(performance.now()) });
+    }, AI_TICK_MS);
+    const report = (progress: number, next: number) => {
+      const now = performance.now();
+      easer.report(progress, next, now);
+      this.aiProgress.set({ stage: 'generate', progress: easer.value(now) });
+    };
     try {
-      const blob = await this.workers.image.generate(prompt, proxy((p: ImageProgress) => this.aiProgress.set(p)));
-      if (!blob) return;
-      this.open(new File([blob], 'ai.png', { type: 'image/png' }));
-      this.aiGenerated.set(true);
+      await this.aiPhase((w) => w.download(proxy((p: ImageProgress) => this.aiProgress.set(p))));
+      report(0, AI_PHASES.text);
+      const states = await this.aiPhase((w) => w.encode(prompt));
+      report(AI_PHASES.text, AI_PHASES.step);
+      const latents = await this.aiPhase((w) =>
+        w.denoise(states, format, proxy((done: number) => {
+          if (done === 1) report(AI_PHASES.step, AI_PHASES.steps);
+        })),
+      );
+      report(AI_PHASES.steps, 1);
+      const blob = await this.aiPhase((w) => w.decode(latents, format));
+      this.show(await this.keepAiImage(blob, prompt, format));
     } catch (e) {
+      if (this.aiCancelled || String((e as Error)?.message).includes('CANCELLED')) return;
       console.error('Image generation failed', e);
       this.error.set(MODEL_DOWNLOAD_FAILURE.test(String((e as Error)?.message ?? e)) ? 'thumbnail.ai.downloadError' : 'thumbnail.ai.error');
     } finally {
+      clearInterval(ticker);
       this.aiProgress.set(null);
     }
   }
 
+  protected show(image: AiImage): void {
+    this.open(new File([image.blob], 'ai.png', { type: 'image/png' }));
+    this.patch({ format: image.format });
+    this.aiPrompt.set(image.prompt);
+    this.aiGenerated.set(true);
+    this.aiActive.set(image.id);
+  }
+
+  protected async removeAiImage(image: AiImage): Promise<void> {
+    await db.aiImages.delete(image.id);
+    URL.revokeObjectURL(image.url);
+    this.aiImages.update((images) => images.filter((i) => i.id !== image.id));
+    if (this.aiActive() === image.id) this.aiActive.set(null);
+  }
+
+  private toAiImage(id: number, blob: Blob, prompt: string, format: AspectFormat): AiImage {
+    return { id, url: URL.createObjectURL(blob), blob, prompt, format };
+  }
+
+  private async loadAiImages(): Promise<void> {
+    const stored = await db.aiImages.orderBy('createdAt').reverse().limit(AI_HISTORY).toArray();
+    this.aiImages.set(stored.map((s) => this.toAiImage(s.id!, s.blob, s.prompt, s.format)));
+  }
+
+  /** Saves a new picture; the oldest ones beyond the limit are dropped. */
+  private async keepAiImage(blob: Blob, prompt: string, format: AspectFormat): Promise<AiImage> {
+    const id = await db.aiImages.add({ blob, prompt, format, createdAt: Date.now() });
+    const image = this.toAiImage(id, blob, prompt, format);
+    const kept = [image, ...this.aiImages()];
+    for (const old of kept.slice(AI_HISTORY)) {
+      await db.aiImages.delete(old.id);
+      URL.revokeObjectURL(old.url);
+    }
+    this.aiImages.set(kept.slice(0, AI_HISTORY));
+    return image;
+  }
+
   protected cancelGeneration(): void {
+    this.aiCancelled = true;
     void this.workers.image.cancel();
+  }
+
+  /** Runs one phase in a fresh worker and ends it: only that gives the graphics memory back. */
+  private async aiPhase<T>(run: (worker: Remote<ImageWorkerApi>) => Promise<T>): Promise<T> {
+    if (this.aiCancelled) throw new Error('CANCELLED');
+    try {
+      return await run(this.workers.image);
+    } finally {
+      this.workers.releaseImage();
+    }
   }
 
   protected startOver(): void {

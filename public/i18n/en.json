@@ -142,7 +142,7 @@
       },
       "aiImage": {
         "title": "AI images for your thumbnails",
-        "text": "Describe a picture and Janus Pro draws it on your graphics card, free and with nothing sent. One-time 1.6 GB download, on a computer with Chrome or Edge"
+        "text": "Describe a picture and SANA-Sprint draws it on your graphics card, free and with nothing sent. One-time 3.1 GB download, on a computer with Chrome or Edge"
       }
     },
     "privacy": {
@@ -196,7 +196,7 @@
       },
       "ai": {
         "q": "How can the AI run without a server?",
-        "a": "The AI models (Whisper for subtitles, MediaPipe for faces) are downloaded once, then your computer runs them. Your voice and your images never leave it. Janus Pro, which draws the AI thumbnail images, works the same way: about 1.6 GB, downloaded only if you use it"
+        "a": "The AI models (Whisper for subtitles, MediaPipe for faces) are downloaded once, then your computer runs them. Your voice and your images never leave it. SANA-Sprint, which draws the AI thumbnail images, works the same way: about 3.1 GB, downloaded only if you use it"
       },
       "capcut": {
         "q": "How is it different from CapCut?",
@@ -238,6 +238,15 @@
         "offline": "Works without internet"
       },
       "note": "CapCut is a trademark of its owner. LocalCutVideo is an independent project, not affiliated with CapCut or ByteDance"
+    },
+    "ai": {
+      "eyebrow": "Under the hood",
+      "title": "The AI models doing the work",
+      "lead": "They run on your own computer: your videos and descriptions are never sent to an AI service",
+      "whisper": "Understands speech and writes the subtitles, in dozens of languages",
+      "sana": "Draws your thumbnail images from a sentence, up to 1344×768",
+      "mediapipe": "Finds faces to keep them in frame and separates the person from the background",
+      "rnnoise": "Removes background noise from the voice"
     }
   },
   "changelog": {
@@ -667,7 +676,7 @@
           "title": "Intellectual property",
           "body": [
             "The source code of LocalCutVideo is open source and published under the MIT license on [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Third-party components, AI models and fonts used by the application remain the property of their authors and are used under their own licenses, listed in the [terms of use](/terms). Cited brands (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) belong to their owners."
+            "Third-party components, AI models and fonts used by the application remain the property of their authors and are used under their own licenses, listed in the [terms of use](/terms). Cited brands (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) belong to their owners."
           ]
         },
         {
@@ -698,7 +707,7 @@
         {
           "title": "What stays on your device",
           "body": [
-            "The video and audio files you open are read directly from your disk. Analysis, transcription (Whisper), face tracking and export are computed locally by your browser. AI thumbnail images (Janus Pro) are also computed locally: your description and the image are never sent.",
+            "The video and audio files you open are read directly from your disk. Analysis, transcription (Whisper), face tracking and export are computed locally by your browser. AI thumbnail images (SANA-Sprint) are also computed locally: your description and the image are never sent.",
             "Your projects (cuts, transcript, settings) are saved in your browser's local database (IndexedDB), along with a thumbnail and a cache of analyses. The publisher has no access to them. You can delete a project from the projects page, or erase everything by clearing this site's data in your browser settings."
           ]
         },
@@ -776,8 +785,8 @@
           "title": "Open source and third-party components",
           "body": [
             "The source code is available under the MIT license on [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo relies on: Mediabunny (MPL-2.0), Transformers.js and ONNX Runtime (Apache-2.0 and MIT), the Whisper models by OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) and the Inter and Montserrat fonts (SIL Open Font License).",
-            "The AI image generator uses the Janus Pro model by DeepSeek, under the [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), which applies to you. You agree not to use it: in violation of any law or of the rights of others; for military purposes; to exploit or harm minors; to create or spread false information meant to harm others, content that is inappropriate under applicable regulations, or personal data without authorization; to defame or harass; for fully automated decisions affecting a person's legal rights; to discriminate against or harm people because of their behavior, their personal characteristics or legally protected categories; or to exploit the vulnerabilities of a group of people. DeepSeek claims no rights over the images you generate: you are responsible for them and for how you use them. The model is provided as is, without warranty."
+            "LocalCutVideo relies on: Mediabunny (MPL-2.0), Transformers.js and ONNX Runtime (Apache-2.0 and MIT), the Whisper models by OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) and the Inter and Montserrat fonts (SIL Open Font License).",
+            "The AI image generator uses the SANA-Sprint 0.6B model by NVIDIA (Apache-2.0) and, to read your description, Gemma 2 by Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. The [Gemma Terms of Use](https://ai.google.dev/gemma/terms) and the [Gemma Prohibited Use Policy](https://ai.google.dev/gemma/prohibited_use_policy) apply to you and form part of these terms: you agree not to use the generator for any prohibited use or in violation of the law. Google claims no rights in the images you generate: you alone are responsible for them and for how you use them. The models are provided as is, without warranty."
           ]
         },
         {
@@ -852,17 +861,18 @@
     "readError": "This file could not be read",
     "ai": {
       "title": "Generate an image with AI",
-      "text": "Describe the picture in English. Your graphics card creates it, nothing is sent",
+      "text": "Describe the picture. English is the most reliable. Your graphics card creates it, nothing is sent",
       "prompt": "Describe the image",
-      "placeholder": "A neon-lit city street at night, cinematic",
+      "placeholder": "A bear in a pine forest at sunrise",
       "run": "Generate",
       "again": "Generate another",
-      "size": "One-time download {{ size }}. Square 384 px image, best as a background",
+      "size": "One-time download {{ size }}. About a minute per image",
       "generating": "Drawing the image…",
       "unsupported": "Needs Chrome or Edge on a computer with a recent graphics card",
       "error": "The image could not be generated. Your graphics card may be short on memory",
       "terms": "By generating an image, you accept the model's terms of use",
-      "downloadError": "The AI model could not be downloaded. Try again in a few minutes"
+      "downloadError": "The AI model could not be downloaded. Try again in a few minutes",
+      "history": "Your generated images"
     }
   },
   "seo": {

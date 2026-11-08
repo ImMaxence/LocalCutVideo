@@ -142,7 +142,7 @@
       },
       "aiImage": {
         "title": "Gambar AI untuk thumbnail Anda",
-        "text": "Jelaskan gambar dan Janus Pro menggambarnya di kartu grafis Anda, gratis dan tanpa mengirim apa pun. Unduhan satu kali 1,6 GB, di komputer dengan Chrome atau Edge"
+        "text": "Jelaskan gambar dan SANA-Sprint menggambarnya di kartu grafis Anda, gratis dan tanpa mengirim apa pun. Unduhan satu kali 3,1 GB, di komputer dengan Chrome atau Edge"
       }
     },
     "privacy": {
@@ -196,7 +196,7 @@
       },
       "ai": {
         "q": "Bagaimana AI bisa berjalan tanpa server?",
-        "a": "Model AI (Whisper untuk subtitel, MediaPipe untuk wajah) diunduh sekali, lalu komputer Anda yang menjalankannya. Suara dan gambar Anda tidak pernah keluar dari komputer. Janus Pro, yang menggambar gambar AI untuk thumbnail, bekerja dengan cara yang sama: sekitar 1,6 GB, hanya diunduh jika Anda menggunakannya"
+        "a": "Model AI (Whisper untuk subtitel, MediaPipe untuk wajah) diunduh sekali, lalu komputer Anda yang menjalankannya. Suara dan gambar Anda tidak pernah keluar dari komputer. SANA-Sprint, yang menggambar gambar AI untuk thumbnail, bekerja dengan cara yang sama: sekitar 3,1 GB, hanya diunduh jika Anda menggunakannya"
       },
       "capcut": {
         "q": "Apa bedanya dengan CapCut?",
@@ -238,6 +238,15 @@
         "offline": "Berfungsi tanpa internet"
       },
       "note": "CapCut adalah merek dagang milik pemiliknya. LocalCutVideo adalah proyek independen yang tidak terafiliasi dengan CapCut maupun ByteDance"
+    },
+    "ai": {
+      "eyebrow": "Di balik layar",
+      "title": "Model AI yang bekerja",
+      "lead": "Semuanya berjalan di komputer Anda: video dan deskripsi Anda tidak pernah dikirim ke layanan AI",
+      "whisper": "Memahami ucapan dan menulis subtitel dalam puluhan bahasa",
+      "sana": "Menggambar gambar thumbnail Anda dari satu kalimat, hingga 1344×768",
+      "mediapipe": "Menemukan wajah agar tetap dalam bingkai dan memisahkan orang dari latar",
+      "rnnoise": "Menghapus derau latar dari suara"
     }
   },
   "changelog": {
@@ -667,7 +676,7 @@
           "title": "Kekayaan intelektual",
           "body": [
             "Kode sumber LocalCutVideo bersifat open source dan diterbitkan dengan lisensi MIT di [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Komponen pihak ketiga, model AI, dan font yang dipakai aplikasi tetap menjadi milik pembuatnya dan digunakan berdasarkan lisensinya masing-masing, yang tercantum dalam [ketentuan penggunaan](/terms). Merek yang disebut (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) milik pemiliknya masing-masing."
+            "Komponen pihak ketiga, model AI, dan font yang dipakai aplikasi tetap menjadi milik pembuatnya dan digunakan berdasarkan lisensinya masing-masing, yang tercantum dalam [ketentuan penggunaan](/terms). Merek yang disebut (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) milik pemiliknya masing-masing."
           ]
         },
         {
@@ -698,7 +707,7 @@
         {
           "title": "Yang tetap di perangkat Anda",
           "body": [
-            "File video dan audio yang Anda buka dibaca langsung dari disk. Analisis, transkripsi (Whisper), pelacakan wajah, dan ekspor dihitung secara lokal oleh browser Anda. Gambar AI untuk thumbnail (Janus Pro) juga dihitung secara lokal: deskripsi dan gambar Anda tidak pernah dikirim.",
+            "File video dan audio yang Anda buka dibaca langsung dari disk. Analisis, transkripsi (Whisper), pelacakan wajah, dan ekspor dihitung secara lokal oleh browser Anda. Gambar AI untuk thumbnail (SANA-Sprint) juga dihitung secara lokal: deskripsi dan gambar Anda tidak pernah dikirim.",
             "Proyek Anda (potongan, transkrip, pengaturan) disimpan di database lokal browser (IndexedDB), bersama thumbnail dan cache hasil analisis. Penerbit tidak memiliki akses ke sana. Anda bisa menghapus proyek dari halaman proyek, atau menghapus semuanya dengan membersihkan data situs ini di pengaturan browser."
           ]
         },
@@ -776,8 +785,8 @@
           "title": "Open source dan komponen pihak ketiga",
           "body": [
             "Kode sumber tersedia dengan lisensi MIT di [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo memakai: Mediabunny (MPL-2.0), Transformers.js dan ONNX Runtime (Apache-2.0 dan MIT), model Whisper dari OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT), serta font Inter dan Montserrat (SIL Open Font License).",
-            "Generator gambar AI menggunakan model Janus Pro dari DeepSeek, di bawah [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL) yang juga berlaku bagi Anda. Anda setuju untuk tidak menggunakannya: dengan melanggar hukum atau hak orang lain; untuk tujuan militer; untuk mengeksploitasi atau merugikan anak di bawah umur; untuk membuat atau menyebarkan informasi palsu yang bertujuan merugikan, konten yang tidak pantas menurut peraturan yang berlaku, atau data pribadi tanpa izin; untuk mencemarkan nama baik atau melecehkan; untuk keputusan yang sepenuhnya otomatis yang memengaruhi hak seseorang; untuk mendiskriminasi atau merugikan orang karena perilaku, karakteristik pribadi, atau kategori yang dilindungi hukum; atau untuk mengeksploitasi kerentanan suatu kelompok orang. DeepSeek tidak mengklaim hak apa pun atas gambar yang Anda buat: Anda bertanggung jawab atas gambar tersebut dan penggunaannya. Model disediakan apa adanya, tanpa jaminan."
+            "LocalCutVideo memakai: Mediabunny (MPL-2.0), Transformers.js dan ONNX Runtime (Apache-2.0 dan MIT), model Whisper dari OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT), serta font Inter dan Montserrat (SIL Open Font License).",
+            "Generator gambar AI menggunakan model SANA-Sprint 0.6B dari NVIDIA (Apache-2.0) dan, untuk membaca deskripsi Anda, Gemma 2 dari Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Ketentuan Penggunaan Gemma](https://ai.google.dev/gemma/terms) dan [Kebijakan Penggunaan Terlarang Gemma](https://ai.google.dev/gemma/prohibited_use_policy) berlaku bagi Anda dan merupakan bagian dari ketentuan ini: Anda setuju untuk tidak menggunakan generator untuk penggunaan terlarang atau melanggar hukum. Google tidak mengklaim hak apa pun atas gambar yang Anda buat: hanya Anda yang bertanggung jawab atas gambar tersebut dan penggunaannya. Model disediakan apa adanya, tanpa jaminan."
           ]
         },
         {
@@ -852,17 +861,18 @@
     "readError": "File ini tidak bisa dibaca",
     "ai": {
       "title": "Buat gambar dengan AI",
-      "text": "Jelaskan gambar dalam bahasa Inggris. Kartu grafis Anda yang membuatnya, tidak ada yang dikirim",
+      "text": "Jelaskan gambar. Bahasa Inggris paling andal. Kartu grafis Anda yang membuatnya, tidak ada yang dikirim",
       "prompt": "Jelaskan gambar",
-      "placeholder": "A neon-lit city street at night, cinematic",
+      "placeholder": "A bear in a pine forest at sunrise",
       "run": "Buat",
       "again": "Buat lagi",
-      "size": "Unduhan satu kali {{ size }}. Gambar persegi 384 px, paling cocok sebagai latar",
+      "size": "Unduhan satu kali {{ size }}. Sekitar satu menit per gambar",
       "generating": "Membuat gambar…",
       "unsupported": "Memerlukan Chrome atau Edge di komputer dengan kartu grafis terbaru",
       "error": "Gambar tidak dapat dibuat. Memori kartu grafis Anda mungkin kurang",
       "terms": "Dengan membuat gambar, Anda menerima ketentuan penggunaan model",
-      "downloadError": "Model AI tidak dapat diunduh. Coba lagi dalam beberapa menit"
+      "downloadError": "Model AI tidak dapat diunduh. Coba lagi dalam beberapa menit",
+      "history": "Gambar yang Anda buat"
     }
   },
   "seo": {

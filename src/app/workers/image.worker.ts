@@ -1,118 +1,230 @@
 /// <reference lib="webworker" />
 /**
- * Image worker: generates a picture from a sentence with Janus Pro, on this device's graphics
- * card. The model comes from Hugging Face once, then from the browser cache; the sentence and
- * the picture never leave the device.
+ * Image worker: generates a picture from a sentence with SANA-Sprint 0.6B, on this device's
+ * graphics card. The model comes from Hugging Face once, then from the browser cache; the
+ * sentence and the picture never leave the device. Each phase (text, picture, decoding) runs in
+ * a worker of its own, ended afterwards: nothing else gives the graphics memory back.
  */
 import * as Comlink from 'comlink';
-import { AutoProcessor, BaseStreamer, InterruptableStoppingCriteria, MultiModalityCausalLM, env } from '@huggingface/transformers';
-import { modelProgress } from './model-progress';
+import { GemmaTokenizer } from '@huggingface/transformers';
+import * as ort from 'onnxruntime-web/webgpu';
+import {
+  EMBEDDING_BYTES,
+  EMBEDDING_SIZE,
+  GUIDANCE,
+  INSTRUCTION,
+  LATENT_SCALE,
+  MAX_TOKENS,
+  SCALE_BYTES,
+  SIGMA_DATA,
+  TIMESTEPS,
+  VAE_SCALING,
+  modelInput,
+  modelOutput,
+  nextLatents,
+  predictClean,
+  sanaSize,
+  scmTime,
+  selectedTokens,
+  toPixels,
+  unpackEmbedding,
+} from '../engine/sana';
+import type { AspectFormat } from '../engine/model';
 import type { ImageProgress, ImageWorkerApi } from './worker-types';
 
-const REPO = 'onnx-community/Janus-Pro-1B-ONNX';
-const REVISION = '04efdf2e36cb07a034b0d94f7322356b292f0418';
+const WEIGHTS = 'https://huggingface.co/UtopiaIA/sana-sprint-0.6b-1024px-onnx-web/resolve/131c0f31f7607f8e92e7209dfeb968e8b7f44374';
+const CONFIG = 'https://huggingface.co/Efficient-Large-Model/Sana_Sprint_0.6B_1024px_diffusers/resolve/aa76e7f4f4928f378716b6716a2130fba3caf5b1';
+const CACHE = 'lcv-image-models';
 
-env.allowLocalModels = false;
-env.useBrowserCache = true;
-if (env.backends.onnx.wasm) {
-  env.backends.onnx.wasm.wasmPaths = {
-    mjs: `${self.location.origin}/ort/ort-wasm-simd-threaded.asyncify.mjs`,
-    wasm: `${self.location.origin}/ort/ort-wasm-simd-threaded.asyncify.wasm`,
+/** Everything to download, with its size for an exact percentage. */
+const FILES = {
+  tokenizer: { url: `${CONFIG}/tokenizer/tokenizer.json`, bytes: 34_362_873 },
+  tokenizerConfig: { url: `${CONFIG}/tokenizer/tokenizer_config.json`, bytes: 46_996 },
+  embeddings: { url: `${WEIGHTS}/text_encoder/embed_tokens_q4.bin`, bytes: 294_912_000 },
+  scales: { url: `${WEIGHTS}/text_encoder/embed_tokens_q4_scales.bin`, bytes: 36_864_000 },
+  textEncoder: { url: `${WEIGHTS}/text_encoder/model_q4.onnx`, bytes: 1_298_400_000 },
+  transformer: { url: `${WEIGHTS}/transformer/model_fp16.onnx`, bytes: 1_189_000_000 },
+  decoder: { url: `${WEIGHTS}/vae_decoder/model_fp16.onnx`, bytes: 318_800_000 },
+};
+type FileId = keyof typeof FILES;
+const TOTAL_BYTES = Object.values(FILES).reduce((n, f) => n + f.bytes, 0);
+
+ort.env.wasm.wasmPaths = {
+  mjs: `${self.location.origin}/ort/ort-wasm-simd-threaded.asyncify.mjs`,
+  wasm: `${self.location.origin}/ort/ort-wasm-simd-threaded.asyncify.wasm`,
+};
+
+let cancelled = false;
+
+function throwIfCancelled(): void {
+  if (cancelled) throw new Error('CANCELLED');
+}
+
+/** The files, downloaded the first time and read from the browser cache afterwards. */
+async function ensureFiles(onProgress: (p: ImageProgress) => void): Promise<Record<FileId, Blob>> {
+  const cache = await caches.open(CACHE);
+  const found = {} as Record<FileId, Blob>;
+  const ids = Object.keys(FILES) as FileId[];
+  const missing: FileId[] = [];
+  let done = 0;
+  for (const id of ids) {
+    const cached = await cache.match(FILES[id].url);
+    if (cached) {
+      found[id] = await cached.blob();
+      done += FILES[id].bytes;
+    } else {
+      missing.push(id);
+    }
+  }
+  for (const id of missing) {
+    const { url } = FILES[id];
+    onProgress({ stage: 'download', progress: done / TOTAL_BYTES });
+    const response = await fetch(url);
+    if (!response.ok || !response.body) throw new Error(`Error (${response.status}) downloading ${url}`);
+    const [toCache, toCount] = response.body.tee();
+    const saved = cache.put(url, new Response(toCache, { headers: response.headers }));
+    const reader = toCount.getReader();
+    for (;;) {
+      const { done: finished, value } = await reader.read();
+      if (finished) break;
+      if (cancelled) {
+        await reader.cancel();
+        throw new Error('CANCELLED');
+      }
+      done += value.length;
+      onProgress({ stage: 'download', progress: Math.min(0.999, done / TOTAL_BYTES) });
+    }
+    await saved;
+    found[id] = await (await cache.match(url))!.blob();
+  }
+  return found;
+}
+
+function createSession(file: Blob): Promise<ort.InferenceSession> {
+  return file.arrayBuffer().then((buffer) =>
+    ort.InferenceSession.create(new Uint8Array(buffer), { executionProviders: ['webgpu'], graphOptimizationLevel: 'all' }),
+  );
+}
+
+/** The caption states of a sentence, as the image model expects them. */
+async function encodeText(prompt: string, files: Record<FileId, Blob>): Promise<Float32Array> {
+  const tokenizer = new GemmaTokenizer(JSON.parse(await files.tokenizer.text()), JSON.parse(await files.tokenizerConfig.text()));
+  tokenizer.padding_side = 'right';
+  const instructionTokens = tokenizer.encode(INSTRUCTION).length;
+  const length = instructionTokens + MAX_TOKENS - 2;
+  const encoded = tokenizer(INSTRUCTION + prompt.toLowerCase().trim(), { padding: 'max_length', truncation: true, max_length: length, add_special_tokens: true }) as unknown as {
+    input_ids: { data: BigInt64Array };
+    attention_mask: { data: BigInt64Array };
   };
-}
+  const attention = Array.from(encoded.attention_mask.data, Number);
+  // Padding is on the right: the text encoder only takes the real tokens.
+  const ids = Array.from(encoded.input_ids.data, Number).slice(0, attention.reduce((n, v) => n + v, 0));
 
-interface Gpu {
-  requestAdapter(): Promise<{ features: Set<string> } | null>;
-}
-
-/** Whether the graphics card can run the model, and with half-precision weights (a lighter download). */
-async function gpuSupport(): Promise<{ fp16: boolean } | null> {
-  try {
-    const adapter = await (self.navigator as Navigator & { gpu?: Gpu }).gpu?.requestAdapter();
-    return adapter ? { fp16: adapter.features.has('shader-f16') } : null;
-  } catch {
-    return null;
-  }
-}
-
-interface Janus {
-  processor: { (conversation: unknown, options: unknown): Promise<Record<string, unknown>>; num_image_tokens: number };
-  model: { generate_images(options: Record<string, unknown>): Promise<{ toBlob(): Promise<Blob> }[]> };
-}
-
-let loading: Promise<Janus> | null = null;
-
-/** The smallest weights that still draw properly: about 1.6 GB instead of 8 GB. */
-function load(fp16: boolean, onProgress: (p: ImageProgress) => void): Promise<Janus> {
-  loading ??= (async () => {
-    onProgress({ stage: 'load', progress: 0 });
-    const progress_callback = modelProgress(onProgress) as never;
-    const processor = await AutoProcessor.from_pretrained(REPO, { revision: REVISION, progress_callback });
-    const model = await MultiModalityCausalLM.from_pretrained(REPO, {
-      revision: REVISION,
-      dtype: {
-        prepare_inputs_embeds: 'quantized',
-        language_model: fp16 ? 'q4f16' : 'q4',
-        lm_head: fp16 ? 'q4f16' : 'q4',
-        gen_head: fp16 ? 'fp16' : 'fp32',
-        gen_img_embeds: fp16 ? 'fp16' : 'fp32',
-        image_decode: 'fp32',
-      },
-      // Janus's first part fails on WebGPU (same setting as the official demo).
-      device: { prepare_inputs_embeds: 'wasm', language_model: 'webgpu', lm_head: 'webgpu', gen_head: 'webgpu', gen_img_embeds: 'webgpu', image_decode: 'webgpu' },
-      progress_callback,
-    } as never);
-    return { processor, model } as unknown as Janus;
-  })().catch((e) => {
-    loading = null;
-    throw e;
-  });
-  return loading;
-}
-
-class TokenProgress extends BaseStreamer {
-  private count = -1;
-
-  constructor(
-    private readonly total: number,
-    private readonly report: (p: ImageProgress) => void,
-  ) {
-    super();
+  // The embedding table is far too large for a graphics card: only the tokens used are read.
+  const embeddings = new Float32Array(ids.length * EMBEDDING_SIZE);
+  for (const [position, id] of ids.entries()) {
+    const [values, scales] = await Promise.all([
+      files.embeddings.slice(id * EMBEDDING_BYTES, (id + 1) * EMBEDDING_BYTES).arrayBuffer(),
+      files.scales.slice(id * SCALE_BYTES, (id + 1) * SCALE_BYTES).arrayBuffer(),
+    ]);
+    unpackEmbedding(new Uint8Array(values), new Uint8Array(scales), embeddings, position * EMBEDDING_SIZE);
   }
 
-  override put(): void {
-    // The first call is the prompt.
-    if (++this.count > 0) this.report({ stage: 'generate', progress: this.count / this.total });
-  }
-
-  override end(): void {}
+  const session = await createSession(files.textEncoder);
+  throwIfCancelled();
+  const output = await session.run({ [session.inputNames[0]]: new ort.Tensor('float32', embeddings, [1, ids.length, EMBEDDING_SIZE]) });
+  const all = output[session.outputNames[0]].data as Float32Array;
+  // The image model has no mask: it only gets the states of real tokens among the selected ones.
+  const picked = selectedTokens(attention.length).filter((token) => attention[token]);
+  const states = new Float32Array(picked.length * EMBEDDING_SIZE);
+  picked.forEach((token, i) => states.set(all.subarray(token * EMBEDDING_SIZE, (token + 1) * EMBEDDING_SIZE), i * EMBEDDING_SIZE));
+  await session.release();
+  return states;
 }
 
-const stopping = new InterruptableStoppingCriteria();
+function gaussian(length: number): Float32Array {
+  const values = new Float32Array(length);
+  for (let i = 0; i < length; i += 2) {
+    const radius = Math.sqrt(-2 * Math.log(1 - Math.random()));
+    const angle = 2 * Math.PI * Math.random();
+    values[i] = radius * Math.cos(angle);
+    if (i + 1 < length) values[i + 1] = radius * Math.sin(angle);
+  }
+  return values;
+}
+
+async function generateLatents(
+  states: Float32Array,
+  dims: number[],
+  file: Blob,
+  onStep: (done: number) => void,
+): Promise<Float32Array> {
+  const session = await createSession(file);
+  throwIfCancelled();
+  const count = dims.reduce((a, b) => a * b, 1);
+  let latents: Float32Array = gaussian(count).map((v) => v * SIGMA_DATA);
+  let clean: Float32Array = latents;
+  const tokens = states.length / EMBEDDING_SIZE;
+  const steps = TIMESTEPS.length - 1;
+  for (let step = 0; step < steps; step++) {
+    throwIfCancelled();
+    const t = TIMESTEPS[step];
+    const s = scmTime(t);
+    const input = modelInput(latents, s);
+    const output = await session.run({
+      latents: new ort.Tensor('float32', input, [1, ...dims]),
+      caption: new ort.Tensor('float32', states, [1, tokens, EMBEDDING_SIZE]),
+      timestep: new ort.Tensor('float32', new Float32Array([s]), [1]),
+      guidance: new ort.Tensor('float32', new Float32Array([GUIDANCE]), [1]),
+    });
+    const predicted = modelOutput(input, output[session.outputNames[0]].data as Float32Array, s);
+    clean = predictClean(latents, predicted, t);
+    if (step + 1 < steps) latents = nextLatents(clean, gaussian(count), TIMESTEPS[step + 1]);
+    onStep(step + 1);
+  }
+  await session.release();
+  return clean;
+}
+
+async function decode(clean: Float32Array, dims: number[], width: number, height: number, file: Blob): Promise<Blob> {
+  const session = await createSession(file);
+  throwIfCancelled();
+  const scale = SIGMA_DATA * VAE_SCALING;
+  const output = await session.run({ [session.inputNames[0]]: new ort.Tensor('float32', clean.map((v) => v / scale), [1, ...dims]) });
+  const pixels = toPixels(output[session.outputNames[0]].data as Float32Array, width, height);
+  await session.release();
+  const canvas = new OffscreenCanvas(width, height);
+  canvas.getContext('2d')!.putImageData(new ImageData(pixels, width, height), 0, 0);
+  return canvas.convertToBlob({ type: 'image/png' });
+}
 
 const api: ImageWorkerApi = {
-  async generate(prompt: string, onProgress: (p: ImageProgress) => void): Promise<Blob | null> {
-    const gpu = await gpuSupport();
-    if (!gpu) throw new Error('NO_WEBGPU');
-    stopping.reset();
-    const { processor, model } = await load(gpu.fp16, onProgress);
-    if (stopping.interrupted) return null;
-    onProgress({ stage: 'generate', progress: 0 });
-    const inputs = await processor([{ role: 'User', content: prompt }], { chat_template: 'text_to_image' });
-    const total = processor.num_image_tokens;
-    const images = await model.generate_images({
-      ...inputs,
-      min_new_tokens: total,
-      max_new_tokens: total,
-      do_sample: true,
-      streamer: new TokenProgress(total, onProgress),
-      stopping_criteria: stopping,
-    });
-    return stopping.interrupted ? null : images[0].toBlob();
+  async download(onProgress: (p: ImageProgress) => void): Promise<void> {
+    cancelled = false;
+    await ensureFiles(onProgress);
+  },
+
+  async encode(prompt: string): Promise<Float32Array> {
+    cancelled = false;
+    return encodeText(prompt, await ensureFiles(() => undefined));
+  },
+
+  async denoise(states: Float32Array, format: AspectFormat, onStep: (done: number) => void): Promise<Float32Array> {
+    cancelled = false;
+    const { width, height } = sanaSize(format);
+    const files = await ensureFiles(() => undefined);
+    return generateLatents(states, [32, height / LATENT_SCALE, width / LATENT_SCALE], files.transformer, onStep);
+  },
+
+  async decode(latents: Float32Array, format: AspectFormat): Promise<Blob> {
+    cancelled = false;
+    const { width, height } = sanaSize(format);
+    const files = await ensureFiles(() => undefined);
+    return decode(latents, [32, height / LATENT_SCALE, width / LATENT_SCALE], width, height, files.decoder);
   },
 
   cancel(): void {
-    stopping.interrupt();
+    cancelled = true;
   },
 };
 

@@ -142,7 +142,7 @@
       },
       "aiImage": {
         "title": "Tekoälykuvia pikkukuviisi",
-        "text": "Kuvaile kuva, niin Janus Pro piirtää sen näytönohjaimellasi, ilmaiseksi ja mitään lähettämättä. Kertalataus 1,6 Gt, tietokoneella Chromessa tai Edgessä"
+        "text": "Kuvaile kuva, niin SANA-Sprint piirtää sen näytönohjaimellasi, ilmaiseksi ja mitään lähettämättä. Kertalataus 3,1 Gt, tietokoneella Chromessa tai Edgessä"
       }
     },
     "privacy": {
@@ -196,7 +196,7 @@
       },
       "ai": {
         "q": "Miten tekoäly voi toimia ilman palvelinta?",
-        "a": "Tekoälymallit (Whisper tekstityksiin, MediaPipe kasvoihin) ladataan kerran, minkä jälkeen tietokoneesi ajaa niitä. Äänesi ja kuvasi eivät koskaan lähde sieltä. Pikkukuvien tekoälykuvat piirtävä Janus Pro toimii samalla tavalla: noin 1,6 Gt, joka ladataan vain, jos käytät sitä"
+        "a": "Tekoälymallit (Whisper tekstityksiin, MediaPipe kasvoihin) ladataan kerran, minkä jälkeen tietokoneesi ajaa niitä. Äänesi ja kuvasi eivät koskaan lähde sieltä. Pikkukuvien tekoälykuvat piirtävä SANA-Sprint toimii samalla tavalla: noin 3,1 Gt, joka ladataan vain, jos käytät sitä"
       },
       "capcut": {
         "q": "Mitä eroa on CapCutiin?",
@@ -238,6 +238,15 @@
         "offline": "Toimii ilman nettiä"
       },
       "note": "CapCut on omistajansa tavaramerkki. LocalCutVideo on itsenäinen projekti, eikä sillä ole yhteyttä CapCutiin tai ByteDanceen"
+    },
+    "ai": {
+      "eyebrow": "Konepellin alla",
+      "title": "Työn tekevät tekoälymallit",
+      "lead": "Ne toimivat omalla tietokoneellasi: videoitasi ja kuvauksiasi ei koskaan lähetetä tekoälypalveluun",
+      "whisper": "Ymmärtää puhetta ja kirjoittaa tekstitykset kymmenillä kielillä",
+      "sana": "Piirtää pikkukuviesi kuvat lauseen perusteella, enintään 1344×768",
+      "mediapipe": "Löytää kasvot, pitää ne kuvassa ja erottaa henkilön taustasta",
+      "rnnoise": "Poistaa taustamelun puheesta"
     }
   },
   "changelog": {
@@ -667,7 +676,7 @@
           "title": "Immateriaalioikeudet",
           "body": [
             "LocalCutVideon lähdekoodi on avointa ja julkaistu MIT-lisenssillä [GitHubissa](https://github.com/ImMaxence/LocalCutVideo).",
-            "Sovelluksen käyttämät kolmansien osapuolten komponentit, tekoälymallit ja fontit ovat edelleen tekijöidensä omaisuutta, ja niitä käytetään niiden omien lisenssien mukaisesti, jotka on lueteltu [käyttöehdoissa](/terms). Mainitut tavaramerkit (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) kuuluvat omistajilleen."
+            "Sovelluksen käyttämät kolmansien osapuolten komponentit, tekoälymallit ja fontit ovat edelleen tekijöidensä omaisuutta, ja niitä käytetään niiden omien lisenssien mukaisesti, jotka on lueteltu [käyttöehdoissa](/terms). Mainitut tavaramerkit (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) kuuluvat omistajilleen."
           ]
         },
         {
@@ -698,7 +707,7 @@
         {
           "title": "Mitä laitteellesi jää",
           "body": [
-            "Avaamasi video- ja äänitiedostot luetaan suoraan levyltäsi. Analyysi, litterointi (Whisper), kasvojen seuranta ja vienti lasketaan paikallisesti selaimessasi. Pikkukuvien tekoälykuvat (Janus Pro) lasketaan myös paikallisesti: kuvaustasi ja kuvaa ei koskaan lähetetä.",
+            "Avaamasi video- ja äänitiedostot luetaan suoraan levyltäsi. Analyysi, litterointi (Whisper), kasvojen seuranta ja vienti lasketaan paikallisesti selaimessasi. Pikkukuvien tekoälykuvat (SANA-Sprint) lasketaan myös paikallisesti: kuvaustasi ja kuvaa ei koskaan lähetetä.",
             "Projektisi (leikkaukset, litterointi, asetukset) tallennetaan selaimesi paikalliseen tietokantaan (IndexedDB) yhdessä pikkukuvan ja analyysien välimuistin kanssa. Julkaisijalla ei ole niihin pääsyä. Voit poistaa projektin projektisivulla tai poistaa kaiken tyhjentämällä tämän sivuston tiedot selaimesi asetuksista."
           ]
         },
@@ -776,8 +785,8 @@
           "title": "Avoin lähdekoodi ja kolmansien osapuolten komponentit",
           "body": [
             "Lähdekoodi on saatavilla MIT-lisenssillä [GitHubissa](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo perustuu seuraaviin: Mediabunny (MPL-2.0), Transformers.js ja ONNX Runtime (Apache-2.0 ja MIT), OpenAI:n Whisper-mallit (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) sekä Inter- ja Montserrat-fontit (SIL Open Font License).",
-            "Tekoälykuvageneraattori käyttää DeepSeekin Janus Pro -mallia [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL) -lisenssillä, joka koskee myös sinua. Sitoudut olemaan käyttämättä sitä: lain tai muiden oikeuksien vastaisesti; sotilaallisiin tarkoituksiin; alaikäisten hyväksikäyttöön tai vahingoittamiseen; vahingoittamaan tarkoitetun väärän tiedon, sovellettavien säännösten mukaan sopimattoman sisällön tai luvattomien henkilötietojen luomiseen tai levittämiseen; kunnianloukkaukseen tai häirintään; täysin automatisoituihin päätöksiin, jotka vaikuttavat henkilön oikeuksiin; ihmisten syrjimiseen tai vahingoittamiseen heidän käyttäytymisensä, henkilökohtaisten ominaisuuksiensa tai lailla suojattujen ryhmien perusteella; tai ihmisryhmän haavoittuvuuksien hyväksikäyttöön. DeepSeek ei vaadi oikeuksia luomiisi kuviin: vastaat niistä ja niiden käytöstä. Malli toimitetaan sellaisenaan ilman takuuta."
+            "LocalCutVideo perustuu seuraaviin: Mediabunny (MPL-2.0), Transformers.js ja ONNX Runtime (Apache-2.0 ja MIT), OpenAI:n Whisper-mallit (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) sekä Inter- ja Montserrat-fontit (SIL Open Font License).",
+            "Tekoälykuvageneraattori käyttää NVIDIAn SANA-Sprint 0.6B -mallia (Apache-2.0) ja kuvauksesi lukemiseen Googlen Gemma 2 -mallia. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemman käyttöehdot](https://ai.google.dev/gemma/terms) ja [Gemman kielletyn käytön käytäntö](https://ai.google.dev/gemma/prohibited_use_policy) koskevat sinua ja ovat osa näitä ehtoja: sitoudut olemaan käyttämättä generaattoria kiellettyyn käyttöön tai lain vastaisesti. Google ei vaadi oikeuksia luomiisi kuviin: yksin sinä vastaat niistä ja niiden käytöstä. Mallit toimitetaan sellaisenaan ilman takuuta."
           ]
         },
         {
@@ -852,17 +861,18 @@
     "readError": "Tiedostoa ei voitu lukea",
     "ai": {
       "title": "Luo kuva tekoälyllä",
-      "text": "Kuvaile kuva englanniksi. Näytönohjaimesi luo sen, mitään ei lähetetä",
+      "text": "Kuvaile kuva. Englanti on luotettavin. Näytönohjaimesi luo sen, mitään ei lähetetä",
       "prompt": "Kuvaile kuva",
-      "placeholder": "A neon-lit city street at night, cinematic",
+      "placeholder": "A bear in a pine forest at sunrise",
       "run": "Luo",
       "again": "Luo toinen",
-      "size": "Kertalataus {{ size }}. Neliönmuotoinen 384 px:n kuva, sopii parhaiten taustaksi",
+      "size": "Kertalataus {{ size }}. Noin minuutti kuvaa kohden",
       "generating": "Luodaan kuvaa…",
       "unsupported": "Vaatii Chromen tai Edgen tietokoneella, jossa on uudehko näytönohjain",
       "error": "Kuvaa ei voitu luoda. Näytönohjaimesi muisti saattaa loppua kesken",
       "terms": "Luomalla kuvan hyväksyt mallin käyttöehdot",
-      "downloadError": "Tekoälymallia ei voitu ladata. Yritä uudelleen muutaman minuutin kuluttua"
+      "downloadError": "Tekoälymallia ei voitu ladata. Yritä uudelleen muutaman minuutin kuluttua",
+      "history": "Luomasi kuvat"
     }
   },
   "seo": {

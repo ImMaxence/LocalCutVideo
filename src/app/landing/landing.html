@@ -114,6 +114,27 @@
   </div>
 </section>
 
+<section class="section" id="ai">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <span class="eyebrow">{{ 'landing.ai.eyebrow' | transloco }}</span>
+      <h2>{{ 'landing.ai.title' | transloco }}</h2>
+      <p class="muted">{{ 'landing.ai.lead' | transloco }}</p>
+    </div>
+    <div class="ai-models">
+      @for (m of aiModels; track m.key) {
+        <a class="card feature ai-model" [href]="m.url" target="_blank" rel="noopener" [appReveal]="$index % 4">
+          <span class="ficon"><app-icon [name]="m.icon" [size]="20" /></span>
+          <h3 dir="ltr">{{ m.name }}</h3>
+          <span class="ai-maker" dir="ltr">{{ m.maker }}</span>
+          <p class="muted">{{ 'landing.ai.' + m.key | transloco }}</p>
+          <span class="ai-facts" dir="ltr"><i>{{ m.license }}</i><i>{{ m.size }}</i></span>
+        </a>
+      }
+    </div>
+  </div>
+</section>
+
 <section class="section" id="compare">
   <div class="container">
     <div class="section-head" appReveal>
@@ -190,7 +211,7 @@
           <app-icon name="arrow-right" class="arrow" />
           <div class="node browser">
             <b>{{ 'landing.privacy.diagram.browser' | transloco }}</b>
-            <small>WebCodecs · Whisper · MediaPipe · Janus Pro</small>
+            <small>WebCodecs · Whisper · MediaPipe · SANA-Sprint</small>
           </div>
           <app-icon name="arrow-right" class="arrow" />
           <div class="node"><app-icon name="download" /> MP4</div>

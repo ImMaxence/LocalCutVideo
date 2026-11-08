@@ -142,7 +142,7 @@
       },
       "aiImage": {
         "title": "MI-képek a bélyegképeidhez",
-        "text": "Írj le egy képet, és a Janus Pro megrajzolja a videokártyádon, ingyen és bármiféle küldés nélkül. Egyszeri 1,6 GB-os letöltés, számítógépen, Chrome-ban vagy Edge-ben"
+        "text": "Írj le egy képet, és a SANA-Sprint megrajzolja a videokártyádon, ingyen és bármiféle küldés nélkül. Egyszeri 3,1 GB-os letöltés, számítógépen, Chrome-ban vagy Edge-ben"
       }
     },
     "privacy": {
@@ -196,7 +196,7 @@
       },
       "ai": {
         "q": "Hogyan futhat az MI szerver nélkül?",
-        "a": "Az MI-modellek (Whisper a feliratokhoz, MediaPipe az arcokhoz) egyszer letöltődnek, aztán a számítógéped futtatja őket. A hangod és a képeid soha nem hagyják el. A bélyegképek MI-képeit rajzoló Janus Pro ugyanígy működik: körülbelül 1,6 GB, amely csak akkor töltődik le, ha használod"
+        "a": "Az MI-modellek (Whisper a feliratokhoz, MediaPipe az arcokhoz) egyszer letöltődnek, aztán a számítógéped futtatja őket. A hangod és a képeid soha nem hagyják el. A bélyegképek MI-képeit rajzoló SANA-Sprint ugyanígy működik: körülbelül 3,1 GB, amely csak akkor töltődik le, ha használod"
       },
       "capcut": {
         "q": "Miben különbözik a CapCuttól?",
@@ -238,6 +238,15 @@
         "offline": "Internet nélkül is működik"
       },
       "note": "A CapCut a tulajdonosa védjegye. A LocalCutVideo független projekt, nem áll kapcsolatban a CapCuttal vagy a ByteDance-szel"
+    },
+    "ai": {
+      "eyebrow": "A motorháztető alatt",
+      "title": "A munkát végző MI-modellek",
+      "lead": "A saját számítógépeden futnak: a videóidat és leírásaidat soha nem küldjük el MI-szolgáltatásnak",
+      "whisper": "Megérti a beszédet, és több tucat nyelven írja a feliratokat",
+      "sana": "Egy mondat alapján megrajzolja a bélyegképeid képeit, akár 1344×768-ban",
+      "mediapipe": "Megtalálja az arcokat, a képen tartja őket, és leválasztja a személyt a háttérről",
+      "rnnoise": "Eltávolítja a háttérzajt a hangból"
     }
   },
   "changelog": {
@@ -667,7 +676,7 @@
           "title": "Szellemi tulajdon",
           "body": [
             "A LocalCutVideo forráskódja nyílt, és MIT-licenc alatt érhető el a [GitHubon](https://github.com/ImMaxence/LocalCutVideo).",
-            "Az alkalmazás által használt külső komponensek, MI-modellek és betűtípusok a szerzőik tulajdonában maradnak, és a saját licencük szerint használatosak, amelyeket a [felhasználási feltételek](/terms) sorolnak fel. Az említett védjegyek (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) tulajdonosaikéi."
+            "Az alkalmazás által használt külső komponensek, MI-modellek és betűtípusok a szerzőik tulajdonában maradnak, és a saját licencük szerint használatosak, amelyeket a [felhasználási feltételek](/terms) sorolnak fel. Az említett védjegyek (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) tulajdonosaikéi."
           ]
         },
         {
@@ -698,7 +707,7 @@
         {
           "title": "Ami az eszközödön marad",
           "body": [
-            "A megnyitott video- és hangfájlok közvetlenül a lemezedről töltődnek be. Az elemzést, az átírást (Whisper), az arckövetést és az exportálást a böngésződ helyben számolja ki. A bélyegképek MI-képei (Janus Pro) szintén helyben készülnek: a leírásodat és a képet soha nem küldjük el.",
+            "A megnyitott video- és hangfájlok közvetlenül a lemezedről töltődnek be. Az elemzést, az átírást (Whisper), az arckövetést és az exportálást a böngésződ helyben számolja ki. A bélyegképek MI-képei (SANA-Sprint) szintén helyben készülnek: a leírásodat és a képet soha nem küldjük el.",
             "A projektjeid (vágások, átirat, beállítások) a böngésződ helyi adatbázisában (IndexedDB) tárolódnak egy bélyegképpel és az elemzések gyorsítótárával együtt. A kiadó nem fér hozzájuk. Egy projektet a projektek oldalon törölhetsz, vagy mindent törölhetsz, ha a böngésző beállításaiban kiüríted ennek az oldalnak az adatait."
           ]
         },
@@ -776,8 +785,8 @@
           "title": "Nyílt forráskód és külső komponensek",
           "body": [
             "A forráskód MIT-licenc alatt érhető el a [GitHubon](https://github.com/ImMaxence/LocalCutVideo).",
-            "A LocalCutVideo a következőkre épül: Mediabunny (MPL-2.0), Transformers.js és ONNX Runtime (Apache-2.0 és MIT), az OpenAI Whisper-modelljei (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT), valamint az Inter és a Montserrat betűtípus (SIL Open Font License).",
-            "Az MI-képgenerátor a DeepSeek Janus Pro modelljét használja a [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL) alapján, amely rád is vonatkozik. Vállalod, hogy nem használod: jogszabályt vagy mások jogait sértve; katonai célra; kiskorúak kizsákmányolására vagy bántalmazására; károkozási szándékú hamis információk, az alkalmazandó szabályok szerint nem megfelelő tartalmak vagy engedély nélküli személyes adatok létrehozására vagy terjesztésére; rágalmazásra vagy zaklatásra; egy személy jogait érintő, teljesen automatizált döntésekre; emberek viselkedésük, személyes jellemzőik vagy törvényileg védett kategóriák miatti hátrányos megkülönböztetésére vagy károsítására; illetve egy embercsoport sebezhetőségének kihasználására. A DeepSeek nem tart igényt az általad készített képekre: te felelsz értük és a felhasználásukért. A modellt jelen állapotában, garancia nélkül biztosítjuk."
+            "A LocalCutVideo a következőkre épül: Mediabunny (MPL-2.0), Transformers.js és ONNX Runtime (Apache-2.0 és MIT), az OpenAI Whisper-modelljei (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT), valamint az Inter és a Montserrat betűtípus (SIL Open Font License).",
+            "Az MI-képgenerátor az NVIDIA SANA-Sprint 0.6B modelljét (Apache-2.0), a leírásod értelmezéséhez pedig a Google Gemma 2 modelljét használja. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. A [Gemma használati feltételei](https://ai.google.dev/gemma/terms) és a [Gemma tiltott használatra vonatkozó szabályzata](https://ai.google.dev/gemma/prohibited_use_policy) rád is vonatkoznak, és ezen feltételek részét képezik: vállalod, hogy a generátort nem használod tiltott célra vagy jogszabályt sértve. A Google nem tart igényt az általad készített képekre: kizárólag te felelsz értük és a felhasználásukért. A modelleket jelen állapotukban, garancia nélkül biztosítjuk."
           ]
         },
         {
@@ -852,17 +861,18 @@
     "readError": "Ezt a fájlt nem sikerült beolvasni",
     "ai": {
       "title": "Kép készítése MI-vel",
-      "text": "Írd le a képet angolul. A videokártyád készíti el, semmit sem küldünk el",
+      "text": "Írd le a képet. Az angol a legmegbízhatóbb. A videokártyád készíti el, semmit sem küldünk el",
       "prompt": "Írd le a képet",
-      "placeholder": "A neon-lit city street at night, cinematic",
+      "placeholder": "A bear in a pine forest at sunrise",
       "run": "Készítés",
       "again": "Újabb készítése",
-      "size": "Egyszeri letöltés: {{ size }}. Négyzetes, 384 px-es kép, háttérnek a legjobb",
+      "size": "Egyszeri letöltés: {{ size }}. Képenként körülbelül egy perc",
       "generating": "A kép készítése…",
       "unsupported": "Chrome vagy Edge és újabb videokártyával rendelkező számítógép szükséges",
       "error": "A képet nem sikerült elkészíteni. Lehet, hogy kevés a videokártya memóriája",
       "terms": "Kép készítésével elfogadod a modell használati feltételeit",
-      "downloadError": "Az MI-modellt nem sikerült letölteni. Próbáld újra néhány perc múlva"
+      "downloadError": "Az MI-modellt nem sikerült letölteni. Próbáld újra néhány perc múlva",
+      "history": "Az általad készített képek"
     }
   },
   "seo": {

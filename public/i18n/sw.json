@@ -142,7 +142,7 @@
       },
       "aiImage": {
         "title": "Picha za AI kwa vijipicha vyako",
-        "text": "Eleza picha na Janus Pro itaichora kwenye kadi yako ya michoro, bure na bila kutuma chochote. Upakuaji wa mara moja wa GB 1.6, kwenye kompyuta yenye Chrome au Edge"
+        "text": "Eleza picha na SANA-Sprint itaichora kwenye kadi yako ya michoro, bure na bila kutuma chochote. Upakuaji wa mara moja wa GB 3.1, kwenye kompyuta yenye Chrome au Edge"
       }
     },
     "privacy": {
@@ -196,7 +196,7 @@
       },
       "ai": {
         "q": "AI inawezaje kufanya kazi bila seva?",
-        "a": "Miundo ya AI (Whisper kwa manukuu, MediaPipe kwa nyuso) hupakuliwa mara moja, kisha kompyuta yako ndiyo huiendesha. Sauti yako na picha zako haziondoki kamwe humo. Janus Pro, inayochora picha za AI za vijipicha, hufanya kazi vivyo hivyo: takriban GB 1.6, zinazopakuliwa ukiitumia tu"
+        "a": "Miundo ya AI (Whisper kwa manukuu, MediaPipe kwa nyuso) hupakuliwa mara moja, kisha kompyuta yako ndiyo huiendesha. Sauti yako na picha zako haziondoki kamwe humo. SANA-Sprint, inayochora picha za AI za vijipicha, hufanya kazi vivyo hivyo: takriban GB 3.1, zinazopakuliwa ukiitumia tu"
       },
       "capcut": {
         "q": "Kuna tofauti gani na CapCut?",
@@ -238,6 +238,15 @@
         "offline": "Inafanya kazi bila intaneti"
       },
       "note": "CapCut ni chapa ya biashara ya mmiliki wake. LocalCutVideo ni mradi huru, usiohusiana na CapCut wala ByteDance"
+    },
+    "ai": {
+      "eyebrow": "Nyuma ya pazia",
+      "title": "Modeli za AI zinazofanya kazi",
+      "lead": "Zinaendeshwa kwenye kompyuta yako: video na maelezo yako hayatumwi kamwe kwa huduma ya AI",
+      "whisper": "Inaelewa usemi na kuandika manukuu kwa lugha nyingi",
+      "sana": "Inachora picha za vijipicha vyako kutoka kwa sentensi moja, hadi 1344×768",
+      "mediapipe": "Inapata nyuso ili zibaki kwenye fremu na kumtenganisha mtu na mandharinyuma",
+      "rnnoise": "Inaondoa kelele za nyuma kwenye sauti"
     }
   },
   "changelog": {
@@ -667,7 +676,7 @@
           "title": "Haki miliki",
           "body": [
             "Msimbo chanzo wa LocalCutVideo ni chanzo huria na umechapishwa chini ya leseni ya MIT kwenye [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Vipengele vya wahusika wengine, modeli za AI na fonti zinazotumiwa na programu zinabaki mali ya waandishi wao na zinatumika chini ya leseni zao, zilizoorodheshwa kwenye [masharti ya matumizi](/terms). Chapa zilizotajwa (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) ni mali ya wamiliki wao."
+            "Vipengele vya wahusika wengine, modeli za AI na fonti zinazotumiwa na programu zinabaki mali ya waandishi wao na zinatumika chini ya leseni zao, zilizoorodheshwa kwenye [masharti ya matumizi](/terms). Chapa zilizotajwa (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) ni mali ya wamiliki wao."
           ]
         },
         {
@@ -698,7 +707,7 @@
         {
           "title": "Kinachobaki kwenye kifaa chako",
           "body": [
-            "Faili za video na sauti unazofungua husomwa moja kwa moja kutoka kwenye diski yako. Uchambuzi, uandishi (Whisper), ufuatiliaji wa uso na uhamishaji huhesabiwa ndani ya kivinjari chako. Picha za AI za vijipicha (Janus Pro) pia hukokotolewa kwenye kifaa chako: maelezo yako na picha hazitumwi kamwe.",
+            "Faili za video na sauti unazofungua husomwa moja kwa moja kutoka kwenye diski yako. Uchambuzi, uandishi (Whisper), ufuatiliaji wa uso na uhamishaji huhesabiwa ndani ya kivinjari chako. Picha za AI za vijipicha (SANA-Sprint) pia hukokotolewa kwenye kifaa chako: maelezo yako na picha hazitumwi kamwe.",
             "Miradi yako (makato, nakala ya maandishi, mipangilio) huhifadhiwa kwenye hifadhidata ya ndani ya kivinjari chako (IndexedDB), pamoja na picha ndogo na akiba ya uchambuzi. Mchapishaji hana ufikiaji wake. Unaweza kufuta mradi kutoka ukurasa wa miradi, au kufuta kila kitu kwa kufuta data ya tovuti hii kwenye mipangilio ya kivinjari chako."
           ]
         },
@@ -776,8 +785,8 @@
           "title": "Chanzo huria na vipengele vya wahusika wengine",
           "body": [
             "Msimbo chanzo unapatikana chini ya leseni ya MIT kwenye [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo inategemea: Mediabunny (MPL-2.0), Transformers.js na ONNX Runtime (Apache-2.0 na MIT), modeli za Whisper za OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) na fonti za Inter na Montserrat (SIL Open Font License).",
-            "Kitengeneza picha cha AI hutumia modeli ya Janus Pro ya DeepSeek, chini ya [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL) inayokuhusu pia. Unakubali kutoitumia: kwa kukiuka sheria au haki za wengine; kwa madhumuni ya kijeshi; kuwanyonya au kuwadhuru watoto; kutengeneza au kusambaza taarifa za uongo zenye nia ya kudhuru, maudhui yasiyofaa kulingana na kanuni husika, au data binafsi bila idhini; kukashifu au kunyanyasa; kwa maamuzi ya kiotomatiki kabisa yanayoathiri haki za mtu; kubagua au kudhuru watu kwa sababu ya tabia zao, sifa zao binafsi au makundi yanayolindwa na sheria; au kutumia vibaya udhaifu wa kundi la watu. DeepSeek haidai haki zozote juu ya picha unazotengeneza: unawajibika kwazo na kwa jinsi unavyozitumia. Modeli inatolewa kama ilivyo, bila dhamana."
+            "LocalCutVideo inategemea: Mediabunny (MPL-2.0), Transformers.js na ONNX Runtime (Apache-2.0 na MIT), modeli za Whisper za OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) na fonti za Inter na Montserrat (SIL Open Font License).",
+            "Kitengeneza picha cha AI hutumia modeli ya SANA-Sprint 0.6B ya NVIDIA (Apache-2.0) na, kusoma maelezo yako, Gemma 2 ya Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Masharti ya Matumizi ya Gemma](https://ai.google.dev/gemma/terms) na [Sera ya Matumizi Yaliyopigwa Marufuku ya Gemma](https://ai.google.dev/gemma/prohibited_use_policy) yanakuhusu na ni sehemu ya masharti haya: unakubali kutotumia kitengeneza picha kwa matumizi yaliyopigwa marufuku au kwa kukiuka sheria. Google haidai haki zozote juu ya picha unazotengeneza: wewe pekee unawajibika kwazo na kwa jinsi unavyozitumia. Modeli zinatolewa kama zilivyo, bila dhamana."
           ]
         },
         {
@@ -852,17 +861,18 @@
     "readError": "Imeshindwa kusoma faili hii",
     "ai": {
       "title": "Tengeneza picha kwa AI",
-      "text": "Eleza picha kwa Kiingereza. Kadi yako ya michoro ndiyo inaitengeneza, hakuna kinachotumwa",
+      "text": "Eleza picha. Kiingereza ndicho cha kuaminika zaidi. Kadi yako ya michoro ndiyo inaitengeneza, hakuna kinachotumwa",
       "prompt": "Eleza picha",
-      "placeholder": "A neon-lit city street at night, cinematic",
+      "placeholder": "A bear in a pine forest at sunrise",
       "run": "Tengeneza",
       "again": "Tengeneza nyingine",
-      "size": "Upakuaji wa mara moja {{ size }}. Picha ya mraba ya px 384, bora kama mandharinyuma",
+      "size": "Upakuaji wa mara moja {{ size }}. Takriban dakika moja kwa kila picha",
       "generating": "Inatengeneza picha…",
       "unsupported": "Inahitaji Chrome au Edge kwenye kompyuta yenye kadi mpya ya michoro",
       "error": "Picha haikuweza kutengenezwa. Huenda kadi yako ya michoro haina kumbukumbu ya kutosha",
       "terms": "Kwa kutengeneza picha, unakubali masharti ya matumizi ya modeli",
-      "downloadError": "Modeli ya AI haikuweza kupakuliwa. Jaribu tena baada ya dakika chache"
+      "downloadError": "Modeli ya AI haikuweza kupakuliwa. Jaribu tena baada ya dakika chache",
+      "history": "Picha ulizotengeneza"
     }
   },
   "seo": {

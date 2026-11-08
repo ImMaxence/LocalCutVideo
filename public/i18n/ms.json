@@ -142,7 +142,7 @@
       },
       "aiImage": {
         "title": "Imej AI untuk lakaran kecil anda",
-        "text": "Terangkan imej dan Janus Pro melukisnya pada kad grafik anda, percuma dan tanpa menghantar apa-apa. Muat turun sekali 1.6 GB, pada komputer dengan Chrome atau Edge"
+        "text": "Terangkan imej dan SANA-Sprint melukisnya pada kad grafik anda, percuma dan tanpa menghantar apa-apa. Muat turun sekali 3.1 GB, pada komputer dengan Chrome atau Edge"
       }
     },
     "privacy": {
@@ -196,7 +196,7 @@
       },
       "ai": {
         "q": "Bagaimana AI boleh berjalan tanpa pelayan?",
-        "a": "Model AI (Whisper untuk sari kata, MediaPipe untuk wajah) dimuat turun sekali, kemudian komputer anda yang menjalankannya. Suara dan imej anda tidak pernah keluar dari situ. Janus Pro, yang melukis imej AI untuk lakaran kecil, berfungsi dengan cara yang sama: kira-kira 1.6 GB, dimuat turun hanya jika anda menggunakannya"
+        "a": "Model AI (Whisper untuk sari kata, MediaPipe untuk wajah) dimuat turun sekali, kemudian komputer anda yang menjalankannya. Suara dan imej anda tidak pernah keluar dari situ. SANA-Sprint, yang melukis imej AI untuk lakaran kecil, berfungsi dengan cara yang sama: kira-kira 3.1 GB, dimuat turun hanya jika anda menggunakannya"
       },
       "capcut": {
         "q": "Apakah bezanya dengan CapCut?",
@@ -238,6 +238,15 @@
         "offline": "Berfungsi tanpa internet"
       },
       "note": "CapCut ialah tanda dagangan pemiliknya. LocalCutVideo ialah projek bebas yang tidak bergabung dengan CapCut atau ByteDance"
+    },
+    "ai": {
+      "eyebrow": "Di sebalik tabir",
+      "title": "Model AI yang melakukan kerja",
+      "lead": "Ia berjalan pada komputer anda: video dan penerangan anda tidak sekali-kali dihantar kepada perkhidmatan AI",
+      "whisper": "Memahami pertuturan dan menulis sari kata dalam berpuluh-puluh bahasa",
+      "sana": "Melukis imej lakaran kecil anda daripada satu ayat, sehingga 1344×768",
+      "mediapipe": "Mengesan wajah supaya kekal dalam bingkai dan memisahkan orang daripada latar",
+      "rnnoise": "Membuang hingar latar daripada suara"
     }
   },
   "changelog": {
@@ -667,7 +676,7 @@
           "title": "Harta intelek",
           "body": [
             "Kod sumber LocalCutVideo adalah sumber terbuka dan diterbitkan di bawah lesen MIT di [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Komponen pihak ketiga, model AI dan fon yang digunakan oleh aplikasi kekal milik pencipta masing-masing dan digunakan di bawah lesen mereka sendiri, yang disenaraikan dalam [terma penggunaan](/terms). Jenama yang disebut (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) milik pemiliknya."
+            "Komponen pihak ketiga, model AI dan fon yang digunakan oleh aplikasi kekal milik pencipta masing-masing dan digunakan di bawah lesen mereka sendiri, yang disenaraikan dalam [terma penggunaan](/terms). Jenama yang disebut (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) milik pemiliknya."
           ]
         },
         {
@@ -698,7 +707,7 @@
         {
           "title": "Apa yang kekal pada peranti anda",
           "body": [
-            "Fail video dan audio yang anda buka dibaca terus daripada cakera. Analisis, transkripsi (Whisper), penjejakan wajah dan eksport dikira secara setempat oleh pelayar anda. Imej AI untuk lakaran kecil (Janus Pro) juga dikira secara setempat: penerangan anda dan imej tidak sekali-kali dihantar.",
+            "Fail video dan audio yang anda buka dibaca terus daripada cakera. Analisis, transkripsi (Whisper), penjejakan wajah dan eksport dikira secara setempat oleh pelayar anda. Imej AI untuk lakaran kecil (SANA-Sprint) juga dikira secara setempat: penerangan anda dan imej tidak sekali-kali dihantar.",
             "Projek anda (potongan, transkrip, tetapan) disimpan dalam pangkalan data setempat pelayar anda (IndexedDB), bersama lakaran kecil dan cache analisis. Penerbit tidak mempunyai akses kepadanya. Anda boleh memadam projek dari halaman projek, atau memadam semuanya dengan mengosongkan data laman ini dalam tetapan pelayar."
           ]
         },
@@ -776,8 +785,8 @@
           "title": "Sumber terbuka dan komponen pihak ketiga",
           "body": [
             "Kod sumber tersedia di bawah lesen MIT di [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo bergantung pada: Mediabunny (MPL-2.0), Transformers.js dan ONNX Runtime (Apache-2.0 dan MIT), model Whisper oleh OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) serta fon Inter dan Montserrat (SIL Open Font License).",
-            "Penjana imej AI menggunakan model Janus Pro oleh DeepSeek, di bawah [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL) yang turut terpakai kepada anda. Anda bersetuju untuk tidak menggunakannya: dengan melanggar undang-undang atau hak orang lain; untuk tujuan ketenteraan; untuk mengeksploitasi atau memudaratkan kanak-kanak; untuk mencipta atau menyebarkan maklumat palsu yang bertujuan memudaratkan, kandungan yang tidak sesuai menurut peraturan yang terpakai, atau data peribadi tanpa kebenaran; untuk memfitnah atau mengganggu; untuk keputusan automatik sepenuhnya yang menjejaskan hak seseorang; untuk mendiskriminasi atau memudaratkan orang kerana tingkah laku, ciri peribadi atau kategori yang dilindungi undang-undang; atau untuk mengeksploitasi kelemahan sesuatu kumpulan orang. DeepSeek tidak menuntut sebarang hak ke atas imej yang anda jana: anda bertanggungjawab ke atasnya dan cara ia digunakan. Model disediakan seadanya, tanpa jaminan."
+            "LocalCutVideo bergantung pada: Mediabunny (MPL-2.0), Transformers.js dan ONNX Runtime (Apache-2.0 dan MIT), model Whisper oleh OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) serta fon Inter dan Montserrat (SIL Open Font License).",
+            "Penjana imej AI menggunakan model SANA-Sprint 0.6B oleh NVIDIA (Apache-2.0) dan, untuk membaca penerangan anda, Gemma 2 oleh Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Terma Penggunaan Gemma](https://ai.google.dev/gemma/terms) dan [Dasar Penggunaan Terlarang Gemma](https://ai.google.dev/gemma/prohibited_use_policy) terpakai kepada anda dan menjadi sebahagian daripada terma ini: anda bersetuju untuk tidak menggunakan penjana bagi sebarang penggunaan terlarang atau melanggar undang-undang. Google tidak menuntut sebarang hak ke atas imej yang anda jana: hanya anda yang bertanggungjawab ke atasnya dan cara ia digunakan. Model disediakan seadanya, tanpa jaminan."
           ]
         },
         {
@@ -852,17 +861,18 @@
     "readError": "Fail ini tidak dapat dibaca",
     "ai": {
       "title": "Jana imej dengan AI",
-      "text": "Terangkan imej dalam bahasa Inggeris. Kad grafik anda menciptanya, tiada apa-apa dihantar",
+      "text": "Terangkan imej. Bahasa Inggeris paling boleh dipercayai. Kad grafik anda menciptanya, tiada apa-apa dihantar",
       "prompt": "Terangkan imej",
-      "placeholder": "A neon-lit city street at night, cinematic",
+      "placeholder": "A bear in a pine forest at sunrise",
       "run": "Jana",
       "again": "Jana yang lain",
-      "size": "Muat turun sekali {{ size }}. Imej segi empat 384 px, paling sesuai sebagai latar",
+      "size": "Muat turun sekali {{ size }}. Kira-kira seminit setiap imej",
       "generating": "Mencipta imej…",
       "unsupported": "Memerlukan Chrome atau Edge pada komputer dengan kad grafik terkini",
       "error": "Imej tidak dapat dijana. Kad grafik anda mungkin kekurangan memori",
       "terms": "Dengan menjana imej, anda menerima terma penggunaan model",
-      "downloadError": "Model AI tidak dapat dimuat turun. Cuba lagi dalam beberapa minit"
+      "downloadError": "Model AI tidak dapat dimuat turun. Cuba lagi dalam beberapa minit",
+      "history": "Imej yang anda jana"
     }
   },
   "seo": {

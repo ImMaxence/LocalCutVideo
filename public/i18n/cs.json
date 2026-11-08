@@ -142,7 +142,7 @@
       },
       "aiImage": {
         "title": "Obrázky AI pro vaše miniatury",
-        "text": "Popište obrázek a Janus Pro ho nakreslí na vaší grafické kartě, zdarma a bez odesílání čehokoli. Jednorázové stažení 1,6 GB, na počítači s Chrome nebo Edge"
+        "text": "Popište obrázek a SANA-Sprint ho nakreslí na vaší grafické kartě, zdarma a bez odesílání čehokoli. Jednorázové stažení 3,1 GB, na počítači s Chrome nebo Edge"
       }
     },
     "privacy": {
@@ -196,7 +196,7 @@
       },
       "ai": {
         "q": "Jak může AI běžet bez serveru?",
-        "a": "Modely AI (Whisper pro titulky, MediaPipe pro obličeje) se stáhnou jednou a pak je spouští váš počítač. Váš hlas ani vaše obrazy ho nikdy neopustí. Janus Pro, který kreslí obrázky AI pro miniatury, funguje stejně: asi 1,6 GB, stažené jen tehdy, když ho použijete"
+        "a": "Modely AI (Whisper pro titulky, MediaPipe pro obličeje) se stáhnou jednou a pak je spouští váš počítač. Váš hlas ani vaše obrazy ho nikdy neopustí. SANA-Sprint, který kreslí obrázky AI pro miniatury, funguje stejně: asi 3,1 GB, stažené jen tehdy, když ho použijete"
       },
       "capcut": {
         "q": "Jaký je rozdíl oproti CapCutu?",
@@ -238,6 +238,15 @@
         "offline": "Funguje bez internetu"
       },
       "note": "CapCut je ochranná známka svého vlastníka. LocalCutVideo je nezávislý projekt, který nemá nic společného s CapCutem ani se společností ByteDance"
+    },
+    "ai": {
+      "eyebrow": "Pod kapotou",
+      "title": "Modely AI, které odvádějí práci",
+      "lead": "Běží na vašem počítači: vaše videa a popisy se nikdy neodesílají do žádné služby AI",
+      "whisper": "Rozumí řeči a píše titulky v desítkách jazyků",
+      "sana": "Podle věty kreslí obrázky pro vaše miniatury, až 1344×768",
+      "mediapipe": "Najde obličeje, udrží je v záběru a oddělí osobu od pozadí",
+      "rnnoise": "Odstraní z hlasu hluk na pozadí"
     }
   },
   "changelog": {
@@ -667,7 +676,7 @@
           "title": "Duševní vlastnictví",
           "body": [
             "Zdrojový kód LocalCutVideo je otevřený a zveřejněný pod licencí MIT na [GitHubu](https://github.com/ImMaxence/LocalCutVideo).",
-            "Komponenty třetích stran, modely AI a písma, které aplikace používá, zůstávají majetkem svých autorů a používají se podle jejich vlastních licencí uvedených v [podmínkách použití](/terms). Zmíněné ochranné známky (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) patří jejich vlastníkům."
+            "Komponenty třetích stran, modely AI a písma, které aplikace používá, zůstávají majetkem svých autorů a používají se podle jejich vlastních licencí uvedených v [podmínkách použití](/terms). Zmíněné ochranné známky (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) patří jejich vlastníkům."
           ]
         },
         {
@@ -698,7 +707,7 @@
         {
           "title": "Co zůstává ve vašem zařízení",
           "body": [
-            "Video a zvukové soubory, které otevřete, se čtou přímo z disku. Analýzu, přepis (Whisper), sledování obličeje i export počítá lokálně váš prohlížeč. Obrázky AI pro miniatury (Janus Pro) se také počítají lokálně: váš popis ani obrázek se nikdy neodesílají.",
+            "Video a zvukové soubory, které otevřete, se čtou přímo z disku. Analýzu, přepis (Whisper), sledování obličeje i export počítá lokálně váš prohlížeč. Obrázky AI pro miniatury (SANA-Sprint) se také počítají lokálně: váš popis ani obrázek se nikdy neodesílají.",
             "Vaše projekty (střihy, přepis, nastavení) se ukládají do místní databáze prohlížeče (IndexedDB) spolu s náhledem a mezipamětí analýz. Provozovatel k nim nemá přístup. Projekt můžete smazat na stránce projektů nebo smazat vše vymazáním dat tohoto webu v nastavení prohlížeče."
           ]
         },
@@ -776,8 +785,8 @@
           "title": "Open source a komponenty třetích stran",
           "body": [
             "Zdrojový kód je k dispozici pod licencí MIT na [GitHubu](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo stojí na: Mediabunny (MPL-2.0), Transformers.js a ONNX Runtime (Apache-2.0 a MIT), modelech Whisper od OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) a písmech Inter a Montserrat (SIL Open Font License).",
-            "Generátor obrázků AI používá model Janus Pro od společnosti DeepSeek na základě licence [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), která se vztahuje i na vás. Zavazujete se, že jej nepoužijete: v rozporu se zákonem nebo právy druhých; pro vojenské účely; k vykořisťování nebo poškozování nezletilých; k vytváření nebo šíření nepravdivých informací s cílem škodit, obsahu nevhodného podle platných předpisů nebo osobních údajů bez oprávnění; k pomlouvání nebo obtěžování; k plně automatizovaným rozhodnutím ovlivňujícím práva osoby; k diskriminaci nebo poškozování lidí kvůli jejich chování, osobním vlastnostem nebo zákonem chráněným kategoriím; ani ke zneužívání zranitelnosti skupiny osob. DeepSeek si nečiní nárok na obrázky, které vytvoříte: odpovídáte za ně i za jejich použití. Model je poskytován tak, jak je, bez záruky."
+            "LocalCutVideo stojí na: Mediabunny (MPL-2.0), Transformers.js a ONNX Runtime (Apache-2.0 a MIT), modelech Whisper od OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) a písmech Inter a Montserrat (SIL Open Font License).",
+            "Generátor obrázků AI používá model SANA-Sprint 0.6B od společnosti NVIDIA (Apache-2.0) a ke čtení vašeho popisu model Gemma 2 od společnosti Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Podmínky použití Gemma](https://ai.google.dev/gemma/terms) a [zásady zakázaného použití Gemma](https://ai.google.dev/gemma/prohibited_use_policy) se vztahují i na vás a jsou součástí těchto podmínek: zavazujete se, že generátor nepoužijete k zakázaným účelům ani v rozporu se zákonem. Google si nečiní nárok na obrázky, které vytvoříte: odpovídáte za ně i za jejich použití výhradně vy. Modely jsou poskytovány tak, jak jsou, bez záruky."
           ]
         },
         {
@@ -852,17 +861,18 @@
     "readError": "Tento soubor se nepodařilo přečíst",
     "ai": {
       "title": "Vytvořit obrázek pomocí AI",
-      "text": "Popište obrázek anglicky. Vytvoří ho vaše grafická karta, nic se neodesílá",
+      "text": "Popište obrázek. Nejspolehlivější je angličtina. Vytvoří ho vaše grafická karta, nic se neodesílá",
       "prompt": "Popište obrázek",
-      "placeholder": "A neon-lit city street at night, cinematic",
+      "placeholder": "A bear in a pine forest at sunrise",
       "run": "Vytvořit",
       "again": "Vytvořit další",
-      "size": "Jednorázové stažení {{ size }}. Čtvercový obrázek 384 px, nejlépe jako pozadí",
+      "size": "Jednorázové stažení {{ size }}. Asi minuta na obrázek",
       "generating": "Vytváření obrázku…",
       "unsupported": "Vyžaduje Chrome nebo Edge na počítači s novější grafickou kartou",
       "error": "Obrázek se nepodařilo vytvořit. Grafické kartě možná chybí paměť",
       "terms": "Vytvořením obrázku přijímáte podmínky použití modelu",
-      "downloadError": "Model AI se nepodařilo stáhnout. Zkuste to znovu za několik minut"
+      "downloadError": "Model AI se nepodařilo stáhnout. Zkuste to znovu za několik minut",
+      "history": "Vaše vytvořené obrázky"
     }
   },
   "seo": {

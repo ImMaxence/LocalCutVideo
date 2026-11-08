@@ -142,7 +142,7 @@
       },
       "aiImage": {
         "title": "Immagini IA per le tue miniature",
-        "text": "Descrivi un'immagine e Janus Pro la disegna sulla tua scheda grafica, gratis e senza inviare nulla. Download unico di 1,6 GB, su un computer con Chrome o Edge"
+        "text": "Descrivi un'immagine e SANA-Sprint la disegna sulla tua scheda grafica, gratis e senza inviare nulla. Download unico di 3,1 GB, su un computer con Chrome o Edge"
       }
     },
     "privacy": {
@@ -196,7 +196,7 @@
       },
       "ai": {
         "q": "Come fa l'IA a funzionare senza server?",
-        "a": "I modelli di IA (Whisper per i sottotitoli, MediaPipe per i volti) vengono scaricati una volta, poi li esegue il tuo computer. La tua voce e le tue immagini non lo lasciano mai. Janus Pro, che disegna le immagini IA delle miniature, funziona allo stesso modo: circa 1,6 GB, scaricati solo se lo usi"
+        "a": "I modelli di IA (Whisper per i sottotitoli, MediaPipe per i volti) vengono scaricati una volta, poi li esegue il tuo computer. La tua voce e le tue immagini non lo lasciano mai. SANA-Sprint, che disegna le immagini IA delle miniature, funziona allo stesso modo: circa 3,1 GB, scaricati solo se lo usi"
       },
       "capcut": {
         "q": "Che differenza c'è con CapCut?",
@@ -238,6 +238,15 @@
         "offline": "Funziona senza internet"
       },
       "note": "CapCut è un marchio del rispettivo proprietario. LocalCutVideo è un progetto indipendente, non affiliato a CapCut né a ByteDance"
+    },
+    "ai": {
+      "eyebrow": "Sotto il cofano",
+      "title": "Le IA che fanno il lavoro",
+      "lead": "Funzionano sul tuo computer: i tuoi video e le tue descrizioni non vengono mai inviati a un servizio di IA",
+      "whisper": "Capisce il parlato e scrive i sottotitoli, in decine di lingue",
+      "sana": "Disegna le immagini delle tue miniature a partire da una frase, fino a 1344×768",
+      "mediapipe": "Individua i volti per tenerli nell'inquadratura e separa la persona dallo sfondo",
+      "rnnoise": "Rimuove il rumore di fondo dalla voce"
     }
   },
   "changelog": {
@@ -667,7 +676,7 @@
           "title": "Proprietà intellettuale",
           "body": [
             "Il codice sorgente di LocalCutVideo è open source e pubblicato con licenza MIT su [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "I componenti di terze parti, i modelli di IA e i font usati dall'applicazione restano di proprietà dei rispettivi autori e sono usati secondo le loro licenze, elencate nelle [condizioni d'uso](/terms). I marchi citati (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) appartengono ai rispettivi proprietari."
+            "I componenti di terze parti, i modelli di IA e i font usati dall'applicazione restano di proprietà dei rispettivi autori e sono usati secondo le loro licenze, elencate nelle [condizioni d'uso](/terms). I marchi citati (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) appartengono ai rispettivi proprietari."
           ]
         },
         {
@@ -698,7 +707,7 @@
         {
           "title": "Cosa resta sul tuo dispositivo",
           "body": [
-            "I file video e audio che apri vengono letti direttamente dal disco. Analisi, trascrizione (Whisper), tracciamento del volto ed esportazione sono calcolati localmente dal browser. Anche le immagini IA delle miniature (Janus Pro) sono calcolate localmente: la tua descrizione e l'immagine non vengono mai inviate.",
+            "I file video e audio che apri vengono letti direttamente dal disco. Analisi, trascrizione (Whisper), tracciamento del volto ed esportazione sono calcolati localmente dal browser. Anche le immagini IA delle miniature (SANA-Sprint) sono calcolate localmente: la tua descrizione e l'immagine non vengono mai inviate.",
             "I tuoi progetti (tagli, trascrizione, impostazioni) sono salvati nel database locale del browser (IndexedDB), insieme a una miniatura e a una cache delle analisi. L'editore non vi ha accesso. Puoi eliminare un progetto dalla pagina dei progetti, oppure cancellare tutto eliminando i dati di questo sito nelle impostazioni del browser."
           ]
         },
@@ -776,8 +785,8 @@
           "title": "Open source e componenti di terze parti",
           "body": [
             "Il codice sorgente è disponibile con licenza MIT su [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo si basa su: Mediabunny (MPL-2.0), Transformers.js e ONNX Runtime (Apache-2.0 e MIT), i modelli Whisper di OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) e i font Inter e Montserrat (SIL Open Font License).",
-            "Il generatore di immagini IA utilizza il modello Janus Pro di DeepSeek, secondo la [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), che si applica a te. Ti impegni a non utilizzarlo: in violazione della legge o dei diritti altrui; per scopi militari; per sfruttare o danneggiare minori; per creare o diffondere informazioni false volte a nuocere, contenuti inappropriati secondo la normativa applicabile o dati personali senza autorizzazione; per diffamare o molestare; per decisioni interamente automatizzate che incidano sui diritti di una persona; per discriminare o danneggiare persone a causa del loro comportamento, delle loro caratteristiche personali o di categorie protette dalla legge; o per sfruttare le vulnerabilità di un gruppo di persone. DeepSeek non rivendica alcun diritto sulle immagini che generi: ne sei responsabile, così come del loro utilizzo. Il modello è fornito così com'è, senza garanzia."
+            "LocalCutVideo si basa su: Mediabunny (MPL-2.0), Transformers.js e ONNX Runtime (Apache-2.0 e MIT), i modelli Whisper di OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) e i font Inter e Montserrat (SIL Open Font License).",
+            "Il generatore di immagini IA utilizza il modello SANA-Sprint 0.6B di NVIDIA (Apache-2.0) e, per leggere la tua descrizione, Gemma 2 di Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. I [termini di utilizzo di Gemma](https://ai.google.dev/gemma/terms) e la sua [politica sugli usi vietati](https://ai.google.dev/gemma/prohibited_use_policy) si applicano a te e fanno parte di questi termini: ti impegni a non utilizzare il generatore per usi vietati o in violazione della legge. Google non rivendica alcun diritto sulle immagini che generi: ne sei l'unico responsabile, così come del loro utilizzo. I modelli sono forniti così come sono, senza garanzia."
           ]
         },
         {
@@ -852,17 +861,18 @@
     "readError": "Impossibile leggere questo file",
     "ai": {
       "title": "Genera un'immagine con l'IA",
-      "text": "Descrivi l'immagine in inglese. La crea la tua scheda grafica, non viene inviato nulla",
+      "text": "Descrivi l'immagine. L'inglese è il più affidabile. La crea la tua scheda grafica, non viene inviato nulla",
       "prompt": "Descrivi l'immagine",
-      "placeholder": "A neon-lit city street at night, cinematic",
+      "placeholder": "A bear in a pine forest at sunrise",
       "run": "Genera",
       "again": "Generane un'altra",
-      "size": "Download unico {{ size }}. Immagine quadrata da 384 px, ideale come sfondo",
+      "size": "Download unico {{ size }}. Circa un minuto per immagine",
       "generating": "Creazione dell'immagine…",
       "unsupported": "Richiede Chrome o Edge su un computer con scheda grafica recente",
       "error": "Impossibile generare l'immagine. La tua scheda grafica potrebbe avere poca memoria",
       "terms": "Generando un'immagine, accetti le condizioni d'uso del modello",
-      "downloadError": "Impossibile scaricare il modello IA. Riprova tra qualche minuto"
+      "downloadError": "Impossibile scaricare il modello IA. Riprova tra qualche minuto",
+      "history": "Le tue immagini generate"
     }
   },
   "seo": {

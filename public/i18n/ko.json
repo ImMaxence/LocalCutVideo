@@ -142,7 +142,7 @@
       },
       "aiImage": {
         "title": "썸네일용 AI 이미지",
-        "text": "이미지를 설명하면 Janus Pro가 그래픽 카드에서 무료로 그려 주며 아무것도 전송되지 않습니다. Chrome 또는 Edge가 있는 컴퓨터에서 1.6GB를 한 번만 다운로드합니다"
+        "text": "이미지를 설명하면 SANA-Sprint가 그래픽 카드에서 무료로 그려 주며 아무것도 전송되지 않습니다. Chrome 또는 Edge가 있는 컴퓨터에서 3.1GB를 한 번만 다운로드합니다"
       }
     },
     "privacy": {
@@ -196,7 +196,7 @@
       },
       "ai": {
         "q": "서버 없이 AI가 어떻게 돌아가나요?",
-        "a": "AI 모델(자막용 Whisper, 얼굴 인식용 MediaPipe)을 한 번 내려받으면 그다음부터는 내 컴퓨터가 실행합니다. 목소리와 영상은 절대 밖으로 나가지 않아요. 썸네일의 AI 이미지를 그리는 Janus Pro도 같은 방식으로 작동합니다. 약 1.6GB이며 사용할 때만 다운로드됩니다"
+        "a": "AI 모델(자막용 Whisper, 얼굴 인식용 MediaPipe)을 한 번 내려받으면 그다음부터는 내 컴퓨터가 실행합니다. 목소리와 영상은 절대 밖으로 나가지 않아요. 썸네일의 AI 이미지를 그리는 SANA-Sprint도 같은 방식으로 작동합니다. 약 3.1GB이며 사용할 때만 다운로드됩니다"
       },
       "capcut": {
         "q": "CapCut과 무엇이 다른가요?",
@@ -238,6 +238,15 @@
         "offline": "인터넷 없이 작동"
       },
       "note": "CapCut은 해당 소유자의 상표입니다. LocalCutVideo는 독립 프로젝트로, CapCut 및 ByteDance와 관련이 없습니다"
+    },
+    "ai": {
+      "eyebrow": "내부 구조",
+      "title": "작업을 수행하는 AI 모델",
+      "lead": "내 컴퓨터에서 실행됩니다. 영상과 설명은 AI 서비스로 절대 전송되지 않습니다",
+      "whisper": "음성을 이해하고 수십 개 언어로 자막을 작성합니다",
+      "sana": "문장으로 썸네일 이미지를 최대 1344×768로 그립니다",
+      "mediapipe": "얼굴을 찾아 화면 안에 유지하고 인물을 배경에서 분리합니다",
+      "rnnoise": "음성에서 배경 소음을 제거합니다"
     }
   },
   "changelog": {
@@ -667,7 +676,7 @@
           "title": "지식재산권",
           "body": [
             "LocalCutVideo의 소스 코드는 오픈소스이며 MIT 라이선스로 [GitHub](https://github.com/ImMaxence/LocalCutVideo)에 공개되어 있습니다.",
-            "앱이 사용하는 서드파티 구성 요소, AI 모델, 글꼴은 각 저작자의 소유이며, [이용 약관](/terms)에 명시된 각자의 라이선스에 따라 사용됩니다. 언급된 브랜드(Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge 등)는 각 소유자에게 속합니다."
+            "앱이 사용하는 서드파티 구성 요소, AI 모델, 글꼴은 각 저작자의 소유이며, [이용 약관](/terms)에 명시된 각자의 라이선스에 따라 사용됩니다. 언급된 브랜드(Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge 등)는 각 소유자에게 속합니다."
           ]
         },
         {
@@ -698,7 +707,7 @@
         {
           "title": "기기에 남는 것",
           "body": [
-            "여는 동영상과 오디오 파일은 디스크에서 바로 읽습니다. 분석, 받아쓰기(Whisper), 얼굴 추적, 내보내기는 브라우저가 로컬에서 계산합니다. 썸네일의 AI 이미지(Janus Pro)도 로컬에서 처리되며, 설명과 이미지는 절대 전송되지 않습니다.",
+            "여는 동영상과 오디오 파일은 디스크에서 바로 읽습니다. 분석, 받아쓰기(Whisper), 얼굴 추적, 내보내기는 브라우저가 로컬에서 계산합니다. 썸네일의 AI 이미지(SANA-Sprint)도 로컬에서 처리되며, 설명과 이미지는 절대 전송되지 않습니다.",
             "프로젝트(컷, 받아쓰기, 설정)는 썸네일 및 분석 캐시와 함께 브라우저의 로컬 데이터베이스(IndexedDB)에 저장됩니다. 운영자는 여기에 접근할 수 없습니다. 프로젝트 페이지에서 프로젝트를 삭제하거나, 브라우저 설정에서 이 사이트의 데이터를 지워 모두 삭제할 수 있습니다."
           ]
         },
@@ -776,8 +785,8 @@
           "title": "오픈소스와 서드파티 구성 요소",
           "body": [
             "소스 코드는 MIT 라이선스로 [GitHub](https://github.com/ImMaxence/LocalCutVideo)에 공개되어 있습니다.",
-            "LocalCutVideo는 다음을 기반으로 합니다: Mediabunny(MPL-2.0), Transformers.js와 ONNX Runtime(Apache-2.0 및 MIT), OpenAI의 Whisper 모델(MIT), Janus Pro (DeepSeek Model License), MediaPipe(Apache-2.0), Wavesurfer.js(BSD-3-Clause), Dexie.js(Apache-2.0), Angular(MIT), Inter 및 Montserrat 글꼴(SIL Open Font License).",
-            "AI 이미지 생성기는 DeepSeek의 Janus Pro 모델을 사용하며, 사용자에게도 적용되는 [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL)를 따릅니다. 사용자는 다음 용도로 사용하지 않을 것에 동의합니다. 법률 또는 타인의 권리를 위반하는 행위, 군사 목적, 미성년자 착취 또는 가해, 타인에게 해를 끼칠 목적의 허위 정보·관련 규정상 부적절한 콘텐츠·무단 개인정보의 생성 또는 유포, 명예훼손 또는 괴롭힘, 개인의 권리에 영향을 미치는 완전 자동화된 결정, 행동·개인적 특성·법적으로 보호되는 범주를 이유로 한 차별 또는 가해, 특정 집단의 취약성 악용. DeepSeek는 사용자가 생성한 이미지에 대해 어떠한 권리도 주장하지 않으며, 이미지와 그 사용에 대한 책임은 사용자에게 있습니다. 모델은 있는 그대로 보증 없이 제공됩니다."
+            "LocalCutVideo는 다음을 기반으로 합니다: Mediabunny(MPL-2.0), Transformers.js와 ONNX Runtime(Apache-2.0 및 MIT), OpenAI의 Whisper 모델(MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe(Apache-2.0), Wavesurfer.js(BSD-3-Clause), Dexie.js(Apache-2.0), Angular(MIT), Inter 및 Montserrat 글꼴(SIL Open Font License).",
+            "AI 이미지 생성기는 NVIDIA의 SANA-Sprint 0.6B 모델(Apache-2.0)과, 설명을 읽기 위한 Google의 Gemma 2를 사용합니다. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma 이용 약관](https://ai.google.dev/gemma/terms) 및 [Gemma 금지된 사용 정책](https://ai.google.dev/gemma/prohibited_use_policy)은 사용자에게도 적용되며 본 약관의 일부를 이룹니다. 사용자는 금지된 용도로 또는 법률을 위반하여 생성기를 사용하지 않을 것에 동의합니다. Google은 사용자가 생성한 이미지에 대해 어떠한 권리도 주장하지 않으며, 이미지와 그 사용에 대한 책임은 전적으로 사용자에게 있습니다. 모델은 있는 그대로 보증 없이 제공됩니다."
           ]
         },
         {
@@ -852,17 +861,18 @@
     "readError": "이 파일을 읽을 수 없습니다",
     "ai": {
       "title": "AI로 이미지 생성",
-      "text": "이미지를 영어로 설명하세요. 그래픽 카드가 만들며 아무것도 전송되지 않습니다",
+      "text": "이미지를 설명하세요. 영어가 가장 안정적입니다. 그래픽 카드가 만들며 아무것도 전송되지 않습니다",
       "prompt": "이미지 설명",
-      "placeholder": "A neon-lit city street at night, cinematic",
+      "placeholder": "A bear in a pine forest at sunrise",
       "run": "생성",
       "again": "다른 이미지 생성",
-      "size": "1회 다운로드 {{ size }}. 384 px 정사각형 이미지로 배경에 가장 적합합니다",
+      "size": "1회 다운로드 {{ size }}. 이미지당 약 1분",
       "generating": "이미지 만드는 중…",
       "unsupported": "최신 그래픽 카드가 있는 컴퓨터의 Chrome 또는 Edge가 필요합니다",
       "error": "이미지를 생성하지 못했습니다. 그래픽 카드 메모리가 부족할 수 있습니다",
       "terms": "이미지를 생성하면 모델 이용 약관에 동의하는 것입니다",
-      "downloadError": "AI 모델을 다운로드하지 못했습니다. 몇 분 후 다시 시도하세요"
+      "downloadError": "AI 모델을 다운로드하지 못했습니다. 몇 분 후 다시 시도하세요",
+      "history": "생성한 이미지"
     }
   },
   "seo": {

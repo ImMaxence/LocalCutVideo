@@ -142,7 +142,7 @@
       },
       "aiImage": {
         "title": "AI-afbeeldingen voor je thumbnails",
-        "text": "Beschrijf een afbeelding en Janus Pro tekent hem op je videokaart, gratis en zonder iets te verzenden. Eenmalige download van 1,6 GB, op een computer met Chrome of Edge"
+        "text": "Beschrijf een afbeelding en SANA-Sprint tekent hem op je videokaart, gratis en zonder iets te verzenden. Eenmalige download van 3,1 GB, op een computer met Chrome of Edge"
       }
     },
     "privacy": {
@@ -196,7 +196,7 @@
       },
       "ai": {
         "q": "Hoe kan de AI zonder server werken?",
-        "a": "De AI-modellen (Whisper voor ondertitels, MediaPipe voor gezichten) worden één keer gedownload, daarna draait je computer ze. Je stem en je beelden verlaten hem nooit. Janus Pro, dat de AI-afbeeldingen van de thumbnails tekent, werkt op dezelfde manier: ongeveer 1,6 GB, alleen gedownload als je het gebruikt"
+        "a": "De AI-modellen (Whisper voor ondertitels, MediaPipe voor gezichten) worden één keer gedownload, daarna draait je computer ze. Je stem en je beelden verlaten hem nooit. SANA-Sprint, dat de AI-afbeeldingen van de thumbnails tekent, werkt op dezelfde manier: ongeveer 3,1 GB, alleen gedownload als je het gebruikt"
       },
       "capcut": {
         "q": "Wat is het verschil met CapCut?",
@@ -238,6 +238,15 @@
         "offline": "Werkt zonder internet"
       },
       "note": "CapCut is een merk van de eigenaar ervan. LocalCutVideo is een onafhankelijk project, niet verbonden aan CapCut of ByteDance"
+    },
+    "ai": {
+      "eyebrow": "Onder de motorkap",
+      "title": "De AI-modellen die het werk doen",
+      "lead": "Ze draaien op je eigen computer: je video's en beschrijvingen worden nooit naar een AI-dienst gestuurd",
+      "whisper": "Begrijpt spraak en schrijft de ondertitels, in tientallen talen",
+      "sana": "Tekent de afbeeldingen van je thumbnails op basis van een zin, tot 1344×768",
+      "mediapipe": "Vindt gezichten om ze in beeld te houden en scheidt de persoon van de achtergrond",
+      "rnnoise": "Haalt achtergrondgeluid uit de stem"
     }
   },
   "changelog": {
@@ -667,7 +676,7 @@
           "title": "Intellectueel eigendom",
           "body": [
             "De broncode van LocalCutVideo is open source en gepubliceerd onder de MIT-licentie op [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Componenten van derden, AI-modellen en lettertypen die de applicatie gebruikt, blijven eigendom van hun makers en worden gebruikt onder hun eigen licenties, vermeld in de [gebruiksvoorwaarden](/terms). Genoemde merken (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) zijn eigendom van hun houders."
+            "Componenten van derden, AI-modellen en lettertypen die de applicatie gebruikt, blijven eigendom van hun makers en worden gebruikt onder hun eigen licenties, vermeld in de [gebruiksvoorwaarden](/terms). Genoemde merken (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) zijn eigendom van hun houders."
           ]
         },
         {
@@ -698,7 +707,7 @@
         {
           "title": "Wat er op je apparaat blijft",
           "body": [
-            "De video- en audiobestanden die je opent, worden direct van je schijf gelezen. Analyse, transcriptie (Whisper), gezichtsherkenning en export worden lokaal door je browser berekend. De AI-afbeeldingen van de thumbnails (Janus Pro) worden ook lokaal berekend: je beschrijving en de afbeelding worden nooit verzonden.",
+            "De video- en audiobestanden die je opent, worden direct van je schijf gelezen. Analyse, transcriptie (Whisper), gezichtsherkenning en export worden lokaal door je browser berekend. De AI-afbeeldingen van de thumbnails (SANA-Sprint) worden ook lokaal berekend: je beschrijving en de afbeelding worden nooit verzonden.",
             "Je projecten (knippen, transcript, instellingen) worden opgeslagen in de lokale database van je browser (IndexedDB), samen met een miniatuur en een cache van analyses. De uitgever heeft er geen toegang toe. Je kunt een project verwijderen op de projectenpagina, of alles wissen door de gegevens van deze site te verwijderen in de instellingen van je browser."
           ]
         },
@@ -776,8 +785,8 @@
           "title": "Open source en componenten van derden",
           "body": [
             "De broncode is beschikbaar onder de MIT-licentie op [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo maakt gebruik van: Mediabunny (MPL-2.0), Transformers.js en ONNX Runtime (Apache-2.0 en MIT), de Whisper-modellen van OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) en de lettertypen Inter en Montserrat (SIL Open Font License).",
-            "De AI-beeldgenerator gebruikt het model Janus Pro van DeepSeek, onder de [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), die op jou van toepassing is. Je verbindt je ertoe het niet te gebruiken: in strijd met de wet of de rechten van anderen; voor militaire doeleinden; om minderjarigen uit te buiten of te schaden; om valse informatie met de bedoeling te schaden, inhoud die volgens de toepasselijke regelgeving ongepast is of persoonsgegevens zonder toestemming te maken of te verspreiden; om anderen te belasteren of lastig te vallen; voor volledig geautomatiseerde beslissingen die de rechten van iemand aantasten; om mensen te discrimineren of te schaden vanwege hun gedrag, persoonlijke kenmerken of wettelijk beschermde categorieën; of om de kwetsbaarheden van een groep mensen uit te buiten. DeepSeek claimt geen rechten op de afbeeldingen die je maakt: jij bent verantwoordelijk voor de afbeeldingen en het gebruik ervan. Het model wordt geleverd zoals het is, zonder garantie."
+            "LocalCutVideo maakt gebruik van: Mediabunny (MPL-2.0), Transformers.js en ONNX Runtime (Apache-2.0 en MIT), de Whisper-modellen van OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) en de lettertypen Inter en Montserrat (SIL Open Font License).",
+            "De AI-beeldgenerator gebruikt het model SANA-Sprint 0.6B van NVIDIA (Apache-2.0) en, om je beschrijving te lezen, Gemma 2 van Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. De [gebruiksvoorwaarden van Gemma](https://ai.google.dev/gemma/terms) en het [beleid inzake verboden gebruik van Gemma](https://ai.google.dev/gemma/prohibited_use_policy) zijn op jou van toepassing en maken deel uit van deze voorwaarden: je verbindt je ertoe de generator niet voor verboden gebruik of in strijd met de wet te gebruiken. Google claimt geen rechten op de afbeeldingen die je maakt: alleen jij bent verantwoordelijk voor de afbeeldingen en het gebruik ervan. De modellen worden geleverd zoals ze zijn, zonder garantie."
           ]
         },
         {
@@ -852,17 +861,18 @@
     "readError": "Dit bestand kon niet worden gelezen",
     "ai": {
       "title": "Afbeelding maken met AI",
-      "text": "Beschrijf de afbeelding in het Engels. Je videokaart maakt hem, er wordt niets verzonden",
+      "text": "Beschrijf de afbeelding. Engels is het betrouwbaarst. Je videokaart maakt hem, er wordt niets verzonden",
       "prompt": "Beschrijf de afbeelding",
-      "placeholder": "A neon-lit city street at night, cinematic",
+      "placeholder": "A bear in a pine forest at sunrise",
       "run": "Maken",
       "again": "Nog een maken",
-      "size": "Eenmalige download {{ size }}. Vierkante afbeelding van 384 px, ideaal als achtergrond",
+      "size": "Eenmalige download {{ size }}. Ongeveer een minuut per afbeelding",
       "generating": "Afbeelding maken…",
       "unsupported": "Vereist Chrome of Edge op een computer met een recente videokaart",
       "error": "De afbeelding kon niet worden gemaakt. Je videokaart heeft mogelijk te weinig geheugen",
       "terms": "Door een afbeelding te maken, accepteer je de gebruiksvoorwaarden van het model",
-      "downloadError": "Het AI-model kon niet worden gedownload. Probeer het over een paar minuten opnieuw"
+      "downloadError": "Het AI-model kon niet worden gedownload. Probeer het over een paar minuten opnieuw",
+      "history": "Je gemaakte afbeeldingen"
     }
   },
   "seo": {

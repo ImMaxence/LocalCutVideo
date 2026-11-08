@@ -209,7 +209,7 @@
               </button>
             }
           </div>
-          <small class="faint">{{ 'editor.transcribe.download' | transloco: { size: modelSizes[store.whisperModel()] } }}</small>
+          <small class="faint">{{ store.whisperName() }} · {{ 'editor.transcribe.download' | transloco: { size: modelSizes[store.whisperModel()] } }}</small>
         </div>
         <div class="field">
           <span class="label">{{ 'editor.transcribe.language' | transloco }}</span>

@@ -384,6 +384,7 @@
             <span class="label">{{ 'editor.transcribe.language' | transloco }}</span>
             <app-select [options]="languageOptions()" [value]="spokenLanguage()" (valueChange)="setSpokenLanguage($event)" [label]="'editor.transcribe.language' | transloco" />
             <small class="faint">{{ 'editor.auto.languageHint' | transloco }}</small>
+            <small class="faint">{{ 'editor.transcribe.model' | transloco }} · {{ store.whisperName() }}</small>
           </div>
           @if (store.project(); as project) {
             <div class="auto-field">

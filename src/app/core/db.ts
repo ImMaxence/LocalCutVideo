@@ -1,5 +1,5 @@
 import { Dexie, type Table } from 'dexie';
-import { type AudioAnalysis, LEGACY_CLIP_ID, type Project } from '../engine/model';
+import { type AspectFormat, type AudioAnalysis, LEGACY_CLIP_ID, type Project } from '../engine/model';
 
 export type FileRole = 'clip' | 'music';
 
@@ -29,12 +29,22 @@ export interface CachedTranscript {
   createdAt: number;
 }
 
+/** A picture made by the image model, kept on this device so it can be used again. */
+export interface StoredAiImage {
+  id?: number;
+  blob: Blob;
+  prompt: string;
+  format: AspectFormat;
+  createdAt: number;
+}
+
 class LocalCutDb extends Dexie {
   projects!: Table<Project, string>;
   files!: Table<StoredFile, string>;
   analysis!: Table<AudioAnalysis, string>;
   thumbs!: Table<StoredThumb, string>;
   transcripts!: Table<CachedTranscript, string>;
+  aiImages!: Table<StoredAiImage, number>;
 
   constructor() {
     super('localcutvideo');
@@ -45,6 +55,7 @@ class LocalCutDb extends Dexie {
       thumbs: 'projectId',
       transcripts: 'key',
     });
+    this.version(2).stores({ aiImages: '++id, createdAt' });
   }
 }
 

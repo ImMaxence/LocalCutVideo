@@ -200,6 +200,11 @@ export class EditorStore {
   readonly selectedText = signal<string | null>(null);
   readonly whisperModel = signal<WhisperModel>('base');
   readonly whisperLanguage = signal<string | null>(null);
+  /** The model's full name, shown to the user. */
+  readonly whisperName = computed(() => {
+    const model = this.whisperModel();
+    return `Whisper ${model.charAt(0).toUpperCase()}${model.slice(1)}`;
+  });
   readonly notice = signal<{ key: string; params?: Record<string, unknown>; tone: 'info' | 'error'; detail?: string } | null>(null);
   private noticeTimer = 0;
 

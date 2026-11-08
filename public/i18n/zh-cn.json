@@ -142,7 +142,7 @@
       },
       "aiImage": {
         "title": "为缩略图生成 AI 图像",
-        "text": "描述一张图片，Janus Pro 就会在您的显卡上绘制，免费且不发送任何内容。在装有 Chrome 或 Edge 的电脑上一次性下载 1.6 GB"
+        "text": "描述一张图片，SANA-Sprint 就会在您的显卡上绘制，免费且不发送任何内容。在装有 Chrome 或 Edge 的电脑上一次性下载 3.1 GB"
       }
     },
     "privacy": {
@@ -196,7 +196,7 @@
       },
       "ai": {
         "q": "没有服务器，AI 怎么运行？",
-        "a": "AI 模型（用于字幕的 Whisper、用于人脸的 MediaPipe）只需下载一次，之后由你的电脑运行。你的声音和画面从不离开它。绘制缩略图 AI 图像的 Janus Pro 也是同样的方式：约 1.6 GB，仅在您使用时下载"
+        "a": "AI 模型（用于字幕的 Whisper、用于人脸的 MediaPipe）只需下载一次，之后由你的电脑运行。你的声音和画面从不离开它。绘制缩略图 AI 图像的 SANA-Sprint 也是同样的方式：约 3.1 GB，仅在您使用时下载"
       },
       "capcut": {
         "q": "和 CapCut 有什么区别？",
@@ -238,6 +238,15 @@
         "offline": "无需联网即可使用"
       },
       "note": "CapCut 是其所有者的商标。LocalCutVideo 是独立项目，与 CapCut 或字节跳动（ByteDance）无关"
+    },
+    "ai": {
+      "eyebrow": "幕后技术",
+      "title": "完成这些工作的 AI 模型",
+      "lead": "它们在您自己的电脑上运行：您的视频和描述绝不会发送给任何 AI 服务",
+      "whisper": "理解语音并以数十种语言生成字幕",
+      "sana": "根据一句话绘制缩略图图像，最高 1344×768",
+      "mediapipe": "检测人脸并保持在画面内，将人物与背景分离",
+      "rnnoise": "去除语音中的背景噪音"
     }
   },
   "changelog": {
@@ -667,7 +676,7 @@
           "title": "知识产权",
           "body": [
             "LocalCutVideo 的源代码是开源的，以 MIT 许可证发布在 [GitHub](https://github.com/ImMaxence/LocalCutVideo) 上。",
-            "应用所使用的第三方组件、AI 模型和字体仍归其作者所有，并依据其各自的许可证使用，详见[使用条款](/terms)。所提及的品牌（Whisper、MediaPipe、Janus Pro、DeepSeek、Hugging Face、Chrome、Edge 等）归其各自所有者所有。"
+            "应用所使用的第三方组件、AI 模型和字体仍归其作者所有，并依据其各自的许可证使用，详见[使用条款](/terms)。所提及的品牌（Whisper、MediaPipe、SANA-Sprint、NVIDIA、Gemma、Google、Hugging Face、Chrome、Edge 等）归其各自所有者所有。"
           ]
         },
         {
@@ -698,7 +707,7 @@
         {
           "title": "留在你设备上的内容",
           "body": [
-            "你打开的视频和音频文件直接从磁盘读取。分析、转写（Whisper）、人脸追踪和导出都由你的浏览器在本地计算。缩略图的 AI 图像（Janus Pro）同样在本地计算：您的描述和图像绝不会被发送。",
+            "你打开的视频和音频文件直接从磁盘读取。分析、转写（Whisper）、人脸追踪和导出都由你的浏览器在本地计算。缩略图的 AI 图像（SANA-Sprint）同样在本地计算：您的描述和图像绝不会被发送。",
             "你的项目（剪切、转写稿、设置）连同一张封面图和分析缓存，一起保存在浏览器的本地数据库（IndexedDB）中。发布者无法访问它们。你可以在项目页面删除某个项目，或在浏览器设置中清除本站数据以删除全部内容。"
           ]
         },
@@ -776,8 +785,8 @@
           "title": "开源与第三方组件",
           "body": [
             "源代码以 MIT 许可证发布在 [GitHub](https://github.com/ImMaxence/LocalCutVideo) 上。",
-            "LocalCutVideo 依赖以下组件：Mediabunny（MPL-2.0）、Transformers.js 和 ONNX Runtime（Apache-2.0 和 MIT）、OpenAI 的 Whisper 模型（MIT）、Janus Pro (DeepSeek Model License)、MediaPipe（Apache-2.0）、Wavesurfer.js（BSD-3-Clause）、Dexie.js（Apache-2.0）、Angular（MIT），以及 Inter 和 Montserrat 字体（SIL Open Font License）。",
-            "AI 图像生成器使用 DeepSeek 的 Janus Pro 模型，遵循同样适用于您的 [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL)。您同意不将其用于：违反法律或侵犯他人权利；军事用途；剥削或伤害未成年人；生成或传播意在伤害他人的虚假信息、根据适用法规不当的内容或未经授权的个人信息；诽谤或骚扰；影响个人权利的完全自动化决策；基于行为、个人特征或受法律保护的类别歧视或伤害他人；或利用某一人群的弱点。DeepSeek 对您生成的图像不主张任何权利：您须对图像及其使用负责。模型按原样提供，不作任何保证。"
+            "LocalCutVideo 依赖以下组件：Mediabunny（MPL-2.0）、Transformers.js 和 ONNX Runtime（Apache-2.0 和 MIT）、OpenAI 的 Whisper 模型（MIT）、SANA-Sprint (NVIDIA, Apache-2.0)、Gemma 2 (Google)、MediaPipe（Apache-2.0）、Wavesurfer.js（BSD-3-Clause）、Dexie.js（Apache-2.0）、Angular（MIT），以及 Inter 和 Montserrat 字体（SIL Open Font License）。",
+            "AI 图像生成器使用 NVIDIA 的 SANA-Sprint 0.6B 模型（Apache-2.0），并使用 Google 的 Gemma 2 读取您的描述。 Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma 使用条款](https://ai.google.dev/gemma/terms)和 [Gemma 禁止使用政策](https://ai.google.dev/gemma/prohibited_use_policy)同样适用于您，并构成本条款的一部分：您同意不将生成器用于任何被禁止的用途或违反法律。Google 对您生成的图像不主张任何权利：您须独自对图像及其使用负责。模型按原样提供，不作任何保证。"
           ]
         },
         {
@@ -852,17 +861,18 @@
     "readError": "无法读取此文件",
     "ai": {
       "title": "用 AI 生成图片",
-      "text": "请用英语描述图片。由您的显卡生成，不会发送任何内容",
+      "text": "描述图片。英语最可靠。由您的显卡生成，不会发送任何内容",
       "prompt": "描述图片",
-      "placeholder": "A neon-lit city street at night, cinematic",
+      "placeholder": "A bear in a pine forest at sunrise",
       "run": "生成",
       "again": "再生成一张",
-      "size": "仅需下载一次 {{ size }}。384 px 方形图片，最适合作背景",
+      "size": "仅需下载一次 {{ size }}。每张图片约一分钟",
       "generating": "正在生成图片…",
       "unsupported": "需要在配备较新显卡的电脑上使用 Chrome 或 Edge",
       "error": "无法生成图片。您的显卡内存可能不足",
       "terms": "生成图像即表示您接受该模型的使用条款",
-      "downloadError": "无法下载 AI 模型。请几分钟后重试"
+      "downloadError": "无法下载 AI 模型。请几分钟后重试",
+      "history": "您生成的图片"
     }
   },
   "seo": {

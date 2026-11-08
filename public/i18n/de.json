@@ -142,7 +142,7 @@
       },
       "aiImage": {
         "title": "KI-Bilder für deine Thumbnails",
-        "text": "Beschreibe ein Bild und Janus Pro zeichnet es auf deiner Grafikkarte, kostenlos und ohne dass etwas gesendet wird. Einmaliger Download von 1,6 GB, auf einem Computer mit Chrome oder Edge"
+        "text": "Beschreibe ein Bild und SANA-Sprint zeichnet es auf deiner Grafikkarte, kostenlos und ohne dass etwas gesendet wird. Einmaliger Download von 3,1 GB, auf einem Computer mit Chrome oder Edge"
       }
     },
     "privacy": {
@@ -196,7 +196,7 @@
       },
       "ai": {
         "q": "Wie kann die KI ohne Server laufen?",
-        "a": "Die KI-Modelle (Whisper für Untertitel, MediaPipe für Gesichter) werden einmal heruntergeladen, dann führt dein Computer sie aus. Deine Stimme und deine Bilder verlassen ihn nie. Janus Pro, das die KI-Bilder der Thumbnails zeichnet, funktioniert genauso: etwa 1,6 GB, die nur heruntergeladen werden, wenn du es nutzt"
+        "a": "Die KI-Modelle (Whisper für Untertitel, MediaPipe für Gesichter) werden einmal heruntergeladen, dann führt dein Computer sie aus. Deine Stimme und deine Bilder verlassen ihn nie. SANA-Sprint, das die KI-Bilder der Thumbnails zeichnet, funktioniert genauso: etwa 3,1 GB, die nur heruntergeladen werden, wenn du es nutzt"
       },
       "capcut": {
         "q": "Was ist der Unterschied zu CapCut?",
@@ -238,6 +238,15 @@
         "offline": "Funktioniert ohne Internet"
       },
       "note": "CapCut ist eine Marke ihres Inhabers. LocalCutVideo ist ein unabhängiges Projekt ohne Verbindung zu CapCut oder ByteDance"
+    },
+    "ai": {
+      "eyebrow": "Unter der Haube",
+      "title": "Die KI-Modelle, die die Arbeit machen",
+      "lead": "Sie laufen auf deinem Computer: Deine Videos und Beschreibungen werden nie an einen KI-Dienst gesendet",
+      "whisper": "Versteht Sprache und schreibt die Untertitel, in Dutzenden Sprachen",
+      "sana": "Zeichnet die Bilder deiner Thumbnails aus einem Satz, bis zu 1344×768",
+      "mediapipe": "Erkennt Gesichter, hält sie im Bild und trennt die Person vom Hintergrund",
+      "rnnoise": "Entfernt Hintergrundgeräusche aus der Stimme"
     }
   },
   "changelog": {
@@ -667,7 +676,7 @@
           "title": "Geistiges Eigentum",
           "body": [
             "Der Quellcode von LocalCutVideo ist Open Source und unter der MIT-Lizenz auf [GitHub](https://github.com/ImMaxence/LocalCutVideo) veröffentlicht.",
-            "Die von der Anwendung genutzten Fremdkomponenten, KI-Modelle und Schriftarten bleiben Eigentum ihrer Urheber und werden gemäß ihren eigenen Lizenzen verwendet, die in den [Nutzungsbedingungen](/terms) aufgeführt sind. Genannte Marken (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) gehören ihren Inhabern."
+            "Die von der Anwendung genutzten Fremdkomponenten, KI-Modelle und Schriftarten bleiben Eigentum ihrer Urheber und werden gemäß ihren eigenen Lizenzen verwendet, die in den [Nutzungsbedingungen](/terms) aufgeführt sind. Genannte Marken (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) gehören ihren Inhabern."
           ]
         },
         {
@@ -698,7 +707,7 @@
         {
           "title": "Was auf deinem Gerät bleibt",
           "body": [
-            "Die Video- und Audiodateien, die du öffnest, werden direkt von deiner Festplatte gelesen. Analyse, Transkription (Whisper), Gesichtsverfolgung und Export werden lokal in deinem Browser berechnet. Die KI-Bilder der Thumbnails (Janus Pro) werden ebenfalls lokal berechnet: Deine Beschreibung und das Bild werden nie gesendet.",
+            "Die Video- und Audiodateien, die du öffnest, werden direkt von deiner Festplatte gelesen. Analyse, Transkription (Whisper), Gesichtsverfolgung und Export werden lokal in deinem Browser berechnet. Die KI-Bilder der Thumbnails (SANA-Sprint) werden ebenfalls lokal berechnet: Deine Beschreibung und das Bild werden nie gesendet.",
             "Deine Projekte (Schnitte, Transkript, Einstellungen) werden in der lokalen Datenbank deines Browsers (IndexedDB) gespeichert, zusammen mit einer Vorschau und einem Analyse-Cache. Der Herausgeber hat keinen Zugriff darauf. Du kannst ein Projekt auf der Projektseite löschen oder alles entfernen, indem du die Daten dieser Website in den Browsereinstellungen löschst."
           ]
         },
@@ -776,8 +785,8 @@
           "title": "Open Source und Fremdkomponenten",
           "body": [
             "Der Quellcode ist unter der MIT-Lizenz auf [GitHub](https://github.com/ImMaxence/LocalCutVideo) verfügbar.",
-            "LocalCutVideo nutzt: Mediabunny (MPL-2.0), Transformers.js und ONNX Runtime (Apache-2.0 und MIT), die Whisper-Modelle von OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) sowie die Schriftarten Inter und Montserrat (SIL Open Font License).",
-            "Der KI-Bildgenerator verwendet das Modell Janus Pro von DeepSeek unter der [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), die für dich gilt. Du verpflichtest dich, es nicht zu verwenden: unter Verstoß gegen Gesetze oder Rechte Dritter; für militärische Zwecke; um Minderjährige auszubeuten oder ihnen zu schaden; um Falschinformationen mit Schädigungsabsicht, nach geltendem Recht unzulässige Inhalte oder personenbezogene Daten ohne Berechtigung zu erstellen oder zu verbreiten; um andere zu verleumden oder zu belästigen; für vollautomatisierte Entscheidungen, die die Rechte einer Person beeinträchtigen; um Menschen wegen ihres Verhaltens, ihrer persönlichen Merkmale oder gesetzlich geschützter Kategorien zu diskriminieren oder ihnen zu schaden; oder um die Schwächen einer Personengruppe auszunutzen. DeepSeek beansprucht keine Rechte an den von dir erzeugten Bildern: Du bist für sie und ihre Nutzung verantwortlich. Das Modell wird ohne Gewähr bereitgestellt."
+            "LocalCutVideo nutzt: Mediabunny (MPL-2.0), Transformers.js und ONNX Runtime (Apache-2.0 und MIT), die Whisper-Modelle von OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) sowie die Schriftarten Inter und Montserrat (SIL Open Font License).",
+            "Der KI-Bildgenerator verwendet das Modell SANA-Sprint 0.6B von NVIDIA (Apache-2.0) und, um deine Beschreibung zu lesen, Gemma 2 von Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. Die [Gemma-Nutzungsbedingungen](https://ai.google.dev/gemma/terms) und die [Gemma-Richtlinie zu verbotenen Nutzungen](https://ai.google.dev/gemma/prohibited_use_policy) gelten für dich und sind Teil dieser Bedingungen: Du verpflichtest dich, den Generator nicht für verbotene Zwecke oder unter Verstoß gegen Gesetze zu verwenden. Google beansprucht keine Rechte an den von dir erzeugten Bildern: Du allein bist für sie und ihre Nutzung verantwortlich. Die Modelle werden ohne Gewähr bereitgestellt."
           ]
         },
         {
@@ -852,17 +861,18 @@
     "readError": "Diese Datei konnte nicht gelesen werden",
     "ai": {
       "title": "Bild mit KI erzeugen",
-      "text": "Beschreibe das Bild auf Englisch. Deine Grafikkarte erstellt es, nichts wird gesendet",
+      "text": "Beschreibe das Bild. Englisch ist am zuverlässigsten. Deine Grafikkarte erstellt es, nichts wird gesendet",
       "prompt": "Beschreibe das Bild",
-      "placeholder": "A neon-lit city street at night, cinematic",
+      "placeholder": "A bear in a pine forest at sunrise",
       "run": "Erzeugen",
       "again": "Noch eins erzeugen",
-      "size": "Einmaliger Download {{ size }}. Quadratisches Bild mit 384 px, ideal als Hintergrund",
+      "size": "Einmaliger Download {{ size }}. Etwa eine Minute pro Bild",
       "generating": "Bild wird erstellt…",
       "unsupported": "Benötigt Chrome oder Edge auf einem Computer mit aktueller Grafikkarte",
       "error": "Das Bild konnte nicht erzeugt werden. Deiner Grafikkarte fehlt vielleicht Speicher",
       "terms": "Mit dem Erzeugen eines Bildes akzeptierst du die Nutzungsbedingungen des Modells",
-      "downloadError": "Das KI-Modell konnte nicht heruntergeladen werden. Versuche es in ein paar Minuten erneut"
+      "downloadError": "Das KI-Modell konnte nicht heruntergeladen werden. Versuche es in ein paar Minuten erneut",
+      "history": "Deine erzeugten Bilder"
     }
   },
   "seo": {

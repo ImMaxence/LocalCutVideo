@@ -2,10 +2,21 @@
 
 All notable changes to LocalCutVideo. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning: [SemVer](https://semver.org/).
 
+## [1.1.0] - 2026-11-08
+
+### Added
+- Generated pictures are kept on the device: reuse them, edit the description, generate again
+- The AI model in use is shown, for pictures and for Whisper
+- Home page section on the AI models used
+
+### Changed
+- AI thumbnails use SANA-Sprint 0.6B instead of Janus Pro: sharper pictures up to 1344×768, descriptions in several languages (one-time 3.1 GB download, about a minute per image)
+- Legal pages cover the new model: Gemma Terms of Use, prohibited uses
+
 ## [1.0.0] - 2026-11-08
 
 ### Added
-- Thumbnails: generate the picture with AI, on your own graphics card (Janus Pro, one-time 1.6 GB download)
+- Thumbnails: generate the picture with AI, on your own graphics card
 - Auto edit: choice of the spoken language, detected language shown during and after the run
 - Dozens of spoken languages to choose from, up from 7
 - "Make a thumbnail" button once the export is done
@@ -13,7 +24,7 @@ All notable changes to LocalCutVideo. Format: [Keep a Changelog](https://keepach
 ### Changed
 - Auto edit: progress keeps moving during long steps, with a bar, what is happening, the time spent and the last words heard
 - Home page highlights the automatic detection of the video's language and the AI images
-- Legal pages cover the image model: DeepSeek Model License, its use restrictions, what Hugging Face receives
+- Privacy policy says what Hugging Face receives when the image model is downloaded
 
 ### Fixed
 - English spoken with an accent was taken for another language and translated: the detected language is now checked
