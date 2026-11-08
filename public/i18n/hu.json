@@ -88,6 +88,10 @@
       "eyebrow": "Funkciók",
       "title": "Minden, ami a figyelmet lekötő videókhoz kell",
       "lead": "TikTok-, Reels-, Shorts- és YouTube-alkotóknak, de tanároknak, oktatóknak és cégeknek is",
+      "speech": {
+        "title": "A videód nyelve, automatikusan",
+        "text": "Az alkalmazás az egyik nyelven, a videó a másikon? A beszélt nyelvet felismerjük és ellenőrizzük, vagy te választod ki több tucat nyelv közül"
+      },
       "silences": {
         "title": "Viszlát, szünetek",
         "text": "A csendeket és az üresjáratokat automatikusan megtalálja és kivágja: a videód egy pillanat alatt pörgősebb lesz"
@@ -135,6 +139,10 @@
       "languages": {
         "title": "A te nyelveden",
         "text": "A felület {{ count }} nyelven érhető el, a feliratok pedig több tucat nyelven működnek, automatikus felismeréssel"
+      },
+      "aiImage": {
+        "title": "MI-képek a bélyegképeidhez",
+        "text": "Írj le egy képet, és a Janus Pro megrajzolja a videokártyádon, ingyen és bármiféle küldés nélkül. Egyszeri 1,6 GB-os letöltés, számítógépen, Chrome-ban vagy Edge-ben"
       }
     },
     "privacy": {
@@ -188,7 +196,7 @@
       },
       "ai": {
         "q": "Hogyan futhat az MI szerver nélkül?",
-        "a": "Az MI-modellek (Whisper a feliratokhoz, MediaPipe az arcokhoz) egyszer letöltődnek, aztán a számítógéped futtatja őket. A hangod és a képeid soha nem hagyják el"
+        "a": "Az MI-modellek (Whisper a feliratokhoz, MediaPipe az arcokhoz) egyszer letöltődnek, aztán a számítógéped futtatja őket. A hangod és a képeid soha nem hagyják el. A bélyegképek MI-képeit rajzoló Janus Pro ugyanígy működik: körülbelül 1,6 GB, amely csak akkor töltődik le, ha használod"
       },
       "capcut": {
         "q": "Miben különbözik a CapCuttól?",
@@ -207,7 +215,8 @@
         "moments": "Javasolt legjobb pillanatok",
         "title": "Cím kiemelt szavakkal, 4 stílus",
         "formats": "YouTube 1280×720, Shorts és négyzet",
-        "local": "Az eszközödön készül, semmi sem töltődik fel"
+        "local": "Az eszközödön készül, semmi sem töltődik fel",
+        "ai": "Vagy készítsd el a képet MI-vel a számítógépeden"
       },
       "cta": "Bélyegkép készítése",
       "mockTitle": "Az első",
@@ -273,15 +282,6 @@
     "skippedCodec": "Kihagyva, ez a böngésző nem támogatja a kodeket: {{ names }}. Próbáld a Chrome-ot, vagy konvertáld H.264 MP4-re",
     "notProject": "Ez a fájl nem LocalCutVideo-projekt",
     "demo": "A bemutatóvideót nem sikerült betölteni"
-  },
-  "languages": {
-    "en": "Angol",
-    "fr": "Francia",
-    "es": "Spanyol",
-    "it": "Olasz",
-    "de": "Német",
-    "pt": "Portugál",
-    "nl": "Holland"
   },
   "editor": {
     "back": "Vissza a projektekhez",
@@ -389,7 +389,9 @@
       "stage": {
         "audio": "Hang kinyerése…",
         "download": "Modell letöltése…",
-        "transcribe": "Átírás folyamatban…"
+        "transcribe": "Átírás folyamatban…",
+        "load": "A modell előkészítése…",
+        "language": "A nyelv felismerése…"
       },
       "missing": "Az új klipek átírása ({{ count }})",
       "rerunHint": "Elölről kezdi a fenti modellel és nyelvvel",
@@ -513,7 +515,8 @@
       "start": "MP4 exportálása",
       "saveProject": "Projekt mentése",
       "saveProjectHint": "Egy .lcv.json-fájl a szerkesztéseddel (videó nélkül), hogy egy másik gépen folytathasd",
-      "projectSaved": "Projekt mentve .lcv.json-fájlként"
+      "projectSaved": "Projekt mentve .lcv.json-fájlként",
+      "thumbnail": "Bélyegkép készítése"
     },
     "clips": {
       "title": "Klipek",
@@ -557,7 +560,8 @@
         "cuts": "vágás",
         "removed": "eltávolítva",
         "words": "feliratozott szó",
-        "silent": "{{ count }} klip hang nélkül: csak a valódi üresjárat lett kivágva"
+        "silent": "{{ count }} klip hang nélkül: csak a valódi üresjárat lett kivágva",
+        "languageHint": "Nem ez a nyelv? Vond vissza, és válaszd ki a nyelvet"
       },
       "steps": {
         "analyze": "Hang elemzése",
@@ -580,7 +584,8 @@
         "detectedYes": "Felismerve: valaki beszél",
         "detectedNo": "Felismerve: nincs beszéd",
         "hint": "Nincs beszéd: nincs átirat és felirat, csak a valódi üresjárat vágódik ki"
-      }
+      },
+      "languageHint": "Az automatikus mód általában elég. Erős akcentus esetén válaszd ki a nyelvet magad"
     },
     "mix": {
       "title": "A videó hangja",
@@ -631,7 +636,7 @@
     }
   },
   "legal": {
-    "updated": "Utolsó frissítés: 2026. november 2.",
+    "updated": "Utolsó frissítés: 2026. november 8.",
     "contact": "Kapcsolat",
     "nav": {
       "notice": "Impresszum",
@@ -662,7 +667,7 @@
           "title": "Szellemi tulajdon",
           "body": [
             "A LocalCutVideo forráskódja nyílt, és MIT-licenc alatt érhető el a [GitHubon](https://github.com/ImMaxence/LocalCutVideo).",
-            "Az alkalmazás által használt külső komponensek, MI-modellek és betűtípusok a szerzőik tulajdonában maradnak, és a saját licencük szerint használatosak, amelyeket a [felhasználási feltételek](/terms) sorolnak fel. Az említett védjegyek (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) tulajdonosaikéi."
+            "Az alkalmazás által használt külső komponensek, MI-modellek és betűtípusok a szerzőik tulajdonában maradnak, és a saját licencük szerint használatosak, amelyeket a [felhasználási feltételek](/terms) sorolnak fel. Az említett védjegyek (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) tulajdonosaikéi."
           ]
         },
         {
@@ -693,7 +698,7 @@
         {
           "title": "Ami az eszközödön marad",
           "body": [
-            "A megnyitott video- és hangfájlok közvetlenül a lemezedről töltődnek be. Az elemzést, az átírást (Whisper), az arckövetést és az exportálást a böngésződ helyben számolja ki.",
+            "A megnyitott video- és hangfájlok közvetlenül a lemezedről töltődnek be. Az elemzést, az átírást (Whisper), az arckövetést és az exportálást a böngésződ helyben számolja ki. A bélyegképek MI-képei (Janus Pro) szintén helyben készülnek: a leírásodat és a képet soha nem küldjük el.",
             "A projektjeid (vágások, átirat, beállítások) a böngésződ helyi adatbázisában (IndexedDB) tárolódnak egy bélyegképpel és az elemzések gyorsítótárával együtt. A kiadó nem fér hozzájuk. Egy projektet a projektek oldalon törölhetsz, vagy mindent törölhetsz, ha a böngésző beállításaiban kiüríted ennek az oldalnak az adatait."
           ]
         },
@@ -713,7 +718,7 @@
           "title": "Harmadik felek",
           "body": [
             "Cloudflare: az oldalra érkező minden kérés a Cloudflare-en keresztül halad, amely védi a szervert és titkosítja a kapcsolatot. Mint minden hálózati közvetítő, az oldalak kézbesítéséhez kezeli az IP-címedet és a szokásos böngészőadatokat, és biztonsági okokból technikai naplókat őrizhet; a videóidat és a hangodat azonban soha nem kapja meg, mert azok soha nem hagyják el az eszközödet. Lásd a Cloudflare [adatvédelmi tájékoztatóját](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: a Whisper-modellt ez az oldal szolgáltatja, akárcsak az alkalmazás többi részét. Csak ha itt nem érhető el, akkor töltődik le helyette a huggingface.co-ról; ekkor a Hugging Face megkapja az IP-címedet és a szokásos böngészőadatokat, de a hangodat soha. Lásd az [adatvédelmi tájékoztatójukat](https://huggingface.co/privacy).",
+            "Hugging Face: a Whisper-modellt ez az oldal szolgáltatja, akárcsak az alkalmazás többi részét. Csak ha itt nem érhető el, akkor töltődik le helyette a huggingface.co-ról; ekkor a Hugging Face megkapja az IP-címedet és a szokásos böngészőadatokat, de a hangodat soha. Lásd az [adatvédelmi tájékoztatójukat](https://huggingface.co/privacy). A bélyegkép-készítő MI-képmodellje mindig a huggingface.co oldalról töltődik le, és csak ha használod: a Hugging Face ekkor megkapja az IP-címedet, de a leírásodat és a képet soha.",
             "GitHub: csak ha a forráskód-tárolóra mutató linkre kattintasz.",
             "Más harmadik féllel nem történik kapcsolatfelvétel: egy szigorú Content-Security-Policy technikailag megakadályozza, hogy a lap bárhová máshová csatlakozzon."
           ]
@@ -771,7 +776,8 @@
           "title": "Nyílt forráskód és külső komponensek",
           "body": [
             "A forráskód MIT-licenc alatt érhető el a [GitHubon](https://github.com/ImMaxence/LocalCutVideo).",
-            "A LocalCutVideo a következőkre épül: Mediabunny (MPL-2.0), Transformers.js és ONNX Runtime (Apache-2.0 és MIT), az OpenAI Whisper-modelljei (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT), valamint az Inter és a Montserrat betűtípus (SIL Open Font License)."
+            "A LocalCutVideo a következőkre épül: Mediabunny (MPL-2.0), Transformers.js és ONNX Runtime (Apache-2.0 és MIT), az OpenAI Whisper-modelljei (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT), valamint az Inter és a Montserrat betűtípus (SIL Open Font License).",
+            "Az MI-képgenerátor a DeepSeek Janus Pro modelljét használja a [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL) alapján, amely rád is vonatkozik. Vállalod, hogy nem használod: jogszabályt vagy mások jogait sértve; katonai célra; kiskorúak kizsákmányolására vagy bántalmazására; károkozási szándékú hamis információk, az alkalmazandó szabályok szerint nem megfelelő tartalmak vagy engedély nélküli személyes adatok létrehozására vagy terjesztésére; rágalmazásra vagy zaklatásra; egy személy jogait érintő, teljesen automatizált döntésekre; emberek viselkedésük, személyes jellemzőik vagy törvényileg védett kategóriák miatti hátrányos megkülönböztetésére vagy károsítására; illetve egy embercsoport sebezhetőségének kihasználására. A DeepSeek nem tart igényt az általad készített képekre: te felelsz értük és a felhasználásukért. A modellt jelen állapotában, garancia nélkül biztosítjuk."
           ]
         },
         {
@@ -843,7 +849,21 @@
     "sizeInfo": "{{ width }} × {{ height }} px · YouTube-ra a JPG a legjobb (2 MB alatt)",
     "saved": "Mentve: {{ name }}",
     "loadError": "Ezt a projektet nem sikerült megnyitni",
-    "readError": "Ezt a fájlt nem sikerült beolvasni"
+    "readError": "Ezt a fájlt nem sikerült beolvasni",
+    "ai": {
+      "title": "Kép készítése MI-vel",
+      "text": "Írd le a képet angolul. A videokártyád készíti el, semmit sem küldünk el",
+      "prompt": "Írd le a képet",
+      "placeholder": "A neon-lit city street at night, cinematic",
+      "run": "Készítés",
+      "again": "Újabb készítése",
+      "size": "Egyszeri letöltés: {{ size }}. Négyzetes, 384 px-es kép, háttérnek a legjobb",
+      "generating": "A kép készítése…",
+      "unsupported": "Chrome vagy Edge és újabb videokártyával rendelkező számítógép szükséges",
+      "error": "A képet nem sikerült elkészíteni. Lehet, hogy kevés a videokártya memóriája",
+      "terms": "Kép készítésével elfogadod a modell használati feltételeit",
+      "downloadError": "Az MI-modellt nem sikerült letölteni. Próbáld újra néhány perc múlva"
+    }
   },
   "seo": {
     "home": {

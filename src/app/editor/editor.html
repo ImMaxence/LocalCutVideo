@@ -209,6 +209,11 @@
               }
             }
             <div class="actions">
+              @if (store.project(); as p) {
+                <a class="btn" [routerLink]="['/thumbnail', p.id]" [queryParams]="{ t: store.currentTime().toFixed(2) }">
+                  <app-icon name="image" [size]="16" /> {{ 'editor.export.thumbnail' | transloco }}
+                </a>
+              }
               <button class="btn primary" type="button" (click)="closeExport()">{{ 'common.close' | transloco }}</button>
             </div>
           }
@@ -288,6 +293,12 @@
               @if (s.silentClips) {
                 <p class="note-line"><app-icon name="mic-off" [size]="14" /> {{ 'editor.auto.summary.silent' | transloco: { count: s.silentClips } }}</p>
               }
+              @if (s.language; as language) {
+                <p class="note-line">
+                  <app-icon name="globe" [size]="14" />
+                  <span>{{ 'editor.transcribe.detected' | transloco: { language: languageName(language) } }}. {{ 'editor.auto.summary.languageHint' | transloco }}</span>
+                </p>
+              }
             }
           } @else {
             <h2>{{ 'editor.auto.running' | transloco }}</h2>
@@ -319,6 +330,18 @@
                   <span class="step-value">{{ ((stepProgress(s.id) ?? 0) * 100).toFixed(0) }}%</span>
                 } @else if (s.status === 'skipped' || s.status === 'error') {
                   <small>{{ 'editor.auto.status.' + s.status | transloco }}</small>
+                }
+                @if (s.status === 'running' && tracksProgress(s.id)) {
+                  <div class="step-live">
+                    <div class="progress" [class.indeterminate]="stepProgress(s.id) === null"><div [style.width.%]="(stepProgress(s.id) ?? 0) * 100"></div></div>
+                    <div class="step-detail">
+                      <span>{{ stepDetail(s.id) }}</span>
+                      <time>{{ elapsed(s.startedAt) }}</time>
+                    </div>
+                    @if (s.id === 'transcribe' && store.heardWords(); as heard) {
+                      <q class="step-heard" dir="auto">{{ heard }}</q>
+                    }
+                  </div>
                 }
               </li>
             }
@@ -356,6 +379,11 @@
                 </button>
               }
             </div>
+          </div>
+          <div class="auto-field">
+            <span class="label">{{ 'editor.transcribe.language' | transloco }}</span>
+            <app-select [options]="languageOptions()" [value]="spokenLanguage()" (valueChange)="setSpokenLanguage($event)" [label]="'editor.transcribe.language' | transloco" />
+            <small class="faint">{{ 'editor.auto.languageHint' | transloco }}</small>
           </div>
           @if (store.project(); as project) {
             <div class="auto-field">

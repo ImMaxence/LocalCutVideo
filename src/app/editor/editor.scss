@@ -634,6 +634,63 @@
     font-size: 12.5px;
     color: var(--accent);
   }
+  li:has(.step-live) {
+    flex-wrap: wrap;
+  }
+  .step-live {
+    flex: 1 0 100%;
+    display: grid;
+    gap: 6px;
+    padding-inline-start: 30px;
+    min-width: 0;
+  }
+  .step-detail {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 12.5px;
+    font-weight: 400;
+    color: var(--text-muted);
+    time {
+      flex: none;
+      font-family: var(--mono);
+    }
+  }
+  .step-heard {
+    font-size: 12.5px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .progress.indeterminate {
+    position: relative;
+    overflow: hidden;
+    div {
+      position: absolute;
+      inset-block: 0;
+      width: 35% !important;
+      animation: step-indeterminate 1.3s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes step-indeterminate {
+  from {
+    left: -35%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auto-steps .progress.indeterminate div {
+    animation: none;
+    left: 0;
+  }
 }
 
 .auto-summary {

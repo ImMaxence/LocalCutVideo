@@ -88,6 +88,10 @@
       "eyebrow": "Funktsioonid",
       "title": "Kõik, mida vajad tähelepanu köitvate videote jaoks",
       "lead": "TikToki, Reelsi, Shortsi ja YouTube'i loojatele, aga ka õpetajatele, koolitajatele ja ettevõtetele",
+      "speech": {
+        "title": "Sinu video keel automaatselt",
+        "text": "Rakendus ühes keeles, video teises? Kõneldav keel tuvastatakse ja kontrollitakse või valid selle ise kümnete keelte seast"
+      },
       "silences": {
         "title": "Hüvasti, pausid",
         "text": "Vaikused ja tühjad hetked leitakse ja lõigatakse automaatselt välja: sinu video saab sekundiga rohkem hoogu"
@@ -135,6 +139,10 @@
       "languages": {
         "title": "Sinu keeles",
         "text": "Liides on saadaval {{ count }} keeles ja subtiitrid toimivad kümnetes keeltes, mis tuvastatakse automaatselt"
+      },
+      "aiImage": {
+        "title": "Tehisintellekti pildid sinu pisipiltidele",
+        "text": "Kirjelda pilti ja Janus Pro joonistab selle sinu graafikakaardil, tasuta ja midagi saatmata. Ühekordne 1,6 GB allalaadimine, arvutis Chrome’i või Edge’iga"
       }
     },
     "privacy": {
@@ -188,7 +196,7 @@
       },
       "ai": {
         "q": "Kuidas saab tehisintellekt töötada ilma serverita?",
-        "a": "Tehisintellekti mudelid (Whisper subtiitrite, MediaPipe nägude jaoks) laaditakse alla üks kord, seejärel käitab neid sinu arvuti. Sinu hääl ja pildid ei lahku sealt kunagi"
+        "a": "Tehisintellekti mudelid (Whisper subtiitrite, MediaPipe nägude jaoks) laaditakse alla üks kord, seejärel käitab neid sinu arvuti. Sinu hääl ja pildid ei lahku sealt kunagi. Janus Pro, mis joonistab pisipiltide tehisintellekti pilte, töötab samamoodi: umbes 1,6 GB, mis laaditakse alla ainult siis, kui seda kasutad"
       },
       "capcut": {
         "q": "Mis vahe on CapCutiga?",
@@ -207,7 +215,8 @@
         "moments": "Parimad hetked soovitatud",
         "title": "Esiletõstetud sõnadega pealkiri, 4 stiili",
         "formats": "YouTube 1280×720, Shorts ja ruut",
-        "local": "Tehtud sinu seadmes, midagi ei laadita üles"
+        "local": "Tehtud sinu seadmes, midagi ei laadita üles",
+        "ai": "Või loo pilt tehisintellektiga oma arvutis"
       },
       "cta": "Loo pisipilt",
       "mockTitle": "Minu esimene",
@@ -273,15 +282,6 @@
     "skippedCodec": "Vahele jäetud, see brauser ei toeta koodekit: {{ names }}. Proovi Chrome'i või teisenda H.264 MP4-ks",
     "notProject": "See fail ei ole LocalCutVideo projekt",
     "demo": "Demovideot ei õnnestunud laadida"
-  },
-  "languages": {
-    "en": "Inglise",
-    "fr": "Prantsuse",
-    "es": "Hispaania",
-    "it": "Itaalia",
-    "de": "Saksa",
-    "pt": "Portugali",
-    "nl": "Hollandi"
   },
   "editor": {
     "back": "Tagasi projektide juurde",
@@ -389,7 +389,9 @@
       "stage": {
         "audio": "Heli eraldamine…",
         "download": "Mudeli allalaadimine…",
-        "transcribe": "Transkribeerimine…"
+        "transcribe": "Transkribeerimine…",
+        "load": "Mudeli ettevalmistamine…",
+        "language": "Keele tuvastamine…"
       },
       "missing": "Transkribeeri uued klipid ({{ count }})",
       "rerunHint": "Alustab otsast ülaltoodud mudeli ja keelega",
@@ -513,7 +515,8 @@
       "start": "Ekspordi MP4",
       "saveProject": "Salvesta projekt",
       "saveProjectHint": ".lcv.json-fail sinu montaažiga (ilma videota), et jätkata teises arvutis",
-      "projectSaved": "Projekt salvestatud .lcv.json-failina"
+      "projectSaved": "Projekt salvestatud .lcv.json-failina",
+      "thumbnail": "Loo pisipilt"
     },
     "clips": {
       "title": "Klipid",
@@ -557,7 +560,8 @@
         "cuts": "lõiget",
         "removed": "eemaldatud",
         "words": "sõna subtiitritega",
-        "silent": "{{ count }} klippi ilma häälteta: lõigati ainult tõeline tühi aeg"
+        "silent": "{{ count }} klippi ilma häälteta: lõigati ainult tõeline tühi aeg",
+        "languageHint": "Vale keel? Võta tagasi ja vali keel"
       },
       "steps": {
         "analyze": "Heli analüüsimine",
@@ -580,7 +584,8 @@
         "detectedYes": "Tuvastatud: keegi räägib",
         "detectedNo": "Tuvastatud: häält pole",
         "hint": "Häält pole: transkriptsiooni ega subtiitreid pole, lõigatakse ainult tõeline tühi aeg"
-      }
+      },
+      "languageHint": "Automaatne sobib enamasti. Tugeva aktsendi korral vali keel ise"
     },
     "mix": {
       "title": "Video heli",
@@ -631,7 +636,7 @@
     }
   },
   "legal": {
-    "updated": "Viimati uuendatud: 2. november 2026",
+    "updated": "Viimati uuendatud: 8. november 2026",
     "contact": "Kontakt",
     "nav": {
       "notice": "Õiguslik teave",
@@ -662,7 +667,7 @@
           "title": "Intellektuaalomand",
           "body": [
             "LocalCutVideo lähtekood on avatud ja avaldatud MIT-litsentsi alusel [GitHubis](https://github.com/ImMaxence/LocalCutVideo).",
-            "Rakenduse kasutatavad kolmandate osapoolte komponendid, AI-mudelid ja fondid jäävad nende autorite omandiks ja neid kasutatakse nende endi litsentside alusel, mis on loetletud [kasutustingimustes](/terms). Nimetatud kaubamärgid (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) kuuluvad nende omanikele."
+            "Rakenduse kasutatavad kolmandate osapoolte komponendid, AI-mudelid ja fondid jäävad nende autorite omandiks ja neid kasutatakse nende endi litsentside alusel, mis on loetletud [kasutustingimustes](/terms). Nimetatud kaubamärgid (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) kuuluvad nende omanikele."
           ]
         },
         {
@@ -693,7 +698,7 @@
         {
           "title": "Mis jääb sinu seadmesse",
           "body": [
-            "Sinu avatud video- ja helifaile loetakse otse sinu kettalt. Analüüs, transkriptsioon (Whisper), näojälgimine ja eksport arvutatakse kohapeal sinu brauseris.",
+            "Sinu avatud video- ja helifaile loetakse otse sinu kettalt. Analüüs, transkriptsioon (Whisper), näojälgimine ja eksport arvutatakse kohapeal sinu brauseris. Pisipiltide tehisintellekti pildid (Janus Pro) arvutatakse samuti kohapeal: sinu kirjeldust ja pilti ei saadeta kunagi.",
             "Sinu projektid (lõiked, transkriptsioon, seaded) salvestatakse sinu brauseri kohalikku andmebaasi (IndexedDB) koos pisipildi ja analüüside vahemäluga. Väljaandjal pole neile juurdepääsu. Projekti saad kustutada projektide lehel või kustutada kõik, tühjendades selle saidi andmed oma brauseri seadetes."
           ]
         },
@@ -713,7 +718,7 @@
           "title": "Kolmandad osapooled",
           "body": [
             "Cloudflare: kõik selle saidi päringud liiguvad läbi Cloudflare'i, mis kaitseb serverit ja krüpteerib ühenduse. Nagu iga võrguvahendaja, töötleb see lehtede edastamiseks sinu IP-aadressi ja tavapärast brauseriteavet ning võib turvalisuse huvides säilitada tehnilisi logisid; see ei saa kunagi sinu videoid ega heli, mis ei lahku kunagi sinu seadmest. Vaata Cloudflare'i [privaatsuspoliitikat](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: Whisperi mudelit pakub see sait nagu ka ülejäänud rakendust. Ainult siis, kui see pole siin saadaval, laaditakse see hoopis aadressilt huggingface.co; Hugging Face saab siis sinu IP-aadressi ja tavapärase brauseriteabe, kuid mitte kunagi sinu heli. Vaata nende [privaatsuspoliitikat](https://huggingface.co/privacy).",
+            "Hugging Face: Whisperi mudelit pakub see sait nagu ka ülejäänud rakendust. Ainult siis, kui see pole siin saadaval, laaditakse see hoopis aadressilt huggingface.co; Hugging Face saab siis sinu IP-aadressi ja tavapärase brauseriteabe, kuid mitte kunagi sinu heli. Vaata nende [privaatsuspoliitikat](https://huggingface.co/privacy). Pisipiltide looja tehisintellekti pildimudel laaditakse alati alla saidilt huggingface.co ja ainult siis, kui seda kasutad: Hugging Face saab siis sinu IP-aadressi, kuid mitte kunagi sinu kirjeldust ega pilti.",
             "GitHub: ainult siis, kui järgid linki lähtekoodi hoidlasse.",
             "Ühegi teise kolmanda osapoolega ühendust ei võeta: range Content-Security-Policy takistab tehniliselt lehel kuhugi mujale ühendust looma."
           ]
@@ -771,7 +776,8 @@
           "title": "Avatud lähtekood ja kolmandate osapoolte komponendid",
           "body": [
             "Lähtekood on saadaval MIT-litsentsi alusel [GitHubis](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo tugineb järgmistele: Mediabunny (MPL-2.0), Transformers.js ja ONNX Runtime (Apache-2.0 ja MIT), OpenAI Whisperi mudelid (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ning fondid Inter ja Montserrat (SIL Open Font License)."
+            "LocalCutVideo tugineb järgmistele: Mediabunny (MPL-2.0), Transformers.js ja ONNX Runtime (Apache-2.0 ja MIT), OpenAI Whisperi mudelid (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ning fondid Inter ja Montserrat (SIL Open Font License).",
+            "Tehisintellekti pildigeneraator kasutab DeepSeeki mudelit Janus Pro litsentsi [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL) alusel, mis kehtib ka sinu suhtes. Kohustud seda mitte kasutama: seadust või teiste õigusi rikkudes; sõjalistel eesmärkidel; alaealiste ärakasutamiseks või kahjustamiseks; kahjustamise eesmärgil valeteabe, kohaldatavate õigusaktide kohaselt sobimatu sisu või loata isikuandmete loomiseks või levitamiseks; laimamiseks või ahistamiseks; täielikult automatiseeritud otsusteks, mis mõjutavad inimese õigusi; inimeste diskrimineerimiseks või kahjustamiseks nende käitumise, isikuomaduste või seadusega kaitstud kategooriate alusel; ega inimrühma haavatavuste ärakasutamiseks. DeepSeek ei nõua õigusi sinu loodud piltidele: vastutad nende ja nende kasutamise eest ise. Mudel on saadaval olemasoleval kujul, ilma garantiita."
           ]
         },
         {
@@ -843,7 +849,21 @@
     "sizeInfo": "{{ width }} × {{ height }} px · JPG sobib YouTube'i jaoks kõige paremini (alla 2 MB)",
     "saved": "Salvestatud: {{ name }}",
     "loadError": "Seda projekti ei õnnestunud avada",
-    "readError": "Seda faili ei õnnestunud lugeda"
+    "readError": "Seda faili ei õnnestunud lugeda",
+    "ai": {
+      "title": "Loo pilt tehisintellektiga",
+      "text": "Kirjelda pilti inglise keeles. Selle loob sinu graafikakaart, midagi ei saadeta",
+      "prompt": "Kirjelda pilti",
+      "placeholder": "A neon-lit city street at night, cinematic",
+      "run": "Loo",
+      "again": "Loo veel üks",
+      "size": "Ühekordne allalaadimine {{ size }}. Ruudukujuline 384 px pilt, sobib kõige paremini taustaks",
+      "generating": "Pildi loomine…",
+      "unsupported": "Vajab Chrome’i või Edge’i arvutis, millel on uuem graafikakaart",
+      "error": "Pilti ei õnnestunud luua. Sinu graafikakaardil võib mälu nappida",
+      "terms": "Pilti luues nõustud mudeli kasutustingimustega",
+      "downloadError": "Tehisintellekti mudelit ei õnnestunud alla laadida. Proovi mõne minuti pärast uuesti"
+    }
   },
   "seo": {
     "home": {

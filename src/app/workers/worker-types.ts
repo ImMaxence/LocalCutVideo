@@ -23,8 +23,23 @@ export interface MediaWorkerApi {
 export type AiDevice = 'webgpu' | 'wasm';
 
 export interface TranscribeProgress {
-  stage: 'download' | 'transcribe';
+  stage: 'download' | 'load' | 'language' | 'transcribe';
   progress: number;
+  /** Progress once the running step ends: the display moves toward it in the meantime. */
+  next?: number;
+  /** The language being transcribed, once known. */
+  language?: string | null;
+}
+
+export interface ImageProgress {
+  stage: 'download' | 'load' | 'generate';
+  progress: number;
+}
+
+export interface ImageWorkerApi {
+  /** A PNG for the sentence, null when cancelled. */
+  generate(prompt: string, onProgress: (p: ImageProgress) => void): Promise<Blob | null>;
+  cancel(): void;
 }
 
 export interface RawWord {

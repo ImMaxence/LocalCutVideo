@@ -88,6 +88,10 @@
       "eyebrow": "Funkcije",
       "title": "Vse za videe, ki pritegnejo pozornost",
       "lead": "Za ustvarjalce na TikToku, Reels, Shorts in YouTubu, pa tudi za učitelje, predavatelje in podjetja",
+      "speech": {
+        "title": "Jezik vašega videa, samodejno",
+        "text": "Aplikacija v enem jeziku, video v drugem? Govorjeni jezik se zazna in preveri, lahko pa ga sami izberete med desetinami jezikov"
+      },
       "silences": {
         "title": "Konec premorov",
         "text": "Tišina in mrtvi trenutki se samodejno najdejo in izrežejo: vaš video v sekundi pridobi ritem"
@@ -135,6 +139,10 @@
       "languages": {
         "title": "V vašem jeziku",
         "text": "Vmesnik je na voljo v {{ count }} jezikih, podnapisi pa delujejo v desetinah jezikov, ki se prepoznajo samodejno"
+      },
+      "aiImage": {
+        "title": "Slike UI za vaše sličice",
+        "text": "Opišite sliko in Janus Pro jo bo narisal na vaši grafični kartici, brezplačno in brez pošiljanja česar koli. Enkraten prenos 1,6 GB, na računalniku s Chromom ali Edgeom"
       }
     },
     "privacy": {
@@ -188,7 +196,7 @@
       },
       "ai": {
         "q": "Kako lahko UI deluje brez strežnika?",
-        "a": "Modeli UI (Whisper za podnapise, MediaPipe za obraze) se prenesejo enkrat, nato jih poganja vaš računalnik. Vaš glas in vaše slike ga nikoli ne zapustijo"
+        "a": "Modeli UI (Whisper za podnapise, MediaPipe za obraze) se prenesejo enkrat, nato jih poganja vaš računalnik. Vaš glas in vaše slike ga nikoli ne zapustijo. Janus Pro, ki riše slike UI za sličice, deluje enako: približno 1,6 GB, ki se prenesejo le, če ga uporabite"
       },
       "capcut": {
         "q": "Kakšna je razlika s CapCutom?",
@@ -207,7 +215,8 @@
         "moments": "Predlagani najboljši trenutki",
         "title": "Naslov s poudarjenimi besedami, 4 slogi",
         "formats": "YouTube 1280×720, Shorts in kvadrat",
-        "local": "Narejeno v vaši napravi, nič se ne naloži"
+        "local": "Narejeno v vaši napravi, nič se ne naloži",
+        "ai": "Ali ustvarite sliko z UI na svojem računalniku"
       },
       "cta": "Ustvari sličico",
       "mockTitle": "Moj prvi",
@@ -273,15 +282,6 @@
     "skippedCodec": "Preskočeno, kodek v tem brskalniku ni podprt: {{ names }}. Poskusite Chrome ali pretvorite v H.264 MP4",
     "notProject": "Ta datoteka ni projekt LocalCutVidea",
     "demo": "Predstavitvenega videa ni bilo mogoče naložiti"
-  },
-  "languages": {
-    "en": "Angleščina",
-    "fr": "Francoščina",
-    "es": "Španščina",
-    "it": "Italijanščina",
-    "de": "Nemščina",
-    "pt": "Portugalščina",
-    "nl": "Nizozemščina"
   },
   "editor": {
     "back": "Nazaj na projekte",
@@ -389,7 +389,9 @@
       "stage": {
         "audio": "Izločanje zvoka …",
         "download": "Prenašanje modela …",
-        "transcribe": "Prepisovanje …"
+        "transcribe": "Prepisovanje …",
+        "load": "Priprava modela…",
+        "language": "Zaznavanje jezika…"
       },
       "missing": "Prepiši nove posnetke ({{ count }})",
       "rerunHint": "Začne znova z zgornjim modelom in jezikom",
@@ -513,7 +515,8 @@
       "start": "Izvozi MP4",
       "saveProject": "Shrani projekt",
       "saveProjectHint": "Datoteka .lcv.json z vašim urejanjem (brez videa), za nadaljevanje na drugem računalniku",
-      "projectSaved": "Projekt shranjen kot datoteka .lcv.json"
+      "projectSaved": "Projekt shranjen kot datoteka .lcv.json",
+      "thumbnail": "Ustvari sličico"
     },
     "clips": {
       "title": "Posnetki",
@@ -557,7 +560,8 @@
         "cuts": "rezi",
         "removed": "odstranjeno",
         "words": "podnaslovljenih besed",
-        "silent": "Posnetki brez glasu: {{ count }}. Izrezan je bil le resnično mrtev čas"
+        "silent": "Posnetki brez glasu: {{ count }}. Izrezan je bil le resnično mrtev čas",
+        "languageHint": "Ni pravi? Razveljavite in izberite jezik"
       },
       "steps": {
         "analyze": "Analiza zvoka",
@@ -580,7 +584,8 @@
         "detectedYes": "Zaznano: nekdo govori",
         "detectedNo": "Zaznano: brez glasu",
         "hint": "Brez glasu: brez prepisa in podnapisov, izreže se le resnično mrtev čas"
-      }
+      },
+      "languageHint": "Samodejni način večinoma zadošča. Pri močnem naglasu sami izberite jezik"
     },
     "mix": {
       "title": "Zvok videa",
@@ -631,7 +636,7 @@
     }
   },
   "legal": {
-    "updated": "Zadnja posodobitev: 2. november 2026",
+    "updated": "Zadnja posodobitev: 8. november 2026",
     "contact": "Kontakt",
     "nav": {
       "notice": "Pravno obvestilo",
@@ -662,7 +667,7 @@
           "title": "Intelektualna lastnina",
           "body": [
             "Izvorna koda LocalCutVidea je odprta in objavljena pod licenco MIT na [GitHubu](https://github.com/ImMaxence/LocalCutVideo).",
-            "Komponente tretjih oseb, modeli UI in pisave, ki jih uporablja aplikacija, ostanejo last svojih avtorjev in se uporabljajo pod lastnimi licencami, navedenimi v [pogojih uporabe](/terms). Navedene blagovne znamke (Whisper, MediaPipe, Hugging Face, Chrome, Edge …) pripadajo svojim lastnikom."
+            "Komponente tretjih oseb, modeli UI in pisave, ki jih uporablja aplikacija, ostanejo last svojih avtorjev in se uporabljajo pod lastnimi licencami, navedenimi v [pogojih uporabe](/terms). Navedene blagovne znamke (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge …) pripadajo svojim lastnikom."
           ]
         },
         {
@@ -693,7 +698,7 @@
         {
           "title": "Kaj ostane v vaši napravi",
           "body": [
-            "Video in zvočne datoteke, ki jih odprete, se berejo neposredno z diska. Analizo, prepis (Whisper), sledenje obrazu in izvoz lokalno izračuna vaš brskalnik.",
+            "Video in zvočne datoteke, ki jih odprete, se berejo neposredno z diska. Analizo, prepis (Whisper), sledenje obrazu in izvoz lokalno izračuna vaš brskalnik. Slike UI za sličice (Janus Pro) se prav tako izračunajo lokalno: vaš opis in slika se nikoli ne pošljeta.",
             "Vaši projekti (rezi, prepis, nastavitve) se shranijo v lokalno zbirko podatkov brskalnika (IndexedDB), skupaj s sličico in predpomnilnikom analiz. Izdajatelj nima dostopa do njih. Projekt lahko izbrišete na strani projektov ali izbrišete vse tako, da v nastavitvah brskalnika počistite podatke tega spletnega mesta."
           ]
         },
@@ -713,7 +718,7 @@
           "title": "Tretje osebe",
           "body": [
             "Cloudflare: vse zahteve za to spletno mesto potekajo prek Cloudflara, ki ščiti strežnik in šifrira povezavo. Kot vsak omrežni posrednik obdeluje vaš naslov IP in običajne podatke o brskalniku, da dostavi strani, in lahko hrani tehnične dnevnike za varnostne namene; nikoli pa ne prejme vaših videoposnetkov ali zvoka, ki nikoli ne zapustijo vaše naprave. Oglejte si [politiko zasebnosti](https://www.cloudflare.com/privacypolicy/) podjetja Cloudflare.",
-            "Hugging Face: model Whisper zagotavlja to spletno mesto, tako kot preostanek aplikacije. Samo če tukaj ni na voljo, se namesto tega prenese s huggingface.co; Hugging Face takrat prejme vaš naslov IP in običajne podatke o brskalniku, nikoli pa vašega zvoka. Oglejte si njihovo [politiko zasebnosti](https://huggingface.co/privacy).",
+            "Hugging Face: model Whisper zagotavlja to spletno mesto, tako kot preostanek aplikacije. Samo če tukaj ni na voljo, se namesto tega prenese s huggingface.co; Hugging Face takrat prejme vaš naslov IP in običajne podatke o brskalniku, nikoli pa vašega zvoka. Oglejte si njihovo [politiko zasebnosti](https://huggingface.co/privacy). Slikovni model UI v ustvarjalniku sličic se vedno prenese s huggingface.co, in sicer le, če ga uporabite: Hugging Face takrat prejme vaš naslov IP, nikoli pa vašega opisa ali slike.",
             "GitHub: samo če sledite povezavi do repozitorija izvorne kode.",
             "Nobena druga tretja oseba se ne kontaktira: stroga Content-Security-Policy strani tehnično prepreči povezavo kamor koli drugam."
           ]
@@ -771,7 +776,8 @@
           "title": "Odprta koda in komponente tretjih oseb",
           "body": [
             "Izvorna koda je na voljo pod licenco MIT na [GitHubu](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo temelji na: Mediabunny (MPL-2.0), Transformers.js in ONNX Runtime (Apache-2.0 in MIT), modelih Whisper podjetja OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ter pisavah Inter in Montserrat (SIL Open Font License)."
+            "LocalCutVideo temelji na: Mediabunny (MPL-2.0), Transformers.js in ONNX Runtime (Apache-2.0 in MIT), modelih Whisper podjetja OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ter pisavah Inter in Montserrat (SIL Open Font License).",
+            "Generator slik UI uporablja model Janus Pro podjetja DeepSeek v skladu z licenco [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), ki velja tudi za vas. Zavezujete se, da ga ne boste uporabljali: v nasprotju z zakonom ali pravicami drugih; v vojaške namene; za izkoriščanje ali škodovanje mladoletnikom; za ustvarjanje ali širjenje lažnih informacij z namenom škodovanja, vsebin, neprimernih po veljavnih predpisih, ali osebnih podatkov brez dovoljenja; za obrekovanje ali nadlegovanje; za popolnoma avtomatizirane odločitve, ki vplivajo na pravice osebe; za diskriminacijo ali škodovanje ljudem zaradi njihovega vedenja, osebnih lastnosti ali z zakonom zaščitenih kategorij; ali za izkoriščanje ranljivosti skupine ljudi. DeepSeek ne uveljavlja pravic do slik, ki jih ustvarite: zanje in za njihovo uporabo odgovarjate vi. Model je na voljo takšen, kot je, brez jamstva."
           ]
         },
         {
@@ -843,7 +849,21 @@
     "sizeInfo": "{{ width }} × {{ height }} px · za YouTube je najboljši JPG (pod 2 MB)",
     "saved": "Shranjeno: {{ name }}",
     "loadError": "Tega projekta ni bilo mogoče odpreti",
-    "readError": "Te datoteke ni bilo mogoče prebrati"
+    "readError": "Te datoteke ni bilo mogoče prebrati",
+    "ai": {
+      "title": "Ustvari sliko z UI",
+      "text": "Opišite sliko v angleščini. Ustvari jo vaša grafična kartica, nič se ne pošlje",
+      "prompt": "Opišite sliko",
+      "placeholder": "A neon-lit city street at night, cinematic",
+      "run": "Ustvari",
+      "again": "Ustvari drugo",
+      "size": "Enkraten prenos {{ size }}. Kvadratna slika 384 px, najboljša za ozadje",
+      "generating": "Ustvarjanje slike…",
+      "unsupported": "Potreben je Chrome ali Edge na računalniku z novejšo grafično kartico",
+      "error": "Slike ni bilo mogoče ustvariti. Grafični kartici morda primanjkuje pomnilnika",
+      "terms": "Z ustvarjanjem slike sprejemate pogoje uporabe modela",
+      "downloadError": "Modela UI ni bilo mogoče prenesti. Poskusite znova čez nekaj minut"
+    }
   },
   "seo": {
     "home": {

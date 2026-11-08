@@ -88,6 +88,10 @@
       "eyebrow": "Funkcijas",
       "title": "Viss, kas vajadzīgs video, kas notur uzmanību",
       "lead": "TikTok, Reels, Shorts un YouTube satura veidotājiem, kā arī skolotājiem, pasniedzējiem un uzņēmumiem",
+      "speech": {
+        "title": "Tava video valoda automātiski",
+        "text": "Lietotne vienā valodā, video citā? Runātā valoda tiek noteikta un pārbaudīta, vai arī izvēlies to pats no desmitiem valodu"
+      },
       "silences": {
         "title": "Ardievas pauzēm",
         "text": "Klusums un tukši brīži tiek atrasti un izgriezti automātiski: tavs video sekundē iegūst tempu"
@@ -135,6 +139,10 @@
       "languages": {
         "title": "Tavā valodā",
         "text": "Saskarne pieejama {{ count }} valodās, un subtitri darbojas desmitiem valodu, kas tiek atpazītas automātiski"
+      },
+      "aiImage": {
+        "title": "AI attēli taviem sīktēliem",
+        "text": "Apraksti attēlu, un Janus Pro to uzzīmēs tavā videokartē bez maksas un neko nenosūtot. Vienreizēja 1,6 GB lejupielāde, datorā ar Chrome vai Edge"
       }
     },
     "privacy": {
@@ -188,7 +196,7 @@
       },
       "ai": {
         "q": "Kā mākslīgais intelekts var darboties bez servera?",
-        "a": "MI modeļi (Whisper subtitriem, MediaPipe sejām) tiek lejupielādēti vienreiz, un pēc tam tos darbina tavs dators. Tava balss un attēli to nekad nepamet"
+        "a": "MI modeļi (Whisper subtitriem, MediaPipe sejām) tiek lejupielādēti vienreiz, un pēc tam tos darbina tavs dators. Tava balss un attēli to nekad nepamet. Janus Pro, kas zīmē sīktēlu AI attēlus, darbojas tāpat: aptuveni 1,6 GB, kas tiek lejupielādēti tikai tad, ja to izmanto"
       },
       "capcut": {
         "q": "Ar ko tas atšķiras no CapCut?",
@@ -207,7 +215,8 @@
         "moments": "Ieteikti labākie mirkļi",
         "title": "Virsraksts ar izceltiem vārdiem, 4 stili",
         "formats": "YouTube 1280×720, Shorts un kvadrāts",
-        "local": "Izveidots tavā ierīcē, nekas netiek augšupielādēts"
+        "local": "Izveidots tavā ierīcē, nekas netiek augšupielādēts",
+        "ai": "Vai izveido attēlu ar AI savā datorā"
       },
       "cta": "Izveidot sīktēlu",
       "mockTitle": "Mans pirmais",
@@ -273,15 +282,6 @@
     "skippedCodec": "Izlaisti, šis pārlūks neatbalsta kodeku: {{ names }}. Izmēģini Chrome vai pārveido uz H.264 MP4",
     "notProject": "Šis fails nav LocalCutVideo projekts",
     "demo": "Demo video neizdevās ielādēt"
-  },
-  "languages": {
-    "en": "Angļu",
-    "fr": "Franču",
-    "es": "Spāņu",
-    "it": "Itāļu",
-    "de": "Vācu",
-    "pt": "Portugāļu",
-    "nl": "Nīderlandiešu"
   },
   "editor": {
     "back": "Atpakaļ uz projektiem",
@@ -389,7 +389,9 @@
       "stage": {
         "audio": "Izvelk audio…",
         "download": "Lejupielādē modeli…",
-        "transcribe": "Transkribē…"
+        "transcribe": "Transkribē…",
+        "load": "Sagatavo modeli…",
+        "language": "Nosaka valodu…"
       },
       "missing": "Transkribēt jaunos klipus ({{ count }})",
       "rerunHint": "Sāk no jauna ar iepriekš norādīto modeli un valodu",
@@ -513,7 +515,8 @@
       "start": "Eksportēt MP4",
       "saveProject": "Saglabāt projektu",
       "saveProjectHint": ".lcv.json fails ar tavu montāžu (bez video), lai turpinātu citā datorā",
-      "projectSaved": "Projekts saglabāts kā .lcv.json fails"
+      "projectSaved": "Projekts saglabāts kā .lcv.json fails",
+      "thumbnail": "Izveidot sīktēlu"
     },
     "clips": {
       "title": "Klipi",
@@ -557,7 +560,8 @@
         "cuts": "griezumi",
         "removed": "noņemts",
         "words": "vārdi ar subtitriem",
-        "silent": "Klipi bez balss: {{ count }}. Izgriezts tikai īsts tukšs laiks"
+        "silent": "Klipi bez balss: {{ count }}. Izgriezts tikai īsts tukšs laiks",
+        "languageHint": "Nepareiza valoda? Atsauc un izvēlies valodu"
       },
       "steps": {
         "analyze": "Audio analīze",
@@ -580,7 +584,8 @@
         "detectedYes": "Noteikts: kāds runā",
         "detectedNo": "Noteikts: nav balss",
         "hint": "Nav balss: nav transkripcijas un subtitru, tiek izgriezts tikai īsts tukšs laiks"
-      }
+      },
+      "languageHint": "Automātiskais režīms parasti der. Ar stipru akcentu izvēlies valodu pats"
     },
     "mix": {
       "title": "Video skaņa",
@@ -631,7 +636,7 @@
     }
   },
   "legal": {
-    "updated": "Pēdējo reizi atjaunināts: 2026. gada 2. novembrī",
+    "updated": "Pēdējo reizi atjaunināts: 2026. gada 8. novembrī",
     "contact": "Kontakti",
     "nav": {
       "notice": "Juridiskā informācija",
@@ -662,7 +667,7 @@
           "title": "Intelektuālais īpašums",
           "body": [
             "LocalCutVideo pirmkods ir atvērts un publicēts ar MIT licenci vietnē [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Lietotnē izmantotās trešo pušu komponentes, MI modeļi un fonti joprojām pieder to autoriem un tiek izmantoti saskaņā ar to licencēm, kas uzskaitītas [lietošanas noteikumos](/terms). Minētās preču zīmes (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) pieder to īpašniekiem."
+            "Lietotnē izmantotās trešo pušu komponentes, MI modeļi un fonti joprojām pieder to autoriem un tiek izmantoti saskaņā ar to licencēm, kas uzskaitītas [lietošanas noteikumos](/terms). Minētās preču zīmes (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) pieder to īpašniekiem."
           ]
         },
         {
@@ -693,7 +698,7 @@
         {
           "title": "Kas paliek tavā ierīcē",
           "body": [
-            "Tevis atvērtie video un audio faili tiek nolasīti tieši no tava diska. Analīzi, transkripciju (Whisper), seju izsekošanu un eksportu lokāli aprēķina tavs pārlūks.",
+            "Tevis atvērtie video un audio faili tiek nolasīti tieši no tava diska. Analīzi, transkripciju (Whisper), seju izsekošanu un eksportu lokāli aprēķina tavs pārlūks. Sīktēlu AI attēli (Janus Pro) arī tiek aprēķināti lokāli: tavs apraksts un attēls nekad netiek nosūtīti.",
             "Tavi projekti (griezumi, transkripcija, iestatījumi) tiek saglabāti tava pārlūka lokālajā datubāzē (IndexedDB) kopā ar sīktēlu un analīžu kešatmiņu. Izdevējam tiem nav piekļuves. Projektu vari izdzēst projektu lapā vai izdzēst visu, notīrot šīs vietnes datus pārlūka iestatījumos."
           ]
         },
@@ -713,7 +718,7 @@
           "title": "Trešās puses",
           "body": [
             "Cloudflare: visi pieprasījumi šai vietnei iet caur Cloudflare, kas aizsargā serveri un šifrē savienojumu. Kā jebkurš tīkla starpnieks, tas apstrādā tavu IP adresi un parasto pārlūka informāciju, lai piegādātu lapas, un drošības nolūkos var glabāt tehniskus žurnālus; tas nekad nesaņem tavus video vai audio, kas nekad neatstāj tavu ierīci. Skati Cloudflare [privātuma politiku](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: Whisper modeli nodrošina šī vietne, tāpat kā pārējo lietotni. Tikai tad, ja tas šeit nav pieejams, tas tiek lejupielādēts no huggingface.co; tad Hugging Face saņem tavu IP adresi un parasto pārlūka informāciju, bet nekad tavu audio. Skati viņu [privātuma politiku](https://huggingface.co/privacy).",
+            "Hugging Face: Whisper modeli nodrošina šī vietne, tāpat kā pārējo lietotni. Tikai tad, ja tas šeit nav pieejams, tas tiek lejupielādēts no huggingface.co; tad Hugging Face saņem tavu IP adresi un parasto pārlūka informāciju, bet nekad tavu audio. Skati viņu [privātuma politiku](https://huggingface.co/privacy). Sīktēlu veidotāja AI attēlu modelis vienmēr tiek lejupielādēts no huggingface.co un tikai tad, ja to izmanto: Hugging Face saņem tavu IP adresi, bet nekad tavu aprakstu vai attēlu.",
             "GitHub: tikai tad, ja seko saitei uz pirmkoda repozitoriju.",
             "Neviena cita trešā puse netiek uzrunāta: stingra Content-Security-Policy tehniski neļauj lapai savienoties nekur citur."
           ]
@@ -771,7 +776,8 @@
           "title": "Atvērtais kods un trešo pušu komponentes",
           "body": [
             "Pirmkods ir pieejams ar MIT licenci vietnē [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo balstās uz: Mediabunny (MPL-2.0), Transformers.js un ONNX Runtime (Apache-2.0 un MIT), OpenAI Whisper modeļiem (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) un fontiem Inter un Montserrat (SIL Open Font License)."
+            "LocalCutVideo balstās uz: Mediabunny (MPL-2.0), Transformers.js un ONNX Runtime (Apache-2.0 un MIT), OpenAI Whisper modeļiem (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) un fontiem Inter un Montserrat (SIL Open Font License).",
+            "AI attēlu ģenerators izmanto DeepSeek modeli Janus Pro saskaņā ar licenci [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), kas attiecas arī uz tevi. Tu apņemies to neizmantot: pārkāpjot likumu vai citu personu tiesības; militāriem mērķiem; nepilngadīgo izmantošanai vai kaitējumam; lai radītu vai izplatītu viltus informāciju ar nolūku kaitēt, saskaņā ar piemērojamiem noteikumiem nepiemērotu saturu vai personas datus bez atļaujas; lai apmelotu vai uzmāktos; pilnībā automatizētiem lēmumiem, kas ietekmē personas tiesības; lai diskriminētu vai kaitētu cilvēkiem viņu uzvedības, personisko īpašību vai ar likumu aizsargātu kategoriju dēļ; vai lai izmantotu kādas cilvēku grupas neaizsargātību. DeepSeek nepretendē uz tiesībām uz taviem attēliem: tu esi atbildīgs par tiem un to izmantošanu. Modelis tiek nodrošināts tāds, kāds tas ir, bez garantijām."
           ]
         },
         {
@@ -843,7 +849,21 @@
     "sizeInfo": "{{ width }} × {{ height }} px · JPG ir vislabākais YouTube (mazāk par 2 MB)",
     "saved": "Saglabāts: {{ name }}",
     "loadError": "Šo projektu neizdevās atvērt",
-    "readError": "Šo failu neizdevās nolasīt"
+    "readError": "Šo failu neizdevās nolasīt",
+    "ai": {
+      "title": "Izveidot attēlu ar AI",
+      "text": "Apraksti attēlu angļu valodā. To izveido tava videokarte, nekas netiek nosūtīts",
+      "prompt": "Apraksti attēlu",
+      "placeholder": "A neon-lit city street at night, cinematic",
+      "run": "Izveidot",
+      "again": "Izveidot vēl vienu",
+      "size": "Vienreizēja lejupielāde {{ size }}. Kvadrātveida 384 px attēls, vislabāk fonam",
+      "generating": "Veido attēlu…",
+      "unsupported": "Nepieciešams Chrome vai Edge datorā ar jaunu videokarti",
+      "error": "Attēlu neizdevās izveidot. Iespējams, videokartei trūkst atmiņas",
+      "terms": "Veidojot attēlu, tu piekrīti modeļa lietošanas noteikumiem",
+      "downloadError": "AI modeli neizdevās lejupielādēt. Mēģini vēlreiz pēc dažām minūtēm"
+    }
   },
   "seo": {
     "home": {

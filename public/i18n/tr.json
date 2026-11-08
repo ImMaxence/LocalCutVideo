@@ -88,6 +88,10 @@
       "eyebrow": "Özellikler",
       "title": "Dikkat çeken videolar için ihtiyacınız olan her şey",
       "lead": "TikTok, Reels, Shorts ve YouTube içerik üreticileri için, ayrıca öğretmenler, eğitmenler ve şirketler için",
+      "speech": {
+        "title": "Videonuzun dili, otomatik olarak",
+        "text": "Uygulama bir dilde, video başka bir dilde mi? Konuşulan dil algılanır ve doğrulanır ya da onlarca dil arasından kendiniz seçersiniz"
+      },
       "silences": {
         "title": "Duraklamalara veda",
         "text": "Sessizlikler ve ölü anlar otomatik olarak bulunup kesilir: videonuz bir saniyede tempo kazanır"
@@ -135,6 +139,10 @@
       "languages": {
         "title": "Kendi dilinizde",
         "text": "Arayüz {{ count }} dilde mevcut ve altyazılar otomatik algılanan onlarca dilde çalışır"
+      },
+      "aiImage": {
+        "title": "Küçük resimleriniz için yapay zekâ görselleri",
+        "text": "Bir görseli anlatın, Janus Pro onu grafik kartınızda ücretsiz ve hiçbir şey göndermeden çizsin. Chrome veya Edge yüklü bir bilgisayarda tek seferlik 1,6 GB indirme"
       }
     },
     "privacy": {
@@ -188,7 +196,7 @@
       },
       "ai": {
         "q": "Yapay zekâ sunucu olmadan nasıl çalışıyor?",
-        "a": "Yapay zekâ modelleri (altyazılar için Whisper, yüzler için MediaPipe) bir kez indirilir, sonra bilgisayarınız onları çalıştırır. Sesiniz ve görüntüleriniz oradan asla çıkmaz"
+        "a": "Yapay zekâ modelleri (altyazılar için Whisper, yüzler için MediaPipe) bir kez indirilir, sonra bilgisayarınız onları çalıştırır. Sesiniz ve görüntüleriniz oradan asla çıkmaz. Küçük resimlerin yapay zekâ görsellerini çizen Janus Pro da aynı şekilde çalışır: yaklaşık 1,6 GB, yalnızca kullanırsanız indirilir"
       },
       "capcut": {
         "q": "CapCut'tan farkı ne?",
@@ -207,7 +215,8 @@
         "moments": "En iyi anlar önerilir",
         "title": "Vurgulu kelimelerle başlık, 4 stil",
         "formats": "YouTube 1280×720, Shorts ve kare",
-        "local": "Cihazınızda yapılır, hiçbir şey yüklenmez"
+        "local": "Cihazınızda yapılır, hiçbir şey yüklenmez",
+        "ai": "Ya da görseli bilgisayarınızda yapay zekâ ile oluşturun"
       },
       "cta": "Kapak görseli oluştur",
       "mockTitle": "İlk",
@@ -273,15 +282,6 @@
     "skippedCodec": "Atlandı, codec bu tarayıcıda desteklenmiyor: {{ names }}. Chrome'u deneyin veya H.264 MP4'e dönüştürün",
     "notProject": "Bu dosya bir LocalCutVideo projesi değil",
     "demo": "Demo video yüklenemedi"
-  },
-  "languages": {
-    "en": "İngilizce",
-    "fr": "Fransızca",
-    "es": "İspanyolca",
-    "it": "İtalyanca",
-    "de": "Almanca",
-    "pt": "Portekizce",
-    "nl": "Felemenkçe"
   },
   "editor": {
     "back": "Projelere dön",
@@ -389,7 +389,9 @@
       "stage": {
         "audio": "Ses çıkarılıyor…",
         "download": "Model indiriliyor…",
-        "transcribe": "Yazıya dökülüyor…"
+        "transcribe": "Yazıya dökülüyor…",
+        "load": "Model hazırlanıyor…",
+        "language": "Dil algılanıyor…"
       },
       "missing": "Yeni klipleri yazıya dök ({{ count }})",
       "rerunHint": "Yukarıdaki model ve dille baştan başlar",
@@ -513,7 +515,8 @@
       "start": "MP4 dışa aktar",
       "saveProject": "Projeyi kaydet",
       "saveProjectHint": "Başka bir bilgisayarda devam etmek için düzenlemenizi içeren bir .lcv.json dosyası (içinde video yok)",
-      "projectSaved": "Proje .lcv.json dosyası olarak kaydedildi"
+      "projectSaved": "Proje .lcv.json dosyası olarak kaydedildi",
+      "thumbnail": "Kapak görseli oluştur"
     },
     "clips": {
       "title": "Klipler",
@@ -557,7 +560,8 @@
         "cuts": "kesim",
         "removed": "çıkarıldı",
         "words": "altyazılı kelime",
-        "silent": "Sessiz {{ count }} klip: yalnızca gerçek boşluklar kesildi"
+        "silent": "Sessiz {{ count }} klip: yalnızca gerçek boşluklar kesildi",
+        "languageHint": "Doğru dil değil mi? Geri alın ve dili seçin"
       },
       "steps": {
         "analyze": "Ses analiz ediliyor",
@@ -580,7 +584,8 @@
         "detectedYes": "Algılandı: biri konuşuyor",
         "detectedNo": "Algılandı: ses yok",
         "hint": "Ses yok: döküm ve altyazı yok, yalnızca gerçek boşluklar kesilir"
-      }
+      },
+      "languageHint": "Otomatik mod çoğu durumda yeterlidir. Belirgin bir aksan varsa dili kendiniz seçin"
     },
     "mix": {
       "title": "Video sesi",
@@ -631,7 +636,7 @@
     }
   },
   "legal": {
-    "updated": "Son güncelleme: 2 Kasım 2026",
+    "updated": "Son güncelleme: 8 Kasım 2026",
     "contact": "İletişim",
     "nav": {
       "notice": "Yasal bildirim",
@@ -662,7 +667,7 @@
           "title": "Fikri mülkiyet",
           "body": [
             "LocalCutVideo'nun kaynak kodu açıktır ve MIT lisansıyla [GitHub](https://github.com/ImMaxence/LocalCutVideo) üzerinde yayımlanmıştır.",
-            "Uygulamanın kullandığı üçüncü taraf bileşenler, YZ modelleri ve yazı tipleri sahiplerinin mülkü olmaya devam eder ve [kullanım koşullarında](/terms) listelenen kendi lisanslarıyla kullanılır. Anılan markalar (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) sahiplerine aittir."
+            "Uygulamanın kullandığı üçüncü taraf bileşenler, YZ modelleri ve yazı tipleri sahiplerinin mülkü olmaya devam eder ve [kullanım koşullarında](/terms) listelenen kendi lisanslarıyla kullanılır. Anılan markalar (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) sahiplerine aittir."
           ]
         },
         {
@@ -693,7 +698,7 @@
         {
           "title": "Cihazınızda kalanlar",
           "body": [
-            "Açtığınız video ve ses dosyaları doğrudan diskinizden okunur. Analiz, yazıya dökme (Whisper), yüz takibi ve dışa aktarma tarayıcınız tarafından yerel olarak hesaplanır.",
+            "Açtığınız video ve ses dosyaları doğrudan diskinizden okunur. Analiz, yazıya dökme (Whisper), yüz takibi ve dışa aktarma tarayıcınız tarafından yerel olarak hesaplanır. Küçük resimlerin yapay zekâ görselleri (Janus Pro) de yerel olarak hesaplanır: açıklamanız ve görsel asla gönderilmez.",
             "Projeleriniz (kesimler, döküm, ayarlar), bir kapak görseli ve analiz önbelleğiyle birlikte tarayıcınızın yerel veritabanında (IndexedDB) saklanır. Yayıncının bunlara erişimi yoktur. Bir projeyi projeler sayfasından silebilir veya tarayıcı ayarlarından bu sitenin verilerini temizleyerek her şeyi silebilirsiniz."
           ]
         },
@@ -713,7 +718,7 @@
           "title": "Üçüncü taraflar",
           "body": [
             "Cloudflare: bu siteye yapılan tüm istekler, sunucuyu koruyan ve bağlantıyı şifreleyen Cloudflare üzerinden geçer. Her ağ aracısı gibi, sayfaları iletmek için IP adresinizi ve standart tarayıcı bilgilerini işler ve güvenlik amacıyla teknik kayıtlar tutabilir; videolarınızı veya sesinizi asla almaz, bunlar cihazınızdan asla çıkmaz. Cloudflare'in [gizlilik politikasına](https://www.cloudflare.com/privacypolicy/) bakın.",
-            "Hugging Face: Whisper modeli, uygulamanın geri kalanı gibi bu site tarafından sunulur. Yalnızca burada mevcut değilse bunun yerine huggingface.co'dan indirilir; bu durumda Hugging Face IP adresinizi ve standart tarayıcı bilgilerini alır, ancak sesinizi asla almaz. Onların [gizlilik politikasına](https://huggingface.co/privacy) bakın.",
+            "Hugging Face: Whisper modeli, uygulamanın geri kalanı gibi bu site tarafından sunulur. Yalnızca burada mevcut değilse bunun yerine huggingface.co'dan indirilir; bu durumda Hugging Face IP adresinizi ve standart tarayıcı bilgilerini alır, ancak sesinizi asla almaz. Onların [gizlilik politikasına](https://huggingface.co/privacy) bakın. Küçük resim aracının yapay zekâ görsel modeli her zaman huggingface.co adresinden ve yalnızca kullandığınızda indirilir: Hugging Face bu durumda IP adresinizi alır, ancak açıklamanızı veya görseli asla almaz.",
             "GitHub: yalnızca kaynak kod deposuna giden bir bağlantıyı izlerseniz.",
             "Başka hiçbir üçüncü tarafla iletişim kurulmaz: katı bir Content-Security-Policy, sayfanın başka herhangi bir yere bağlanmasını teknik olarak engeller."
           ]
@@ -771,7 +776,8 @@
           "title": "Açık kaynak ve üçüncü taraf bileşenler",
           "body": [
             "Kaynak kod, MIT lisansıyla [GitHub](https://github.com/ImMaxence/LocalCutVideo) üzerinde mevcuttur.",
-            "LocalCutVideo şunlara dayanır: Mediabunny (MPL-2.0), Transformers.js ve ONNX Runtime (Apache-2.0 ve MIT), OpenAI'ın Whisper modelleri (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ile Inter ve Montserrat yazı tipleri (SIL Open Font License)."
+            "LocalCutVideo şunlara dayanır: Mediabunny (MPL-2.0), Transformers.js ve ONNX Runtime (Apache-2.0 ve MIT), OpenAI'ın Whisper modelleri (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ile Inter ve Montserrat yazı tipleri (SIL Open Font License).",
+            "Yapay zekâ görsel oluşturucusu, DeepSeek'in Janus Pro modelini sizin için de geçerli olan [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL) kapsamında kullanır. Modeli şu amaçlarla kullanmamayı kabul edersiniz: yasaları veya başkalarının haklarını ihlal ederek; askerî amaçlarla; reşit olmayanları istismar etmek veya onlara zarar vermek için; zarar vermeyi amaçlayan yanlış bilgileri, geçerli düzenlemelere göre uygunsuz içerikleri veya izinsiz kişisel verileri oluşturmak ya da yaymak için; karalamak veya taciz etmek için; bir kişinin haklarını etkileyen tamamen otomatik kararlar için; insanları davranışları, kişisel özellikleri veya yasayla korunan kategoriler nedeniyle ayrımcılığa uğratmak ya da onlara zarar vermek için; veya bir insan grubunun zayıflıklarından yararlanmak için. DeepSeek oluşturduğunuz görseller üzerinde hak iddia etmez: bunlardan ve kullanımlarından siz sorumlusunuz. Model olduğu gibi, garantisiz sunulur."
           ]
         },
         {
@@ -843,7 +849,21 @@
     "sizeInfo": "{{ width }} × {{ height }} px · YouTube için en iyisi JPG (2 MB altı)",
     "saved": "Kaydedildi: {{ name }}",
     "loadError": "Bu proje açılamadı",
-    "readError": "Bu dosya okunamadı"
+    "readError": "Bu dosya okunamadı",
+    "ai": {
+      "title": "Yapay zekâ ile görsel oluştur",
+      "text": "Görseli İngilizce anlatın. Grafik kartınız oluşturur, hiçbir şey gönderilmez",
+      "prompt": "Görseli anlatın",
+      "placeholder": "A neon-lit city street at night, cinematic",
+      "run": "Oluştur",
+      "again": "Başka bir tane oluştur",
+      "size": "Tek seferlik indirme {{ size }}. 384 px kare görsel, en iyi arka plan olarak kullanılır",
+      "generating": "Görsel oluşturuluyor…",
+      "unsupported": "Yeni bir grafik kartına sahip bilgisayarda Chrome veya Edge gerekir",
+      "error": "Görsel oluşturulamadı. Grafik kartınızın belleği yetersiz olabilir",
+      "terms": "Bir görsel oluşturarak modelin kullanım koşullarını kabul edersiniz",
+      "downloadError": "Yapay zekâ modeli indirilemedi. Birkaç dakika sonra yeniden deneyin"
+    }
   },
   "seo": {
     "home": {

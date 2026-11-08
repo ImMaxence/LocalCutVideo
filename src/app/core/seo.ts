@@ -7,7 +7,7 @@ import { filter } from 'rxjs';
 import { DEFAULT_LANG, LANGUAGES, applyLanguage, localizedPath, unlocalizedPath } from './i18n';
 import { APP_VERSION, REPO_URL, SITE_URL } from './version';
 
-const FEATURES = ['silences', 'captions', 'framing', 'textEdit', 'zoom', 'ducking', 'clips', 'export', 'inputs', 'recovery', 'offline', 'languages'];
+const FEATURES = ['speech', 'aiImage', 'silences', 'captions', 'framing', 'textEdit', 'zoom', 'ducking', 'clips', 'export', 'inputs', 'recovery', 'offline', 'languages'];
 const FAQ = ['free', 'capcut', 'formats', 'browsers', 'size', 'offline', 'ai'];
 
 /**

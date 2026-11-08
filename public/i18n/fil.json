@@ -88,6 +88,10 @@
       "eyebrow": "Mga feature",
       "title": "Lahat ng kailangan mo para sa mga video na nakakakuha ng atensyon",
       "lead": "Para sa mga creator sa TikTok, Reels, Shorts at YouTube, pati na rin sa mga guro, trainer at negosyo",
+      "speech": {
+        "title": "Ang wika ng video mo, awtomatiko",
+        "text": "Iba ang wika ng app at ng video? Tinutukoy at sinusuri ang sinasalitang wika, o ikaw ang pipili sa dose-dosenang wika"
+      },
       "silences": {
         "title": "Paalam sa mga patlang",
         "text": "Awtomatikong hinahanap at tinatanggal ang katahimikan at mga bakanteng sandali: mas mabilis ang daloy ng video mo sa isang segundo"
@@ -135,6 +139,10 @@
       "languages": {
         "title": "Sa sarili mong wika",
         "text": "May {{ count }} wika ang interface at gumagana ang subtitle sa dose-dosenang wika na awtomatikong natutukoy"
+      },
+      "aiImage": {
+        "title": "Mga AI na larawan para sa iyong mga thumbnail",
+        "text": "Ilarawan ang isang larawan at iguguhit ito ng Janus Pro sa iyong graphics card, libre at walang ipinapadala. Isang beses na pag-download na 1.6 GB, sa computer na may Chrome o Edge"
       }
     },
     "privacy": {
@@ -188,7 +196,7 @@
       },
       "ai": {
         "q": "Paano gumagana ang AI nang walang server?",
-        "a": "Ang mga AI model (Whisper para sa subtitle, MediaPipe para sa mukha) ay dina-download nang isang beses, saka pinapatakbo ng computer mo. Hindi kailanman umaalis doon ang boses at mga larawan mo"
+        "a": "Ang mga AI model (Whisper para sa subtitle, MediaPipe para sa mukha) ay dina-download nang isang beses, saka pinapatakbo ng computer mo. Hindi kailanman umaalis doon ang boses at mga larawan mo. Ganito rin gumagana ang Janus Pro, na gumuguhit ng mga AI na larawan ng thumbnail: humigit-kumulang 1.6 GB, dina-download lang kung gagamitin mo"
       },
       "capcut": {
         "q": "Ano ang pagkakaiba nito sa CapCut?",
@@ -207,7 +215,8 @@
         "moments": "Mga mungkahing pinakamagandang sandali",
         "title": "Pamagat na may naka-highlight na salita, 4 na istilo",
         "formats": "YouTube 1280×720, Shorts at parisukat",
-        "local": "Ginawa sa device mo, walang ina-upload"
+        "local": "Ginawa sa device mo, walang ina-upload",
+        "ai": "O gumawa ng larawan gamit ang AI, sa iyong computer"
       },
       "cta": "Gumawa ng thumbnail",
       "mockTitle": "Aking unang",
@@ -273,15 +282,6 @@
     "skippedCodec": "Nilaktawan, hindi suportado ng browser na ito ang codec: {{ names }}. Subukan ang Chrome, o i-convert sa H.264 MP4",
     "notProject": "Hindi proyekto ng LocalCutVideo ang file na ito",
     "demo": "Hindi ma-load ang demo video"
-  },
-  "languages": {
-    "en": "Ingles",
-    "fr": "Pranses",
-    "es": "Espanyol",
-    "it": "Italyano",
-    "de": "Aleman",
-    "pt": "Portuges",
-    "nl": "Dutch"
   },
   "editor": {
     "back": "Bumalik sa mga proyekto",
@@ -389,7 +389,9 @@
       "stage": {
         "audio": "Kinukuha ang audio…",
         "download": "Dina-download ang model…",
-        "transcribe": "Nagta-transcribe…"
+        "transcribe": "Nagta-transcribe…",
+        "load": "Inihahanda ang modelo…",
+        "language": "Tinutukoy ang wika…"
       },
       "missing": "I-transcribe ang mga bagong clip ({{ count }})",
       "rerunHint": "Nagsisimula ulit gamit ang model at wika sa itaas",
@@ -513,7 +515,8 @@
       "start": "I-export ang MP4",
       "saveProject": "I-save ang proyekto",
       "saveProjectHint": "Isang .lcv.json file na may pag-edit mo (walang video sa loob), para maituloy sa ibang computer",
-      "projectSaved": "Na-save ang proyekto bilang .lcv.json file"
+      "projectSaved": "Na-save ang proyekto bilang .lcv.json file",
+      "thumbnail": "Gumawa ng thumbnail"
     },
     "clips": {
       "title": "Mga clip",
@@ -557,7 +560,8 @@
         "cuts": "putol",
         "removed": "inalis",
         "words": "salitang may subtitle",
-        "silent": "{{ count }} clip na walang boses: tunay na bakanteng oras lang ang pinutol"
+        "silent": "{{ count }} clip na walang boses: tunay na bakanteng oras lang ang pinutol",
+        "languageHint": "Hindi tama ang wika? I-undo at piliin ang wika"
       },
       "steps": {
         "analyze": "Sinusuri ang audio",
@@ -580,7 +584,8 @@
         "detectedYes": "Natukoy: may nagsasalita",
         "detectedNo": "Natukoy: walang boses",
         "hint": "Walang boses: walang transcript o subtitle, tunay na bakanteng oras lang ang pinuputol"
-      }
+      },
+      "languageHint": "Sapat ang awtomatiko sa karamihan ng kaso. Kung malakas ang punto, ikaw ang pumili ng wika"
     },
     "mix": {
       "title": "Tunog ng video",
@@ -631,7 +636,7 @@
     }
   },
   "legal": {
-    "updated": "Huling na-update: Nobyembre 2, 2026",
+    "updated": "Huling na-update: Nobyembre 8, 2026",
     "contact": "Makipag-ugnayan",
     "nav": {
       "notice": "Legal na abiso",
@@ -662,7 +667,7 @@
           "title": "Intelektwal na pag-aari",
           "body": [
             "Open source ang source code ng LocalCutVideo at inilathala sa ilalim ng MIT license sa [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Ang mga third-party na component, AI model at font na ginagamit ng app ay nananatiling pag-aari ng kanilang mga may-akda at ginagamit sa ilalim ng sarili nilang mga lisensya, na nakalista sa [mga tuntunin ng paggamit](/terms). Ang mga nabanggit na brand (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) ay pag-aari ng kanilang mga may-ari."
+            "Ang mga third-party na component, AI model at font na ginagamit ng app ay nananatiling pag-aari ng kanilang mga may-akda at ginagamit sa ilalim ng sarili nilang mga lisensya, na nakalista sa [mga tuntunin ng paggamit](/terms). Ang mga nabanggit na brand (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) ay pag-aari ng kanilang mga may-ari."
           ]
         },
         {
@@ -693,7 +698,7 @@
         {
           "title": "Ano ang nananatili sa device mo",
           "body": [
-            "Direktang binabasa mula sa disk mo ang mga video at audio file na binubuksan mo. Kinakalkula nang lokal ng browser mo ang pagsusuri, transcription (Whisper), face tracking at pag-export.",
+            "Direktang binabasa mula sa disk mo ang mga video at audio file na binubuksan mo. Kinakalkula nang lokal ng browser mo ang pagsusuri, transcription (Whisper), face tracking at pag-export. Lokal ding kinakalkula ang mga AI na larawan ng thumbnail (Janus Pro): hindi kailanman ipinapadala ang iyong paglalarawan at ang larawan.",
             "Sine-save ang mga proyekto mo (mga putol, transcript, settings) sa lokal na database ng browser mo (IndexedDB), kasama ang isang thumbnail at cache ng mga pagsusuri. Walang access dito ang publisher. Maaari kang magbura ng proyekto mula sa page ng mga proyekto, o burahin lahat sa pag-clear ng datos ng site na ito sa settings ng browser."
           ]
         },
@@ -713,7 +718,7 @@
           "title": "Mga third party",
           "body": [
             "Cloudflare: lahat ng request sa site na ito ay dumadaan sa Cloudflare, na nagpoprotekta sa server at nag-e-encrypt ng koneksyon. Gaya ng anumang network intermediary, pinoproseso nito ang IP address mo at karaniwang impormasyon ng browser para maihatid ang mga page, at maaaring magtago ng mga teknikal na log para sa seguridad; hindi nito kailanman natatanggap ang mga video o audio mo, na hindi kailanman umaalis sa device mo. Tingnan ang kanilang [patakaran sa privacy](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: ang Whisper model ay ibinibigay ng site na ito, gaya ng ibang bahagi ng app. Kung hindi lang ito available dito, saka ito dina-download mula sa huggingface.co; matatanggap noon ng Hugging Face ang IP address mo at karaniwang impormasyon ng browser, pero hindi kailanman ang audio mo. Tingnan ang kanilang [patakaran sa privacy](https://huggingface.co/privacy).",
+            "Hugging Face: ang Whisper model ay ibinibigay ng site na ito, gaya ng ibang bahagi ng app. Kung hindi lang ito available dito, saka ito dina-download mula sa huggingface.co; matatanggap noon ng Hugging Face ang IP address mo at karaniwang impormasyon ng browser, pero hindi kailanman ang audio mo. Tingnan ang kanilang [patakaran sa privacy](https://huggingface.co/privacy). Ang AI image model ng thumbnail maker ay palaging dina-download mula sa huggingface.co, kung gagamitin mo lang ito: matatanggap ng Hugging Face ang iyong IP address, pero hindi kailanman ang iyong paglalarawan o ang larawan.",
             "GitHub: kung susundan mo lang ang link papunta sa source code repository.",
             "Walang ibang third party na kinokontak: teknikal na pinipigilan ng mahigpit na Content-Security-Policy ang page na kumonekta saanman."
           ]
@@ -771,7 +776,8 @@
           "title": "Open source at mga third-party na component",
           "body": [
             "Available ang source code sa ilalim ng MIT license sa [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Umaasa ang LocalCutVideo sa: Mediabunny (MPL-2.0), Transformers.js at ONNX Runtime (Apache-2.0 at MIT), ang mga Whisper model ng OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) at ang mga font na Inter at Montserrat (SIL Open Font License)."
+            "Umaasa ang LocalCutVideo sa: Mediabunny (MPL-2.0), Transformers.js at ONNX Runtime (Apache-2.0 at MIT), ang mga Whisper model ng OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) at ang mga font na Inter at Montserrat (SIL Open Font License).",
+            "Ginagamit ng AI image generator ang Janus Pro model ng DeepSeek, sa ilalim ng [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL) na sumasaklaw din sa iyo. Sumasang-ayon kang hindi ito gagamitin: nang labag sa batas o sa karapatan ng iba; para sa layuning militar; upang abusuhin o saktan ang mga menor de edad; upang lumikha o magpakalat ng maling impormasyong layong manakit, nilalamang hindi angkop ayon sa naaangkop na regulasyon, o personal na datos nang walang pahintulot; upang manirang-puri o manggulo; para sa ganap na awtomatikong desisyong nakaaapekto sa karapatan ng isang tao; upang magdiskrimina o manakit ng tao dahil sa kanilang asal, personal na katangian, o mga kategoryang protektado ng batas; o upang samantalahin ang kahinaan ng isang grupo ng tao. Walang inaangking karapatan ang DeepSeek sa mga larawang ginagawa mo: ikaw ang responsable sa mga ito at sa paggamit ng mga ito. Ibinibigay ang modelo kung ano ito, nang walang garantiya."
           ]
         },
         {
@@ -843,7 +849,21 @@
     "sizeInfo": "{{ width }} × {{ height }} px · JPG ang pinakamainam para sa YouTube (wala pang 2 MB)",
     "saved": "Na-save: {{ name }}",
     "loadError": "Hindi mabuksan ang proyektong ito",
-    "readError": "Hindi mabasa ang file na ito"
+    "readError": "Hindi mabasa ang file na ito",
+    "ai": {
+      "title": "Gumawa ng larawan gamit ang AI",
+      "text": "Ilarawan ang larawan sa Ingles. Ang iyong graphics card ang gagawa nito, walang ipinapadala",
+      "prompt": "Ilarawan ang larawan",
+      "placeholder": "A neon-lit city street at night, cinematic",
+      "run": "Gumawa",
+      "again": "Gumawa ng isa pa",
+      "size": "Isang beses na pag-download {{ size }}. Parisukat na larawang 384 px, pinakamainam bilang background",
+      "generating": "Ginagawa ang larawan…",
+      "unsupported": "Kailangan ng Chrome o Edge sa computer na may bagong graphics card",
+      "error": "Hindi nagawa ang larawan. Maaaring kulang sa memory ang iyong graphics card",
+      "terms": "Sa paggawa ng larawan, tinatanggap mo ang mga tuntunin sa paggamit ng modelo",
+      "downloadError": "Hindi na-download ang AI model. Subukang muli pagkalipas ng ilang minuto"
+    }
   },
   "seo": {
     "home": {

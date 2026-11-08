@@ -88,6 +88,10 @@
       "eyebrow": "Funktioner",
       "title": "Allt du behöver för videor som fångar",
       "lead": "För kreatörer på TikTok, Reels, Shorts och YouTube, men också lärare, utbildare och företag",
+      "speech": {
+        "title": "Videons språk, automatiskt",
+        "text": "Appen på ett språk och videon på ett annat? Det talade språket identifieras och kontrolleras, eller så väljer du själv bland dussintals språk"
+      },
       "silences": {
         "title": "Hejdå pauser",
         "text": "Tystnad och dödtid hittas och klipps bort automatiskt: din video får mer tempo på en sekund"
@@ -135,6 +139,10 @@
       "languages": {
         "title": "På ditt språk",
         "text": "Gränssnittet finns på {{ count }} språk och undertexter fungerar på dussintals språk, som känns igen automatiskt"
+      },
+      "aiImage": {
+        "title": "AI-bilder till dina miniatyrer",
+        "text": "Beskriv en bild så ritar Janus Pro den på ditt grafikkort, gratis och utan att något skickas. Engångsnedladdning på 1,6 GB, på en dator med Chrome eller Edge"
       }
     },
     "privacy": {
@@ -188,7 +196,7 @@
       },
       "ai": {
         "q": "Hur kan AI:n köras utan server?",
-        "a": "AI-modellerna (Whisper för undertexter, MediaPipe för ansikten) laddas ner en gång, sedan kör din dator dem. Din röst och dina bilder lämnar den aldrig"
+        "a": "AI-modellerna (Whisper för undertexter, MediaPipe för ansikten) laddas ner en gång, sedan kör din dator dem. Din röst och dina bilder lämnar den aldrig. Janus Pro, som ritar miniatyrernas AI-bilder, fungerar på samma sätt: cirka 1,6 GB som bara laddas ned om du använder det"
       },
       "capcut": {
         "q": "Vad är skillnaden mot CapCut?",
@@ -207,7 +215,8 @@
         "moments": "Bästa ögonblicken föreslås",
         "title": "Titel med markerade ord, 4 stilar",
         "formats": "YouTube 1280×720, Shorts och kvadrat",
-        "local": "Skapas på din enhet, inget laddas upp"
+        "local": "Skapas på din enhet, inget laddas upp",
+        "ai": "Eller skapa bilden med AI, på din dator"
       },
       "cta": "Skapa en miniatyrbild",
       "mockTitle": "Min första",
@@ -273,15 +282,6 @@
     "skippedCodec": "Hoppades över, codec stöds inte av den här webbläsaren: {{ names }}. Prova Chrome, eller konvertera till H.264 MP4",
     "notProject": "Den här filen är inte ett LocalCutVideo-projekt",
     "demo": "Demovideon kunde inte läsas in"
-  },
-  "languages": {
-    "en": "Engelska",
-    "fr": "Franska",
-    "es": "Spanska",
-    "it": "Italienska",
-    "de": "Tyska",
-    "pt": "Portugisiska",
-    "nl": "Nederländska"
   },
   "editor": {
     "back": "Tillbaka till projekten",
@@ -389,7 +389,9 @@
       "stage": {
         "audio": "Extraherar ljudet…",
         "download": "Laddar ned modellen…",
-        "transcribe": "Transkriberar…"
+        "transcribe": "Transkriberar…",
+        "load": "Förbereder modellen…",
+        "language": "Identifierar språket…"
       },
       "missing": "Transkribera de nya klippen ({{ count }})",
       "rerunHint": "Börjar om med modellen och språket ovan",
@@ -513,7 +515,8 @@
       "start": "Exportera MP4",
       "saveProject": "Spara projektet",
       "saveProjectHint": "En .lcv.json-fil med din redigering (ingen video i den), för att fortsätta på en annan dator",
-      "projectSaved": "Projektet sparat som en .lcv.json-fil"
+      "projectSaved": "Projektet sparat som en .lcv.json-fil",
+      "thumbnail": "Skapa en miniatyrbild"
     },
     "clips": {
       "title": "Klipp",
@@ -557,7 +560,8 @@
         "cuts": "klipp",
         "removed": "borttaget",
         "words": "ord med undertext",
-        "silent": "{{ count }} klipp utan röst: bara verklig dödtid klipptes bort"
+        "silent": "{{ count }} klipp utan röst: bara verklig dödtid klipptes bort",
+        "languageHint": "Fel språk? Ångra och välj språket"
       },
       "steps": {
         "analyze": "Analyserar ljudet",
@@ -580,7 +584,8 @@
         "detectedYes": "Identifierat: någon pratar",
         "detectedNo": "Identifierat: ingen röst",
         "hint": "Ingen röst: ingen transkription eller undertexter, bara verklig dödtid klipps bort"
-      }
+      },
+      "languageHint": "Automatiskt fungerar oftast. Vid stark brytning, välj språket själv"
     },
     "mix": {
       "title": "Videons ljud",
@@ -631,7 +636,7 @@
     }
   },
   "legal": {
-    "updated": "Senast uppdaterad: 2 november 2026",
+    "updated": "Senast uppdaterad: 8 november 2026",
     "contact": "Kontakt",
     "nav": {
       "notice": "Juridisk information",
@@ -662,7 +667,7 @@
           "title": "Immateriella rättigheter",
           "body": [
             "Källkoden till LocalCutVideo är öppen och publicerad under MIT-licensen på [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Komponenter från tredje part, AI-modeller och typsnitt som applikationen använder tillhör sina upphovspersoner och används enligt sina egna licenser, som listas i [användarvillkoren](/terms). Nämnda varumärken (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) tillhör sina ägare."
+            "Komponenter från tredje part, AI-modeller och typsnitt som applikationen använder tillhör sina upphovspersoner och används enligt sina egna licenser, som listas i [användarvillkoren](/terms). Nämnda varumärken (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) tillhör sina ägare."
           ]
         },
         {
@@ -693,7 +698,7 @@
         {
           "title": "Det som stannar på din enhet",
           "body": [
-            "Video- och ljudfilerna du öppnar läses direkt från din disk. Analys, transkription (Whisper), ansiktsspårning och export beräknas lokalt av din webbläsare.",
+            "Video- och ljudfilerna du öppnar läses direkt från din disk. Analys, transkription (Whisper), ansiktsspårning och export beräknas lokalt av din webbläsare. Miniatyrernas AI-bilder (Janus Pro) beräknas också lokalt: din beskrivning och bilden skickas aldrig.",
             "Dina projekt (klipp, transkription, inställningar) sparas i webbläsarens lokala databas (IndexedDB), tillsammans med en miniatyrbild och en cache med analyser. Utgivaren har ingen åtkomst till dem. Du kan radera ett projekt på projektsidan, eller radera allt genom att rensa den här webbplatsens data i webbläsarens inställningar."
           ]
         },
@@ -713,7 +718,7 @@
           "title": "Tredje parter",
           "body": [
             "Cloudflare: alla förfrågningar till den här webbplatsen går via Cloudflare, som skyddar servern och krypterar anslutningen. Som alla nätverksmellanhänder behandlar Cloudflare din IP-adress och vanlig webbläsarinformation för att leverera sidorna, och kan spara tekniska loggar av säkerhetsskäl; det tar aldrig emot dina videor eller ditt ljud, som aldrig lämnar din enhet. Se deras [integritetspolicy](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: Whisper-modellen levereras av den här webbplatsen, precis som resten av applikationen. Bara om den inte finns tillgänglig här laddas den i stället ned från huggingface.co; Hugging Face tar då emot din IP-adress och vanlig webbläsarinformation, men aldrig ditt ljud. Se deras [integritetspolicy](https://huggingface.co/privacy).",
+            "Hugging Face: Whisper-modellen levereras av den här webbplatsen, precis som resten av applikationen. Bara om den inte finns tillgänglig här laddas den i stället ned från huggingface.co; Hugging Face tar då emot din IP-adress och vanlig webbläsarinformation, men aldrig ditt ljud. Se deras [integritetspolicy](https://huggingface.co/privacy). Miniatyrverktygets AI-bildmodell laddas alltid ned från huggingface.co, bara om du använder den: Hugging Face får då din IP-adress, men aldrig din beskrivning eller bilden.",
             "GitHub: bara om du följer en länk till källkodsförrådet.",
             "Ingen annan tredje part kontaktas: en strikt Content-Security-Policy hindrar tekniskt sidan från att ansluta någon annanstans."
           ]
@@ -771,7 +776,8 @@
           "title": "Öppen källkod och komponenter från tredje part",
           "body": [
             "Källkoden finns tillgänglig under MIT-licensen på [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo bygger på: Mediabunny (MPL-2.0), Transformers.js och ONNX Runtime (Apache-2.0 och MIT), Whisper-modellerna från OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) och typsnitten Inter och Montserrat (SIL Open Font License)."
+            "LocalCutVideo bygger på: Mediabunny (MPL-2.0), Transformers.js och ONNX Runtime (Apache-2.0 och MIT), Whisper-modellerna från OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) och typsnitten Inter och Montserrat (SIL Open Font License).",
+            "AI-bildgeneratorn använder modellen Janus Pro från DeepSeek, under [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), som gäller för dig. Du förbinder dig att inte använda den: i strid med lag eller andras rättigheter; för militära ändamål; för att utnyttja eller skada minderåriga; för att skapa eller sprida falsk information avsedd att skada, innehåll som är olämpligt enligt tillämpliga regler eller personuppgifter utan tillstånd; för att förtala eller trakassera; för helt automatiserade beslut som påverkar en persons rättigheter; för att diskriminera eller skada människor på grund av deras beteende, personliga egenskaper eller lagskyddade kategorier; eller för att utnyttja en grupp människors sårbarheter. DeepSeek gör inga anspråk på bilderna du skapar: du ansvarar för dem och för hur du använder dem. Modellen tillhandahålls i befintligt skick, utan garanti."
           ]
         },
         {
@@ -843,7 +849,21 @@
     "sizeInfo": "{{ width }} × {{ height }} px · JPG är bäst för YouTube (under 2 MB)",
     "saved": "Sparad: {{ name }}",
     "loadError": "Projektet kunde inte öppnas",
-    "readError": "Filen kunde inte läsas"
+    "readError": "Filen kunde inte läsas",
+    "ai": {
+      "title": "Skapa en bild med AI",
+      "text": "Beskriv bilden på engelska. Ditt grafikkort skapar den, inget skickas",
+      "prompt": "Beskriv bilden",
+      "placeholder": "A neon-lit city street at night, cinematic",
+      "run": "Skapa",
+      "again": "Skapa en till",
+      "size": "Engångsnedladdning {{ size }}. Kvadratisk bild på 384 px, passar bäst som bakgrund",
+      "generating": "Skapar bilden…",
+      "unsupported": "Kräver Chrome eller Edge på en dator med modernt grafikkort",
+      "error": "Bilden kunde inte skapas. Ditt grafikkort kan ha för lite minne",
+      "terms": "Genom att skapa en bild godkänner du modellens användarvillkor",
+      "downloadError": "AI-modellen kunde inte laddas ned. Försök igen om några minuter"
+    }
   },
   "seo": {
     "home": {

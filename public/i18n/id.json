@@ -88,6 +88,10 @@
       "eyebrow": "Fitur",
       "title": "Semua yang Anda perlukan untuk video yang memikat",
       "lead": "Untuk kreator TikTok, Reels, Shorts, dan YouTube, juga guru, pelatih, dan perusahaan",
+      "speech": {
+        "title": "Bahasa video Anda, otomatis",
+        "text": "Aplikasi dalam satu bahasa, video dalam bahasa lain? Bahasa yang diucapkan dideteksi dan diperiksa, atau pilih sendiri dari puluhan bahasa"
+      },
       "silences": {
         "title": "Selamat tinggal jeda",
         "text": "Keheningan dan momen kosong ditemukan dan dipotong otomatis: video Anda langsung lebih bertempo"
@@ -135,6 +139,10 @@
       "languages": {
         "title": "Dalam bahasa Anda",
         "text": "Antarmuka tersedia dalam {{ count }} bahasa dan subtitel berfungsi dalam puluhan bahasa yang dikenali otomatis"
+      },
+      "aiImage": {
+        "title": "Gambar AI untuk thumbnail Anda",
+        "text": "Jelaskan gambar dan Janus Pro menggambarnya di kartu grafis Anda, gratis dan tanpa mengirim apa pun. Unduhan satu kali 1,6 GB, di komputer dengan Chrome atau Edge"
       }
     },
     "privacy": {
@@ -188,7 +196,7 @@
       },
       "ai": {
         "q": "Bagaimana AI bisa berjalan tanpa server?",
-        "a": "Model AI (Whisper untuk subtitel, MediaPipe untuk wajah) diunduh sekali, lalu komputer Anda yang menjalankannya. Suara dan gambar Anda tidak pernah keluar dari komputer"
+        "a": "Model AI (Whisper untuk subtitel, MediaPipe untuk wajah) diunduh sekali, lalu komputer Anda yang menjalankannya. Suara dan gambar Anda tidak pernah keluar dari komputer. Janus Pro, yang menggambar gambar AI untuk thumbnail, bekerja dengan cara yang sama: sekitar 1,6 GB, hanya diunduh jika Anda menggunakannya"
       },
       "capcut": {
         "q": "Apa bedanya dengan CapCut?",
@@ -207,7 +215,8 @@
         "moments": "Saran momen terbaik",
         "title": "Judul dengan kata yang disorot, 4 gaya",
         "formats": "YouTube 1280×720, Shorts, dan persegi",
-        "local": "Dibuat di perangkat Anda, tidak ada yang diunggah"
+        "local": "Dibuat di perangkat Anda, tidak ada yang diunggah",
+        "ai": "Atau buat gambar dengan AI, di komputer Anda"
       },
       "cta": "Buat thumbnail",
       "mockTitle": "Vlog",
@@ -273,15 +282,6 @@
     "skippedCodec": "Dilewati, codec tidak didukung browser ini: {{ names }}. Coba Chrome, atau ubah ke MP4 H.264",
     "notProject": "File ini bukan proyek LocalCutVideo",
     "demo": "Video demo tidak bisa dimuat"
-  },
-  "languages": {
-    "en": "Inggris",
-    "fr": "Prancis",
-    "es": "Spanyol",
-    "it": "Italia",
-    "de": "Jerman",
-    "pt": "Portugis",
-    "nl": "Belanda"
   },
   "editor": {
     "back": "Kembali ke proyek",
@@ -389,7 +389,9 @@
       "stage": {
         "audio": "Mengekstrak audio…",
         "download": "Mengunduh model…",
-        "transcribe": "Mentranskripsi…"
+        "transcribe": "Mentranskripsi…",
+        "load": "Menyiapkan model…",
+        "language": "Mendeteksi bahasa…"
       },
       "missing": "Transkripsikan klip baru ({{ count }})",
       "rerunHint": "Mulai ulang dengan model dan bahasa di atas",
@@ -513,7 +515,8 @@
       "start": "Ekspor MP4",
       "saveProject": "Simpan proyek",
       "saveProjectHint": "File .lcv.json berisi editan Anda (tanpa video), untuk melanjutkan di komputer lain",
-      "projectSaved": "Proyek disimpan sebagai file .lcv.json"
+      "projectSaved": "Proyek disimpan sebagai file .lcv.json",
+      "thumbnail": "Buat thumbnail"
     },
     "clips": {
       "title": "Klip",
@@ -557,7 +560,8 @@
         "cuts": "potongan",
         "removed": "dihapus",
         "words": "kata bersubtitel",
-        "silent": "{{ count }} klip tanpa suara orang: hanya waktu kosong sungguhan yang dipotong"
+        "silent": "{{ count }} klip tanpa suara orang: hanya waktu kosong sungguhan yang dipotong",
+        "languageHint": "Bukan bahasa yang benar? Urungkan lalu pilih bahasanya"
       },
       "steps": {
         "analyze": "Menganalisis audio",
@@ -580,7 +584,8 @@
         "detectedYes": "Terdeteksi: ada yang berbicara",
         "detectedNo": "Terdeteksi: tanpa suara",
         "hint": "Tanpa suara: tanpa transkrip atau subtitel, hanya waktu kosong sungguhan yang dipotong"
-      }
+      },
+      "languageHint": "Mode otomatis cukup untuk sebagian besar kasus. Dengan aksen kuat, pilih bahasanya sendiri"
     },
     "mix": {
       "title": "Suara video",
@@ -631,7 +636,7 @@
     }
   },
   "legal": {
-    "updated": "Terakhir diperbarui: 2 November 2026",
+    "updated": "Terakhir diperbarui: 8 November 2026",
     "contact": "Kontak",
     "nav": {
       "notice": "Pemberitahuan hukum",
@@ -662,7 +667,7 @@
           "title": "Kekayaan intelektual",
           "body": [
             "Kode sumber LocalCutVideo bersifat open source dan diterbitkan dengan lisensi MIT di [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Komponen pihak ketiga, model AI, dan font yang dipakai aplikasi tetap menjadi milik pembuatnya dan digunakan berdasarkan lisensinya masing-masing, yang tercantum dalam [ketentuan penggunaan](/terms). Merek yang disebut (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) milik pemiliknya masing-masing."
+            "Komponen pihak ketiga, model AI, dan font yang dipakai aplikasi tetap menjadi milik pembuatnya dan digunakan berdasarkan lisensinya masing-masing, yang tercantum dalam [ketentuan penggunaan](/terms). Merek yang disebut (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) milik pemiliknya masing-masing."
           ]
         },
         {
@@ -693,7 +698,7 @@
         {
           "title": "Yang tetap di perangkat Anda",
           "body": [
-            "File video dan audio yang Anda buka dibaca langsung dari disk. Analisis, transkripsi (Whisper), pelacakan wajah, dan ekspor dihitung secara lokal oleh browser Anda.",
+            "File video dan audio yang Anda buka dibaca langsung dari disk. Analisis, transkripsi (Whisper), pelacakan wajah, dan ekspor dihitung secara lokal oleh browser Anda. Gambar AI untuk thumbnail (Janus Pro) juga dihitung secara lokal: deskripsi dan gambar Anda tidak pernah dikirim.",
             "Proyek Anda (potongan, transkrip, pengaturan) disimpan di database lokal browser (IndexedDB), bersama thumbnail dan cache hasil analisis. Penerbit tidak memiliki akses ke sana. Anda bisa menghapus proyek dari halaman proyek, atau menghapus semuanya dengan membersihkan data situs ini di pengaturan browser."
           ]
         },
@@ -713,7 +718,7 @@
           "title": "Pihak ketiga",
           "body": [
             "Cloudflare: semua permintaan ke situs ini melewati Cloudflare, yang melindungi server dan mengenkripsi koneksi. Seperti perantara jaringan lainnya, Cloudflare memproses alamat IP Anda dan informasi browser standar untuk mengirimkan halaman, dan dapat menyimpan log teknis untuk tujuan keamanan; Cloudflare tidak pernah menerima video atau audio Anda, yang tidak pernah meninggalkan perangkat Anda. Lihat [kebijakan privasi](https://www.cloudflare.com/privacypolicy/) mereka.",
-            "Hugging Face: model Whisper disediakan oleh situs ini, seperti bagian aplikasi lainnya. Hanya jika tidak tersedia di sini, model diunduh dari huggingface.co; Hugging Face lalu menerima alamat IP Anda dan informasi browser standar, tetapi tidak pernah audio Anda. Lihat [kebijakan privasi](https://huggingface.co/privacy) mereka.",
+            "Hugging Face: model Whisper disediakan oleh situs ini, seperti bagian aplikasi lainnya. Hanya jika tidak tersedia di sini, model diunduh dari huggingface.co; Hugging Face lalu menerima alamat IP Anda dan informasi browser standar, tetapi tidak pernah audio Anda. Lihat [kebijakan privasi](https://huggingface.co/privacy) mereka. Model gambar AI pada pembuat thumbnail selalu diunduh dari huggingface.co, hanya jika Anda menggunakannya: Hugging Face lalu menerima alamat IP Anda, tetapi tidak pernah menerima deskripsi atau gambar Anda.",
             "GitHub: hanya jika Anda membuka tautan ke repositori kode sumber.",
             "Tidak ada pihak ketiga lain yang dihubungi: Content-Security-Policy yang ketat secara teknis mencegah halaman terhubung ke mana pun."
           ]
@@ -771,7 +776,8 @@
           "title": "Open source dan komponen pihak ketiga",
           "body": [
             "Kode sumber tersedia dengan lisensi MIT di [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo memakai: Mediabunny (MPL-2.0), Transformers.js dan ONNX Runtime (Apache-2.0 dan MIT), model Whisper dari OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT), serta font Inter dan Montserrat (SIL Open Font License)."
+            "LocalCutVideo memakai: Mediabunny (MPL-2.0), Transformers.js dan ONNX Runtime (Apache-2.0 dan MIT), model Whisper dari OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT), serta font Inter dan Montserrat (SIL Open Font License).",
+            "Generator gambar AI menggunakan model Janus Pro dari DeepSeek, di bawah [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL) yang juga berlaku bagi Anda. Anda setuju untuk tidak menggunakannya: dengan melanggar hukum atau hak orang lain; untuk tujuan militer; untuk mengeksploitasi atau merugikan anak di bawah umur; untuk membuat atau menyebarkan informasi palsu yang bertujuan merugikan, konten yang tidak pantas menurut peraturan yang berlaku, atau data pribadi tanpa izin; untuk mencemarkan nama baik atau melecehkan; untuk keputusan yang sepenuhnya otomatis yang memengaruhi hak seseorang; untuk mendiskriminasi atau merugikan orang karena perilaku, karakteristik pribadi, atau kategori yang dilindungi hukum; atau untuk mengeksploitasi kerentanan suatu kelompok orang. DeepSeek tidak mengklaim hak apa pun atas gambar yang Anda buat: Anda bertanggung jawab atas gambar tersebut dan penggunaannya. Model disediakan apa adanya, tanpa jaminan."
           ]
         },
         {
@@ -843,7 +849,21 @@
     "sizeInfo": "{{ width }} × {{ height }} px · JPG paling cocok untuk YouTube (di bawah 2 MB)",
     "saved": "Tersimpan: {{ name }}",
     "loadError": "Proyek ini tidak bisa dibuka",
-    "readError": "File ini tidak bisa dibaca"
+    "readError": "File ini tidak bisa dibaca",
+    "ai": {
+      "title": "Buat gambar dengan AI",
+      "text": "Jelaskan gambar dalam bahasa Inggris. Kartu grafis Anda yang membuatnya, tidak ada yang dikirim",
+      "prompt": "Jelaskan gambar",
+      "placeholder": "A neon-lit city street at night, cinematic",
+      "run": "Buat",
+      "again": "Buat lagi",
+      "size": "Unduhan satu kali {{ size }}. Gambar persegi 384 px, paling cocok sebagai latar",
+      "generating": "Membuat gambar…",
+      "unsupported": "Memerlukan Chrome atau Edge di komputer dengan kartu grafis terbaru",
+      "error": "Gambar tidak dapat dibuat. Memori kartu grafis Anda mungkin kurang",
+      "terms": "Dengan membuat gambar, Anda menerima ketentuan penggunaan model",
+      "downloadError": "Model AI tidak dapat diunduh. Coba lagi dalam beberapa menit"
+    }
   },
   "seo": {
     "home": {

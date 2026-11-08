@@ -26,12 +26,13 @@
 | | |
 | --- | --- |
 | **Auto edit** | One click: transcription, filler removal, silence cuts, face framing, smart zoom and karaoke subtitles, with good defaults. Undo in one step. |
+| **Spoken language** | Detected automatically and double-checked by comparing how confidently Whisper writes each candidate, so English with an accent is not translated. It can also be chosen by hand. |
 | **Voice detection** | The auto edit asks whether someone speaks in each clip (or detects it with Whisper). Clips without voice get no subtitles and only real dead air is cut. |
 | **Try it** | "Try the demo" on the home page opens the editor with a sample video and a guided tour (arrows on each tool, "?" button to replay it). |
 | **Texts and transitions** | Titles and notes over the video (same styles as the thumbnails); quick fade or fade to black at every cut. |
 | **Background blur** | The background behind the person is blurred, the person stays sharp (MediaPipe selfie segmentation). |
 | **Project files** | Save a project as a `.lcv.json` file (the edit, without the video) and open it on another computer. |
-| **Thumbnail maker** | Suggests the sharpest moments of the video, adds a big title with highlighted words (4 styles), color boost and reframing; downloads JPG / PNG for YouTube, Shorts or a square post. |
+| **Thumbnail maker** | Suggests the sharpest moments of the video, adds a big title with highlighted words (4 styles), color boost and reframing; downloads JPG / PNG for YouTube, Shorts or a square post. The picture can also be generated from a sentence by Janus Pro on your own graphics card (WebGPU, one-time 1.6 GB download from Hugging Face). |
 | **Zero upload** | The video is read in place from your disk (File System Access API). Nothing is sent anywhere. |
 | **Multi-clip** | Import several takes at once: they play back to back in one project. Reorder, add or remove clips; cuts and words follow their clip. |
 | **Input formats** | MP4, MOV, WebM, MKV. H.264 everywhere; HEVC (iPhone) when the browser can decode it (Chrome, or Edge with the HEVC extension). |
@@ -39,7 +40,7 @@
 | **Text-based editing** | Whisper word timestamps: delete words in the transcript to cut the video. Correct misheard words or sentences. Filler-word removal. |
 | **Manual cuts** | Drag on the waveform (or use Start / End, keys I and O) to select a part, then Cut (X). |
 | **Speed changes** | Speed up or slow down the selected part or transcript words (0.25× to 4×). Voices keep their pitch (WSOLA time stretch in the export). |
-| **Self-hosted AI** | The Whisper models are served by the site itself (downloaded at the Docker build): transcribing never contacts a third party. Hugging Face is only a backup when a model is missing. |
+| **Self-hosted AI** | The Whisper models are served by the site itself (downloaded at the Docker build): transcribing never contacts a third party. Hugging Face is only a backup when a model is missing. The optional image model is too large to self-host and always comes from Hugging Face. |
 | **GPU or CPU** | Whisper runs on the graphics card (WebGPU) and switches to the processor (WebAssembly) if the GPU fails; iPhone and iPad use the processor from the start. A failed transcription shows the error's detail. |
 | **Language detection** | The spoken language is detected automatically (Whisper language ID), or chosen by hand. |
 | **Karaoke subtitles** | Word-by-word animated captions burned into the video (karaoke, clean, boxed). |
@@ -222,6 +223,6 @@ The first build downloads them (about 1.5 GB for the three); Docker keeps that s
 
 ## License
 
-[MIT](LICENSE) © Maxence Bonnici. Third-party libraries and models keep their own licenses (Mediabunny: MPL-2.0, Transformers.js, MediaPipe and Dexie: Apache-2.0, Wavesurfer.js: BSD-3-Clause, Whisper models: MIT, Montserrat and Inter fonts: OFL).
+[MIT](LICENSE) © Maxence Bonnici. Third-party libraries and models keep their own licenses (Mediabunny: MPL-2.0, Transformers.js, MediaPipe and Dexie: Apache-2.0, Wavesurfer.js: BSD-3-Clause, Whisper models: MIT, Janus Pro model: [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), with use restrictions, Montserrat and Inter fonts: OFL).
 
 CapCut is a trademark of its owner. LocalCutVideo is an independent project, not affiliated with CapCut or ByteDance.

@@ -88,6 +88,10 @@
       "eyebrow": "Tính năng",
       "title": "Mọi thứ bạn cần cho những video cuốn hút",
       "lead": "Dành cho nhà sáng tạo TikTok, Reels, Shorts và YouTube, cũng như giáo viên, người đào tạo và doanh nghiệp",
+      "speech": {
+        "title": "Ngôn ngữ video của bạn, tự động",
+        "text": "Ứng dụng một ngôn ngữ, video ngôn ngữ khác? Ngôn ngữ nói được nhận diện và kiểm tra, hoặc bạn tự chọn trong hàng chục ngôn ngữ"
+      },
       "silences": {
         "title": "Tạm biệt khoảng lặng",
         "text": "Khoảng lặng và đoạn chết được tìm và cắt tự động: video của bạn nhịp nhàng hơn chỉ trong một giây"
@@ -135,6 +139,10 @@
       "languages": {
         "title": "Bằng ngôn ngữ của bạn",
         "text": "Giao diện có {{ count }} ngôn ngữ và phụ đề hoạt động với hàng chục ngôn ngữ, được nhận diện tự động"
+      },
+      "aiImage": {
+        "title": "Ảnh AI cho hình thu nhỏ của bạn",
+        "text": "Mô tả một bức ảnh và Janus Pro sẽ vẽ trên card đồ họa của bạn, miễn phí và không gửi đi bất cứ thứ gì. Tải xuống một lần 1,6 GB, trên máy tính có Chrome hoặc Edge"
       }
     },
     "privacy": {
@@ -188,7 +196,7 @@
       },
       "ai": {
         "q": "Làm sao AI chạy được mà không cần máy chủ?",
-        "a": "Các mô hình AI (Whisper cho phụ đề, MediaPipe cho khuôn mặt) được tải về một lần, sau đó máy tính của bạn tự chạy chúng. Giọng nói và hình ảnh của bạn không bao giờ rời khỏi máy"
+        "a": "Các mô hình AI (Whisper cho phụ đề, MediaPipe cho khuôn mặt) được tải về một lần, sau đó máy tính của bạn tự chạy chúng. Giọng nói và hình ảnh của bạn không bao giờ rời khỏi máy. Janus Pro, mô hình vẽ ảnh AI cho hình thu nhỏ, hoạt động theo cách tương tự: khoảng 1,6 GB, chỉ tải xuống nếu bạn sử dụng"
       },
       "capcut": {
         "q": "Khác gì so với CapCut?",
@@ -207,7 +215,8 @@
         "moments": "Gợi ý khoảnh khắc đẹp nhất",
         "title": "Tiêu đề có từ nổi bật, 4 kiểu",
         "formats": "YouTube 1280×720, Shorts và hình vuông",
-        "local": "Tạo trên thiết bị của bạn, không tải lên gì cả"
+        "local": "Tạo trên thiết bị của bạn, không tải lên gì cả",
+        "ai": "Hoặc tạo ảnh bằng AI, ngay trên máy tính của bạn"
       },
       "cta": "Tạo ảnh thu nhỏ",
       "mockTitle": "Vlog",
@@ -273,15 +282,6 @@
     "skippedCodec": "Đã bỏ qua, trình duyệt không hỗ trợ codec: {{ names }}. Hãy thử Chrome, hoặc chuyển sang MP4 H.264",
     "notProject": "Tệp này không phải dự án LocalCutVideo",
     "demo": "Không tải được video mẫu"
-  },
-  "languages": {
-    "en": "Tiếng Anh",
-    "fr": "Tiếng Pháp",
-    "es": "Tiếng Tây Ban Nha",
-    "it": "Tiếng Ý",
-    "de": "Tiếng Đức",
-    "pt": "Tiếng Bồ Đào Nha",
-    "nl": "Tiếng Hà Lan"
   },
   "editor": {
     "back": "Quay lại dự án",
@@ -389,7 +389,9 @@
       "stage": {
         "audio": "Đang tách âm thanh…",
         "download": "Đang tải mô hình…",
-        "transcribe": "Đang chép lời…"
+        "transcribe": "Đang chép lời…",
+        "load": "Đang chuẩn bị mô hình…",
+        "language": "Đang nhận diện ngôn ngữ…"
       },
       "missing": "Chép lời các clip mới ({{ count }})",
       "rerunHint": "Bắt đầu lại với mô hình và ngôn ngữ ở trên",
@@ -513,7 +515,8 @@
       "start": "Xuất MP4",
       "saveProject": "Lưu dự án",
       "saveProjectHint": "Tệp .lcv.json chứa phần chỉnh sửa (không kèm video), để tiếp tục trên máy khác",
-      "projectSaved": "Đã lưu dự án thành tệp .lcv.json"
+      "projectSaved": "Đã lưu dự án thành tệp .lcv.json",
+      "thumbnail": "Tạo ảnh thu nhỏ"
     },
     "clips": {
       "title": "Clip",
@@ -557,7 +560,8 @@
         "cuts": "điểm cắt",
         "removed": "đã bỏ",
         "words": "từ có phụ đề",
-        "silent": "{{ count }} clip không có giọng nói: chỉ cắt khoảng trống thật sự"
+        "silent": "{{ count }} clip không có giọng nói: chỉ cắt khoảng trống thật sự",
+        "languageHint": "Không đúng ngôn ngữ? Hoàn tác rồi chọn ngôn ngữ"
       },
       "steps": {
         "analyze": "Phân tích âm thanh",
@@ -580,7 +584,8 @@
         "detectedYes": "Nhận diện: có người nói",
         "detectedNo": "Nhận diện: không có giọng nói",
         "hint": "Không giọng nói: không chép lời, không phụ đề, chỉ cắt khoảng trống thật sự"
-      }
+      },
+      "languageHint": "Chế độ tự động phù hợp trong hầu hết trường hợp. Nếu giọng nặng, hãy tự chọn ngôn ngữ"
     },
     "mix": {
       "title": "Âm thanh video",
@@ -631,7 +636,7 @@
     }
   },
   "legal": {
-    "updated": "Cập nhật lần cuối: 2 tháng 11 năm 2026",
+    "updated": "Cập nhật lần cuối: 8 tháng 11 năm 2026",
     "contact": "Liên hệ",
     "nav": {
       "notice": "Thông tin pháp lý",
@@ -662,7 +667,7 @@
           "title": "Sở hữu trí tuệ",
           "body": [
             "Mã nguồn của LocalCutVideo là mã nguồn mở và được công bố theo giấy phép MIT trên [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Các thành phần bên thứ ba, mô hình AI và phông chữ mà ứng dụng sử dụng vẫn thuộc sở hữu của tác giả và được dùng theo giấy phép riêng của chúng, được liệt kê trong [điều khoản sử dụng](/terms). Các thương hiệu được nhắc đến (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) thuộc về chủ sở hữu tương ứng."
+            "Các thành phần bên thứ ba, mô hình AI và phông chữ mà ứng dụng sử dụng vẫn thuộc sở hữu của tác giả và được dùng theo giấy phép riêng của chúng, được liệt kê trong [điều khoản sử dụng](/terms). Các thương hiệu được nhắc đến (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) thuộc về chủ sở hữu tương ứng."
           ]
         },
         {
@@ -693,7 +698,7 @@
         {
           "title": "Những gì ở lại trên thiết bị",
           "body": [
-            "Tệp video và âm thanh bạn mở được đọc trực tiếp từ ổ đĩa. Phân tích, chép lời (Whisper), theo dõi khuôn mặt và xuất video đều được trình duyệt tính toán ngay trên máy.",
+            "Tệp video và âm thanh bạn mở được đọc trực tiếp từ ổ đĩa. Phân tích, chép lời (Whisper), theo dõi khuôn mặt và xuất video đều được trình duyệt tính toán ngay trên máy. Ảnh AI cho hình thu nhỏ (Janus Pro) cũng được tính toán cục bộ: mô tả của bạn và ảnh không bao giờ được gửi đi.",
             "Dự án của bạn (điểm cắt, bản chép lời, cài đặt) được lưu trong cơ sở dữ liệu cục bộ của trình duyệt (IndexedDB), cùng một ảnh thu nhỏ và bộ nhớ đệm kết quả phân tích. Đơn vị phát hành không thể truy cập chúng. Bạn có thể xóa một dự án từ trang dự án, hoặc xóa tất cả bằng cách xóa dữ liệu của trang này trong cài đặt trình duyệt."
           ]
         },
@@ -713,7 +718,7 @@
           "title": "Bên thứ ba",
           "body": [
             "Cloudflare: mọi yêu cầu tới trang web này đều đi qua Cloudflare, dịch vụ bảo vệ máy chủ và mã hóa kết nối. Như mọi bên trung gian mạng, Cloudflare xử lý địa chỉ IP và thông tin trình duyệt thông thường của bạn để phân phối các trang, và có thể lưu nhật ký kỹ thuật vì mục đích bảo mật; Cloudflare không bao giờ nhận video hay âm thanh của bạn, vốn không bao giờ rời khỏi thiết bị của bạn. Xem [chính sách quyền riêng tư](https://www.cloudflare.com/privacypolicy/) của họ.",
-            "Hugging Face: mô hình Whisper do trang web này cung cấp, giống như phần còn lại của ứng dụng. Chỉ khi không có sẵn ở đây, mô hình mới được tải từ huggingface.co; khi đó Hugging Face nhận địa chỉ IP và thông tin trình duyệt thông thường của bạn, nhưng không bao giờ nhận âm thanh của bạn. Xem [chính sách quyền riêng tư](https://huggingface.co/privacy) của họ.",
+            "Hugging Face: mô hình Whisper do trang web này cung cấp, giống như phần còn lại của ứng dụng. Chỉ khi không có sẵn ở đây, mô hình mới được tải từ huggingface.co; khi đó Hugging Face nhận địa chỉ IP và thông tin trình duyệt thông thường của bạn, nhưng không bao giờ nhận âm thanh của bạn. Xem [chính sách quyền riêng tư](https://huggingface.co/privacy) của họ. Mô hình ảnh AI của công cụ tạo hình thu nhỏ luôn được tải từ huggingface.co, chỉ khi bạn sử dụng: khi đó Hugging Face nhận địa chỉ IP của bạn, nhưng không bao giờ nhận mô tả hay ảnh của bạn.",
             "GitHub: chỉ khi bạn nhấp vào liên kết đến kho mã nguồn.",
             "Không liên hệ bên thứ ba nào khác: Content-Security-Policy nghiêm ngặt ngăn trang kết nối đến bất cứ nơi nào khác về mặt kỹ thuật."
           ]
@@ -771,7 +776,8 @@
           "title": "Mã nguồn mở và thành phần bên thứ ba",
           "body": [
             "Mã nguồn có sẵn theo giấy phép MIT trên [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo dựa trên: Mediabunny (MPL-2.0), Transformers.js và ONNX Runtime (Apache-2.0 và MIT), các mô hình Whisper của OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) và các phông chữ Inter và Montserrat (SIL Open Font License)."
+            "LocalCutVideo dựa trên: Mediabunny (MPL-2.0), Transformers.js và ONNX Runtime (Apache-2.0 và MIT), các mô hình Whisper của OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) và các phông chữ Inter và Montserrat (SIL Open Font License).",
+            "Trình tạo ảnh AI sử dụng mô hình Janus Pro của DeepSeek theo [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), giấy phép này cũng áp dụng cho bạn. Bạn cam kết không sử dụng mô hình: vi phạm pháp luật hoặc quyền của người khác; cho mục đích quân sự; để bóc lột hoặc gây hại cho trẻ vị thành niên; để tạo hoặc phát tán thông tin sai lệch nhằm gây hại, nội dung không phù hợp theo quy định hiện hành hoặc dữ liệu cá nhân khi chưa được phép; để phỉ báng hoặc quấy rối; cho các quyết định hoàn toàn tự động ảnh hưởng đến quyền của một người; để phân biệt đối xử hoặc gây hại cho người khác vì hành vi, đặc điểm cá nhân hoặc các nhóm được pháp luật bảo vệ; hoặc để lợi dụng điểm yếu của một nhóm người. DeepSeek không yêu cầu quyền đối với ảnh bạn tạo: bạn chịu trách nhiệm về ảnh và cách sử dụng chúng. Mô hình được cung cấp nguyên trạng, không có bảo đảm."
           ]
         },
         {
@@ -843,7 +849,21 @@
     "sizeInfo": "{{ width }} × {{ height }} px · JPG tốt nhất cho YouTube (dưới 2 MB)",
     "saved": "Đã lưu: {{ name }}",
     "loadError": "Không mở được dự án này",
-    "readError": "Không đọc được tệp này"
+    "readError": "Không đọc được tệp này",
+    "ai": {
+      "title": "Tạo ảnh bằng AI",
+      "text": "Mô tả ảnh bằng tiếng Anh. Card đồ họa của bạn sẽ tạo ảnh, không có gì được gửi đi",
+      "prompt": "Mô tả ảnh",
+      "placeholder": "A neon-lit city street at night, cinematic",
+      "run": "Tạo",
+      "again": "Tạo ảnh khác",
+      "size": "Tải xuống một lần {{ size }}. Ảnh vuông 384 px, phù hợp nhất làm nền",
+      "generating": "Đang tạo ảnh…",
+      "unsupported": "Cần Chrome hoặc Edge trên máy tính có card đồ họa đời mới",
+      "error": "Không thể tạo ảnh. Card đồ họa của bạn có thể thiếu bộ nhớ",
+      "terms": "Khi tạo ảnh, bạn chấp nhận điều khoản sử dụng của mô hình",
+      "downloadError": "Không thể tải mô hình AI. Hãy thử lại sau vài phút"
+    }
   },
   "seo": {
     "home": {

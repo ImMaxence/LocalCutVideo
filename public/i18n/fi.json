@@ -88,6 +88,10 @@
       "eyebrow": "Ominaisuudet",
       "title": "Kaikki mitä tarvitset videoihin, jotka pitävät otteessaan",
       "lead": "TikTokin, Reelsin, Shortsien ja YouTuben tekijöille, mutta myös opettajille, kouluttajille ja yrityksille",
+      "speech": {
+        "title": "Videosi kieli automaattisesti",
+        "text": "Sovellus yhdellä kielellä, video toisella? Puhuttu kieli tunnistetaan ja tarkistetaan, tai valitset sen itse kymmenistä kielistä"
+      },
       "silences": {
         "title": "Hyvästi tauot",
         "text": "Hiljaisuudet ja tyhjät hetket löydetään ja leikataan pois automaattisesti: videosi saa lisää tempoa sekunnissa"
@@ -135,6 +139,10 @@
       "languages": {
         "title": "Omalla kielelläsi",
         "text": "Käyttöliittymä on saatavilla {{ count }} kielellä ja tekstitykset toimivat kymmenillä kielillä, jotka tunnistetaan automaattisesti"
+      },
+      "aiImage": {
+        "title": "Tekoälykuvia pikkukuviisi",
+        "text": "Kuvaile kuva, niin Janus Pro piirtää sen näytönohjaimellasi, ilmaiseksi ja mitään lähettämättä. Kertalataus 1,6 Gt, tietokoneella Chromessa tai Edgessä"
       }
     },
     "privacy": {
@@ -188,7 +196,7 @@
       },
       "ai": {
         "q": "Miten tekoäly voi toimia ilman palvelinta?",
-        "a": "Tekoälymallit (Whisper tekstityksiin, MediaPipe kasvoihin) ladataan kerran, minkä jälkeen tietokoneesi ajaa niitä. Äänesi ja kuvasi eivät koskaan lähde sieltä"
+        "a": "Tekoälymallit (Whisper tekstityksiin, MediaPipe kasvoihin) ladataan kerran, minkä jälkeen tietokoneesi ajaa niitä. Äänesi ja kuvasi eivät koskaan lähde sieltä. Pikkukuvien tekoälykuvat piirtävä Janus Pro toimii samalla tavalla: noin 1,6 Gt, joka ladataan vain, jos käytät sitä"
       },
       "capcut": {
         "q": "Mitä eroa on CapCutiin?",
@@ -207,7 +215,8 @@
         "moments": "Parhaat hetket ehdotetaan",
         "title": "Otsikko korostetuilla sanoilla, 4 tyyliä",
         "formats": "YouTube 1280×720, Shorts ja neliö",
-        "local": "Tehdään laitteellasi, mitään ei ladata"
+        "local": "Tehdään laitteellasi, mitään ei ladata",
+        "ai": "Tai luo kuva tekoälyllä tietokoneellasi"
       },
       "cta": "Tee pikkukuva",
       "mockTitle": "Ensimmäinen",
@@ -273,15 +282,6 @@
     "skippedCodec": "Ohitettu, tämä selain ei tue koodekkia: {{ names }}. Kokeile Chromea tai muunna H.264 MP4 -muotoon",
     "notProject": "Tämä tiedosto ei ole LocalCutVideo-projekti",
     "demo": "Esittelyvideota ei voitu ladata"
-  },
-  "languages": {
-    "en": "englanti",
-    "fr": "ranska",
-    "es": "espanja",
-    "it": "italia",
-    "de": "saksa",
-    "pt": "portugali",
-    "nl": "hollanti"
   },
   "editor": {
     "back": "Takaisin projekteihin",
@@ -389,7 +389,9 @@
       "stage": {
         "audio": "Erotetaan ääntä…",
         "download": "Ladataan mallia…",
-        "transcribe": "Litteroidaan…"
+        "transcribe": "Litteroidaan…",
+        "load": "Valmistellaan mallia…",
+        "language": "Tunnistetaan kieltä…"
       },
       "missing": "Litteroi uudet leikkeet ({{ count }})",
       "rerunHint": "Aloittaa alusta yllä olevalla mallilla ja kielellä",
@@ -513,7 +515,8 @@
       "start": "Vie MP4",
       "saveProject": "Tallenna projekti",
       "saveProjectHint": ".lcv.json-tiedosto muokkauksistasi (ilman videota), jotta voit jatkaa toisella tietokoneella",
-      "projectSaved": "Projekti tallennettu .lcv.json-tiedostoksi"
+      "projectSaved": "Projekti tallennettu .lcv.json-tiedostoksi",
+      "thumbnail": "Tee pikkukuva"
     },
     "clips": {
       "title": "Leikkeet",
@@ -557,7 +560,8 @@
         "cuts": "leikkausta",
         "removed": "poistettu",
         "words": "sanaa tekstitetty",
-        "silent": "{{ count }} leike(ttä) ilman puhetta: vain todellinen tyhjä aika leikattiin"
+        "silent": "{{ count }} leike(ttä) ilman puhetta: vain todellinen tyhjä aika leikattiin",
+        "languageHint": "Väärä kieli? Kumoa ja valitse kieli"
       },
       "steps": {
         "analyze": "Analysoidaan ääntä",
@@ -580,7 +584,8 @@
         "detectedYes": "Tunnistettu: joku puhuu",
         "detectedNo": "Tunnistettu: ei puhetta",
         "hint": "Ei puhetta: ei litterointia eikä tekstityksiä, vain todellinen tyhjä aika leikataan"
-      }
+      },
+      "languageHint": "Automaattinen toimii useimmiten. Vahvan aksentin kanssa valitse kieli itse"
     },
     "mix": {
       "title": "Videon ääni",
@@ -631,7 +636,7 @@
     }
   },
   "legal": {
-    "updated": "Päivitetty viimeksi: 2. marraskuuta 2026",
+    "updated": "Päivitetty viimeksi: 8. marraskuuta 2026",
     "contact": "Yhteystiedot",
     "nav": {
       "notice": "Oikeudelliset tiedot",
@@ -662,7 +667,7 @@
           "title": "Immateriaalioikeudet",
           "body": [
             "LocalCutVideon lähdekoodi on avointa ja julkaistu MIT-lisenssillä [GitHubissa](https://github.com/ImMaxence/LocalCutVideo).",
-            "Sovelluksen käyttämät kolmansien osapuolten komponentit, tekoälymallit ja fontit ovat edelleen tekijöidensä omaisuutta, ja niitä käytetään niiden omien lisenssien mukaisesti, jotka on lueteltu [käyttöehdoissa](/terms). Mainitut tavaramerkit (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) kuuluvat omistajilleen."
+            "Sovelluksen käyttämät kolmansien osapuolten komponentit, tekoälymallit ja fontit ovat edelleen tekijöidensä omaisuutta, ja niitä käytetään niiden omien lisenssien mukaisesti, jotka on lueteltu [käyttöehdoissa](/terms). Mainitut tavaramerkit (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) kuuluvat omistajilleen."
           ]
         },
         {
@@ -693,7 +698,7 @@
         {
           "title": "Mitä laitteellesi jää",
           "body": [
-            "Avaamasi video- ja äänitiedostot luetaan suoraan levyltäsi. Analyysi, litterointi (Whisper), kasvojen seuranta ja vienti lasketaan paikallisesti selaimessasi.",
+            "Avaamasi video- ja äänitiedostot luetaan suoraan levyltäsi. Analyysi, litterointi (Whisper), kasvojen seuranta ja vienti lasketaan paikallisesti selaimessasi. Pikkukuvien tekoälykuvat (Janus Pro) lasketaan myös paikallisesti: kuvaustasi ja kuvaa ei koskaan lähetetä.",
             "Projektisi (leikkaukset, litterointi, asetukset) tallennetaan selaimesi paikalliseen tietokantaan (IndexedDB) yhdessä pikkukuvan ja analyysien välimuistin kanssa. Julkaisijalla ei ole niihin pääsyä. Voit poistaa projektin projektisivulla tai poistaa kaiken tyhjentämällä tämän sivuston tiedot selaimesi asetuksista."
           ]
         },
@@ -713,7 +718,7 @@
           "title": "Kolmannet osapuolet",
           "body": [
             "Cloudflare: kaikki tämän sivuston pyynnöt kulkevat Cloudflaren kautta, joka suojaa palvelinta ja salaa yhteyden. Kuten mikä tahansa verkon välittäjä, se käsittelee IP-osoitettasi ja tavanomaisia selaintietoja sivujen toimittamiseksi ja voi säilyttää teknisiä lokeja tietoturvasyistä; se ei koskaan saa videoitasi tai ääntäsi, sillä ne eivät koskaan poistu laitteeltasi. Katso Cloudflaren [tietosuojakäytäntö](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: Whisper-mallin toimittaa tämä sivusto, kuten muunkin sovelluksen. Vain jos malli ei ole täällä saatavilla, se ladataan sen sijaan osoitteesta huggingface.co; Hugging Face saa silloin IP-osoitteesi ja tavanomaiset selaintiedot, mutta ei koskaan ääntäsi. Katso heidän [tietosuojakäytäntönsä](https://huggingface.co/privacy).",
+            "Hugging Face: Whisper-mallin toimittaa tämä sivusto, kuten muunkin sovelluksen. Vain jos malli ei ole täällä saatavilla, se ladataan sen sijaan osoitteesta huggingface.co; Hugging Face saa silloin IP-osoitteesi ja tavanomaiset selaintiedot, mutta ei koskaan ääntäsi. Katso heidän [tietosuojakäytäntönsä](https://huggingface.co/privacy). Pikkukuvatyökalun tekoälykuvamalli ladataan aina osoitteesta huggingface.co, vain jos käytät sitä: Hugging Face saa tällöin IP-osoitteesi, mutta ei koskaan kuvaustasi tai kuvaa.",
             "GitHub: vain jos seuraat linkkiä lähdekoodin tietovarastoon.",
             "Muihin kolmansiin osapuoliin ei oteta yhteyttä: tiukka Content-Security-Policy estää teknisesti sivua muodostamasta yhteyttä minnekään muualle."
           ]
@@ -771,7 +776,8 @@
           "title": "Avoin lähdekoodi ja kolmansien osapuolten komponentit",
           "body": [
             "Lähdekoodi on saatavilla MIT-lisenssillä [GitHubissa](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo perustuu seuraaviin: Mediabunny (MPL-2.0), Transformers.js ja ONNX Runtime (Apache-2.0 ja MIT), OpenAI:n Whisper-mallit (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) sekä Inter- ja Montserrat-fontit (SIL Open Font License)."
+            "LocalCutVideo perustuu seuraaviin: Mediabunny (MPL-2.0), Transformers.js ja ONNX Runtime (Apache-2.0 ja MIT), OpenAI:n Whisper-mallit (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) sekä Inter- ja Montserrat-fontit (SIL Open Font License).",
+            "Tekoälykuvageneraattori käyttää DeepSeekin Janus Pro -mallia [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL) -lisenssillä, joka koskee myös sinua. Sitoudut olemaan käyttämättä sitä: lain tai muiden oikeuksien vastaisesti; sotilaallisiin tarkoituksiin; alaikäisten hyväksikäyttöön tai vahingoittamiseen; vahingoittamaan tarkoitetun väärän tiedon, sovellettavien säännösten mukaan sopimattoman sisällön tai luvattomien henkilötietojen luomiseen tai levittämiseen; kunnianloukkaukseen tai häirintään; täysin automatisoituihin päätöksiin, jotka vaikuttavat henkilön oikeuksiin; ihmisten syrjimiseen tai vahingoittamiseen heidän käyttäytymisensä, henkilökohtaisten ominaisuuksiensa tai lailla suojattujen ryhmien perusteella; tai ihmisryhmän haavoittuvuuksien hyväksikäyttöön. DeepSeek ei vaadi oikeuksia luomiisi kuviin: vastaat niistä ja niiden käytöstä. Malli toimitetaan sellaisenaan ilman takuuta."
           ]
         },
         {
@@ -843,7 +849,21 @@
     "sizeInfo": "{{ width }} × {{ height }} px · JPG on paras YouTubelle (alle 2 Mt)",
     "saved": "Tallennettu: {{ name }}",
     "loadError": "Projektia ei voitu avata",
-    "readError": "Tiedostoa ei voitu lukea"
+    "readError": "Tiedostoa ei voitu lukea",
+    "ai": {
+      "title": "Luo kuva tekoälyllä",
+      "text": "Kuvaile kuva englanniksi. Näytönohjaimesi luo sen, mitään ei lähetetä",
+      "prompt": "Kuvaile kuva",
+      "placeholder": "A neon-lit city street at night, cinematic",
+      "run": "Luo",
+      "again": "Luo toinen",
+      "size": "Kertalataus {{ size }}. Neliönmuotoinen 384 px:n kuva, sopii parhaiten taustaksi",
+      "generating": "Luodaan kuvaa…",
+      "unsupported": "Vaatii Chromen tai Edgen tietokoneella, jossa on uudehko näytönohjain",
+      "error": "Kuvaa ei voitu luoda. Näytönohjaimesi muisti saattaa loppua kesken",
+      "terms": "Luomalla kuvan hyväksyt mallin käyttöehdot",
+      "downloadError": "Tekoälymallia ei voitu ladata. Yritä uudelleen muutaman minuutin kuluttua"
+    }
   },
   "seo": {
     "home": {

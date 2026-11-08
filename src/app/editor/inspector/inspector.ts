@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, inject, input, model, output, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
+import { spokenLanguageName, spokenLanguageOptions } from '../../core/spoken-languages';
 import { SILENCE_PRESETS } from '../../engine/audio-analysis';
 import type { ThumbStyle } from '../../engine/thumbnail';
 import {
@@ -36,8 +37,6 @@ export const INSPECTOR_TABS: { id: InspectorTab; icon: string }[] = [
 
 /** Approximate one-time download per model (WASM / WebGPU variants differ slightly). */
 const MODEL_SIZES: Record<WhisperModel, string> = { tiny: '≈ 40 MB', base: '≈ 80 MB', small: '≈ 250 MB' };
-
-const SPOKEN = ['en', 'fr', 'es', 'it', 'de', 'pt', 'nl'];
 
 @Component({
   selector: 'app-inspector',
@@ -104,10 +103,7 @@ export class Inspector {
   private readonly lang = toSignal(inject(TranslocoService).langChanges$);
   protected readonly languageOptions = computed<SelectOption[]>(() => {
     this.lang();
-    return [
-      { value: 'auto', label: this.transloco.translate('editor.transcribe.auto'), icon: 'sparkles' },
-      ...SPOKEN.map((code) => ({ value: code, label: this.transloco.translate(`languages.${code}`), flag: code === 'en' ? 'gb' : code })),
-    ];
+    return spokenLanguageOptions(this.transloco.translate('editor.transcribe.auto'), this.transloco.getActiveLang());
   });
 
   /**
@@ -181,11 +177,7 @@ export class Inspector {
   /** Localized name of any language Whisper may detect (not only the ones of the list). */
   protected languageName(code: string): string {
     this.lang();
-    try {
-      return new Intl.DisplayNames([this.transloco.getActiveLang()], { type: 'language' }).of(code) ?? code;
-    } catch {
-      return code;
-    }
+    return spokenLanguageName(code, this.transloco.getActiveLang());
   }
 
   protected setSpokenLanguage(v: string): void {

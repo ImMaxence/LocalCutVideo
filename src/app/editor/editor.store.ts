@@ -65,11 +65,15 @@ import {
   totalDuration,
   withoutRange,
 } from '../engine/timeline-math';
-import type { AiDevice, ExportRequest, RawWord } from '../workers/worker-types';
+import { ProgressEaser } from '../engine/progress';
+import type { AiDevice, ExportRequest, RawWord, TranscribeProgress } from '../workers/worker-types';
 
 /** Shortest cut, in seconds (also the minimum length of a timeline region). */
 export const MIN_CUT = 0.05;
 
+const PROGRESS_TICK_MS = 200;
+/** Words shown live during a transcription: proof that it advances, and in the right language. */
+const HEARD_WORDS = 10;
 /** Samples of a clip rated by Whisper to tell whether someone speaks in it. */
 const VOICE_SAMPLES = 6;
 
@@ -86,7 +90,7 @@ export type ExportState =
   | { status: 'error'; message: string };
 
 export interface TaskProgress {
-  stage: 'audio' | 'download' | 'transcribe';
+  stage: 'audio' | TranscribeProgress['stage'];
   progress: number;
 }
 
@@ -121,9 +125,9 @@ export interface AutoEditOptions {
 }
 
 export interface AutoEditRun {
-  steps: { id: AutoStepId; status: AutoStepStatus }[];
+  steps: { id: AutoStepId; status: AutoStepStatus; startedAt?: number }[];
   done: boolean;
-  summary?: { removed: number; cuts: number; words: number; faces: boolean; silentClips: number };
+  summary?: { removed: number; cuts: number; words: number; faces: boolean; silentClips: number; language: string | null };
 }
 
 export type PreviewQuality = 360 | 540 | 720;
@@ -171,6 +175,12 @@ export class EditorStore {
   readonly faceProgress = signal<number | null>(null);
   /** Progress of the voice detection (0..1), null when idle. */
   readonly voiceProgress = signal<number | null>(null);
+  /** What the voice detection is busy with. */
+  readonly voiceStage = signal<TranscribeProgress['stage'] | null>(null);
+  /** Language of the running transcription, once known. */
+  readonly heardLanguage = signal<string | null>(null);
+  /** The last words heard by the running transcription. */
+  readonly heardWords = signal('');
   readonly exportState = signal<ExportState>({ status: 'idle' });
   readonly saveState = signal<SaveState>('saved');
   readonly savedAt = signal<number | null>(null);
@@ -903,6 +913,12 @@ export class EditorStore {
     if (!p) return;
     this.transcription.set({ stage: 'audio', progress: 0 });
     this.transcribedWords.set(0);
+    this.heardLanguage.set(null);
+    this.heardWords.set('');
+    const easer = new ProgressEaser();
+    const ticker = setInterval(() => {
+      if (this.transcription()?.stage === 'transcribe') this.transcription.set({ stage: 'transcribe', progress: easer.value(performance.now()) });
+    }, PROGRESS_TICK_MS);
     try {
       await this.ensureAnalyses();
       if (!this.analysis()) throw new Error('NO_ANALYSIS');
@@ -934,16 +950,21 @@ export class EditorStore {
             pcm.subarray(0, Math.round(clipDuration * ANALYSIS_SAMPLE_RATE)),
             whisperChunks(analysis.frameDb, clipDuration, p.silence.thresholdDb),
             { model, language },
-            proxy((progress: { stage: 'download' | 'transcribe'; progress: number }) =>
-              this.transcription.set(
-                progress.stage === 'download'
-                  ? progress
-                  : { stage: 'transcribe', progress: (doneSeconds + progress.progress * clipDuration) / totalSeconds },
-              ),
-            ),
+            proxy((progress: TranscribeProgress) => {
+              if (progress.language) this.heardLanguage.set(progress.language);
+              if (progress.stage !== 'transcribe') {
+                this.transcription.set({ stage: progress.stage, progress: progress.progress });
+                return;
+              }
+              const overall = (p: number) => (doneSeconds + p * clipDuration) / totalSeconds;
+              const now = performance.now();
+              easer.report(overall(progress.progress), overall(progress.next ?? progress.progress), now);
+              this.transcription.set({ stage: 'transcribe', progress: easer.value(now) });
+            }),
             proxy((chunk: RawWord[]) => {
               words.push(...chunk);
               this.transcribedWords.update((n) => n + chunk.length);
+              this.heardWords.set(words.slice(-HEARD_WORDS).map((w) => w.text).join(' '));
             }),
           );
           this.aiDevice.set(res.device);
@@ -960,6 +981,7 @@ export class EditorStore {
         d.transcript = { model, language, detected: language ? null : (detected ?? p.transcript?.detected ?? null), createdAt: Date.now() };
       });
     } finally {
+      clearInterval(ticker);
       this.transcription.set(null);
     }
   }
@@ -1122,6 +1144,11 @@ export class EditorStore {
     const pending = this.project()?.clips.filter((c) => c.voice == null && c.voiceDetected === undefined) ?? [];
     if (!pending.length) return;
     this.voiceProgress.set(0);
+    this.voiceStage.set('load');
+    const easer = new ProgressEaser();
+    const ticker = setInterval(() => {
+      if (this.voiceStage() === 'transcribe') this.voiceProgress.set(easer.value(performance.now()));
+    }, PROGRESS_TICK_MS);
     try {
       const found = new Map<string, boolean>();
       for (const [i, clip] of pending.entries()) {
@@ -1141,16 +1168,25 @@ export class EditorStore {
         const res = await this.workers.ai.detectSpeech(
           samples,
           this.whisperModel(),
-          proxy((p: { stage: 'download' | 'transcribe'; progress: number }) =>
-            this.voiceProgress.set(p.stage === 'download' ? p.progress : (i + p.progress) / pending.length),
-          ),
+          proxy((p: TranscribeProgress) => {
+            this.voiceStage.set(p.stage);
+            if (p.stage !== 'transcribe') {
+              this.voiceProgress.set(p.progress);
+              return;
+            }
+            const now = performance.now();
+            easer.report((i + p.progress) / pending.length, (i + (p.next ?? p.progress)) / pending.length, now);
+            this.voiceProgress.set(easer.value(now));
+          }),
         );
         this.aiDevice.set(res.device);
         found.set(clip.id, hasVoice(res.samples));
       }
       this.update((d) => d.clips.forEach((c) => found.has(c.id) && (c.voiceDetected = found.get(c.id))), { history: false });
     } finally {
+      clearInterval(ticker);
       this.voiceProgress.set(null);
+      this.voiceStage.set(null);
     }
   }
 
@@ -1192,7 +1228,7 @@ export class EditorStore {
     const ids: AutoStepId[] = ['analyze', 'voice', 'transcribe', 'fillers', 'silences', 'framing', 'style'];
     this.autoEdit.set({ steps: ids.map((id) => ({ id, status: 'pending' })), done: false });
     const mark = (id: AutoStepId, status: AutoStepStatus) =>
-      this.autoEdit.update((r) => r && { ...r, steps: r.steps.map((s) => (s.id === id ? { ...s, status } : s)) });
+      this.autoEdit.update((r) => r && { ...r, steps: r.steps.map((s) => (s.id === id ? { ...s, status, startedAt: status === 'running' ? Date.now() : s.startedAt } : s)) });
     const step = async (id: AutoStepId, enabled: boolean, work: () => Promise<boolean | void>) => {
       if (!enabled) return mark(id, 'skipped');
       mark(id, 'running');
@@ -1217,8 +1253,12 @@ export class EditorStore {
       await step('transcribe', needsWords, async () => {
         this.dropWordsWithoutVoice();
         if (!this.project()?.clips.some(clipHasVoice)) return false;
-        if (words() && !this.untranscribedClips()) return false;
-        await this.transcribe(this.whisperModel(), this.whisperLanguage(), words() ? 'missing' : 'all');
+        // Words in another language than the one asked for are of no use: everything is redone.
+        const language = this.whisperLanguage();
+        const transcript = this.project()?.transcript;
+        const reusable = words() > 0 && (!language || language === (transcript?.language ?? transcript?.detected));
+        if (reusable && !this.untranscribedClips()) return false;
+        await this.transcribe(this.whisperModel(), language, reusable ? 'missing' : 'all');
         return true;
       });
       await step('fillers', o.fillers, async () => (words() ? void this.removeFillers() : false));
@@ -1263,6 +1303,7 @@ export class EditorStore {
               words: result.words.filter((w) => !w.deleted).length,
               faces: result.framing.mode === 'face',
               silentClips: result.clips.filter((c) => !clipHasVoice(c)).length,
+              language: result.words.length && !result.transcript?.language ? (result.transcript?.detected ?? null) : null,
             },
           },
       );

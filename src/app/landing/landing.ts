@@ -31,8 +31,10 @@ export class Landing {
   protected readonly languageCount = LANGUAGES.length;
 
   protected readonly features: Feature[] = [
+    { key: 'speech', icon: 'globe' },
     { key: 'silences', icon: 'scissors' },
     { key: 'captions', icon: 'captions' },
+    { key: 'aiImage', icon: 'sparkles' },
     { key: 'framing', icon: 'face' },
     { key: 'textEdit', icon: 'text' },
     { key: 'zoom', icon: 'zoom' },
@@ -54,7 +56,7 @@ export class Landing {
   ];
 
   protected readonly steps = ['open', 'edit', 'export'];
-  protected readonly spotlightPoints = ['moments', 'title', 'formats', 'local'];
+  protected readonly spotlightPoints = ['moments', 'ai', 'title', 'formats', 'local'];
   protected readonly privacyPoints = ['upload', 'account', 'sensitive', 'storage'];
   protected readonly faq = ['free', 'capcut', 'formats', 'browsers', 'size', 'offline', 'ai'];
   protected readonly browsers = [

@@ -1,8 +1,10 @@
 import { ChangeDetectionStrategy, Component, DestroyRef, computed, effect, inject, input, signal, untracked, viewChild } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { Router, RouterLink } from '@angular/router';
-import { TranslocoPipe } from '@jsverse/transloco';
+import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
 import { supportsSavePicker } from '../core/file-access';
 import { saveProjectFile } from '../core/project-file';
+import { spokenLanguageName, spokenLanguageOptions } from '../core/spoken-languages';
 import { SILENCE_PRESETS } from '../engine/audio-analysis';
 import type { AspectFormat, ExportSettings, Project } from '../engine/model';
 import { outputSize } from '../engine/render';
@@ -11,6 +13,7 @@ import { Icon } from '../shared/icon';
 import { LangPicker } from '../shared/lang-picker';
 import { LocalizePipe } from '../shared/localize';
 import { Logo } from '../shared/logo';
+import { Select, type SelectOption } from '../shared/select';
 import { type AutoEditOptions, type AutoStepId, EditorStore } from './editor.store';
 import { INSPECTOR_TABS, Inspector, type InspectorTab } from './inspector/inspector';
 import { Preview } from './preview/preview';
@@ -33,7 +36,7 @@ function readSessionFlag(key: string): boolean {
 
 @Component({
   selector: 'app-editor',
-  imports: [RouterLink, TranslocoPipe, Icon, Logo, LangPicker, Preview, Timeline, Transcript, Inspector, LocalizePipe, Tour],
+  imports: [RouterLink, TranslocoPipe, Icon, Logo, LangPicker, Preview, Timeline, Transcript, Inspector, LocalizePipe, Tour, Select],
   providers: [EditorStore],
   templateUrl: './editor.html',
   styleUrl: './editor.scss',
@@ -46,6 +49,7 @@ export class Editor {
   readonly tour = input<string>();
   protected readonly store = inject(EditorStore);
   private readonly router = inject(Router);
+  private readonly transloco = inject(TranslocoService);
   protected readonly tourOpen = signal(false);
   protected readonly tourSteps: TourStep[] = [
     { key: 'auto', targets: ['.auto-btn'] },
@@ -88,6 +92,19 @@ export class Editor {
     zoom: true,
   });
   private readonly transcriptRef = viewChild(Transcript);
+  private readonly lang = toSignal(this.transloco.langChanges$);
+  protected readonly languageOptions = computed<SelectOption[]>(() => {
+    this.lang();
+    return spokenLanguageOptions(this.transloco.translate('editor.transcribe.auto'), this.transloco.getActiveLang());
+  });
+  /** Current time, ticking while an auto edit runs. */
+  private readonly clock = signal(Date.now());
+  private readonly autoClock = effect((onCleanup) => {
+    const run = this.store.autoEdit();
+    if (!run || run.done) return;
+    const timer = setInterval(() => this.clock.set(Date.now()), 500);
+    onCleanup(() => clearInterval(timer));
+  });
 
   /** Phones get their own layout: preview on top, tools in a bottom tab bar. */
   protected readonly mobile = signal(matchMedia(MOBILE_QUERY).matches);
@@ -179,11 +196,43 @@ export class Editor {
 
   /** Live progress of the running step, when the underlying task reports one. */
   protected stepProgress(id: AutoStepId): number | null {
-    if (id === 'analyze') return this.store.audioProgress();
-    if (id === 'voice') return this.store.voiceProgress();
-    if (id === 'transcribe') return this.store.transcription()?.progress ?? null;
-    if (id === 'framing') return this.store.faceProgress();
+    if (id === 'analyze') return this.store.audioProgress() || null;
+    if (id === 'voice') return this.store.voiceProgress() || null;
+    if (id === 'transcribe') return this.store.transcription()?.progress || null;
+    if (id === 'framing') return this.store.faceProgress() || null;
     return null;
+  }
+
+  /** The steps long enough to need a progress bar. */
+  protected tracksProgress(id: AutoStepId): boolean {
+    return id === 'analyze' || id === 'voice' || id === 'transcribe' || id === 'framing';
+  }
+
+  /** What the running step is busy with, in words, when a percentage is not enough. */
+  protected stepDetail(id: AutoStepId): string | null {
+    const stage = id === 'voice' ? this.store.voiceStage() : id === 'transcribe' ? this.store.transcription()?.stage : null;
+    if (!stage) return null;
+    if (stage !== 'transcribe') return this.transloco.translate(`editor.transcribe.stage.${stage}`);
+    const heard = id === 'transcribe' && !this.store.whisperLanguage() ? this.store.heardLanguage() : null;
+    return heard ? this.transloco.translate('editor.transcribe.detected', { language: this.languageName(heard) }) : null;
+  }
+
+  protected languageName(code: string): string {
+    this.lang();
+    return spokenLanguageName(code, this.transloco.getActiveLang());
+  }
+
+  /** Time spent on a step, which keeps counting even when a percentage cannot move. */
+  protected elapsed(startedAt: number | undefined): string {
+    return formatTime(startedAt ? Math.max(0, this.clock() - startedAt) / 1000 : 0);
+  }
+
+  protected spokenLanguage(): string {
+    return this.store.whisperLanguage() ?? 'auto';
+  }
+
+  protected setSpokenLanguage(value: string): void {
+    this.store.whisperLanguage.set(value === 'auto' ? null : value);
   }
 
   protected openExport(): void {

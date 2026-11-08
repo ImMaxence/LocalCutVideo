@@ -88,6 +88,10 @@
       "eyebrow": "Fonctionnalités",
       "title": "Tout ce qu'il faut pour des vidéos qui captent l'attention",
       "lead": "Pour les créateurs TikTok, Reels, Shorts et YouTube, mais aussi les profs, les formateurs et les entreprises",
+      "speech": {
+        "title": "La langue de votre vidéo, automatiquement",
+        "text": "Application en français, vidéo en anglais ? La langue parlée est détectée puis vérifiée, ou vous la choisissez vous-même parmi des dizaines de langues"
+      },
       "silences": {
         "title": "Fini les blancs",
         "text": "Les silences et les temps morts sont repérés et coupés automatiquement : votre vidéo gagne en rythme en une seconde"
@@ -135,6 +139,10 @@
       "languages": {
         "title": "Dans votre langue",
         "text": "L'interface existe en {{ count }} langues et les sous-titres fonctionnent dans des dizaines de langues, reconnues automatiquement"
+      },
+      "aiImage": {
+        "title": "Des images IA pour vos miniatures",
+        "text": "Décrivez une image et Janus Pro la dessine sur votre carte graphique, gratuitement et sans rien envoyer. Téléchargement unique de 1,6 Go, sur un ordinateur avec Chrome ou Edge"
       }
     },
     "privacy": {
@@ -188,7 +196,7 @@
       },
       "ai": {
         "q": "Comment l'IA peut-elle tourner sans serveur ?",
-        "a": "Les modèles d'IA (Whisper pour les sous-titres, MediaPipe pour les visages) sont téléchargés une fois, puis c'est votre ordinateur qui les fait tourner. Votre voix et vos images ne partent jamais"
+        "a": "Les modèles d'IA (Whisper pour les sous-titres, MediaPipe pour les visages) sont téléchargés une fois, puis c'est votre ordinateur qui les fait tourner. Votre voix et vos images ne partent jamais. Janus Pro, qui dessine les images IA des miniatures, fonctionne de la même façon : environ 1,6 Go, téléchargés seulement si vous l'utilisez"
       },
       "capcut": {
         "q": "Quelle différence avec CapCut ?",
@@ -207,7 +215,8 @@
         "moments": "Suggestion des meilleurs moments",
         "title": "Titre avec mots mis en avant, 4 styles",
         "formats": "YouTube 1280×720, Shorts et carré",
-        "local": "Créée sur votre appareil, rien n'est envoyé"
+        "local": "Créée sur votre appareil, rien n'est envoyé",
+        "ai": "Ou générez l'image avec l'IA, sur votre ordinateur"
       },
       "cta": "Créer une miniature",
       "mockTitle": "Mon premier",
@@ -273,15 +282,6 @@
     "skippedCodec": "Ignoré(s), codec non pris en charge par ce navigateur : {{ names }}. Essayez Chrome ou convertissez en MP4 H.264",
     "notProject": "Ce fichier n'est pas un projet LocalCutVideo",
     "demo": "La vidéo de démo n'a pas pu être chargée"
-  },
-  "languages": {
-    "en": "Anglais",
-    "fr": "Français",
-    "es": "Espagnol",
-    "it": "Italien",
-    "de": "Allemand",
-    "pt": "Portugais",
-    "nl": "Néerlandais"
   },
   "editor": {
     "back": "Retour aux projets",
@@ -389,7 +389,9 @@
       "stage": {
         "audio": "Extraction de l'audio…",
         "download": "Téléchargement du modèle…",
-        "transcribe": "Transcription…"
+        "transcribe": "Transcription…",
+        "load": "Préparation du modèle…",
+        "language": "Détection de la langue…"
       },
       "missing": "Transcrire les nouveaux clips ({{ count }})",
       "rerunHint": "Recommence avec le modèle et la langue choisis ci-dessus",
@@ -513,7 +515,8 @@
       "start": "Exporter en MP4",
       "saveProject": "Sauvegarder le projet",
       "saveProjectHint": "Un fichier .lcv.json avec votre montage (sans la vidéo), pour continuer sur un autre ordinateur",
-      "projectSaved": "Projet enregistré dans un fichier .lcv.json"
+      "projectSaved": "Projet enregistré dans un fichier .lcv.json",
+      "thumbnail": "Créer une miniature"
     },
     "clips": {
       "title": "Clips de la séquence",
@@ -557,7 +560,8 @@
         "cuts": "coupes",
         "removed": "retirés",
         "words": "mots sous-titrés",
-        "silent": "{{ count }} clip(s) sans voix : seuls les vrais silences ont été coupés"
+        "silent": "{{ count }} clip(s) sans voix : seuls les vrais silences ont été coupés",
+        "languageHint": "Ce n'est pas la bonne ? Annulez, puis choisissez la langue"
       },
       "steps": {
         "analyze": "Analyse de l'audio",
@@ -580,7 +584,8 @@
         "detectedYes": "Détecté : quelqu'un parle",
         "detectedNo": "Détecté : pas de voix",
         "hint": "Sans voix : ni transcription ni sous-titres, seuls les vrais silences sont coupés"
-      }
+      },
+      "languageHint": "L'automatique convient dans la plupart des cas. Avec un fort accent, choisissez la langue vous-même"
     },
     "mix": {
       "title": "Son de la vidéo",
@@ -631,7 +636,7 @@
     }
   },
   "legal": {
-    "updated": "Dernière mise à jour : 2 novembre 2026",
+    "updated": "Dernière mise à jour : 8 novembre 2026",
     "contact": "Contact",
     "nav": {
       "notice": "Mentions légales",
@@ -662,7 +667,7 @@
           "title": "Propriété intellectuelle",
           "body": [
             "Le code source de LocalCutVideo est open source et publié sous licence MIT sur [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Les composants tiers, modèles d'IA et polices utilisés par l'application restent la propriété de leurs auteurs et sont utilisés selon leurs propres licences, listées dans les [conditions d'utilisation](/terms). Les marques citées (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) appartiennent à leurs propriétaires."
+            "Les composants tiers, modèles d'IA et polices utilisés par l'application restent la propriété de leurs auteurs et sont utilisés selon leurs propres licences, listées dans les [conditions d'utilisation](/terms). Les marques citées (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) appartiennent à leurs propriétaires."
           ]
         },
         {
@@ -693,7 +698,7 @@
         {
           "title": "Ce qui reste sur votre appareil",
           "body": [
-            "Les fichiers vidéo et audio que vous ouvrez sont lus directement depuis votre disque. L'analyse, la transcription (Whisper), le suivi de visage et l'export sont calculés localement par votre navigateur.",
+            "Les fichiers vidéo et audio que vous ouvrez sont lus directement depuis votre disque. L'analyse, la transcription (Whisper), le suivi de visage et l'export sont calculés localement par votre navigateur. Les images IA des miniatures (Janus Pro) sont elles aussi calculées localement : votre description et l'image ne sont jamais envoyées.",
             "Vos projets (coupes, transcription, réglages) sont enregistrés dans la base de données locale de votre navigateur (IndexedDB), avec une miniature et un cache des analyses. L'éditeur n'y a pas accès. Vous pouvez supprimer un projet depuis la page des projets, ou tout effacer en supprimant les données de ce site dans les réglages de votre navigateur."
           ]
         },
@@ -713,7 +718,7 @@
           "title": "Tiers",
           "body": [
             "Cloudflare : toutes les requêtes vers ce site passent par Cloudflare, qui protège le serveur et chiffre la connexion. Comme tout intermédiaire réseau, il traite votre adresse IP et les informations standard de votre navigateur pour acheminer les pages, et peut conserver des journaux techniques à des fins de sécurité ; il ne reçoit jamais vos vidéos ni votre audio, qui ne quittent jamais votre appareil. Voir sa [politique de confidentialité](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face : le modèle Whisper est servi par ce site, comme le reste de l'application. S'il n'y est pas disponible, il est téléchargé depuis huggingface.co à la place ; Hugging Face reçoit alors votre adresse IP et les informations standard du navigateur, mais jamais votre audio. Voir leur [politique de confidentialité](https://huggingface.co/privacy).",
+            "Hugging Face : le modèle Whisper est servi par ce site, comme le reste de l'application. S'il n'y est pas disponible, il est téléchargé depuis huggingface.co à la place ; Hugging Face reçoit alors votre adresse IP et les informations standard du navigateur, mais jamais votre audio. Voir leur [politique de confidentialité](https://huggingface.co/privacy). Le modèle d'image IA du créateur de miniatures est toujours téléchargé depuis huggingface.co, uniquement si vous l'utilisez : Hugging Face reçoit alors votre adresse IP, mais jamais votre description ni l'image.",
             "GitHub : uniquement si vous suivez un lien vers le dépôt du code source.",
             "Aucun autre tiers n'est contacté : une Content-Security-Policy stricte empêche techniquement la page de se connecter ailleurs."
           ]
@@ -771,7 +776,8 @@
           "title": "Open source et composants tiers",
           "body": [
             "Le code source est disponible sous licence MIT sur [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo s'appuie sur : Mediabunny (MPL-2.0), Transformers.js et ONNX Runtime (Apache-2.0 et MIT), les modèles Whisper d'OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) et les polices Inter et Montserrat (SIL Open Font License)."
+            "LocalCutVideo s'appuie sur : Mediabunny (MPL-2.0), Transformers.js et ONNX Runtime (Apache-2.0 et MIT), les modèles Whisper d'OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) et les polices Inter et Montserrat (SIL Open Font License).",
+            "Le générateur d'images IA utilise le modèle Janus Pro de DeepSeek, sous la [licence DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), qui s'applique à vous. Vous vous engagez à ne pas l'utiliser : en violation d'une loi ou des droits d'autrui ; à des fins militaires ; pour exploiter ou nuire à des mineurs ; pour créer ou diffuser de fausses informations destinées à nuire, des contenus inappropriés au regard de la réglementation applicable ou des données personnelles sans autorisation ; pour diffamer ou harceler ; pour des décisions entièrement automatisées affectant les droits d'une personne ; pour discriminer ou nuire à des personnes en raison de leur comportement, de leurs caractéristiques personnelles ou de catégories protégées par la loi ; ou pour exploiter les vulnérabilités d'un groupe de personnes. DeepSeek ne revendique aucun droit sur les images que vous générez : vous en êtes responsable, ainsi que de leur utilisation. Le modèle est fourni en l'état, sans garantie."
           ]
         },
         {
@@ -843,7 +849,21 @@
     "sizeInfo": "{{ width }} × {{ height }} px · JPG conseillé pour YouTube (moins de 2 Mo)",
     "saved": "Enregistrée : {{ name }}",
     "loadError": "Ce projet n'a pas pu être ouvert",
-    "readError": "Ce fichier n'a pas pu être lu"
+    "readError": "Ce fichier n'a pas pu être lu",
+    "ai": {
+      "title": "Générer une image avec l'IA",
+      "text": "Décrivez l'image en anglais. Votre carte graphique la crée, rien n'est envoyé",
+      "prompt": "Décrivez l'image",
+      "placeholder": "A neon-lit city street at night, cinematic",
+      "run": "Générer",
+      "again": "En générer une autre",
+      "size": "Téléchargement unique {{ size }}. Image carrée de 384 px, idéale en fond",
+      "generating": "Création de l'image…",
+      "unsupported": "Nécessite Chrome ou Edge sur un ordinateur avec une carte graphique récente",
+      "error": "L'image n'a pas pu être générée. Votre carte graphique manque peut-être de mémoire",
+      "terms": "En générant une image, vous acceptez les conditions d'utilisation du modèle",
+      "downloadError": "Le modèle IA n'a pas pu être téléchargé. Réessayez dans quelques minutes"
+    }
   },
   "seo": {
     "home": {

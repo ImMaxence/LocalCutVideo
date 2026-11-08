@@ -88,6 +88,10 @@
       "eyebrow": "Vipengele",
       "title": "Kila unachohitaji kwa video zinazovutia",
       "lead": "Kwa watayarishi wa TikTok, Reels, Shorts na YouTube, pamoja na walimu, wakufunzi na kampuni",
+      "speech": {
+        "title": "Lugha ya video yako, kiotomatiki",
+        "text": "Programu kwa lugha moja, video kwa nyingine? Lugha inayozungumzwa inatambuliwa na kukaguliwa, au unaichagua mwenyewe kati ya lugha nyingi"
+      },
       "silences": {
         "title": "Kwaheri vituo",
         "text": "Ukimya na nyakati tupu hupatikana na kukatwa kiotomatiki: video yako inapata kasi kwa sekunde moja"
@@ -135,6 +139,10 @@
       "languages": {
         "title": "Kwa lugha yako",
         "text": "Kiolesura kinapatikana kwa lugha {{ count }} na manukuu hufanya kazi kwa lugha nyingi zinazotambuliwa kiotomatiki"
+      },
+      "aiImage": {
+        "title": "Picha za AI kwa vijipicha vyako",
+        "text": "Eleza picha na Janus Pro itaichora kwenye kadi yako ya michoro, bure na bila kutuma chochote. Upakuaji wa mara moja wa GB 1.6, kwenye kompyuta yenye Chrome au Edge"
       }
     },
     "privacy": {
@@ -188,7 +196,7 @@
       },
       "ai": {
         "q": "AI inawezaje kufanya kazi bila seva?",
-        "a": "Miundo ya AI (Whisper kwa manukuu, MediaPipe kwa nyuso) hupakuliwa mara moja, kisha kompyuta yako ndiyo huiendesha. Sauti yako na picha zako haziondoki kamwe humo"
+        "a": "Miundo ya AI (Whisper kwa manukuu, MediaPipe kwa nyuso) hupakuliwa mara moja, kisha kompyuta yako ndiyo huiendesha. Sauti yako na picha zako haziondoki kamwe humo. Janus Pro, inayochora picha za AI za vijipicha, hufanya kazi vivyo hivyo: takriban GB 1.6, zinazopakuliwa ukiitumia tu"
       },
       "capcut": {
         "q": "Kuna tofauti gani na CapCut?",
@@ -207,7 +215,8 @@
         "moments": "Matukio bora yanayopendekezwa",
         "title": "Kichwa chenye maneno yaliyoangaziwa, mitindo 4",
         "formats": "YouTube 1280×720, Shorts na mraba",
-        "local": "Hutengenezwa kwenye kifaa chako, bila kupakia chochote"
+        "local": "Hutengenezwa kwenye kifaa chako, bila kupakia chochote",
+        "ai": "Au tengeneza picha kwa AI, kwenye kompyuta yako"
       },
       "cta": "Tengeneza picha ya jalada",
       "mockTitle": "Vlog yangu",
@@ -273,15 +282,6 @@
     "skippedCodec": "Zimerukwa, kodeki haitumiki kwenye kivinjari hiki: {{ names }}. Jaribu Chrome, au badilisha kuwa MP4 ya H.264",
     "notProject": "Faili hii si mradi wa LocalCutVideo",
     "demo": "Imeshindwa kupakia video ya mfano"
-  },
-  "languages": {
-    "en": "Kiingereza",
-    "fr": "Kifaransa",
-    "es": "Kihispania",
-    "it": "Kiitaliano",
-    "de": "Kijerumani",
-    "pt": "Kireno",
-    "nl": "Kiholanzi"
   },
   "editor": {
     "back": "Rudi kwenye miradi",
@@ -389,7 +389,9 @@
       "stage": {
         "audio": "Inatoa sauti…",
         "download": "Inapakua modeli…",
-        "transcribe": "Inaandika…"
+        "transcribe": "Inaandika…",
+        "load": "Inaandaa modeli…",
+        "language": "Inatambua lugha…"
       },
       "missing": "Andika klipu mpya ({{ count }})",
       "rerunHint": "Huanza upya kwa modeli na lugha zilizo hapo juu",
@@ -513,7 +515,8 @@
       "start": "Hamisha MP4",
       "saveProject": "Hifadhi mradi",
       "saveProjectHint": "Faili ya .lcv.json yenye uhariri wako (video haimo ndani), ili kuendelea kwenye kompyuta nyingine",
-      "projectSaved": "Mradi umehifadhiwa kama faili ya .lcv.json"
+      "projectSaved": "Mradi umehifadhiwa kama faili ya .lcv.json",
+      "thumbnail": "Tengeneza picha ya jalada"
     },
     "clips": {
       "title": "Klipu",
@@ -557,7 +560,8 @@
         "cuts": "makato",
         "removed": "imeondolewa",
         "words": "maneno yenye manukuu",
-        "silent": "Klipu {{ count }} bila sauti ya mtu: muda mtupu halisi tu umekatwa"
+        "silent": "Klipu {{ count }} bila sauti ya mtu: muda mtupu halisi tu umekatwa",
+        "languageHint": "Si lugha sahihi? Tendua kisha uchague lugha"
       },
       "steps": {
         "analyze": "Inachambua sauti",
@@ -580,7 +584,8 @@
         "detectedYes": "Imegunduliwa: mtu anazungumza",
         "detectedNo": "Imegunduliwa: hakuna sauti ya mtu",
         "hint": "Bila sauti ya mtu: hakuna nakala ya maandishi wala manukuu, muda mtupu halisi tu ndio unaokatwa"
-      }
+      },
+      "languageHint": "Hali ya kiotomatiki inatosha mara nyingi. Ukiwa na lafudhi nzito, chagua lugha mwenyewe"
     },
     "mix": {
       "title": "Sauti ya video",
@@ -631,7 +636,7 @@
     }
   },
   "legal": {
-    "updated": "Ilisasishwa mwisho: 2 Novemba 2026",
+    "updated": "Ilisasishwa mwisho: 8 Novemba 2026",
     "contact": "Wasiliana",
     "nav": {
       "notice": "Taarifa ya kisheria",
@@ -662,7 +667,7 @@
           "title": "Haki miliki",
           "body": [
             "Msimbo chanzo wa LocalCutVideo ni chanzo huria na umechapishwa chini ya leseni ya MIT kwenye [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Vipengele vya wahusika wengine, modeli za AI na fonti zinazotumiwa na programu zinabaki mali ya waandishi wao na zinatumika chini ya leseni zao, zilizoorodheshwa kwenye [masharti ya matumizi](/terms). Chapa zilizotajwa (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) ni mali ya wamiliki wao."
+            "Vipengele vya wahusika wengine, modeli za AI na fonti zinazotumiwa na programu zinabaki mali ya waandishi wao na zinatumika chini ya leseni zao, zilizoorodheshwa kwenye [masharti ya matumizi](/terms). Chapa zilizotajwa (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) ni mali ya wamiliki wao."
           ]
         },
         {
@@ -693,7 +698,7 @@
         {
           "title": "Kinachobaki kwenye kifaa chako",
           "body": [
-            "Faili za video na sauti unazofungua husomwa moja kwa moja kutoka kwenye diski yako. Uchambuzi, uandishi (Whisper), ufuatiliaji wa uso na uhamishaji huhesabiwa ndani ya kivinjari chako.",
+            "Faili za video na sauti unazofungua husomwa moja kwa moja kutoka kwenye diski yako. Uchambuzi, uandishi (Whisper), ufuatiliaji wa uso na uhamishaji huhesabiwa ndani ya kivinjari chako. Picha za AI za vijipicha (Janus Pro) pia hukokotolewa kwenye kifaa chako: maelezo yako na picha hazitumwi kamwe.",
             "Miradi yako (makato, nakala ya maandishi, mipangilio) huhifadhiwa kwenye hifadhidata ya ndani ya kivinjari chako (IndexedDB), pamoja na picha ndogo na akiba ya uchambuzi. Mchapishaji hana ufikiaji wake. Unaweza kufuta mradi kutoka ukurasa wa miradi, au kufuta kila kitu kwa kufuta data ya tovuti hii kwenye mipangilio ya kivinjari chako."
           ]
         },
@@ -713,7 +718,7 @@
           "title": "Wahusika wengine",
           "body": [
             "Cloudflare: maombi yote kwa tovuti hii hupitia Cloudflare, inayolinda seva na kusimba muunganisho. Kama mpatanishi yeyote wa mtandao, huchakata anwani yako ya IP na taarifa za kawaida za kivinjari ili kuwasilisha kurasa, na inaweza kuhifadhi kumbukumbu za kiufundi kwa madhumuni ya usalama; kamwe haipokei video au sauti yako, ambazo kamwe haziondoki kwenye kifaa chako. Tazama [sera yao ya faragha](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: modeli ya Whisper hutolewa na tovuti hii, kama sehemu nyingine ya programu. Ikiwa tu haipatikani hapa ndipo inapakuliwa kutoka huggingface.co; wakati huo Hugging Face hupokea anwani yako ya IP na taarifa za kawaida za kivinjari, lakini kamwe si sauti yako. Tazama [sera yao ya faragha](https://huggingface.co/privacy).",
+            "Hugging Face: modeli ya Whisper hutolewa na tovuti hii, kama sehemu nyingine ya programu. Ikiwa tu haipatikani hapa ndipo inapakuliwa kutoka huggingface.co; wakati huo Hugging Face hupokea anwani yako ya IP na taarifa za kawaida za kivinjari, lakini kamwe si sauti yako. Tazama [sera yao ya faragha](https://huggingface.co/privacy). Modeli ya picha ya AI ya kitengeneza vijipicha hupakuliwa kila mara kutoka huggingface.co, ukiitumia tu: Hugging Face hupokea anwani yako ya IP, lakini kamwe si maelezo yako wala picha.",
             "GitHub: ikiwa tu utafuata kiungo cha hazina ya msimbo chanzo.",
             "Hakuna mhusika mwingine anayewasiliana naye: Content-Security-Policy kali kiufundi huzuia ukurasa kuunganishwa mahali pengine popote."
           ]
@@ -771,7 +776,8 @@
           "title": "Chanzo huria na vipengele vya wahusika wengine",
           "body": [
             "Msimbo chanzo unapatikana chini ya leseni ya MIT kwenye [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo inategemea: Mediabunny (MPL-2.0), Transformers.js na ONNX Runtime (Apache-2.0 na MIT), modeli za Whisper za OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) na fonti za Inter na Montserrat (SIL Open Font License)."
+            "LocalCutVideo inategemea: Mediabunny (MPL-2.0), Transformers.js na ONNX Runtime (Apache-2.0 na MIT), modeli za Whisper za OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) na fonti za Inter na Montserrat (SIL Open Font License).",
+            "Kitengeneza picha cha AI hutumia modeli ya Janus Pro ya DeepSeek, chini ya [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL) inayokuhusu pia. Unakubali kutoitumia: kwa kukiuka sheria au haki za wengine; kwa madhumuni ya kijeshi; kuwanyonya au kuwadhuru watoto; kutengeneza au kusambaza taarifa za uongo zenye nia ya kudhuru, maudhui yasiyofaa kulingana na kanuni husika, au data binafsi bila idhini; kukashifu au kunyanyasa; kwa maamuzi ya kiotomatiki kabisa yanayoathiri haki za mtu; kubagua au kudhuru watu kwa sababu ya tabia zao, sifa zao binafsi au makundi yanayolindwa na sheria; au kutumia vibaya udhaifu wa kundi la watu. DeepSeek haidai haki zozote juu ya picha unazotengeneza: unawajibika kwazo na kwa jinsi unavyozitumia. Modeli inatolewa kama ilivyo, bila dhamana."
           ]
         },
         {
@@ -843,7 +849,21 @@
     "sizeInfo": "{{ width }} × {{ height }} px · JPG ni bora kwa YouTube (chini ya MB 2)",
     "saved": "Imehifadhiwa: {{ name }}",
     "loadError": "Imeshindwa kufungua mradi huu",
-    "readError": "Imeshindwa kusoma faili hii"
+    "readError": "Imeshindwa kusoma faili hii",
+    "ai": {
+      "title": "Tengeneza picha kwa AI",
+      "text": "Eleza picha kwa Kiingereza. Kadi yako ya michoro ndiyo inaitengeneza, hakuna kinachotumwa",
+      "prompt": "Eleza picha",
+      "placeholder": "A neon-lit city street at night, cinematic",
+      "run": "Tengeneza",
+      "again": "Tengeneza nyingine",
+      "size": "Upakuaji wa mara moja {{ size }}. Picha ya mraba ya px 384, bora kama mandharinyuma",
+      "generating": "Inatengeneza picha…",
+      "unsupported": "Inahitaji Chrome au Edge kwenye kompyuta yenye kadi mpya ya michoro",
+      "error": "Picha haikuweza kutengenezwa. Huenda kadi yako ya michoro haina kumbukumbu ya kutosha",
+      "terms": "Kwa kutengeneza picha, unakubali masharti ya matumizi ya modeli",
+      "downloadError": "Modeli ya AI haikuweza kupakuliwa. Jaribu tena baada ya dakika chache"
+    }
   },
   "seo": {
     "home": {

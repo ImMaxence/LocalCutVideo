@@ -88,6 +88,10 @@
       "eyebrow": "功能",
       "title": "打造吸睛视频所需的一切",
       "lead": "适合 TikTok、Reels、Shorts 和 YouTube 创作者，也适合老师、培训师和企业",
+      "speech": {
+        "title": "自动识别视频语言",
+        "text": "应用和视频语言不同？系统会检测并核对口语语言，您也可以从数十种语言中自行选择"
+      },
       "silences": {
         "title": "告别停顿",
         "text": "自动找出并剪掉静音和冷场：视频瞬间变得更紧凑"
@@ -135,6 +139,10 @@
       "languages": {
         "title": "说你的语言",
         "text": "界面支持 {{ count }} 种语言，字幕支持数十种语言，并能自动识别"
+      },
+      "aiImage": {
+        "title": "为缩略图生成 AI 图像",
+        "text": "描述一张图片，Janus Pro 就会在您的显卡上绘制，免费且不发送任何内容。在装有 Chrome 或 Edge 的电脑上一次性下载 1.6 GB"
       }
     },
     "privacy": {
@@ -188,7 +196,7 @@
       },
       "ai": {
         "q": "没有服务器，AI 怎么运行？",
-        "a": "AI 模型（用于字幕的 Whisper、用于人脸的 MediaPipe）只需下载一次，之后由你的电脑运行。你的声音和画面从不离开它"
+        "a": "AI 模型（用于字幕的 Whisper、用于人脸的 MediaPipe）只需下载一次，之后由你的电脑运行。你的声音和画面从不离开它。绘制缩略图 AI 图像的 Janus Pro 也是同样的方式：约 1.6 GB，仅在您使用时下载"
       },
       "capcut": {
         "q": "和 CapCut 有什么区别？",
@@ -207,7 +215,8 @@
         "moments": "推荐最佳瞬间",
         "title": "高亮字词标题，4 种样式",
         "formats": "YouTube 1280×720、Shorts 和方形",
-        "local": "在你的设备上制作，不上传任何内容"
+        "local": "在你的设备上制作，不上传任何内容",
+        "ai": "或在您的电脑上用 AI 生成图片"
       },
       "cta": "制作封面图",
       "mockTitle": "我的第一支",
@@ -273,15 +282,6 @@
     "skippedCodec": "已跳过，此浏览器不支持其编码格式：{{ names }}。请试试 Chrome，或转换为 H.264 MP4",
     "notProject": "此文件不是 LocalCutVideo 项目",
     "demo": "无法加载示例视频"
-  },
-  "languages": {
-    "en": "英语",
-    "fr": "法语",
-    "es": "西班牙语",
-    "it": "意大利语",
-    "de": "德语",
-    "pt": "葡萄牙语",
-    "nl": "荷兰语"
   },
   "editor": {
     "back": "返回项目",
@@ -389,7 +389,9 @@
       "stage": {
         "audio": "正在提取音频…",
         "download": "正在下载模型…",
-        "transcribe": "正在转写…"
+        "transcribe": "正在转写…",
+        "load": "正在准备模型…",
+        "language": "正在检测语言…"
       },
       "missing": "转写新片段（{{ count }}）",
       "rerunHint": "使用上方的模型和语言重新开始",
@@ -513,7 +515,8 @@
       "start": "导出 MP4",
       "saveProject": "保存项目",
       "saveProjectHint": "包含剪辑内容的 .lcv.json 文件（不含视频），可在另一台电脑上继续",
-      "projectSaved": "项目已保存为 .lcv.json 文件"
+      "projectSaved": "项目已保存为 .lcv.json 文件",
+      "thumbnail": "制作封面图"
     },
     "clips": {
       "title": "片段",
@@ -557,7 +560,8 @@
         "cuts": "处剪切",
         "removed": "已剪掉",
         "words": "个词已加字幕",
-        "silent": "{{ count }} 个无人声片段：只剪掉了真正的空白"
+        "silent": "{{ count }} 个无人声片段：只剪掉了真正的空白",
+        "languageHint": "语言不对？撤销后选择语言"
       },
       "steps": {
         "analyze": "分析音频",
@@ -580,7 +584,8 @@
         "detectedYes": "检测结果：有人说话",
         "detectedNo": "检测结果：无人声",
         "hint": "无人声：不转写也不加字幕，只剪掉真正的空白"
-      }
+      },
+      "languageHint": "大多数情况下自动检测即可。口音较重时请自行选择语言"
     },
     "mix": {
       "title": "视频声音",
@@ -631,7 +636,7 @@
     }
   },
   "legal": {
-    "updated": "最后更新：2026 年 11 月 2 日",
+    "updated": "最后更新：2026 年 11 月 8 日",
     "contact": "联系方式",
     "nav": {
       "notice": "法律声明",
@@ -662,7 +667,7 @@
           "title": "知识产权",
           "body": [
             "LocalCutVideo 的源代码是开源的，以 MIT 许可证发布在 [GitHub](https://github.com/ImMaxence/LocalCutVideo) 上。",
-            "应用所使用的第三方组件、AI 模型和字体仍归其作者所有，并依据其各自的许可证使用，详见[使用条款](/terms)。所提及的品牌（Whisper、MediaPipe、Hugging Face、Chrome、Edge 等）归其各自所有者所有。"
+            "应用所使用的第三方组件、AI 模型和字体仍归其作者所有，并依据其各自的许可证使用，详见[使用条款](/terms)。所提及的品牌（Whisper、MediaPipe、Janus Pro、DeepSeek、Hugging Face、Chrome、Edge 等）归其各自所有者所有。"
           ]
         },
         {
@@ -693,7 +698,7 @@
         {
           "title": "留在你设备上的内容",
           "body": [
-            "你打开的视频和音频文件直接从磁盘读取。分析、转写（Whisper）、人脸追踪和导出都由你的浏览器在本地计算。",
+            "你打开的视频和音频文件直接从磁盘读取。分析、转写（Whisper）、人脸追踪和导出都由你的浏览器在本地计算。缩略图的 AI 图像（Janus Pro）同样在本地计算：您的描述和图像绝不会被发送。",
             "你的项目（剪切、转写稿、设置）连同一张封面图和分析缓存，一起保存在浏览器的本地数据库（IndexedDB）中。发布者无法访问它们。你可以在项目页面删除某个项目，或在浏览器设置中清除本站数据以删除全部内容。"
           ]
         },
@@ -713,7 +718,7 @@
           "title": "第三方",
           "body": [
             "Cloudflare：对本站的所有请求都会经过 Cloudflare，它负责保护服务器并加密连接。与任何网络中介一样，它会处理你的 IP 地址和常规浏览器信息以传送页面，并可能出于安全目的保留技术日志；它绝不会收到你的视频或音频，因为它们从不离开你的设备。详见其[隐私政策](https://www.cloudflare.com/privacypolicy/)。",
-            "Hugging Face：Whisper 模型与应用的其他部分一样由本站提供。只有当本站无法提供时，才会改从 huggingface.co 下载；此时 Hugging Face 会收到你的 IP 地址和常规浏览器信息，但绝不会收到你的音频。请参阅其[隐私政策](https://huggingface.co/privacy)。",
+            "Hugging Face：Whisper 模型与应用的其他部分一样由本站提供。只有当本站无法提供时，才会改从 huggingface.co 下载；此时 Hugging Face 会收到你的 IP 地址和常规浏览器信息，但绝不会收到你的音频。请参阅其[隐私政策](https://huggingface.co/privacy)。 缩略图工具的 AI 图像模型始终从 huggingface.co 下载，且仅在您使用时下载：此时 Hugging Face 会收到您的 IP 地址，但绝不会收到您的描述或图片。",
             "GitHub：仅当你点击指向源代码仓库的链接时。",
             "不会联系任何其他第三方：严格的 Content-Security-Policy 在技术上阻止页面连接其他任何地方。"
           ]
@@ -771,7 +776,8 @@
           "title": "开源与第三方组件",
           "body": [
             "源代码以 MIT 许可证发布在 [GitHub](https://github.com/ImMaxence/LocalCutVideo) 上。",
-            "LocalCutVideo 依赖以下组件：Mediabunny（MPL-2.0）、Transformers.js 和 ONNX Runtime（Apache-2.0 和 MIT）、OpenAI 的 Whisper 模型（MIT）、MediaPipe（Apache-2.0）、Wavesurfer.js（BSD-3-Clause）、Dexie.js（Apache-2.0）、Angular（MIT），以及 Inter 和 Montserrat 字体（SIL Open Font License）。"
+            "LocalCutVideo 依赖以下组件：Mediabunny（MPL-2.0）、Transformers.js 和 ONNX Runtime（Apache-2.0 和 MIT）、OpenAI 的 Whisper 模型（MIT）、Janus Pro (DeepSeek Model License)、MediaPipe（Apache-2.0）、Wavesurfer.js（BSD-3-Clause）、Dexie.js（Apache-2.0）、Angular（MIT），以及 Inter 和 Montserrat 字体（SIL Open Font License）。",
+            "AI 图像生成器使用 DeepSeek 的 Janus Pro 模型，遵循同样适用于您的 [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL)。您同意不将其用于：违反法律或侵犯他人权利；军事用途；剥削或伤害未成年人；生成或传播意在伤害他人的虚假信息、根据适用法规不当的内容或未经授权的个人信息；诽谤或骚扰；影响个人权利的完全自动化决策；基于行为、个人特征或受法律保护的类别歧视或伤害他人；或利用某一人群的弱点。DeepSeek 对您生成的图像不主张任何权利：您须对图像及其使用负责。模型按原样提供，不作任何保证。"
           ]
         },
         {
@@ -843,7 +849,21 @@
     "sizeInfo": "{{ width }} × {{ height }} 像素 · YouTube 最适合用 JPG（小于 2 MB）",
     "saved": "已保存：{{ name }}",
     "loadError": "无法打开此项目",
-    "readError": "无法读取此文件"
+    "readError": "无法读取此文件",
+    "ai": {
+      "title": "用 AI 生成图片",
+      "text": "请用英语描述图片。由您的显卡生成，不会发送任何内容",
+      "prompt": "描述图片",
+      "placeholder": "A neon-lit city street at night, cinematic",
+      "run": "生成",
+      "again": "再生成一张",
+      "size": "仅需下载一次 {{ size }}。384 px 方形图片，最适合作背景",
+      "generating": "正在生成图片…",
+      "unsupported": "需要在配备较新显卡的电脑上使用 Chrome 或 Edge",
+      "error": "无法生成图片。您的显卡内存可能不足",
+      "terms": "生成图像即表示您接受该模型的使用条款",
+      "downloadError": "无法下载 AI 模型。请几分钟后重试"
+    }
   },
   "seo": {
     "home": {

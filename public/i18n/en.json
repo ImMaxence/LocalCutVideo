@@ -88,6 +88,10 @@
       "eyebrow": "Features",
       "title": "Everything you need for videos that hold attention",
       "lead": "For TikTok, Reels, Shorts and YouTube creators, and also teachers, trainers and businesses",
+      "speech": {
+        "title": "The language of your video, automatically",
+        "text": "App in one language, video in another? The spoken language is detected and double-checked, or you choose it yourself among dozens of languages"
+      },
       "silences": {
         "title": "No more dead air",
         "text": "Silences and pauses are found and cut automatically: your video gets punchier in a second"
@@ -135,6 +139,10 @@
       "languages": {
         "title": "In your language",
         "text": "The interface speaks {{ count }} languages and subtitles work in dozens of languages, detected automatically"
+      },
+      "aiImage": {
+        "title": "AI images for your thumbnails",
+        "text": "Describe a picture and Janus Pro draws it on your graphics card, free and with nothing sent. One-time 1.6 GB download, on a computer with Chrome or Edge"
       }
     },
     "privacy": {
@@ -188,7 +196,7 @@
       },
       "ai": {
         "q": "How can the AI run without a server?",
-        "a": "The AI models (Whisper for subtitles, MediaPipe for faces) are downloaded once, then your computer runs them. Your voice and your images never leave it"
+        "a": "The AI models (Whisper for subtitles, MediaPipe for faces) are downloaded once, then your computer runs them. Your voice and your images never leave it. Janus Pro, which draws the AI thumbnail images, works the same way: about 1.6 GB, downloaded only if you use it"
       },
       "capcut": {
         "q": "How is it different from CapCut?",
@@ -207,7 +215,8 @@
         "moments": "Best moments suggested",
         "title": "Title with highlighted words, 4 styles",
         "formats": "YouTube 1280×720, Shorts and square",
-        "local": "Made on your device, nothing is uploaded"
+        "local": "Made on your device, nothing is uploaded",
+        "ai": "Or generate the picture with AI, on your computer"
       },
       "cta": "Make a thumbnail",
       "mockTitle": "My first",
@@ -273,15 +282,6 @@
     "skippedCodec": "Skipped, codec not supported by this browser: {{ names }}. Try Chrome, or convert to H.264 MP4",
     "notProject": "This file is not a LocalCutVideo project",
     "demo": "The demo video could not be loaded"
-  },
-  "languages": {
-    "en": "English",
-    "fr": "French",
-    "es": "Spanish",
-    "it": "Italian",
-    "de": "German",
-    "pt": "Portuguese",
-    "nl": "Dutch"
   },
   "editor": {
     "back": "Back to projects",
@@ -389,7 +389,9 @@
       "stage": {
         "audio": "Extracting audio…",
         "download": "Downloading the model…",
-        "transcribe": "Transcribing…"
+        "transcribe": "Transcribing…",
+        "load": "Preparing the model…",
+        "language": "Detecting the language…"
       },
       "missing": "Transcribe the new clips ({{ count }})",
       "rerunHint": "Starts over with the model and language above",
@@ -513,7 +515,8 @@
       "start": "Export MP4",
       "saveProject": "Save the project",
       "saveProjectHint": "A .lcv.json file with your edit (no video inside), to continue on another computer",
-      "projectSaved": "Project saved as a .lcv.json file"
+      "projectSaved": "Project saved as a .lcv.json file",
+      "thumbnail": "Make a thumbnail"
     },
     "clips": {
       "title": "Clips",
@@ -557,7 +560,8 @@
         "cuts": "cuts",
         "removed": "removed",
         "words": "words subtitled",
-        "silent": "{{ count }} clip(s) without voice: only real dead air was cut"
+        "silent": "{{ count }} clip(s) without voice: only real dead air was cut",
+        "languageHint": "Not the right one? Undo, then choose the language"
       },
       "steps": {
         "analyze": "Analyzing the audio",
@@ -580,7 +584,8 @@
         "detectedYes": "Detected: someone speaks",
         "detectedNo": "Detected: no voice",
         "hint": "No voice: no transcript or subtitles, only real dead air is cut"
-      }
+      },
+      "languageHint": "Automatic works in most cases. With a strong accent, choose the language yourself"
     },
     "mix": {
       "title": "Video sound",
@@ -631,7 +636,7 @@
     }
   },
   "legal": {
-    "updated": "Last updated: November 2, 2026",
+    "updated": "Last updated: November 8, 2026",
     "contact": "Contact",
     "nav": {
       "notice": "Legal notice",
@@ -662,7 +667,7 @@
           "title": "Intellectual property",
           "body": [
             "The source code of LocalCutVideo is open source and published under the MIT license on [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Third-party components, AI models and fonts used by the application remain the property of their authors and are used under their own licenses, listed in the [terms of use](/terms). Cited brands (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) belong to their owners."
+            "Third-party components, AI models and fonts used by the application remain the property of their authors and are used under their own licenses, listed in the [terms of use](/terms). Cited brands (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) belong to their owners."
           ]
         },
         {
@@ -693,7 +698,7 @@
         {
           "title": "What stays on your device",
           "body": [
-            "The video and audio files you open are read directly from your disk. Analysis, transcription (Whisper), face tracking and export are computed locally by your browser.",
+            "The video and audio files you open are read directly from your disk. Analysis, transcription (Whisper), face tracking and export are computed locally by your browser. AI thumbnail images (Janus Pro) are also computed locally: your description and the image are never sent.",
             "Your projects (cuts, transcript, settings) are saved in your browser's local database (IndexedDB), along with a thumbnail and a cache of analyses. The publisher has no access to them. You can delete a project from the projects page, or erase everything by clearing this site's data in your browser settings."
           ]
         },
@@ -713,7 +718,7 @@
           "title": "Third parties",
           "body": [
             "Cloudflare: every request to this site passes through Cloudflare, which protects the server and encrypts the connection. Like any network intermediary, it processes your IP address and standard browser information to deliver the pages, and may keep technical logs for security purposes; it never receives your videos or audio, which never leave your device. See their [privacy policy](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: the Whisper model is served by this site, like the rest of the application. Only if it is not available here is it downloaded from huggingface.co instead; Hugging Face then receives your IP address and standard browser information, but never your audio. See their [privacy policy](https://huggingface.co/privacy).",
+            "Hugging Face: the Whisper model is served by this site, like the rest of the application. Only if it is not available here is it downloaded from huggingface.co instead; Hugging Face then receives your IP address and standard browser information, but never your audio. See their [privacy policy](https://huggingface.co/privacy). The AI image model of the thumbnail maker is always downloaded from huggingface.co, only if you use it: Hugging Face then receives your IP address, but never your description or the image.",
             "GitHub: only if you follow a link to the source code repository.",
             "No other third party is contacted: a strict Content-Security-Policy technically prevents the page from connecting anywhere else."
           ]
@@ -771,7 +776,8 @@
           "title": "Open source and third-party components",
           "body": [
             "The source code is available under the MIT license on [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo relies on: Mediabunny (MPL-2.0), Transformers.js and ONNX Runtime (Apache-2.0 and MIT), the Whisper models by OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) and the Inter and Montserrat fonts (SIL Open Font License)."
+            "LocalCutVideo relies on: Mediabunny (MPL-2.0), Transformers.js and ONNX Runtime (Apache-2.0 and MIT), the Whisper models by OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) and the Inter and Montserrat fonts (SIL Open Font License).",
+            "The AI image generator uses the Janus Pro model by DeepSeek, under the [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), which applies to you. You agree not to use it: in violation of any law or of the rights of others; for military purposes; to exploit or harm minors; to create or spread false information meant to harm others, content that is inappropriate under applicable regulations, or personal data without authorization; to defame or harass; for fully automated decisions affecting a person's legal rights; to discriminate against or harm people because of their behavior, their personal characteristics or legally protected categories; or to exploit the vulnerabilities of a group of people. DeepSeek claims no rights over the images you generate: you are responsible for them and for how you use them. The model is provided as is, without warranty."
           ]
         },
         {
@@ -843,7 +849,21 @@
     "sizeInfo": "{{ width }} × {{ height }} px · JPG is best for YouTube (under 2 MB)",
     "saved": "Saved: {{ name }}",
     "loadError": "This project could not be opened",
-    "readError": "This file could not be read"
+    "readError": "This file could not be read",
+    "ai": {
+      "title": "Generate an image with AI",
+      "text": "Describe the picture in English. Your graphics card creates it, nothing is sent",
+      "prompt": "Describe the image",
+      "placeholder": "A neon-lit city street at night, cinematic",
+      "run": "Generate",
+      "again": "Generate another",
+      "size": "One-time download {{ size }}. Square 384 px image, best as a background",
+      "generating": "Drawing the image…",
+      "unsupported": "Needs Chrome or Edge on a computer with a recent graphics card",
+      "error": "The image could not be generated. Your graphics card may be short on memory",
+      "terms": "By generating an image, you accept the model's terms of use",
+      "downloadError": "The AI model could not be downloaded. Try again in a few minutes"
+    }
   },
   "seo": {
     "home": {

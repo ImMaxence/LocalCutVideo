@@ -88,6 +88,10 @@
       "eyebrow": "Funkcijos",
       "title": "Viskas, ko reikia dėmesį išlaikantiems vaizdo įrašams",
       "lead": "TikTok, Reels, Shorts ir YouTube kūrėjams, taip pat mokytojams, lektoriams ir įmonėms",
+      "speech": {
+        "title": "Jūsų vaizdo įrašo kalba automatiškai",
+        "text": "Programa viena kalba, vaizdo įrašas kita? Šnekamoji kalba nustatoma ir patikrinama, arba ją pasirenkate patys iš dešimčių kalbų"
+      },
       "silences": {
         "title": "Sudie, pauzės",
         "text": "Tylos ir tušti momentai randami ir iškerpami automatiškai: jūsų vaizdo įrašas per sekundę įgauna tempo"
@@ -135,6 +139,10 @@
       "languages": {
         "title": "Jūsų kalba",
         "text": "Sąsaja yra {{ count }} kalbomis, o subtitrai veikia dešimtimis kalbų, atpažįstamų automatiškai"
+      },
+      "aiImage": {
+        "title": "DI vaizdai jūsų miniatiūroms",
+        "text": "Aprašykite vaizdą, ir „Janus Pro“ nupieš jį jūsų vaizdo plokštėje nemokamai ir nieko nesiunčiant. Vienkartinis 1,6 GB atsisiuntimas, kompiuteryje su „Chrome“ arba „Edge“"
       }
     },
     "privacy": {
@@ -188,7 +196,7 @@
       },
       "ai": {
         "q": "Kaip dirbtinis intelektas veikia be serverio?",
-        "a": "DI modeliai (Whisper subtitrams, MediaPipe veidams) atsisiunčiami vieną kartą, o paskui juos vykdo jūsų kompiuteris. Jūsų balsas ir vaizdai niekada jo nepalieka"
+        "a": "DI modeliai (Whisper subtitrams, MediaPipe veidams) atsisiunčiami vieną kartą, o paskui juos vykdo jūsų kompiuteris. Jūsų balsas ir vaizdai niekada jo nepalieka. „Janus Pro“, piešiantis miniatiūrų DI vaizdus, veikia taip pat: apie 1,6 GB, atsisiunčiami tik jį naudojant"
       },
       "capcut": {
         "q": "Kuo tai skiriasi nuo CapCut?",
@@ -207,7 +215,8 @@
         "moments": "Siūlomos geriausios akimirkos",
         "title": "Pavadinimas su paryškintais žodžiais, 4 stiliai",
         "formats": "YouTube 1280×720, Shorts ir kvadratas",
-        "local": "Sukurta jūsų įrenginyje, niekas neįkeliama"
+        "local": "Sukurta jūsų įrenginyje, niekas neįkeliama",
+        "ai": "Arba sukurkite vaizdą su DI savo kompiuteryje"
       },
       "cta": "Sukurti miniatiūrą",
       "mockTitle": "Mano pirmasis",
@@ -273,15 +282,6 @@
     "skippedCodec": "Praleista, ši naršyklė nepalaiko kodeko: {{ names }}. Išbandykite Chrome arba konvertuokite į H.264 MP4",
     "notProject": "Šis failas nėra LocalCutVideo projektas",
     "demo": "Nepavyko įkelti demonstracinio vaizdo įrašo"
-  },
-  "languages": {
-    "en": "Anglų",
-    "fr": "Prancūzų",
-    "es": "Ispanų",
-    "it": "Italų",
-    "de": "Vokiečių",
-    "pt": "Portugalų",
-    "nl": "Olandų"
   },
   "editor": {
     "back": "Atgal į projektus",
@@ -389,7 +389,9 @@
       "stage": {
         "audio": "Išgaunamas garsas…",
         "download": "Atsisiunčiamas modelis…",
-        "transcribe": "Transkribuojama…"
+        "transcribe": "Transkribuojama…",
+        "load": "Ruošiamas modelis…",
+        "language": "Nustatoma kalba…"
       },
       "missing": "Transkribuoti naujus klipus ({{ count }})",
       "rerunHint": "Pradeda iš naujo su aukščiau nurodytu modeliu ir kalba",
@@ -513,7 +515,8 @@
       "start": "Eksportuoti MP4",
       "saveProject": "Išsaugoti projektą",
       "saveProjectHint": ".lcv.json failas su jūsų montažu (be vaizdo įrašo), kad galėtumėte tęsti kitame kompiuteryje",
-      "projectSaved": "Projektas išsaugotas kaip .lcv.json failas"
+      "projectSaved": "Projektas išsaugotas kaip .lcv.json failas",
+      "thumbnail": "Sukurti miniatiūrą"
     },
     "clips": {
       "title": "Klipai",
@@ -557,7 +560,8 @@
         "cuts": "kirpimai",
         "removed": "pašalinta",
         "words": "žodžių su subtitrais",
-        "silent": "Klipų be balso: {{ count }}. Iškirptas tik tikras tuščias laikas"
+        "silent": "Klipų be balso: {{ count }}. Iškirptas tik tikras tuščias laikas",
+        "languageHint": "Ne ta kalba? Anuliuokite ir pasirinkite kalbą"
       },
       "steps": {
         "analyze": "Analizuojamas garsas",
@@ -580,7 +584,8 @@
         "detectedYes": "Aptikta: kažkas kalba",
         "detectedNo": "Aptikta: balso nėra",
         "hint": "Be balso: jokios transkripcijos ar subtitrų, iškerpamas tik tikras tuščias laikas"
-      }
+      },
+      "languageHint": "Automatinis režimas dažniausiai tinka. Esant stipriam akcentui, kalbą pasirinkite patys"
     },
     "mix": {
       "title": "Vaizdo įrašo garsas",
@@ -631,7 +636,7 @@
     }
   },
   "legal": {
-    "updated": "Paskutinį kartą atnaujinta: 2026 m. lapkričio 2 d.",
+    "updated": "Paskutinį kartą atnaujinta: 2026 m. lapkričio 8 d.",
     "contact": "Kontaktai",
     "nav": {
       "notice": "Teisinė informacija",
@@ -662,7 +667,7 @@
           "title": "Intelektinė nuosavybė",
           "body": [
             "LocalCutVideo pirminis kodas yra atviras ir paskelbtas pagal MIT licenciją [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Programėlės naudojami trečiųjų šalių komponentai, DI modeliai ir šriftai lieka jų autorių nuosavybe ir naudojami pagal jų pačių licencijas, išvardytas [naudojimo sąlygose](/terms). Minimi prekių ženklai (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) priklauso jų savininkams."
+            "Programėlės naudojami trečiųjų šalių komponentai, DI modeliai ir šriftai lieka jų autorių nuosavybe ir naudojami pagal jų pačių licencijas, išvardytas [naudojimo sąlygose](/terms). Minimi prekių ženklai (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) priklauso jų savininkams."
           ]
         },
         {
@@ -693,7 +698,7 @@
         {
           "title": "Kas lieka jūsų įrenginyje",
           "body": [
-            "Jūsų atidaryti vaizdo ir garso failai skaitomi tiesiai iš disko. Analizė, transkripcija (Whisper), veido sekimas ir eksportas apskaičiuojami vietoje jūsų naršyklėje.",
+            "Jūsų atidaryti vaizdo ir garso failai skaitomi tiesiai iš disko. Analizė, transkripcija (Whisper), veido sekimas ir eksportas apskaičiuojami vietoje jūsų naršyklėje. Miniatiūrų DI vaizdai („Janus Pro“) taip pat apskaičiuojami vietoje: jūsų aprašymas ir vaizdas niekada nesiunčiami.",
             "Jūsų projektai (kirpimai, transkripcija, nustatymai) saugomi vietinėje naršyklės duomenų bazėje (IndexedDB) kartu su miniatiūra ir analizės podėliu. Leidėjas neturi prie jų prieigos. Projektą galite ištrinti projektų puslapyje arba ištrinti viską išvalę šios svetainės duomenis naršyklės nustatymuose."
           ]
         },
@@ -713,7 +718,7 @@
           "title": "Trečiosios šalys",
           "body": [
             "Cloudflare: visos užklausos į šią svetainę eina per Cloudflare, kuri apsaugo serverį ir šifruoja ryšį. Kaip ir bet kuris tinklo tarpininkas, ji tvarko jūsų IP adresą ir įprastą naršyklės informaciją, kad pateiktų puslapius, ir saugumo tikslais gali saugoti techninius žurnalus; ji niekada negauna jūsų vaizdo įrašų ar garso, kurie niekada nepalieka jūsų įrenginio. Žr. Cloudflare [privatumo politiką](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: Whisper modelį teikia ši svetainė, kaip ir likusią programėlės dalį. Tik jei jis čia nepasiekiamas, jis atsisiunčiamas iš huggingface.co; tada Hugging Face gauna jūsų IP adresą ir įprastą naršyklės informaciją, bet niekada jūsų garso. Žr. jų [privatumo politiką](https://huggingface.co/privacy).",
+            "Hugging Face: Whisper modelį teikia ši svetainė, kaip ir likusią programėlės dalį. Tik jei jis čia nepasiekiamas, jis atsisiunčiamas iš huggingface.co; tada Hugging Face gauna jūsų IP adresą ir įprastą naršyklės informaciją, bet niekada jūsų garso. Žr. jų [privatumo politiką](https://huggingface.co/privacy). Miniatiūrų kūrėjo DI vaizdų modelis visada atsisiunčiamas iš huggingface.co ir tik jį naudojant: tada „Hugging Face“ gauna jūsų IP adresą, bet niekada – jūsų aprašymo ar vaizdo.",
             "GitHub: tik jei paspaudžiate nuorodą į pirminio kodo saugyklą.",
             "Jokia kita trečioji šalis nekontaktuojama: griežta Content-Security-Policy techniškai neleidžia puslapiui jungtis niekur kitur."
           ]
@@ -771,7 +776,8 @@
           "title": "Atvirasis kodas ir trečiųjų šalių komponentai",
           "body": [
             "Pirminis kodas pasiekiamas pagal MIT licenciją [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo remiasi: Mediabunny (MPL-2.0), Transformers.js ir ONNX Runtime (Apache-2.0 ir MIT), OpenAI Whisper modeliais (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ir šriftais Inter bei Montserrat (SIL Open Font License)."
+            "LocalCutVideo remiasi: Mediabunny (MPL-2.0), Transformers.js ir ONNX Runtime (Apache-2.0 ir MIT), OpenAI Whisper modeliais (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ir šriftais Inter bei Montserrat (SIL Open Font License).",
+            "DI vaizdų generatorius naudoja „DeepSeek“ modelį „Janus Pro“ pagal licenciją [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), kuri taikoma ir jums. Įsipareigojate jo nenaudoti: pažeisdami įstatymus ar kitų asmenų teises; kariniais tikslais; nepilnamečiams išnaudoti ar jiems pakenkti; kurti ar platinti melagingą informaciją siekiant pakenkti, pagal taikomus teisės aktus netinkamą turinį ar asmens duomenis be leidimo; šmeižti ar priekabiauti; visiškai automatizuotiems sprendimams, darantiems poveikį asmens teisėms; diskriminuoti ar kenkti žmonėms dėl jų elgesio, asmeninių savybių ar įstatymų saugomų kategorijų; arba išnaudoti žmonių grupės pažeidžiamumą. „DeepSeek“ nereiškia teisių į jūsų sukurtus vaizdus: už juos ir jų naudojimą atsakote jūs. Modelis teikiamas toks, koks yra, be garantijų."
           ]
         },
         {
@@ -843,7 +849,21 @@
     "sizeInfo": "{{ width }} × {{ height }} px · YouTube geriausia JPG (mažiau nei 2 MB)",
     "saved": "Išsaugota: {{ name }}",
     "loadError": "Nepavyko atidaryti šio projekto",
-    "readError": "Nepavyko perskaityti šio failo"
+    "readError": "Nepavyko perskaityti šio failo",
+    "ai": {
+      "title": "Sukurti vaizdą su DI",
+      "text": "Aprašykite vaizdą anglų kalba. Jį sukuria jūsų vaizdo plokštė, niekas nesiunčiama",
+      "prompt": "Aprašykite vaizdą",
+      "placeholder": "A neon-lit city street at night, cinematic",
+      "run": "Sukurti",
+      "again": "Sukurti kitą",
+      "size": "Vienkartinis atsisiuntimas {{ size }}. Kvadratinis 384 px vaizdas, geriausiai tinka fonui",
+      "generating": "Kuriamas vaizdas…",
+      "unsupported": "Reikia „Chrome“ arba „Edge“ kompiuteryje su nauja vaizdo plokšte",
+      "error": "Vaizdo sukurti nepavyko. Jūsų vaizdo plokštei gali trūkti atminties",
+      "terms": "Kurdami vaizdą sutinkate su modelio naudojimo sąlygomis",
+      "downloadError": "DI modelio atsisiųsti nepavyko. Bandykite dar kartą po kelių minučių"
+    }
   },
   "seo": {
     "home": {

@@ -88,6 +88,10 @@
       "eyebrow": "Functies",
       "title": "Alles voor video's die de aandacht vasthouden",
       "lead": "Voor makers op TikTok, Reels, Shorts en YouTube, maar ook voor docenten, trainers en bedrijven",
+      "speech": {
+        "title": "De taal van je video, automatisch",
+        "text": "App in de ene taal, video in de andere? De gesproken taal wordt herkend en gecontroleerd, of je kiest zelf uit tientallen talen"
+      },
       "silences": {
         "title": "Weg met stiltes",
         "text": "Stiltes en dode momenten worden automatisch gevonden en weggeknipt: je video krijgt in een seconde meer vaart"
@@ -135,6 +139,10 @@
       "languages": {
         "title": "In jouw taal",
         "text": "De interface is er in {{ count }} talen en ondertitels werken in tientallen talen, automatisch herkend"
+      },
+      "aiImage": {
+        "title": "AI-afbeeldingen voor je thumbnails",
+        "text": "Beschrijf een afbeelding en Janus Pro tekent hem op je videokaart, gratis en zonder iets te verzenden. Eenmalige download van 1,6 GB, op een computer met Chrome of Edge"
       }
     },
     "privacy": {
@@ -188,7 +196,7 @@
       },
       "ai": {
         "q": "Hoe kan de AI zonder server werken?",
-        "a": "De AI-modellen (Whisper voor ondertitels, MediaPipe voor gezichten) worden één keer gedownload, daarna draait je computer ze. Je stem en je beelden verlaten hem nooit"
+        "a": "De AI-modellen (Whisper voor ondertitels, MediaPipe voor gezichten) worden één keer gedownload, daarna draait je computer ze. Je stem en je beelden verlaten hem nooit. Janus Pro, dat de AI-afbeeldingen van de thumbnails tekent, werkt op dezelfde manier: ongeveer 1,6 GB, alleen gedownload als je het gebruikt"
       },
       "capcut": {
         "q": "Wat is het verschil met CapCut?",
@@ -207,7 +215,8 @@
         "moments": "Beste momenten voorgesteld",
         "title": "Titel met gemarkeerde woorden, 4 stijlen",
         "formats": "YouTube 1280×720, Shorts en vierkant",
-        "local": "Gemaakt op je apparaat, niets geüpload"
+        "local": "Gemaakt op je apparaat, niets geüpload",
+        "ai": "Of maak de afbeelding met AI, op je computer"
       },
       "cta": "Thumbnail maken",
       "mockTitle": "Mijn eerste",
@@ -273,15 +282,6 @@
     "skippedCodec": "Overgeslagen, codec niet ondersteund door deze browser: {{ names }}. Probeer Chrome, of zet ze om naar H.264 MP4",
     "notProject": "Dit bestand is geen LocalCutVideo-project",
     "demo": "De demovideo kon niet worden geladen"
-  },
-  "languages": {
-    "en": "Engels",
-    "fr": "Frans",
-    "es": "Spaans",
-    "it": "Italiaans",
-    "de": "Duits",
-    "pt": "Portugees",
-    "nl": "Nederlands"
   },
   "editor": {
     "back": "Terug naar projecten",
@@ -389,7 +389,9 @@
       "stage": {
         "audio": "Audio wordt uitgepakt…",
         "download": "Model wordt gedownload…",
-        "transcribe": "Bezig met transcriberen…"
+        "transcribe": "Bezig met transcriberen…",
+        "load": "Model voorbereiden…",
+        "language": "Taal herkennen…"
       },
       "missing": "De nieuwe clips transcriberen ({{ count }})",
       "rerunHint": "Begint opnieuw met het model en de taal hierboven",
@@ -513,7 +515,8 @@
       "start": "MP4 exporteren",
       "saveProject": "Het project opslaan",
       "saveProjectHint": "Een .lcv.json-bestand met je bewerking (zonder de video), om verder te gaan op een andere computer",
-      "projectSaved": "Project opgeslagen als .lcv.json-bestand"
+      "projectSaved": "Project opgeslagen als .lcv.json-bestand",
+      "thumbnail": "Thumbnail maken"
     },
     "clips": {
       "title": "Clips",
@@ -557,7 +560,8 @@
         "cuts": "knippen",
         "removed": "verwijderd",
         "words": "woorden ondertiteld",
-        "silent": "{{ count }} clip(s) zonder stem: alleen echte dode tijd is geknipt"
+        "silent": "{{ count }} clip(s) zonder stem: alleen echte dode tijd is geknipt",
+        "languageHint": "Niet de juiste? Maak ongedaan en kies de taal"
       },
       "steps": {
         "analyze": "De audio analyseren",
@@ -580,7 +584,8 @@
         "detectedYes": "Gedetecteerd: er praat iemand",
         "detectedNo": "Gedetecteerd: geen stem",
         "hint": "Geen stem: geen transcript of ondertitels, alleen echte dode tijd wordt geknipt"
-      }
+      },
+      "languageHint": "Automatisch werkt meestal goed. Bij een sterk accent kies je de taal zelf"
     },
     "mix": {
       "title": "Geluid van de video",
@@ -631,7 +636,7 @@
     }
   },
   "legal": {
-    "updated": "Laatst bijgewerkt: 2 november 2026",
+    "updated": "Laatst bijgewerkt: 8 november 2026",
     "contact": "Contact",
     "nav": {
       "notice": "Juridische vermelding",
@@ -662,7 +667,7 @@
           "title": "Intellectueel eigendom",
           "body": [
             "De broncode van LocalCutVideo is open source en gepubliceerd onder de MIT-licentie op [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Componenten van derden, AI-modellen en lettertypen die de applicatie gebruikt, blijven eigendom van hun makers en worden gebruikt onder hun eigen licenties, vermeld in de [gebruiksvoorwaarden](/terms). Genoemde merken (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) zijn eigendom van hun houders."
+            "Componenten van derden, AI-modellen en lettertypen die de applicatie gebruikt, blijven eigendom van hun makers en worden gebruikt onder hun eigen licenties, vermeld in de [gebruiksvoorwaarden](/terms). Genoemde merken (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) zijn eigendom van hun houders."
           ]
         },
         {
@@ -693,7 +698,7 @@
         {
           "title": "Wat er op je apparaat blijft",
           "body": [
-            "De video- en audiobestanden die je opent, worden direct van je schijf gelezen. Analyse, transcriptie (Whisper), gezichtsherkenning en export worden lokaal door je browser berekend.",
+            "De video- en audiobestanden die je opent, worden direct van je schijf gelezen. Analyse, transcriptie (Whisper), gezichtsherkenning en export worden lokaal door je browser berekend. De AI-afbeeldingen van de thumbnails (Janus Pro) worden ook lokaal berekend: je beschrijving en de afbeelding worden nooit verzonden.",
             "Je projecten (knippen, transcript, instellingen) worden opgeslagen in de lokale database van je browser (IndexedDB), samen met een miniatuur en een cache van analyses. De uitgever heeft er geen toegang toe. Je kunt een project verwijderen op de projectenpagina, of alles wissen door de gegevens van deze site te verwijderen in de instellingen van je browser."
           ]
         },
@@ -713,7 +718,7 @@
           "title": "Derden",
           "body": [
             "Cloudflare: alle verzoeken aan deze site lopen via Cloudflare, dat de server beschermt en de verbinding versleutelt. Zoals elke netwerktussenpersoon verwerkt Cloudflare je IP-adres en standaard browsergegevens om de pagina's te leveren, en kan het om veiligheidsredenen technische logs bewaren; je video's of audio ontvangt het nooit, want die verlaten je apparaat nooit. Zie hun [privacybeleid](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: het Whisper-model wordt door deze site geleverd, net als de rest van de applicatie. Alleen als het hier niet beschikbaar is, wordt het in plaats daarvan van huggingface.co gedownload; Hugging Face ontvangt dan je IP-adres en standaard browsergegevens, maar nooit je audio. Zie hun [privacybeleid](https://huggingface.co/privacy).",
+            "Hugging Face: het Whisper-model wordt door deze site geleverd, net als de rest van de applicatie. Alleen als het hier niet beschikbaar is, wordt het in plaats daarvan van huggingface.co gedownload; Hugging Face ontvangt dan je IP-adres en standaard browsergegevens, maar nooit je audio. Zie hun [privacybeleid](https://huggingface.co/privacy). Het AI-beeldmodel van de thumbnailmaker wordt altijd gedownload van huggingface.co, alleen als je het gebruikt: Hugging Face ontvangt dan je IP-adres, maar nooit je beschrijving of de afbeelding.",
             "GitHub: alleen als je een link naar de broncoderepository volgt.",
             "Er wordt geen andere derde partij gecontacteerd: een strikte Content-Security-Policy verhindert technisch dat de pagina ergens anders verbinding mee maakt."
           ]
@@ -771,7 +776,8 @@
           "title": "Open source en componenten van derden",
           "body": [
             "De broncode is beschikbaar onder de MIT-licentie op [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo maakt gebruik van: Mediabunny (MPL-2.0), Transformers.js en ONNX Runtime (Apache-2.0 en MIT), de Whisper-modellen van OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) en de lettertypen Inter en Montserrat (SIL Open Font License)."
+            "LocalCutVideo maakt gebruik van: Mediabunny (MPL-2.0), Transformers.js en ONNX Runtime (Apache-2.0 en MIT), de Whisper-modellen van OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) en de lettertypen Inter en Montserrat (SIL Open Font License).",
+            "De AI-beeldgenerator gebruikt het model Janus Pro van DeepSeek, onder de [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), die op jou van toepassing is. Je verbindt je ertoe het niet te gebruiken: in strijd met de wet of de rechten van anderen; voor militaire doeleinden; om minderjarigen uit te buiten of te schaden; om valse informatie met de bedoeling te schaden, inhoud die volgens de toepasselijke regelgeving ongepast is of persoonsgegevens zonder toestemming te maken of te verspreiden; om anderen te belasteren of lastig te vallen; voor volledig geautomatiseerde beslissingen die de rechten van iemand aantasten; om mensen te discrimineren of te schaden vanwege hun gedrag, persoonlijke kenmerken of wettelijk beschermde categorieën; of om de kwetsbaarheden van een groep mensen uit te buiten. DeepSeek claimt geen rechten op de afbeeldingen die je maakt: jij bent verantwoordelijk voor de afbeeldingen en het gebruik ervan. Het model wordt geleverd zoals het is, zonder garantie."
           ]
         },
         {
@@ -843,7 +849,21 @@
     "sizeInfo": "{{ width }} × {{ height }} px · JPG is het best voor YouTube (onder 2 MB)",
     "saved": "Opgeslagen: {{ name }}",
     "loadError": "Dit project kon niet worden geopend",
-    "readError": "Dit bestand kon niet worden gelezen"
+    "readError": "Dit bestand kon niet worden gelezen",
+    "ai": {
+      "title": "Afbeelding maken met AI",
+      "text": "Beschrijf de afbeelding in het Engels. Je videokaart maakt hem, er wordt niets verzonden",
+      "prompt": "Beschrijf de afbeelding",
+      "placeholder": "A neon-lit city street at night, cinematic",
+      "run": "Maken",
+      "again": "Nog een maken",
+      "size": "Eenmalige download {{ size }}. Vierkante afbeelding van 384 px, ideaal als achtergrond",
+      "generating": "Afbeelding maken…",
+      "unsupported": "Vereist Chrome of Edge op een computer met een recente videokaart",
+      "error": "De afbeelding kon niet worden gemaakt. Je videokaart heeft mogelijk te weinig geheugen",
+      "terms": "Door een afbeelding te maken, accepteer je de gebruiksvoorwaarden van het model",
+      "downloadError": "Het AI-model kon niet worden gedownload. Probeer het over een paar minuten opnieuw"
+    }
   },
   "seo": {
     "home": {

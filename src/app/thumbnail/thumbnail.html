@@ -18,13 +18,34 @@
   } @else if (loadingProject()) {
     <div class="card state"><div class="spinner" aria-hidden="true"></div></div>
   } @else if (!source()) {
-    <label class="drop" [class.over]="dragging()" (dragover)="onDragOver($event)" (dragleave)="dragging.set(false)" (drop)="onDrop($event)">
-      <input type="file" accept="video/*,image/*,.mov,.mkv" (change)="onFile($event)" data-testid="thumb-input" />
-      <span class="drop-icon"><app-icon name="image" [size]="28" /></span>
-      <b>{{ 'thumbnail.pick' | transloco }}</b>
-      <span class="muted">{{ 'thumbnail.pickHint' | transloco }}</span>
-      <span class="btn primary">{{ 'thumbnail.choose' | transloco }}</span>
-    </label>
+    <div class="sources">
+      <label class="drop" [class.over]="dragging()" (dragover)="onDragOver($event)" (dragleave)="dragging.set(false)" (drop)="onDrop($event)">
+        <input type="file" accept="video/*,image/*,.mov,.mkv" (change)="onFile($event)" data-testid="thumb-input" />
+        <span class="drop-icon"><app-icon name="image" [size]="28" /></span>
+        <b>{{ 'thumbnail.pick' | transloco }}</b>
+        <span class="muted">{{ 'thumbnail.pickHint' | transloco }}</span>
+        <span class="btn primary">{{ 'thumbnail.choose' | transloco }}</span>
+      </label>
+      <section class="magic">
+        <span class="drop-icon"><app-icon name="sparkles" [size]="28" /></span>
+        <b>{{ 'thumbnail.ai.title' | transloco }}</b>
+        <span class="muted">{{ 'thumbnail.ai.text' | transloco }}</span>
+        @if (aiSupported()) {
+          <label class="sr-only" for="thumb-prompt">{{ 'thumbnail.ai.prompt' | transloco }}</label>
+          <textarea id="thumb-prompt" rows="2" maxlength="300" [value]="aiPrompt()" (input)="setPrompt($event)" [disabled]="!!aiProgress()" [placeholder]="'thumbnail.ai.placeholder' | transloco"></textarea>
+          @if (!aiProgress()) {
+            <button class="btn auto" type="button" [disabled]="!aiPrompt().trim()" (click)="generate()">
+              <app-icon name="sparkles" [size]="16" /> {{ 'thumbnail.ai.run' | transloco }}
+            </button>
+            <small class="faint">{{ 'thumbnail.ai.size' | transloco: { size: aiDownloadSize } }}</small>
+            <small><a class="ai-terms" [routerLink]="'/terms' | localize">{{ 'thumbnail.ai.terms' | transloco }}</a></small>
+          }
+          <ng-container *ngTemplateOutlet="aiStatus" />
+        } @else {
+          <small class="faint">{{ 'thumbnail.ai.unsupported' | transloco }}</small>
+        }
+      </section>
+    </div>
     <p class="local muted"><app-icon name="lock" [size]="14" /> {{ 'thumbnail.local' | transloco }}</p>
   } @else {
     <div class="workspace">
@@ -95,8 +116,12 @@
           </div>
         }
         <div class="stage-actions">
+          @if (aiGenerated() && !aiProgress()) {
+            <button class="btn auto sm" type="button" (click)="generate()"><app-icon name="sparkles" [size]="15" /> {{ 'thumbnail.ai.again' | transloco }}</button>
+          }
           <button class="btn ghost sm" type="button" (click)="startOver()"><app-icon name="folder" [size]="15" /> {{ 'thumbnail.other' | transloco }}</button>
         </div>
+        <ng-container *ngTemplateOutlet="aiStatus" />
       </div>
 
       <aside class="panel card">
@@ -217,3 +242,18 @@
     <p class="error" role="alert"><app-icon name="alert" [size]="15" /> {{ e | transloco }}</p>
   }
 </section>
+
+<ng-template #aiStatus>
+  @if (aiProgress(); as task) {
+    <div class="ai-status" role="status">
+      <div class="ai-head">
+        <span>{{ (task.stage === 'generate' ? 'thumbnail.ai.generating' : 'editor.transcribe.stage.' + task.stage) | transloco }}</span>
+        @if (task.progress) {
+          <span class="value">{{ (task.progress * 100).toFixed(0) }}%</span>
+        }
+      </div>
+      <div class="progress" [class.indeterminate]="!task.progress"><div [style.width.%]="task.progress * 100"></div></div>
+      <button class="btn ghost sm" type="button" (click)="cancelGeneration()">{{ 'common.cancel' | transloco }}</button>
+    </div>
+  }
+</ng-template>

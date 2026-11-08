@@ -88,6 +88,10 @@
       "eyebrow": "Ciri-ciri",
       "title": "Semua yang anda perlukan untuk video yang menarik perhatian",
       "lead": "Untuk pencipta TikTok, Reels, Shorts dan YouTube, serta guru, jurulatih dan syarikat",
+      "speech": {
+        "title": "Bahasa video anda, secara automatik",
+        "text": "Aplikasi dalam satu bahasa, video dalam bahasa lain? Bahasa pertuturan dikesan dan disemak, atau anda pilih sendiri daripada berpuluh-puluh bahasa"
+      },
       "silences": {
         "title": "Selamat tinggal jeda",
         "text": "Kesenyapan dan saat kosong dikesan dan dipotong secara automatik: video anda lebih rancak dalam sesaat"
@@ -135,6 +139,10 @@
       "languages": {
         "title": "Dalam bahasa anda",
         "text": "Antara muka tersedia dalam {{ count }} bahasa dan sari kata berfungsi dalam berpuluh-puluh bahasa yang dikesan secara automatik"
+      },
+      "aiImage": {
+        "title": "Imej AI untuk lakaran kecil anda",
+        "text": "Terangkan imej dan Janus Pro melukisnya pada kad grafik anda, percuma dan tanpa menghantar apa-apa. Muat turun sekali 1.6 GB, pada komputer dengan Chrome atau Edge"
       }
     },
     "privacy": {
@@ -188,7 +196,7 @@
       },
       "ai": {
         "q": "Bagaimana AI boleh berjalan tanpa pelayan?",
-        "a": "Model AI (Whisper untuk sari kata, MediaPipe untuk wajah) dimuat turun sekali, kemudian komputer anda yang menjalankannya. Suara dan imej anda tidak pernah keluar dari situ"
+        "a": "Model AI (Whisper untuk sari kata, MediaPipe untuk wajah) dimuat turun sekali, kemudian komputer anda yang menjalankannya. Suara dan imej anda tidak pernah keluar dari situ. Janus Pro, yang melukis imej AI untuk lakaran kecil, berfungsi dengan cara yang sama: kira-kira 1.6 GB, dimuat turun hanya jika anda menggunakannya"
       },
       "capcut": {
         "q": "Apakah bezanya dengan CapCut?",
@@ -207,7 +215,8 @@
         "moments": "Cadangan detik terbaik",
         "title": "Tajuk dengan perkataan diserlahkan, 4 gaya",
         "formats": "YouTube 1280×720, Shorts dan segi empat sama",
-        "local": "Dibuat pada peranti anda, tiada yang dimuat naik"
+        "local": "Dibuat pada peranti anda, tiada yang dimuat naik",
+        "ai": "Atau jana imej dengan AI, pada komputer anda"
       },
       "cta": "Buat lakaran kecil",
       "mockTitle": "Vlog",
@@ -273,15 +282,6 @@
     "skippedCodec": "Dilangkau, kodek tidak disokong oleh pelayar ini: {{ names }}. Cuba Chrome, atau tukar kepada MP4 H.264",
     "notProject": "Fail ini bukan projek LocalCutVideo",
     "demo": "Video demo tidak dapat dimuatkan"
-  },
-  "languages": {
-    "en": "Inggeris",
-    "fr": "Perancis",
-    "es": "Sepanyol",
-    "it": "Itali",
-    "de": "Jerman",
-    "pt": "Portugis",
-    "nl": "Belanda"
   },
   "editor": {
     "back": "Kembali ke projek",
@@ -389,7 +389,9 @@
       "stage": {
         "audio": "Mengekstrak audio…",
         "download": "Memuat turun model…",
-        "transcribe": "Menyalin…"
+        "transcribe": "Menyalin…",
+        "load": "Menyediakan model…",
+        "language": "Mengesan bahasa…"
       },
       "missing": "Salin klip baharu ({{ count }})",
       "rerunHint": "Bermula semula dengan model dan bahasa di atas",
@@ -513,7 +515,8 @@
       "start": "Eksport MP4",
       "saveProject": "Simpan projek",
       "saveProjectHint": "Fail .lcv.json yang mengandungi suntingan anda (tanpa video), untuk diteruskan pada komputer lain",
-      "projectSaved": "Projek disimpan sebagai fail .lcv.json"
+      "projectSaved": "Projek disimpan sebagai fail .lcv.json",
+      "thumbnail": "Buat lakaran kecil"
     },
     "clips": {
       "title": "Klip",
@@ -557,7 +560,8 @@
         "cuts": "potongan",
         "removed": "dibuang",
         "words": "perkataan bersari kata",
-        "silent": "{{ count }} klip tanpa suara: hanya masa kosong sebenar dipotong"
+        "silent": "{{ count }} klip tanpa suara: hanya masa kosong sebenar dipotong",
+        "languageHint": "Bukan bahasa yang betul? Buat asal dan pilih bahasa"
       },
       "steps": {
         "analyze": "Menganalisis audio",
@@ -580,7 +584,8 @@
         "detectedYes": "Dikesan: ada orang bercakap",
         "detectedNo": "Dikesan: tiada suara",
         "hint": "Tiada suara: tiada transkrip atau sari kata, hanya masa kosong sebenar dipotong"
-      }
+      },
+      "languageHint": "Mod automatik memadai dalam kebanyakan kes. Dengan loghat pekat, pilih bahasa sendiri"
     },
     "mix": {
       "title": "Bunyi video",
@@ -631,7 +636,7 @@
     }
   },
   "legal": {
-    "updated": "Kemas kini terakhir: 2 November 2026",
+    "updated": "Kemas kini terakhir: 8 November 2026",
     "contact": "Hubungi",
     "nav": {
       "notice": "Notis undang-undang",
@@ -662,7 +667,7 @@
           "title": "Harta intelek",
           "body": [
             "Kod sumber LocalCutVideo adalah sumber terbuka dan diterbitkan di bawah lesen MIT di [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Komponen pihak ketiga, model AI dan fon yang digunakan oleh aplikasi kekal milik pencipta masing-masing dan digunakan di bawah lesen mereka sendiri, yang disenaraikan dalam [terma penggunaan](/terms). Jenama yang disebut (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) milik pemiliknya."
+            "Komponen pihak ketiga, model AI dan fon yang digunakan oleh aplikasi kekal milik pencipta masing-masing dan digunakan di bawah lesen mereka sendiri, yang disenaraikan dalam [terma penggunaan](/terms). Jenama yang disebut (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) milik pemiliknya."
           ]
         },
         {
@@ -693,7 +698,7 @@
         {
           "title": "Apa yang kekal pada peranti anda",
           "body": [
-            "Fail video dan audio yang anda buka dibaca terus daripada cakera. Analisis, transkripsi (Whisper), penjejakan wajah dan eksport dikira secara setempat oleh pelayar anda.",
+            "Fail video dan audio yang anda buka dibaca terus daripada cakera. Analisis, transkripsi (Whisper), penjejakan wajah dan eksport dikira secara setempat oleh pelayar anda. Imej AI untuk lakaran kecil (Janus Pro) juga dikira secara setempat: penerangan anda dan imej tidak sekali-kali dihantar.",
             "Projek anda (potongan, transkrip, tetapan) disimpan dalam pangkalan data setempat pelayar anda (IndexedDB), bersama lakaran kecil dan cache analisis. Penerbit tidak mempunyai akses kepadanya. Anda boleh memadam projek dari halaman projek, atau memadam semuanya dengan mengosongkan data laman ini dalam tetapan pelayar."
           ]
         },
@@ -713,7 +718,7 @@
           "title": "Pihak ketiga",
           "body": [
             "Cloudflare: semua permintaan ke laman ini melalui Cloudflare, yang melindungi pelayan dan menyulitkan sambungan. Seperti mana-mana perantara rangkaian, ia memproses alamat IP anda dan maklumat pelayar biasa untuk menghantar halaman, dan mungkin menyimpan log teknikal bagi tujuan keselamatan; ia tidak pernah menerima video atau audio anda, yang tidak pernah meninggalkan peranti anda. Lihat [dasar privasi](https://www.cloudflare.com/privacypolicy/) mereka.",
-            "Hugging Face: model Whisper disediakan oleh laman ini, sama seperti bahagian lain aplikasi. Hanya jika ia tidak tersedia di sini, ia dimuat turun dari huggingface.co; Hugging Face kemudian menerima alamat IP anda dan maklumat pelayar biasa, tetapi tidak pernah audio anda. Lihat [dasar privasi](https://huggingface.co/privacy) mereka.",
+            "Hugging Face: model Whisper disediakan oleh laman ini, sama seperti bahagian lain aplikasi. Hanya jika ia tidak tersedia di sini, ia dimuat turun dari huggingface.co; Hugging Face kemudian menerima alamat IP anda dan maklumat pelayar biasa, tetapi tidak pernah audio anda. Lihat [dasar privasi](https://huggingface.co/privacy) mereka. Model imej AI pembuat lakaran kecil sentiasa dimuat turun dari huggingface.co, hanya jika anda menggunakannya: Hugging Face kemudian menerima alamat IP anda, tetapi tidak sekali-kali penerangan atau imej anda.",
             "GitHub: hanya jika anda mengikuti pautan ke repositori kod sumber.",
             "Tiada pihak ketiga lain dihubungi: Content-Security-Policy yang ketat secara teknikal menghalang halaman daripada bersambung ke tempat lain."
           ]
@@ -771,7 +776,8 @@
           "title": "Sumber terbuka dan komponen pihak ketiga",
           "body": [
             "Kod sumber tersedia di bawah lesen MIT di [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo bergantung pada: Mediabunny (MPL-2.0), Transformers.js dan ONNX Runtime (Apache-2.0 dan MIT), model Whisper oleh OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) serta fon Inter dan Montserrat (SIL Open Font License)."
+            "LocalCutVideo bergantung pada: Mediabunny (MPL-2.0), Transformers.js dan ONNX Runtime (Apache-2.0 dan MIT), model Whisper oleh OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) serta fon Inter dan Montserrat (SIL Open Font License).",
+            "Penjana imej AI menggunakan model Janus Pro oleh DeepSeek, di bawah [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL) yang turut terpakai kepada anda. Anda bersetuju untuk tidak menggunakannya: dengan melanggar undang-undang atau hak orang lain; untuk tujuan ketenteraan; untuk mengeksploitasi atau memudaratkan kanak-kanak; untuk mencipta atau menyebarkan maklumat palsu yang bertujuan memudaratkan, kandungan yang tidak sesuai menurut peraturan yang terpakai, atau data peribadi tanpa kebenaran; untuk memfitnah atau mengganggu; untuk keputusan automatik sepenuhnya yang menjejaskan hak seseorang; untuk mendiskriminasi atau memudaratkan orang kerana tingkah laku, ciri peribadi atau kategori yang dilindungi undang-undang; atau untuk mengeksploitasi kelemahan sesuatu kumpulan orang. DeepSeek tidak menuntut sebarang hak ke atas imej yang anda jana: anda bertanggungjawab ke atasnya dan cara ia digunakan. Model disediakan seadanya, tanpa jaminan."
           ]
         },
         {
@@ -843,7 +849,21 @@
     "sizeInfo": "{{ width }} × {{ height }} px · JPG paling sesuai untuk YouTube (bawah 2 MB)",
     "saved": "Disimpan: {{ name }}",
     "loadError": "Projek ini tidak dapat dibuka",
-    "readError": "Fail ini tidak dapat dibaca"
+    "readError": "Fail ini tidak dapat dibaca",
+    "ai": {
+      "title": "Jana imej dengan AI",
+      "text": "Terangkan imej dalam bahasa Inggeris. Kad grafik anda menciptanya, tiada apa-apa dihantar",
+      "prompt": "Terangkan imej",
+      "placeholder": "A neon-lit city street at night, cinematic",
+      "run": "Jana",
+      "again": "Jana yang lain",
+      "size": "Muat turun sekali {{ size }}. Imej segi empat 384 px, paling sesuai sebagai latar",
+      "generating": "Mencipta imej…",
+      "unsupported": "Memerlukan Chrome atau Edge pada komputer dengan kad grafik terkini",
+      "error": "Imej tidak dapat dijana. Kad grafik anda mungkin kekurangan memori",
+      "terms": "Dengan menjana imej, anda menerima terma penggunaan model",
+      "downloadError": "Model AI tidak dapat dimuat turun. Cuba lagi dalam beberapa minit"
+    }
   },
   "seo": {
     "home": {

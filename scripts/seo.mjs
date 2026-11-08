@@ -40,7 +40,7 @@ const sections = (...blocks) => blocks.flat().filter(Boolean).join('\n\n');
 // --- The pages ------------------------------------------------------------------------------
 
 function home(t, lang) {
-  const features = ['silences', 'captions', 'framing', 'textEdit', 'zoom', 'ducking', 'clips', 'export', 'inputs', 'recovery', 'offline', 'languages'];
+  const features = ['speech', 'aiImage', 'silences', 'captions', 'framing', 'textEdit', 'zoom', 'ducking', 'clips', 'export', 'inputs', 'recovery', 'offline', 'languages'];
   const compare = [
     ['free', 'sometimes'],
     ['account', 'sometimes'],
@@ -194,6 +194,7 @@ LocalCutVideo is a web app (installable as a PWA, works offline), version ${vers
 
 - A recent Chrome or Edge on a computer gives every feature; Firefox and Safari work with some limits
 - The Whisper model (about 40 to 250 MB) is downloaded once on first use, then cached
+- AI thumbnail images need a computer with WebGPU; their model (Janus Pro, about 1.6 GB) is downloaded from Hugging Face only if used, then cached
 
 ## Pages
 

@@ -30,6 +30,93 @@
 
 /* Empty state ------------------------------------------------------------------------------- */
 
+.sources {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  @media (max-width: 760px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.magic {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 10px;
+  padding: 32px 24px;
+  border: 1px solid var(--border-strong);
+  border-radius: 24px;
+  background: var(--bg-elev);
+  text-align: center;
+  textarea {
+    width: 100%;
+    resize: vertical;
+  }
+}
+
+.ai-terms {
+  color: var(--text-muted);
+  text-decoration: underline;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.ai-status {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+  margin-top: 10px;
+  justify-items: stretch;
+  .btn {
+    justify-self: center;
+  }
+  .progress {
+    position: relative;
+    overflow: hidden;
+    &.indeterminate div {
+      position: absolute;
+      inset-block: 0;
+      width: 35% !important;
+      animation: ai-indeterminate 1.3s ease-in-out infinite;
+    }
+  }
+}
+
+.ai-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  .value {
+    font-family: var(--mono);
+    color: var(--accent);
+  }
+}
+
+@keyframes ai-indeterminate {
+  from {
+    left: -35%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-status .progress.indeterminate div {
+    animation: none;
+    left: 0;
+  }
+}
+
 .drop {
   position: relative;
   display: grid;

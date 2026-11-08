@@ -88,6 +88,10 @@
       "eyebrow": "Funkce",
       "title": "Vše pro videa, která udrží pozornost",
       "lead": "Pro tvůrce na TikToku, Reels, Shorts a YouTube, ale i pro učitele, lektory a firmy",
+      "speech": {
+        "title": "Jazyk vašeho videa, automaticky",
+        "text": "Aplikace v jednom jazyce, video v jiném? Mluvený jazyk se rozpozná a ověří, nebo si ho sami vyberete z desítek jazyků"
+      },
       "silences": {
         "title": "Konec pauzám",
         "text": "Ticho a hluchá místa se najdou a vystřihnou automaticky: vaše video během vteřiny získá spád"
@@ -135,6 +139,10 @@
       "languages": {
         "title": "Ve vašem jazyce",
         "text": "Rozhraní existuje v {{ count }} jazycích a titulky fungují v desítkách jazyků, které se rozpoznají automaticky"
+      },
+      "aiImage": {
+        "title": "Obrázky AI pro vaše miniatury",
+        "text": "Popište obrázek a Janus Pro ho nakreslí na vaší grafické kartě, zdarma a bez odesílání čehokoli. Jednorázové stažení 1,6 GB, na počítači s Chrome nebo Edge"
       }
     },
     "privacy": {
@@ -188,7 +196,7 @@
       },
       "ai": {
         "q": "Jak může AI běžet bez serveru?",
-        "a": "Modely AI (Whisper pro titulky, MediaPipe pro obličeje) se stáhnou jednou a pak je spouští váš počítač. Váš hlas ani vaše obrazy ho nikdy neopustí"
+        "a": "Modely AI (Whisper pro titulky, MediaPipe pro obličeje) se stáhnou jednou a pak je spouští váš počítač. Váš hlas ani vaše obrazy ho nikdy neopustí. Janus Pro, který kreslí obrázky AI pro miniatury, funguje stejně: asi 1,6 GB, stažené jen tehdy, když ho použijete"
       },
       "capcut": {
         "q": "Jaký je rozdíl oproti CapCutu?",
@@ -207,7 +215,8 @@
         "moments": "Navržené nejlepší momenty",
         "title": "Titulek se zvýrazněnými slovy, 4 styly",
         "formats": "YouTube 1280×720, Shorts a čtverec",
-        "local": "Vytvořeno ve vašem zařízení, nic se nenahrává"
+        "local": "Vytvořeno ve vašem zařízení, nic se nenahrává",
+        "ai": "Nebo vytvořte obrázek pomocí AI na svém počítači"
       },
       "cta": "Vytvořit náhled",
       "mockTitle": "Můj první",
@@ -273,15 +282,6 @@
     "skippedCodec": "Přeskočeno, kodek tento prohlížeč nepodporuje: {{ names }}. Zkuste Chrome nebo převeďte na H.264 MP4",
     "notProject": "Tento soubor není projekt LocalCutVideo",
     "demo": "Ukázkové video se nepodařilo načíst"
-  },
-  "languages": {
-    "en": "Angličtina",
-    "fr": "Francouzština",
-    "es": "Španělština",
-    "it": "Italština",
-    "de": "Němčina",
-    "pt": "Portugalština",
-    "nl": "Nizozemština"
   },
   "editor": {
     "back": "Zpět na projekty",
@@ -389,7 +389,9 @@
       "stage": {
         "audio": "Extrahování zvuku…",
         "download": "Stahování modelu…",
-        "transcribe": "Přepisování…"
+        "transcribe": "Přepisování…",
+        "load": "Příprava modelu…",
+        "language": "Zjišťování jazyka…"
       },
       "missing": "Přepsat nové klipy ({{ count }})",
       "rerunHint": "Začne znovu s modelem a jazykem výše",
@@ -513,7 +515,8 @@
       "start": "Exportovat MP4",
       "saveProject": "Uložit projekt",
       "saveProjectHint": "Soubor .lcv.json s vaším střihem (bez videa), abyste mohli pokračovat na jiném počítači",
-      "projectSaved": "Projekt uložen jako soubor .lcv.json"
+      "projectSaved": "Projekt uložen jako soubor .lcv.json",
+      "thumbnail": "Vytvořit náhled"
     },
     "clips": {
       "title": "Klipy",
@@ -557,7 +560,8 @@
         "cuts": "střihy",
         "removed": "odstraněno",
         "words": "otitulkovaných slov",
-        "silent": "Klipy bez hlasu: {{ count }}. Vystřiženo bylo jen skutečné hluché místo"
+        "silent": "Klipy bez hlasu: {{ count }}. Vystřiženo bylo jen skutečné hluché místo",
+        "languageHint": "Není to správný jazyk? Vraťte akci zpět a zvolte jazyk"
       },
       "steps": {
         "analyze": "Analýza zvuku",
@@ -580,7 +584,8 @@
         "detectedYes": "Rozpoznáno: někdo mluví",
         "detectedNo": "Rozpoznáno: bez hlasu",
         "hint": "Bez hlasu: žádný přepis ani titulky, vystřihne se jen skutečné hluché místo"
-      }
+      },
+      "languageHint": "Automatika obvykle stačí. Při silném přízvuku zvolte jazyk sami"
     },
     "mix": {
       "title": "Zvuk videa",
@@ -631,7 +636,7 @@
     }
   },
   "legal": {
-    "updated": "Poslední aktualizace: 2. listopadu 2026",
+    "updated": "Poslední aktualizace: 8. listopadu 2026",
     "contact": "Kontakt",
     "nav": {
       "notice": "Právní upozornění",
@@ -662,7 +667,7 @@
           "title": "Duševní vlastnictví",
           "body": [
             "Zdrojový kód LocalCutVideo je otevřený a zveřejněný pod licencí MIT na [GitHubu](https://github.com/ImMaxence/LocalCutVideo).",
-            "Komponenty třetích stran, modely AI a písma, které aplikace používá, zůstávají majetkem svých autorů a používají se podle jejich vlastních licencí uvedených v [podmínkách použití](/terms). Zmíněné ochranné známky (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) patří jejich vlastníkům."
+            "Komponenty třetích stran, modely AI a písma, které aplikace používá, zůstávají majetkem svých autorů a používají se podle jejich vlastních licencí uvedených v [podmínkách použití](/terms). Zmíněné ochranné známky (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) patří jejich vlastníkům."
           ]
         },
         {
@@ -693,7 +698,7 @@
         {
           "title": "Co zůstává ve vašem zařízení",
           "body": [
-            "Video a zvukové soubory, které otevřete, se čtou přímo z disku. Analýzu, přepis (Whisper), sledování obličeje i export počítá lokálně váš prohlížeč.",
+            "Video a zvukové soubory, které otevřete, se čtou přímo z disku. Analýzu, přepis (Whisper), sledování obličeje i export počítá lokálně váš prohlížeč. Obrázky AI pro miniatury (Janus Pro) se také počítají lokálně: váš popis ani obrázek se nikdy neodesílají.",
             "Vaše projekty (střihy, přepis, nastavení) se ukládají do místní databáze prohlížeče (IndexedDB) spolu s náhledem a mezipamětí analýz. Provozovatel k nim nemá přístup. Projekt můžete smazat na stránce projektů nebo smazat vše vymazáním dat tohoto webu v nastavení prohlížeče."
           ]
         },
@@ -713,7 +718,7 @@
           "title": "Třetí strany",
           "body": [
             "Cloudflare: všechny požadavky na tento web procházejí přes Cloudflare, který chrání server a šifruje spojení. Jako každý síťový prostředník zpracovává vaši IP adresu a běžné informace o prohlížeči, aby mohl doručit stránky, a může uchovávat technické záznamy pro účely zabezpečení; nikdy však nedostává vaše videa ani zvuk, které nikdy neopustí vaše zařízení. Viz [zásady ochrany soukromí](https://www.cloudflare.com/privacypolicy/) společnosti Cloudflare.",
-            "Hugging Face: model Whisper poskytuje tento web, stejně jako zbytek aplikace. Pouze pokud zde není k dispozici, stáhne se místo toho z huggingface.co; Hugging Face pak obdrží vaši IP adresu a běžné informace o prohlížeči, ale nikdy váš zvuk. Viz jejich [zásady ochrany soukromí](https://huggingface.co/privacy).",
+            "Hugging Face: model Whisper poskytuje tento web, stejně jako zbytek aplikace. Pouze pokud zde není k dispozici, stáhne se místo toho z huggingface.co; Hugging Face pak obdrží vaši IP adresu a běžné informace o prohlížeči, ale nikdy váš zvuk. Viz jejich [zásady ochrany soukromí](https://huggingface.co/privacy). Obrazový model AI v tvůrci miniatur se vždy stahuje z huggingface.co, a to jen pokud ho použijete: Hugging Face pak obdrží vaši IP adresu, ale nikdy váš popis ani obrázek.",
             "GitHub: pouze pokud kliknete na odkaz do repozitáře se zdrojovým kódem.",
             "Žádná jiná třetí strana se nekontaktuje: přísná Content-Security-Policy technicky brání stránce připojit se kamkoli jinam."
           ]
@@ -771,7 +776,8 @@
           "title": "Open source a komponenty třetích stran",
           "body": [
             "Zdrojový kód je k dispozici pod licencí MIT na [GitHubu](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo stojí na: Mediabunny (MPL-2.0), Transformers.js a ONNX Runtime (Apache-2.0 a MIT), modelech Whisper od OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) a písmech Inter a Montserrat (SIL Open Font License)."
+            "LocalCutVideo stojí na: Mediabunny (MPL-2.0), Transformers.js a ONNX Runtime (Apache-2.0 a MIT), modelech Whisper od OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) a písmech Inter a Montserrat (SIL Open Font License).",
+            "Generátor obrázků AI používá model Janus Pro od společnosti DeepSeek na základě licence [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), která se vztahuje i na vás. Zavazujete se, že jej nepoužijete: v rozporu se zákonem nebo právy druhých; pro vojenské účely; k vykořisťování nebo poškozování nezletilých; k vytváření nebo šíření nepravdivých informací s cílem škodit, obsahu nevhodného podle platných předpisů nebo osobních údajů bez oprávnění; k pomlouvání nebo obtěžování; k plně automatizovaným rozhodnutím ovlivňujícím práva osoby; k diskriminaci nebo poškozování lidí kvůli jejich chování, osobním vlastnostem nebo zákonem chráněným kategoriím; ani ke zneužívání zranitelnosti skupiny osob. DeepSeek si nečiní nárok na obrázky, které vytvoříte: odpovídáte za ně i za jejich použití. Model je poskytován tak, jak je, bez záruky."
           ]
         },
         {
@@ -843,7 +849,21 @@
     "sizeInfo": "{{ width }} × {{ height }} px · pro YouTube je nejlepší JPG (pod 2 MB)",
     "saved": "Uloženo: {{ name }}",
     "loadError": "Tento projekt se nepodařilo otevřít",
-    "readError": "Tento soubor se nepodařilo přečíst"
+    "readError": "Tento soubor se nepodařilo přečíst",
+    "ai": {
+      "title": "Vytvořit obrázek pomocí AI",
+      "text": "Popište obrázek anglicky. Vytvoří ho vaše grafická karta, nic se neodesílá",
+      "prompt": "Popište obrázek",
+      "placeholder": "A neon-lit city street at night, cinematic",
+      "run": "Vytvořit",
+      "again": "Vytvořit další",
+      "size": "Jednorázové stažení {{ size }}. Čtvercový obrázek 384 px, nejlépe jako pozadí",
+      "generating": "Vytváření obrázku…",
+      "unsupported": "Vyžaduje Chrome nebo Edge na počítači s novější grafickou kartou",
+      "error": "Obrázek se nepodařilo vytvořit. Grafické kartě možná chybí paměť",
+      "terms": "Vytvořením obrázku přijímáte podmínky použití modelu",
+      "downloadError": "Model AI se nepodařilo stáhnout. Zkuste to znovu za několik minut"
+    }
   },
   "seo": {
     "home": {

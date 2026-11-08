@@ -88,6 +88,10 @@
       "eyebrow": "Funcții",
       "title": "Tot ce-ți trebuie pentru videoclipuri care captează atenția",
       "lead": "Pentru creatorii de pe TikTok, Reels, Shorts și YouTube, dar și pentru profesori, formatori și companii",
+      "speech": {
+        "title": "Limba videoclipului tău, automat",
+        "text": "Aplicația într-o limbă, videoclipul în alta? Limba vorbită este detectată și verificată sau o alegi singur dintre zeci de limbi"
+      },
       "silences": {
         "title": "Adio pauze",
         "text": "Liniștea și momentele moarte sunt găsite și tăiate automat: videoclipul tău capătă ritm într-o secundă"
@@ -135,6 +139,10 @@
       "languages": {
         "title": "În limba ta",
         "text": "Interfața există în {{ count }} de limbi, iar subtitrările funcționează în zeci de limbi, detectate automat"
+      },
+      "aiImage": {
+        "title": "Imagini IA pentru miniaturile tale",
+        "text": "Descrie o imagine, iar Janus Pro o desenează pe placa ta video, gratuit și fără să trimită nimic. Descărcare unică de 1,6 GB, pe un computer cu Chrome sau Edge"
       }
     },
     "privacy": {
@@ -188,7 +196,7 @@
       },
       "ai": {
         "q": "Cum poate funcționa IA fără server?",
-        "a": "Modelele IA (Whisper pentru subtitrări, MediaPipe pentru fețe) sunt descărcate o dată, apoi le rulează computerul tău. Vocea și imaginile tale nu pleacă niciodată de acolo"
+        "a": "Modelele IA (Whisper pentru subtitrări, MediaPipe pentru fețe) sunt descărcate o dată, apoi le rulează computerul tău. Vocea și imaginile tale nu pleacă niciodată de acolo. Janus Pro, care desenează imaginile IA ale miniaturilor, funcționează la fel: aproximativ 1,6 GB, descărcați doar dacă îl folosești"
       },
       "capcut": {
         "q": "Care e diferența față de CapCut?",
@@ -207,7 +215,8 @@
         "moments": "Cele mai bune momente sugerate",
         "title": "Titlu cu cuvinte evidențiate, 4 stiluri",
         "formats": "YouTube 1280×720, Shorts și pătrat",
-        "local": "Creată pe dispozitivul tău, nimic nu se încarcă"
+        "local": "Creată pe dispozitivul tău, nimic nu se încarcă",
+        "ai": "Sau generează imaginea cu IA, pe computerul tău"
       },
       "cta": "Creează o miniatură",
       "mockTitle": "Primul meu",
@@ -273,15 +282,6 @@
     "skippedCodec": "Omise, codec neacceptat de acest browser: {{ names }}. Încearcă Chrome sau convertește în MP4 H.264",
     "notProject": "Acest fișier nu este un proiect LocalCutVideo",
     "demo": "Videoclipul demo nu a putut fi încărcat"
-  },
-  "languages": {
-    "en": "Engleză",
-    "fr": "Franceză",
-    "es": "Spaniolă",
-    "it": "Italiană",
-    "de": "Germană",
-    "pt": "Portugheză",
-    "nl": "Neerlandeză"
   },
   "editor": {
     "back": "Înapoi la proiecte",
@@ -389,7 +389,9 @@
       "stage": {
         "audio": "Se extrage sunetul…",
         "download": "Se descarcă modelul…",
-        "transcribe": "Se transcrie…"
+        "transcribe": "Se transcrie…",
+        "load": "Se pregătește modelul…",
+        "language": "Se detectează limba…"
       },
       "missing": "Transcrie clipurile noi ({{ count }})",
       "rerunHint": "Reia de la zero cu modelul și limba de mai sus",
@@ -513,7 +515,8 @@
       "start": "Exportă MP4",
       "saveProject": "Salvează proiectul",
       "saveProjectHint": "Un fișier .lcv.json cu editarea ta (fără videoclip), pentru a continua pe alt computer",
-      "projectSaved": "Proiect salvat ca fișier .lcv.json"
+      "projectSaved": "Proiect salvat ca fișier .lcv.json",
+      "thumbnail": "Creează o miniatură"
     },
     "clips": {
       "title": "Clipuri",
@@ -557,7 +560,8 @@
         "cuts": "tăieturi",
         "removed": "eliminat",
         "words": "cuvinte subtitrate",
-        "silent": "{{ count }} clip(uri) fără voce: s-au tăiat doar timpii morți reali"
+        "silent": "{{ count }} clip(uri) fără voce: s-au tăiat doar timpii morți reali",
+        "languageHint": "Nu e cea corectă? Anulează și alege limba"
       },
       "steps": {
         "analyze": "Analiza sunetului",
@@ -580,7 +584,8 @@
         "detectedYes": "Detectat: cineva vorbește",
         "detectedNo": "Detectat: fără voce",
         "hint": "Fără voce: fără transcriere sau subtitrări, se taie doar timpii morți reali"
-      }
+      },
+      "languageHint": "Modul automat merge în majoritatea cazurilor. Cu un accent puternic, alege singur limba"
     },
     "mix": {
       "title": "Sunetul videoclipului",
@@ -631,7 +636,7 @@
     }
   },
   "legal": {
-    "updated": "Ultima actualizare: 2 noiembrie 2026",
+    "updated": "Ultima actualizare: 8 noiembrie 2026",
     "contact": "Contact",
     "nav": {
       "notice": "Mențiuni legale",
@@ -662,7 +667,7 @@
           "title": "Proprietate intelectuală",
           "body": [
             "Codul sursă al LocalCutVideo este deschis și publicat sub licența MIT pe [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Componentele terțe, modelele IA și fonturile folosite de aplicație rămân proprietatea autorilor lor și sunt folosite conform propriilor licențe, enumerate în [termenii de utilizare](/terms). Mărcile citate (Whisper, MediaPipe, Hugging Face, Chrome, Edge…) aparțin proprietarilor lor."
+            "Componentele terțe, modelele IA și fonturile folosite de aplicație rămân proprietatea autorilor lor și sunt folosite conform propriilor licențe, enumerate în [termenii de utilizare](/terms). Mărcile citate (Whisper, MediaPipe, Janus Pro, DeepSeek, Hugging Face, Chrome, Edge…) aparțin proprietarilor lor."
           ]
         },
         {
@@ -693,7 +698,7 @@
         {
           "title": "Ce rămâne pe dispozitivul tău",
           "body": [
-            "Fișierele video și audio pe care le deschizi sunt citite direct de pe disc. Analiza, transcrierea (Whisper), urmărirea feței și exportul sunt calculate local de browser.",
+            "Fișierele video și audio pe care le deschizi sunt citite direct de pe disc. Analiza, transcrierea (Whisper), urmărirea feței și exportul sunt calculate local de browser. Imaginile IA ale miniaturilor (Janus Pro) sunt calculate tot local: descrierea ta și imaginea nu sunt trimise niciodată.",
             "Proiectele tale (tăieturi, transcriere, setări) sunt salvate în baza de date locală a browserului (IndexedDB), împreună cu o miniatură și un cache de analize. Editorul nu are acces la ele. Poți șterge un proiect din pagina de proiecte sau poți șterge tot golind datele acestui site din setările browserului."
           ]
         },
@@ -713,7 +718,7 @@
           "title": "Terți",
           "body": [
             "Cloudflare: toate cererile către acest site trec prin Cloudflare, care protejează serverul și criptează conexiunea. Ca orice intermediar de rețea, prelucrează adresa ta IP și informațiile obișnuite ale browserului pentru a livra paginile și poate păstra jurnale tehnice în scopuri de securitate; nu primește niciodată videoclipurile sau sunetul tău, care nu părăsesc niciodată dispozitivul tău. Vezi [politica de confidențialitate](https://www.cloudflare.com/privacypolicy/) a Cloudflare.",
-            "Hugging Face: modelul Whisper este furnizat de acest site, ca restul aplicației. Doar dacă nu este disponibil aici, este descărcat în schimb de pe huggingface.co; Hugging Face primește atunci adresa ta IP și informațiile obișnuite ale browserului, dar niciodată sunetul tău. Vezi [politica lor de confidențialitate](https://huggingface.co/privacy).",
+            "Hugging Face: modelul Whisper este furnizat de acest site, ca restul aplicației. Doar dacă nu este disponibil aici, este descărcat în schimb de pe huggingface.co; Hugging Face primește atunci adresa ta IP și informațiile obișnuite ale browserului, dar niciodată sunetul tău. Vezi [politica lor de confidențialitate](https://huggingface.co/privacy). Modelul de imagini IA al creatorului de miniaturi este descărcat întotdeauna de pe huggingface.co, doar dacă îl folosești: Hugging Face primește atunci adresa ta IP, dar niciodată descrierea ta sau imaginea.",
             "GitHub: doar dacă urmezi un link către depozitul codului sursă.",
             "Niciun alt terț nu este contactat: o Content-Security-Policy strictă împiedică tehnic pagina să se conecteze în altă parte."
           ]
@@ -771,7 +776,8 @@
           "title": "Open source și componente terțe",
           "body": [
             "Codul sursă este disponibil sub licența MIT pe [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo se bazează pe: Mediabunny (MPL-2.0), Transformers.js și ONNX Runtime (Apache-2.0 și MIT), modelele Whisper de la OpenAI (MIT), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) și fonturile Inter și Montserrat (SIL Open Font License)."
+            "LocalCutVideo se bazează pe: Mediabunny (MPL-2.0), Transformers.js și ONNX Runtime (Apache-2.0 și MIT), modelele Whisper de la OpenAI (MIT), Janus Pro (DeepSeek Model License), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) și fonturile Inter și Montserrat (SIL Open Font License).",
+            "Generatorul de imagini IA folosește modelul Janus Pro de la DeepSeek, sub licența [DeepSeek Model License](https://github.com/deepseek-ai/Janus/blob/main/LICENSE-MODEL), care ți se aplică. Te angajezi să nu îl folosești: cu încălcarea legii sau a drepturilor altora; în scopuri militare; pentru a exploata sau a face rău minorilor; pentru a crea sau a difuza informații false menite să dăuneze, conținut neadecvat potrivit reglementărilor aplicabile sau date personale fără autorizare; pentru a defăima sau a hărțui; pentru decizii complet automatizate care afectează drepturile unei persoane; pentru a discrimina sau a dăuna persoanelor din cauza comportamentului, caracteristicilor personale sau categoriilor protejate de lege; ori pentru a exploata vulnerabilitățile unui grup de persoane. DeepSeek nu revendică niciun drept asupra imaginilor pe care le generezi: ești responsabil pentru ele și pentru modul în care le folosești. Modelul este furnizat ca atare, fără garanție."
           ]
         },
         {
@@ -843,7 +849,21 @@
     "sizeInfo": "{{ width }} × {{ height }} px · JPG e cel mai bun pentru YouTube (sub 2 MB)",
     "saved": "Salvat: {{ name }}",
     "loadError": "Acest proiect nu a putut fi deschis",
-    "readError": "Acest fișier nu a putut fi citit"
+    "readError": "Acest fișier nu a putut fi citit",
+    "ai": {
+      "title": "Generează o imagine cu IA",
+      "text": "Descrie imaginea în engleză. O creează placa ta video, nu se trimite nimic",
+      "prompt": "Descrie imaginea",
+      "placeholder": "A neon-lit city street at night, cinematic",
+      "run": "Generează",
+      "again": "Generează alta",
+      "size": "Descărcare unică {{ size }}. Imagine pătrată de 384 px, ideală ca fundal",
+      "generating": "Se creează imaginea…",
+      "unsupported": "Necesită Chrome sau Edge pe un computer cu placă video recentă",
+      "error": "Imaginea nu a putut fi generată. Poate plăcii tale video îi lipsește memoria",
+      "terms": "Generând o imagine, accepți condițiile de utilizare ale modelului",
+      "downloadError": "Modelul IA nu a putut fi descărcat. Încearcă din nou peste câteva minute"
+    }
   },
   "seo": {
     "home": {

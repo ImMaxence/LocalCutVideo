@@ -12,10 +12,13 @@ import {
   untracked,
   viewChild,
 } from '@angular/core';
+import { NgTemplateOutlet } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
 import { db, getClipFile } from '../core/db';
 import { downloadBlob, queryReadPermission, requestReadPermission } from '../core/file-access';
+import { WorkersService, proxy } from '../core/workers.service';
+import type { ImageProgress } from '../workers/worker-types';
 import { type AspectFormat, type Project, type Rotation, migrateProject } from '../engine/model';
 import { type Ctx2D, loadCaptionFont, rotatedSize, rotationMatrix } from '../engine/render';
 import { placeClips } from '../engine/sequence';
@@ -32,6 +35,7 @@ import {
 } from '../engine/thumbnail';
 import { formatTime } from '../engine/timeline-math';
 import { Icon } from '../shared/icon';
+import { LocalizePipe } from '../shared/localize';
 
 interface Source {
   kind: 'video' | 'image';
@@ -55,6 +59,19 @@ const PREVIEW_LONG_SIDE = 960;
 const MOMENTS = 8;
 const IMAGE_FILE = /\.(png|jpe?g|webp|gif|avif|bmp)$/i;
 
+/** One-time download of the image model. */
+const AI_DOWNLOAD_SIZE = '≈ 1.6 GB';
+
+/** What Transformers.js and the browser say when Hugging Face refuses or cannot serve the model. */
+const MODEL_DOWNLOAD_FAILURE = /huggingface\.co\/|Failed to fetch|NetworkError/i;
+
+/** The image model needs a computer's graphics card: phones run out of memory. */
+async function hasImageGpu(): Promise<boolean> {
+  if (/iPhone|iPad|iPod|Android/.test(navigator.userAgent)) return false;
+  const gpu = (navigator as Navigator & { gpu?: { requestAdapter(): Promise<unknown> } }).gpu;
+  return !!(await gpu?.requestAdapter().catch(() => null));
+}
+
 function clamp(v: number, min: number, max: number): number {
   return Math.min(max, Math.max(min, v));
 }
@@ -75,7 +92,7 @@ function seekTo(video: HTMLVideoElement, t: number): Promise<void> {
  */
 @Component({
   selector: 'app-thumbnail',
-  imports: [TranslocoPipe, Icon, RouterLink],
+  imports: [TranslocoPipe, Icon, RouterLink, NgTemplateOutlet, LocalizePipe],
   templateUrl: './thumbnail.html',
   styleUrl: './thumbnail.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -87,6 +104,7 @@ export class Thumbnail {
   readonly t = input<string>();
 
   private readonly transloco = inject(TranslocoService);
+  private readonly workers = inject(WorkersService);
   private readonly canvasRef = viewChild<ElementRef<HTMLCanvasElement>>('canvas');
   private readonly videoRef = viewChild<ElementRef<HTMLVideoElement>>('video');
 
@@ -112,6 +130,13 @@ export class Thumbnail {
   protected readonly dragging = signal(false);
   protected readonly saved = signal<string | null>(null);
   protected readonly error = signal<string | null>(null);
+
+  protected readonly aiDownloadSize = AI_DOWNLOAD_SIZE;
+  protected readonly aiSupported = signal(false);
+  protected readonly aiPrompt = signal('');
+  protected readonly aiProgress = signal<ImageProgress | null>(null);
+  /** The picture on screen comes from the AI: it can be generated again. */
+  protected readonly aiGenerated = signal(false);
 
   protected readonly project = signal<Project | null>(null);
   protected readonly loadingProject = signal(false);
@@ -164,7 +189,10 @@ export class Thumbnail {
       drawThumbnail(canvas.getContext('2d') as unknown as Ctx2D, still.image, still.width, still.height, s, width, height);
     });
 
+    afterNextRender(() => void hasImageGpu().then((ok) => this.aiSupported.set(ok)));
+
     inject(DestroyRef).onDestroy(() => {
+      this.workers.releaseImage();
       this.scanToken++;
       clearTimeout(this.savedTimer);
       clearTimeout(this.holdTimer);
@@ -233,6 +261,7 @@ export class Thumbnail {
     if (old) URL.revokeObjectURL(old);
     this.scanToken++;
     this.error.set(null);
+    this.aiGenerated.set(false);
     this.still.set(null);
     this.moments.set([]);
     const kind = file.type.startsWith('image/') || IMAGE_FILE.test(file.name) ? 'image' : 'video';
@@ -441,6 +470,34 @@ export class Thumbnail {
     this.saved.set(name);
     clearTimeout(this.savedTimer);
     this.savedTimer = window.setTimeout(() => this.saved.set(null), 4000);
+  }
+
+  // AI picture ------------------------------------------------------------------------------------
+
+  protected setPrompt(e: Event): void {
+    this.aiPrompt.set((e.target as HTMLTextAreaElement).value);
+  }
+
+  protected async generate(): Promise<void> {
+    const prompt = this.aiPrompt().trim();
+    if (!prompt || this.aiProgress()) return;
+    this.error.set(null);
+    this.aiProgress.set({ stage: 'load', progress: 0 });
+    try {
+      const blob = await this.workers.image.generate(prompt, proxy((p: ImageProgress) => this.aiProgress.set(p)));
+      if (!blob) return;
+      this.open(new File([blob], 'ai.png', { type: 'image/png' }));
+      this.aiGenerated.set(true);
+    } catch (e) {
+      console.error('Image generation failed', e);
+      this.error.set(MODEL_DOWNLOAD_FAILURE.test(String((e as Error)?.message ?? e)) ? 'thumbnail.ai.downloadError' : 'thumbnail.ai.error');
+    } finally {
+      this.aiProgress.set(null);
+    }
+  }
+
+  protected cancelGeneration(): void {
+    void this.workers.image.cancel();
   }
 
   protected startOver(): void {
