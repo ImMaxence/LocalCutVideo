@@ -21,7 +21,8 @@
     "menu": "Menü megnyitása",
     "close": "Menü bezárása",
     "thumbnail": "Bélyegképek",
-    "ai": "MI"
+    "ai": "MI",
+    "openShort": "Szerkesztő"
   },
   "theme": {
     "system": "Rendszer",
@@ -49,7 +50,7 @@
       "lead": "Vágd ki a szüneteket és az „ööö”-ket, adj hozzá animált feliratokat, és válts automatikusan TikTok-formátumra. Ingyen, fiók és vízjel nélkül: minden a számítógépeden történik",
       "cta": "Megvágom a videómat ingyen",
       "github": "Megtekintés a GitHubon",
-      "hint": "Regisztráció nélkül · Számítógépen a legjobb, Chrome-mal vagy Edge-dzsel",
+      "hint": "Regisztráció nélkül · Számítógépen, friss böngészővel a legjobb",
       "demo": "Demó kipróbálása",
       "badgeAlt": "Ingyenes CapCut-alternatíva"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "MI-képek a bélyegképeidhez",
-        "text": "Írj le egy képet, és a SANA-Sprint megrajzolja a videokártyádon, ingyen és bármiféle küldés nélkül. Egyszeri 3,1 GB-os letöltés, számítógépen, Chrome-ban vagy Edge-ben"
+        "text": "Írj le egy képet, és a SANA-Sprint megrajzolja a videokártyádon, ingyen és bármiféle küldés nélkül. Egyszeri 3,1 GB-os letöltés, számítógépen, friss böngészővel"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "A szerkesztés és az exportálás működik. A lap bezárása után újra ki kell választanod a videót",
       "safari": "Csak az újabb verziók. Újratöltés után válaszd ki újra a videót; az export letöltésként érkezik",
       "mobile": "Telefonok és táblagépek",
-      "mobileText": "Rövid klipekhez működik, de a memóriakorlátok miatt a hosszú videók nem megbízhatók"
+      "mobileText": "Rövid klipekhez működik, de a memóriakorlátok miatt a hosszú videók nem megbízhatók",
+      "aiImages": "A böngészőtől és a videokártyától függ (WebGPU, körülbelül 8 GB memória). A bélyegképoldal megmutatja, hogy nálad lehetséges-e"
     },
     "faq": {
       "title": "Gyakori kérdések",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Melyik böngészőt használjam?",
-        "a": "A Chrome vagy az Edge számítógépen nyújtja a legjobb élményt. A Firefox és a Safari is működik, néhány plusz kattintással egy videó újbóli megnyitásakor. Telefonon inkább rövid videókkal dolgozz"
+        "a": "Windows, Mac vagy Linux alatt a Chrome, az Edge, az Opera és a Brave nyújtja a legjobb élményt. A Firefox és a Safari is működik, a videó újbóli megnyitásához néhány további kattintás kell. Telefonon maradj a rövid videóknál"
       },
       "size": {
         "q": "Van fájlméret-korlát?",
@@ -250,7 +252,7 @@
       "rnnoise": "Eltávolítja a háttérzajt a hangból",
       "count": "MI-modell, mind a számítógépeden",
       "used": "Használt MI-modellek",
-      "note": "A SANA-Sprinthez Chrome-mal vagy Edge-dzsel ellátott számítógép és körülbelül 8 GB grafikus memória kell. A 3,1 GB-ot egyszer tölti le a Hugging Face-ről, és a böngésződben marad, a számítógépeden"
+      "note": "A SANA-Sprinthez számítógép, WebGPU-t támogató friss böngésző és körülbelül 8 GB grafikus memória kell. A 3,1 GB-ot egyszer tölti le a Hugging Face-ről, és a böngésződben marad, a számítógépeden"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Újabb készítése",
       "size": "Egyszeri, {{ size }} méretű letöltés a Hugging Face-ről, ebben a böngészőben marad a számítógépeden. Képenként körülbelül egy perc",
       "generating": "A kép készítése…",
-      "unsupported": "Chrome vagy Edge és újabb videokártyával rendelkező számítógép szükséges",
+      "unsupported": "Ezen az eszközön nem érhető el: számítógép és WebGPU-t támogató, friss böngésző szükséges",
       "error": "A képet nem sikerült elkészíteni. Lehet, hogy kevés a videokártya memóriája: zárd be a többi lapot és alkalmazást, majd próbáld újra",
       "terms": "Kép készítésével elfogadod a modell használati feltételeit",
       "downloadError": "Az MI-modellt nem sikerült letölteni. Próbáld újra néhány perc múlva",
       "history": "Az általad készített képek",
-      "requirements": "Csak számítógépen: Chrome vagy Edge és körülbelül 8 GB memóriával rendelkező videokártya"
+      "requirements": "Csak számítógépen: WebGPU-t támogató, friss böngésző és körülbelül 8 GB memóriával rendelkező videokártya"
     }
   },
   "seo": {

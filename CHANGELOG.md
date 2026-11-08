@@ -2,6 +2,17 @@
 
 All notable changes to LocalCutVideo. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning: [SemVer](https://semver.org/).
 
+## [1.1.2] - 2026-11-08
+
+### Changed
+- AI images and home page: requirements described by what is needed (a computer, a recent browser with WebGPU), not by browser name
+- Compatibility table says what AI images depend on
+- Phones: the menu button has text, and the lists of cards on the home page are swiped sideways
+
+### Fixed
+- AI images offered on graphics cards that cannot run the model
+- Phones: the last button of the home page went past the edge of its card
+
 ## [1.1.1] - 2026-11-08
 
 ### Changed

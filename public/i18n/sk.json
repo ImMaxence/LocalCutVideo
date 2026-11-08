@@ -21,7 +21,8 @@
     "menu": "Otvoriť ponuku",
     "close": "Zavrieť ponuku",
     "thumbnail": "Náhľady",
-    "ai": "AI"
+    "ai": "AI",
+    "openShort": "Editor"
   },
   "theme": {
     "system": "Systém",
@@ -49,7 +50,7 @@
       "lead": "Vystrihnite pauzy a „ehm“, pridajte animované titulky a automaticky prejdite na formát pre TikTok. Zadarmo, bez účtu a bez vodoznaku: všetko prebieha vo vašom počítači",
       "cta": "Zostrihať moje video zadarmo",
       "github": "Zobraziť na GitHube",
-      "hint": "Bez registrácie · Najlepšie na počítači, v Chrome alebo Edge",
+      "hint": "Bez registrácie · Najlepšie na počítači s aktuálnym prehliadačom",
       "demo": "Vyskúšať demo",
       "badgeAlt": "Bezplatná alternatíva k CapCutu"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "Obrázky AI pre vaše miniatúry",
-        "text": "Opíšte obrázok a SANA-Sprint ho nakreslí na vašej grafickej karte, zadarmo a bez odosielania čohokoľvek. Jednorazové stiahnutie 3,1 GB, na počítači s Chrome alebo Edge"
+        "text": "Opíšte obrázok a SANA-Sprint ho nakreslí na vašej grafickej karte, zadarmo a bez odosielania čohokoľvek. Jednorazové stiahnutie 3,1 GB, na počítači s aktuálnym prehliadačom"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Strih aj export fungujú. Po zatvorení karty budete musieť video vybrať znova",
       "safari": "Iba nové verzie. Po opätovnom načítaní video vyberte znova; export sa stiahne",
       "mobile": "Telefóny a tablety",
-      "mobileText": "Funguje pre krátke klipy, ale pre obmedzenú pamäť nie sú dlhé videá spoľahlivé"
+      "mobileText": "Funguje pre krátke klipy, ale pre obmedzenú pamäť nie sú dlhé videá spoľahlivé",
+      "aiImages": "Závisí od prehliadača a grafickej karty (WebGPU, približne 8 GB pamäte). Stránka miniatúr vám ukáže, či je to u vás možné"
     },
     "faq": {
       "title": "Časté otázky",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Aký prehliadač použiť?",
-        "a": "Chrome alebo Edge na počítači ponúkajú najlepší zážitok. Firefox a Safari fungujú tiež, len s niekoľkými kliknutiami navyše pri opätovnom otvorení videa. Na telefóne uprednostnite krátke videá"
+        "a": "Vo Windows, na Macu alebo v Linuxe ponúkajú najlepší zážitok Chrome, Edge, Opera a Brave. Firefox a Safari fungujú tiež, len opätovné otvorenie videa vyžaduje pár klikov navyše. Na telefóne zostaňte pri krátkych videách"
       },
       "size": {
         "q": "Je nejaký limit veľkosti súboru?",
@@ -250,7 +252,7 @@
       "rnnoise": "Odstráni z hlasu šum na pozadí",
       "count": "modelov AI, všetky na vašom počítači",
       "used": "Použité modely AI",
-      "note": "SANA-Sprint vyžaduje počítač s Chrome alebo Edge a približne 8 GB grafickej pamäte. Jeho 3,1 GB sa raz stiahne z Hugging Face a zostane vo vašom prehliadači, vo vašom počítači"
+      "note": "SANA-Sprint vyžaduje počítač, aktuálny prehliadač s podporou WebGPU a približne 8 GB grafickej pamäte. Jeho 3,1 GB sa raz stiahne z Hugging Face a zostane vo vašom prehliadači, vo vašom počítači"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Vytvoriť ďalší",
       "size": "Jednorazové stiahnutie {{ size }} z Hugging Face, uložené v tomto prehliadači vo vašom počítači. Asi minúta na obrázok",
       "generating": "Vytváranie obrázka…",
-      "unsupported": "Vyžaduje Chrome alebo Edge na počítači s novšou grafickou kartou",
+      "unsupported": "Na tomto zariadení nie je k dispozícii: vyžaduje počítač a aktuálny prehliadač s podporou WebGPU",
       "error": "Obrázok sa nepodarilo vytvoriť. Grafickej karte možno chýba pamäť: zatvorte ostatné karty a aplikácie a skúste to znova",
       "terms": "Vytvorením obrázka prijímate podmienky používania modelu",
       "downloadError": "Model AI sa nepodarilo stiahnuť. Skúste to znova o niekoľko minút",
       "history": "Vaše vytvorené obrázky",
-      "requirements": "Iba na počítači: Chrome alebo Edge a grafická karta s približne 8 GB pamäte"
+      "requirements": "Iba na počítači: aktuálny prehliadač s podporou WebGPU a grafická karta s približne 8 GB pamäte"
     }
   },
   "seo": {

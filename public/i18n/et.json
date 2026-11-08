@@ -21,7 +21,8 @@
     "menu": "Ava menüü",
     "close": "Sulge menüü",
     "thumbnail": "Pisipildid",
-    "ai": "TI"
+    "ai": "TI",
+    "openShort": "Redaktor"
   },
   "theme": {
     "system": "Süsteem",
@@ -49,7 +50,7 @@
       "lead": "Lõika välja pausid ja „ee“-d, lisa animeeritud subtiitrid ja vaheta automaatselt TikToki formaati. Tasuta, ilma kontota ja ilma vesimärgita: kõik toimub sinu arvutis",
       "cta": "Monteeri mu video tasuta",
       "github": "Vaata GitHubis",
-      "hint": "Registreerumist pole vaja · Parim arvutis, Chrome'i või Edge'iga",
+      "hint": "Registreerumata · Parim arvutis ja uuema brauseriga",
       "demo": "Proovi demot",
       "badgeAlt": "Tasuta CapCuti alternatiiv"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "Tehisintellekti pildid sinu pisipiltidele",
-        "text": "Kirjelda pilti ja SANA-Sprint joonistab selle sinu graafikakaardil, tasuta ja midagi saatmata. Ühekordne 3,1 GB allalaadimine, arvutis Chrome’i või Edge’iga"
+        "text": "Kirjelda pilti ja SANA-Sprint joonistab selle sinu graafikakaardil, tasuta ja midagi saatmata. Ühekordne 3,1 GB allalaadimine, arvutis uuema brauseriga"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Monteerimine ja eksport töötavad. Pärast vahekaardi sulgemist palutakse sul video uuesti valida",
       "safari": "Ainult uued versioonid. Vali video pärast uuesti laadimist uuesti; eksport laaditakse alla",
       "mobile": "Telefonid ja tahvelarvutid",
-      "mobileText": "Töötab lühikeste klippidega, kuid mälupiirangute tõttu pole pikad videod usaldusväärsed"
+      "mobileText": "Töötab lühikeste klippidega, kuid mälupiirangute tõttu pole pikad videod usaldusväärsed",
+      "aiImages": "Sõltub sinu brauserist ja graafikakaardist (WebGPU, umbes 8 GB mälu). Pisipiltide leht näitab, kas see on sinu puhul võimalik"
     },
     "faq": {
       "title": "Korduma kippuvad küsimused",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Millist brauserit kasutada?",
-        "a": "Chrome või Edge arvutis pakuvad parimat kogemust. Firefox ja Safari töötavad samuti, video uuesti avamiseks kulub paar klõpsu rohkem. Telefonis eelista lühikesi videoid"
+        "a": "Windowsis, Macis või Linuxis pakuvad parimat kogemust Chrome, Edge, Opera ja Brave. Ka Firefox ja Safari töötavad, video uuesti avamiseks kulub mõni klõps rohkem. Telefonis kasuta ainult lühikesi videoid"
       },
       "size": {
         "q": "Kas faili suurusel on piirang?",
@@ -250,7 +252,7 @@
       "rnnoise": "Eemaldab häälelt taustamüra",
       "count": "tehisintellekti mudelit, kõik sinu arvutis",
       "used": "Kasutatud tehisintellekti mudelid",
-      "note": "SANA-Sprint vajab arvutit Chrome’i või Edge’iga ja umbes 8 GB graafikamälu. Selle 3,1 GB laaditakse Hugging Face’ist alla üks kord ja see jääb sinu brauserisse sinu arvutis"
+      "note": "SANA-Sprint vajab arvutit, uuemat WebGPU toega brauserit ja umbes 8 GB graafikamälu. Selle 3,1 GB laaditakse Hugging Face’ist alla üks kord ja see jääb sinu brauserisse sinu arvutis"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Loo veel üks",
       "size": "Ühekordne {{ size }} allalaadimine Hugging Face’ist, säilitatakse selles brauseris sinu arvutis. Umbes minut pildi kohta",
       "generating": "Pildi loomine…",
-      "unsupported": "Vajab Chrome’i või Edge’i arvutis, millel on uuem graafikakaart",
+      "unsupported": "Selles seadmes pole saadaval: vajab arvutit ja uuemat WebGPU toega brauserit",
       "error": "Pilti ei õnnestunud luua. Sinu graafikakaardil võib mälu nappida: sulge teised vahekaardid ja rakendused ning proovi uuesti",
       "terms": "Pilti luues nõustud mudeli kasutustingimustega",
       "downloadError": "Tehisintellekti mudelit ei õnnestunud alla laadida. Proovi mõne minuti pärast uuesti",
       "history": "Sinu loodud pildid",
-      "requirements": "Ainult arvutis: Chrome või Edge ja umbes 8 GB mäluga graafikakaart"
+      "requirements": "Ainult arvutis: uuem WebGPU toega brauser ja umbes 8 GB mäluga graafikakaart"
     }
   },
   "seo": {

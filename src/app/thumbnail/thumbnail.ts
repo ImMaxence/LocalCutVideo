@@ -83,11 +83,15 @@ const AI_HISTORY = 24;
 /** What Transformers.js and the browser say when Hugging Face refuses or cannot serve the model. */
 const MODEL_DOWNLOAD_FAILURE = /huggingface\.co\/|Failed to fetch|NetworkError/i;
 
-/** The image model needs a computer's graphics card: phones run out of memory. */
+/**
+ * What the image model needs, whatever the browser: WebGPU with 16-bit floats (its weights use
+ * them), on a computer's graphics card (phones run out of memory).
+ */
 async function hasImageGpu(): Promise<boolean> {
   if (/iPhone|iPad|iPod|Android/.test(navigator.userAgent)) return false;
-  const gpu = (navigator as Navigator & { gpu?: { requestAdapter(): Promise<unknown> } }).gpu;
-  return !!(await gpu?.requestAdapter().catch(() => null));
+  const gpu = (navigator as Navigator & { gpu?: { requestAdapter(): Promise<{ features: Set<string> } | null> } }).gpu;
+  const adapter = await gpu?.requestAdapter().catch(() => null);
+  return !!adapter?.features.has('shader-f16');
 }
 
 function clamp(v: number, min: number, max: number): number {

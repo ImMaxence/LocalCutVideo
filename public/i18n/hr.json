@@ -21,7 +21,8 @@
     "menu": "Otvori izbornik",
     "close": "Zatvori izbornik",
     "thumbnail": "Minijature",
-    "ai": "AI"
+    "ai": "AI",
+    "openShort": "Uređivač"
   },
   "theme": {
     "system": "Sustav",
@@ -49,7 +50,7 @@
       "lead": "Izrežite pauze i „ovaj”, dodajte animirane titlove i automatski prijeđite na format za TikTok. Besplatno, bez računa i bez vodenog žiga: sve se događa na vašem računalu",
       "cta": "Uredi moj video besplatno",
       "github": "Pogledaj na GitHubu",
-      "hint": "Bez registracije · Najbolje na računalu, u Chromeu ili Edgeu",
+      "hint": "Bez registracije · Najbolje na računalu, s novijim preglednikom",
       "demo": "Isprobajte demo",
       "badgeAlt": "Besplatna alternativa za CapCut"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "AI slike za vaše minijature",
-        "text": "Opišite sliku i SANA-Sprint će je nacrtati na vašoj grafičkoj kartici, besplatno i bez slanja ičega. Jednokratno preuzimanje od 3,1 GB, na računalu s Chromeom ili Edgeom"
+        "text": "Opišite sliku i SANA-Sprint će je nacrtati na vašoj grafičkoj kartici, besplatno i bez slanja ičega. Jednokratno preuzimanje od 3,1 GB, na računalu s novijim preglednikom"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Uređivanje i izvoz rade. Nakon zatvaranja kartice morat ćete ponovno odabrati video",
       "safari": "Samo novije verzije. Nakon ponovnog učitavanja ponovno odaberite video; izvoz se preuzima",
       "mobile": "Mobiteli i tableti",
-      "mobileText": "Radi za kratke isječke, ali zbog ograničenja memorije dugi videi nisu pouzdani"
+      "mobileText": "Radi za kratke isječke, ali zbog ograničenja memorije dugi videi nisu pouzdani",
+      "aiImages": "Ovisi o pregledniku i grafičkoj kartici (WebGPU, oko 8 GB memorije). Stranica minijatura pokazuje je li to kod vas moguće"
     },
     "faq": {
       "title": "Česta pitanja",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Koji preglednik koristiti?",
-        "a": "Chrome ili Edge na računalu pružaju najbolje iskustvo. Firefox i Safari također rade, uz nekoliko klikova više za ponovno otvaranje videozapisa. Na mobitelu radije birajte kratke videozapise"
+        "a": "Na Windowsima, Macu ili Linuxu najbolje iskustvo pružaju Chrome, Edge, Opera i Brave. Firefox i Safari također rade, uz nekoliko dodatnih klikova za ponovno otvaranje videa. Na mobitelu se držite kratkih videa"
       },
       "size": {
         "q": "Postoji li ograničenje veličine datoteke?",
@@ -250,7 +252,7 @@
       "rnnoise": "Uklanja pozadinsku buku iz glasa",
       "count": "AI modela, svi na vašem računalu",
       "used": "Korišteni AI modeli",
-      "note": "SANA-Sprint zahtijeva računalo s Chromeom ili Edgeom i oko 8 GB grafičke memorije. Njegovih 3,1 GB preuzima se jednom s Hugging Facea i ostaje u vašem pregledniku, na vašem računalu"
+      "note": "SANA-Sprint zahtijeva računalo, noviji preglednik s podrškom za WebGPU i oko 8 GB grafičke memorije. Njegovih 3,1 GB preuzima se jednom s Hugging Facea i ostaje u vašem pregledniku, na vašem računalu"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Izradi drugu",
       "size": "Jednokratno preuzimanje od {{ size }} s Hugging Facea, čuva se u ovom pregledniku na vašem računalu. Otprilike minuta po slici",
       "generating": "Izrada slike…",
-      "unsupported": "Potreban je Chrome ili Edge na računalu s novijom grafičkom karticom",
+      "unsupported": "Nije dostupno na ovom uređaju: potrebno je računalo i noviji preglednik s podrškom za WebGPU",
       "error": "Sliku nije bilo moguće izraditi. Grafičkoj kartici možda nedostaje memorije: zatvorite ostale kartice i aplikacije pa pokušajte ponovno",
       "terms": "Izradom slike prihvaćate uvjete korištenja modela",
       "downloadError": "AI model nije bilo moguće preuzeti. Pokušajte ponovno za nekoliko minuta",
       "history": "Vaše izrađene slike",
-      "requirements": "Samo na računalu: Chrome ili Edge i grafička kartica s oko 8 GB memorije"
+      "requirements": "Samo na računalu: noviji preglednik s podrškom za WebGPU i grafička kartica s oko 8 GB memorije"
     }
   },
   "seo": {

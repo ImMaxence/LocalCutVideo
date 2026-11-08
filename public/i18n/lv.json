@@ -21,7 +21,8 @@
     "menu": "Atvērt izvēlni",
     "close": "Aizvērt izvēlni",
     "thumbnail": "Sīktēli",
-    "ai": "AI"
+    "ai": "AI",
+    "openShort": "Redaktors"
   },
   "theme": {
     "system": "Sistēmas",
@@ -49,7 +50,7 @@
       "lead": "Izgriez pauzes un “ēēē”, pievieno animētus subtitrus un automātiski pārej uz TikTok formātu. Bez maksas, bez konta un bez ūdenszīmes: viss notiek tavā datorā",
       "cta": "Montēt manu video bez maksas",
       "github": "Skatīt GitHub",
-      "hint": "Bez reģistrācijas · Vislabāk datorā, ar Chrome vai Edge",
+      "hint": "Bez reģistrācijas · Vislabāk datorā ar jaunu pārlūku",
       "demo": "Izmēģināt demo",
       "badgeAlt": "Bezmaksas CapCut alternatīva"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "AI attēli taviem sīktēliem",
-        "text": "Apraksti attēlu, un SANA-Sprint to uzzīmēs tavā videokartē bez maksas un neko nenosūtot. Vienreizēja 3,1 GB lejupielāde, datorā ar Chrome vai Edge"
+        "text": "Apraksti attēlu, un SANA-Sprint to uzzīmēs tavā videokartē bez maksas un neko nenosūtot. Vienreizēja 3,1 GB lejupielāde, datorā ar jaunu pārlūku"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Rediģēšana un eksports darbojas. Pēc cilnes aizvēršanas tev būs jāizvēlas video vēlreiz",
       "safari": "Tikai jaunākās versijas. Pēc pārlādēšanas izvēlies video vēlreiz; eksports tiek lejupielādēts",
       "mobile": "Tālruņi un planšetdatori",
-      "mobileText": "Darbojas īsiem klipiem, bet atmiņas ierobežojumu dēļ gari video nav uzticami"
+      "mobileText": "Darbojas īsiem klipiem, bet atmiņas ierobežojumu dēļ gari video nav uzticami",
+      "aiImages": "Atkarīgs no pārlūka un videokartes (WebGPU, aptuveni 8 GB atmiņas). Sīktēlu lapā redzēsi, vai tas ir iespējams tavā gadījumā"
     },
     "faq": {
       "title": "Biežāk uzdotie jautājumi",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Kuru pārlūku izmantot?",
-        "a": "Chrome vai Edge datorā sniedz labāko pieredzi. Firefox un Safari arī darbojas, ar dažiem papildu klikšķiem, lai atkal atvērtu video. Telefonā labāk izvēlies īsus video"
+        "a": "Sistēmā Windows, Mac vai Linux vislabāko pieredzi sniedz Chrome, Edge, Opera un Brave. Darbojas arī Firefox un Safari, video atkārtotai atvēršanai vajag dažus papildu klikšķus. Tālrunī izmanto tikai īsus video"
       },
       "size": {
         "q": "Vai ir faila lieluma ierobežojums?",
@@ -250,7 +252,7 @@
       "rnnoise": "Noņem fona troksni no balss",
       "count": "AI modeļi, visi tavā datorā",
       "used": "Izmantotie AI modeļi",
-      "note": "SANA-Sprint nepieciešams dators ar Chrome vai Edge un aptuveni 8 GB grafiskās atmiņas. Tā 3,1 GB tiek lejupielādēti vienreiz no Hugging Face un paliek tavā pārlūkā, tavā datorā"
+      "note": "SANA-Sprint nepieciešams dators, jauns pārlūks ar WebGPU atbalstu un aptuveni 8 GB grafiskās atmiņas. Tā 3,1 GB tiek lejupielādēti vienreiz no Hugging Face un paliek tavā pārlūkā, tavā datorā"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Izveidot vēl vienu",
       "size": "Vienreizēja {{ size }} lejupielāde no Hugging Face, tiek glabāta šajā pārlūkā tavā datorā. Apmēram minūte vienam attēlam",
       "generating": "Veido attēlu…",
-      "unsupported": "Nepieciešams Chrome vai Edge datorā ar jaunu videokarti",
+      "unsupported": "Šajā ierīcē nav pieejams: nepieciešams dators un jauns pārlūks ar WebGPU atbalstu",
       "error": "Attēlu neizdevās izveidot. Iespējams, videokartei trūkst atmiņas: aizver citas cilnes un lietotnes un mēģini vēlreiz",
       "terms": "Veidojot attēlu, tu piekrīti modeļa lietošanas noteikumiem",
       "downloadError": "AI modeli neizdevās lejupielādēt. Mēģini vēlreiz pēc dažām minūtēm",
       "history": "Tevis izveidotie attēli",
-      "requirements": "Tikai datorā: Chrome vai Edge un videokarte ar aptuveni 8 GB atmiņas"
+      "requirements": "Tikai datorā: jauns pārlūks ar WebGPU atbalstu un videokarte ar aptuveni 8 GB atmiņas"
     }
   },
   "seo": {

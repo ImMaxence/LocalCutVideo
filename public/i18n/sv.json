@@ -21,7 +21,8 @@
     "menu": "Öppna menyn",
     "close": "Stäng menyn",
     "thumbnail": "Miniatyrbilder",
-    "ai": "AI"
+    "ai": "AI",
+    "openShort": "Editor"
   },
   "theme": {
     "system": "System",
@@ -49,7 +50,7 @@
       "lead": "Klipp bort pauser och ”öh”, lägg till animerade undertexter och byt automatiskt till TikTok-format. Gratis, utan konto och utan vattenstämpel: allt sker på din dator",
       "cta": "Redigera min video gratis",
       "github": "Visa på GitHub",
-      "hint": "Ingen registrering · Bäst på en dator, med Chrome eller Edge",
+      "hint": "Ingen registrering · Bäst på dator, med en modern webbläsare",
       "demo": "Testa demon",
       "badgeAlt": "Det gratis alternativet till CapCut"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "AI-bilder till dina miniatyrer",
-        "text": "Beskriv en bild så ritar SANA-Sprint den på ditt grafikkort, gratis och utan att något skickas. Engångsnedladdning på 3,1 GB, på en dator med Chrome eller Edge"
+        "text": "Beskriv en bild så ritar SANA-Sprint den på ditt grafikkort, gratis och utan att något skickas. Engångsnedladdning på 3,1 GB, på en dator med en modern webbläsare"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Redigering och export fungerar. När du har stängt fliken behöver du välja videon igen",
       "safari": "Endast nya versioner. Välj videon igen efter omladdning; exporten laddas ned",
       "mobile": "Mobiler och surfplattor",
-      "mobileText": "Fungerar för korta klipp, men minnesgränser gör långa videor opålitliga"
+      "mobileText": "Fungerar för korta klipp, men minnesgränser gör långa videor opålitliga",
+      "aiImages": "Beror på din webbläsare och ditt grafikkort (WebGPU, cirka 8 GB minne). Miniatyrsidan visar om det går hos dig"
     },
     "faq": {
       "title": "Vanliga frågor",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Vilken webbläsare ska jag använda?",
-        "a": "Chrome eller Edge på en dator ger den bästa upplevelsen. Firefox och Safari fungerar också, med några extra klick för att öppna en video igen. I mobilen passar korta videor bäst"
+        "a": "På Windows, Mac eller Linux ger Chrome, Edge, Opera och Brave den bästa upplevelsen. Firefox och Safari fungerar också, med några extra klick för att öppna en video igen. På mobilen, håll dig till korta videor"
       },
       "size": {
         "q": "Finns det en gräns för filstorleken?",
@@ -250,7 +252,7 @@
       "rnnoise": "Tar bort bakgrundsljud från rösten",
       "count": "AI-modeller, alla på din dator",
       "used": "AI-modeller som används",
-      "note": "SANA-Sprint kräver en dator med Chrome eller Edge och cirka 8 GB grafikminne. Dess 3,1 GB laddas ned en gång från Hugging Face och stannar i din webbläsare, på din dator"
+      "note": "SANA-Sprint kräver en dator, en modern webbläsare med WebGPU och cirka 8 GB grafikminne. Dess 3,1 GB laddas ned en gång från Hugging Face och stannar i din webbläsare, på din dator"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Skapa en till",
       "size": "Engångsnedladdning på {{ size }} från Hugging Face, sparas i den här webbläsaren på din dator. Ungefär en minut per bild",
       "generating": "Skapar bilden…",
-      "unsupported": "Kräver Chrome eller Edge på en dator med modernt grafikkort",
+      "unsupported": "Inte tillgängligt på den här enheten: kräver en dator och en modern webbläsare med WebGPU",
       "error": "Bilden kunde inte skapas. Ditt grafikkort kan ha för lite minne: stäng andra flikar och program och försök igen",
       "terms": "Genom att skapa en bild godkänner du modellens användarvillkor",
       "downloadError": "AI-modellen kunde inte laddas ned. Försök igen om några minuter",
       "history": "Dina skapade bilder",
-      "requirements": "Endast på dator: Chrome eller Edge och ett grafikkort med cirka 8 GB minne"
+      "requirements": "Endast på dator: en modern webbläsare med WebGPU och ett grafikkort med cirka 8 GB minne"
     }
   },
   "seo": {

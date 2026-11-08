@@ -939,6 +939,8 @@ details {
 
 .final {
   display: grid;
+  /* Without minmax, a long button widens the column past the edge of the card. */
+  grid-template-columns: minmax(0, 1fr);
   justify-items: center;
   gap: 16px;
   padding: 56px 24px;
@@ -958,6 +960,10 @@ details {
   }
   .btn {
     margin-top: 8px;
+    max-width: 100%;
+    height: auto;
+    min-height: 48px;
+    white-space: normal;
     background: #fff;
     color: #2a1670;
     border-color: transparent;
@@ -991,9 +997,39 @@ details {
   .stats {
     grid-template-columns: repeat(2, 1fr);
   }
+  /* Long lists of cards become one row to swipe; the next card shows at the edge. */
   .steps,
-  .features {
-    grid-template-columns: 1fr;
+  .features,
+  .ai-models {
+    --carousel-gutter: 24px;
+    display: flex;
+    gap: 12px;
+    margin-inline: calc(-1 * var(--carousel-gutter));
+    padding-inline: var(--carousel-gutter);
+    scroll-padding-inline: var(--carousel-gutter);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    > * {
+      flex: 0 0 min(82%, 300px);
+      scroll-snap-align: start;
+    }
+  }
+  .ai-models {
+    --carousel-gutter: 20px;
+  }
+  /* Cards still outside the row would otherwise fade in late, in the middle of a swipe. */
+  .steps > li,
+  .features > .feature {
+    opacity: 1;
+    transform: none;
+  }
+  .final {
+    padding: 40px 20px;
   }
   .window-body {
     grid-template-columns: 1fr 120px;

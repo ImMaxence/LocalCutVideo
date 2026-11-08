@@ -21,7 +21,8 @@
     "menu": "Atidaryti meniu",
     "close": "Uždaryti meniu",
     "thumbnail": "Miniatiūros",
-    "ai": "DI"
+    "ai": "DI",
+    "openShort": "Redaktorius"
   },
   "theme": {
     "system": "Sistemos",
@@ -49,7 +50,7 @@
       "lead": "Iškirpkite pauzes ir „ee“, pridėkite animuotus subtitrus ir automatiškai pereikite į TikTok formatą. Nemokamai, be paskyros ir be vandens ženklo: viskas vyksta jūsų kompiuteryje",
       "cta": "Montuoti mano vaizdo įrašą nemokamai",
       "github": "Žiūrėti GitHub",
-      "hint": "Be registracijos · Geriausia kompiuteryje, su Chrome arba Edge",
+      "hint": "Be registracijos · Geriausia kompiuteryje su nauja naršykle",
       "demo": "Išbandyti demonstraciją",
       "badgeAlt": "Nemokama CapCut alternatyva"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "DI vaizdai jūsų miniatiūroms",
-        "text": "Aprašykite vaizdą, ir „SANA-Sprint“ nupieš jį jūsų vaizdo plokštėje nemokamai ir nieko nesiunčiant. Vienkartinis 3,1 GB atsisiuntimas, kompiuteryje su „Chrome“ arba „Edge“"
+        "text": "Aprašykite vaizdą, ir „SANA-Sprint“ nupieš jį jūsų vaizdo plokštėje nemokamai ir nieko nesiunčiant. Vienkartinis 3,1 GB atsisiuntimas, kompiuteryje su nauja naršykle"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Redagavimas ir eksportas veikia. Uždarius skirtuką reikės iš naujo pasirinkti vaizdo įrašą",
       "safari": "Tik naujos versijos. Įkėlę iš naujo, vėl pasirinkite vaizdo įrašą; eksportas atsisiunčiamas",
       "mobile": "Telefonai ir planšetės",
-      "mobileText": "Tinka trumpiems klipams, bet dėl atminties apribojimų ilgi vaizdo įrašai nepatikimi"
+      "mobileText": "Tinka trumpiems klipams, bet dėl atminties apribojimų ilgi vaizdo įrašai nepatikimi",
+      "aiImages": "Priklauso nuo naršyklės ir vaizdo plokštės (WebGPU, maždaug 8 GB atminties). Miniatiūrų puslapyje matysite, ar tai įmanoma jūsų įrenginyje"
     },
     "faq": {
       "title": "Dažnai užduodami klausimai",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Kokią naršyklę naudoti?",
-        "a": "Chrome arba Edge kompiuteryje suteikia geriausią patirtį. Firefox ir Safari taip pat veikia, tik vaizdo įrašui vėl atidaryti prireiks keleto papildomų paspaudimų. Telefone rinkitės trumpus vaizdo įrašus"
+        "a": "„Windows“, „Mac“ ar „Linux“ sistemose geriausiai veikia „Chrome“, „Edge“, „Opera“ ir „Brave“. „Firefox“ ir „Safari“ taip pat veikia, tik norint iš naujo atidaryti vaizdo įrašą reikia kelių papildomų paspaudimų. Telefone naudokite tik trumpus vaizdo įrašus"
       },
       "size": {
         "q": "Ar yra failo dydžio apribojimas?",
@@ -250,7 +252,7 @@
       "rnnoise": "Pašalina foninį triukšmą iš balso",
       "count": "DI modeliai, visi jūsų kompiuteryje",
       "used": "Naudojami DI modeliai",
-      "note": "„SANA-Sprint“ reikia kompiuterio su „Chrome“ arba „Edge“ ir maždaug 8 GB grafinės atminties. Jo 3,1 GB atsisiunčiami vieną kartą iš „Hugging Face“ ir lieka jūsų naršyklėje, jūsų kompiuteryje"
+      "note": "„SANA-Sprint“ reikia kompiuterio, naujos naršyklės su WebGPU palaikymu ir maždaug 8 GB grafinės atminties. Jo 3,1 GB atsisiunčiami vieną kartą iš „Hugging Face“ ir lieka jūsų naršyklėje, jūsų kompiuteryje"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Sukurti kitą",
       "size": "Vienkartinis {{ size }} atsisiuntimas iš „Hugging Face“, saugomas šioje naršyklėje jūsų kompiuteryje. Maždaug minutė vienam vaizdui",
       "generating": "Kuriamas vaizdas…",
-      "unsupported": "Reikia „Chrome“ arba „Edge“ kompiuteryje su nauja vaizdo plokšte",
+      "unsupported": "Šiame įrenginyje neprieinama: reikia kompiuterio ir naujos naršyklės su WebGPU palaikymu",
       "error": "Vaizdo sukurti nepavyko. Jūsų vaizdo plokštei gali trūkti atminties: uždarykite kitus skirtukus bei programas ir bandykite dar kartą",
       "terms": "Kurdami vaizdą sutinkate su modelio naudojimo sąlygomis",
       "downloadError": "DI modelio atsisiųsti nepavyko. Bandykite dar kartą po kelių minučių",
       "history": "Jūsų sukurti vaizdai",
-      "requirements": "Tik kompiuteryje: „Chrome“ arba „Edge“ ir vaizdo plokštė su maždaug 8 GB atminties"
+      "requirements": "Tik kompiuteryje: nauja naršyklė su WebGPU palaikymu ir vaizdo plokštė su maždaug 8 GB atminties"
     }
   },
   "seo": {

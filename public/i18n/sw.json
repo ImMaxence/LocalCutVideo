@@ -21,7 +21,8 @@
     "menu": "Fungua menyu",
     "close": "Funga menyu",
     "thumbnail": "Picha za jalada",
-    "ai": "AI"
+    "ai": "AI",
+    "openShort": "Kihariri"
   },
   "theme": {
     "system": "Mfumo",
@@ -49,7 +50,7 @@
       "lead": "Kata vituo na “aaa”, ongeza manukuu yanayosonga na uhamie kiotomatiki kwenye muundo wa TikTok. Bure, bila akaunti na bila alama ya maji: kila kitu hufanyika kwenye kompyuta yako",
       "cta": "Hariri video yangu bure",
       "github": "Tazama kwenye GitHub",
-      "hint": "Bila kujisajili · Bora kwenye kompyuta, ukitumia Chrome au Edge",
+      "hint": "Bila kujisajili · Bora zaidi kwenye kompyuta, na kivinjari kipya",
       "demo": "Jaribu onyesho",
       "badgeAlt": "Mbadala wa bure wa CapCut"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "Picha za AI kwa vijipicha vyako",
-        "text": "Eleza picha na SANA-Sprint itaichora kwenye kadi yako ya michoro, bure na bila kutuma chochote. Upakuaji wa mara moja wa GB 3.1, kwenye kompyuta yenye Chrome au Edge"
+        "text": "Eleza picha na SANA-Sprint itaichora kwenye kadi yako ya michoro, bure na bila kutuma chochote. Upakuaji wa mara moja wa GB 3.1, kwenye kompyuta yenye kivinjari kipya"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Kuhariri na kuhamisha hufanya kazi. Baada ya kufunga kichupo, unahitaji kuchagua video tena",
       "safari": "Matoleo mapya tu. Chagua video tena baada ya kupakia upya; uhamishaji hupakuliwa",
       "mobile": "Simu na kompyuta kibao",
-      "mobileText": "Hufanya kazi kwa klipu fupi, lakini mipaka ya kumbukumbu hufanya video ndefu zisiaminike"
+      "mobileText": "Hufanya kazi kwa klipu fupi, lakini mipaka ya kumbukumbu hufanya video ndefu zisiaminike",
+      "aiImages": "Inategemea kivinjari chako na kadi ya michoro (WebGPU, kumbukumbu ya takriban GB 8). Ukurasa wa vijipicha utaonyesha kama inawezekana kwako"
     },
     "faq": {
       "title": "Maswali yanayoulizwa mara kwa mara",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Nitumie kivinjari gani?",
-        "a": "Chrome au Edge kwenye kompyuta hutoa uzoefu bora zaidi. Firefox na Safari pia hufanya kazi, kwa mibofyo michache zaidi ili kufungua video tena. Kwenye simu, pendelea video fupi"
+        "a": "Kwenye Windows, Mac au Linux, Chrome, Edge, Opera na Brave hutoa matumizi bora zaidi. Firefox na Safari pia hufanya kazi, kwa kubofya mara chache zaidi ili kufungua video tena. Kwenye simu, tumia video fupi tu"
       },
       "size": {
         "q": "Je, kuna kikomo cha ukubwa wa faili?",
@@ -250,7 +252,7 @@
       "rnnoise": "Inaondoa kelele za nyuma kwenye sauti",
       "count": "za AI, zote kwenye kompyuta yako",
       "used": "Modeli za AI zinazotumika",
-      "note": "SANA-Sprint inahitaji kompyuta yenye Chrome au Edge na kumbukumbu ya michoro ya takriban GB 8. GB 3.1 zake zinapakuliwa mara moja kutoka Hugging Face na hubaki kwenye kivinjari chako, katika kompyuta yako"
+      "note": "SANA-Sprint inahitaji kompyuta, kivinjari kipya chenye WebGPU na kumbukumbu ya michoro ya takriban GB 8. GB 3.1 zake zinapakuliwa mara moja kutoka Hugging Face na hubaki kwenye kivinjari chako, katika kompyuta yako"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Tengeneza nyingine",
       "size": "Upakuaji wa mara moja wa {{ size }} kutoka Hugging Face, huhifadhiwa kwenye kivinjari hiki katika kompyuta yako. Takriban dakika moja kwa kila picha",
       "generating": "Inatengeneza picha…",
-      "unsupported": "Inahitaji Chrome au Edge kwenye kompyuta yenye kadi mpya ya michoro",
+      "unsupported": "Haipatikani kwenye kifaa hiki: inahitaji kompyuta na kivinjari kipya chenye WebGPU",
       "error": "Picha haikuweza kutengenezwa. Huenda kadi yako ya michoro haina kumbukumbu ya kutosha: funga vichupo na programu nyingine, kisha ujaribu tena",
       "terms": "Kwa kutengeneza picha, unakubali masharti ya matumizi ya modeli",
       "downloadError": "Modeli ya AI haikuweza kupakuliwa. Jaribu tena baada ya dakika chache",
       "history": "Picha ulizotengeneza",
-      "requirements": "Kwenye kompyuta tu: Chrome au Edge na kadi ya michoro yenye kumbukumbu ya takriban GB 8"
+      "requirements": "Kwenye kompyuta tu: kivinjari kipya chenye WebGPU na kadi ya michoro yenye kumbukumbu ya takriban GB 8"
     }
   },
   "seo": {

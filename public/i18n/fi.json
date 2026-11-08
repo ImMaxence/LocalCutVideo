@@ -21,7 +21,8 @@
     "menu": "Avaa valikko",
     "close": "Sulje valikko",
     "thumbnail": "Pikkukuvat",
-    "ai": "Tekoäly"
+    "ai": "Tekoäly",
+    "openShort": "Editori"
   },
   "theme": {
     "system": "Järjestelmä",
@@ -49,7 +50,7 @@
       "lead": "Leikkaa tauot ja ”öö”:t pois, lisää animoidut tekstitykset ja vaihda TikTok-muotoon automaattisesti. Ilmainen, ilman tiliä ja ilman vesileimaa: kaikki tapahtuu tietokoneellasi",
       "cta": "Editoi videoni ilmaiseksi",
       "github": "Katso GitHubissa",
-      "hint": "Ei rekisteröitymistä · Paras tietokoneella, Chromella tai Edgellä",
+      "hint": "Ei rekisteröitymistä · Parhaimmillaan tietokoneella, uudehkolla selaimella",
       "demo": "Kokeile demoa",
       "badgeAlt": "Ilmainen CapCut-vaihtoehto"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "Tekoälykuvia pikkukuviisi",
-        "text": "Kuvaile kuva, niin SANA-Sprint piirtää sen näytönohjaimellasi, ilmaiseksi ja mitään lähettämättä. Kertalataus 3,1 Gt, tietokoneella Chromessa tai Edgessä"
+        "text": "Kuvaile kuva, niin SANA-Sprint piirtää sen näytönohjaimellasi, ilmaiseksi ja mitään lähettämättä. Kertalataus 3,1 Gt, tietokoneella ja uudehkolla selaimella"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Muokkaus ja vienti toimivat. Kun olet sulkenut välilehden, sinua pyydetään valitsemaan video uudelleen",
       "safari": "Vain uudet versiot. Valitse video uudelleen sivun päivityksen jälkeen; vienti ladataan",
       "mobile": "Puhelimet ja tabletit",
-      "mobileText": "Toimii lyhyillä leikkeillä, mutta muistirajoitusten vuoksi pitkät videot eivät ole luotettavia"
+      "mobileText": "Toimii lyhyillä leikkeillä, mutta muistirajoitusten vuoksi pitkät videot eivät ole luotettavia",
+      "aiImages": "Riippuu selaimestasi ja näytönohjaimestasi (WebGPU, noin 8 Gt muistia). Pikkukuvasivu kertoo, onnistuuko se sinulla"
     },
     "faq": {
       "title": "Usein kysytyt kysymykset",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Mitä selainta kannattaa käyttää?",
-        "a": "Chrome tai Edge tietokoneella tarjoavat parhaan kokemuksen. Firefox ja Safari toimivat myös, muutamalla lisäklikkauksella videon avaamiseksi uudelleen. Puhelimella kannattaa suosia lyhyitä videoita"
+        "a": "Windowsissa, Macissa tai Linuxissa Chrome, Edge, Opera ja Brave tarjoavat parhaan kokemuksen. Myös Firefox ja Safari toimivat, videon avaaminen uudelleen vaatii vain muutaman lisäklikkauksen. Puhelimella kannattaa käsitellä vain lyhyitä videoita"
       },
       "size": {
         "q": "Onko tiedostokoolla rajaa?",
@@ -250,7 +252,7 @@
       "rnnoise": "Poistaa taustamelun puheesta",
       "count": "tekoälymallia, kaikki tietokoneellasi",
       "used": "Käytetyt tekoälymallit",
-      "note": "SANA-Sprint vaatii tietokoneen, jossa on Chrome tai Edge ja noin 8 Gt näytönmuistia. Sen 3,1 Gt ladataan kerran Hugging Facesta ja säilyy selaimessasi tietokoneellasi"
+      "note": "SANA-Sprint vaatii tietokoneen, uudehkon WebGPU-yhteensopivan selaimen ja noin 8 Gt näytönmuistia. Sen 3,1 Gt ladataan kerran Hugging Facesta ja säilyy selaimessasi tietokoneellasi"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Luo toinen",
       "size": "Kertalataus {{ size }} Hugging Facesta, säilytetään tässä selaimessa tietokoneellasi. Noin minuutti kuvaa kohden",
       "generating": "Luodaan kuvaa…",
-      "unsupported": "Vaatii Chromen tai Edgen tietokoneella, jossa on uudehko näytönohjain",
+      "unsupported": "Ei käytettävissä tällä laitteella: vaatii tietokoneen ja uudehkon WebGPU-yhteensopivan selaimen",
       "error": "Kuvaa ei voitu luoda. Näytönohjaimesi muisti saattaa loppua kesken: sulje muut välilehdet ja sovellukset ja yritä uudelleen",
       "terms": "Luomalla kuvan hyväksyt mallin käyttöehdot",
       "downloadError": "Tekoälymallia ei voitu ladata. Yritä uudelleen muutaman minuutin kuluttua",
       "history": "Luomasi kuvat",
-      "requirements": "Vain tietokoneella: Chrome tai Edge ja näytönohjain, jossa on noin 8 Gt muistia"
+      "requirements": "Vain tietokoneella: uudehko WebGPU-yhteensopiva selain ja näytönohjain, jossa on noin 8 Gt muistia"
     }
   },
   "seo": {

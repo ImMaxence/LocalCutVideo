@@ -21,7 +21,8 @@
     "menu": "Abrir el menú",
     "close": "Cerrar el menú",
     "thumbnail": "Miniaturas",
-    "ai": "IA"
+    "ai": "IA",
+    "openShort": "Editor"
   },
   "theme": {
     "system": "Sistema",
@@ -49,7 +50,7 @@
       "lead": "Corta los silencios y los «eh», añade subtítulos animados y pasa al formato TikTok automáticamente. Gratis, sin cuenta y sin marca de agua: todo ocurre en tu ordenador",
       "cta": "Editar mi vídeo gratis",
       "github": "Ver en GitHub",
-      "hint": "Sin registro · Ideal en ordenador, con Chrome o Edge",
+      "hint": "Sin registro · Ideal en ordenador, con un navegador reciente",
       "demo": "Probar la demo",
       "badgeAlt": "La alternativa gratis a CapCut"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "Imágenes con IA para tus miniaturas",
-        "text": "Describe una imagen y SANA-Sprint la dibuja en tu tarjeta gráfica, gratis y sin enviar nada. Descarga única de 3,1 GB, en un ordenador con Chrome o Edge"
+        "text": "Describe una imagen y SANA-Sprint la dibuja en tu tarjeta gráfica, gratis y sin enviar nada. Descarga única de 3,1 GB, en un ordenador con un navegador reciente"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "La edición y la exportación funcionan. Tras cerrar la pestaña tendrás que volver a seleccionar el vídeo",
       "safari": "Solo versiones recientes. Vuelve a seleccionar el vídeo tras recargar; la exportación se descarga",
       "mobile": "Móviles y tabletas",
-      "mobileText": "Funciona con clips cortos, pero la memoria limitada hace que los vídeos largos no sean fiables"
+      "mobileText": "Funciona con clips cortos, pero la memoria limitada hace que los vídeos largos no sean fiables",
+      "aiImages": "Depende de tu navegador y tu tarjeta gráfica (WebGPU, unos 8 GB de memoria). La página de miniaturas te indica si es posible en tu equipo"
     },
     "faq": {
       "title": "Preguntas frecuentes",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "¿Qué navegador uso?",
-        "a": "Chrome o Edge en un ordenador dan la mejor experiencia. Firefox y Safari también funcionan, con algunos clics más para volver a abrir un vídeo. En el móvil, mejor vídeos cortos"
+        "a": "En Windows, Mac o Linux, Chrome, Edge, Opera y Brave ofrecen la mejor experiencia. Firefox y Safari también funcionan, con algunos clics más para reabrir un vídeo. En el móvil, limítate a vídeos cortos"
       },
       "size": {
         "q": "¿Hay un límite de tamaño?",
@@ -250,7 +252,7 @@
       "rnnoise": "Elimina el ruido de fondo de la voz",
       "count": "IA, todas en tu ordenador",
       "used": "IA utilizadas",
-      "note": "SANA-Sprint necesita un ordenador con Chrome o Edge y unos 8 GB de memoria gráfica. Sus 3,1 GB se descargan una sola vez desde Hugging Face y se quedan en tu navegador, en tu ordenador"
+      "note": "SANA-Sprint necesita un ordenador, un navegador reciente compatible con WebGPU y unos 8 GB de memoria gráfica. Sus 3,1 GB se descargan una sola vez desde Hugging Face y se quedan en tu navegador, en tu ordenador"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Generar otra",
       "size": "Descarga única de {{ size }} desde Hugging Face, guardada en este navegador en tu ordenador. Aproximadamente un minuto por imagen",
       "generating": "Creando la imagen…",
-      "unsupported": "Requiere Chrome o Edge en un ordenador con una tarjeta gráfica reciente",
+      "unsupported": "No disponible en este dispositivo: requiere un ordenador y un navegador reciente compatible con WebGPU",
       "error": "No se pudo generar la imagen. Puede que a tu tarjeta gráfica le falte memoria: cierra otras pestañas y aplicaciones e inténtalo de nuevo",
       "terms": "Al generar una imagen, aceptas las condiciones de uso del modelo",
       "downloadError": "No se pudo descargar el modelo de IA. Inténtalo de nuevo en unos minutos",
       "history": "Tus imágenes generadas",
-      "requirements": "Solo en ordenador: Chrome o Edge y una tarjeta gráfica con unos 8 GB de memoria"
+      "requirements": "Solo en ordenador: un navegador reciente compatible con WebGPU y una tarjeta gráfica con unos 8 GB de memoria"
     }
   },
   "seo": {

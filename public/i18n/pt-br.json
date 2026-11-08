@@ -21,7 +21,8 @@
     "menu": "Abrir o menu",
     "close": "Fechar o menu",
     "thumbnail": "Miniaturas",
-    "ai": "IA"
+    "ai": "IA",
+    "openShort": "Editor"
   },
   "theme": {
     "system": "Sistema",
@@ -49,7 +50,7 @@
       "lead": "Corte os silêncios e os “éé”, adicione legendas animadas e passe para o formato TikTok automaticamente. Grátis, sem conta e sem marca d'água: tudo acontece no seu computador",
       "cta": "Editar meu vídeo grátis",
       "github": "Ver no GitHub",
-      "hint": "Sem cadastro · Ideal no computador, com Chrome ou Edge",
+      "hint": "Sem cadastro · Ideal no computador, com um navegador recente",
       "demo": "Testar a demo",
       "badgeAlt": "A alternativa grátis ao CapCut"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "Imagens com IA para suas miniaturas",
-        "text": "Descreva uma imagem e o SANA-Sprint a desenha na sua placa de vídeo, de graça e sem enviar nada. Download único de 3,1 GB, em um computador com Chrome ou Edge"
+        "text": "Descreva uma imagem e o SANA-Sprint a desenha na sua placa de vídeo, de graça e sem enviar nada. Download único de 3,1 GB, em um computador com navegador recente"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "A edição e a exportação funcionam. Depois de fechar a aba, será preciso selecionar o vídeo de novo",
       "safari": "Somente versões recentes. Selecione o vídeo de novo após recarregar; a exportação é baixada",
       "mobile": "Celulares e tablets",
-      "mobileText": "Funciona com clipes curtos, mas os limites de memória tornam os vídeos longos instáveis"
+      "mobileText": "Funciona com clipes curtos, mas os limites de memória tornam os vídeos longos instáveis",
+      "aiImages": "Depende do seu navegador e da sua placa de vídeo (WebGPU, cerca de 8 GB de memória). A página de miniaturas informa se é possível no seu caso"
     },
     "faq": {
       "title": "Perguntas frequentes",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Qual navegador usar?",
-        "a": "Chrome ou Edge no computador oferecem a melhor experiência. Firefox e Safari também funcionam, com alguns cliques a mais para reabrir um vídeo. No celular, prefira vídeos curtos"
+        "a": "No Windows, Mac ou Linux, Chrome, Edge, Opera e Brave oferecem a melhor experiência. Firefox e Safari também funcionam, com alguns cliques a mais para reabrir um vídeo. No celular, fique com vídeos curtos"
       },
       "size": {
         "q": "Existe um limite de tamanho de arquivo?",
@@ -250,7 +252,7 @@
       "rnnoise": "Remove o ruído de fundo da voz",
       "count": "IAs, todas no seu computador",
       "used": "IAs usadas",
-      "note": "O SANA-Sprint precisa de um computador com Chrome ou Edge e cerca de 8 GB de memória de vídeo. Seus 3,1 GB são baixados uma única vez do Hugging Face e ficam no seu navegador, no seu computador"
+      "note": "O SANA-Sprint precisa de um computador, um navegador recente compatível com WebGPU e cerca de 8 GB de memória de vídeo. Seus 3,1 GB são baixados uma única vez do Hugging Face e ficam no seu navegador, no seu computador"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Gerar outra",
       "size": "Download único de {{ size }} do Hugging Face, guardado neste navegador no seu computador. Cerca de um minuto por imagem",
       "generating": "Criando a imagem…",
-      "unsupported": "Requer Chrome ou Edge em um computador com placa de vídeo recente",
+      "unsupported": "Indisponível neste dispositivo: requer um computador e um navegador recente compatível com WebGPU",
       "error": "Não foi possível gerar a imagem. Talvez falte memória na sua placa de vídeo: feche outras abas e aplicativos e tente novamente",
       "terms": "Ao gerar uma imagem, você aceita os termos de uso do modelo",
       "downloadError": "Não foi possível baixar o modelo de IA. Tente novamente em alguns minutos",
       "history": "Suas imagens geradas",
-      "requirements": "Somente no computador: Chrome ou Edge e uma placa de vídeo com cerca de 8 GB de memória"
+      "requirements": "Somente no computador: um navegador recente compatível com WebGPU e uma placa de vídeo com cerca de 8 GB de memória"
     }
   },
   "seo": {

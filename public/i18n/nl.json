@@ -21,7 +21,8 @@
     "menu": "Menu openen",
     "close": "Menu sluiten",
     "thumbnail": "Thumbnails",
-    "ai": "AI"
+    "ai": "AI",
+    "openShort": "Editor"
   },
   "theme": {
     "system": "Systeem",
@@ -49,7 +50,7 @@
       "lead": "Knip stiltes en ‘eh’s’ weg, voeg geanimeerde ondertitels toe en zet je video automatisch om naar TikTok-formaat. Gratis, zonder account en zonder watermerk: alles gebeurt op je computer",
       "cta": "Bewerk mijn video gratis",
       "github": "Bekijken op GitHub",
-      "hint": "Geen registratie · Het best op een computer, met Chrome of Edge",
+      "hint": "Geen account · Het beste op een computer, met een recente browser",
       "demo": "Probeer de demo",
       "badgeAlt": "Het gratis alternatief voor CapCut"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "AI-afbeeldingen voor je thumbnails",
-        "text": "Beschrijf een afbeelding en SANA-Sprint tekent hem op je videokaart, gratis en zonder iets te verzenden. Eenmalige download van 3,1 GB, op een computer met Chrome of Edge"
+        "text": "Beschrijf een afbeelding en SANA-Sprint tekent hem op je videokaart, gratis en zonder iets te verzenden. Eenmalige download van 3,1 GB, op een computer met een recente browser"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Bewerken en exporteren werken. Na het sluiten van het tabblad moet je de video opnieuw selecteren",
       "safari": "Alleen recente versies. Selecteer de video opnieuw na het herladen; de export wordt gedownload",
       "mobile": "Telefoons en tablets",
-      "mobileText": "Werkt voor korte clips, maar door geheugenlimieten zijn lange video's onbetrouwbaar"
+      "mobileText": "Werkt voor korte clips, maar door geheugenlimieten zijn lange video's onbetrouwbaar",
+      "aiImages": "Hangt af van je browser en videokaart (WebGPU, ongeveer 8 GB geheugen). De thumbnailpagina laat zien of het bij jou kan"
     },
     "faq": {
       "title": "Veelgestelde vragen",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Welke browser gebruik ik?",
-        "a": "Chrome of Edge op een computer geven de beste ervaring. Firefox en Safari werken ook, met een paar extra klikken om een video opnieuw te openen. Houd het op een telefoon bij korte video's"
+        "a": "Op Windows, Mac of Linux bieden Chrome, Edge, Opera en Brave de beste ervaring. Firefox en Safari werken ook, met een paar klikken extra om een video opnieuw te openen. Houd het op een telefoon bij korte video's"
       },
       "size": {
         "q": "Is er een maximale bestandsgrootte?",
@@ -250,7 +252,7 @@
       "rnnoise": "Haalt achtergrondgeluid uit de stem",
       "count": "AI-modellen, allemaal op je computer",
       "used": "Gebruikte AI-modellen",
-      "note": "SANA-Sprint heeft een computer met Chrome of Edge en ongeveer 8 GB grafisch geheugen nodig. De 3,1 GB wordt eenmalig gedownload van Hugging Face en blijft in je browser op je computer"
+      "note": "SANA-Sprint heeft een computer, een recente browser met WebGPU en ongeveer 8 GB grafisch geheugen nodig. De 3,1 GB wordt eenmalig gedownload van Hugging Face en blijft in je browser op je computer"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Nog een maken",
       "size": "Eenmalige download van {{ size }} van Hugging Face, bewaard in deze browser op je computer. Ongeveer een minuut per afbeelding",
       "generating": "Afbeelding maken…",
-      "unsupported": "Vereist Chrome of Edge op een computer met een recente videokaart",
+      "unsupported": "Niet beschikbaar op dit apparaat: vereist een computer en een recente browser met WebGPU",
       "error": "De afbeelding kon niet worden gemaakt. Je videokaart heeft mogelijk te weinig geheugen: sluit andere tabbladen en programma's en probeer het opnieuw",
       "terms": "Door een afbeelding te maken, accepteer je de gebruiksvoorwaarden van het model",
       "downloadError": "Het AI-model kon niet worden gedownload. Probeer het over een paar minuten opnieuw",
       "history": "Je gemaakte afbeeldingen",
-      "requirements": "Alleen op een computer: Chrome of Edge en een videokaart met ongeveer 8 GB geheugen"
+      "requirements": "Alleen op een computer: een recente browser met WebGPU en een videokaart met ongeveer 8 GB geheugen"
     }
   },
   "seo": {

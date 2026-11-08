@@ -324,6 +324,10 @@ main {
   }
 }
 
+.cta-short {
+  display: none;
+}
+
 /* Responsive ---------------------------------------------------------------------------- */
 
 /* The full header needs about 1100 px in French: below 1200 px, the burger menu takes over. */
@@ -348,12 +352,14 @@ main {
   .bar {
     gap: 10px;
   }
-  .cta span {
+  .cta-full {
     display: none;
   }
+  .cta-short {
+    display: inline;
+  }
   .cta {
-    width: 40px;
-    padding: 0;
+    padding: 0 12px;
   }
 }
 

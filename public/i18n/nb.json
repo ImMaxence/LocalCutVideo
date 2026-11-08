@@ -21,7 +21,8 @@
     "menu": "Åpne menyen",
     "close": "Lukk menyen",
     "thumbnail": "Miniatyrbilder",
-    "ai": "KI"
+    "ai": "KI",
+    "openShort": "Editor"
   },
   "theme": {
     "system": "System",
@@ -49,7 +50,7 @@
       "lead": "Klipp bort pauser og «eh», legg til animerte undertekster og bytt automatisk til TikTok-format. Gratis, uten konto og uten vannmerke: alt skjer på datamaskinen din",
       "cta": "Rediger videoen min gratis",
       "github": "Se på GitHub",
-      "hint": "Ingen registrering · Best på datamaskin, med Chrome eller Edge",
+      "hint": "Ingen registrering · Best på datamaskin, med en nyere nettleser",
       "demo": "Prøv demoen",
       "badgeAlt": "Det gratis alternativet til CapCut"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "KI-bilder til miniatyrene dine",
-        "text": "Beskriv et bilde, så tegner SANA-Sprint det på grafikkortet ditt, gratis og uten at noe sendes. Engangsnedlasting på 3,1 GB, på en datamaskin med Chrome eller Edge"
+        "text": "Beskriv et bilde, så tegner SANA-Sprint det på grafikkortet ditt, gratis og uten at noe sendes. Engangsnedlasting på 3,1 GB, på en datamaskin med en nyere nettleser"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Redigering og eksport fungerer. Når du har lukket fanen, må du velge videoen på nytt",
       "safari": "Bare nyere versjoner. Velg videoen på nytt etter omlasting; eksporten lastes ned",
       "mobile": "Mobiler og nettbrett",
-      "mobileText": "Fungerer for korte klipp, men minnegrenser gjør lange videoer upålitelige"
+      "mobileText": "Fungerer for korte klipp, men minnegrenser gjør lange videoer upålitelige",
+      "aiImages": "Avhenger av nettleseren og grafikkortet ditt (WebGPU, omtrent 8 GB minne). Miniatyrsiden viser om det er mulig hos deg"
     },
     "faq": {
       "title": "Ofte stilte spørsmål",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Hvilken nettleser bør jeg bruke?",
-        "a": "Chrome eller Edge på en datamaskin gir den beste opplevelsen. Firefox og Safari fungerer også, med noen ekstra klikk for å åpne en video på nytt. På mobil passer korte videoer best"
+        "a": "På Windows, Mac eller Linux gir Chrome, Edge, Opera og Brave den beste opplevelsen. Firefox og Safari fungerer også, med noen ekstra klikk for å åpne en video på nytt. På mobil bør du holde deg til korte videoer"
       },
       "size": {
         "q": "Finnes det en grense for filstørrelse?",
@@ -250,7 +252,7 @@
       "rnnoise": "Fjerner bakgrunnsstøy fra stemmen",
       "count": "KI-modeller, alle på datamaskinen din",
       "used": "KI-modeller som brukes",
-      "note": "SANA-Sprint krever en datamaskin med Chrome eller Edge og omtrent 8 GB grafikkminne. De 3,1 GB lastes ned én gang fra Hugging Face og blir i nettleseren din, på datamaskinen din"
+      "note": "SANA-Sprint krever en datamaskin, en nyere nettleser med WebGPU og omtrent 8 GB grafikkminne. De 3,1 GB lastes ned én gang fra Hugging Face og blir i nettleseren din, på datamaskinen din"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Lag et til",
       "size": "Engangsnedlasting på {{ size }} fra Hugging Face, lagret i denne nettleseren på datamaskinen din. Omtrent ett minutt per bilde",
       "generating": "Lager bildet…",
-      "unsupported": "Krever Chrome eller Edge på en datamaskin med nyere grafikkort",
+      "unsupported": "Ikke tilgjengelig på denne enheten: krever en datamaskin og en nyere nettleser med WebGPU",
       "error": "Bildet kunne ikke lages. Grafikkortet ditt mangler kanskje minne: lukk andre faner og programmer, og prøv igjen",
       "terms": "Når du lager et bilde, godtar du modellens bruksvilkår",
       "downloadError": "KI-modellen kunne ikke lastes ned. Prøv igjen om noen minutter",
       "history": "Bildene du har laget",
-      "requirements": "Bare på datamaskin: Chrome eller Edge og et grafikkort med omtrent 8 GB minne"
+      "requirements": "Bare på datamaskin: en nyere nettleser med WebGPU og et grafikkort med omtrent 8 GB minne"
     }
   },
   "seo": {

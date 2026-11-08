@@ -21,7 +21,8 @@
     "menu": "Open menu",
     "close": "Close menu",
     "thumbnail": "Thumbnails",
-    "ai": "AI"
+    "ai": "AI",
+    "openShort": "Editor"
   },
   "theme": {
     "system": "System",
@@ -49,7 +50,7 @@
       "lead": "Cut out silences and “ums”, add animated subtitles and switch to TikTok format automatically. Free, no account, no watermark: everything happens on your computer",
       "cta": "Edit my video for free",
       "github": "View on GitHub",
-      "hint": "No sign-up · Best on a computer, with Chrome or Edge",
+      "hint": "No sign-up · Best on a computer, with a recent browser",
       "demo": "Try the demo",
       "badgeAlt": "The free CapCut alternative"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "AI images for your thumbnails",
-        "text": "Describe a picture and SANA-Sprint draws it on your graphics card, free and with nothing sent. One-time 3.1 GB download, on a computer with Chrome or Edge"
+        "text": "Describe a picture and SANA-Sprint draws it on your graphics card, free and with nothing sent. One-time 3.1 GB download, on a computer with a recent browser"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Editing and export work. After closing the tab you will be asked to select the video again",
       "safari": "Recent versions only. Re-select the video after a reload; the export is downloaded",
       "mobile": "Phones & tablets",
-      "mobileText": "Works for short clips, but memory limits make long videos unreliable"
+      "mobileText": "Works for short clips, but memory limits make long videos unreliable",
+      "aiImages": "Depends on your browser and graphics card (WebGPU, about 8 GB of memory). The thumbnail page tells you if yours can run it"
     },
     "faq": {
       "title": "Frequently asked questions",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Which browser should I use?",
-        "a": "Chrome or Edge on a computer give the best experience. Firefox and Safari work too, with a few extra clicks to reopen a video. On a phone, stick to short videos"
+        "a": "On Windows, Mac or Linux, Chrome, Edge, Opera and Brave give the best experience. Firefox and Safari work too, with a few extra clicks to reopen a video. On a phone, stick to short videos"
       },
       "size": {
         "q": "Is there a file size limit?",
@@ -250,7 +252,7 @@
       "rnnoise": "Removes background noise from the voice",
       "count": "AI models, all on your computer",
       "used": "AI models used",
-      "note": "SANA-Sprint needs a computer with Chrome or Edge and about 8 GB of graphics memory. Its 3.1 GB are downloaded once from Hugging Face and stay in your browser, on your computer"
+      "note": "SANA-Sprint needs a computer, a recent browser with WebGPU and about 8 GB of graphics memory. Its 3.1 GB are downloaded once from Hugging Face and stay in your browser, on your computer"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Generate another",
       "size": "One-time download of {{ size }} from Hugging Face, kept in this browser on your computer. About a minute per image",
       "generating": "Drawing the image…",
-      "unsupported": "Needs Chrome or Edge on a computer with a recent graphics card",
+      "unsupported": "Not available on this device: needs a computer and a recent browser with WebGPU support",
       "error": "The image could not be generated. Your graphics card may be short on memory: close other tabs and applications, then try again",
       "terms": "By generating an image, you accept the model's terms of use",
       "downloadError": "The AI model could not be downloaded. Try again in a few minutes",
       "history": "Your generated images",
-      "requirements": "Computer only: Chrome or Edge and a graphics card with about 8 GB of memory"
+      "requirements": "Computer only: a recent browser with WebGPU and a graphics card with about 8 GB of memory"
     }
   },
   "seo": {

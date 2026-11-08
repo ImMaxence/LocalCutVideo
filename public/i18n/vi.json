@@ -21,7 +21,8 @@
     "menu": "Mở menu",
     "close": "Đóng menu",
     "thumbnail": "Ảnh thu nhỏ",
-    "ai": "AI"
+    "ai": "AI",
+    "openShort": "Biên tập"
   },
   "theme": {
     "system": "Hệ thống",
@@ -49,7 +50,7 @@
       "lead": "Cắt bỏ khoảng lặng và tiếng “ờ”, thêm phụ đề động và tự động chuyển sang định dạng TikTok. Miễn phí, không tài khoản, không hình mờ: mọi thứ diễn ra trên máy tính của bạn",
       "cta": "Dựng video của tôi miễn phí",
       "github": "Xem trên GitHub",
-      "hint": "Không cần đăng ký · Tốt nhất trên máy tính, với Chrome hoặc Edge",
+      "hint": "Không cần đăng ký · Tốt nhất trên máy tính, với trình duyệt mới",
       "demo": "Dùng thử bản demo",
       "badgeAlt": "Lựa chọn thay thế CapCut miễn phí"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "Ảnh AI cho hình thu nhỏ của bạn",
-        "text": "Mô tả một bức ảnh và SANA-Sprint sẽ vẽ trên card đồ họa của bạn, miễn phí và không gửi đi bất cứ thứ gì. Tải xuống một lần 3,1 GB, trên máy tính có Chrome hoặc Edge"
+        "text": "Mô tả một bức ảnh và SANA-Sprint sẽ vẽ trên card đồ họa của bạn, miễn phí và không gửi đi bất cứ thứ gì. Tải xuống một lần 3,1 GB, trên máy tính có trình duyệt mới"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Chỉnh sửa và xuất đều chạy được. Sau khi đóng thẻ, bạn sẽ cần chọn lại video",
       "safari": "Chỉ phiên bản mới. Chọn lại video sau khi tải lại trang; bản xuất được tải xuống",
       "mobile": "Điện thoại & máy tính bảng",
-      "mobileText": "Dùng được với clip ngắn, nhưng giới hạn bộ nhớ khiến video dài kém ổn định"
+      "mobileText": "Dùng được với clip ngắn, nhưng giới hạn bộ nhớ khiến video dài kém ổn định",
+      "aiImages": "Tùy thuộc vào trình duyệt và card đồ họa của bạn (WebGPU, khoảng 8 GB bộ nhớ). Trang hình thu nhỏ sẽ cho bạn biết có thực hiện được không"
     },
     "faq": {
       "title": "Câu hỏi thường gặp",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Nên dùng trình duyệt nào?",
-        "a": "Chrome hoặc Edge trên máy tính cho trải nghiệm tốt nhất. Firefox và Safari cũng hoạt động, chỉ cần thêm vài cú nhấp để mở lại video. Trên điện thoại, nên dùng video ngắn"
+        "a": "Trên Windows, Mac hoặc Linux, Chrome, Edge, Opera và Brave cho trải nghiệm tốt nhất. Firefox và Safari cũng hoạt động, chỉ cần thêm vài lần nhấp để mở lại video. Trên điện thoại, chỉ nên dùng với video ngắn"
       },
       "size": {
         "q": "Có giới hạn dung lượng tệp không?",
@@ -250,7 +252,7 @@
       "rnnoise": "Loại bỏ tiếng ồn nền khỏi giọng nói",
       "count": "mô hình AI, tất cả trên máy tính của bạn",
       "used": "Các mô hình AI được sử dụng",
-      "note": "SANA-Sprint cần máy tính có Chrome hoặc Edge và khoảng 8 GB bộ nhớ đồ họa. 3,1 GB dữ liệu được tải một lần từ Hugging Face và nằm trong trình duyệt, trên máy tính của bạn"
+      "note": "SANA-Sprint cần máy tính, trình duyệt mới hỗ trợ WebGPU và khoảng 8 GB bộ nhớ đồ họa. 3,1 GB dữ liệu được tải một lần từ Hugging Face và nằm trong trình duyệt, trên máy tính của bạn"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Tạo ảnh khác",
       "size": "Tải xuống một lần {{ size }} từ Hugging Face, lưu trong trình duyệt này trên máy tính của bạn. Khoảng một phút mỗi ảnh",
       "generating": "Đang tạo ảnh…",
-      "unsupported": "Cần Chrome hoặc Edge trên máy tính có card đồ họa đời mới",
+      "unsupported": "Không khả dụng trên thiết bị này: cần máy tính và trình duyệt mới hỗ trợ WebGPU",
       "error": "Không thể tạo ảnh. Card đồ họa của bạn có thể thiếu bộ nhớ: hãy đóng các thẻ và ứng dụng khác rồi thử lại",
       "terms": "Khi tạo ảnh, bạn chấp nhận điều khoản sử dụng của mô hình",
       "downloadError": "Không thể tải mô hình AI. Hãy thử lại sau vài phút",
       "history": "Ảnh bạn đã tạo",
-      "requirements": "Chỉ trên máy tính: Chrome hoặc Edge và card đồ họa có khoảng 8 GB bộ nhớ"
+      "requirements": "Chỉ trên máy tính: trình duyệt mới hỗ trợ WebGPU và card đồ họa có khoảng 8 GB bộ nhớ"
     }
   },
   "seo": {

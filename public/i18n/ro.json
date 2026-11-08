@@ -21,7 +21,8 @@
     "menu": "Deschide meniul",
     "close": "Închide meniul",
     "thumbnail": "Miniaturi",
-    "ai": "IA"
+    "ai": "IA",
+    "openShort": "Editor"
   },
   "theme": {
     "system": "Sistem",
@@ -49,7 +50,7 @@
       "lead": "Taie pauzele și „ăăă”-urile, adaugă subtitrări animate și treci automat la formatul TikTok. Gratuit, fără cont și fără filigran: totul se întâmplă pe computerul tău",
       "cta": "Editează-mi videoclipul gratuit",
       "github": "Vezi pe GitHub",
-      "hint": "Fără înregistrare · Ideal pe computer, cu Chrome sau Edge",
+      "hint": "Fără cont · Ideal pe computer, cu un browser recent",
       "demo": "Încearcă demo-ul",
       "badgeAlt": "Alternativa gratuită la CapCut"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "Imagini IA pentru miniaturile tale",
-        "text": "Descrie o imagine, iar SANA-Sprint o desenează pe placa ta video, gratuit și fără să trimită nimic. Descărcare unică de 3,1 GB, pe un computer cu Chrome sau Edge"
+        "text": "Descrie o imagine, iar SANA-Sprint o desenează pe placa ta video, gratuit și fără să trimită nimic. Descărcare unică de 3,1 GB, pe un computer cu un browser recent"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Editarea și exportul funcționează. După închiderea filei, va trebui să selectezi din nou videoclipul",
       "safari": "Doar versiunile recente. Selectează din nou videoclipul după reîncărcare; exportul se descarcă",
       "mobile": "Telefoane și tablete",
-      "mobileText": "Funcționează pentru clipuri scurte, dar limitele de memorie fac videoclipurile lungi nesigure"
+      "mobileText": "Funcționează pentru clipuri scurte, dar limitele de memorie fac videoclipurile lungi nesigure",
+      "aiImages": "Depinde de browser și de placa video (WebGPU, aproximativ 8 GB de memorie). Pagina de miniaturi îți arată dacă este posibil la tine"
     },
     "faq": {
       "title": "Întrebări frecvente",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Ce browser să folosesc?",
-        "a": "Chrome sau Edge pe computer oferă cea mai bună experiență. Firefox și Safari funcționează și ele, cu câteva clicuri în plus pentru a redeschide un videoclip. Pe telefon, preferă videoclipurile scurte"
+        "a": "Pe Windows, Mac sau Linux, Chrome, Edge, Opera și Brave oferă cea mai bună experiență. Firefox și Safari funcționează și ele, cu câteva clicuri în plus pentru a redeschide un videoclip. Pe telefon, rămâi la videoclipuri scurte"
       },
       "size": {
         "q": "Există o limită de mărime a fișierului?",
@@ -250,7 +252,7 @@
       "rnnoise": "Elimină zgomotul de fundal din voce",
       "count": "modele IA, toate pe computerul tău",
       "used": "Modele IA folosite",
-      "note": "SANA-Sprint are nevoie de un computer cu Chrome sau Edge și aproximativ 8 GB de memorie grafică. Cei 3,1 GB sunt descărcați o singură dată de pe Hugging Face și rămân în browserul tău, pe computerul tău"
+      "note": "SANA-Sprint are nevoie de un computer, un browser recent compatibil cu WebGPU și aproximativ 8 GB de memorie grafică. Cei 3,1 GB sunt descărcați o singură dată de pe Hugging Face și rămân în browserul tău, pe computerul tău"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Generează alta",
       "size": "Descărcare unică de {{ size }} de pe Hugging Face, păstrată în acest browser pe computerul tău. Aproximativ un minut pe imagine",
       "generating": "Se creează imaginea…",
-      "unsupported": "Necesită Chrome sau Edge pe un computer cu placă video recentă",
+      "unsupported": "Indisponibil pe acest dispozitiv: necesită un computer și un browser recent compatibil cu WebGPU",
       "error": "Imaginea nu a putut fi generată. Poate plăcii tale video îi lipsește memoria: închide alte file și aplicații, apoi încearcă din nou",
       "terms": "Generând o imagine, accepți condițiile de utilizare ale modelului",
       "downloadError": "Modelul IA nu a putut fi descărcat. Încearcă din nou peste câteva minute",
       "history": "Imaginile tale generate",
-      "requirements": "Doar pe computer: Chrome sau Edge și o placă video cu aproximativ 8 GB de memorie"
+      "requirements": "Doar pe computer: un browser recent compatibil cu WebGPU și o placă video cu aproximativ 8 GB de memorie"
     }
   },
   "seo": {

@@ -21,7 +21,8 @@
     "menu": "Buka menu",
     "close": "Tutup menu",
     "thumbnail": "Thumbnail",
-    "ai": "AI"
+    "ai": "AI",
+    "openShort": "Editor"
   },
   "theme": {
     "system": "Sistem",
@@ -49,7 +50,7 @@
       "lead": "Potong jeda dan “eh”, tambahkan subtitel animasi, dan beralih ke format TikTok secara otomatis. Gratis, tanpa akun, dan tanpa watermark: semuanya terjadi di komputer Anda",
       "cta": "Edit video saya gratis",
       "github": "Lihat di GitHub",
-      "hint": "Tanpa daftar · Terbaik di komputer, dengan Chrome atau Edge",
+      "hint": "Tanpa daftar · Terbaik di komputer, dengan browser terbaru",
       "demo": "Coba demonya",
       "badgeAlt": "Alternatif gratis untuk CapCut"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "Gambar AI untuk thumbnail Anda",
-        "text": "Jelaskan gambar dan SANA-Sprint menggambarnya di kartu grafis Anda, gratis dan tanpa mengirim apa pun. Unduhan satu kali 3,1 GB, di komputer dengan Chrome atau Edge"
+        "text": "Jelaskan gambar dan SANA-Sprint menggambarnya di kartu grafis Anda, gratis dan tanpa mengirim apa pun. Unduhan satu kali 3,1 GB, di komputer dengan browser terbaru"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Edit dan ekspor berfungsi. Setelah menutup tab, Anda perlu memilih video lagi",
       "safari": "Hanya versi terbaru. Pilih ulang video setelah memuat ulang; hasil ekspor diunduh",
       "mobile": "Ponsel & tablet",
-      "mobileText": "Berfungsi untuk klip pendek, tetapi batas memori membuat video panjang tidak andal"
+      "mobileText": "Berfungsi untuk klip pendek, tetapi batas memori membuat video panjang tidak andal",
+      "aiImages": "Bergantung pada browser dan kartu grafis Anda (WebGPU, memori sekitar 8 GB). Halaman thumbnail menunjukkan apakah ini bisa dilakukan di perangkat Anda"
     },
     "faq": {
       "title": "Pertanyaan umum",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Browser apa yang sebaiknya saya pakai?",
-        "a": "Chrome atau Edge di komputer memberikan pengalaman terbaik. Firefox dan Safari juga berfungsi, dengan beberapa klik tambahan untuk membuka ulang video. Di ponsel, sebaiknya gunakan video pendek"
+        "a": "Di Windows, Mac, atau Linux, Chrome, Edge, Opera, dan Brave memberikan pengalaman terbaik. Firefox dan Safari juga berfungsi, dengan beberapa klik tambahan untuk membuka ulang video. Di ponsel, gunakan video pendek saja"
       },
       "size": {
         "q": "Apakah ada batas ukuran file?",
@@ -250,7 +252,7 @@
       "rnnoise": "Menghapus derau latar dari suara",
       "count": "model AI, semuanya di komputer Anda",
       "used": "Model AI yang digunakan",
-      "note": "SANA-Sprint memerlukan komputer dengan Chrome atau Edge dan memori grafis sekitar 8 GB. Data 3,1 GB-nya diunduh satu kali dari Hugging Face dan tetap berada di browser, di komputer Anda"
+      "note": "SANA-Sprint memerlukan komputer, browser terbaru yang mendukung WebGPU, dan memori grafis sekitar 8 GB. Data 3,1 GB-nya diunduh satu kali dari Hugging Face dan tetap berada di browser, di komputer Anda"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Buat lagi",
       "size": "Unduhan satu kali {{ size }} dari Hugging Face, disimpan di browser ini di komputer Anda. Sekitar satu menit per gambar",
       "generating": "Membuat gambar…",
-      "unsupported": "Memerlukan Chrome atau Edge di komputer dengan kartu grafis terbaru",
+      "unsupported": "Tidak tersedia di perangkat ini: memerlukan komputer dan browser terbaru yang mendukung WebGPU",
       "error": "Gambar tidak dapat dibuat. Memori kartu grafis Anda mungkin kurang: tutup tab dan aplikasi lain, lalu coba lagi",
       "terms": "Dengan membuat gambar, Anda menerima ketentuan penggunaan model",
       "downloadError": "Model AI tidak dapat diunduh. Coba lagi dalam beberapa menit",
       "history": "Gambar yang Anda buat",
-      "requirements": "Hanya di komputer: Chrome atau Edge dan kartu grafis dengan memori sekitar 8 GB"
+      "requirements": "Hanya di komputer: browser terbaru yang mendukung WebGPU dan kartu grafis dengan memori sekitar 8 GB"
     }
   },
   "seo": {

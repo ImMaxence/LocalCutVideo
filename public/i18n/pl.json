@@ -21,7 +21,8 @@
     "menu": "Otwórz menu",
     "close": "Zamknij menu",
     "thumbnail": "Miniatury",
-    "ai": "AI"
+    "ai": "AI",
+    "openShort": "Edytor"
   },
   "theme": {
     "system": "Systemowy",
@@ -49,7 +50,7 @@
       "lead": "Wytnij pauzy i „yyy”, dodaj animowane napisy i automatycznie przejdź na format TikToka. Za darmo, bez konta i bez znaku wodnego: wszystko dzieje się na twoim komputerze",
       "cta": "Zmontuj mój film za darmo",
       "github": "Zobacz na GitHubie",
-      "hint": "Bez rejestracji · Najlepiej na komputerze, w Chrome lub Edge",
+      "hint": "Bez rejestracji · Najlepiej na komputerze, w aktualnej przeglądarce",
       "demo": "Wypróbuj demo",
       "badgeAlt": "Darmowa alternatywa dla CapCut"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "Obrazy AI do Twoich miniatur",
-        "text": "Opisz obraz, a SANA-Sprint narysuje go na Twojej karcie graficznej, za darmo i bez wysyłania czegokolwiek. Jednorazowe pobranie 3,1 GB, na komputerze z Chrome lub Edge"
+        "text": "Opisz obraz, a SANA-Sprint narysuje go na Twojej karcie graficznej, za darmo i bez wysyłania czegokolwiek. Jednorazowe pobranie 3,1 GB, na komputerze z aktualną przeglądarką"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Montaż i eksport działają. Po zamknięciu karty trzeba będzie ponownie wybrać film",
       "safari": "Tylko najnowsze wersje. Po odświeżeniu wybierz film ponownie; eksport jest pobierany",
       "mobile": "Telefony i tablety",
-      "mobileText": "Działa z krótkimi klipami, ale ograniczenia pamięci sprawiają, że długie filmy są zawodne"
+      "mobileText": "Działa z krótkimi klipami, ale ograniczenia pamięci sprawiają, że długie filmy są zawodne",
+      "aiImages": "Zależy od przeglądarki i karty graficznej (WebGPU, około 8 GB pamięci). Strona miniatur pokaże, czy u Ciebie jest to możliwe"
     },
     "faq": {
       "title": "Najczęściej zadawane pytania",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Jakiej przeglądarki używać?",
-        "a": "Chrome lub Edge na komputerze dają najlepsze wrażenia. Firefox i Safari też działają, z kilkoma dodatkowymi kliknięciami przy ponownym otwieraniu filmu. Na telefonie lepiej sprawdzają się krótkie filmy"
+        "a": "W systemach Windows, Mac i Linux najlepiej działają Chrome, Edge, Opera i Brave. Firefox i Safari też działają, ale ponowne otwarcie filmu wymaga kilku dodatkowych kliknięć. Na telefonie ogranicz się do krótkich filmów"
       },
       "size": {
         "q": "Czy jest limit rozmiaru pliku?",
@@ -250,7 +252,7 @@
       "rnnoise": "Usuwa szum tła z głosu",
       "count": "modeli AI, wszystkie na Twoim komputerze",
       "used": "Używane modele AI",
-      "note": "SANA-Sprint wymaga komputera z Chrome lub Edge i około 8 GB pamięci graficznej. Jego 3,1 GB jest pobierane jednorazowo z Hugging Face i pozostaje w Twojej przeglądarce, na Twoim komputerze"
+      "note": "SANA-Sprint wymaga komputera, aktualnej przeglądarki z obsługą WebGPU i około 8 GB pamięci graficznej. Jego 3,1 GB jest pobierane jednorazowo z Hugging Face i pozostaje w Twojej przeglądarce, na Twoim komputerze"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Wygeneruj kolejny",
       "size": "Jednorazowe pobranie {{ size }} z Hugging Face, przechowywane w tej przeglądarce na Twoim komputerze. Około minuty na obraz",
       "generating": "Tworzenie obrazu…",
-      "unsupported": "Wymaga Chrome lub Edge na komputerze z nowszą kartą graficzną",
+      "unsupported": "Niedostępne na tym urządzeniu: wymaga komputera i aktualnej przeglądarki z obsługą WebGPU",
       "error": "Nie udało się wygenerować obrazu. Karcie graficznej może brakować pamięci: zamknij inne karty i aplikacje, a następnie spróbuj ponownie",
       "terms": "Generując obraz, akceptujesz warunki korzystania z modelu",
       "downloadError": "Nie udało się pobrać modelu AI. Spróbuj ponownie za kilka minut",
       "history": "Twoje wygenerowane obrazy",
-      "requirements": "Tylko na komputerze: Chrome lub Edge i karta graficzna z około 8 GB pamięci"
+      "requirements": "Tylko na komputerze: aktualna przeglądarka z obsługą WebGPU i karta graficzna z około 8 GB pamięci"
     }
   },
   "seo": {

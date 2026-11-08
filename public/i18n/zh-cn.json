@@ -21,7 +21,8 @@
     "menu": "打开菜单",
     "close": "关闭菜单",
     "thumbnail": "封面图",
-    "ai": "AI"
+    "ai": "AI",
+    "openShort": "编辑器"
   },
   "theme": {
     "system": "跟随系统",
@@ -49,7 +50,7 @@
       "lead": "剪掉停顿和“嗯…”，加上动态字幕，并自动转成 TikTok 竖屏格式。免费、无需账号、没有水印：一切都在你的电脑上完成",
       "cta": "免费剪辑我的视频",
       "github": "在 GitHub 上查看",
-      "hint": "无需注册 · 推荐在电脑上使用 Chrome 或 Edge",
+      "hint": "无需注册 · 建议在电脑上使用较新的浏览器",
       "demo": "试试演示",
       "badgeAlt": "免费的 CapCut 替代品"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "为缩略图生成 AI 图像",
-        "text": "描述一张图片，SANA-Sprint 就会在您的显卡上绘制，免费且不发送任何内容。在装有 Chrome 或 Edge 的电脑上一次性下载 3.1 GB"
+        "text": "描述一张图片，SANA-Sprint 就会在您的显卡上绘制，免费且不发送任何内容。在装有较新浏览器的电脑上一次性下载 3.1 GB"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "剪辑和导出可用。关闭标签页后需要重新选择视频",
       "safari": "仅限较新版本。刷新后需重新选择视频；导出以下载方式保存",
       "mobile": "手机和平板",
-      "mobileText": "短片段可用，但受内存限制，长视频不够稳定"
+      "mobileText": "短片段可用，但受内存限制，长视频不够稳定",
+      "aiImages": "取决于您的浏览器和显卡（WebGPU，约 8 GB 显存）。缩略图页面会告诉您是否可用"
     },
     "faq": {
       "title": "常见问题",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "该用哪个浏览器？",
-        "a": "在电脑上使用 Chrome 或 Edge 体验最好。Firefox 和 Safari 也能用，只是重新打开视频时要多点几下。在手机上建议处理短视频"
+        "a": "在 Windows、Mac 或 Linux 上，Chrome、Edge、Opera 和 Brave 的体验最佳。Firefox 和 Safari 也可使用，只是重新打开视频需要多点几下。在手机上请仅处理短视频"
       },
       "size": {
         "q": "有文件大小限制吗？",
@@ -250,7 +252,7 @@
       "rnnoise": "去除语音中的背景噪音",
       "count": "个 AI 模型，全部在您的电脑上",
       "used": "使用的 AI 模型",
-      "note": "SANA-Sprint 需要装有 Chrome 或 Edge 的电脑和约 8 GB 显存。其 3.1 GB 数据仅从 Hugging Face 下载一次，并保存在您电脑的浏览器中"
+      "note": "SANA-Sprint 需要电脑、支持 WebGPU 的较新浏览器和约 8 GB 显存。其 3.1 GB 数据仅从 Hugging Face 下载一次，并保存在您电脑的浏览器中"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "再生成一张",
       "size": "从 Hugging Face 一次性下载 {{ size }}，保存在您电脑的此浏览器中。每张图片约一分钟",
       "generating": "正在生成图片…",
-      "unsupported": "需要在配备较新显卡的电脑上使用 Chrome 或 Edge",
+      "unsupported": "此设备不可用：需要电脑和支持 WebGPU 的较新浏览器",
       "error": "无法生成图片。您的显卡内存可能不足：请关闭其他标签页和应用后重试",
       "terms": "生成图像即表示您接受该模型的使用条款",
       "downloadError": "无法下载 AI 模型。请几分钟后重试",
       "history": "您生成的图片",
-      "requirements": "仅限电脑：需要 Chrome 或 Edge，以及约 8 GB 显存的显卡"
+      "requirements": "仅限电脑：需要支持 WebGPU 的较新浏览器，以及约 8 GB 显存的显卡"
     }
   },
   "seo": {

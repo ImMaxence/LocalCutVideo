@@ -21,7 +21,8 @@
     "menu": "Menü öffnen",
     "close": "Menü schließen",
     "thumbnail": "Thumbnails",
-    "ai": "KI"
+    "ai": "KI",
+    "openShort": "Editor"
   },
   "theme": {
     "system": "System",
@@ -49,7 +50,7 @@
       "lead": "Entferne Pausen und „Ähms“, füge animierte Untertitel hinzu und wechsle automatisch ins TikTok-Format. Kostenlos, ohne Konto, ohne Wasserzeichen: alles passiert auf deinem Computer",
       "cta": "Mein Video kostenlos schneiden",
       "github": "Auf GitHub ansehen",
-      "hint": "Ohne Anmeldung · Am besten am Computer, mit Chrome oder Edge",
+      "hint": "Ohne Anmeldung · Am besten am Computer, mit einem aktuellen Browser",
       "demo": "Demo ausprobieren",
       "badgeAlt": "Die kostenlose CapCut-Alternative"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "KI-Bilder für deine Thumbnails",
-        "text": "Beschreibe ein Bild und SANA-Sprint zeichnet es auf deiner Grafikkarte, kostenlos und ohne dass etwas gesendet wird. Einmaliger Download von 3,1 GB, auf einem Computer mit Chrome oder Edge"
+        "text": "Beschreibe ein Bild und SANA-Sprint zeichnet es auf deiner Grafikkarte, kostenlos und ohne dass etwas gesendet wird. Einmaliger Download von 3,1 GB, auf einem Computer mit aktuellem Browser"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Schnitt und Export funktionieren. Nach dem Schließen des Tabs musst du das Video erneut auswählen",
       "safari": "Nur aktuelle Versionen. Wähle das Video nach dem Neuladen erneut aus; der Export wird heruntergeladen",
       "mobile": "Smartphones & Tablets",
-      "mobileText": "Funktioniert für kurze Clips, aber der begrenzte Speicher macht lange Videos unzuverlässig"
+      "mobileText": "Funktioniert für kurze Clips, aber der begrenzte Speicher macht lange Videos unzuverlässig",
+      "aiImages": "Hängt von deinem Browser und deiner Grafikkarte ab (WebGPU, etwa 8 GB Speicher). Die Thumbnail-Seite zeigt dir, ob es bei dir möglich ist"
     },
     "faq": {
       "title": "Häufige Fragen",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Welchen Browser soll ich nutzen?",
-        "a": "Chrome oder Edge am Computer bieten das beste Erlebnis. Firefox und Safari funktionieren auch, mit ein paar Klicks mehr, um ein Video wieder zu öffnen. Auf dem Handy eignen sich kurze Videos am besten"
+        "a": "Unter Windows, Mac oder Linux bieten Chrome, Edge, Opera und Brave das beste Erlebnis. Firefox und Safari funktionieren auch, mit ein paar Klicks mehr, um ein Video wieder zu öffnen. Am Smartphone besser nur kurze Videos"
       },
       "size": {
         "q": "Gibt es eine Größenbegrenzung?",
@@ -250,7 +252,7 @@
       "rnnoise": "Entfernt Hintergrundgeräusche aus der Stimme",
       "count": "KI-Modelle, alle auf deinem Computer",
       "used": "Verwendete KI-Modelle",
-      "note": "SANA-Sprint braucht einen Computer mit Chrome oder Edge und etwa 8 GB Grafikspeicher. Die 3,1 GB werden einmalig von Hugging Face geladen und bleiben in deinem Browser auf deinem Computer"
+      "note": "SANA-Sprint braucht einen Computer, einen aktuellen Browser mit WebGPU und etwa 8 GB Grafikspeicher. Die 3,1 GB werden einmalig von Hugging Face geladen und bleiben in deinem Browser auf deinem Computer"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Noch eins erzeugen",
       "size": "Einmaliger Download von {{ size }} von Hugging Face, gespeichert in diesem Browser auf deinem Computer. Etwa eine Minute pro Bild",
       "generating": "Bild wird erstellt…",
-      "unsupported": "Benötigt Chrome oder Edge auf einem Computer mit aktueller Grafikkarte",
+      "unsupported": "Auf diesem Gerät nicht verfügbar: Benötigt einen Computer und einen aktuellen Browser mit WebGPU",
       "error": "Das Bild konnte nicht erzeugt werden. Deiner Grafikkarte fehlt vielleicht Speicher: Schließe andere Tabs und Programme und versuche es erneut",
       "terms": "Mit dem Erzeugen eines Bildes akzeptierst du die Nutzungsbedingungen des Modells",
       "downloadError": "Das KI-Modell konnte nicht heruntergeladen werden. Versuche es in ein paar Minuten erneut",
       "history": "Deine erzeugten Bilder",
-      "requirements": "Nur am Computer: Chrome oder Edge und eine Grafikkarte mit etwa 8 GB Speicher"
+      "requirements": "Nur am Computer: ein aktueller Browser mit WebGPU und eine Grafikkarte mit etwa 8 GB Speicher"
     }
   },
   "seo": {

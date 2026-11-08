@@ -21,7 +21,8 @@
     "menu": "Buksan ang menu",
     "close": "Isara ang menu",
     "thumbnail": "Mga thumbnail",
-    "ai": "AI"
+    "ai": "AI",
+    "openShort": "Editor"
   },
   "theme": {
     "system": "System",
@@ -49,7 +50,7 @@
       "lead": "Tanggalin ang mga patlang at “ah”, magdagdag ng animated na subtitle at awtomatikong lumipat sa format ng TikTok. Libre, walang account at walang watermark: lahat ay nangyayari sa computer mo",
       "cta": "I-edit ang video ko nang libre",
       "github": "Tingnan sa GitHub",
-      "hint": "Walang sign-up · Pinakamaganda sa computer, gamit ang Chrome o Edge",
+      "hint": "Walang sign-up · Pinakamainam sa computer, gamit ang bagong browser",
       "demo": "Subukan ang demo",
       "badgeAlt": "Ang libreng alternatibo sa CapCut"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "Mga AI na larawan para sa iyong mga thumbnail",
-        "text": "Ilarawan ang isang larawan at iguguhit ito ng SANA-Sprint sa iyong graphics card, libre at walang ipinapadala. Isang beses na pag-download na 3.1 GB, sa computer na may Chrome o Edge"
+        "text": "Ilarawan ang isang larawan at iguguhit ito ng SANA-Sprint sa iyong graphics card, libre at walang ipinapadala. Isang beses na pag-download na 3.1 GB, sa computer na may bagong browser"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Gumagana ang pag-edit at pag-export. Pagkatapos isara ang tab, kailangan mong piliin ulit ang video",
       "safari": "Mga bagong bersyon lang. Piliin ulit ang video pagkatapos mag-reload; dina-download ang export",
       "mobile": "Mga phone at tablet",
-      "mobileText": "Gumagana sa maiikling clip, pero dahil sa limitasyon ng memory, hindi maaasahan ang mahahabang video"
+      "mobileText": "Gumagana sa maiikling clip, pero dahil sa limitasyon ng memory, hindi maaasahan ang mahahabang video",
+      "aiImages": "Depende sa iyong browser at graphics card (WebGPU, humigit-kumulang 8 GB memory). Ipapakita ng thumbnail page kung posible ito sa iyo"
     },
     "faq": {
       "title": "Mga madalas itanong",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Anong browser ang dapat kong gamitin?",
-        "a": "Ang Chrome o Edge sa computer ang may pinakamagandang karanasan. Gumagana rin ang Firefox at Safari, may ilang dagdag na click para muling buksan ang video. Sa phone, mas mainam ang maiikling video"
+        "a": "Sa Windows, Mac o Linux, pinakamaganda ang karanasan sa Chrome, Edge, Opera at Brave. Gumagana rin ang Firefox at Safari, kailangan lang ng ilang dagdag na click para muling buksan ang video. Sa telepono, maiikling video lang"
       },
       "size": {
         "q": "May limitasyon ba sa laki ng file?",
@@ -250,7 +252,7 @@
       "rnnoise": "Inaalis ang ingay sa background ng boses",
       "count": "AI model, lahat nasa computer mo",
       "used": "Mga AI model na ginagamit",
-      "note": "Kailangan ng SANA-Sprint ang computer na may Chrome o Edge at humigit-kumulang 8 GB na graphics memory. Isang beses dina-download ang 3.1 GB nito mula sa Hugging Face at nananatili sa iyong browser, sa iyong computer"
+      "note": "Kailangan ng SANA-Sprint ang computer, bagong browser na may WebGPU at humigit-kumulang 8 GB na graphics memory. Isang beses dina-download ang 3.1 GB nito mula sa Hugging Face at nananatili sa iyong browser, sa iyong computer"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Gumawa ng isa pa",
       "size": "Isang beses na pag-download ng {{ size }} mula sa Hugging Face, itinatago sa browser na ito sa iyong computer. Mga isang minuto bawat larawan",
       "generating": "Ginagawa ang larawan…",
-      "unsupported": "Kailangan ng Chrome o Edge sa computer na may bagong graphics card",
+      "unsupported": "Hindi available sa device na ito: kailangan ng computer at bagong browser na may WebGPU",
       "error": "Hindi nagawa ang larawan. Maaaring kulang sa memory ang iyong graphics card: isara ang ibang tab at app, saka subukang muli",
       "terms": "Sa paggawa ng larawan, tinatanggap mo ang mga tuntunin sa paggamit ng modelo",
       "downloadError": "Hindi na-download ang AI model. Subukang muli pagkalipas ng ilang minuto",
       "history": "Ang mga nagawa mong larawan",
-      "requirements": "Sa computer lang: Chrome o Edge at graphics card na may humigit-kumulang 8 GB memory"
+      "requirements": "Sa computer lang: bagong browser na may WebGPU at graphics card na may humigit-kumulang 8 GB memory"
     }
   },
   "seo": {

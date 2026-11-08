@@ -21,7 +21,8 @@
     "menu": "Otevřít nabídku",
     "close": "Zavřít nabídku",
     "thumbnail": "Náhledy",
-    "ai": "AI"
+    "ai": "AI",
+    "openShort": "Editor"
   },
   "theme": {
     "system": "Systém",
@@ -49,7 +50,7 @@
       "lead": "Vystřihněte pauzy a „ehm“, přidejte animované titulky a automaticky přejděte na formát pro TikTok. Zdarma, bez účtu a bez vodoznaku: vše probíhá ve vašem počítači",
       "cta": "Sestříhat moje video zdarma",
       "github": "Zobrazit na GitHubu",
-      "hint": "Bez registrace · Nejlépe na počítači, v Chromu nebo Edgi",
+      "hint": "Bez registrace · Nejlépe na počítači s aktuálním prohlížečem",
       "demo": "Vyzkoušet demo",
       "badgeAlt": "Bezplatná alternativa ke CapCutu"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "Obrázky AI pro vaše miniatury",
-        "text": "Popište obrázek a SANA-Sprint ho nakreslí na vaší grafické kartě, zdarma a bez odesílání čehokoli. Jednorázové stažení 3,1 GB, na počítači s Chrome nebo Edge"
+        "text": "Popište obrázek a SANA-Sprint ho nakreslí na vaší grafické kartě, zdarma a bez odesílání čehokoli. Jednorázové stažení 3,1 GB, na počítači s aktuálním prohlížečem"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Střih i export fungují. Po zavření karty budete muset video vybrat znovu",
       "safari": "Pouze nové verze. Po opětovném načtení video vyberte znovu; export se stáhne",
       "mobile": "Telefony a tablety",
-      "mobileText": "Funguje pro krátké klipy, ale kvůli omezené paměti nejsou dlouhá videa spolehlivá"
+      "mobileText": "Funguje pro krátké klipy, ale kvůli omezené paměti nejsou dlouhá videa spolehlivá",
+      "aiImages": "Záleží na prohlížeči a grafické kartě (WebGPU, přibližně 8 GB paměti). Stránka miniatur vám ukáže, zda je to u vás možné"
     },
     "faq": {
       "title": "Časté dotazy",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Jaký prohlížeč použít?",
-        "a": "Chrome nebo Edge na počítači nabízejí nejlepší zážitek. Firefox a Safari fungují také, jen s několika kliknutími navíc při opětovném otevření videa. Na telefonu dejte přednost krátkým videím"
+        "a": "Ve Windows, na Macu nebo v Linuxu nabízejí nejlepší zážitek Chrome, Edge, Opera a Brave. Firefox a Safari fungují také, jen znovuotevření videa vyžaduje pár kliknutí navíc. Na telefonu zůstaňte u krátkých videí"
       },
       "size": {
         "q": "Je nějaký limit velikosti souboru?",
@@ -250,7 +252,7 @@
       "rnnoise": "Odstraní z hlasu hluk na pozadí",
       "count": "modelů AI, všechny na vašem počítači",
       "used": "Použité modely AI",
-      "note": "SANA-Sprint vyžaduje počítač s Chrome nebo Edge a přibližně 8 GB grafické paměti. Jeho 3,1 GB se jednou stáhne z Hugging Face a zůstane ve vašem prohlížeči, ve vašem počítači"
+      "note": "SANA-Sprint vyžaduje počítač, aktuální prohlížeč s podporou WebGPU a přibližně 8 GB grafické paměti. Jeho 3,1 GB se jednou stáhne z Hugging Face a zůstane ve vašem prohlížeči, ve vašem počítači"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Vytvořit další",
       "size": "Jednorázové stažení {{ size }} z Hugging Face, uložené v tomto prohlížeči ve vašem počítači. Asi minuta na obrázek",
       "generating": "Vytváření obrázku…",
-      "unsupported": "Vyžaduje Chrome nebo Edge na počítači s novější grafickou kartou",
+      "unsupported": "Na tomto zařízení není k dispozici: vyžaduje počítač a aktuální prohlížeč s podporou WebGPU",
       "error": "Obrázek se nepodařilo vytvořit. Grafické kartě možná chybí paměť: zavřete ostatní karty a aplikace a zkuste to znovu",
       "terms": "Vytvořením obrázku přijímáte podmínky použití modelu",
       "downloadError": "Model AI se nepodařilo stáhnout. Zkuste to znovu za několik minut",
       "history": "Vaše vytvořené obrázky",
-      "requirements": "Pouze na počítači: Chrome nebo Edge a grafická karta s přibližně 8 GB paměti"
+      "requirements": "Pouze na počítači: aktuální prohlížeč s podporou WebGPU a grafická karta s přibližně 8 GB paměti"
     }
   },
   "seo": {

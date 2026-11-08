@@ -21,7 +21,8 @@
     "menu": "Odpri meni",
     "close": "Zapri meni",
     "thumbnail": "Sličice",
-    "ai": "UI"
+    "ai": "UI",
+    "openShort": "Urejevalnik"
   },
   "theme": {
     "system": "Sistemska",
@@ -49,7 +50,7 @@
       "lead": "Izrežite premore in »eee«, dodajte animirane podnapise in samodejno preklopite na format za TikTok. Brezplačno, brez računa in brez vodnega žiga: vse se dogaja na vašem računalniku",
       "cta": "Uredi moj video brezplačno",
       "github": "Poglej na GitHubu",
-      "hint": "Brez registracije · Najboljše na računalniku, s Chromom ali Edgeom",
+      "hint": "Brez registracije · Najbolje na računalniku, z novejšim brskalnikom",
       "demo": "Preizkusite demo",
       "badgeAlt": "Brezplačna alternativa za CapCut"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "Slike UI za vaše sličice",
-        "text": "Opišite sliko in SANA-Sprint jo bo narisal na vaši grafični kartici, brezplačno in brez pošiljanja česar koli. Enkraten prenos 3,1 GB, na računalniku s Chromom ali Edgeom"
+        "text": "Opišite sliko in SANA-Sprint jo bo narisal na vaši grafični kartici, brezplačno in brez pošiljanja česar koli. Enkraten prenos 3,1 GB, na računalniku z novejšim brskalnikom"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Urejanje in izvoz delujeta. Ko zaprete zavihek, boste morali video znova izbrati",
       "safari": "Samo novejše različice. Po ponovnem nalaganju znova izberite video; izvoz se prenese",
       "mobile": "Telefoni in tablice",
-      "mobileText": "Deluje za kratke posnetke, a zaradi omejitev pomnilnika dolgi videi niso zanesljivi"
+      "mobileText": "Deluje za kratke posnetke, a zaradi omejitev pomnilnika dolgi videi niso zanesljivi",
+      "aiImages": "Odvisno od brskalnika in grafične kartice (WebGPU, približno 8 GB pomnilnika). Stran s sličicami pokaže, ali je to pri vas mogoče"
     },
     "faq": {
       "title": "Pogosta vprašanja",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Kateri brskalnik naj uporabim?",
-        "a": "Chrome ali Edge na računalniku nudita najboljšo izkušnjo. Firefox in Safari prav tako delujeta, z nekaj kliki več za ponovno odpiranje videa. Na telefonu raje izberite kratke videe"
+        "a": "V sistemih Windows, Mac ali Linux najboljšo izkušnjo ponujajo Chrome, Edge, Opera in Brave. Delujeta tudi Firefox in Safari, za ponovno odpiranje videa je potrebnih nekaj dodatnih klikov. Na telefonu ostanite pri kratkih videih"
       },
       "size": {
         "q": "Ali obstaja omejitev velikosti datoteke?",
@@ -250,7 +252,7 @@
       "rnnoise": "Odstrani hrup v ozadju iz glasu",
       "count": "modelov UI, vsi na vašem računalniku",
       "used": "Uporabljeni modeli UI",
-      "note": "SANA-Sprint potrebuje računalnik s Chromom ali Edgeom in približno 8 GB grafičnega pomnilnika. Njegovih 3,1 GB se enkrat prenese s Hugging Face in ostane v vašem brskalniku, na vašem računalniku"
+      "note": "SANA-Sprint potrebuje računalnik, novejši brskalnik s podporo za WebGPU in približno 8 GB grafičnega pomnilnika. Njegovih 3,1 GB se enkrat prenese s Hugging Face in ostane v vašem brskalniku, na vašem računalniku"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Ustvari drugo",
       "size": "Enkraten prenos {{ size }} s Hugging Face, shranjen v tem brskalniku na vašem računalniku. Približno minuta na sliko",
       "generating": "Ustvarjanje slike…",
-      "unsupported": "Potreben je Chrome ali Edge na računalniku z novejšo grafično kartico",
+      "unsupported": "Na tej napravi ni na voljo: potrebna sta računalnik in novejši brskalnik s podporo za WebGPU",
       "error": "Slike ni bilo mogoče ustvariti. Grafični kartici morda primanjkuje pomnilnika: zaprite druge zavihke in aplikacije ter poskusite znova",
       "terms": "Z ustvarjanjem slike sprejemate pogoje uporabe modela",
       "downloadError": "Modela UI ni bilo mogoče prenesti. Poskusite znova čez nekaj minut",
       "history": "Vaše ustvarjene slike",
-      "requirements": "Samo na računalniku: Chrome ali Edge in grafična kartica s približno 8 GB pomnilnika"
+      "requirements": "Samo na računalniku: novejši brskalnik s podporo za WebGPU in grafična kartica s približno 8 GB pomnilnika"
     }
   },
   "seo": {

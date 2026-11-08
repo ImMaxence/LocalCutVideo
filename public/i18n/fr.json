@@ -21,7 +21,8 @@
     "menu": "Ouvrir le menu",
     "close": "Fermer le menu",
     "thumbnail": "Miniatures",
-    "ai": "IA"
+    "ai": "IA",
+    "openShort": "Éditeur"
   },
   "theme": {
     "system": "Système",
@@ -49,7 +50,7 @@
       "lead": "Coupez les blancs et les « euh », ajoutez des sous-titres animés et passez au format TikTok automatiquement. Gratuit, sans compte et sans filigrane : tout se fait sur votre ordinateur",
       "cta": "Monter ma vidéo gratuitement",
       "github": "Voir sur GitHub",
-      "hint": "Sans inscription · Idéal sur ordinateur, avec Chrome ou Edge",
+      "hint": "Sans inscription · Idéal sur ordinateur, avec un navigateur récent",
       "demo": "Essayer la démo",
       "badgeAlt": "L'alternative gratuite à CapCut"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "Des images IA pour vos miniatures",
-        "text": "Décrivez une image et SANA-Sprint la dessine sur votre carte graphique, gratuitement et sans rien envoyer. Téléchargement unique de 3,1 Go, sur un ordinateur avec Chrome ou Edge"
+        "text": "Décrivez une image et SANA-Sprint la dessine sur votre carte graphique, gratuitement et sans rien envoyer. Téléchargement unique de 3,1 Go, sur un ordinateur avec un navigateur récent"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Montage et export fonctionnent. Après fermeture de l'onglet, il faudra resélectionner la vidéo",
       "safari": "Versions récentes uniquement. Resélectionnez la vidéo après un rechargement ; l'export est téléchargé",
       "mobile": "Téléphones et tablettes",
-      "mobileText": "Fonctionne pour des clips courts, mais la mémoire limitée rend les longues vidéos peu fiables"
+      "mobileText": "Fonctionne pour des clips courts, mais la mémoire limitée rend les longues vidéos peu fiables",
+      "aiImages": "Dépend de votre navigateur et de votre carte graphique (WebGPU, environ 8 Go de mémoire). La page des miniatures vous indique si c'est possible chez vous"
     },
     "faq": {
       "title": "Questions fréquentes",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Quel navigateur utiliser ?",
-        "a": "Chrome ou Edge sur ordinateur offrent la meilleure expérience. Firefox et Safari fonctionnent aussi, avec quelques clics de plus pour rouvrir une vidéo. Sur téléphone, préférez les vidéos courtes"
+        "a": "Sur Windows, Mac ou Linux, Chrome, Edge, Opera et Brave offrent la meilleure expérience. Firefox et Safari fonctionnent aussi, avec quelques clics de plus pour rouvrir une vidéo. Sur téléphone, limitez-vous aux vidéos courtes"
       },
       "size": {
         "q": "Y a-t-il une limite de taille ?",
@@ -250,7 +252,7 @@
       "rnnoise": "Retire le bruit de fond de la voix",
       "count": "IA, toutes sur votre ordinateur",
       "used": "IA utilisées",
-      "note": "SANA-Sprint nécessite un ordinateur avec Chrome ou Edge et environ 8 Go de mémoire graphique. Ses 3,1 Go sont téléchargés une seule fois depuis Hugging Face et restent dans votre navigateur, sur votre ordinateur"
+      "note": "SANA-Sprint nécessite un ordinateur, un navigateur récent compatible WebGPU et environ 8 Go de mémoire graphique. Ses 3,1 Go sont téléchargés une seule fois depuis Hugging Face et restent dans votre navigateur, sur votre ordinateur"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "En générer une autre",
       "size": "Téléchargement unique de {{ size }} depuis Hugging Face, conservé dans ce navigateur sur votre ordinateur. Environ une minute par image",
       "generating": "Création de l'image…",
-      "unsupported": "Nécessite Chrome ou Edge sur un ordinateur avec une carte graphique récente",
+      "unsupported": "Indisponible sur cet appareil : nécessite un ordinateur et un navigateur récent compatible WebGPU",
       "error": "L'image n'a pas pu être générée. Votre carte graphique manque peut-être de mémoire : fermez les autres onglets et applications, puis réessayez",
       "terms": "En générant une image, vous acceptez les conditions d'utilisation du modèle",
       "downloadError": "Le modèle IA n'a pas pu être téléchargé. Réessayez dans quelques minutes",
       "history": "Vos images générées",
-      "requirements": "Sur ordinateur uniquement : Chrome ou Edge et une carte graphique avec environ 8 Go de mémoire"
+      "requirements": "Sur ordinateur uniquement : un navigateur récent compatible WebGPU et une carte graphique avec environ 8 Go de mémoire"
     }
   },
   "seo": {

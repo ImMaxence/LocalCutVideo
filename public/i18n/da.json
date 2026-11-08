@@ -21,7 +21,8 @@
     "menu": "Åbn menuen",
     "close": "Luk menuen",
     "thumbnail": "Thumbnails",
-    "ai": "AI"
+    "ai": "AI",
+    "openShort": "Editor"
   },
   "theme": {
     "system": "System",
@@ -49,7 +50,7 @@
       "lead": "Klip pauser og “øh’er” væk, tilføj animerede undertekster og skift automatisk til TikTok-format. Gratis, uden konto og uden vandmærke: alt foregår på din computer",
       "cta": "Redigér min video gratis",
       "github": "Se på GitHub",
-      "hint": "Ingen tilmelding · Bedst på en computer, med Chrome eller Edge",
+      "hint": "Ingen tilmelding · Bedst på computer, med en nyere browser",
       "demo": "Prøv demoen",
       "badgeAlt": "Det gratis alternativ til CapCut"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "AI-billeder til dine miniaturer",
-        "text": "Beskriv et billede, og SANA-Sprint tegner det på dit grafikkort, gratis og uden at sende noget. Engangsdownload på 3,1 GB, på en computer med Chrome eller Edge"
+        "text": "Beskriv et billede, og SANA-Sprint tegner det på dit grafikkort, gratis og uden at sende noget. Engangsdownload på 3,1 GB, på en computer med en nyere browser"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Redigering og eksport virker. Når du har lukket fanen, skal du vælge videoen igen",
       "safari": "Kun nyere versioner. Vælg videoen igen efter genindlæsning; eksporten downloades",
       "mobile": "Telefoner og tablets",
-      "mobileText": "Virker til korte klip, men hukommelsesgrænser gør lange videoer upålidelige"
+      "mobileText": "Virker til korte klip, men hukommelsesgrænser gør lange videoer upålidelige",
+      "aiImages": "Afhænger af din browser og dit grafikkort (WebGPU, omkring 8 GB hukommelse). Miniaturesiden viser, om det er muligt hos dig"
     },
     "faq": {
       "title": "Ofte stillede spørgsmål",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Hvilken browser skal jeg bruge?",
-        "a": "Chrome eller Edge på en computer giver den bedste oplevelse. Firefox og Safari virker også, med et par ekstra klik for at genåbne en video. På en telefon er korte videoer bedst"
+        "a": "På Windows, Mac eller Linux giver Chrome, Edge, Opera og Brave den bedste oplevelse. Firefox og Safari virker også, med et par ekstra klik for at åbne en video igen. På mobilen bør du holde dig til korte videoer"
       },
       "size": {
         "q": "Er der en grænse for filstørrelsen?",
@@ -250,7 +252,7 @@
       "rnnoise": "Fjerner baggrundsstøj fra stemmen",
       "count": "AI-modeller, alle på din computer",
       "used": "Anvendte AI-modeller",
-      "note": "SANA-Sprint kræver en computer med Chrome eller Edge og omkring 8 GB grafikhukommelse. Dens 3,1 GB hentes én gang fra Hugging Face og bliver i din browser på din computer"
+      "note": "SANA-Sprint kræver en computer, en nyere browser med WebGPU og omkring 8 GB grafikhukommelse. Dens 3,1 GB hentes én gang fra Hugging Face og bliver i din browser på din computer"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Lav et til",
       "size": "Engangsdownload på {{ size }} fra Hugging Face, gemt i denne browser på din computer. Cirka et minut pr. billede",
       "generating": "Laver billedet…",
-      "unsupported": "Kræver Chrome eller Edge på en computer med et nyere grafikkort",
+      "unsupported": "Ikke tilgængelig på denne enhed: kræver en computer og en nyere browser med WebGPU",
       "error": "Billedet kunne ikke laves. Dit grafikkort mangler måske hukommelse: luk andre faner og programmer, og prøv igen",
       "terms": "Når du laver et billede, accepterer du modellens brugsvilkår",
       "downloadError": "AI-modellen kunne ikke hentes. Prøv igen om et par minutter",
       "history": "Dine genererede billeder",
-      "requirements": "Kun på computer: Chrome eller Edge og et grafikkort med omkring 8 GB hukommelse"
+      "requirements": "Kun på computer: en nyere browser med WebGPU og et grafikkort med omkring 8 GB hukommelse"
     }
   },
   "seo": {

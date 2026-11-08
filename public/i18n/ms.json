@@ -21,7 +21,8 @@
     "menu": "Buka menu",
     "close": "Tutup menu",
     "thumbnail": "Lakaran kecil",
-    "ai": "AI"
+    "ai": "AI",
+    "openShort": "Editor"
   },
   "theme": {
     "system": "Sistem",
@@ -49,7 +50,7 @@
       "lead": "Potong jeda dan “err”, tambah sari kata beranimasi dan tukar ke format TikTok secara automatik. Percuma, tanpa akaun dan tanpa tera air: semuanya berlaku pada komputer anda",
       "cta": "Sunting video saya secara percuma",
       "github": "Lihat di GitHub",
-      "hint": "Tanpa pendaftaran · Terbaik pada komputer, dengan Chrome atau Edge",
+      "hint": "Tanpa daftar · Terbaik pada komputer, dengan pelayar terkini",
       "demo": "Cuba demo",
       "badgeAlt": "Alternatif percuma kepada CapCut"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "Imej AI untuk lakaran kecil anda",
-        "text": "Terangkan imej dan SANA-Sprint melukisnya pada kad grafik anda, percuma dan tanpa menghantar apa-apa. Muat turun sekali 3.1 GB, pada komputer dengan Chrome atau Edge"
+        "text": "Terangkan imej dan SANA-Sprint melukisnya pada kad grafik anda, percuma dan tanpa menghantar apa-apa. Muat turun sekali 3.1 GB, pada komputer dengan pelayar terkini"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Penyuntingan dan eksport berfungsi. Selepas menutup tab, anda perlu memilih video semula",
       "safari": "Versi terkini sahaja. Pilih video semula selepas muat semula; eksport dimuat turun",
       "mobile": "Telefon & tablet",
-      "mobileText": "Berfungsi untuk klip pendek, tetapi had memori menjadikan video panjang tidak boleh diharap"
+      "mobileText": "Berfungsi untuk klip pendek, tetapi had memori menjadikan video panjang tidak boleh diharap",
+      "aiImages": "Bergantung pada pelayar dan kad grafik anda (WebGPU, memori kira-kira 8 GB). Halaman lakaran kecil menunjukkan sama ada ia boleh dilakukan pada peranti anda"
     },
     "faq": {
       "title": "Soalan lazim",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Pelayar mana yang patut saya gunakan?",
-        "a": "Chrome atau Edge pada komputer memberikan pengalaman terbaik. Firefox dan Safari juga berfungsi, dengan beberapa klik tambahan untuk membuka semula video. Di telefon, utamakan video pendek"
+        "a": "Pada Windows, Mac atau Linux, Chrome, Edge, Opera dan Brave memberikan pengalaman terbaik. Firefox dan Safari juga berfungsi, dengan beberapa klik tambahan untuk membuka semula video. Pada telefon, gunakan video pendek sahaja"
       },
       "size": {
         "q": "Adakah had saiz fail?",
@@ -250,7 +252,7 @@
       "rnnoise": "Membuang hingar latar daripada suara",
       "count": "model AI, semuanya pada komputer anda",
       "used": "Model AI yang digunakan",
-      "note": "SANA-Sprint memerlukan komputer dengan Chrome atau Edge dan memori grafik kira-kira 8 GB. Data 3.1 GB dimuat turun sekali dari Hugging Face dan kekal dalam pelayar anda, pada komputer anda"
+      "note": "SANA-Sprint memerlukan komputer, pelayar terkini yang menyokong WebGPU dan memori grafik kira-kira 8 GB. Data 3.1 GB dimuat turun sekali dari Hugging Face dan kekal dalam pelayar anda, pada komputer anda"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Jana yang lain",
       "size": "Muat turun sekali {{ size }} dari Hugging Face, disimpan dalam pelayar ini pada komputer anda. Kira-kira seminit setiap imej",
       "generating": "Mencipta imej…",
-      "unsupported": "Memerlukan Chrome atau Edge pada komputer dengan kad grafik terkini",
+      "unsupported": "Tidak tersedia pada peranti ini: memerlukan komputer dan pelayar terkini yang menyokong WebGPU",
       "error": "Imej tidak dapat dijana. Kad grafik anda mungkin kekurangan memori: tutup tab dan aplikasi lain, kemudian cuba lagi",
       "terms": "Dengan menjana imej, anda menerima terma penggunaan model",
       "downloadError": "Model AI tidak dapat dimuat turun. Cuba lagi dalam beberapa minit",
       "history": "Imej yang anda jana",
-      "requirements": "Pada komputer sahaja: Chrome atau Edge dan kad grafik dengan memori kira-kira 8 GB"
+      "requirements": "Pada komputer sahaja: pelayar terkini yang menyokong WebGPU dan kad grafik dengan memori kira-kira 8 GB"
     }
   },
   "seo": {

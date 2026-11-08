@@ -21,7 +21,8 @@
     "menu": "Menüyü aç",
     "close": "Menüyü kapat",
     "thumbnail": "Kapak görselleri",
-    "ai": "Yapay zekâ"
+    "ai": "Yapay zekâ",
+    "openShort": "Düzenleyici"
   },
   "theme": {
     "system": "Sistem",
@@ -49,7 +50,7 @@
       "lead": "Duraklamaları ve “ııı”ları kesin, animasyonlu altyazılar ekleyin ve otomatik olarak TikTok formatına geçin. Ücretsiz, hesapsız ve filigransız: her şey bilgisayarınızda olur",
       "cta": "Videomu ücretsiz kurgula",
       "github": "GitHub'da gör",
-      "hint": "Kayıt yok · En iyisi bilgisayarda, Chrome veya Edge ile",
+      "hint": "Kayıt yok · En iyisi bilgisayarda, güncel bir tarayıcıyla",
       "demo": "Demoyu deneyin",
       "badgeAlt": "CapCut'a ücretsiz alternatif"
     },
@@ -143,7 +144,7 @@
       },
       "aiImage": {
         "title": "Küçük resimleriniz için yapay zekâ görselleri",
-        "text": "Bir görseli anlatın, SANA-Sprint onu grafik kartınızda ücretsiz ve hiçbir şey göndermeden çizsin. Chrome veya Edge yüklü bir bilgisayarda tek seferlik 3,1 GB indirme"
+        "text": "Bir görseli anlatın, SANA-Sprint onu grafik kartınızda ücretsiz ve hiçbir şey göndermeden çizsin. Güncel tarayıcılı bir bilgisayarda tek seferlik 3,1 GB indirme"
       }
     },
     "privacy": {
@@ -171,7 +172,8 @@
       "firefox": "Düzenleme ve dışa aktarma çalışır. Sekmeyi kapattıktan sonra videoyu yeniden seçmeniz istenir",
       "safari": "Yalnızca yeni sürümler. Yeniden yüklemeden sonra videoyu tekrar seçin; dışa aktarım indirilir",
       "mobile": "Telefonlar ve tabletler",
-      "mobileText": "Kısa kliplerde çalışır, ancak bellek sınırları uzun videoları güvenilmez kılar"
+      "mobileText": "Kısa kliplerde çalışır, ancak bellek sınırları uzun videoları güvenilmez kılar",
+      "aiImages": "Tarayıcınıza ve grafik kartınıza bağlıdır (WebGPU, yaklaşık 8 GB bellek). Küçük resim sayfası sizde mümkün olup olmadığını gösterir"
     },
     "faq": {
       "title": "Sık sorulan sorular",
@@ -185,7 +187,7 @@
       },
       "browsers": {
         "q": "Hangi tarayıcıyı kullanmalıyım?",
-        "a": "Bilgisayarda Chrome veya Edge en iyi deneyimi sunar. Firefox ve Safari de çalışır, bir videoyu yeniden açmak için birkaç ek tıklama gerekir. Telefonda kısa videoları tercih edin"
+        "a": "Windows, Mac veya Linux'ta en iyi deneyimi Chrome, Edge, Opera ve Brave sunar. Firefox ve Safari de çalışır, bir videoyu yeniden açmak birkaç ek tıklama gerektirir. Telefonda kısa videolarla yetinin"
       },
       "size": {
         "q": "Dosya boyutu sınırı var mı?",
@@ -250,7 +252,7 @@
       "rnnoise": "Sesten arka plan gürültüsünü temizler",
       "count": "yapay zekâ modeli, hepsi bilgisayarınızda",
       "used": "Kullanılan yapay zekâ modelleri",
-      "note": "SANA-Sprint, Chrome veya Edge yüklü bir bilgisayar ve yaklaşık 8 GB grafik belleği gerektirir. 3,1 GB'lik dosyaları Hugging Face'ten bir kez indirilir ve bilgisayarınızda, tarayıcınızda kalır"
+      "note": "SANA-Sprint bir bilgisayar, WebGPU destekli güncel bir tarayıcı ve yaklaşık 8 GB grafik belleği gerektirir. 3,1 GB'lik dosyaları Hugging Face'ten bir kez indirilir ve bilgisayarınızda, tarayıcınızda kalır"
     }
   },
   "changelog": {
@@ -872,12 +874,12 @@
       "again": "Başka bir tane oluştur",
       "size": "Hugging Face'ten tek seferlik {{ size }} indirme, bilgisayarınızda bu tarayıcıda saklanır. Görsel başına yaklaşık bir dakika",
       "generating": "Görsel oluşturuluyor…",
-      "unsupported": "Yeni bir grafik kartına sahip bilgisayarda Chrome veya Edge gerekir",
+      "unsupported": "Bu cihazda kullanılamıyor: bilgisayar ve WebGPU destekli güncel bir tarayıcı gerekir",
       "error": "Görsel oluşturulamadı. Grafik kartınızın belleği yetersiz olabilir: diğer sekmeleri ve uygulamaları kapatıp yeniden deneyin",
       "terms": "Bir görsel oluşturarak modelin kullanım koşullarını kabul edersiniz",
       "downloadError": "Yapay zekâ modeli indirilemedi. Birkaç dakika sonra yeniden deneyin",
       "history": "Oluşturduğunuz görseller",
-      "requirements": "Yalnızca bilgisayarda: Chrome veya Edge ve yaklaşık 8 GB belleğe sahip grafik kartı"
+      "requirements": "Yalnızca bilgisayarda: WebGPU destekli güncel bir tarayıcı ve yaklaşık 8 GB belleğe sahip grafik kartı"
     }
   },
   "seo": {
