@@ -254,7 +254,8 @@
       "rnnoise": "آواز سے پس منظر کا شور ہٹاتا ہے",
       "count": "AI ماڈل، سب آپ کے کمپیوٹر پر",
       "used": "استعمال شدہ AI ماڈل",
-      "note": "SANA-Sprint کے لیے کمپیوٹر، WebGPU والا نیا براؤزر اور تقریباً 8 GB گرافکس میموری درکار ہے۔ اس کے 3.1 GB ایک بار Hugging Face سے ڈاؤن لوڈ ہوتے ہیں اور آپ کے کمپیوٹر پر براؤزر میں رہتے ہیں"
+      "note": "SANA-Sprint کے لیے کمپیوٹر، WebGPU والا نیا براؤزر اور تقریباً 8 GB گرافکس میموری درکار ہے۔ اس کے 3.1 GB ایک بار Hugging Face سے ڈاؤن لوڈ ہوتے ہیں اور آپ کے کمپیوٹر پر براؤزر میں رہتے ہیں",
+      "flux": "Qwen3 کے پڑھے ہوئے جملے سے آپ کے بہترین تھمب نیل کی تصاویر بناتا ہے۔ سست، زیادہ تفصیلی"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "دانشورانہ ملکیت",
           "body": [
             "LocalCutVideo کا سورس کوڈ اوپن سورس ہے اور MIT لائسنس کے تحت [GitHub](https://github.com/ImMaxence/LocalCutVideo) پر شائع ہے۔",
-            "ایپ کے استعمال کردہ تھرڈ پارٹی اجزاء، AI ماڈلز اور فونٹس اپنے تخلیق کاروں کی ملکیت رہتے ہیں اور ان کے اپنے لائسنسوں کے تحت استعمال ہوتے ہیں، جو [استعمال کی شرائط](/terms) میں درج ہیں۔ مذکورہ برانڈز (Whisper، MediaPipe، SANA-Sprint، NVIDIA، Gemma، Google، Hugging Face، Chrome، Edge…) ان کے مالکان کے ہیں۔"
+            "ایپ کے استعمال کردہ تھرڈ پارٹی اجزاء، AI ماڈلز اور فونٹس اپنے تخلیق کاروں کی ملکیت رہتے ہیں اور ان کے اپنے لائسنسوں کے تحت استعمال ہوتے ہیں، جو [استعمال کی شرائط](/terms) میں درج ہیں۔ مذکورہ برانڈز (Whisper، MediaPipe، SANA-Sprint، FLUX.2، Black Forest Labs، Qwen، Alibaba، NVIDIA، Gemma، Google، Hugging Face، Chrome، Edge…) ان کے مالکان کے ہیں۔"
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "آپ کے آلے پر کیا رہتا ہے",
           "body": [
-            "آپ جو ویڈیو اور آڈیو فائلیں کھولتے ہیں وہ سیدھی آپ کی ڈسک سے پڑھی جاتی ہیں۔ تجزیہ، تحریر (Whisper)، چہرے کی ٹریکنگ اور ایکسپورٹ کا حساب آپ کا براؤزر مقامی طور پر کرتا ہے۔ تھمب نیل کی AI تصاویر (SANA-Sprint) بھی مقامی طور پر بنتی ہیں: آپ کی وضاحت اور تصویر کبھی نہیں بھیجی جاتی۔",
+            "آپ جو ویڈیو اور آڈیو فائلیں کھولتے ہیں وہ سیدھی آپ کی ڈسک سے پڑھی جاتی ہیں۔ تجزیہ، تحریر (Whisper)، چہرے کی ٹریکنگ اور ایکسپورٹ کا حساب آپ کا براؤزر مقامی طور پر کرتا ہے۔ تھمب نیل کی AI تصاویر (SANA-Sprint / FLUX.2) بھی مقامی طور پر بنتی ہیں: آپ کی وضاحت اور تصویر کبھی نہیں بھیجی جاتی۔",
             "آپ کے پروجیکٹس (کٹ، تحریر، ترتیبات) ایک تھمب نیل اور تجزیوں کے کیش کے ساتھ آپ کے براؤزر کے مقامی ڈیٹا بیس (IndexedDB) میں محفوظ ہوتے ہیں۔ ناشر کو ان تک رسائی نہیں۔ آپ پروجیکٹس کے صفحے سے کوئی پروجیکٹ مٹا سکتے ہیں، یا براؤزر کی ترتیبات میں اس سائٹ کا ڈیٹا صاف کر کے سب کچھ مٹا سکتے ہیں۔"
           ]
         },
@@ -735,7 +736,7 @@
           "title": "تیسرے فریق",
           "body": [
             "Cloudflare: اس سائٹ کی تمام درخواستیں Cloudflare سے گزرتی ہیں، جو سرور کی حفاظت کرتا ہے اور کنکشن کو انکرپٹ کرتا ہے۔ کسی بھی نیٹ ورک ثالث کی طرح، یہ صفحات پہنچانے کے لیے آپ کا IP پتہ اور براؤزر کی عام معلومات پروسیس کرتا ہے، اور سیکیورٹی کے مقاصد کے لیے تکنیکی لاگز رکھ سکتا ہے؛ یہ کبھی آپ کی ویڈیوز یا آڈیو وصول نہیں کرتا، جو کبھی آپ کے آلے سے باہر نہیں جاتیں۔ Cloudflare کی [رازداری کی پالیسی](https://www.cloudflare.com/privacypolicy/) دیکھیں۔",
-            "Hugging Face: AI ماڈل (سب ٹائٹل کے لیے Whisper، تھمب نیل تصاویر کے لیے SANA-Sprint) پہلی بار استعمال پر براہ راست huggingface.co سے ڈاؤن لوڈ ہوتے ہیں اور پھر آپ کے براؤزر میں رہتے ہیں۔ تب Hugging Face کو آپ کا IP پتہ اور عام براؤزر معلومات ملتی ہیں، لیکن آپ کی آواز، وضاحتیں یا تصاویر کبھی نہیں۔ ان کی [رازداری کی پالیسی](https://huggingface.co/privacy) دیکھیں۔",
+            "Hugging Face: AI ماڈل (سب ٹائٹل کے لیے Whisper، تھمب نیل تصاویر کے لیے SANA-Sprint / FLUX.2) پہلی بار استعمال پر براہ راست huggingface.co سے ڈاؤن لوڈ ہوتے ہیں اور پھر آپ کے براؤزر میں رہتے ہیں۔ تب Hugging Face کو آپ کا IP پتہ اور عام براؤزر معلومات ملتی ہیں، لیکن آپ کی آواز، وضاحتیں یا تصاویر کبھی نہیں۔ ان کی [رازداری کی پالیسی](https://huggingface.co/privacy) دیکھیں۔",
             "GitHub: صرف اس صورت میں کہ آپ سورس کوڈ ریپوزیٹری کا لنک کھولیں۔",
             "کسی اور تیسرے فریق سے رابطہ نہیں ہوتا: ایک سخت Content-Security-Policy تکنیکی طور پر صفحے کو کہیں اور جڑنے سے روکتی ہے۔"
           ]
@@ -793,8 +794,8 @@
           "title": "اوپن سورس اور تھرڈ پارٹی اجزاء",
           "body": [
             "سورس کوڈ MIT لائسنس کے تحت [GitHub](https://github.com/ImMaxence/LocalCutVideo) پر دستیاب ہے۔",
-            "LocalCutVideo ان پر انحصار کرتا ہے: Mediabunny ‏(MPL-2.0)، Transformers.js اور ONNX Runtime ‏(Apache-2.0 اور MIT)، OpenAI کے Whisper ماڈلز ‏(MIT)، SANA-Sprint (NVIDIA, Apache-2.0)، Gemma 2 (Google)، MediaPipe ‏(Apache-2.0)، [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause)، Wavesurfer.js ‏(BSD-3-Clause)، Dexie.js ‏(Apache-2.0)، Angular ‏(MIT) اور Inter و Montserrat فونٹس ‏(SIL Open Font License)۔",
-            "AI تصویر جنریٹر NVIDIA کا SANA-Sprint 0.6B ماڈل (Apache-2.0) اور آپ کی وضاحت پڑھنے کے لیے Google کا Gemma 2 استعمال کرتا ہے۔ Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma کی شرائط استعمال](https://ai.google.dev/gemma/terms) اور [Gemma کی ممنوعہ استعمال کی پالیسی](https://ai.google.dev/gemma/prohibited_use_policy) آپ پر لاگو ہیں اور ان شرائط کا حصہ ہیں: آپ اس بات پر متفق ہیں کہ جنریٹر کو کسی ممنوعہ مقصد کے لیے یا قانون کی خلاف ورزی میں استعمال نہیں کریں گے۔ Google آپ کی بنائی ہوئی تصاویر پر کوئی حق نہیں جتاتا: ان کی اور ان کے استعمال کی ذمہ داری صرف آپ پر ہے۔ ماڈل بغیر کسی ضمانت کے جیسے ہیں ویسے فراہم کیے جاتے ہیں۔"
+            "LocalCutVideo ان پر انحصار کرتا ہے: Mediabunny ‏(MPL-2.0)، Transformers.js اور ONNX Runtime ‏(Apache-2.0 اور MIT)، OpenAI کے Whisper ماڈلز ‏(MIT)، SANA-Sprint (NVIDIA, Apache-2.0)، FLUX.2 klein 4B (Black Forest Labs, Apache-2.0)، Qwen3 (Alibaba, Apache-2.0)، Gemma 2 (Google)، MediaPipe ‏(Apache-2.0)، [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause)، Wavesurfer.js ‏(BSD-3-Clause)، Dexie.js ‏(Apache-2.0)، Angular ‏(MIT) اور Inter و Montserrat فونٹس ‏(SIL Open Font License)۔",
+            "AI تصویر جنریٹر NVIDIA کا SANA-Sprint 0.6B ماڈل (Apache-2.0) اور آپ کی وضاحت پڑھنے کے لیے Google کا Gemma 2 استعمال کرتا ہے۔ Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma کی شرائط استعمال](https://ai.google.dev/gemma/terms) اور [Gemma کی ممنوعہ استعمال کی پالیسی](https://ai.google.dev/gemma/prohibited_use_policy) آپ پر لاگو ہیں اور ان شرائط کا حصہ ہیں: آپ اس بات پر متفق ہیں کہ جنریٹر کو کسی ممنوعہ مقصد کے لیے یا قانون کی خلاف ورزی میں استعمال نہیں کریں گے۔ Google آپ کی بنائی ہوئی تصاویر پر کوئی حق نہیں جتاتا: ان کی اور ان کے استعمال کی ذمہ داری صرف آپ پر ہے۔ ماڈل بغیر کسی ضمانت کے جیسے ہیں ویسے فراہم کیے جاتے ہیں۔ زیادہ سے زیادہ معیار میں جنریٹر Apache-2.0 لائسنس کے تحت Black Forest Labs کا FLUX.2 klein 4B اور Alibaba کا Qwen3 استعمال کرتا ہے۔"
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "AI ماڈل ڈاؤن لوڈ نہیں ہو سکا۔ چند منٹ بعد دوبارہ کوشش کریں",
       "history": "آپ کی بنائی ہوئی تصاویر",
       "requirements": "صرف کمپیوٹر پر: WebGPU والا نیا براؤزر اور تقریباً 8 GB میموری والا گرافکس کارڈ",
-      "storageError": "اس ڈیوائس پر ماڈل محفوظ نہیں ہو سکا۔ ڈسک میں جگہ خالی کریں یا نجی براؤزنگ سے باہر نکلیں، پھر دوبارہ کوشش کریں"
+      "storageError": "اس ڈیوائس پر ماڈل محفوظ نہیں ہو سکا۔ ڈسک میں جگہ خالی کریں یا نجی براؤزنگ سے باہر نکلیں، پھر دوبارہ کوشش کریں",
+      "quality": "معیار",
+      "standard": "معیاری",
+      "max": "زیادہ سے زیادہ",
+      "sizeMax": "Hugging Face سے {{ size }} کا ایک بار کا ڈاؤن لوڈ، آپ کے کمپیوٹر پر اسی براؤزر میں رکھا جاتا ہے۔ فی تصویر کئی منٹ"
     }
   },
   "seo": {

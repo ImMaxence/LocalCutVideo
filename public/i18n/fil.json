@@ -254,7 +254,8 @@
       "rnnoise": "Inaalis ang ingay sa background ng boses",
       "count": "AI model, lahat nasa computer mo",
       "used": "Mga AI model na ginagamit",
-      "note": "Kailangan ng SANA-Sprint ang computer, bagong browser na may WebGPU at humigit-kumulang 8 GB na graphics memory. Isang beses dina-download ang 3.1 GB nito mula sa Hugging Face at nananatili sa iyong browser, sa iyong computer"
+      "note": "Kailangan ng SANA-Sprint ang computer, bagong browser na may WebGPU at humigit-kumulang 8 GB na graphics memory. Isang beses dina-download ang 3.1 GB nito mula sa Hugging Face at nananatili sa iyong browser, sa iyong computer",
+      "flux": "Iginuguhit ang pinakamagaganda mong larawan ng thumbnail mula sa pangungusap na binabasa ng Qwen3. Mas mabagal, mas detalyado"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "Intelektwal na pag-aari",
           "body": [
             "Open source ang source code ng LocalCutVideo at inilathala sa ilalim ng MIT license sa [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Ang mga third-party na component, AI model at font na ginagamit ng app ay nananatiling pag-aari ng kanilang mga may-akda at ginagamit sa ilalim ng sarili nilang mga lisensya, na nakalista sa [mga tuntunin ng paggamit](/terms). Ang mga nabanggit na brand (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) ay pag-aari ng kanilang mga may-ari."
+            "Ang mga third-party na component, AI model at font na ginagamit ng app ay nananatiling pag-aari ng kanilang mga may-akda at ginagamit sa ilalim ng sarili nilang mga lisensya, na nakalista sa [mga tuntunin ng paggamit](/terms). Ang mga nabanggit na brand (Whisper, MediaPipe, SANA-Sprint, FLUX.2, Black Forest Labs, Qwen, Alibaba, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) ay pag-aari ng kanilang mga may-ari."
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "Ano ang nananatili sa device mo",
           "body": [
-            "Direktang binabasa mula sa disk mo ang mga video at audio file na binubuksan mo. Kinakalkula nang lokal ng browser mo ang pagsusuri, transcription (Whisper), face tracking at pag-export. Lokal ding kinakalkula ang mga AI na larawan ng thumbnail (SANA-Sprint): hindi kailanman ipinapadala ang iyong paglalarawan at ang larawan.",
+            "Direktang binabasa mula sa disk mo ang mga video at audio file na binubuksan mo. Kinakalkula nang lokal ng browser mo ang pagsusuri, transcription (Whisper), face tracking at pag-export. Lokal ding kinakalkula ang mga AI na larawan ng thumbnail (SANA-Sprint / FLUX.2): hindi kailanman ipinapadala ang iyong paglalarawan at ang larawan.",
             "Sine-save ang mga proyekto mo (mga putol, transcript, settings) sa lokal na database ng browser mo (IndexedDB), kasama ang isang thumbnail at cache ng mga pagsusuri. Walang access dito ang publisher. Maaari kang magbura ng proyekto mula sa page ng mga proyekto, o burahin lahat sa pag-clear ng datos ng site na ito sa settings ng browser."
           ]
         },
@@ -735,7 +736,7 @@
           "title": "Mga third party",
           "body": [
             "Cloudflare: lahat ng request sa site na ito ay dumadaan sa Cloudflare, na nagpoprotekta sa server at nag-e-encrypt ng koneksyon. Gaya ng anumang network intermediary, pinoproseso nito ang IP address mo at karaniwang impormasyon ng browser para maihatid ang mga page, at maaaring magtago ng mga teknikal na log para sa seguridad; hindi nito kailanman natatanggap ang mga video o audio mo, na hindi kailanman umaalis sa device mo. Tingnan ang kanilang [patakaran sa privacy](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: ang mga AI model (Whisper para sa subtitle, SANA-Sprint para sa mga larawan ng thumbnail) ay direktang dina-download mula sa huggingface.co sa unang paggamit, saka itinatago sa iyong browser. Matatanggap ng Hugging Face ang iyong IP address at karaniwang impormasyon ng browser, pero hindi kailanman ang iyong audio, mga paglalarawan o mga larawan. Tingnan ang kanilang [patakaran sa privacy](https://huggingface.co/privacy).",
+            "Hugging Face: ang mga AI model (Whisper para sa subtitle, SANA-Sprint / FLUX.2 para sa mga larawan ng thumbnail) ay direktang dina-download mula sa huggingface.co sa unang paggamit, saka itinatago sa iyong browser. Matatanggap ng Hugging Face ang iyong IP address at karaniwang impormasyon ng browser, pero hindi kailanman ang iyong audio, mga paglalarawan o mga larawan. Tingnan ang kanilang [patakaran sa privacy](https://huggingface.co/privacy).",
             "GitHub: kung susundan mo lang ang link papunta sa source code repository.",
             "Walang ibang third party na kinokontak: teknikal na pinipigilan ng mahigpit na Content-Security-Policy ang page na kumonekta saanman."
           ]
@@ -793,8 +794,8 @@
           "title": "Open source at mga third-party na component",
           "body": [
             "Available ang source code sa ilalim ng MIT license sa [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Umaasa ang LocalCutVideo sa: Mediabunny (MPL-2.0), Transformers.js at ONNX Runtime (Apache-2.0 at MIT), ang mga Whisper model ng OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) at ang mga font na Inter at Montserrat (SIL Open Font License).",
-            "Ginagamit ng AI image generator ang SANA-Sprint 0.6B model ng NVIDIA (Apache-2.0) at, para basahin ang iyong paglalarawan, ang Gemma 2 ng Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. Saklaw ka ng [Mga Tuntunin sa Paggamit ng Gemma](https://ai.google.dev/gemma/terms) at ng [Patakaran sa Ipinagbabawal na Paggamit ng Gemma](https://ai.google.dev/gemma/prohibited_use_policy), at bahagi ang mga ito ng mga tuntuning ito: sumasang-ayon kang hindi gagamitin ang generator sa ipinagbabawal na paraan o nang labag sa batas. Walang inaangking karapatan ang Google sa mga larawang ginagawa mo: ikaw lang ang responsable sa mga ito at sa paggamit ng mga ito. Ibinibigay ang mga modelo kung ano ang mga ito, nang walang garantiya."
+            "Umaasa ang LocalCutVideo sa: Mediabunny (MPL-2.0), Transformers.js at ONNX Runtime (Apache-2.0 at MIT), ang mga Whisper model ng OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), FLUX.2 klein 4B (Black Forest Labs, Apache-2.0), Qwen3 (Alibaba, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) at ang mga font na Inter at Montserrat (SIL Open Font License).",
+            "Ginagamit ng AI image generator ang SANA-Sprint 0.6B model ng NVIDIA (Apache-2.0) at, para basahin ang iyong paglalarawan, ang Gemma 2 ng Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. Saklaw ka ng [Mga Tuntunin sa Paggamit ng Gemma](https://ai.google.dev/gemma/terms) at ng [Patakaran sa Ipinagbabawal na Paggamit ng Gemma](https://ai.google.dev/gemma/prohibited_use_policy), at bahagi ang mga ito ng mga tuntuning ito: sumasang-ayon kang hindi gagamitin ang generator sa ipinagbabawal na paraan o nang labag sa batas. Walang inaangking karapatan ang Google sa mga larawang ginagawa mo: ikaw lang ang responsable sa mga ito at sa paggamit ng mga ito. Ibinibigay ang mga modelo kung ano ang mga ito, nang walang garantiya. Sa pinakamataas na kalidad, ginagamit ng generator ang FLUX.2 klein 4B ng Black Forest Labs at Qwen3 ng Alibaba, sa ilalim ng lisensyang Apache-2.0."
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "Hindi na-download ang AI model. Subukang muli pagkalipas ng ilang minuto",
       "history": "Ang mga nagawa mong larawan",
       "requirements": "Sa computer lang: bagong browser na may WebGPU at graphics card na may humigit-kumulang 8 GB memory",
-      "storageError": "Hindi na-save ang modelo sa device na ito. Magbakante ng espasyo sa disk o umalis sa private browsing, saka subukang muli"
+      "storageError": "Hindi na-save ang modelo sa device na ito. Magbakante ng espasyo sa disk o umalis sa private browsing, saka subukang muli",
+      "quality": "Kalidad",
+      "standard": "Standard",
+      "max": "Pinakamataas",
+      "sizeMax": "Isang beses na pag-download ng {{ size }} mula sa Hugging Face, itinatago sa browser na ito sa iyong computer. Ilang minuto bawat larawan"
     }
   },
   "seo": {

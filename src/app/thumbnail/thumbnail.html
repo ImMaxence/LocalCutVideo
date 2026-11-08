@@ -33,15 +33,16 @@
         @if (aiSupported()) {
           <label class="sr-only" for="thumb-prompt">{{ 'thumbnail.ai.prompt' | transloco }}</label>
           <textarea id="thumb-prompt" rows="2" maxlength="300" [value]="aiPrompt()" (input)="setPrompt($event)" [disabled]="!!aiProgress()" [placeholder]="'thumbnail.ai.placeholder' | transloco"></textarea>
+          <ng-container *ngTemplateOutlet="aiQuality" />
           @if (!aiProgress()) {
             <button class="btn auto" type="button" [disabled]="!aiPrompt().trim()" (click)="generate()">
               <app-icon name="sparkles" [size]="16" /> {{ 'thumbnail.ai.run' | transloco }}
             </button>
             <small class="faint">{{ 'thumbnail.ai.requirements' | transloco }}</small>
-            <small class="faint">{{ 'thumbnail.ai.size' | transloco: { size: aiDownloadSize } }}</small>
-            <small class="ai-model"><app-icon name="cpu" [size]="13" /> {{ 'editor.transcribe.model' | transloco }} · SANA-Sprint 0.6B (NVIDIA) · {{ aiOutputSize().width }}×{{ aiOutputSize().height }}</small>
+            <small class="faint">{{ (aiModel() === 'flux' ? 'thumbnail.ai.sizeMax' : 'thumbnail.ai.size') | transloco: { size: aiInfo().download } }}</small>
+            <small class="ai-model"><app-icon name="cpu" [size]="13" /> {{ 'editor.transcribe.model' | transloco }} · {{ aiInfo().name }} ({{ aiInfo().maker }}) · {{ aiOutputSize().width }}×{{ aiOutputSize().height }}</small>
             <small><a class="ai-terms" [routerLink]="'/terms' | localize">{{ 'thumbnail.ai.terms' | transloco }}</a></small>
-            <app-report-download model="SANA-Sprint" />
+            <app-report-download [model]="aiInfo().name" />
           }
           <ng-container *ngTemplateOutlet="aiStatus" />
         } @else {
@@ -126,13 +127,14 @@
           <div class="ai-edit">
             <label class="label" for="thumb-prompt-again">{{ 'thumbnail.ai.prompt' | transloco }}</label>
             <textarea id="thumb-prompt-again" rows="2" maxlength="300" [value]="aiPrompt()" (input)="setPrompt($event)" [disabled]="!!aiProgress()"></textarea>
+            <ng-container *ngTemplateOutlet="aiQuality" />
             <div class="ai-edit-row">
-              <small class="ai-model"><app-icon name="cpu" [size]="13" /> {{ 'editor.transcribe.model' | transloco }} · SANA-Sprint 0.6B (NVIDIA) · {{ aiOutputSize().width }}×{{ aiOutputSize().height }}</small>
+              <small class="ai-model"><app-icon name="cpu" [size]="13" /> {{ 'editor.transcribe.model' | transloco }} · {{ aiInfo().name }} ({{ aiInfo().maker }}) · {{ aiOutputSize().width }}×{{ aiOutputSize().height }}</small>
               @if (!aiProgress()) {
                 <button class="btn auto sm" type="button" [disabled]="!aiPrompt().trim()" (click)="generate()"><app-icon name="sparkles" [size]="15" /> {{ 'thumbnail.ai.again' | transloco }}</button>
               }
             </div>
-            <app-report-download model="SANA-Sprint" />
+            <app-report-download [model]="aiInfo().name" />
           </div>
         }
         <ng-container *ngTemplateOutlet="aiStatus" />
@@ -259,6 +261,13 @@
     <p class="error" role="alert"><app-icon name="alert" [size]="15" /> {{ e | transloco }}</p>
   }
 </section>
+
+<ng-template #aiQuality>
+  <div class="segmented ai-quality" role="radiogroup" [attr.aria-label]="'thumbnail.ai.quality' | transloco">
+    <button type="button" role="radio" [class.active]="aiModel() === 'sana'" [attr.aria-checked]="aiModel() === 'sana'" [disabled]="!!aiProgress()" (click)="setAiModel('sana')">{{ 'thumbnail.ai.standard' | transloco }}</button>
+    <button type="button" role="radio" [class.active]="aiModel() === 'flux'" [attr.aria-checked]="aiModel() === 'flux'" [disabled]="!!aiProgress()" (click)="setAiModel('flux')">{{ 'thumbnail.ai.max' | transloco }}</button>
+  </div>
+</ng-template>
 
 <ng-template #aiGallery>
   @if (aiImages().length) {

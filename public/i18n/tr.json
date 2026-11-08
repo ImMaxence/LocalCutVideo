@@ -254,7 +254,8 @@
       "rnnoise": "Sesten arka plan gürültüsünü temizler",
       "count": "yapay zekâ modeli, hepsi bilgisayarınızda",
       "used": "Kullanılan yapay zekâ modelleri",
-      "note": "SANA-Sprint bir bilgisayar, WebGPU destekli güncel bir tarayıcı ve yaklaşık 8 GB grafik belleği gerektirir. 3,1 GB'lik dosyaları Hugging Face'ten bir kez indirilir ve bilgisayarınızda, tarayıcınızda kalır"
+      "note": "SANA-Sprint bir bilgisayar, WebGPU destekli güncel bir tarayıcı ve yaklaşık 8 GB grafik belleği gerektirir. 3,1 GB'lik dosyaları Hugging Face'ten bir kez indirilir ve bilgisayarınızda, tarayıcınızda kalır",
+      "flux": "Qwen3 tarafından okunan bir cümleden en iyi küçük resim görsellerinizi çizer. Daha yavaş, daha ayrıntılı"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "Fikri mülkiyet",
           "body": [
             "LocalCutVideo'nun kaynak kodu açıktır ve MIT lisansıyla [GitHub](https://github.com/ImMaxence/LocalCutVideo) üzerinde yayımlanmıştır.",
-            "Uygulamanın kullandığı üçüncü taraf bileşenler, YZ modelleri ve yazı tipleri sahiplerinin mülkü olmaya devam eder ve [kullanım koşullarında](/terms) listelenen kendi lisanslarıyla kullanılır. Anılan markalar (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) sahiplerine aittir."
+            "Uygulamanın kullandığı üçüncü taraf bileşenler, YZ modelleri ve yazı tipleri sahiplerinin mülkü olmaya devam eder ve [kullanım koşullarında](/terms) listelenen kendi lisanslarıyla kullanılır. Anılan markalar (Whisper, MediaPipe, SANA-Sprint, FLUX.2, Black Forest Labs, Qwen, Alibaba, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) sahiplerine aittir."
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "Cihazınızda kalanlar",
           "body": [
-            "Açtığınız video ve ses dosyaları doğrudan diskinizden okunur. Analiz, yazıya dökme (Whisper), yüz takibi ve dışa aktarma tarayıcınız tarafından yerel olarak hesaplanır. Küçük resimlerin yapay zekâ görselleri (SANA-Sprint) de yerel olarak hesaplanır: açıklamanız ve görsel asla gönderilmez.",
+            "Açtığınız video ve ses dosyaları doğrudan diskinizden okunur. Analiz, yazıya dökme (Whisper), yüz takibi ve dışa aktarma tarayıcınız tarafından yerel olarak hesaplanır. Küçük resimlerin yapay zekâ görselleri (SANA-Sprint / FLUX.2) de yerel olarak hesaplanır: açıklamanız ve görsel asla gönderilmez.",
             "Projeleriniz (kesimler, döküm, ayarlar), bir kapak görseli ve analiz önbelleğiyle birlikte tarayıcınızın yerel veritabanında (IndexedDB) saklanır. Yayıncının bunlara erişimi yoktur. Bir projeyi projeler sayfasından silebilir veya tarayıcı ayarlarından bu sitenin verilerini temizleyerek her şeyi silebilirsiniz."
           ]
         },
@@ -735,7 +736,7 @@
           "title": "Üçüncü taraflar",
           "body": [
             "Cloudflare: bu siteye yapılan tüm istekler, sunucuyu koruyan ve bağlantıyı şifreleyen Cloudflare üzerinden geçer. Her ağ aracısı gibi, sayfaları iletmek için IP adresinizi ve standart tarayıcı bilgilerini işler ve güvenlik amacıyla teknik kayıtlar tutabilir; videolarınızı veya sesinizi asla almaz, bunlar cihazınızdan asla çıkmaz. Cloudflare'in [gizlilik politikasına](https://www.cloudflare.com/privacypolicy/) bakın.",
-            "Hugging Face: yapay zekâ modelleri (altyazılar için Whisper, küçük resim görselleri için SANA-Sprint) ilk kullanımda doğrudan huggingface.co adresinden indirilir ve ardından tarayıcınızda saklanır. Hugging Face bu sırada IP adresinizi ve olağan tarayıcı bilgilerini alır, ancak sesinizi, açıklamalarınızı veya görsellerinizi asla almaz. [Gizlilik politikasına](https://huggingface.co/privacy) bakın.",
+            "Hugging Face: yapay zekâ modelleri (altyazılar için Whisper, küçük resim görselleri için SANA-Sprint / FLUX.2) ilk kullanımda doğrudan huggingface.co adresinden indirilir ve ardından tarayıcınızda saklanır. Hugging Face bu sırada IP adresinizi ve olağan tarayıcı bilgilerini alır, ancak sesinizi, açıklamalarınızı veya görsellerinizi asla almaz. [Gizlilik politikasına](https://huggingface.co/privacy) bakın.",
             "GitHub: yalnızca kaynak kod deposuna giden bir bağlantıyı izlerseniz.",
             "Başka hiçbir üçüncü tarafla iletişim kurulmaz: katı bir Content-Security-Policy, sayfanın başka herhangi bir yere bağlanmasını teknik olarak engeller."
           ]
@@ -793,8 +794,8 @@
           "title": "Açık kaynak ve üçüncü taraf bileşenler",
           "body": [
             "Kaynak kod, MIT lisansıyla [GitHub](https://github.com/ImMaxence/LocalCutVideo) üzerinde mevcuttur.",
-            "LocalCutVideo şunlara dayanır: Mediabunny (MPL-2.0), Transformers.js ve ONNX Runtime (Apache-2.0 ve MIT), OpenAI'ın Whisper modelleri (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ile Inter ve Montserrat yazı tipleri (SIL Open Font License).",
-            "Yapay zekâ görsel oluşturucusu, NVIDIA'nın SANA-Sprint 0.6B modelini (Apache-2.0) ve açıklamanızı okumak için Google'ın Gemma 2 modelini kullanır. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma Kullanım Koşulları](https://ai.google.dev/gemma/terms) ve [Gemma Yasaklanmış Kullanım Politikası](https://ai.google.dev/gemma/prohibited_use_policy) sizin için de geçerlidir ve bu koşulların parçasıdır: oluşturucuyu yasaklanmış amaçlarla veya yasalara aykırı şekilde kullanmamayı kabul edersiniz. Google, oluşturduğunuz görseller üzerinde hak iddia etmez: bunlardan ve kullanımlarından yalnızca siz sorumlusunuz. Modeller olduğu gibi, garantisiz sunulur."
+            "LocalCutVideo şunlara dayanır: Mediabunny (MPL-2.0), Transformers.js ve ONNX Runtime (Apache-2.0 ve MIT), OpenAI'ın Whisper modelleri (MIT), SANA-Sprint (NVIDIA, Apache-2.0), FLUX.2 klein 4B (Black Forest Labs, Apache-2.0), Qwen3 (Alibaba, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ile Inter ve Montserrat yazı tipleri (SIL Open Font License).",
+            "Yapay zekâ görsel oluşturucusu, NVIDIA'nın SANA-Sprint 0.6B modelini (Apache-2.0) ve açıklamanızı okumak için Google'ın Gemma 2 modelini kullanır. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma Kullanım Koşulları](https://ai.google.dev/gemma/terms) ve [Gemma Yasaklanmış Kullanım Politikası](https://ai.google.dev/gemma/prohibited_use_policy) sizin için de geçerlidir ve bu koşulların parçasıdır: oluşturucuyu yasaklanmış amaçlarla veya yasalara aykırı şekilde kullanmamayı kabul edersiniz. Google, oluşturduğunuz görseller üzerinde hak iddia etmez: bunlardan ve kullanımlarından yalnızca siz sorumlusunuz. Modeller olduğu gibi, garantisiz sunulur. En yüksek kalitede oluşturucu, Apache-2.0 lisansıyla Black Forest Labs'in FLUX.2 klein 4B modelini ve Alibaba'nın Qwen3 modelini kullanır."
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "Yapay zekâ modeli indirilemedi. Birkaç dakika sonra yeniden deneyin",
       "history": "Oluşturduğunuz görseller",
       "requirements": "Yalnızca bilgisayarda: WebGPU destekli güncel bir tarayıcı ve yaklaşık 8 GB belleğe sahip grafik kartı",
-      "storageError": "Model bu cihaza kaydedilemedi. Diskte yer açın veya gizli gezinmeden çıkın, ardından yeniden deneyin"
+      "storageError": "Model bu cihaza kaydedilemedi. Diskte yer açın veya gizli gezinmeden çıkın, ardından yeniden deneyin",
+      "quality": "Kalite",
+      "standard": "Standart",
+      "max": "En yüksek",
+      "sizeMax": "Hugging Face'ten tek seferlik {{ size }} indirme, bilgisayarınızda bu tarayıcıda saklanır. Görsel başına birkaç dakika"
     }
   },
   "seo": {

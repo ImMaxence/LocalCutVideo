@@ -254,7 +254,8 @@
       "rnnoise": "Poistaa taustamelun puheesta",
       "count": "tekoälymallia, kaikki tietokoneellasi",
       "used": "Käytetyt tekoälymallit",
-      "note": "SANA-Sprint vaatii tietokoneen, uudehkon WebGPU-yhteensopivan selaimen ja noin 8 Gt näytönmuistia. Sen 3,1 Gt ladataan kerran Hugging Facesta ja säilyy selaimessasi tietokoneellasi"
+      "note": "SANA-Sprint vaatii tietokoneen, uudehkon WebGPU-yhteensopivan selaimen ja noin 8 Gt näytönmuistia. Sen 3,1 Gt ladataan kerran Hugging Facesta ja säilyy selaimessasi tietokoneellasi",
+      "flux": "Piirtää parhaat pikkukuvasi lauseesta, jonka Qwen3 lukee. Hitaampi, yksityiskohtaisempi"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "Immateriaalioikeudet",
           "body": [
             "LocalCutVideon lähdekoodi on avointa ja julkaistu MIT-lisenssillä [GitHubissa](https://github.com/ImMaxence/LocalCutVideo).",
-            "Sovelluksen käyttämät kolmansien osapuolten komponentit, tekoälymallit ja fontit ovat edelleen tekijöidensä omaisuutta, ja niitä käytetään niiden omien lisenssien mukaisesti, jotka on lueteltu [käyttöehdoissa](/terms). Mainitut tavaramerkit (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) kuuluvat omistajilleen."
+            "Sovelluksen käyttämät kolmansien osapuolten komponentit, tekoälymallit ja fontit ovat edelleen tekijöidensä omaisuutta, ja niitä käytetään niiden omien lisenssien mukaisesti, jotka on lueteltu [käyttöehdoissa](/terms). Mainitut tavaramerkit (Whisper, MediaPipe, SANA-Sprint, FLUX.2, Black Forest Labs, Qwen, Alibaba, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) kuuluvat omistajilleen."
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "Mitä laitteellesi jää",
           "body": [
-            "Avaamasi video- ja äänitiedostot luetaan suoraan levyltäsi. Analyysi, litterointi (Whisper), kasvojen seuranta ja vienti lasketaan paikallisesti selaimessasi. Pikkukuvien tekoälykuvat (SANA-Sprint) lasketaan myös paikallisesti: kuvaustasi ja kuvaa ei koskaan lähetetä.",
+            "Avaamasi video- ja äänitiedostot luetaan suoraan levyltäsi. Analyysi, litterointi (Whisper), kasvojen seuranta ja vienti lasketaan paikallisesti selaimessasi. Pikkukuvien tekoälykuvat (SANA-Sprint / FLUX.2) lasketaan myös paikallisesti: kuvaustasi ja kuvaa ei koskaan lähetetä.",
             "Projektisi (leikkaukset, litterointi, asetukset) tallennetaan selaimesi paikalliseen tietokantaan (IndexedDB) yhdessä pikkukuvan ja analyysien välimuistin kanssa. Julkaisijalla ei ole niihin pääsyä. Voit poistaa projektin projektisivulla tai poistaa kaiken tyhjentämällä tämän sivuston tiedot selaimesi asetuksista."
           ]
         },
@@ -735,7 +736,7 @@
           "title": "Kolmannet osapuolet",
           "body": [
             "Cloudflare: kaikki tämän sivuston pyynnöt kulkevat Cloudflaren kautta, joka suojaa palvelinta ja salaa yhteyden. Kuten mikä tahansa verkon välittäjä, se käsittelee IP-osoitettasi ja tavanomaisia selaintietoja sivujen toimittamiseksi ja voi säilyttää teknisiä lokeja tietoturvasyistä; se ei koskaan saa videoitasi tai ääntäsi, sillä ne eivät koskaan poistu laitteeltasi. Katso Cloudflaren [tietosuojakäytäntö](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: tekoälymallit (Whisper tekstityksiin, SANA-Sprint pikkukuvien kuviin) ladataan suoraan osoitteesta huggingface.co, kun käytät niitä ensimmäisen kerran, ja säilytetään sen jälkeen selaimessasi. Hugging Face saa tällöin IP-osoitteesi ja tavalliset selaintiedot, mutta ei koskaan ääntäsi, kuvauksiasi tai kuviasi. Katso [tietosuojakäytäntö](https://huggingface.co/privacy).",
+            "Hugging Face: tekoälymallit (Whisper tekstityksiin, SANA-Sprint / FLUX.2 pikkukuvien kuviin) ladataan suoraan osoitteesta huggingface.co, kun käytät niitä ensimmäisen kerran, ja säilytetään sen jälkeen selaimessasi. Hugging Face saa tällöin IP-osoitteesi ja tavalliset selaintiedot, mutta ei koskaan ääntäsi, kuvauksiasi tai kuviasi. Katso [tietosuojakäytäntö](https://huggingface.co/privacy).",
             "GitHub: vain jos seuraat linkkiä lähdekoodin tietovarastoon.",
             "Muihin kolmansiin osapuoliin ei oteta yhteyttä: tiukka Content-Security-Policy estää teknisesti sivua muodostamasta yhteyttä minnekään muualle."
           ]
@@ -793,8 +794,8 @@
           "title": "Avoin lähdekoodi ja kolmansien osapuolten komponentit",
           "body": [
             "Lähdekoodi on saatavilla MIT-lisenssillä [GitHubissa](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo perustuu seuraaviin: Mediabunny (MPL-2.0), Transformers.js ja ONNX Runtime (Apache-2.0 ja MIT), OpenAI:n Whisper-mallit (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) sekä Inter- ja Montserrat-fontit (SIL Open Font License).",
-            "Tekoälykuvageneraattori käyttää NVIDIAn SANA-Sprint 0.6B -mallia (Apache-2.0) ja kuvauksesi lukemiseen Googlen Gemma 2 -mallia. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemman käyttöehdot](https://ai.google.dev/gemma/terms) ja [Gemman kielletyn käytön käytäntö](https://ai.google.dev/gemma/prohibited_use_policy) koskevat sinua ja ovat osa näitä ehtoja: sitoudut olemaan käyttämättä generaattoria kiellettyyn käyttöön tai lain vastaisesti. Google ei vaadi oikeuksia luomiisi kuviin: yksin sinä vastaat niistä ja niiden käytöstä. Mallit toimitetaan sellaisenaan ilman takuuta."
+            "LocalCutVideo perustuu seuraaviin: Mediabunny (MPL-2.0), Transformers.js ja ONNX Runtime (Apache-2.0 ja MIT), OpenAI:n Whisper-mallit (MIT), SANA-Sprint (NVIDIA, Apache-2.0), FLUX.2 klein 4B (Black Forest Labs, Apache-2.0), Qwen3 (Alibaba, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) sekä Inter- ja Montserrat-fontit (SIL Open Font License).",
+            "Tekoälykuvageneraattori käyttää NVIDIAn SANA-Sprint 0.6B -mallia (Apache-2.0) ja kuvauksesi lukemiseen Googlen Gemma 2 -mallia. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemman käyttöehdot](https://ai.google.dev/gemma/terms) ja [Gemman kielletyn käytön käytäntö](https://ai.google.dev/gemma/prohibited_use_policy) koskevat sinua ja ovat osa näitä ehtoja: sitoudut olemaan käyttämättä generaattoria kiellettyyn käyttöön tai lain vastaisesti. Google ei vaadi oikeuksia luomiisi kuviin: yksin sinä vastaat niistä ja niiden käytöstä. Mallit toimitetaan sellaisenaan ilman takuuta. Parhaassa laadussa generaattori käyttää Black Forest Labsin FLUX.2 klein 4B -mallia ja Alibaban Qwen3-mallia Apache-2.0-lisenssillä."
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "Tekoälymallia ei voitu ladata. Yritä uudelleen muutaman minuutin kuluttua",
       "history": "Luomasi kuvat",
       "requirements": "Vain tietokoneella: uudehko WebGPU-yhteensopiva selain ja näytönohjain, jossa on noin 8 Gt muistia",
-      "storageError": "Mallia ei voitu tallentaa tälle laitteelle. Vapauta levytilaa tai poistu yksityisestä selaustilasta ja yritä uudelleen"
+      "storageError": "Mallia ei voitu tallentaa tälle laitteelle. Vapauta levytilaa tai poistu yksityisestä selaustilasta ja yritä uudelleen",
+      "quality": "Laatu",
+      "standard": "Vakio",
+      "max": "Paras",
+      "sizeMax": "Kertalataus {{ size }} Hugging Facesta, säilytetään tässä selaimessa tietokoneellasi. Useita minuutteja kuvaa kohden"
     }
   },
   "seo": {

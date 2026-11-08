@@ -254,7 +254,8 @@
       "rnnoise": "音声から背景ノイズを除去します",
       "count": "つのAIモデルがすべてパソコン上で動作",
       "used": "使用しているAIモデル",
-      "note": "SANA-Sprint にはパソコン、WebGPU 対応の最新ブラウザ、約 8 GB のグラフィックメモリが必要です。3.1 GB のデータは Hugging Face から一度だけダウンロードされ、パソコンのブラウザに保存されます"
+      "note": "SANA-Sprint にはパソコン、WebGPU 対応の最新ブラウザ、約 8 GB のグラフィックメモリが必要です。3.1 GB のデータは Hugging Face から一度だけダウンロードされ、パソコンのブラウザに保存されます",
+      "flux": "Qwen3 が読み取った文章から、最高品質のサムネイル画像を描きます。時間はかかりますが、より精細です"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "知的財産",
           "body": [
             "LocalCutVideo のソースコードはオープンソースで、MIT ライセンスのもと [GitHub](https://github.com/ImMaxence/LocalCutVideo) で公開されています。",
-            "アプリが使用するサードパーティのコンポーネント、AI モデル、フォントはそれぞれの作者に帰属し、[利用規約](/terms)に記載された各ライセンスに従って使用しています。記載のブランド（Whisper、MediaPipe、SANA-Sprint、NVIDIA、Gemma、Google、Hugging Face、Chrome、Edge など）は各所有者に帰属します。"
+            "アプリが使用するサードパーティのコンポーネント、AI モデル、フォントはそれぞれの作者に帰属し、[利用規約](/terms)に記載された各ライセンスに従って使用しています。記載のブランド（Whisper、MediaPipe、SANA-Sprint、FLUX.2、Black Forest Labs、Qwen、Alibaba、NVIDIA、Gemma、Google、Hugging Face、Chrome、Edge など）は各所有者に帰属します。"
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "デバイスに残るもの",
           "body": [
-            "開いた動画ファイルや音声ファイルはディスクから直接読み込まれます。解析、文字起こし（Whisper）、顔追跡、書き出しは、ブラウザーがローカルで処理します。サムネイルのAI画像（SANA-Sprint）もローカルで処理され、説明文と画像が送信されることはありません。",
+            "開いた動画ファイルや音声ファイルはディスクから直接読み込まれます。解析、文字起こし（Whisper）、顔追跡、書き出しは、ブラウザーがローカルで処理します。サムネイルのAI画像（SANA-Sprint / FLUX.2）もローカルで処理され、説明文と画像が送信されることはありません。",
             "プロジェクト（カット、文字起こし、設定）は、サムネイルと解析結果のキャッシュとともに、ブラウザーのローカルデータベース（IndexedDB）に保存されます。運営者はこれらにアクセスできません。プロジェクトはプロジェクトページから削除でき、ブラウザーの設定でこのサイトのデータを消去すればすべて削除できます。"
           ]
         },
@@ -735,7 +736,7 @@
           "title": "第三者",
           "body": [
             "Cloudflare：このサイトへのすべてのリクエストは Cloudflare を経由します。Cloudflare はサーバーを保護し、通信を暗号化します。あらゆるネットワーク仲介者と同様に、ページを届けるために IP アドレスと一般的なブラウザー情報を処理し、セキュリティ目的で技術ログを保持することがあります。動画や音声を受け取ることは一切ありません。それらがお使いのデバイスから出ることはないからです。詳しくは同社の[プライバシーポリシー](https://www.cloudflare.com/privacypolicy/)をご覧ください。",
-            "Hugging Face：AI モデル（字幕用の Whisper、サムネイル画像用の SANA-Sprint）は、初回使用時に huggingface.co から直接ダウンロードされ、その後はブラウザに保存されます。その際 Hugging Face は IP アドレスと通常のブラウザ情報を受け取りますが、音声、説明文、画像を受け取ることはありません。[プライバシーポリシー](https://huggingface.co/privacy)をご覧ください。",
+            "Hugging Face：AI モデル（字幕用の Whisper、サムネイル画像用の SANA-Sprint / FLUX.2）は、初回使用時に huggingface.co から直接ダウンロードされ、その後はブラウザに保存されます。その際 Hugging Face は IP アドレスと通常のブラウザ情報を受け取りますが、音声、説明文、画像を受け取ることはありません。[プライバシーポリシー](https://huggingface.co/privacy)をご覧ください。",
             "GitHub：ソースコードのリポジトリへのリンクをたどった場合のみ。",
             "その他の第三者とは一切通信しません。厳格な Content-Security-Policy により、ページは技術的に他のどこにも接続できません。"
           ]
@@ -793,8 +794,8 @@
           "title": "オープンソースとサードパーティのコンポーネント",
           "body": [
             "ソースコードは MIT ライセンスのもと [GitHub](https://github.com/ImMaxence/LocalCutVideo) で公開されています。",
-            "LocalCutVideo は以下に依存しています：Mediabunny（MPL-2.0）、Transformers.js と ONNX Runtime（Apache-2.0 と MIT）、OpenAI の Whisper モデル（MIT）、SANA-Sprint (NVIDIA, Apache-2.0)、Gemma 2 (Google)、MediaPipe（Apache-2.0）、[RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause)、Wavesurfer.js（BSD-3-Clause）、Dexie.js（Apache-2.0）、Angular（MIT）、Inter と Montserrat フォント（SIL Open Font License）。",
-            "AI画像生成には NVIDIA の SANA-Sprint 0.6B モデル（Apache-2.0）を使用し、説明文の読み取りには Google の Gemma 2 を使用しています。 Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma 利用規約](https://ai.google.dev/gemma/terms)および[Gemma 禁止用途ポリシー](https://ai.google.dev/gemma/prohibited_use_policy)はお客様にも適用され、本規約の一部を構成します。お客様は、禁止された用途または法令に違反する形で本機能を使用しないことに同意するものとします。Google は生成された画像に対する権利を主張しません。画像とその利用についてはお客様のみが責任を負います。モデルは現状のまま、無保証で提供されます。"
+            "LocalCutVideo は以下に依存しています：Mediabunny（MPL-2.0）、Transformers.js と ONNX Runtime（Apache-2.0 と MIT）、OpenAI の Whisper モデル（MIT）、SANA-Sprint (NVIDIA, Apache-2.0)、FLUX.2 klein 4B (Black Forest Labs, Apache-2.0)、Qwen3 (Alibaba, Apache-2.0)、Gemma 2 (Google)、MediaPipe（Apache-2.0）、[RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause)、Wavesurfer.js（BSD-3-Clause）、Dexie.js（Apache-2.0）、Angular（MIT）、Inter と Montserrat フォント（SIL Open Font License）。",
+            "AI画像生成には NVIDIA の SANA-Sprint 0.6B モデル（Apache-2.0）を使用し、説明文の読み取りには Google の Gemma 2 を使用しています。 Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma 利用規約](https://ai.google.dev/gemma/terms)および[Gemma 禁止用途ポリシー](https://ai.google.dev/gemma/prohibited_use_policy)はお客様にも適用され、本規約の一部を構成します。お客様は、禁止された用途または法令に違反する形で本機能を使用しないことに同意するものとします。Google は生成された画像に対する権利を主張しません。画像とその利用についてはお客様のみが責任を負います。モデルは現状のまま、無保証で提供されます。最高画質では、Black Forest Labs の FLUX.2 klein 4B と Alibaba の Qwen3 を Apache-2.0 ライセンスのもとで使用します。"
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "AIモデルをダウンロードできませんでした。数分後にもう一度お試しください",
       "history": "生成した画像",
       "requirements": "パソコン専用：WebGPU 対応の最新ブラウザと、メモリ約 8 GB のグラフィックカードが必要です",
-      "storageError": "このデバイスにモデルを保存できませんでした。ディスクの空き容量を増やすか、プライベートブラウズを終了してもう一度お試しください"
+      "storageError": "このデバイスにモデルを保存できませんでした。ディスクの空き容量を増やすか、プライベートブラウズを終了してもう一度お試しください",
+      "quality": "画質",
+      "standard": "標準",
+      "max": "最高",
+      "sizeMax": "Hugging Face から初回のみ {{ size }} をダウンロードし、パソコンのこのブラウザに保存します。1枚あたり数分"
     }
   },
   "seo": {

@@ -254,7 +254,8 @@
       "rnnoise": "يزيل ضوضاء الخلفية من الصوت",
       "count": "نماذج ذكاء اصطناعي، كلها على حاسوبك",
       "used": "نماذج الذكاء الاصطناعي المستخدمة",
-      "note": "يتطلب SANA-Sprint حاسوبًا ومتصفحًا حديثًا يدعم WebGPU ونحو 8 جيجابايت من ذاكرة الرسوميات. تُنزَّل ملفاته البالغة 3.1 جيجابايت مرة واحدة من Hugging Face وتبقى في متصفحك على حاسوبك"
+      "note": "يتطلب SANA-Sprint حاسوبًا ومتصفحًا حديثًا يدعم WebGPU ونحو 8 جيجابايت من ذاكرة الرسوميات. تُنزَّل ملفاته البالغة 3.1 جيجابايت مرة واحدة من Hugging Face وتبقى في متصفحك على حاسوبك",
+      "flux": "يرسم أفضل صور مصغراتك انطلاقًا من جملة يقرأها Qwen3. أبطأ وأكثر تفصيلًا"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "الملكية الفكرية",
           "body": [
             "الشيفرة المصدرية لـ LocalCutVideo مفتوحة ومنشورة بموجب ترخيص MIT على [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "تظل المكوّنات الخارجية ونماذج الذكاء الاصطناعي والخطوط التي يستخدمها التطبيق ملكًا لأصحابها، وتُستخدم بموجب تراخيصها الخاصة المذكورة في [شروط الاستخدام](/terms). العلامات المذكورة (Whisper وMediaPipe وSANA-Sprint وNVIDIA وGemma وGoogle وHugging Face وChrome وEdge…) ملك لأصحابها."
+            "تظل المكوّنات الخارجية ونماذج الذكاء الاصطناعي والخطوط التي يستخدمها التطبيق ملكًا لأصحابها، وتُستخدم بموجب تراخيصها الخاصة المذكورة في [شروط الاستخدام](/terms). العلامات المذكورة (Whisper وMediaPipe وSANA-Sprint وFLUX.2 وBlack Forest Labs وQwen وAlibaba وNVIDIA وGemma وGoogle وHugging Face وChrome وEdge…) ملك لأصحابها."
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "ما يبقى على جهازك",
           "body": [
-            "تُقرأ ملفات الفيديو والصوت التي تفتحها مباشرة من قرصك. ويحسب متصفحك محليًا التحليل والتفريغ النصي (Whisper) وتتبّع الوجه والتصدير. تُحسب صور الذكاء الاصطناعي للصور المصغرة (SANA-Sprint) محليًا أيضًا: لا يُرسل وصفك ولا الصورة أبدًا.",
+            "تُقرأ ملفات الفيديو والصوت التي تفتحها مباشرة من قرصك. ويحسب متصفحك محليًا التحليل والتفريغ النصي (Whisper) وتتبّع الوجه والتصدير. تُحسب صور الذكاء الاصطناعي للصور المصغرة (SANA-Sprint / FLUX.2) محليًا أيضًا: لا يُرسل وصفك ولا الصورة أبدًا.",
             "تُحفظ مشاريعك (القصات، النص المفرّغ، الإعدادات) في قاعدة البيانات المحلية لمتصفحك (IndexedDB)، مع صورة مصغرة وذاكرة مؤقتة للتحليلات. لا يستطيع الناشر الوصول إليها. يمكنك حذف مشروع من صفحة المشاريع، أو حذف كل شيء بمسح بيانات هذا الموقع من إعدادات المتصفح."
           ]
         },
@@ -735,7 +736,7 @@
           "title": "الأطراف الثالثة",
           "body": [
             "Cloudflare: تمرّ جميع الطلبات إلى هذا الموقع عبر Cloudflare، التي تحمي الخادم وتشفّر الاتصال. وكأي وسيط شبكي، تعالج عنوان IP الخاص بك ومعلومات المتصفح المعتادة لتوصيل الصفحات، وقد تحتفظ بسجلات تقنية لأغراض أمنية؛ لكنها لا تتلقى أبدًا مقاطع الفيديو أو الصوت الخاصة بك، فهي لا تغادر جهازك أبدًا. راجع [سياسة الخصوصية](https://www.cloudflare.com/privacypolicy/) الخاصة بها.",
-            "Hugging Face: تُنزَّل نماذج الذكاء الاصطناعي (Whisper للترجمة النصية وSANA-Sprint لصور المصغرات) مباشرة من huggingface.co عند أول استخدام، ثم تبقى في متصفحك. تتلقى Hugging Face حينها عنوان IP الخاص بك ومعلومات المتصفح المعتادة، لكنها لا تتلقى أبدًا صوتك أو أوصافك أو صورك. راجع [سياسة الخصوصية](https://huggingface.co/privacy).",
+            "Hugging Face: تُنزَّل نماذج الذكاء الاصطناعي (Whisper للترجمة النصية وSANA-Sprint / FLUX.2 لصور المصغرات) مباشرة من huggingface.co عند أول استخدام، ثم تبقى في متصفحك. تتلقى Hugging Face حينها عنوان IP الخاص بك ومعلومات المتصفح المعتادة، لكنها لا تتلقى أبدًا صوتك أو أوصافك أو صورك. راجع [سياسة الخصوصية](https://huggingface.co/privacy).",
             "GitHub: فقط إذا اتبعت رابطًا إلى مستودع الشيفرة المصدرية.",
             "لا يُتواصل مع أي طرف ثالث آخر: تمنع سياسة Content-Security-Policy صارمة الصفحة تقنيًا من الاتصال بأي مكان آخر."
           ]
@@ -793,8 +794,8 @@
           "title": "المصدر المفتوح والمكوّنات الخارجية",
           "body": [
             "الشيفرة المصدرية متاحة بموجب ترخيص MIT على [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "يعتمد LocalCutVideo على: Mediabunny (MPL-2.0)، وTransformers.js وONNX Runtime (Apache-2.0 وMIT)، ونماذج Whisper من OpenAI (MIT)، وSANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0)، و[RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause) وWavesurfer.js (BSD-3-Clause)، وDexie.js (Apache-2.0)، وAngular (MIT)، وخطَّي Inter وMontserrat (SIL Open Font License).",
-            "يستخدم مولّد الصور بالذكاء الاصطناعي نموذج SANA-Sprint 0.6B من NVIDIA (Apache-2.0)، ولقراءة وصفك نموذج Gemma 2 من Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. تسري عليك [شروط استخدام Gemma](https://ai.google.dev/gemma/terms) و[سياسة الاستخدام المحظور لـ Gemma](https://ai.google.dev/gemma/prohibited_use_policy) وتشكلان جزءًا من هذه الشروط: وتتعهد بعدم استخدام المولّد لأي استخدام محظور أو بما يخالف القانون. لا تطالب Google بأي حقوق في الصور التي تنشئها: فأنت وحدك المسؤول عنها وعن طريقة استخدامها. تُقدَّم النماذج كما هي، دون أي ضمان."
+            "يعتمد LocalCutVideo على: Mediabunny (MPL-2.0)، وTransformers.js وONNX Runtime (Apache-2.0 وMIT)، ونماذج Whisper من OpenAI (MIT)، وSANA-Sprint (NVIDIA, Apache-2.0), FLUX.2 klein 4B (Black Forest Labs, Apache-2.0), Qwen3 (Alibaba, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0)، و[RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause) وWavesurfer.js (BSD-3-Clause)، وDexie.js (Apache-2.0)، وAngular (MIT)، وخطَّي Inter وMontserrat (SIL Open Font License).",
+            "يستخدم مولّد الصور بالذكاء الاصطناعي نموذج SANA-Sprint 0.6B من NVIDIA (Apache-2.0)، ولقراءة وصفك نموذج Gemma 2 من Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. تسري عليك [شروط استخدام Gemma](https://ai.google.dev/gemma/terms) و[سياسة الاستخدام المحظور لـ Gemma](https://ai.google.dev/gemma/prohibited_use_policy) وتشكلان جزءًا من هذه الشروط: وتتعهد بعدم استخدام المولّد لأي استخدام محظور أو بما يخالف القانون. لا تطالب Google بأي حقوق في الصور التي تنشئها: فأنت وحدك المسؤول عنها وعن طريقة استخدامها. تُقدَّم النماذج كما هي، دون أي ضمان. في الجودة القصوى، يستخدم المولّد نموذج FLUX.2 klein 4B من Black Forest Labs وQwen3 من Alibaba بموجب ترخيص Apache-2.0."
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "تعذّر تنزيل نموذج الذكاء الاصطناعي. حاول مرة أخرى بعد بضع دقائق",
       "history": "صورك المُنشأة",
       "requirements": "على الحاسوب فقط: متصفح حديث يدعم WebGPU وبطاقة رسوميات بذاكرة نحو 8 جيجابايت",
-      "storageError": "تعذّر حفظ النموذج على هذا الجهاز. أخلِ مساحة على القرص أو اخرج من التصفح الخاص ثم حاول مرة أخرى"
+      "storageError": "تعذّر حفظ النموذج على هذا الجهاز. أخلِ مساحة على القرص أو اخرج من التصفح الخاص ثم حاول مرة أخرى",
+      "quality": "الجودة",
+      "standard": "قياسية",
+      "max": "قصوى",
+      "sizeMax": "تنزيل لمرة واحدة بحجم {{ size }} من Hugging Face، يُحفظ في هذا المتصفح على حاسوبك. عدة دقائق لكل صورة"
     }
   },
   "seo": {

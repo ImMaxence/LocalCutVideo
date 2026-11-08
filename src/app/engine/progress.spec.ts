@@ -18,6 +18,13 @@ describe('eased progress', () => {
     expect(easer.value(4000)).toBeGreaterThanOrEqual(shown);
   });
 
+  it('takes a known duration for a step unlike the previous ones', () => {
+    const easer = new ProgressEaser();
+    easer.report(0, 0.1, 1);
+    easer.report(0.1, 0.5, 1001, 60_000);
+    expect(easer.value(31_001)).toBeCloseTo(0.1 + 0.4 * (1 - Math.exp(-1)), 3);
+  });
+
   it('follows the pace of the previous steps', () => {
     const easer = new ProgressEaser();
     easer.report(0, 0.5, 1);

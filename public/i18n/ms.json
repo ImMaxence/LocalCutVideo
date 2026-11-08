@@ -254,7 +254,8 @@
       "rnnoise": "Membuang hingar latar daripada suara",
       "count": "model AI, semuanya pada komputer anda",
       "used": "Model AI yang digunakan",
-      "note": "SANA-Sprint memerlukan komputer, pelayar terkini yang menyokong WebGPU dan memori grafik kira-kira 8 GB. Data 3.1 GB dimuat turun sekali dari Hugging Face dan kekal dalam pelayar anda, pada komputer anda"
+      "note": "SANA-Sprint memerlukan komputer, pelayar terkini yang menyokong WebGPU dan memori grafik kira-kira 8 GB. Data 3.1 GB dimuat turun sekali dari Hugging Face dan kekal dalam pelayar anda, pada komputer anda",
+      "flux": "Melukis imej lakaran kecil terbaik anda daripada ayat yang dibaca oleh Qwen3. Lebih perlahan, lebih terperinci"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "Harta intelek",
           "body": [
             "Kod sumber LocalCutVideo adalah sumber terbuka dan diterbitkan di bawah lesen MIT di [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Komponen pihak ketiga, model AI dan fon yang digunakan oleh aplikasi kekal milik pencipta masing-masing dan digunakan di bawah lesen mereka sendiri, yang disenaraikan dalam [terma penggunaan](/terms). Jenama yang disebut (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) milik pemiliknya."
+            "Komponen pihak ketiga, model AI dan fon yang digunakan oleh aplikasi kekal milik pencipta masing-masing dan digunakan di bawah lesen mereka sendiri, yang disenaraikan dalam [terma penggunaan](/terms). Jenama yang disebut (Whisper, MediaPipe, SANA-Sprint, FLUX.2, Black Forest Labs, Qwen, Alibaba, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) milik pemiliknya."
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "Apa yang kekal pada peranti anda",
           "body": [
-            "Fail video dan audio yang anda buka dibaca terus daripada cakera. Analisis, transkripsi (Whisper), penjejakan wajah dan eksport dikira secara setempat oleh pelayar anda. Imej AI untuk lakaran kecil (SANA-Sprint) juga dikira secara setempat: penerangan anda dan imej tidak sekali-kali dihantar.",
+            "Fail video dan audio yang anda buka dibaca terus daripada cakera. Analisis, transkripsi (Whisper), penjejakan wajah dan eksport dikira secara setempat oleh pelayar anda. Imej AI untuk lakaran kecil (SANA-Sprint / FLUX.2) juga dikira secara setempat: penerangan anda dan imej tidak sekali-kali dihantar.",
             "Projek anda (potongan, transkrip, tetapan) disimpan dalam pangkalan data setempat pelayar anda (IndexedDB), bersama lakaran kecil dan cache analisis. Penerbit tidak mempunyai akses kepadanya. Anda boleh memadam projek dari halaman projek, atau memadam semuanya dengan mengosongkan data laman ini dalam tetapan pelayar."
           ]
         },
@@ -735,7 +736,7 @@
           "title": "Pihak ketiga",
           "body": [
             "Cloudflare: semua permintaan ke laman ini melalui Cloudflare, yang melindungi pelayan dan menyulitkan sambungan. Seperti mana-mana perantara rangkaian, ia memproses alamat IP anda dan maklumat pelayar biasa untuk menghantar halaman, dan mungkin menyimpan log teknikal bagi tujuan keselamatan; ia tidak pernah menerima video atau audio anda, yang tidak pernah meninggalkan peranti anda. Lihat [dasar privasi](https://www.cloudflare.com/privacypolicy/) mereka.",
-            "Hugging Face: model AI (Whisper untuk sari kata, SANA-Sprint untuk imej lakaran kecil) dimuat turun terus dari huggingface.co pada kali pertama digunakan, kemudian disimpan dalam pelayar anda. Hugging Face kemudian menerima alamat IP dan maklumat pelayar biasa anda, tetapi tidak sekali-kali audio, penerangan atau imej anda. Lihat [dasar privasinya](https://huggingface.co/privacy).",
+            "Hugging Face: model AI (Whisper untuk sari kata, SANA-Sprint / FLUX.2 untuk imej lakaran kecil) dimuat turun terus dari huggingface.co pada kali pertama digunakan, kemudian disimpan dalam pelayar anda. Hugging Face kemudian menerima alamat IP dan maklumat pelayar biasa anda, tetapi tidak sekali-kali audio, penerangan atau imej anda. Lihat [dasar privasinya](https://huggingface.co/privacy).",
             "GitHub: hanya jika anda mengikuti pautan ke repositori kod sumber.",
             "Tiada pihak ketiga lain dihubungi: Content-Security-Policy yang ketat secara teknikal menghalang halaman daripada bersambung ke tempat lain."
           ]
@@ -793,8 +794,8 @@
           "title": "Sumber terbuka dan komponen pihak ketiga",
           "body": [
             "Kod sumber tersedia di bawah lesen MIT di [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo bergantung pada: Mediabunny (MPL-2.0), Transformers.js dan ONNX Runtime (Apache-2.0 dan MIT), model Whisper oleh OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) serta fon Inter dan Montserrat (SIL Open Font License).",
-            "Penjana imej AI menggunakan model SANA-Sprint 0.6B oleh NVIDIA (Apache-2.0) dan, untuk membaca penerangan anda, Gemma 2 oleh Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Terma Penggunaan Gemma](https://ai.google.dev/gemma/terms) dan [Dasar Penggunaan Terlarang Gemma](https://ai.google.dev/gemma/prohibited_use_policy) terpakai kepada anda dan menjadi sebahagian daripada terma ini: anda bersetuju untuk tidak menggunakan penjana bagi sebarang penggunaan terlarang atau melanggar undang-undang. Google tidak menuntut sebarang hak ke atas imej yang anda jana: hanya anda yang bertanggungjawab ke atasnya dan cara ia digunakan. Model disediakan seadanya, tanpa jaminan."
+            "LocalCutVideo bergantung pada: Mediabunny (MPL-2.0), Transformers.js dan ONNX Runtime (Apache-2.0 dan MIT), model Whisper oleh OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), FLUX.2 klein 4B (Black Forest Labs, Apache-2.0), Qwen3 (Alibaba, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) serta fon Inter dan Montserrat (SIL Open Font License).",
+            "Penjana imej AI menggunakan model SANA-Sprint 0.6B oleh NVIDIA (Apache-2.0) dan, untuk membaca penerangan anda, Gemma 2 oleh Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Terma Penggunaan Gemma](https://ai.google.dev/gemma/terms) dan [Dasar Penggunaan Terlarang Gemma](https://ai.google.dev/gemma/prohibited_use_policy) terpakai kepada anda dan menjadi sebahagian daripada terma ini: anda bersetuju untuk tidak menggunakan penjana bagi sebarang penggunaan terlarang atau melanggar undang-undang. Google tidak menuntut sebarang hak ke atas imej yang anda jana: hanya anda yang bertanggungjawab ke atasnya dan cara ia digunakan. Model disediakan seadanya, tanpa jaminan. Pada kualiti maksimum, penjana menggunakan FLUX.2 klein 4B oleh Black Forest Labs dan Qwen3 oleh Alibaba, di bawah lesen Apache-2.0."
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "Model AI tidak dapat dimuat turun. Cuba lagi dalam beberapa minit",
       "history": "Imej yang anda jana",
       "requirements": "Pada komputer sahaja: pelayar terkini yang menyokong WebGPU dan kad grafik dengan memori kira-kira 8 GB",
-      "storageError": "Model tidak dapat disimpan pada peranti ini. Kosongkan ruang cakera atau keluar daripada penyemakan imbas peribadi, kemudian cuba lagi"
+      "storageError": "Model tidak dapat disimpan pada peranti ini. Kosongkan ruang cakera atau keluar daripada penyemakan imbas peribadi, kemudian cuba lagi",
+      "quality": "Kualiti",
+      "standard": "Standard",
+      "max": "Maksimum",
+      "sizeMax": "Muat turun sekali {{ size }} dari Hugging Face, disimpan dalam pelayar ini pada komputer anda. Beberapa minit setiap imej"
     }
   },
   "seo": {

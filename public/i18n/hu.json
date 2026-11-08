@@ -254,7 +254,8 @@
       "rnnoise": "Eltávolítja a háttérzajt a hangból",
       "count": "MI-modell, mind a számítógépeden",
       "used": "Használt MI-modellek",
-      "note": "A SANA-Sprinthez számítógép, WebGPU-t támogató friss böngésző és körülbelül 8 GB grafikus memória kell. A 3,1 GB-ot egyszer tölti le a Hugging Face-ről, és a böngésződben marad, a számítógépeden"
+      "note": "A SANA-Sprinthez számítógép, WebGPU-t támogató friss böngésző és körülbelül 8 GB grafikus memória kell. A 3,1 GB-ot egyszer tölti le a Hugging Face-ről, és a böngésződben marad, a számítógépeden",
+      "flux": "A Qwen3 által értelmezett mondatból rajzolja meg a legszebb bélyegképeidet. Lassabb, részletesebb"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "Szellemi tulajdon",
           "body": [
             "A LocalCutVideo forráskódja nyílt, és MIT-licenc alatt érhető el a [GitHubon](https://github.com/ImMaxence/LocalCutVideo).",
-            "Az alkalmazás által használt külső komponensek, MI-modellek és betűtípusok a szerzőik tulajdonában maradnak, és a saját licencük szerint használatosak, amelyeket a [felhasználási feltételek](/terms) sorolnak fel. Az említett védjegyek (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) tulajdonosaikéi."
+            "Az alkalmazás által használt külső komponensek, MI-modellek és betűtípusok a szerzőik tulajdonában maradnak, és a saját licencük szerint használatosak, amelyeket a [felhasználási feltételek](/terms) sorolnak fel. Az említett védjegyek (Whisper, MediaPipe, SANA-Sprint, FLUX.2, Black Forest Labs, Qwen, Alibaba, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) tulajdonosaikéi."
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "Ami az eszközödön marad",
           "body": [
-            "A megnyitott video- és hangfájlok közvetlenül a lemezedről töltődnek be. Az elemzést, az átírást (Whisper), az arckövetést és az exportálást a böngésződ helyben számolja ki. A bélyegképek MI-képei (SANA-Sprint) szintén helyben készülnek: a leírásodat és a képet soha nem küldjük el.",
+            "A megnyitott video- és hangfájlok közvetlenül a lemezedről töltődnek be. Az elemzést, az átírást (Whisper), az arckövetést és az exportálást a böngésződ helyben számolja ki. A bélyegképek MI-képei (SANA-Sprint / FLUX.2) szintén helyben készülnek: a leírásodat és a képet soha nem küldjük el.",
             "A projektjeid (vágások, átirat, beállítások) a böngésződ helyi adatbázisában (IndexedDB) tárolódnak egy bélyegképpel és az elemzések gyorsítótárával együtt. A kiadó nem fér hozzájuk. Egy projektet a projektek oldalon törölhetsz, vagy mindent törölhetsz, ha a böngésző beállításaiban kiüríted ennek az oldalnak az adatait."
           ]
         },
@@ -735,7 +736,7 @@
           "title": "Harmadik felek",
           "body": [
             "Cloudflare: az oldalra érkező minden kérés a Cloudflare-en keresztül halad, amely védi a szervert és titkosítja a kapcsolatot. Mint minden hálózati közvetítő, az oldalak kézbesítéséhez kezeli az IP-címedet és a szokásos böngészőadatokat, és biztonsági okokból technikai naplókat őrizhet; a videóidat és a hangodat azonban soha nem kapja meg, mert azok soha nem hagyják el az eszközödet. Lásd a Cloudflare [adatvédelmi tájékoztatóját](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: az MI-modellek (Whisper a feliratokhoz, SANA-Sprint a bélyegképek képeihez) az első használatkor közvetlenül a huggingface.co oldalról töltődnek le, majd a böngésződben maradnak. A Hugging Face ekkor megkapja az IP-címedet és a szokásos böngészőadatokat, de a hangodat, a leírásaidat és a képeidet soha. Lásd az [adatvédelmi irányelveket](https://huggingface.co/privacy).",
+            "Hugging Face: az MI-modellek (Whisper a feliratokhoz, SANA-Sprint / FLUX.2 a bélyegképek képeihez) az első használatkor közvetlenül a huggingface.co oldalról töltődnek le, majd a böngésződben maradnak. A Hugging Face ekkor megkapja az IP-címedet és a szokásos böngészőadatokat, de a hangodat, a leírásaidat és a képeidet soha. Lásd az [adatvédelmi irányelveket](https://huggingface.co/privacy).",
             "GitHub: csak ha a forráskód-tárolóra mutató linkre kattintasz.",
             "Más harmadik féllel nem történik kapcsolatfelvétel: egy szigorú Content-Security-Policy technikailag megakadályozza, hogy a lap bárhová máshová csatlakozzon."
           ]
@@ -793,8 +794,8 @@
           "title": "Nyílt forráskód és külső komponensek",
           "body": [
             "A forráskód MIT-licenc alatt érhető el a [GitHubon](https://github.com/ImMaxence/LocalCutVideo).",
-            "A LocalCutVideo a következőkre épül: Mediabunny (MPL-2.0), Transformers.js és ONNX Runtime (Apache-2.0 és MIT), az OpenAI Whisper-modelljei (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT), valamint az Inter és a Montserrat betűtípus (SIL Open Font License).",
-            "Az MI-képgenerátor az NVIDIA SANA-Sprint 0.6B modelljét (Apache-2.0), a leírásod értelmezéséhez pedig a Google Gemma 2 modelljét használja. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. A [Gemma használati feltételei](https://ai.google.dev/gemma/terms) és a [Gemma tiltott használatra vonatkozó szabályzata](https://ai.google.dev/gemma/prohibited_use_policy) rád is vonatkoznak, és ezen feltételek részét képezik: vállalod, hogy a generátort nem használod tiltott célra vagy jogszabályt sértve. A Google nem tart igényt az általad készített képekre: kizárólag te felelsz értük és a felhasználásukért. A modelleket jelen állapotukban, garancia nélkül biztosítjuk."
+            "A LocalCutVideo a következőkre épül: Mediabunny (MPL-2.0), Transformers.js és ONNX Runtime (Apache-2.0 és MIT), az OpenAI Whisper-modelljei (MIT), SANA-Sprint (NVIDIA, Apache-2.0), FLUX.2 klein 4B (Black Forest Labs, Apache-2.0), Qwen3 (Alibaba, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT), valamint az Inter és a Montserrat betűtípus (SIL Open Font License).",
+            "Az MI-képgenerátor az NVIDIA SANA-Sprint 0.6B modelljét (Apache-2.0), a leírásod értelmezéséhez pedig a Google Gemma 2 modelljét használja. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. A [Gemma használati feltételei](https://ai.google.dev/gemma/terms) és a [Gemma tiltott használatra vonatkozó szabályzata](https://ai.google.dev/gemma/prohibited_use_policy) rád is vonatkoznak, és ezen feltételek részét képezik: vállalod, hogy a generátort nem használod tiltott célra vagy jogszabályt sértve. A Google nem tart igényt az általad készített képekre: kizárólag te felelsz értük és a felhasználásukért. A modelleket jelen állapotukban, garancia nélkül biztosítjuk. Maximális minőségben a generátor a Black Forest Labs FLUX.2 klein 4B és az Alibaba Qwen3 modelljét használja, Apache-2.0 licenc alatt."
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "Az MI-modellt nem sikerült letölteni. Próbáld újra néhány perc múlva",
       "history": "Az általad készített képek",
       "requirements": "Csak számítógépen: WebGPU-t támogató, friss böngésző és körülbelül 8 GB memóriával rendelkező videokártya",
-      "storageError": "A modellt nem sikerült menteni erre az eszközre. Szabadíts fel helyet a lemezen, vagy lépj ki a privát böngészésből, majd próbáld újra"
+      "storageError": "A modellt nem sikerült menteni erre az eszközre. Szabadíts fel helyet a lemezen, vagy lépj ki a privát böngészésből, majd próbáld újra",
+      "quality": "Minőség",
+      "standard": "Normál",
+      "max": "Maximális",
+      "sizeMax": "Egyszeri, {{ size }} méretű letöltés a Hugging Face-ről, ebben a böngészőben marad a számítógépeden. Képenként több perc"
     }
   },
   "seo": {

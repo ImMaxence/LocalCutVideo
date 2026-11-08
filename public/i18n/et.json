@@ -254,7 +254,8 @@
       "rnnoise": "Eemaldab häälelt taustamüra",
       "count": "tehisintellekti mudelit, kõik sinu arvutis",
       "used": "Kasutatud tehisintellekti mudelid",
-      "note": "SANA-Sprint vajab arvutit, uuemat WebGPU toega brauserit ja umbes 8 GB graafikamälu. Selle 3,1 GB laaditakse Hugging Face’ist alla üks kord ja see jääb sinu brauserisse sinu arvutis"
+      "note": "SANA-Sprint vajab arvutit, uuemat WebGPU toega brauserit ja umbes 8 GB graafikamälu. Selle 3,1 GB laaditakse Hugging Face’ist alla üks kord ja see jääb sinu brauserisse sinu arvutis",
+      "flux": "Joonistab lause põhjal, mille loeb Qwen3, sinu parimad pisipildid. Aeglasem, detailsem"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "Intellektuaalomand",
           "body": [
             "LocalCutVideo lähtekood on avatud ja avaldatud MIT-litsentsi alusel [GitHubis](https://github.com/ImMaxence/LocalCutVideo).",
-            "Rakenduse kasutatavad kolmandate osapoolte komponendid, AI-mudelid ja fondid jäävad nende autorite omandiks ja neid kasutatakse nende endi litsentside alusel, mis on loetletud [kasutustingimustes](/terms). Nimetatud kaubamärgid (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) kuuluvad nende omanikele."
+            "Rakenduse kasutatavad kolmandate osapoolte komponendid, AI-mudelid ja fondid jäävad nende autorite omandiks ja neid kasutatakse nende endi litsentside alusel, mis on loetletud [kasutustingimustes](/terms). Nimetatud kaubamärgid (Whisper, MediaPipe, SANA-Sprint, FLUX.2, Black Forest Labs, Qwen, Alibaba, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) kuuluvad nende omanikele."
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "Mis jääb sinu seadmesse",
           "body": [
-            "Sinu avatud video- ja helifaile loetakse otse sinu kettalt. Analüüs, transkriptsioon (Whisper), näojälgimine ja eksport arvutatakse kohapeal sinu brauseris. Pisipiltide tehisintellekti pildid (SANA-Sprint) arvutatakse samuti kohapeal: sinu kirjeldust ja pilti ei saadeta kunagi.",
+            "Sinu avatud video- ja helifaile loetakse otse sinu kettalt. Analüüs, transkriptsioon (Whisper), näojälgimine ja eksport arvutatakse kohapeal sinu brauseris. Pisipiltide tehisintellekti pildid (SANA-Sprint / FLUX.2) arvutatakse samuti kohapeal: sinu kirjeldust ja pilti ei saadeta kunagi.",
             "Sinu projektid (lõiked, transkriptsioon, seaded) salvestatakse sinu brauseri kohalikku andmebaasi (IndexedDB) koos pisipildi ja analüüside vahemäluga. Väljaandjal pole neile juurdepääsu. Projekti saad kustutada projektide lehel või kustutada kõik, tühjendades selle saidi andmed oma brauseri seadetes."
           ]
         },
@@ -735,7 +736,7 @@
           "title": "Kolmandad osapooled",
           "body": [
             "Cloudflare: kõik selle saidi päringud liiguvad läbi Cloudflare'i, mis kaitseb serverit ja krüpteerib ühenduse. Nagu iga võrguvahendaja, töötleb see lehtede edastamiseks sinu IP-aadressi ja tavapärast brauseriteavet ning võib turvalisuse huvides säilitada tehnilisi logisid; see ei saa kunagi sinu videoid ega heli, mis ei lahku kunagi sinu seadmest. Vaata Cloudflare'i [privaatsuspoliitikat](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: tehisintellekti mudelid (Whisper subtiitrite ja SANA-Sprint pisipiltide jaoks) laaditakse esmakasutusel otse saidilt huggingface.co ja hoitakse seejärel sinu brauseris. Hugging Face saab siis sinu IP-aadressi ja tavapärase brauseriteabe, kuid mitte kunagi sinu heli, kirjeldusi ega pilte. Vaata [privaatsuspoliitikat](https://huggingface.co/privacy).",
+            "Hugging Face: tehisintellekti mudelid (Whisper subtiitrite ja SANA-Sprint / FLUX.2 pisipiltide jaoks) laaditakse esmakasutusel otse saidilt huggingface.co ja hoitakse seejärel sinu brauseris. Hugging Face saab siis sinu IP-aadressi ja tavapärase brauseriteabe, kuid mitte kunagi sinu heli, kirjeldusi ega pilte. Vaata [privaatsuspoliitikat](https://huggingface.co/privacy).",
             "GitHub: ainult siis, kui järgid linki lähtekoodi hoidlasse.",
             "Ühegi teise kolmanda osapoolega ühendust ei võeta: range Content-Security-Policy takistab tehniliselt lehel kuhugi mujale ühendust looma."
           ]
@@ -793,8 +794,8 @@
           "title": "Avatud lähtekood ja kolmandate osapoolte komponendid",
           "body": [
             "Lähtekood on saadaval MIT-litsentsi alusel [GitHubis](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo tugineb järgmistele: Mediabunny (MPL-2.0), Transformers.js ja ONNX Runtime (Apache-2.0 ja MIT), OpenAI Whisperi mudelid (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ning fondid Inter ja Montserrat (SIL Open Font License).",
-            "Tehisintellekti pildigeneraator kasutab NVIDIA mudelit SANA-Sprint 0.6B (Apache-2.0) ja sinu kirjelduse lugemiseks Google’i mudelit Gemma 2. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma kasutustingimused](https://ai.google.dev/gemma/terms) ja [Gemma keelatud kasutuse põhimõtted](https://ai.google.dev/gemma/prohibited_use_policy) kehtivad sinu suhtes ja on nende tingimuste osa: kohustud generaatorit mitte kasutama keelatud viisil ega seadust rikkudes. Google ei nõua õigusi sinu loodud piltidele: vastutad nende ja nende kasutamise eest ainult sina. Mudelid on saadaval olemasoleval kujul, ilma garantiita."
+            "LocalCutVideo tugineb järgmistele: Mediabunny (MPL-2.0), Transformers.js ja ONNX Runtime (Apache-2.0 ja MIT), OpenAI Whisperi mudelid (MIT), SANA-Sprint (NVIDIA, Apache-2.0), FLUX.2 klein 4B (Black Forest Labs, Apache-2.0), Qwen3 (Alibaba, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ning fondid Inter ja Montserrat (SIL Open Font License).",
+            "Tehisintellekti pildigeneraator kasutab NVIDIA mudelit SANA-Sprint 0.6B (Apache-2.0) ja sinu kirjelduse lugemiseks Google’i mudelit Gemma 2. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma kasutustingimused](https://ai.google.dev/gemma/terms) ja [Gemma keelatud kasutuse põhimõtted](https://ai.google.dev/gemma/prohibited_use_policy) kehtivad sinu suhtes ja on nende tingimuste osa: kohustud generaatorit mitte kasutama keelatud viisil ega seadust rikkudes. Google ei nõua õigusi sinu loodud piltidele: vastutad nende ja nende kasutamise eest ainult sina. Mudelid on saadaval olemasoleval kujul, ilma garantiita. Parima kvaliteedi korral kasutab generaator Black Forest Labsi mudelit FLUX.2 klein 4B ja Alibaba mudelit Qwen3 Apache-2.0 litsentsi alusel."
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "Tehisintellekti mudelit ei õnnestunud alla laadida. Proovi mõne minuti pärast uuesti",
       "history": "Sinu loodud pildid",
       "requirements": "Ainult arvutis: uuem WebGPU toega brauser ja umbes 8 GB mäluga graafikakaart",
-      "storageError": "Mudelit ei õnnestunud sellesse seadmesse salvestada. Vabasta kettaruumi või välju privaatsest sirvimisest ja proovi uuesti"
+      "storageError": "Mudelit ei õnnestunud sellesse seadmesse salvestada. Vabasta kettaruumi või välju privaatsest sirvimisest ja proovi uuesti",
+      "quality": "Kvaliteet",
+      "standard": "Tavaline",
+      "max": "Parim",
+      "sizeMax": "Ühekordne {{ size }} allalaadimine Hugging Face’ist, säilitatakse selles brauseris sinu arvutis. Mitu minutit pildi kohta"
     }
   },
   "seo": {

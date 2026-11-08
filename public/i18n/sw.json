@@ -254,7 +254,8 @@
       "rnnoise": "Inaondoa kelele za nyuma kwenye sauti",
       "count": "za AI, zote kwenye kompyuta yako",
       "used": "Modeli za AI zinazotumika",
-      "note": "SANA-Sprint inahitaji kompyuta, kivinjari kipya chenye WebGPU na kumbukumbu ya michoro ya takriban GB 8. GB 3.1 zake zinapakuliwa mara moja kutoka Hugging Face na hubaki kwenye kivinjari chako, katika kompyuta yako"
+      "note": "SANA-Sprint inahitaji kompyuta, kivinjari kipya chenye WebGPU na kumbukumbu ya michoro ya takriban GB 8. GB 3.1 zake zinapakuliwa mara moja kutoka Hugging Face na hubaki kwenye kivinjari chako, katika kompyuta yako",
+      "flux": "Inachora picha bora za vijipicha vyako kutoka kwa sentensi inayosomwa na Qwen3. Polepole zaidi, ina maelezo zaidi"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "Haki miliki",
           "body": [
             "Msimbo chanzo wa LocalCutVideo ni chanzo huria na umechapishwa chini ya leseni ya MIT kwenye [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Vipengele vya wahusika wengine, modeli za AI na fonti zinazotumiwa na programu zinabaki mali ya waandishi wao na zinatumika chini ya leseni zao, zilizoorodheshwa kwenye [masharti ya matumizi](/terms). Chapa zilizotajwa (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) ni mali ya wamiliki wao."
+            "Vipengele vya wahusika wengine, modeli za AI na fonti zinazotumiwa na programu zinabaki mali ya waandishi wao na zinatumika chini ya leseni zao, zilizoorodheshwa kwenye [masharti ya matumizi](/terms). Chapa zilizotajwa (Whisper, MediaPipe, SANA-Sprint, FLUX.2, Black Forest Labs, Qwen, Alibaba, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) ni mali ya wamiliki wao."
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "Kinachobaki kwenye kifaa chako",
           "body": [
-            "Faili za video na sauti unazofungua husomwa moja kwa moja kutoka kwenye diski yako. Uchambuzi, uandishi (Whisper), ufuatiliaji wa uso na uhamishaji huhesabiwa ndani ya kivinjari chako. Picha za AI za vijipicha (SANA-Sprint) pia hukokotolewa kwenye kifaa chako: maelezo yako na picha hazitumwi kamwe.",
+            "Faili za video na sauti unazofungua husomwa moja kwa moja kutoka kwenye diski yako. Uchambuzi, uandishi (Whisper), ufuatiliaji wa uso na uhamishaji huhesabiwa ndani ya kivinjari chako. Picha za AI za vijipicha (SANA-Sprint / FLUX.2) pia hukokotolewa kwenye kifaa chako: maelezo yako na picha hazitumwi kamwe.",
             "Miradi yako (makato, nakala ya maandishi, mipangilio) huhifadhiwa kwenye hifadhidata ya ndani ya kivinjari chako (IndexedDB), pamoja na picha ndogo na akiba ya uchambuzi. Mchapishaji hana ufikiaji wake. Unaweza kufuta mradi kutoka ukurasa wa miradi, au kufuta kila kitu kwa kufuta data ya tovuti hii kwenye mipangilio ya kivinjari chako."
           ]
         },
@@ -735,7 +736,7 @@
           "title": "Wahusika wengine",
           "body": [
             "Cloudflare: maombi yote kwa tovuti hii hupitia Cloudflare, inayolinda seva na kusimba muunganisho. Kama mpatanishi yeyote wa mtandao, huchakata anwani yako ya IP na taarifa za kawaida za kivinjari ili kuwasilisha kurasa, na inaweza kuhifadhi kumbukumbu za kiufundi kwa madhumuni ya usalama; kamwe haipokei video au sauti yako, ambazo kamwe haziondoki kwenye kifaa chako. Tazama [sera yao ya faragha](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: modeli za AI (Whisper kwa manukuu, SANA-Sprint kwa picha za vijipicha) hupakuliwa moja kwa moja kutoka huggingface.co unapozitumia kwa mara ya kwanza, kisha huhifadhiwa kwenye kivinjari chako. Hugging Face hupokea anwani yako ya IP na taarifa za kawaida za kivinjari, lakini kamwe si sauti yako, maelezo yako wala picha zako. Tazama [sera ya faragha](https://huggingface.co/privacy).",
+            "Hugging Face: modeli za AI (Whisper kwa manukuu, SANA-Sprint / FLUX.2 kwa picha za vijipicha) hupakuliwa moja kwa moja kutoka huggingface.co unapozitumia kwa mara ya kwanza, kisha huhifadhiwa kwenye kivinjari chako. Hugging Face hupokea anwani yako ya IP na taarifa za kawaida za kivinjari, lakini kamwe si sauti yako, maelezo yako wala picha zako. Tazama [sera ya faragha](https://huggingface.co/privacy).",
             "GitHub: ikiwa tu utafuata kiungo cha hazina ya msimbo chanzo.",
             "Hakuna mhusika mwingine anayewasiliana naye: Content-Security-Policy kali kiufundi huzuia ukurasa kuunganishwa mahali pengine popote."
           ]
@@ -793,8 +794,8 @@
           "title": "Chanzo huria na vipengele vya wahusika wengine",
           "body": [
             "Msimbo chanzo unapatikana chini ya leseni ya MIT kwenye [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo inategemea: Mediabunny (MPL-2.0), Transformers.js na ONNX Runtime (Apache-2.0 na MIT), modeli za Whisper za OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) na fonti za Inter na Montserrat (SIL Open Font License).",
-            "Kitengeneza picha cha AI hutumia modeli ya SANA-Sprint 0.6B ya NVIDIA (Apache-2.0) na, kusoma maelezo yako, Gemma 2 ya Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Masharti ya Matumizi ya Gemma](https://ai.google.dev/gemma/terms) na [Sera ya Matumizi Yaliyopigwa Marufuku ya Gemma](https://ai.google.dev/gemma/prohibited_use_policy) yanakuhusu na ni sehemu ya masharti haya: unakubali kutotumia kitengeneza picha kwa matumizi yaliyopigwa marufuku au kwa kukiuka sheria. Google haidai haki zozote juu ya picha unazotengeneza: wewe pekee unawajibika kwazo na kwa jinsi unavyozitumia. Modeli zinatolewa kama zilivyo, bila dhamana."
+            "LocalCutVideo inategemea: Mediabunny (MPL-2.0), Transformers.js na ONNX Runtime (Apache-2.0 na MIT), modeli za Whisper za OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), FLUX.2 klein 4B (Black Forest Labs, Apache-2.0), Qwen3 (Alibaba, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) na fonti za Inter na Montserrat (SIL Open Font License).",
+            "Kitengeneza picha cha AI hutumia modeli ya SANA-Sprint 0.6B ya NVIDIA (Apache-2.0) na, kusoma maelezo yako, Gemma 2 ya Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Masharti ya Matumizi ya Gemma](https://ai.google.dev/gemma/terms) na [Sera ya Matumizi Yaliyopigwa Marufuku ya Gemma](https://ai.google.dev/gemma/prohibited_use_policy) yanakuhusu na ni sehemu ya masharti haya: unakubali kutotumia kitengeneza picha kwa matumizi yaliyopigwa marufuku au kwa kukiuka sheria. Google haidai haki zozote juu ya picha unazotengeneza: wewe pekee unawajibika kwazo na kwa jinsi unavyozitumia. Modeli zinatolewa kama zilivyo, bila dhamana. Kwa ubora wa juu zaidi, kitengeneza picha hutumia FLUX.2 klein 4B ya Black Forest Labs na Qwen3 ya Alibaba, chini ya leseni ya Apache-2.0."
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "Modeli ya AI haikuweza kupakuliwa. Jaribu tena baada ya dakika chache",
       "history": "Picha ulizotengeneza",
       "requirements": "Kwenye kompyuta tu: kivinjari kipya chenye WebGPU na kadi ya michoro yenye kumbukumbu ya takriban GB 8",
-      "storageError": "Modeli haikuweza kuhifadhiwa kwenye kifaa hiki. Futa nafasi kwenye diski au toka kwenye kuvinjari kwa faragha, kisha ujaribu tena"
+      "storageError": "Modeli haikuweza kuhifadhiwa kwenye kifaa hiki. Futa nafasi kwenye diski au toka kwenye kuvinjari kwa faragha, kisha ujaribu tena",
+      "quality": "Ubora",
+      "standard": "Kawaida",
+      "max": "Wa juu zaidi",
+      "sizeMax": "Upakuaji wa mara moja wa {{ size }} kutoka Hugging Face, huhifadhiwa kwenye kivinjari hiki katika kompyuta yako. Dakika kadhaa kwa kila picha"
     }
   },
   "seo": {

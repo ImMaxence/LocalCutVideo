@@ -254,7 +254,8 @@
       "rnnoise": "Odstraní z hlasu hluk na pozadí",
       "count": "modelů AI, všechny na vašem počítači",
       "used": "Použité modely AI",
-      "note": "SANA-Sprint vyžaduje počítač, aktuální prohlížeč s podporou WebGPU a přibližně 8 GB grafické paměti. Jeho 3,1 GB se jednou stáhne z Hugging Face a zůstane ve vašem prohlížeči, ve vašem počítači"
+      "note": "SANA-Sprint vyžaduje počítač, aktuální prohlížeč s podporou WebGPU a přibližně 8 GB grafické paměti. Jeho 3,1 GB se jednou stáhne z Hugging Face a zůstane ve vašem prohlížeči, ve vašem počítači",
+      "flux": "Podle věty, kterou přečte Qwen3, kreslí vaše nejlepší obrázky miniatur. Pomalejší, detailnější"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "Duševní vlastnictví",
           "body": [
             "Zdrojový kód LocalCutVideo je otevřený a zveřejněný pod licencí MIT na [GitHubu](https://github.com/ImMaxence/LocalCutVideo).",
-            "Komponenty třetích stran, modely AI a písma, které aplikace používá, zůstávají majetkem svých autorů a používají se podle jejich vlastních licencí uvedených v [podmínkách použití](/terms). Zmíněné ochranné známky (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) patří jejich vlastníkům."
+            "Komponenty třetích stran, modely AI a písma, které aplikace používá, zůstávají majetkem svých autorů a používají se podle jejich vlastních licencí uvedených v [podmínkách použití](/terms). Zmíněné ochranné známky (Whisper, MediaPipe, SANA-Sprint, FLUX.2, Black Forest Labs, Qwen, Alibaba, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) patří jejich vlastníkům."
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "Co zůstává ve vašem zařízení",
           "body": [
-            "Video a zvukové soubory, které otevřete, se čtou přímo z disku. Analýzu, přepis (Whisper), sledování obličeje i export počítá lokálně váš prohlížeč. Obrázky AI pro miniatury (SANA-Sprint) se také počítají lokálně: váš popis ani obrázek se nikdy neodesílají.",
+            "Video a zvukové soubory, které otevřete, se čtou přímo z disku. Analýzu, přepis (Whisper), sledování obličeje i export počítá lokálně váš prohlížeč. Obrázky AI pro miniatury (SANA-Sprint / FLUX.2) se také počítají lokálně: váš popis ani obrázek se nikdy neodesílají.",
             "Vaše projekty (střihy, přepis, nastavení) se ukládají do místní databáze prohlížeče (IndexedDB) spolu s náhledem a mezipamětí analýz. Provozovatel k nim nemá přístup. Projekt můžete smazat na stránce projektů nebo smazat vše vymazáním dat tohoto webu v nastavení prohlížeče."
           ]
         },
@@ -735,7 +736,7 @@
           "title": "Třetí strany",
           "body": [
             "Cloudflare: všechny požadavky na tento web procházejí přes Cloudflare, který chrání server a šifruje spojení. Jako každý síťový prostředník zpracovává vaši IP adresu a běžné informace o prohlížeči, aby mohl doručit stránky, a může uchovávat technické záznamy pro účely zabezpečení; nikdy však nedostává vaše videa ani zvuk, které nikdy neopustí vaše zařízení. Viz [zásady ochrany soukromí](https://www.cloudflare.com/privacypolicy/) společnosti Cloudflare.",
-            "Hugging Face: modely AI (Whisper pro titulky, SANA-Sprint pro obrázky miniatur) se při prvním použití stahují přímo z huggingface.co a poté zůstávají ve vašem prohlížeči. Hugging Face přitom obdrží vaši IP adresu a běžné údaje o prohlížeči, ale nikdy váš zvuk, popisy ani obrázky. Viz [zásady ochrany osobních údajů](https://huggingface.co/privacy).",
+            "Hugging Face: modely AI (Whisper pro titulky, SANA-Sprint / FLUX.2 pro obrázky miniatur) se při prvním použití stahují přímo z huggingface.co a poté zůstávají ve vašem prohlížeči. Hugging Face přitom obdrží vaši IP adresu a běžné údaje o prohlížeči, ale nikdy váš zvuk, popisy ani obrázky. Viz [zásady ochrany osobních údajů](https://huggingface.co/privacy).",
             "GitHub: pouze pokud kliknete na odkaz do repozitáře se zdrojovým kódem.",
             "Žádná jiná třetí strana se nekontaktuje: přísná Content-Security-Policy technicky brání stránce připojit se kamkoli jinam."
           ]
@@ -793,8 +794,8 @@
           "title": "Open source a komponenty třetích stran",
           "body": [
             "Zdrojový kód je k dispozici pod licencí MIT na [GitHubu](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo stojí na: Mediabunny (MPL-2.0), Transformers.js a ONNX Runtime (Apache-2.0 a MIT), modelech Whisper od OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) a písmech Inter a Montserrat (SIL Open Font License).",
-            "Generátor obrázků AI používá model SANA-Sprint 0.6B od společnosti NVIDIA (Apache-2.0) a ke čtení vašeho popisu model Gemma 2 od společnosti Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Podmínky použití Gemma](https://ai.google.dev/gemma/terms) a [zásady zakázaného použití Gemma](https://ai.google.dev/gemma/prohibited_use_policy) se vztahují i na vás a jsou součástí těchto podmínek: zavazujete se, že generátor nepoužijete k zakázaným účelům ani v rozporu se zákonem. Google si nečiní nárok na obrázky, které vytvoříte: odpovídáte za ně i za jejich použití výhradně vy. Modely jsou poskytovány tak, jak jsou, bez záruky."
+            "LocalCutVideo stojí na: Mediabunny (MPL-2.0), Transformers.js a ONNX Runtime (Apache-2.0 a MIT), modelech Whisper od OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), FLUX.2 klein 4B (Black Forest Labs, Apache-2.0), Qwen3 (Alibaba, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) a písmech Inter a Montserrat (SIL Open Font License).",
+            "Generátor obrázků AI používá model SANA-Sprint 0.6B od společnosti NVIDIA (Apache-2.0) a ke čtení vašeho popisu model Gemma 2 od společnosti Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Podmínky použití Gemma](https://ai.google.dev/gemma/terms) a [zásady zakázaného použití Gemma](https://ai.google.dev/gemma/prohibited_use_policy) se vztahují i na vás a jsou součástí těchto podmínek: zavazujete se, že generátor nepoužijete k zakázaným účelům ani v rozporu se zákonem. Google si nečiní nárok na obrázky, které vytvoříte: odpovídáte za ně i za jejich použití výhradně vy. Modely jsou poskytovány tak, jak jsou, bez záruky. V maximální kvalitě generátor používá FLUX.2 klein 4B od Black Forest Labs a Qwen3 od Alibaby na základě licence Apache-2.0."
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "Model AI se nepodařilo stáhnout. Zkuste to znovu za několik minut",
       "history": "Vaše vytvořené obrázky",
       "requirements": "Pouze na počítači: aktuální prohlížeč s podporou WebGPU a grafická karta s přibližně 8 GB paměti",
-      "storageError": "Model se na tomto zařízení nepodařilo uložit. Uvolněte místo na disku nebo ukončete anonymní prohlížení a zkuste to znovu"
+      "storageError": "Model se na tomto zařízení nepodařilo uložit. Uvolněte místo na disku nebo ukončete anonymní prohlížení a zkuste to znovu",
+      "quality": "Kvalita",
+      "standard": "Standardní",
+      "max": "Maximální",
+      "sizeMax": "Jednorázové stažení {{ size }} z Hugging Face, uložené v tomto prohlížeči ve vašem počítači. Několik minut na obrázek"
     }
   },
   "seo": {

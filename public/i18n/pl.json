@@ -254,7 +254,8 @@
       "rnnoise": "Usuwa szum tła z głosu",
       "count": "modeli AI, wszystkie na Twoim komputerze",
       "used": "Używane modele AI",
-      "note": "SANA-Sprint wymaga komputera, aktualnej przeglądarki z obsługą WebGPU i około 8 GB pamięci graficznej. Jego 3,1 GB jest pobierane jednorazowo z Hugging Face i pozostaje w Twojej przeglądarce, na Twoim komputerze"
+      "note": "SANA-Sprint wymaga komputera, aktualnej przeglądarki z obsługą WebGPU i około 8 GB pamięci graficznej. Jego 3,1 GB jest pobierane jednorazowo z Hugging Face i pozostaje w Twojej przeglądarce, na Twoim komputerze",
+      "flux": "Rysuje Twoje najlepsze obrazy miniatur na podstawie zdania odczytanego przez Qwen3. Wolniej, z większą liczbą szczegółów"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "Własność intelektualna",
           "body": [
             "Kod źródłowy LocalCutVideo jest otwarty i opublikowany na licencji MIT na [GitHubie](https://github.com/ImMaxence/LocalCutVideo).",
-            "Komponenty firm trzecich, modele AI i czcionki używane przez aplikację pozostają własnością ich autorów i są używane na ich własnych licencjach, wymienionych w [warunkach korzystania](/terms). Wymienione marki (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) należą do ich właścicieli."
+            "Komponenty firm trzecich, modele AI i czcionki używane przez aplikację pozostają własnością ich autorów i są używane na ich własnych licencjach, wymienionych w [warunkach korzystania](/terms). Wymienione marki (Whisper, MediaPipe, SANA-Sprint, FLUX.2, Black Forest Labs, Qwen, Alibaba, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) należą do ich właścicieli."
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "Co zostaje na Twoim urządzeniu",
           "body": [
-            "Otwierane przez Ciebie pliki wideo i audio są odczytywane bezpośrednio z dysku. Analiza, transkrypcja (Whisper), śledzenie twarzy i eksport są obliczane lokalnie przez przeglądarkę. Obrazy AI do miniatur (SANA-Sprint) są również obliczane lokalnie: Twój opis i obraz nigdy nie są wysyłane.",
+            "Otwierane przez Ciebie pliki wideo i audio są odczytywane bezpośrednio z dysku. Analiza, transkrypcja (Whisper), śledzenie twarzy i eksport są obliczane lokalnie przez przeglądarkę. Obrazy AI do miniatur (SANA-Sprint / FLUX.2) są również obliczane lokalnie: Twój opis i obraz nigdy nie są wysyłane.",
             "Twoje projekty (cięcia, transkrypcja, ustawienia) są zapisywane w lokalnej bazie danych przeglądarki (IndexedDB) wraz z miniaturą i pamięcią podręczną analiz. Wydawca nie ma do nich dostępu. Możesz usunąć projekt na stronie projektów albo usunąć wszystko, czyszcząc dane tej witryny w ustawieniach przeglądarki."
           ]
         },
@@ -735,7 +736,7 @@
           "title": "Podmioty zewnętrzne",
           "body": [
             "Cloudflare: wszystkie żądania do tej witryny przechodzą przez Cloudflare, który chroni serwer i szyfruje połączenie. Jak każdy pośrednik sieciowy przetwarza Twój adres IP i standardowe informacje o przeglądarce, aby dostarczyć strony, i może przechowywać logi techniczne do celów bezpieczeństwa; nigdy nie otrzymuje Twoich filmów ani dźwięku, które nigdy nie opuszczają Twojego urządzenia. Zobacz [politykę prywatności](https://www.cloudflare.com/privacypolicy/) Cloudflare.",
-            "Hugging Face: modele AI (Whisper do napisów, SANA-Sprint do obrazów miniatur) są pobierane bezpośrednio z huggingface.co przy pierwszym użyciu, a następnie przechowywane w przeglądarce. Hugging Face otrzymuje wówczas Twój adres IP i standardowe informacje o przeglądarce, ale nigdy Twojego dźwięku, opisów ani obrazów. Zobacz [politykę prywatności](https://huggingface.co/privacy).",
+            "Hugging Face: modele AI (Whisper do napisów, SANA-Sprint / FLUX.2 do obrazów miniatur) są pobierane bezpośrednio z huggingface.co przy pierwszym użyciu, a następnie przechowywane w przeglądarce. Hugging Face otrzymuje wówczas Twój adres IP i standardowe informacje o przeglądarce, ale nigdy Twojego dźwięku, opisów ani obrazów. Zobacz [politykę prywatności](https://huggingface.co/privacy).",
             "GitHub: tylko jeśli klikniesz link do repozytorium kodu źródłowego.",
             "Żaden inny podmiot nie jest kontaktowany: ścisła Content-Security-Policy technicznie uniemożliwia stronie łączenie się gdziekolwiek indziej."
           ]
@@ -793,8 +794,8 @@
           "title": "Otwarty kod i komponenty firm trzecich",
           "body": [
             "Kod źródłowy jest dostępny na licencji MIT na [GitHubie](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo korzysta z: Mediabunny (MPL-2.0), Transformers.js i ONNX Runtime (Apache-2.0 i MIT), modeli Whisper od OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) oraz czcionek Inter i Montserrat (SIL Open Font License).",
-            "Generator obrazów AI korzysta z modelu SANA-Sprint 0.6B firmy NVIDIA (Apache-2.0), a do odczytania Twojego opisu z modelu Gemma 2 firmy Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Warunki korzystania z Gemma](https://ai.google.dev/gemma/terms) i [zasady zabronionego użycia Gemma](https://ai.google.dev/gemma/prohibited_use_policy) mają zastosowanie do Ciebie i stanowią część niniejszych warunków: zobowiązujesz się nie używać generatora do zabronionych celów ani z naruszeniem prawa. Google nie rości sobie praw do generowanych przez Ciebie obrazów: wyłącznie Ty odpowiadasz za nie i za sposób ich użycia. Modele są udostępniane w stanie, w jakim się znajdują, bez gwarancji."
+            "LocalCutVideo korzysta z: Mediabunny (MPL-2.0), Transformers.js i ONNX Runtime (Apache-2.0 i MIT), modeli Whisper od OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), FLUX.2 klein 4B (Black Forest Labs, Apache-2.0), Qwen3 (Alibaba, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) oraz czcionek Inter i Montserrat (SIL Open Font License).",
+            "Generator obrazów AI korzysta z modelu SANA-Sprint 0.6B firmy NVIDIA (Apache-2.0), a do odczytania Twojego opisu z modelu Gemma 2 firmy Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Warunki korzystania z Gemma](https://ai.google.dev/gemma/terms) i [zasady zabronionego użycia Gemma](https://ai.google.dev/gemma/prohibited_use_policy) mają zastosowanie do Ciebie i stanowią część niniejszych warunków: zobowiązujesz się nie używać generatora do zabronionych celów ani z naruszeniem prawa. Google nie rości sobie praw do generowanych przez Ciebie obrazów: wyłącznie Ty odpowiadasz za nie i za sposób ich użycia. Modele są udostępniane w stanie, w jakim się znajdują, bez gwarancji. W maksymalnej jakości generator korzysta z modelu FLUX.2 klein 4B firmy Black Forest Labs i Qwen3 firmy Alibaba na licencji Apache-2.0."
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "Nie udało się pobrać modelu AI. Spróbuj ponownie za kilka minut",
       "history": "Twoje wygenerowane obrazy",
       "requirements": "Tylko na komputerze: aktualna przeglądarka z obsługą WebGPU i karta graficzna z około 8 GB pamięci",
-      "storageError": "Nie udało się zapisać modelu na tym urządzeniu. Zwolnij miejsce na dysku lub wyjdź z trybu prywatnego i spróbuj ponownie"
+      "storageError": "Nie udało się zapisać modelu na tym urządzeniu. Zwolnij miejsce na dysku lub wyjdź z trybu prywatnego i spróbuj ponownie",
+      "quality": "Jakość",
+      "standard": "Standardowa",
+      "max": "Maksymalna",
+      "sizeMax": "Jednorazowe pobranie {{ size }} z Hugging Face, przechowywane w tej przeglądarce na Twoim komputerze. Kilka minut na obraz"
     }
   },
   "seo": {

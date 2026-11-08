@@ -2,6 +2,7 @@
  * Contracts of the three Web Workers. Kept apart from the worker files so the main thread
  * can import them without pulling the `webworker` lib into the DOM compilation.
  */
+import type { ImageModelId } from '../core/image-models';
 import type { AspectFormat, Project, Range, SourceInfo, WhisperModel } from '../engine/model';
 
 export interface AudioExtraction {
@@ -43,14 +44,14 @@ export interface ImageProgress {
 }
 
 export interface ImageWorkerApi {
-  /** Downloads the model files that are not in the browser cache yet. */
-  download(onProgress: (p: ImageProgress) => void): Promise<void>;
+  /** Downloads the model files that are not on this device yet. */
+  download(model: ImageModelId, onProgress: (p: ImageProgress) => void): Promise<void>;
   /** The caption states of a sentence. */
-  encode(prompt: string): Promise<Float32Array>;
+  encode(model: ImageModelId, prompt: string): Promise<Float32Array>;
   /** The picture, in latents. */
-  denoise(states: Float32Array, format: AspectFormat, onStep: (done: number) => void): Promise<Float32Array>;
+  denoise(model: ImageModelId, states: Float32Array, format: AspectFormat, onStep: (done: number) => void): Promise<Float32Array>;
   /** The final PNG. */
-  decode(latents: Float32Array, format: AspectFormat): Promise<Blob>;
+  decode(model: ImageModelId, latents: Float32Array, format: AspectFormat): Promise<Blob>;
   cancel(): void;
 }
 

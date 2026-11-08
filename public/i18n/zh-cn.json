@@ -254,7 +254,8 @@
       "rnnoise": "去除语音中的背景噪音",
       "count": "个 AI 模型，全部在您的电脑上",
       "used": "使用的 AI 模型",
-      "note": "SANA-Sprint 需要电脑、支持 WebGPU 的较新浏览器和约 8 GB 显存。其 3.1 GB 数据仅从 Hugging Face 下载一次，并保存在您电脑的浏览器中"
+      "note": "SANA-Sprint 需要电脑、支持 WebGPU 的较新浏览器和约 8 GB 显存。其 3.1 GB 数据仅从 Hugging Face 下载一次，并保存在您电脑的浏览器中",
+      "flux": "根据 Qwen3 读取的一句话绘制最佳缩略图图像。速度较慢，细节更丰富"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "知识产权",
           "body": [
             "LocalCutVideo 的源代码是开源的，以 MIT 许可证发布在 [GitHub](https://github.com/ImMaxence/LocalCutVideo) 上。",
-            "应用所使用的第三方组件、AI 模型和字体仍归其作者所有，并依据其各自的许可证使用，详见[使用条款](/terms)。所提及的品牌（Whisper、MediaPipe、SANA-Sprint、NVIDIA、Gemma、Google、Hugging Face、Chrome、Edge 等）归其各自所有者所有。"
+            "应用所使用的第三方组件、AI 模型和字体仍归其作者所有，并依据其各自的许可证使用，详见[使用条款](/terms)。所提及的品牌（Whisper、MediaPipe、SANA-Sprint、FLUX.2、Black Forest Labs、Qwen、Alibaba、NVIDIA、Gemma、Google、Hugging Face、Chrome、Edge 等）归其各自所有者所有。"
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "留在你设备上的内容",
           "body": [
-            "你打开的视频和音频文件直接从磁盘读取。分析、转写（Whisper）、人脸追踪和导出都由你的浏览器在本地计算。缩略图的 AI 图像（SANA-Sprint）同样在本地计算：您的描述和图像绝不会被发送。",
+            "你打开的视频和音频文件直接从磁盘读取。分析、转写（Whisper）、人脸追踪和导出都由你的浏览器在本地计算。缩略图的 AI 图像（SANA-Sprint / FLUX.2）同样在本地计算：您的描述和图像绝不会被发送。",
             "你的项目（剪切、转写稿、设置）连同一张封面图和分析缓存，一起保存在浏览器的本地数据库（IndexedDB）中。发布者无法访问它们。你可以在项目页面删除某个项目，或在浏览器设置中清除本站数据以删除全部内容。"
           ]
         },
@@ -735,7 +736,7 @@
           "title": "第三方",
           "body": [
             "Cloudflare：对本站的所有请求都会经过 Cloudflare，它负责保护服务器并加密连接。与任何网络中介一样，它会处理你的 IP 地址和常规浏览器信息以传送页面，并可能出于安全目的保留技术日志；它绝不会收到你的视频或音频，因为它们从不离开你的设备。详见其[隐私政策](https://www.cloudflare.com/privacypolicy/)。",
-            "Hugging Face：AI 模型（用于字幕的 Whisper、用于缩略图图像的 SANA-Sprint）在您首次使用时直接从 huggingface.co 下载，之后保存在您的浏览器中。此时 Hugging Face 会收到您的 IP 地址和常规浏览器信息，但绝不会收到您的音频、描述或图像。请参阅其[隐私政策](https://huggingface.co/privacy)。",
+            "Hugging Face：AI 模型（用于字幕的 Whisper、用于缩略图图像的 SANA-Sprint / FLUX.2）在您首次使用时直接从 huggingface.co 下载，之后保存在您的浏览器中。此时 Hugging Face 会收到您的 IP 地址和常规浏览器信息，但绝不会收到您的音频、描述或图像。请参阅其[隐私政策](https://huggingface.co/privacy)。",
             "GitHub：仅当你点击指向源代码仓库的链接时。",
             "不会联系任何其他第三方：严格的 Content-Security-Policy 在技术上阻止页面连接其他任何地方。"
           ]
@@ -793,8 +794,8 @@
           "title": "开源与第三方组件",
           "body": [
             "源代码以 MIT 许可证发布在 [GitHub](https://github.com/ImMaxence/LocalCutVideo) 上。",
-            "LocalCutVideo 依赖以下组件：Mediabunny（MPL-2.0）、Transformers.js 和 ONNX Runtime（Apache-2.0 和 MIT）、OpenAI 的 Whisper 模型（MIT）、SANA-Sprint (NVIDIA, Apache-2.0)、Gemma 2 (Google)、MediaPipe（Apache-2.0）、[RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause)、Wavesurfer.js（BSD-3-Clause）、Dexie.js（Apache-2.0）、Angular（MIT），以及 Inter 和 Montserrat 字体（SIL Open Font License）。",
-            "AI 图像生成器使用 NVIDIA 的 SANA-Sprint 0.6B 模型（Apache-2.0），并使用 Google 的 Gemma 2 读取您的描述。 Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma 使用条款](https://ai.google.dev/gemma/terms)和 [Gemma 禁止使用政策](https://ai.google.dev/gemma/prohibited_use_policy)同样适用于您，并构成本条款的一部分：您同意不将生成器用于任何被禁止的用途或违反法律。Google 对您生成的图像不主张任何权利：您须独自对图像及其使用负责。模型按原样提供，不作任何保证。"
+            "LocalCutVideo 依赖以下组件：Mediabunny（MPL-2.0）、Transformers.js 和 ONNX Runtime（Apache-2.0 和 MIT）、OpenAI 的 Whisper 模型（MIT）、SANA-Sprint (NVIDIA, Apache-2.0)、FLUX.2 klein 4B (Black Forest Labs, Apache-2.0)、Qwen3 (Alibaba, Apache-2.0)、Gemma 2 (Google)、MediaPipe（Apache-2.0）、[RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause)、Wavesurfer.js（BSD-3-Clause）、Dexie.js（Apache-2.0）、Angular（MIT），以及 Inter 和 Montserrat 字体（SIL Open Font License）。",
+            "AI 图像生成器使用 NVIDIA 的 SANA-Sprint 0.6B 模型（Apache-2.0），并使用 Google 的 Gemma 2 读取您的描述。 Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma 使用条款](https://ai.google.dev/gemma/terms)和 [Gemma 禁止使用政策](https://ai.google.dev/gemma/prohibited_use_policy)同样适用于您，并构成本条款的一部分：您同意不将生成器用于任何被禁止的用途或违反法律。Google 对您生成的图像不主张任何权利：您须独自对图像及其使用负责。模型按原样提供，不作任何保证。在最高画质下，生成器使用 Black Forest Labs 的 FLUX.2 klein 4B 和阿里巴巴的 Qwen3，遵循 Apache-2.0 许可。"
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "无法下载 AI 模型。请几分钟后重试",
       "history": "您生成的图片",
       "requirements": "仅限电脑：需要支持 WebGPU 的较新浏览器，以及约 8 GB 显存的显卡",
-      "storageError": "无法在此设备上保存模型。请释放磁盘空间或退出无痕浏览后重试"
+      "storageError": "无法在此设备上保存模型。请释放磁盘空间或退出无痕浏览后重试",
+      "quality": "画质",
+      "standard": "标准",
+      "max": "最高",
+      "sizeMax": "从 Hugging Face 一次性下载 {{ size }}，保存在您电脑的此浏览器中。每张图片需要几分钟"
     }
   },
   "seo": {

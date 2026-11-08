@@ -1,7 +1,7 @@
 /// <reference lib="webworker" />
 /**
- * Image worker: generates a picture from a sentence with SANA-Sprint 0.6B, on this device's
- * graphics card. The model comes from Hugging Face once, then from the browser cache; the
+ * Image worker: generates a picture from a sentence with SANA-Sprint 0.6B (or FLUX.2 klein 4B,
+ * see flux-pipeline.ts), on this device's graphics card. The model comes from Hugging Face once, then from the browser cache; the
  * sentence and the picture never leave the device. Each phase (text, picture, decoding) runs in
  * a worker of its own, ended afterwards: nothing else gives the graphics memory back.
  */
@@ -34,7 +34,10 @@ import {
   toPixels,
   unpackEmbedding,
 } from '../engine/sana';
+import type { ImageModelId } from '../core/image-models';
+import { fluxSize } from '../engine/flux';
 import type { AspectFormat } from '../engine/model';
+import { decodeFlux, denoiseFlux, downloadFlux, encodeFluxPrompt } from './flux-pipeline';
 import type { ImageProgress, ImageWorkerApi } from './worker-types';
 
 const WEIGHTS = 'https://huggingface.co/UtopiaIA/sana-sprint-0.6b-1024px-onnx-web/resolve/131c0f31f7607f8e92e7209dfeb968e8b7f44374';
@@ -234,26 +237,42 @@ async function decode(clean: Float32Array, dims: number[], width: number, height
   return canvas.convertToBlob({ type: 'image/png' });
 }
 
+/** A finished picture as a PNG file. */
+function toPng(image: Float32Array, width: number, height: number): Promise<Blob> {
+  const canvas = new OffscreenCanvas(width, height);
+  canvas.getContext('2d')!.putImageData(new ImageData(toPixels(image, width, height), width, height), 0, 0);
+  return canvas.convertToBlob({ type: 'image/png' });
+}
+
 const api: ImageWorkerApi = {
-  async download(onProgress: (p: ImageProgress) => void): Promise<void> {
+  async download(model: ImageModelId, onProgress: (p: ImageProgress) => void): Promise<void> {
     cancelled = false;
-    await ensureFiles(onProgress);
+    if (model === 'flux') await downloadFlux(onProgress, () => cancelled);
+    else await ensureFiles(onProgress);
   },
 
-  async encode(prompt: string): Promise<Float32Array> {
+  async encode(model: ImageModelId, prompt: string): Promise<Float32Array> {
     cancelled = false;
-    return encodeText(prompt, await ensureFiles(() => undefined));
+    return model === 'flux' ? encodeFluxPrompt(prompt) : encodeText(prompt, await ensureFiles(() => undefined));
   },
 
-  async denoise(states: Float32Array, format: AspectFormat, onStep: (done: number) => void): Promise<Float32Array> {
+  async denoise(model: ImageModelId, states: Float32Array, format: AspectFormat, onStep: (done: number) => void): Promise<Float32Array> {
     cancelled = false;
+    if (model === 'flux') {
+      const { width, height } = fluxSize(format);
+      return denoiseFlux(states, width, height, onStep, throwIfCancelled);
+    }
     const { width, height } = sanaSize(format);
     const files = await ensureFiles(() => undefined);
     return generateLatents(states, [32, height / LATENT_SCALE, width / LATENT_SCALE], files.transformer, onStep);
   },
 
-  async decode(latents: Float32Array, format: AspectFormat): Promise<Blob> {
+  async decode(model: ImageModelId, latents: Float32Array, format: AspectFormat): Promise<Blob> {
     cancelled = false;
+    if (model === 'flux') {
+      const { width, height } = fluxSize(format);
+      return toPng(await decodeFlux(latents, width, height), width, height);
+    }
     const { width, height } = sanaSize(format);
     const files = await ensureFiles(() => undefined);
     return decode(latents, [32, height / LATENT_SCALE, width / LATENT_SCALE], width, height, files.decoder);

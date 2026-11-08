@@ -12,12 +12,13 @@ export class ProgressEaser {
   private startedAt = 0;
   private expected = FIRST_STEP_MS;
 
-  report(progress: number, next: number, now: number): void {
+  /** `expectedMs` overrides the pace when a step is known to differ from the previous ones. */
+  report(progress: number, next: number, now: number, expectedMs?: number): void {
     this.startedAt ||= now;
     this.from = Math.max(progress, this.value(now));
     this.to = Math.max(next, this.from);
     this.at = now;
-    this.expected = progress > 0 ? Math.max(300, ((now - this.startedAt) / progress) * (this.to - this.from)) : FIRST_STEP_MS;
+    this.expected = expectedMs ?? (progress > 0 ? Math.max(300, ((now - this.startedAt) / progress) * (this.to - this.from)) : FIRST_STEP_MS);
   }
 
   value(now: number): number {

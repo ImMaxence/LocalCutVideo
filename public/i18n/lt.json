@@ -254,7 +254,8 @@
       "rnnoise": "Pašalina foninį triukšmą iš balso",
       "count": "DI modeliai, visi jūsų kompiuteryje",
       "used": "Naudojami DI modeliai",
-      "note": "„SANA-Sprint“ reikia kompiuterio, naujos naršyklės su WebGPU palaikymu ir maždaug 8 GB grafinės atminties. Jo 3,1 GB atsisiunčiami vieną kartą iš „Hugging Face“ ir lieka jūsų naršyklėje, jūsų kompiuteryje"
+      "note": "„SANA-Sprint“ reikia kompiuterio, naujos naršyklės su WebGPU palaikymu ir maždaug 8 GB grafinės atminties. Jo 3,1 GB atsisiunčiami vieną kartą iš „Hugging Face“ ir lieka jūsų naršyklėje, jūsų kompiuteryje",
+      "flux": "Pagal „Qwen3“ perskaitytą sakinį piešia geriausius jūsų miniatiūrų vaizdus. Lėčiau, bet detaliau"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "Intelektinė nuosavybė",
           "body": [
             "LocalCutVideo pirminis kodas yra atviras ir paskelbtas pagal MIT licenciją [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Programėlės naudojami trečiųjų šalių komponentai, DI modeliai ir šriftai lieka jų autorių nuosavybe ir naudojami pagal jų pačių licencijas, išvardytas [naudojimo sąlygose](/terms). Minimi prekių ženklai (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) priklauso jų savininkams."
+            "Programėlės naudojami trečiųjų šalių komponentai, DI modeliai ir šriftai lieka jų autorių nuosavybe ir naudojami pagal jų pačių licencijas, išvardytas [naudojimo sąlygose](/terms). Minimi prekių ženklai (Whisper, MediaPipe, SANA-Sprint, FLUX.2, Black Forest Labs, Qwen, Alibaba, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) priklauso jų savininkams."
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "Kas lieka jūsų įrenginyje",
           "body": [
-            "Jūsų atidaryti vaizdo ir garso failai skaitomi tiesiai iš disko. Analizė, transkripcija (Whisper), veido sekimas ir eksportas apskaičiuojami vietoje jūsų naršyklėje. Miniatiūrų DI vaizdai („SANA-Sprint“) taip pat apskaičiuojami vietoje: jūsų aprašymas ir vaizdas niekada nesiunčiami.",
+            "Jūsų atidaryti vaizdo ir garso failai skaitomi tiesiai iš disko. Analizė, transkripcija (Whisper), veido sekimas ir eksportas apskaičiuojami vietoje jūsų naršyklėje. Miniatiūrų DI vaizdai („SANA-Sprint / FLUX.2“) taip pat apskaičiuojami vietoje: jūsų aprašymas ir vaizdas niekada nesiunčiami.",
             "Jūsų projektai (kirpimai, transkripcija, nustatymai) saugomi vietinėje naršyklės duomenų bazėje (IndexedDB) kartu su miniatiūra ir analizės podėliu. Leidėjas neturi prie jų prieigos. Projektą galite ištrinti projektų puslapyje arba ištrinti viską išvalę šios svetainės duomenis naršyklės nustatymuose."
           ]
         },
@@ -735,7 +736,7 @@
           "title": "Trečiosios šalys",
           "body": [
             "Cloudflare: visos užklausos į šią svetainę eina per Cloudflare, kuri apsaugo serverį ir šifruoja ryšį. Kaip ir bet kuris tinklo tarpininkas, ji tvarko jūsų IP adresą ir įprastą naršyklės informaciją, kad pateiktų puslapius, ir saugumo tikslais gali saugoti techninius žurnalus; ji niekada negauna jūsų vaizdo įrašų ar garso, kurie niekada nepalieka jūsų įrenginio. Žr. Cloudflare [privatumo politiką](https://www.cloudflare.com/privacypolicy/).",
-            "„Hugging Face“: DI modeliai („Whisper“ subtitrams, „SANA-Sprint“ miniatiūrų vaizdams) pirmą kartą naudojant atsisiunčiami tiesiai iš huggingface.co ir vėliau laikomi jūsų naršyklėje. Tada „Hugging Face“ gauna jūsų IP adresą ir įprastą naršyklės informaciją, bet niekada – jūsų garso, aprašymų ar vaizdų. Žr. [privatumo politiką](https://huggingface.co/privacy).",
+            "„Hugging Face“: DI modeliai („Whisper“ subtitrams, „SANA-Sprint / FLUX.2“ miniatiūrų vaizdams) pirmą kartą naudojant atsisiunčiami tiesiai iš huggingface.co ir vėliau laikomi jūsų naršyklėje. Tada „Hugging Face“ gauna jūsų IP adresą ir įprastą naršyklės informaciją, bet niekada – jūsų garso, aprašymų ar vaizdų. Žr. [privatumo politiką](https://huggingface.co/privacy).",
             "GitHub: tik jei paspaudžiate nuorodą į pirminio kodo saugyklą.",
             "Jokia kita trečioji šalis nekontaktuojama: griežta Content-Security-Policy techniškai neleidžia puslapiui jungtis niekur kitur."
           ]
@@ -793,8 +794,8 @@
           "title": "Atvirasis kodas ir trečiųjų šalių komponentai",
           "body": [
             "Pirminis kodas pasiekiamas pagal MIT licenciją [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo remiasi: Mediabunny (MPL-2.0), Transformers.js ir ONNX Runtime (Apache-2.0 ir MIT), OpenAI Whisper modeliais (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ir šriftais Inter bei Montserrat (SIL Open Font License).",
-            "DI vaizdų generatorius naudoja NVIDIA modelį „SANA-Sprint 0.6B“ (Apache-2.0), o jūsų aprašymui skaityti – „Google“ modelį „Gemma 2“. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [„Gemma“ naudojimo sąlygos](https://ai.google.dev/gemma/terms) ir [„Gemma“ draudžiamo naudojimo politika](https://ai.google.dev/gemma/prohibited_use_policy) taikomos jums ir yra šių sąlygų dalis: įsipareigojate nenaudoti generatoriaus draudžiamais tikslais ar pažeidžiant įstatymus. „Google“ nereiškia teisių į jūsų sukurtus vaizdus: už juos ir jų naudojimą atsakote tik jūs. Modeliai teikiami tokie, kokie yra, be garantijų."
+            "LocalCutVideo remiasi: Mediabunny (MPL-2.0), Transformers.js ir ONNX Runtime (Apache-2.0 ir MIT), OpenAI Whisper modeliais (MIT), SANA-Sprint (NVIDIA, Apache-2.0), FLUX.2 klein 4B (Black Forest Labs, Apache-2.0), Qwen3 (Alibaba, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ir šriftais Inter bei Montserrat (SIL Open Font License).",
+            "DI vaizdų generatorius naudoja NVIDIA modelį „SANA-Sprint 0.6B“ (Apache-2.0), o jūsų aprašymui skaityti – „Google“ modelį „Gemma 2“. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [„Gemma“ naudojimo sąlygos](https://ai.google.dev/gemma/terms) ir [„Gemma“ draudžiamo naudojimo politika](https://ai.google.dev/gemma/prohibited_use_policy) taikomos jums ir yra šių sąlygų dalis: įsipareigojate nenaudoti generatoriaus draudžiamais tikslais ar pažeidžiant įstatymus. „Google“ nereiškia teisių į jūsų sukurtus vaizdus: už juos ir jų naudojimą atsakote tik jūs. Modeliai teikiami tokie, kokie yra, be garantijų. Didžiausios kokybės režimu generatorius naudoja „Black Forest Labs“ modelį „FLUX.2 klein 4B“ ir „Alibaba“ modelį „Qwen3“ pagal „Apache-2.0“ licenciją."
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "DI modelio atsisiųsti nepavyko. Bandykite dar kartą po kelių minučių",
       "history": "Jūsų sukurti vaizdai",
       "requirements": "Tik kompiuteryje: nauja naršyklė su WebGPU palaikymu ir vaizdo plokštė su maždaug 8 GB atminties",
-      "storageError": "Modelio nepavyko įrašyti šiame įrenginyje. Atlaisvinkite vietos diske arba išeikite iš privačios naršymo sesijos ir bandykite dar kartą"
+      "storageError": "Modelio nepavyko įrašyti šiame įrenginyje. Atlaisvinkite vietos diske arba išeikite iš privačios naršymo sesijos ir bandykite dar kartą",
+      "quality": "Kokybė",
+      "standard": "Standartinė",
+      "max": "Didžiausia",
+      "sizeMax": "Vienkartinis {{ size }} atsisiuntimas iš „Hugging Face“, saugomas šioje naršyklėje jūsų kompiuteryje. Kelios minutės vienam vaizdui"
     }
   },
   "seo": {

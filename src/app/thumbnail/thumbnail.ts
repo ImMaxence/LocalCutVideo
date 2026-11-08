@@ -18,8 +18,10 @@ import { RouterLink } from '@angular/router';
 import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
 import { db, getClipFile } from '../core/db';
 import { downloadBlob, queryReadPermission, requestReadPermission } from '../core/file-access';
+import { IMAGE_MODELS, type ImageModelId } from '../core/image-models';
 import { WorkersService, proxy } from '../core/workers.service';
 import { ProgressEaser } from '../engine/progress';
+import { FLUX_STEPS, fluxSize } from '../engine/flux';
 import { sanaSize } from '../engine/sana';
 import type { ImageProgress, ImageWorkerApi } from '../workers/worker-types';
 import { type AspectFormat, type Project, type Rotation, migrateProject } from '../engine/model';
@@ -55,6 +57,7 @@ interface AiImage {
   blob: Blob;
   prompt: string;
   format: AspectFormat;
+  model: ImageModelId;
 }
 
 interface Still {
@@ -74,11 +77,14 @@ const MOMENTS = 8;
 const IMAGE_FILE = /\.(png|jpe?g|webp|gif|avif|bmp)$/i;
 
 /** Share of the generation reached at the end of each phase. */
-const AI_PHASES = { text: 0.2, step: 0.45, steps: 0.7 };
+const AI_PHASES: Record<ImageModelId, { text: number; steps: number; count: number; firstStepMs?: number }> = {
+  sana: { text: 0.2, steps: 0.7, count: 2 },
+  // Reading the text is short: the pace it gives would make the first step look stuck.
+  flux: { text: 0.1, steps: 0.97, count: FLUX_STEPS, firstStepMs: 90_000 },
+};
+const AI_MODEL_KEY = 'lcv-ai-image-model';
 const AI_TICK_MS = 200;
 
-/** One-time download of the image model. */
-const AI_DOWNLOAD_SIZE = '≈ 3.1 GB';
 /** Generated pictures kept on this device. */
 const AI_HISTORY = 24;
 
@@ -158,7 +164,9 @@ export class Thumbnail {
   protected readonly saved = signal<string | null>(null);
   protected readonly error = signal<string | null>(null);
 
-  protected readonly aiDownloadSize = AI_DOWNLOAD_SIZE;
+  /** The model used for the next picture. */
+  protected readonly aiModel = signal<ImageModelId>('sana');
+  protected readonly aiInfo = computed(() => IMAGE_MODELS[this.aiModel()]);
   protected readonly aiSupported = signal(false);
   protected readonly aiPrompt = signal('');
   protected readonly aiProgress = signal<ImageProgress | null>(null);
@@ -167,7 +175,7 @@ export class Thumbnail {
   /** The generated pictures, most recent first. */
   protected readonly aiImages = signal<AiImage[]>([]);
   protected readonly aiActive = signal<number | null>(null);
-  protected readonly aiOutputSize = computed(() => sanaSize(this.settings().format));
+  protected readonly aiOutputSize = computed(() => (this.aiModel() === 'flux' ? fluxSize(this.settings().format) : sanaSize(this.settings().format)));
 
   protected readonly project = signal<Project | null>(null);
   protected readonly loadingProject = signal(false);
@@ -223,6 +231,7 @@ export class Thumbnail {
 
     afterNextRender(() => {
       void hasImageGpu().then((ok) => this.aiSupported.set(ok));
+      this.restoreAiModel();
       void this.loadAiImages();
     });
 
@@ -522,28 +531,31 @@ export class Thumbnail {
     this.aiProgress.set({ stage: 'download', progress: 0 });
     this.aiCancelled = false;
     const format = this.settings().format;
+    const model = this.aiModel();
+    const plan = AI_PHASES[model];
+    const stepEnd = (done: number) => plan.text + ((plan.steps - plan.text) * done) / plan.count;
     const easer = new ProgressEaser();
     const ticker = setInterval(() => {
       if (this.aiProgress()?.stage === 'generate') this.aiProgress.set({ stage: 'generate', progress: easer.value(performance.now()) });
     }, AI_TICK_MS);
-    const report = (progress: number, next: number) => {
+    const report = (progress: number, next: number, expectedMs?: number) => {
       const now = performance.now();
-      easer.report(progress, next, now);
+      easer.report(progress, next, now, expectedMs);
       this.aiProgress.set({ stage: 'generate', progress: easer.value(now) });
     };
     try {
-      await this.aiPhase((w) => w.download(proxy((p: ImageProgress) => this.aiProgress.set(p))));
-      report(0, AI_PHASES.text);
-      const states = await this.aiPhase((w) => w.encode(prompt));
-      report(AI_PHASES.text, AI_PHASES.step);
+      await this.aiPhase((w) => w.download(model, proxy((p: ImageProgress) => this.aiProgress.set(p))));
+      report(0, plan.text);
+      const states = await this.aiPhase((w) => w.encode(model, prompt));
+      report(plan.text, stepEnd(1), plan.firstStepMs);
       const latents = await this.aiPhase((w) =>
-        w.denoise(states, format, proxy((done: number) => {
-          if (done === 1) report(AI_PHASES.step, AI_PHASES.steps);
+        w.denoise(model, states, format, proxy((done: number) => {
+          if (done < plan.count) report(stepEnd(done), stepEnd(done + 1));
         })),
       );
-      report(AI_PHASES.steps, 1);
-      const blob = await this.aiPhase((w) => w.decode(latents, format));
-      this.show(await this.keepAiImage(blob, prompt, format));
+      report(plan.steps, 1);
+      const blob = await this.aiPhase((w) => w.decode(model, latents, format));
+      this.show(await this.keepAiImage(blob, prompt, format, model));
     } catch (e) {
       if (this.aiCancelled || String((e as Error)?.message).includes('CANCELLED')) return;
       console.error('Image generation failed', e);
@@ -559,6 +571,7 @@ export class Thumbnail {
     this.open(new File([image.blob], 'ai.png', { type: 'image/png' }));
     this.patch({ format: image.format });
     this.aiPrompt.set(image.prompt);
+    this.aiModel.set(image.model);
     this.aiGenerated.set(true);
     this.aiActive.set(image.id);
   }
@@ -570,19 +583,36 @@ export class Thumbnail {
     if (this.aiActive() === image.id) this.aiActive.set(null);
   }
 
-  private toAiImage(id: number, blob: Blob, prompt: string, format: AspectFormat): AiImage {
-    return { id, url: URL.createObjectURL(blob), blob, prompt, format };
+  protected setAiModel(model: ImageModelId): void {
+    this.aiModel.set(model);
+    try {
+      localStorage.setItem(AI_MODEL_KEY, model);
+    } catch {
+      // Private mode: back to the default on the next visit.
+    }
+  }
+
+  private restoreAiModel(): void {
+    try {
+      if (localStorage.getItem(AI_MODEL_KEY) === 'flux') this.aiModel.set('flux');
+    } catch {
+      // Private mode: the default model.
+    }
+  }
+
+  private toAiImage(id: number, blob: Blob, prompt: string, format: AspectFormat, model: ImageModelId): AiImage {
+    return { id, url: URL.createObjectURL(blob), blob, prompt, format, model };
   }
 
   private async loadAiImages(): Promise<void> {
     const stored = await db.aiImages.orderBy('createdAt').reverse().limit(AI_HISTORY).toArray();
-    this.aiImages.set(stored.map((s) => this.toAiImage(s.id!, s.blob, s.prompt, s.format)));
+    this.aiImages.set(stored.map((s) => this.toAiImage(s.id!, s.blob, s.prompt, s.format, s.model ?? 'sana')));
   }
 
   /** Saves a new picture; the oldest ones beyond the limit are dropped. */
-  private async keepAiImage(blob: Blob, prompt: string, format: AspectFormat): Promise<AiImage> {
-    const id = await db.aiImages.add({ blob, prompt, format, createdAt: Date.now() });
-    const image = this.toAiImage(id, blob, prompt, format);
+  private async keepAiImage(blob: Blob, prompt: string, format: AspectFormat, model: ImageModelId): Promise<AiImage> {
+    const id = await db.aiImages.add({ blob, prompt, format, model, createdAt: Date.now() });
+    const image = this.toAiImage(id, blob, prompt, format, model);
     const kept = [image, ...this.aiImages()];
     for (const old of kept.slice(AI_HISTORY)) {
       await db.aiImages.delete(old.id);

@@ -32,7 +32,7 @@
 | **Texts and transitions** | Titles and notes over the video (same styles as the thumbnails); quick fade or fade to black at every cut. |
 | **Background blur** | The background behind the person is blurred, the person stays sharp (MediaPipe selfie segmentation). |
 | **Project files** | Save a project as a `.lcv.json` file (the edit, without the video) and open it on another computer. |
-| **Thumbnail maker** | Suggests the sharpest moments of the video, adds a big title with highlighted words (4 styles), color boost and reframing; downloads JPG / PNG for YouTube, Shorts or a square post. The picture can also be generated from a sentence by SANA-Sprint 0.6B on your own graphics card, up to 1344×768 (WebGPU, one-time 3.1 GB download from Hugging Face). |
+| **Thumbnail maker** | Suggests the sharpest moments of the video, adds a big title with highlighted words (4 styles), color boost and reframing; downloads JPG / PNG for YouTube, Shorts or a square post. The picture can also be generated from a sentence on your own graphics card (WebGPU, one-time download from Hugging Face): SANA-Sprint 0.6B, up to 1344×768 (3.1 GB), or FLUX.2 klein 4B for maximum quality, up to 1280×720 (6.5 GB). |
 | **Zero upload** | The video is read in place from your disk (File System Access API). Nothing is sent anywhere. |
 | **Multi-clip** | Import several takes at once: they play back to back in one project. Reorder, add or remove clips; cuts and words follow their clip. |
 | **Input formats** | MP4, MOV, WebM, MKV. H.264 everywhere; HEVC (iPhone) when the browser can decode it (Chrome, or Edge with the HEVC extension). |
@@ -198,7 +198,7 @@ docker compose -f docker-compose.yml -f docker-compose.local.yml up --build
 
 ### AI models
 
-The server carries no AI model from Hugging Face. Whisper and SANA-Sprint are downloaded by each visitor's browser straight from Hugging Face, once, then kept in the browser. Each one is pinned to a commit (see [`src/app/core/whisper-models.ts`](src/app/core/whisper-models.ts) and `src/app/workers/image.worker.ts`). MediaPipe and RNNoise are small and ship with the site.
+The server carries no AI model from Hugging Face. Whisper, SANA-Sprint and FLUX.2 are downloaded by each visitor's browser straight from Hugging Face, once, then kept in the browser. Each one is pinned to a commit (see [`src/app/core/whisper-models.ts`](src/app/core/whisper-models.ts) and `src/app/workers/image.worker.ts`). MediaPipe and RNNoise are small and ship with the site.
 
 ### Coolify
 
@@ -215,6 +215,6 @@ The server carries no AI model from Hugging Face. Whisper and SANA-Sprint are do
 
 ## License
 
-[MIT](LICENSE) © Maxence Bonnici. Third-party libraries and models keep their own licenses (Mediabunny: MPL-2.0, Transformers.js, MediaPipe and Dexie: Apache-2.0, Wavesurfer.js: BSD-3-Clause, Whisper models: MIT, SANA-Sprint 0.6B: Apache-2.0, its Gemma 2 text encoder: [Gemma Terms of Use](https://ai.google.dev/gemma/terms), Montserrat and Inter fonts: OFL).
+[MIT](LICENSE) © Maxence Bonnici. Third-party libraries and models keep their own licenses (Mediabunny: MPL-2.0, Transformers.js, MediaPipe and Dexie: Apache-2.0, Wavesurfer.js: BSD-3-Clause, Whisper models: MIT, SANA-Sprint 0.6B, FLUX.2 klein 4B and Qwen3: Apache-2.0, its Gemma 2 text encoder: [Gemma Terms of Use](https://ai.google.dev/gemma/terms), Montserrat and Inter fonts: OFL).
 
 CapCut is a trademark of its owner. LocalCutVideo is an independent project, not affiliated with CapCut or ByteDance.

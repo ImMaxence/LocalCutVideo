@@ -254,7 +254,8 @@
       "rnnoise": "Entfernt Hintergrundgeräusche aus der Stimme",
       "count": "KI-Modelle, alle auf deinem Computer",
       "used": "Verwendete KI-Modelle",
-      "note": "SANA-Sprint braucht einen Computer, einen aktuellen Browser mit WebGPU und etwa 8 GB Grafikspeicher. Die 3,1 GB werden einmalig von Hugging Face geladen und bleiben in deinem Browser auf deinem Computer"
+      "note": "SANA-Sprint braucht einen Computer, einen aktuellen Browser mit WebGPU und etwa 8 GB Grafikspeicher. Die 3,1 GB werden einmalig von Hugging Face geladen und bleiben in deinem Browser auf deinem Computer",
+      "flux": "Zeichnet deine besten Thumbnail-Bilder aus einem Satz, den Qwen3 liest. Langsamer, mit mehr Details"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "Geistiges Eigentum",
           "body": [
             "Der Quellcode von LocalCutVideo ist Open Source und unter der MIT-Lizenz auf [GitHub](https://github.com/ImMaxence/LocalCutVideo) veröffentlicht.",
-            "Die von der Anwendung genutzten Fremdkomponenten, KI-Modelle und Schriftarten bleiben Eigentum ihrer Urheber und werden gemäß ihren eigenen Lizenzen verwendet, die in den [Nutzungsbedingungen](/terms) aufgeführt sind. Genannte Marken (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) gehören ihren Inhabern."
+            "Die von der Anwendung genutzten Fremdkomponenten, KI-Modelle und Schriftarten bleiben Eigentum ihrer Urheber und werden gemäß ihren eigenen Lizenzen verwendet, die in den [Nutzungsbedingungen](/terms) aufgeführt sind. Genannte Marken (Whisper, MediaPipe, SANA-Sprint, FLUX.2, Black Forest Labs, Qwen, Alibaba, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) gehören ihren Inhabern."
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "Was auf deinem Gerät bleibt",
           "body": [
-            "Die Video- und Audiodateien, die du öffnest, werden direkt von deiner Festplatte gelesen. Analyse, Transkription (Whisper), Gesichtsverfolgung und Export werden lokal in deinem Browser berechnet. Die KI-Bilder der Thumbnails (SANA-Sprint) werden ebenfalls lokal berechnet: Deine Beschreibung und das Bild werden nie gesendet.",
+            "Die Video- und Audiodateien, die du öffnest, werden direkt von deiner Festplatte gelesen. Analyse, Transkription (Whisper), Gesichtsverfolgung und Export werden lokal in deinem Browser berechnet. Die KI-Bilder der Thumbnails (SANA-Sprint / FLUX.2) werden ebenfalls lokal berechnet: Deine Beschreibung und das Bild werden nie gesendet.",
             "Deine Projekte (Schnitte, Transkript, Einstellungen) werden in der lokalen Datenbank deines Browsers (IndexedDB) gespeichert, zusammen mit einer Vorschau und einem Analyse-Cache. Der Herausgeber hat keinen Zugriff darauf. Du kannst ein Projekt auf der Projektseite löschen oder alles entfernen, indem du die Daten dieser Website in den Browsereinstellungen löschst."
           ]
         },
@@ -735,7 +736,7 @@
           "title": "Dritte",
           "body": [
             "Cloudflare: Alle Anfragen an diese Website laufen über Cloudflare, das den Server schützt und die Verbindung verschlüsselt. Wie jeder Netzwerkvermittler verarbeitet Cloudflare deine IP-Adresse und die üblichen Browserinformationen, um die Seiten auszuliefern, und kann aus Sicherheitsgründen technische Protokolle speichern; deine Videos oder dein Audio erhält es nie, denn sie verlassen dein Gerät nie. Siehe die [Datenschutzerklärung](https://www.cloudflare.com/privacypolicy/) von Cloudflare.",
-            "Hugging Face: Die KI-Modelle (Whisper für Untertitel, SANA-Sprint für Thumbnail-Bilder) werden bei der ersten Nutzung direkt von huggingface.co heruntergeladen und danach in deinem Browser gespeichert. Hugging Face erhält dabei deine IP-Adresse und die üblichen Browserinformationen, aber nie deine Audiodaten, Beschreibungen oder Bilder. Siehe die [Datenschutzerklärung](https://huggingface.co/privacy).",
+            "Hugging Face: Die KI-Modelle (Whisper für Untertitel, SANA-Sprint / FLUX.2 für Thumbnail-Bilder) werden bei der ersten Nutzung direkt von huggingface.co heruntergeladen und danach in deinem Browser gespeichert. Hugging Face erhält dabei deine IP-Adresse und die üblichen Browserinformationen, aber nie deine Audiodaten, Beschreibungen oder Bilder. Siehe die [Datenschutzerklärung](https://huggingface.co/privacy).",
             "GitHub: nur wenn du einem Link zum Quellcode-Repository folgst.",
             "Keine weiteren Dritten werden kontaktiert: Eine strenge Content-Security-Policy verhindert technisch, dass sich die Seite anderswohin verbindet."
           ]
@@ -793,8 +794,8 @@
           "title": "Open Source und Fremdkomponenten",
           "body": [
             "Der Quellcode ist unter der MIT-Lizenz auf [GitHub](https://github.com/ImMaxence/LocalCutVideo) verfügbar.",
-            "LocalCutVideo nutzt: Mediabunny (MPL-2.0), Transformers.js und ONNX Runtime (Apache-2.0 und MIT), die Whisper-Modelle von OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) sowie die Schriftarten Inter und Montserrat (SIL Open Font License).",
-            "Der KI-Bildgenerator verwendet das Modell SANA-Sprint 0.6B von NVIDIA (Apache-2.0) und, um deine Beschreibung zu lesen, Gemma 2 von Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. Die [Gemma-Nutzungsbedingungen](https://ai.google.dev/gemma/terms) und die [Gemma-Richtlinie zu verbotenen Nutzungen](https://ai.google.dev/gemma/prohibited_use_policy) gelten für dich und sind Teil dieser Bedingungen: Du verpflichtest dich, den Generator nicht für verbotene Zwecke oder unter Verstoß gegen Gesetze zu verwenden. Google beansprucht keine Rechte an den von dir erzeugten Bildern: Du allein bist für sie und ihre Nutzung verantwortlich. Die Modelle werden ohne Gewähr bereitgestellt."
+            "LocalCutVideo nutzt: Mediabunny (MPL-2.0), Transformers.js und ONNX Runtime (Apache-2.0 und MIT), die Whisper-Modelle von OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), FLUX.2 klein 4B (Black Forest Labs, Apache-2.0), Qwen3 (Alibaba, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) sowie die Schriftarten Inter und Montserrat (SIL Open Font License).",
+            "Der KI-Bildgenerator verwendet das Modell SANA-Sprint 0.6B von NVIDIA (Apache-2.0) und, um deine Beschreibung zu lesen, Gemma 2 von Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. Die [Gemma-Nutzungsbedingungen](https://ai.google.dev/gemma/terms) und die [Gemma-Richtlinie zu verbotenen Nutzungen](https://ai.google.dev/gemma/prohibited_use_policy) gelten für dich und sind Teil dieser Bedingungen: Du verpflichtest dich, den Generator nicht für verbotene Zwecke oder unter Verstoß gegen Gesetze zu verwenden. Google beansprucht keine Rechte an den von dir erzeugten Bildern: Du allein bist für sie und ihre Nutzung verantwortlich. Die Modelle werden ohne Gewähr bereitgestellt. In maximaler Qualität verwendet der Generator FLUX.2 klein 4B von Black Forest Labs und Qwen3 von Alibaba unter der Apache-2.0-Lizenz."
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "Das KI-Modell konnte nicht heruntergeladen werden. Versuche es in ein paar Minuten erneut",
       "history": "Deine erzeugten Bilder",
       "requirements": "Nur am Computer: ein aktueller Browser mit WebGPU und eine Grafikkarte mit etwa 8 GB Speicher",
-      "storageError": "Das Modell konnte nicht auf diesem Gerät gespeichert werden. Gib Speicherplatz frei oder verlasse den privaten Modus und versuche es erneut"
+      "storageError": "Das Modell konnte nicht auf diesem Gerät gespeichert werden. Gib Speicherplatz frei oder verlasse den privaten Modus und versuche es erneut",
+      "quality": "Qualität",
+      "standard": "Standard",
+      "max": "Maximal",
+      "sizeMax": "Einmaliger Download von {{ size }} von Hugging Face, gespeichert in diesem Browser auf deinem Computer. Mehrere Minuten pro Bild"
     }
   },
   "seo": {

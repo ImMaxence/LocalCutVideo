@@ -254,7 +254,8 @@
       "rnnoise": "Loại bỏ tiếng ồn nền khỏi giọng nói",
       "count": "mô hình AI, tất cả trên máy tính của bạn",
       "used": "Các mô hình AI được sử dụng",
-      "note": "SANA-Sprint cần máy tính, trình duyệt mới hỗ trợ WebGPU và khoảng 8 GB bộ nhớ đồ họa. 3,1 GB dữ liệu được tải một lần từ Hugging Face và nằm trong trình duyệt, trên máy tính của bạn"
+      "note": "SANA-Sprint cần máy tính, trình duyệt mới hỗ trợ WebGPU và khoảng 8 GB bộ nhớ đồ họa. 3,1 GB dữ liệu được tải một lần từ Hugging Face và nằm trong trình duyệt, trên máy tính của bạn",
+      "flux": "Vẽ những ảnh hình thu nhỏ đẹp nhất từ một câu do Qwen3 đọc. Chậm hơn, chi tiết hơn"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "Sở hữu trí tuệ",
           "body": [
             "Mã nguồn của LocalCutVideo là mã nguồn mở và được công bố theo giấy phép MIT trên [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Các thành phần bên thứ ba, mô hình AI và phông chữ mà ứng dụng sử dụng vẫn thuộc sở hữu của tác giả và được dùng theo giấy phép riêng của chúng, được liệt kê trong [điều khoản sử dụng](/terms). Các thương hiệu được nhắc đến (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) thuộc về chủ sở hữu tương ứng."
+            "Các thành phần bên thứ ba, mô hình AI và phông chữ mà ứng dụng sử dụng vẫn thuộc sở hữu của tác giả và được dùng theo giấy phép riêng của chúng, được liệt kê trong [điều khoản sử dụng](/terms). Các thương hiệu được nhắc đến (Whisper, MediaPipe, SANA-Sprint, FLUX.2, Black Forest Labs, Qwen, Alibaba, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) thuộc về chủ sở hữu tương ứng."
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "Những gì ở lại trên thiết bị",
           "body": [
-            "Tệp video và âm thanh bạn mở được đọc trực tiếp từ ổ đĩa. Phân tích, chép lời (Whisper), theo dõi khuôn mặt và xuất video đều được trình duyệt tính toán ngay trên máy. Ảnh AI cho hình thu nhỏ (SANA-Sprint) cũng được tính toán cục bộ: mô tả của bạn và ảnh không bao giờ được gửi đi.",
+            "Tệp video và âm thanh bạn mở được đọc trực tiếp từ ổ đĩa. Phân tích, chép lời (Whisper), theo dõi khuôn mặt và xuất video đều được trình duyệt tính toán ngay trên máy. Ảnh AI cho hình thu nhỏ (SANA-Sprint / FLUX.2) cũng được tính toán cục bộ: mô tả của bạn và ảnh không bao giờ được gửi đi.",
             "Dự án của bạn (điểm cắt, bản chép lời, cài đặt) được lưu trong cơ sở dữ liệu cục bộ của trình duyệt (IndexedDB), cùng một ảnh thu nhỏ và bộ nhớ đệm kết quả phân tích. Đơn vị phát hành không thể truy cập chúng. Bạn có thể xóa một dự án từ trang dự án, hoặc xóa tất cả bằng cách xóa dữ liệu của trang này trong cài đặt trình duyệt."
           ]
         },
@@ -735,7 +736,7 @@
           "title": "Bên thứ ba",
           "body": [
             "Cloudflare: mọi yêu cầu tới trang web này đều đi qua Cloudflare, dịch vụ bảo vệ máy chủ và mã hóa kết nối. Như mọi bên trung gian mạng, Cloudflare xử lý địa chỉ IP và thông tin trình duyệt thông thường của bạn để phân phối các trang, và có thể lưu nhật ký kỹ thuật vì mục đích bảo mật; Cloudflare không bao giờ nhận video hay âm thanh của bạn, vốn không bao giờ rời khỏi thiết bị của bạn. Xem [chính sách quyền riêng tư](https://www.cloudflare.com/privacypolicy/) của họ.",
-            "Hugging Face: các mô hình AI (Whisper cho phụ đề, SANA-Sprint cho ảnh hình thu nhỏ) được tải trực tiếp từ huggingface.co trong lần sử dụng đầu tiên, sau đó lưu trong trình duyệt của bạn. Khi đó Hugging Face nhận địa chỉ IP và thông tin trình duyệt thông thường của bạn, nhưng không bao giờ nhận âm thanh, mô tả hay hình ảnh của bạn. Xem [chính sách quyền riêng tư](https://huggingface.co/privacy).",
+            "Hugging Face: các mô hình AI (Whisper cho phụ đề, SANA-Sprint / FLUX.2 cho ảnh hình thu nhỏ) được tải trực tiếp từ huggingface.co trong lần sử dụng đầu tiên, sau đó lưu trong trình duyệt của bạn. Khi đó Hugging Face nhận địa chỉ IP và thông tin trình duyệt thông thường của bạn, nhưng không bao giờ nhận âm thanh, mô tả hay hình ảnh của bạn. Xem [chính sách quyền riêng tư](https://huggingface.co/privacy).",
             "GitHub: chỉ khi bạn nhấp vào liên kết đến kho mã nguồn.",
             "Không liên hệ bên thứ ba nào khác: Content-Security-Policy nghiêm ngặt ngăn trang kết nối đến bất cứ nơi nào khác về mặt kỹ thuật."
           ]
@@ -793,8 +794,8 @@
           "title": "Mã nguồn mở và thành phần bên thứ ba",
           "body": [
             "Mã nguồn có sẵn theo giấy phép MIT trên [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo dựa trên: Mediabunny (MPL-2.0), Transformers.js và ONNX Runtime (Apache-2.0 và MIT), các mô hình Whisper của OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) và các phông chữ Inter và Montserrat (SIL Open Font License).",
-            "Trình tạo ảnh AI sử dụng mô hình SANA-Sprint 0.6B của NVIDIA (Apache-2.0) và Gemma 2 của Google để đọc mô tả của bạn. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Điều khoản sử dụng Gemma](https://ai.google.dev/gemma/terms) và [Chính sách sử dụng bị cấm của Gemma](https://ai.google.dev/gemma/prohibited_use_policy) áp dụng cho bạn và là một phần của các điều khoản này: bạn cam kết không sử dụng trình tạo cho mục đích bị cấm hoặc vi phạm pháp luật. Google không yêu cầu quyền đối với ảnh bạn tạo: chỉ bạn chịu trách nhiệm về ảnh và cách sử dụng chúng. Các mô hình được cung cấp nguyên trạng, không có bảo đảm."
+            "LocalCutVideo dựa trên: Mediabunny (MPL-2.0), Transformers.js và ONNX Runtime (Apache-2.0 và MIT), các mô hình Whisper của OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), FLUX.2 klein 4B (Black Forest Labs, Apache-2.0), Qwen3 (Alibaba, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) và các phông chữ Inter và Montserrat (SIL Open Font License).",
+            "Trình tạo ảnh AI sử dụng mô hình SANA-Sprint 0.6B của NVIDIA (Apache-2.0) và Gemma 2 của Google để đọc mô tả của bạn. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Điều khoản sử dụng Gemma](https://ai.google.dev/gemma/terms) và [Chính sách sử dụng bị cấm của Gemma](https://ai.google.dev/gemma/prohibited_use_policy) áp dụng cho bạn và là một phần của các điều khoản này: bạn cam kết không sử dụng trình tạo cho mục đích bị cấm hoặc vi phạm pháp luật. Google không yêu cầu quyền đối với ảnh bạn tạo: chỉ bạn chịu trách nhiệm về ảnh và cách sử dụng chúng. Các mô hình được cung cấp nguyên trạng, không có bảo đảm. Ở chất lượng tối đa, trình tạo sử dụng FLUX.2 klein 4B của Black Forest Labs và Qwen3 của Alibaba theo giấy phép Apache-2.0."
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "Không thể tải mô hình AI. Hãy thử lại sau vài phút",
       "history": "Ảnh bạn đã tạo",
       "requirements": "Chỉ trên máy tính: trình duyệt mới hỗ trợ WebGPU và card đồ họa có khoảng 8 GB bộ nhớ",
-      "storageError": "Không thể lưu mô hình trên thiết bị này. Hãy giải phóng dung lượng ổ đĩa hoặc thoát chế độ duyệt web riêng tư rồi thử lại"
+      "storageError": "Không thể lưu mô hình trên thiết bị này. Hãy giải phóng dung lượng ổ đĩa hoặc thoát chế độ duyệt web riêng tư rồi thử lại",
+      "quality": "Chất lượng",
+      "standard": "Tiêu chuẩn",
+      "max": "Tối đa",
+      "sizeMax": "Tải xuống một lần {{ size }} từ Hugging Face, lưu trong trình duyệt này trên máy tính của bạn. Vài phút mỗi ảnh"
     }
   },
   "seo": {

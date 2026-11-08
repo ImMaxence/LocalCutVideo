@@ -254,7 +254,8 @@
       "rnnoise": "Remove o ruído de fundo da voz",
       "count": "IAs, todas no seu computador",
       "used": "IAs usadas",
-      "note": "O SANA-Sprint precisa de um computador, um navegador recente compatível com WebGPU e cerca de 8 GB de memória de vídeo. Seus 3,1 GB são baixados uma única vez do Hugging Face e ficam no seu navegador, no seu computador"
+      "note": "O SANA-Sprint precisa de um computador, um navegador recente compatível com WebGPU e cerca de 8 GB de memória de vídeo. Seus 3,1 GB são baixados uma única vez do Hugging Face e ficam no seu navegador, no seu computador",
+      "flux": "Desenha suas melhores imagens de miniaturas a partir de uma frase, lida pelo Qwen3. Mais lento e mais detalhado"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "Propriedade intelectual",
           "body": [
             "O código-fonte do LocalCutVideo é aberto e publicado sob a licença MIT no [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Os componentes de terceiros, modelos de IA e fontes usados pelo aplicativo continuam sendo propriedade dos seus autores e são usados sob as suas próprias licenças, listadas nos [termos de uso](/terms). As marcas citadas (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) pertencem aos seus donos."
+            "Os componentes de terceiros, modelos de IA e fontes usados pelo aplicativo continuam sendo propriedade dos seus autores e são usados sob as suas próprias licenças, listadas nos [termos de uso](/terms). As marcas citadas (Whisper, MediaPipe, SANA-Sprint, FLUX.2, Black Forest Labs, Qwen, Alibaba, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) pertencem aos seus donos."
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "O que fica no seu aparelho",
           "body": [
-            "Os arquivos de vídeo e áudio que você abre são lidos diretamente do seu disco. A análise, a transcrição (Whisper), o rastreamento de rosto e a exportação são calculados localmente pelo seu navegador. As imagens com IA das miniaturas (SANA-Sprint) também são calculadas localmente: sua descrição e a imagem nunca são enviadas.",
+            "Os arquivos de vídeo e áudio que você abre são lidos diretamente do seu disco. A análise, a transcrição (Whisper), o rastreamento de rosto e a exportação são calculados localmente pelo seu navegador. As imagens com IA das miniaturas (SANA-Sprint / FLUX.2) também são calculadas localmente: sua descrição e a imagem nunca são enviadas.",
             "Seus projetos (cortes, transcrição, configurações) são salvos no banco de dados local do seu navegador (IndexedDB), junto com uma miniatura e um cache de análises. O editor não tem acesso a eles. Você pode excluir um projeto na página de projetos, ou apagar tudo limpando os dados deste site nas configurações do navegador."
           ]
         },
@@ -735,7 +736,7 @@
           "title": "Terceiros",
           "body": [
             "Cloudflare: todas as solicitações a este site passam pela Cloudflare, que protege o servidor e criptografa a conexão. Como qualquer intermediário de rede, ela trata o seu endereço IP e as informações padrão do navegador para entregar as páginas, e pode manter registros técnicos para fins de segurança; ela nunca recebe os seus vídeos nem o seu áudio, que nunca saem do seu dispositivo. Veja a [política de privacidade](https://www.cloudflare.com/privacypolicy/) dela.",
-            "Hugging Face: os modelos de IA (Whisper para as legendas, SANA-Sprint para as imagens de miniaturas) são baixados diretamente de huggingface.co na primeira vez que você os usa e depois ficam no seu navegador. O Hugging Face recebe então seu endereço IP e as informações comuns do navegador, mas nunca seu áudio, suas descrições ou suas imagens. Veja a [política de privacidade](https://huggingface.co/privacy).",
+            "Hugging Face: os modelos de IA (Whisper para as legendas, SANA-Sprint / FLUX.2 para as imagens de miniaturas) são baixados diretamente de huggingface.co na primeira vez que você os usa e depois ficam no seu navegador. O Hugging Face recebe então seu endereço IP e as informações comuns do navegador, mas nunca seu áudio, suas descrições ou suas imagens. Veja a [política de privacidade](https://huggingface.co/privacy).",
             "GitHub: somente se você seguir um link para o repositório do código-fonte.",
             "Nenhum outro terceiro é contatado: uma Content-Security-Policy rígida impede tecnicamente a página de se conectar a qualquer outro lugar."
           ]
@@ -793,8 +794,8 @@
           "title": "Código aberto e componentes de terceiros",
           "body": [
             "O código-fonte está disponível sob a licença MIT no [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "O LocalCutVideo se apoia em: Mediabunny (MPL-2.0), Transformers.js e ONNX Runtime (Apache-2.0 e MIT), os modelos Whisper da OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) e as fontes Inter e Montserrat (SIL Open Font License).",
-            "O gerador de imagens com IA usa o modelo SANA-Sprint 0.6B da NVIDIA (Apache-2.0) e, para ler sua descrição, o Gemma 2 do Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. Os [termos de uso do Gemma](https://ai.google.dev/gemma/terms) e sua [política de usos proibidos](https://ai.google.dev/gemma/prohibited_use_policy) se aplicam a você e fazem parte destes termos: você se compromete a não usar o gerador para nenhum uso proibido nem em violação da lei. O Google não reivindica direitos sobre as imagens que você gera: somente você é responsável por elas e pelo uso que faz delas. Os modelos são fornecidos no estado em que se encontram, sem garantia."
+            "O LocalCutVideo se apoia em: Mediabunny (MPL-2.0), Transformers.js e ONNX Runtime (Apache-2.0 e MIT), os modelos Whisper da OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), FLUX.2 klein 4B (Black Forest Labs, Apache-2.0), Qwen3 (Alibaba, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) e as fontes Inter e Montserrat (SIL Open Font License).",
+            "O gerador de imagens com IA usa o modelo SANA-Sprint 0.6B da NVIDIA (Apache-2.0) e, para ler sua descrição, o Gemma 2 do Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. Os [termos de uso do Gemma](https://ai.google.dev/gemma/terms) e sua [política de usos proibidos](https://ai.google.dev/gemma/prohibited_use_policy) se aplicam a você e fazem parte destes termos: você se compromete a não usar o gerador para nenhum uso proibido nem em violação da lei. O Google não reivindica direitos sobre as imagens que você gera: somente você é responsável por elas e pelo uso que faz delas. Os modelos são fornecidos no estado em que se encontram, sem garantia. Na qualidade máxima, o gerador usa o FLUX.2 klein 4B da Black Forest Labs e o Qwen3 da Alibaba, sob a licença Apache-2.0."
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "Não foi possível baixar o modelo de IA. Tente novamente em alguns minutos",
       "history": "Suas imagens geradas",
       "requirements": "Somente no computador: um navegador recente compatível com WebGPU e uma placa de vídeo com cerca de 8 GB de memória",
-      "storageError": "Não foi possível salvar o modelo neste dispositivo. Libere espaço em disco ou saia da navegação privada e tente novamente"
+      "storageError": "Não foi possível salvar o modelo neste dispositivo. Libere espaço em disco ou saia da navegação privada e tente novamente",
+      "quality": "Qualidade",
+      "standard": "Padrão",
+      "max": "Máxima",
+      "sizeMax": "Download único de {{ size }} do Hugging Face, guardado neste navegador no seu computador. Vários minutos por imagem"
     }
   },
   "seo": {

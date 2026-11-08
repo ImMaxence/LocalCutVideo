@@ -254,7 +254,8 @@
       "rnnoise": "Fjerner bakgrunnsstøy fra stemmen",
       "count": "KI-modeller, alle på datamaskinen din",
       "used": "KI-modeller som brukes",
-      "note": "SANA-Sprint krever en datamaskin, en nyere nettleser med WebGPU og omtrent 8 GB grafikkminne. De 3,1 GB lastes ned én gang fra Hugging Face og blir i nettleseren din, på datamaskinen din"
+      "note": "SANA-Sprint krever en datamaskin, en nyere nettleser med WebGPU og omtrent 8 GB grafikkminne. De 3,1 GB lastes ned én gang fra Hugging Face og blir i nettleseren din, på datamaskinen din",
+      "flux": "Tegner de beste miniatyrbildene dine ut fra en setning som Qwen3 leser. Tregere, med flere detaljer"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "Immaterielle rettigheter",
           "body": [
             "Kildekoden til LocalCutVideo er åpen og publisert under MIT-lisensen på [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Tredjepartskomponenter, KI-modeller og skrifttyper som applikasjonen bruker, tilhører fortsatt opphavspersonene sine og brukes under sine egne lisenser, som er oppført i [bruksvilkårene](/terms). Nevnte varemerker (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge …) tilhører sine eiere."
+            "Tredjepartskomponenter, KI-modeller og skrifttyper som applikasjonen bruker, tilhører fortsatt opphavspersonene sine og brukes under sine egne lisenser, som er oppført i [bruksvilkårene](/terms). Nevnte varemerker (Whisper, MediaPipe, SANA-Sprint, FLUX.2, Black Forest Labs, Qwen, Alibaba, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge …) tilhører sine eiere."
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "Det som blir på enheten din",
           "body": [
-            "Video- og lydfilene du åpner, leses direkte fra disken din. Analyse, transkripsjon (Whisper), ansiktssporing og eksport beregnes lokalt av nettleseren din. KI-bildene til miniatyrene (SANA-Sprint) beregnes også lokalt: beskrivelsen din og bildet sendes aldri.",
+            "Video- og lydfilene du åpner, leses direkte fra disken din. Analyse, transkripsjon (Whisper), ansiktssporing og eksport beregnes lokalt av nettleseren din. KI-bildene til miniatyrene (SANA-Sprint / FLUX.2) beregnes også lokalt: beskrivelsen din og bildet sendes aldri.",
             "Prosjektene dine (klipp, transkripsjon, innstillinger) lagres i nettleserens lokale database (IndexedDB), sammen med et miniatyrbilde og en hurtigbuffer med analyser. Utgiveren har ikke tilgang til dem. Du kan slette et prosjekt på prosjektsiden, eller slette alt ved å fjerne dataene for dette nettstedet i nettleserinnstillingene."
           ]
         },
@@ -735,7 +736,7 @@
           "title": "Tredjeparter",
           "body": [
             "Cloudflare: alle forespørsler til dette nettstedet går gjennom Cloudflare, som beskytter serveren og krypterer tilkoblingen. Som enhver nettverksformidler behandler Cloudflare IP-adressen din og vanlig nettleserinformasjon for å levere sidene, og kan lagre tekniske logger av sikkerhetshensyn; det mottar aldri videoene eller lyden din, som aldri forlater enheten din. Se deres [personvernerklæring](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: KI-modellene (Whisper for undertekster, SANA-Sprint for miniatyrbilder) lastes ned direkte fra huggingface.co første gang du bruker dem, og lagres deretter i nettleseren din. Hugging Face mottar da IP-adressen din og vanlig nettleserinformasjon, men aldri lyden, beskrivelsene eller bildene dine. Se [personvernerklæringen](https://huggingface.co/privacy).",
+            "Hugging Face: KI-modellene (Whisper for undertekster, SANA-Sprint / FLUX.2 for miniatyrbilder) lastes ned direkte fra huggingface.co første gang du bruker dem, og lagres deretter i nettleseren din. Hugging Face mottar da IP-adressen din og vanlig nettleserinformasjon, men aldri lyden, beskrivelsene eller bildene dine. Se [personvernerklæringen](https://huggingface.co/privacy).",
             "GitHub: bare hvis du følger en lenke til kildekodelageret.",
             "Ingen andre tredjeparter kontaktes: en streng Content-Security-Policy hindrer teknisk siden i å koble til noe annet sted."
           ]
@@ -793,8 +794,8 @@
           "title": "Åpen kildekode og tredjepartskomponenter",
           "body": [
             "Kildekoden er tilgjengelig under MIT-lisensen på [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo bygger på: Mediabunny (MPL-2.0), Transformers.js og ONNX Runtime (Apache-2.0 og MIT), Whisper-modellene fra OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) og skrifttypene Inter og Montserrat (SIL Open Font License).",
-            "KI-bildegeneratoren bruker modellen SANA-Sprint 0.6B fra NVIDIA (Apache-2.0) og, for å lese beskrivelsen din, Gemma 2 fra Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Bruksvilkårene for Gemma](https://ai.google.dev/gemma/terms) og [retningslinjene for forbudt bruk av Gemma](https://ai.google.dev/gemma/prohibited_use_policy) gjelder for deg og er en del av disse vilkårene: du forplikter deg til ikke å bruke generatoren til forbudt bruk eller i strid med loven. Google gjør ikke krav på bildene du lager: du alene er ansvarlig for dem og for hvordan du bruker dem. Modellene leveres som de er, uten garanti."
+            "LocalCutVideo bygger på: Mediabunny (MPL-2.0), Transformers.js og ONNX Runtime (Apache-2.0 og MIT), Whisper-modellene fra OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), FLUX.2 klein 4B (Black Forest Labs, Apache-2.0), Qwen3 (Alibaba, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) og skrifttypene Inter og Montserrat (SIL Open Font License).",
+            "KI-bildegeneratoren bruker modellen SANA-Sprint 0.6B fra NVIDIA (Apache-2.0) og, for å lese beskrivelsen din, Gemma 2 fra Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Bruksvilkårene for Gemma](https://ai.google.dev/gemma/terms) og [retningslinjene for forbudt bruk av Gemma](https://ai.google.dev/gemma/prohibited_use_policy) gjelder for deg og er en del av disse vilkårene: du forplikter deg til ikke å bruke generatoren til forbudt bruk eller i strid med loven. Google gjør ikke krav på bildene du lager: du alene er ansvarlig for dem og for hvordan du bruker dem. Modellene leveres som de er, uten garanti. I maksimal kvalitet bruker generatoren FLUX.2 klein 4B fra Black Forest Labs og Qwen3 fra Alibaba, under Apache-2.0-lisensen."
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "KI-modellen kunne ikke lastes ned. Prøv igjen om noen minutter",
       "history": "Bildene du har laget",
       "requirements": "Bare på datamaskin: en nyere nettleser med WebGPU og et grafikkort med omtrent 8 GB minne",
-      "storageError": "Modellen kunne ikke lagres på denne enheten. Frigjør diskplass eller avslutt privat nettlesing, og prøv igjen"
+      "storageError": "Modellen kunne ikke lagres på denne enheten. Frigjør diskplass eller avslutt privat nettlesing, og prøv igjen",
+      "quality": "Kvalitet",
+      "standard": "Standard",
+      "max": "Maksimal",
+      "sizeMax": "Engangsnedlasting på {{ size }} fra Hugging Face, lagret i denne nettleseren på datamaskinen din. Flere minutter per bilde"
     }
   },
   "seo": {

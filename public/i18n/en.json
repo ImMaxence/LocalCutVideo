@@ -254,7 +254,8 @@
       "rnnoise": "Removes background noise from the voice",
       "count": "AI models, all on your computer",
       "used": "AI models used",
-      "note": "SANA-Sprint needs a computer, a recent browser with WebGPU and about 8 GB of graphics memory. Its 3.1 GB are downloaded once from Hugging Face and stay in your browser, on your computer"
+      "note": "SANA-Sprint needs a computer, a recent browser with WebGPU and about 8 GB of graphics memory. Its 3.1 GB are downloaded once from Hugging Face and stay in your browser, on your computer",
+      "flux": "Draws your best thumbnail images from a sentence, read by Qwen3. Slower, with more detail"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "Intellectual property",
           "body": [
             "The source code of LocalCutVideo is open source and published under the MIT license on [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Third-party components, AI models and fonts used by the application remain the property of their authors and are used under their own licenses, listed in the [terms of use](/terms). Cited brands (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) belong to their owners."
+            "Third-party components, AI models and fonts used by the application remain the property of their authors and are used under their own licenses, listed in the [terms of use](/terms). Cited brands (Whisper, MediaPipe, SANA-Sprint, FLUX.2, Black Forest Labs, Qwen, Alibaba, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) belong to their owners."
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "What stays on your device",
           "body": [
-            "The video and audio files you open are read directly from your disk. Analysis, transcription (Whisper), face tracking and export are computed locally by your browser. AI thumbnail images (SANA-Sprint) are also computed locally: your description and the image are never sent.",
+            "The video and audio files you open are read directly from your disk. Analysis, transcription (Whisper), face tracking and export are computed locally by your browser. AI thumbnail images (SANA-Sprint / FLUX.2) are also computed locally: your description and the image are never sent.",
             "Your projects (cuts, transcript, settings) are saved in your browser's local database (IndexedDB), along with a thumbnail and a cache of analyses. The publisher has no access to them. You can delete a project from the projects page, or erase everything by clearing this site's data in your browser settings."
           ]
         },
@@ -735,7 +736,7 @@
           "title": "Third parties",
           "body": [
             "Cloudflare: every request to this site passes through Cloudflare, which protects the server and encrypts the connection. Like any network intermediary, it processes your IP address and standard browser information to deliver the pages, and may keep technical logs for security purposes; it never receives your videos or audio, which never leave your device. See their [privacy policy](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: the AI models (Whisper for subtitles, SANA-Sprint for thumbnail images) are downloaded directly from huggingface.co the first time you use them, then kept in your browser. Hugging Face then receives your IP address and standard browser information, but never your audio, your descriptions or your images. See their [privacy policy](https://huggingface.co/privacy).",
+            "Hugging Face: the AI models (Whisper for subtitles, SANA-Sprint / FLUX.2 for thumbnail images) are downloaded directly from huggingface.co the first time you use them, then kept in your browser. Hugging Face then receives your IP address and standard browser information, but never your audio, your descriptions or your images. See their [privacy policy](https://huggingface.co/privacy).",
             "GitHub: only if you follow a link to the source code repository.",
             "No other third party is contacted: a strict Content-Security-Policy technically prevents the page from connecting anywhere else."
           ]
@@ -793,8 +794,8 @@
           "title": "Open source and third-party components",
           "body": [
             "The source code is available under the MIT license on [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo relies on: Mediabunny (MPL-2.0), Transformers.js and ONNX Runtime (Apache-2.0 and MIT), the Whisper models by OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) and the Inter and Montserrat fonts (SIL Open Font License).",
-            "The AI image generator uses the SANA-Sprint 0.6B model by NVIDIA (Apache-2.0) and, to read your description, Gemma 2 by Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. The [Gemma Terms of Use](https://ai.google.dev/gemma/terms) and the [Gemma Prohibited Use Policy](https://ai.google.dev/gemma/prohibited_use_policy) apply to you and form part of these terms: you agree not to use the generator for any prohibited use or in violation of the law. Google claims no rights in the images you generate: you alone are responsible for them and for how you use them. The models are provided as is, without warranty."
+            "LocalCutVideo relies on: Mediabunny (MPL-2.0), Transformers.js and ONNX Runtime (Apache-2.0 and MIT), the Whisper models by OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), FLUX.2 klein 4B (Black Forest Labs, Apache-2.0), Qwen3 (Alibaba, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) and the Inter and Montserrat fonts (SIL Open Font License).",
+            "The AI image generator uses the SANA-Sprint 0.6B model by NVIDIA (Apache-2.0) and, to read your description, Gemma 2 by Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. The [Gemma Terms of Use](https://ai.google.dev/gemma/terms) and the [Gemma Prohibited Use Policy](https://ai.google.dev/gemma/prohibited_use_policy) apply to you and form part of these terms: you agree not to use the generator for any prohibited use or in violation of the law. Google claims no rights in the images you generate: you alone are responsible for them and for how you use them. The models are provided as is, without warranty. In maximum quality, the generator uses FLUX.2 klein 4B by Black Forest Labs and Qwen3 by Alibaba, under the Apache-2.0 license."
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "The AI model could not be downloaded. Try again in a few minutes",
       "history": "Your generated images",
       "requirements": "Computer only: a recent browser with WebGPU and a graphics card with about 8 GB of memory",
-      "storageError": "The model could not be saved on this device. Free up disk space or leave private browsing, then try again"
+      "storageError": "The model could not be saved on this device. Free up disk space or leave private browsing, then try again",
+      "quality": "Quality",
+      "standard": "Standard",
+      "max": "Maximum",
+      "sizeMax": "One-time download of {{ size }} from Hugging Face, kept in this browser on your computer. Several minutes per image"
     }
   },
   "seo": {

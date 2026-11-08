@@ -1,4 +1,5 @@
 import { Dexie, type Table } from 'dexie';
+import type { ImageModelId } from './image-models';
 import { type AspectFormat, type AudioAnalysis, LEGACY_CLIP_ID, type Project } from '../engine/model';
 
 export type FileRole = 'clip' | 'music';
@@ -35,6 +36,8 @@ export interface StoredAiImage {
   blob: Blob;
   prompt: string;
   format: AspectFormat;
+  /** Absent on pictures made before the model could be chosen. */
+  model?: ImageModelId;
   createdAt: number;
 }
 

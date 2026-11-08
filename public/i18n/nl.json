@@ -254,7 +254,8 @@
       "rnnoise": "Haalt achtergrondgeluid uit de stem",
       "count": "AI-modellen, allemaal op je computer",
       "used": "Gebruikte AI-modellen",
-      "note": "SANA-Sprint heeft een computer, een recente browser met WebGPU en ongeveer 8 GB grafisch geheugen nodig. De 3,1 GB wordt eenmalig gedownload van Hugging Face en blijft in je browser op je computer"
+      "note": "SANA-Sprint heeft een computer, een recente browser met WebGPU en ongeveer 8 GB grafisch geheugen nodig. De 3,1 GB wordt eenmalig gedownload van Hugging Face en blijft in je browser op je computer",
+      "flux": "Tekent je mooiste thumbnailafbeeldingen op basis van een zin, gelezen door Qwen3. Langzamer, met meer detail"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "Intellectueel eigendom",
           "body": [
             "De broncode van LocalCutVideo is open source en gepubliceerd onder de MIT-licentie op [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Componenten van derden, AI-modellen en lettertypen die de applicatie gebruikt, blijven eigendom van hun makers en worden gebruikt onder hun eigen licenties, vermeld in de [gebruiksvoorwaarden](/terms). Genoemde merken (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) zijn eigendom van hun houders."
+            "Componenten van derden, AI-modellen en lettertypen die de applicatie gebruikt, blijven eigendom van hun makers en worden gebruikt onder hun eigen licenties, vermeld in de [gebruiksvoorwaarden](/terms). Genoemde merken (Whisper, MediaPipe, SANA-Sprint, FLUX.2, Black Forest Labs, Qwen, Alibaba, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) zijn eigendom van hun houders."
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "Wat er op je apparaat blijft",
           "body": [
-            "De video- en audiobestanden die je opent, worden direct van je schijf gelezen. Analyse, transcriptie (Whisper), gezichtsherkenning en export worden lokaal door je browser berekend. De AI-afbeeldingen van de thumbnails (SANA-Sprint) worden ook lokaal berekend: je beschrijving en de afbeelding worden nooit verzonden.",
+            "De video- en audiobestanden die je opent, worden direct van je schijf gelezen. Analyse, transcriptie (Whisper), gezichtsherkenning en export worden lokaal door je browser berekend. De AI-afbeeldingen van de thumbnails (SANA-Sprint / FLUX.2) worden ook lokaal berekend: je beschrijving en de afbeelding worden nooit verzonden.",
             "Je projecten (knippen, transcript, instellingen) worden opgeslagen in de lokale database van je browser (IndexedDB), samen met een miniatuur en een cache van analyses. De uitgever heeft er geen toegang toe. Je kunt een project verwijderen op de projectenpagina, of alles wissen door de gegevens van deze site te verwijderen in de instellingen van je browser."
           ]
         },
@@ -735,7 +736,7 @@
           "title": "Derden",
           "body": [
             "Cloudflare: alle verzoeken aan deze site lopen via Cloudflare, dat de server beschermt en de verbinding versleutelt. Zoals elke netwerktussenpersoon verwerkt Cloudflare je IP-adres en standaard browsergegevens om de pagina's te leveren, en kan het om veiligheidsredenen technische logs bewaren; je video's of audio ontvangt het nooit, want die verlaten je apparaat nooit. Zie hun [privacybeleid](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: de AI-modellen (Whisper voor ondertitels, SANA-Sprint voor thumbnailafbeeldingen) worden bij het eerste gebruik rechtstreeks van huggingface.co gedownload en daarna in je browser bewaard. Hugging Face ontvangt dan je IP-adres en de gebruikelijke browserinformatie, maar nooit je audio, beschrijvingen of afbeeldingen. Zie het [privacybeleid](https://huggingface.co/privacy).",
+            "Hugging Face: de AI-modellen (Whisper voor ondertitels, SANA-Sprint / FLUX.2 voor thumbnailafbeeldingen) worden bij het eerste gebruik rechtstreeks van huggingface.co gedownload en daarna in je browser bewaard. Hugging Face ontvangt dan je IP-adres en de gebruikelijke browserinformatie, maar nooit je audio, beschrijvingen of afbeeldingen. Zie het [privacybeleid](https://huggingface.co/privacy).",
             "GitHub: alleen als je een link naar de broncoderepository volgt.",
             "Er wordt geen andere derde partij gecontacteerd: een strikte Content-Security-Policy verhindert technisch dat de pagina ergens anders verbinding mee maakt."
           ]
@@ -793,8 +794,8 @@
           "title": "Open source en componenten van derden",
           "body": [
             "De broncode is beschikbaar onder de MIT-licentie op [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo maakt gebruik van: Mediabunny (MPL-2.0), Transformers.js en ONNX Runtime (Apache-2.0 en MIT), de Whisper-modellen van OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) en de lettertypen Inter en Montserrat (SIL Open Font License).",
-            "De AI-beeldgenerator gebruikt het model SANA-Sprint 0.6B van NVIDIA (Apache-2.0) en, om je beschrijving te lezen, Gemma 2 van Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. De [gebruiksvoorwaarden van Gemma](https://ai.google.dev/gemma/terms) en het [beleid inzake verboden gebruik van Gemma](https://ai.google.dev/gemma/prohibited_use_policy) zijn op jou van toepassing en maken deel uit van deze voorwaarden: je verbindt je ertoe de generator niet voor verboden gebruik of in strijd met de wet te gebruiken. Google claimt geen rechten op de afbeeldingen die je maakt: alleen jij bent verantwoordelijk voor de afbeeldingen en het gebruik ervan. De modellen worden geleverd zoals ze zijn, zonder garantie."
+            "LocalCutVideo maakt gebruik van: Mediabunny (MPL-2.0), Transformers.js en ONNX Runtime (Apache-2.0 en MIT), de Whisper-modellen van OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), FLUX.2 klein 4B (Black Forest Labs, Apache-2.0), Qwen3 (Alibaba, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) en de lettertypen Inter en Montserrat (SIL Open Font License).",
+            "De AI-beeldgenerator gebruikt het model SANA-Sprint 0.6B van NVIDIA (Apache-2.0) en, om je beschrijving te lezen, Gemma 2 van Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. De [gebruiksvoorwaarden van Gemma](https://ai.google.dev/gemma/terms) en het [beleid inzake verboden gebruik van Gemma](https://ai.google.dev/gemma/prohibited_use_policy) zijn op jou van toepassing en maken deel uit van deze voorwaarden: je verbindt je ertoe de generator niet voor verboden gebruik of in strijd met de wet te gebruiken. Google claimt geen rechten op de afbeeldingen die je maakt: alleen jij bent verantwoordelijk voor de afbeeldingen en het gebruik ervan. De modellen worden geleverd zoals ze zijn, zonder garantie. In maximale kwaliteit gebruikt de generator FLUX.2 klein 4B van Black Forest Labs en Qwen3 van Alibaba, onder de Apache-2.0-licentie."
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "Het AI-model kon niet worden gedownload. Probeer het over een paar minuten opnieuw",
       "history": "Je gemaakte afbeeldingen",
       "requirements": "Alleen op een computer: een recente browser met WebGPU en een videokaart met ongeveer 8 GB geheugen",
-      "storageError": "Het model kon niet op dit apparaat worden opgeslagen. Maak schijfruimte vrij of verlaat privé browsen en probeer het opnieuw"
+      "storageError": "Het model kon niet op dit apparaat worden opgeslagen. Maak schijfruimte vrij of verlaat privé browsen en probeer het opnieuw",
+      "quality": "Kwaliteit",
+      "standard": "Standaard",
+      "max": "Maximaal",
+      "sizeMax": "Eenmalige download van {{ size }} van Hugging Face, bewaard in deze browser op je computer. Meerdere minuten per afbeelding"
     }
   },
   "seo": {

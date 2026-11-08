@@ -254,7 +254,8 @@
       "rnnoise": "Uklanja pozadinsku buku iz glasa",
       "count": "AI modela, svi na vašem računalu",
       "used": "Korišteni AI modeli",
-      "note": "SANA-Sprint zahtijeva računalo, noviji preglednik s podrškom za WebGPU i oko 8 GB grafičke memorije. Njegovih 3,1 GB preuzima se jednom s Hugging Facea i ostaje u vašem pregledniku, na vašem računalu"
+      "note": "SANA-Sprint zahtijeva računalo, noviji preglednik s podrškom za WebGPU i oko 8 GB grafičke memorije. Njegovih 3,1 GB preuzima se jednom s Hugging Facea i ostaje u vašem pregledniku, na vašem računalu",
+      "flux": "Crta vaše najbolje slike minijatura prema rečenici koju čita Qwen3. Sporije, s više detalja"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "Intelektualno vlasništvo",
           "body": [
             "Izvorni kod LocalCutVidea otvoren je i objavljen pod licencom MIT na [GitHubu](https://github.com/ImMaxence/LocalCutVideo).",
-            "Komponente trećih strana, modeli UI i fontovi koje aplikacija koristi ostaju vlasništvo svojih autora i koriste se prema vlastitim licencama, navedenima u [uvjetima korištenja](/terms). Navedeni zaštitni znakovi (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) pripadaju svojim vlasnicima."
+            "Komponente trećih strana, modeli UI i fontovi koje aplikacija koristi ostaju vlasništvo svojih autora i koriste se prema vlastitim licencama, navedenima u [uvjetima korištenja](/terms). Navedeni zaštitni znakovi (Whisper, MediaPipe, SANA-Sprint, FLUX.2, Black Forest Labs, Qwen, Alibaba, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) pripadaju svojim vlasnicima."
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "Što ostaje na vašem uređaju",
           "body": [
-            "Video i audio datoteke koje otvorite čitaju se izravno s diska. Analizu, transkripciju (Whisper), praćenje lica i izvoz lokalno izračunava vaš preglednik. AI slike za minijature (SANA-Sprint) također se izračunavaju lokalno: vaš opis i slika nikada se ne šalju.",
+            "Video i audio datoteke koje otvorite čitaju se izravno s diska. Analizu, transkripciju (Whisper), praćenje lica i izvoz lokalno izračunava vaš preglednik. AI slike za minijature (SANA-Sprint / FLUX.2) također se izračunavaju lokalno: vaš opis i slika nikada se ne šalju.",
             "Vaši projekti (rezovi, transkripcija, postavke) spremaju se u lokalnu bazu podataka preglednika (IndexedDB), zajedno s minijaturom i predmemorijom analiza. Izdavač im nema pristup. Projekt možete izbrisati na stranici projekata ili izbrisati sve brisanjem podataka ove web-lokacije u postavkama preglednika."
           ]
         },
@@ -735,7 +736,7 @@
           "title": "Treće strane",
           "body": [
             "Cloudflare: svi zahtjevi prema ovoj web-lokaciji prolaze kroz Cloudflare, koji štiti poslužitelj i šifrira vezu. Kao i svaki mrežni posrednik, obrađuje vašu IP adresu i uobičajene podatke o pregledniku kako bi isporučio stranice te može čuvati tehničke zapise u sigurnosne svrhe; nikad ne prima vaše videozapise ni zvuk, koji nikad ne napuštaju vaš uređaj. Pogledajte [pravila privatnosti](https://www.cloudflare.com/privacypolicy/) tvrtke Cloudflare.",
-            "Hugging Face: AI modeli (Whisper za titlove, SANA-Sprint za slike minijatura) preuzimaju se izravno s huggingface.co pri prvom korištenju, a zatim ostaju u vašem pregledniku. Hugging Face tada prima vašu IP adresu i uobičajene podatke o pregledniku, ali nikada vaš zvuk, opise ni slike. Pogledajte [pravila o privatnosti](https://huggingface.co/privacy).",
+            "Hugging Face: AI modeli (Whisper za titlove, SANA-Sprint / FLUX.2 za slike minijatura) preuzimaju se izravno s huggingface.co pri prvom korištenju, a zatim ostaju u vašem pregledniku. Hugging Face tada prima vašu IP adresu i uobičajene podatke o pregledniku, ali nikada vaš zvuk, opise ni slike. Pogledajte [pravila o privatnosti](https://huggingface.co/privacy).",
             "GitHub: samo ako slijedite poveznicu na repozitorij izvornog koda.",
             "Nijedna druga treća strana ne kontaktira se: stroga Content-Security-Policy tehnički sprječava stranicu da se poveže bilo gdje drugdje."
           ]
@@ -793,8 +794,8 @@
           "title": "Otvoreni kod i komponente trećih strana",
           "body": [
             "Izvorni kod dostupan je pod licencom MIT na [GitHubu](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo se oslanja na: Mediabunny (MPL-2.0), Transformers.js i ONNX Runtime (Apache-2.0 i MIT), OpenAI-jeve modele Whisper (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) te fontove Inter i Montserrat (SIL Open Font License).",
-            "Generator AI slika koristi model SANA-Sprint 0.6B tvrtke NVIDIA (Apache-2.0) i, za čitanje vašeg opisa, Gemma 2 tvrtke Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Uvjeti korištenja Gemme](https://ai.google.dev/gemma/terms) i [pravila o zabranjenoj upotrebi Gemme](https://ai.google.dev/gemma/prohibited_use_policy) primjenjuju se i na vas i dio su ovih uvjeta: obvezujete se da generator nećete koristiti za zabranjenu upotrebu ili protivno zakonu. Google ne polaže prava na slike koje izradite: isključivo ste vi odgovorni za njih i za način njihove upotrebe. Modeli se pružaju takvi kakvi jesu, bez jamstva."
+            "LocalCutVideo se oslanja na: Mediabunny (MPL-2.0), Transformers.js i ONNX Runtime (Apache-2.0 i MIT), OpenAI-jeve modele Whisper (MIT), SANA-Sprint (NVIDIA, Apache-2.0), FLUX.2 klein 4B (Black Forest Labs, Apache-2.0), Qwen3 (Alibaba, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) te fontove Inter i Montserrat (SIL Open Font License).",
+            "Generator AI slika koristi model SANA-Sprint 0.6B tvrtke NVIDIA (Apache-2.0) i, za čitanje vašeg opisa, Gemma 2 tvrtke Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Uvjeti korištenja Gemme](https://ai.google.dev/gemma/terms) i [pravila o zabranjenoj upotrebi Gemme](https://ai.google.dev/gemma/prohibited_use_policy) primjenjuju se i na vas i dio su ovih uvjeta: obvezujete se da generator nećete koristiti za zabranjenu upotrebu ili protivno zakonu. Google ne polaže prava na slike koje izradite: isključivo ste vi odgovorni za njih i za način njihove upotrebe. Modeli se pružaju takvi kakvi jesu, bez jamstva. U maksimalnoj kvaliteti generator koristi FLUX.2 klein 4B tvrtke Black Forest Labs i Qwen3 tvrtke Alibaba, pod licencom Apache-2.0."
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "AI model nije bilo moguće preuzeti. Pokušajte ponovno za nekoliko minuta",
       "history": "Vaše izrađene slike",
       "requirements": "Samo na računalu: noviji preglednik s podrškom za WebGPU i grafička kartica s oko 8 GB memorije",
-      "storageError": "Model nije bilo moguće spremiti na ovaj uređaj. Oslobodite prostor na disku ili izađite iz privatnog pregledavanja pa pokušajte ponovno"
+      "storageError": "Model nije bilo moguće spremiti na ovaj uređaj. Oslobodite prostor na disku ili izađite iz privatnog pregledavanja pa pokušajte ponovno",
+      "quality": "Kvaliteta",
+      "standard": "Standardna",
+      "max": "Maksimalna",
+      "sizeMax": "Jednokratno preuzimanje od {{ size }} s Hugging Facea, čuva se u ovom pregledniku na vašem računalu. Nekoliko minuta po slici"
     }
   },
   "seo": {

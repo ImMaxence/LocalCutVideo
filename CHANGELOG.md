@@ -2,6 +2,14 @@
 
 All notable changes to LocalCutVideo. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning: [SemVer](https://semver.org/).
 
+## [1.3.0] - 2026-11-08
+
+### Added
+- AI images: Maximum quality with FLUX.2 klein 4B and Qwen3 (one-time 6.5 GB download)
+
+### Changed
+- Home page and legal pages list the new models
+
 ## [1.2.0] - 2026-11-08
 
 ### Added

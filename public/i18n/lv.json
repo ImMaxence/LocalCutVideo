@@ -254,7 +254,8 @@
       "rnnoise": "Noņem fona troksni no balss",
       "count": "AI modeļi, visi tavā datorā",
       "used": "Izmantotie AI modeļi",
-      "note": "SANA-Sprint nepieciešams dators, jauns pārlūks ar WebGPU atbalstu un aptuveni 8 GB grafiskās atmiņas. Tā 3,1 GB tiek lejupielādēti vienreiz no Hugging Face un paliek tavā pārlūkā, tavā datorā"
+      "note": "SANA-Sprint nepieciešams dators, jauns pārlūks ar WebGPU atbalstu un aptuveni 8 GB grafiskās atmiņas. Tā 3,1 GB tiek lejupielādēti vienreiz no Hugging Face un paliek tavā pārlūkā, tavā datorā",
+      "flux": "Pēc teikuma, ko nolasa Qwen3, zīmē tavus labākos sīktēlu attēlus. Lēnāk, ar vairāk detaļu"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "Intelektuālais īpašums",
           "body": [
             "LocalCutVideo pirmkods ir atvērts un publicēts ar MIT licenci vietnē [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Lietotnē izmantotās trešo pušu komponentes, MI modeļi un fonti joprojām pieder to autoriem un tiek izmantoti saskaņā ar to licencēm, kas uzskaitītas [lietošanas noteikumos](/terms). Minētās preču zīmes (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) pieder to īpašniekiem."
+            "Lietotnē izmantotās trešo pušu komponentes, MI modeļi un fonti joprojām pieder to autoriem un tiek izmantoti saskaņā ar to licencēm, kas uzskaitītas [lietošanas noteikumos](/terms). Minētās preču zīmes (Whisper, MediaPipe, SANA-Sprint, FLUX.2, Black Forest Labs, Qwen, Alibaba, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) pieder to īpašniekiem."
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "Kas paliek tavā ierīcē",
           "body": [
-            "Tevis atvērtie video un audio faili tiek nolasīti tieši no tava diska. Analīzi, transkripciju (Whisper), seju izsekošanu un eksportu lokāli aprēķina tavs pārlūks. Sīktēlu AI attēli (SANA-Sprint) arī tiek aprēķināti lokāli: tavs apraksts un attēls nekad netiek nosūtīti.",
+            "Tevis atvērtie video un audio faili tiek nolasīti tieši no tava diska. Analīzi, transkripciju (Whisper), seju izsekošanu un eksportu lokāli aprēķina tavs pārlūks. Sīktēlu AI attēli (SANA-Sprint / FLUX.2) arī tiek aprēķināti lokāli: tavs apraksts un attēls nekad netiek nosūtīti.",
             "Tavi projekti (griezumi, transkripcija, iestatījumi) tiek saglabāti tava pārlūka lokālajā datubāzē (IndexedDB) kopā ar sīktēlu un analīžu kešatmiņu. Izdevējam tiem nav piekļuves. Projektu vari izdzēst projektu lapā vai izdzēst visu, notīrot šīs vietnes datus pārlūka iestatījumos."
           ]
         },
@@ -735,7 +736,7 @@
           "title": "Trešās puses",
           "body": [
             "Cloudflare: visi pieprasījumi šai vietnei iet caur Cloudflare, kas aizsargā serveri un šifrē savienojumu. Kā jebkurš tīkla starpnieks, tas apstrādā tavu IP adresi un parasto pārlūka informāciju, lai piegādātu lapas, un drošības nolūkos var glabāt tehniskus žurnālus; tas nekad nesaņem tavus video vai audio, kas nekad neatstāj tavu ierīci. Skati Cloudflare [privātuma politiku](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: AI modeļi (Whisper subtitriem, SANA-Sprint sīktēlu attēliem) tiek lejupielādēti tieši no huggingface.co pirmajā lietošanas reizē un pēc tam glabāti tavā pārlūkā. Hugging Face saņem tavu IP adresi un parasto pārlūka informāciju, bet nekad tavu audio, aprakstus vai attēlus. Skati [privātuma politiku](https://huggingface.co/privacy).",
+            "Hugging Face: AI modeļi (Whisper subtitriem, SANA-Sprint / FLUX.2 sīktēlu attēliem) tiek lejupielādēti tieši no huggingface.co pirmajā lietošanas reizē un pēc tam glabāti tavā pārlūkā. Hugging Face saņem tavu IP adresi un parasto pārlūka informāciju, bet nekad tavu audio, aprakstus vai attēlus. Skati [privātuma politiku](https://huggingface.co/privacy).",
             "GitHub: tikai tad, ja seko saitei uz pirmkoda repozitoriju.",
             "Neviena cita trešā puse netiek uzrunāta: stingra Content-Security-Policy tehniski neļauj lapai savienoties nekur citur."
           ]
@@ -793,8 +794,8 @@
           "title": "Atvērtais kods un trešo pušu komponentes",
           "body": [
             "Pirmkods ir pieejams ar MIT licenci vietnē [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo balstās uz: Mediabunny (MPL-2.0), Transformers.js un ONNX Runtime (Apache-2.0 un MIT), OpenAI Whisper modeļiem (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) un fontiem Inter un Montserrat (SIL Open Font License).",
-            "AI attēlu ģenerators izmanto NVIDIA modeli SANA-Sprint 0.6B (Apache-2.0) un tava apraksta lasīšanai Google modeli Gemma 2. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma lietošanas noteikumi](https://ai.google.dev/gemma/terms) un [Gemma aizliegtās lietošanas politika](https://ai.google.dev/gemma/prohibited_use_policy) attiecas uz tevi un ir šo noteikumu daļa: tu apņemies neizmantot ģeneratoru aizliegtos veidos vai pārkāpjot likumu. Google nepretendē uz tiesībām uz taviem attēliem: tikai tu esi atbildīgs par tiem un to izmantošanu. Modeļi tiek nodrošināti tādi, kādi tie ir, bez garantijām."
+            "LocalCutVideo balstās uz: Mediabunny (MPL-2.0), Transformers.js un ONNX Runtime (Apache-2.0 un MIT), OpenAI Whisper modeļiem (MIT), SANA-Sprint (NVIDIA, Apache-2.0), FLUX.2 klein 4B (Black Forest Labs, Apache-2.0), Qwen3 (Alibaba, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) un fontiem Inter un Montserrat (SIL Open Font License).",
+            "AI attēlu ģenerators izmanto NVIDIA modeli SANA-Sprint 0.6B (Apache-2.0) un tava apraksta lasīšanai Google modeli Gemma 2. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma lietošanas noteikumi](https://ai.google.dev/gemma/terms) un [Gemma aizliegtās lietošanas politika](https://ai.google.dev/gemma/prohibited_use_policy) attiecas uz tevi un ir šo noteikumu daļa: tu apņemies neizmantot ģeneratoru aizliegtos veidos vai pārkāpjot likumu. Google nepretendē uz tiesībām uz taviem attēliem: tikai tu esi atbildīgs par tiem un to izmantošanu. Modeļi tiek nodrošināti tādi, kādi tie ir, bez garantijām. Maksimālajā kvalitātē ģenerators izmanto Black Forest Labs modeli FLUX.2 klein 4B un Alibaba modeli Qwen3 saskaņā ar Apache-2.0 licenci."
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "AI modeli neizdevās lejupielādēt. Mēģini vēlreiz pēc dažām minūtēm",
       "history": "Tevis izveidotie attēli",
       "requirements": "Tikai datorā: jauns pārlūks ar WebGPU atbalstu un videokarte ar aptuveni 8 GB atmiņas",
-      "storageError": "Modeli neizdevās saglabāt šajā ierīcē. Atbrīvo vietu diskā vai izej no privātās pārlūkošanas un mēģini vēlreiz"
+      "storageError": "Modeli neizdevās saglabāt šajā ierīcē. Atbrīvo vietu diskā vai izej no privātās pārlūkošanas un mēģini vēlreiz",
+      "quality": "Kvalitāte",
+      "standard": "Standarta",
+      "max": "Maksimālā",
+      "sizeMax": "Vienreizēja {{ size }} lejupielāde no Hugging Face, tiek glabāta šajā pārlūkā tavā datorā. Vairākas minūtes vienam attēlam"
     }
   },
   "seo": {

@@ -254,7 +254,8 @@
       "rnnoise": "आवाज़ से बैकग्राउंड शोर हटाता है",
       "count": "AI मॉडल, सभी आपके कंप्यूटर पर",
       "used": "उपयोग किए गए AI मॉडल",
-      "note": "SANA-Sprint के लिए कंप्यूटर, WebGPU वाला नया ब्राउज़र और लगभग 8 GB ग्राफ़िक्स मेमोरी चाहिए। इसके 3.1 GB एक बार Hugging Face से डाउनलोड होते हैं और आपके कंप्यूटर पर ब्राउज़र में रहते हैं"
+      "note": "SANA-Sprint के लिए कंप्यूटर, WebGPU वाला नया ब्राउज़र और लगभग 8 GB ग्राफ़िक्स मेमोरी चाहिए। इसके 3.1 GB एक बार Hugging Face से डाउनलोड होते हैं और आपके कंप्यूटर पर ब्राउज़र में रहते हैं",
+      "flux": "Qwen3 द्वारा पढ़े गए वाक्य से आपके सबसे अच्छे थंबनेल की इमेज बनाता है। धीमा, ज़्यादा विस्तृत"
     }
   },
   "changelog": {
@@ -684,7 +685,7 @@
           "title": "बौद्धिक संपदा",
           "body": [
             "LocalCutVideo का सोर्स कोड ओपन सोर्स है और MIT लाइसेंस के तहत [GitHub](https://github.com/ImMaxence/LocalCutVideo) पर प्रकाशित है।",
-            "ऐप द्वारा इस्तेमाल किए गए थर्ड-पार्टी कंपोनेंट, AI मॉडल और फ़ॉन्ट अपने रचनाकारों की संपत्ति बने रहते हैं और उनके अपने लाइसेंस के तहत इस्तेमाल होते हैं, जो [उपयोग की शर्तों](/terms) में सूचीबद्ध हैं। उल्लिखित ब्रांड (Whisper, MediaPipe, SANA-Sprint, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) उनके मालिकों के हैं।"
+            "ऐप द्वारा इस्तेमाल किए गए थर्ड-पार्टी कंपोनेंट, AI मॉडल और फ़ॉन्ट अपने रचनाकारों की संपत्ति बने रहते हैं और उनके अपने लाइसेंस के तहत इस्तेमाल होते हैं, जो [उपयोग की शर्तों](/terms) में सूचीबद्ध हैं। उल्लिखित ब्रांड (Whisper, MediaPipe, SANA-Sprint, FLUX.2, Black Forest Labs, Qwen, Alibaba, NVIDIA, Gemma, Google, Hugging Face, Chrome, Edge…) उनके मालिकों के हैं।"
           ]
         },
         {
@@ -715,7 +716,7 @@
         {
           "title": "आपके डिवाइस पर क्या रहता है",
           "body": [
-            "आप जो वीडियो और ऑडियो फ़ाइलें खोलते हैं, वे सीधे आपकी डिस्क से पढ़ी जाती हैं। विश्लेषण, ट्रांसक्रिप्शन (Whisper), फ़ेस ट्रैकिंग और एक्सपोर्ट की गणना आपका ब्राउज़र लोकल रूप से करता है। थंबनेल की AI इमेज (SANA-Sprint) भी स्थानीय रूप से बनती हैं: आपका वर्णन और इमेज कभी नहीं भेजे जाते।",
+            "आप जो वीडियो और ऑडियो फ़ाइलें खोलते हैं, वे सीधे आपकी डिस्क से पढ़ी जाती हैं। विश्लेषण, ट्रांसक्रिप्शन (Whisper), फ़ेस ट्रैकिंग और एक्सपोर्ट की गणना आपका ब्राउज़र लोकल रूप से करता है। थंबनेल की AI इमेज (SANA-Sprint / FLUX.2) भी स्थानीय रूप से बनती हैं: आपका वर्णन और इमेज कभी नहीं भेजे जाते।",
             "आपके प्रोजेक्ट (कट, ट्रांसक्रिप्ट, सेटिंग) एक थंबनेल और विश्लेषण के कैश के साथ आपके ब्राउज़र के लोकल डेटाबेस (IndexedDB) में सेव होते हैं। प्रकाशक की उन तक पहुँच नहीं है। आप प्रोजेक्ट पेज से कोई प्रोजेक्ट मिटा सकते हैं, या ब्राउज़र सेटिंग में इस साइट का डेटा साफ़ करके सब कुछ मिटा सकते हैं।"
           ]
         },
@@ -735,7 +736,7 @@
           "title": "थर्ड पार्टी",
           "body": [
             "Cloudflare: इस साइट के सभी अनुरोध Cloudflare से होकर गुज़रते हैं, जो सर्वर की सुरक्षा करता है और कनेक्शन को एन्क्रिप्ट करता है। किसी भी नेटवर्क मध्यस्थ की तरह, यह पेज पहुँचाने के लिए आपका IP पता और ब्राउज़र की सामान्य जानकारी प्रोसेस करता है, और सुरक्षा के लिए तकनीकी लॉग रख सकता है; यह आपके वीडियो या ऑडियो कभी प्राप्त नहीं करता, जो कभी आपके डिवाइस से बाहर नहीं जाते। Cloudflare की [निजता नीति](https://www.cloudflare.com/privacypolicy/) देखें।",
-            "Hugging Face: AI मॉडल (सबटाइटल के लिए Whisper, थंबनेल इमेज के लिए SANA-Sprint) पहली बार उपयोग करने पर सीधे huggingface.co से डाउनलोड होते हैं और फिर आपके ब्राउज़र में रहते हैं। तब Hugging Face को आपका IP पता और सामान्य ब्राउज़र जानकारी मिलती है, लेकिन आपका ऑडियो, वर्णन या इमेज कभी नहीं। उनकी [प्राइवेसी पॉलिसी](https://huggingface.co/privacy) देखें।",
+            "Hugging Face: AI मॉडल (सबटाइटल के लिए Whisper, थंबनेल इमेज के लिए SANA-Sprint / FLUX.2) पहली बार उपयोग करने पर सीधे huggingface.co से डाउनलोड होते हैं और फिर आपके ब्राउज़र में रहते हैं। तब Hugging Face को आपका IP पता और सामान्य ब्राउज़र जानकारी मिलती है, लेकिन आपका ऑडियो, वर्णन या इमेज कभी नहीं। उनकी [प्राइवेसी पॉलिसी](https://huggingface.co/privacy) देखें।",
             "GitHub: सिर्फ़ तभी, जब आप सोर्स कोड रिपॉज़िटरी का लिंक खोलें।",
             "किसी और थर्ड पार्टी से संपर्क नहीं होता: एक सख़्त Content-Security-Policy तकनीकी रूप से पेज को कहीं और जुड़ने से रोकती है।"
           ]
@@ -793,8 +794,8 @@
           "title": "ओपन सोर्स और थर्ड-पार्टी कंपोनेंट",
           "body": [
             "सोर्स कोड MIT लाइसेंस के तहत [GitHub](https://github.com/ImMaxence/LocalCutVideo) पर उपलब्ध है।",
-            "LocalCutVideo इन पर आधारित है: Mediabunny (MPL-2.0), Transformers.js और ONNX Runtime (Apache-2.0 और MIT), OpenAI के Whisper मॉडल (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) और Inter व Montserrat फ़ॉन्ट (SIL Open Font License)।",
-            "AI इमेज जनरेटर NVIDIA के SANA-Sprint 0.6B मॉडल (Apache-2.0) का और आपके वर्णन को पढ़ने के लिए Google के Gemma 2 का उपयोग करता है। Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma उपयोग की शर्तें](https://ai.google.dev/gemma/terms) और [Gemma निषिद्ध उपयोग नीति](https://ai.google.dev/gemma/prohibited_use_policy) आप पर लागू हैं और इन शर्तों का हिस्सा हैं: आप सहमत हैं कि जनरेटर का उपयोग किसी निषिद्ध उद्देश्य के लिए या कानून के उल्लंघन में नहीं करेंगे। Google आपकी बनाई इमेज पर कोई अधिकार नहीं जताता: उनके और उनके उपयोग के लिए केवल आप ज़िम्मेदार हैं। मॉडल बिना किसी वारंटी के, जैसे हैं वैसे ही उपलब्ध हैं।"
+            "LocalCutVideo इन पर आधारित है: Mediabunny (MPL-2.0), Transformers.js और ONNX Runtime (Apache-2.0 और MIT), OpenAI के Whisper मॉडल (MIT), SANA-Sprint (NVIDIA, Apache-2.0), FLUX.2 klein 4B (Black Forest Labs, Apache-2.0), Qwen3 (Alibaba, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) और Inter व Montserrat फ़ॉन्ट (SIL Open Font License)।",
+            "AI इमेज जनरेटर NVIDIA के SANA-Sprint 0.6B मॉडल (Apache-2.0) का और आपके वर्णन को पढ़ने के लिए Google के Gemma 2 का उपयोग करता है। Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma उपयोग की शर्तें](https://ai.google.dev/gemma/terms) और [Gemma निषिद्ध उपयोग नीति](https://ai.google.dev/gemma/prohibited_use_policy) आप पर लागू हैं और इन शर्तों का हिस्सा हैं: आप सहमत हैं कि जनरेटर का उपयोग किसी निषिद्ध उद्देश्य के लिए या कानून के उल्लंघन में नहीं करेंगे। Google आपकी बनाई इमेज पर कोई अधिकार नहीं जताता: उनके और उनके उपयोग के लिए केवल आप ज़िम्मेदार हैं। मॉडल बिना किसी वारंटी के, जैसे हैं वैसे ही उपलब्ध हैं। अधिकतम गुणवत्ता में जनरेटर Apache-2.0 लाइसेंस के तहत Black Forest Labs के FLUX.2 klein 4B और Alibaba के Qwen3 का उपयोग करता है।"
           ]
         },
         {
@@ -882,7 +883,11 @@
       "downloadError": "AI मॉडल डाउनलोड नहीं हो सका। कुछ मिनट बाद फिर कोशिश करें",
       "history": "आपकी बनाई इमेज",
       "requirements": "केवल कंप्यूटर पर: WebGPU वाला नया ब्राउज़र और लगभग 8 GB मेमोरी वाला ग्राफ़िक्स कार्ड",
-      "storageError": "इस डिवाइस पर मॉडल सेव नहीं हो सका। डिस्क में जगह खाली करें या प्राइवेट ब्राउज़िंग से बाहर निकलें, फिर दोबारा कोशिश करें"
+      "storageError": "इस डिवाइस पर मॉडल सेव नहीं हो सका। डिस्क में जगह खाली करें या प्राइवेट ब्राउज़िंग से बाहर निकलें, फिर दोबारा कोशिश करें",
+      "quality": "गुणवत्ता",
+      "standard": "मानक",
+      "max": "अधिकतम",
+      "sizeMax": "Hugging Face से {{ size }} का एक बार का डाउनलोड, आपके कंप्यूटर पर इसी ब्राउज़र में रखा जाता है। प्रति इमेज कई मिनट"
     }
   },
   "seo": {
