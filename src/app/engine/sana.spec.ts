@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { EMBEDDING_BYTES, EMBEDDING_SIZE, SCALE_BYTES, float16, inputScale, modelInput, nextLatents, predictClean, sanaSize, scmTime, selectedTokens, toPixels, unpackEmbedding } from './sana';
+import { EMBEDDING_BYTES, EMBEDDING_SIZE, SCALE_BYTES, cropLatents, featherWeights, float16, inputScale, modelInput, nextLatents, predictClean, sanaSize, scmTime, selectedTokens, tileStarts, toPixels, unpackEmbedding } from './sana';
 
 describe('SANA-Sprint maths', () => {
   it('uses a trained size for each format, in multiples of the latent scale', () => {
@@ -46,6 +46,30 @@ describe('SANA-Sprint maths', () => {
     unpackEmbedding(values, scales, target, 0);
     expect(target[0]).toBe(2);
     expect(target[1]).toBe(14);
+  });
+
+  it('covers the whole picture with overlapping pieces', () => {
+    expect(tileStarts(16)).toEqual([0]);
+    for (const total of [24, 32, 42]) {
+      const starts = tileStarts(total);
+      expect(starts[0]).toBe(0);
+      expect(starts.at(-1)! + 16).toBe(total);
+      for (let i = 1; i < starts.length; i++) expect(starts[i - 1] + 16 - starts[i]).toBeGreaterThanOrEqual(4);
+    }
+  });
+
+  it('crops a piece of every channel', () => {
+    // 2 channels of 3×3: channel c, row y, column x holds c*100 + y*10 + x.
+    const latents = Float32Array.from({ length: 18 }, (_, i) => Math.floor(i / 9) * 100 + Math.floor((i % 9) / 3) * 10 + (i % 3));
+    expect(Array.from(cropLatents(latents, 2, 3, 3, 1, 1, 2))).toEqual([11, 12, 21, 22, 111, 112, 121, 122]);
+  });
+
+  it('fades only the sides that meet a neighbour', () => {
+    expect(Array.from(featherWeights(4, 2, false, false))).toEqual([1, 1, 1, 1]);
+    const inner = featherWeights(6, 2, true, true);
+    expect(inner[0]).toBeCloseTo(1 / 3);
+    expect(inner[2]).toBe(1);
+    expect(inner[5]).toBeCloseTo(1 / 3);
   });
 
   it('turns channels-first values into pixels', () => {

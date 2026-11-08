@@ -20,7 +20,8 @@
     "open": "エディターを開く",
     "menu": "メニューを開く",
     "close": "メニューを閉じる",
-    "thumbnail": "サムネイル"
+    "thumbnail": "サムネイル",
+    "ai": "AI"
   },
   "theme": {
     "system": "システム",
@@ -246,7 +247,10 @@
       "whisper": "音声を理解し、数十の言語で字幕を作成します",
       "sana": "文章からサムネイル用の画像を最大 1344×768 で描きます",
       "mediapipe": "顔を検出してフレーム内に収め、人物を背景から切り離します",
-      "rnnoise": "音声から背景ノイズを除去します"
+      "rnnoise": "音声から背景ノイズを除去します",
+      "count": "つのAIモデルがすべてパソコン上で動作",
+      "used": "使用しているAIモデル",
+      "note": "SANA-Sprint には Chrome または Edge を搭載したパソコンと約 8 GB のグラフィックメモリが必要です。3.1 GB のデータは Hugging Face から一度だけダウンロードされ、パソコンのブラウザに保存されます"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "オープンソースとサードパーティのコンポーネント",
           "body": [
             "ソースコードは MIT ライセンスのもと [GitHub](https://github.com/ImMaxence/LocalCutVideo) で公開されています。",
-            "LocalCutVideo は以下に依存しています：Mediabunny（MPL-2.0）、Transformers.js と ONNX Runtime（Apache-2.0 と MIT）、OpenAI の Whisper モデル（MIT）、SANA-Sprint (NVIDIA, Apache-2.0)、Gemma 2 (Google)、MediaPipe（Apache-2.0）、Wavesurfer.js（BSD-3-Clause）、Dexie.js（Apache-2.0）、Angular（MIT）、Inter と Montserrat フォント（SIL Open Font License）。",
+            "LocalCutVideo は以下に依存しています：Mediabunny（MPL-2.0）、Transformers.js と ONNX Runtime（Apache-2.0 と MIT）、OpenAI の Whisper モデル（MIT）、SANA-Sprint (NVIDIA, Apache-2.0)、Gemma 2 (Google)、MediaPipe（Apache-2.0）、[RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause)、Wavesurfer.js（BSD-3-Clause）、Dexie.js（Apache-2.0）、Angular（MIT）、Inter と Montserrat フォント（SIL Open Font License）。",
             "AI画像生成には NVIDIA の SANA-Sprint 0.6B モデル（Apache-2.0）を使用し、説明文の読み取りには Google の Gemma 2 を使用しています。 Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma 利用規約](https://ai.google.dev/gemma/terms)および[Gemma 禁止用途ポリシー](https://ai.google.dev/gemma/prohibited_use_policy)はお客様にも適用され、本規約の一部を構成します。お客様は、禁止された用途または法令に違反する形で本機能を使用しないことに同意するものとします。Google は生成された画像に対する権利を主張しません。画像とその利用についてはお客様のみが責任を負います。モデルは現状のまま、無保証で提供されます。"
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "生成",
       "again": "別の画像を生成",
-      "size": "初回のみ {{ size }} をダウンロード。1枚あたり約1分",
+      "size": "Hugging Face から初回のみ {{ size }} をダウンロードし、パソコンのこのブラウザに保存します。1枚あたり約1分",
       "generating": "画像を作成しています…",
       "unsupported": "新しいグラフィックカードを搭載したパソコンの Chrome または Edge が必要です",
-      "error": "画像を生成できませんでした。グラフィックカードのメモリが不足している可能性があります",
+      "error": "画像を生成できませんでした。グラフィックカードのメモリが不足している可能性があります。他のタブやアプリを閉じてもう一度お試しください",
       "terms": "画像を生成すると、モデルの利用規約に同意したことになります",
       "downloadError": "AIモデルをダウンロードできませんでした。数分後にもう一度お試しください",
-      "history": "生成した画像"
+      "history": "生成した画像",
+      "requirements": "パソコン専用：Chrome または Edge と、メモリ約 8 GB のグラフィックカードが必要です"
     }
   },
   "seo": {

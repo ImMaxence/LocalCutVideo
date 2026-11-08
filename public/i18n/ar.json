@@ -20,7 +20,8 @@
     "open": "فتح المحرر",
     "menu": "فتح القائمة",
     "close": "إغلاق القائمة",
-    "thumbnail": "الصور المصغرة"
+    "thumbnail": "الصور المصغرة",
+    "ai": "الذكاء الاصطناعي"
   },
   "theme": {
     "system": "النظام",
@@ -246,7 +247,10 @@
       "whisper": "يفهم الكلام ويكتب الترجمة بعشرات اللغات",
       "sana": "يرسم صور مصغراتك انطلاقًا من جملة، حتى 1344×768",
       "mediapipe": "يحدد الوجوه لإبقائها داخل الإطار ويفصل الشخص عن الخلفية",
-      "rnnoise": "يزيل ضوضاء الخلفية من الصوت"
+      "rnnoise": "يزيل ضوضاء الخلفية من الصوت",
+      "count": "نماذج ذكاء اصطناعي، كلها على حاسوبك",
+      "used": "نماذج الذكاء الاصطناعي المستخدمة",
+      "note": "يتطلب SANA-Sprint حاسوبًا مزودًا بـ Chrome أو Edge ونحو 8 جيجابايت من ذاكرة الرسوميات. تُنزَّل ملفاته البالغة 3.1 جيجابايت مرة واحدة من Hugging Face وتبقى في متصفحك على حاسوبك"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "المصدر المفتوح والمكوّنات الخارجية",
           "body": [
             "الشيفرة المصدرية متاحة بموجب ترخيص MIT على [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "يعتمد LocalCutVideo على: Mediabunny (MPL-2.0)، وTransformers.js وONNX Runtime (Apache-2.0 وMIT)، ونماذج Whisper من OpenAI (MIT)، وSANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0)، وWavesurfer.js (BSD-3-Clause)، وDexie.js (Apache-2.0)، وAngular (MIT)، وخطَّي Inter وMontserrat (SIL Open Font License).",
+            "يعتمد LocalCutVideo على: Mediabunny (MPL-2.0)، وTransformers.js وONNX Runtime (Apache-2.0 وMIT)، ونماذج Whisper من OpenAI (MIT)، وSANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0)، و[RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause) وWavesurfer.js (BSD-3-Clause)، وDexie.js (Apache-2.0)، وAngular (MIT)، وخطَّي Inter وMontserrat (SIL Open Font License).",
             "يستخدم مولّد الصور بالذكاء الاصطناعي نموذج SANA-Sprint 0.6B من NVIDIA (Apache-2.0)، ولقراءة وصفك نموذج Gemma 2 من Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. تسري عليك [شروط استخدام Gemma](https://ai.google.dev/gemma/terms) و[سياسة الاستخدام المحظور لـ Gemma](https://ai.google.dev/gemma/prohibited_use_policy) وتشكلان جزءًا من هذه الشروط: وتتعهد بعدم استخدام المولّد لأي استخدام محظور أو بما يخالف القانون. لا تطالب Google بأي حقوق في الصور التي تنشئها: فأنت وحدك المسؤول عنها وعن طريقة استخدامها. تُقدَّم النماذج كما هي، دون أي ضمان."
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "إنشاء",
       "again": "إنشاء صورة أخرى",
-      "size": "تنزيل لمرة واحدة {{ size }}. نحو دقيقة لكل صورة",
+      "size": "تنزيل لمرة واحدة بحجم {{ size }} من Hugging Face، يُحفظ في هذا المتصفح على حاسوبك. نحو دقيقة لكل صورة",
       "generating": "جارٍ إنشاء الصورة…",
       "unsupported": "يتطلب Chrome أو Edge على حاسوب ببطاقة رسوميات حديثة",
-      "error": "تعذّر إنشاء الصورة. قد تكون ذاكرة بطاقة الرسوميات غير كافية",
+      "error": "تعذّر إنشاء الصورة. قد تكون ذاكرة بطاقة الرسوميات غير كافية: أغلق علامات التبويب والتطبيقات الأخرى ثم حاول مرة أخرى",
       "terms": "بإنشاء صورة، فإنك توافق على شروط استخدام النموذج",
       "downloadError": "تعذّر تنزيل نموذج الذكاء الاصطناعي. حاول مرة أخرى بعد بضع دقائق",
-      "history": "صورك المُنشأة"
+      "history": "صورك المُنشأة",
+      "requirements": "على الحاسوب فقط: Chrome أو Edge وبطاقة رسوميات بذاكرة نحو 8 جيجابايت"
     }
   },
   "seo": {

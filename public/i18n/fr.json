@@ -20,7 +20,8 @@
     "open": "Ouvrir l'éditeur",
     "menu": "Ouvrir le menu",
     "close": "Fermer le menu",
-    "thumbnail": "Miniatures"
+    "thumbnail": "Miniatures",
+    "ai": "IA"
   },
   "theme": {
     "system": "Système",
@@ -246,7 +247,10 @@
       "whisper": "Comprend la parole et écrit les sous-titres, dans des dizaines de langues",
       "sana": "Dessine les images de vos miniatures à partir d'une phrase, jusqu'en 1344×768",
       "mediapipe": "Repère les visages pour les garder dans le cadre et détache la personne du fond",
-      "rnnoise": "Retire le bruit de fond de la voix"
+      "rnnoise": "Retire le bruit de fond de la voix",
+      "count": "IA, toutes sur votre ordinateur",
+      "used": "IA utilisées",
+      "note": "SANA-Sprint nécessite un ordinateur avec Chrome ou Edge et environ 8 Go de mémoire graphique. Ses 3,1 Go sont téléchargés une seule fois depuis Hugging Face et restent dans votre navigateur, sur votre ordinateur"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "Open source et composants tiers",
           "body": [
             "Le code source est disponible sous licence MIT sur [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo s'appuie sur : Mediabunny (MPL-2.0), Transformers.js et ONNX Runtime (Apache-2.0 et MIT), les modèles Whisper d'OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) et les polices Inter et Montserrat (SIL Open Font License).",
+            "LocalCutVideo s'appuie sur : Mediabunny (MPL-2.0), Transformers.js et ONNX Runtime (Apache-2.0 et MIT), les modèles Whisper d'OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) et les polices Inter et Montserrat (SIL Open Font License).",
             "Le générateur d'images IA utilise le modèle SANA-Sprint 0.6B de NVIDIA (Apache-2.0) et, pour lire votre description, Gemma 2 de Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. Les [conditions d'utilisation de Gemma](https://ai.google.dev/gemma/terms) et sa [politique d'utilisation interdite](https://ai.google.dev/gemma/prohibited_use_policy) s'appliquent à vous et font partie des présentes conditions : vous vous engagez à ne pas utiliser le générateur pour un usage interdit ou en violation de la loi. Google ne revendique aucun droit sur les images que vous générez : vous êtes seul responsable de ces images et de leur utilisation. Les modèles sont fournis en l'état, sans garantie."
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "Générer",
       "again": "En générer une autre",
-      "size": "Téléchargement unique {{ size }}. Environ une minute par image",
+      "size": "Téléchargement unique de {{ size }} depuis Hugging Face, conservé dans ce navigateur sur votre ordinateur. Environ une minute par image",
       "generating": "Création de l'image…",
       "unsupported": "Nécessite Chrome ou Edge sur un ordinateur avec une carte graphique récente",
-      "error": "L'image n'a pas pu être générée. Votre carte graphique manque peut-être de mémoire",
+      "error": "L'image n'a pas pu être générée. Votre carte graphique manque peut-être de mémoire : fermez les autres onglets et applications, puis réessayez",
       "terms": "En générant une image, vous acceptez les conditions d'utilisation du modèle",
       "downloadError": "Le modèle IA n'a pas pu être téléchargé. Réessayez dans quelques minutes",
-      "history": "Vos images générées"
+      "history": "Vos images générées",
+      "requirements": "Sur ordinateur uniquement : Chrome ou Edge et une carte graphique avec environ 8 Go de mémoire"
     }
   },
   "seo": {

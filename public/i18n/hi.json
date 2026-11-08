@@ -20,7 +20,8 @@
     "open": "एडिटर खोलें",
     "menu": "मेन्यू खोलें",
     "close": "मेन्यू बंद करें",
-    "thumbnail": "थंबनेल"
+    "thumbnail": "थंबनेल",
+    "ai": "AI"
   },
   "theme": {
     "system": "सिस्टम",
@@ -246,7 +247,10 @@
       "whisper": "बोली समझता है और दर्जनों भाषाओं में सबटाइटल लिखता है",
       "sana": "एक वाक्य से आपके थंबनेल की इमेज बनाता है, 1344×768 तक",
       "mediapipe": "चेहरे ढूँढकर उन्हें फ़्रेम में रखता है और व्यक्ति को बैकग्राउंड से अलग करता है",
-      "rnnoise": "आवाज़ से बैकग्राउंड शोर हटाता है"
+      "rnnoise": "आवाज़ से बैकग्राउंड शोर हटाता है",
+      "count": "AI मॉडल, सभी आपके कंप्यूटर पर",
+      "used": "उपयोग किए गए AI मॉडल",
+      "note": "SANA-Sprint के लिए Chrome या Edge वाला कंप्यूटर और लगभग 8 GB ग्राफ़िक्स मेमोरी चाहिए। इसके 3.1 GB एक बार Hugging Face से डाउनलोड होते हैं और आपके कंप्यूटर पर ब्राउज़र में रहते हैं"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "ओपन सोर्स और थर्ड-पार्टी कंपोनेंट",
           "body": [
             "सोर्स कोड MIT लाइसेंस के तहत [GitHub](https://github.com/ImMaxence/LocalCutVideo) पर उपलब्ध है।",
-            "LocalCutVideo इन पर आधारित है: Mediabunny (MPL-2.0), Transformers.js और ONNX Runtime (Apache-2.0 और MIT), OpenAI के Whisper मॉडल (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) और Inter व Montserrat फ़ॉन्ट (SIL Open Font License)।",
+            "LocalCutVideo इन पर आधारित है: Mediabunny (MPL-2.0), Transformers.js और ONNX Runtime (Apache-2.0 और MIT), OpenAI के Whisper मॉडल (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) और Inter व Montserrat फ़ॉन्ट (SIL Open Font License)।",
             "AI इमेज जनरेटर NVIDIA के SANA-Sprint 0.6B मॉडल (Apache-2.0) का और आपके वर्णन को पढ़ने के लिए Google के Gemma 2 का उपयोग करता है। Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma उपयोग की शर्तें](https://ai.google.dev/gemma/terms) और [Gemma निषिद्ध उपयोग नीति](https://ai.google.dev/gemma/prohibited_use_policy) आप पर लागू हैं और इन शर्तों का हिस्सा हैं: आप सहमत हैं कि जनरेटर का उपयोग किसी निषिद्ध उद्देश्य के लिए या कानून के उल्लंघन में नहीं करेंगे। Google आपकी बनाई इमेज पर कोई अधिकार नहीं जताता: उनके और उनके उपयोग के लिए केवल आप ज़िम्मेदार हैं। मॉडल बिना किसी वारंटी के, जैसे हैं वैसे ही उपलब्ध हैं।"
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "बनाएँ",
       "again": "एक और बनाएँ",
-      "size": "एक बार का डाउनलोड {{ size }}। प्रति इमेज लगभग एक मिनट",
+      "size": "Hugging Face से {{ size }} का एक बार का डाउनलोड, आपके कंप्यूटर पर इसी ब्राउज़र में रखा जाता है। प्रति इमेज लगभग एक मिनट",
       "generating": "इमेज बन रही है…",
       "unsupported": "नए ग्राफ़िक्स कार्ड वाले कंप्यूटर पर Chrome या Edge ज़रूरी है",
-      "error": "इमेज नहीं बन सकी। शायद आपके ग्राफ़िक्स कार्ड में मेमोरी कम है",
+      "error": "इमेज नहीं बन सकी। शायद आपके ग्राफ़िक्स कार्ड में मेमोरी कम है: दूसरे टैब और ऐप बंद करके फिर कोशिश करें",
       "terms": "इमेज बनाकर आप मॉडल की उपयोग की शर्तें स्वीकार करते हैं",
       "downloadError": "AI मॉडल डाउनलोड नहीं हो सका। कुछ मिनट बाद फिर कोशिश करें",
-      "history": "आपकी बनाई इमेज"
+      "history": "आपकी बनाई इमेज",
+      "requirements": "केवल कंप्यूटर पर: Chrome या Edge और लगभग 8 GB मेमोरी वाला ग्राफ़िक्स कार्ड"
     }
   },
   "seo": {

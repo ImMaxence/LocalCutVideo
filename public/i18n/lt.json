@@ -20,7 +20,8 @@
     "open": "Atidaryti redaktorių",
     "menu": "Atidaryti meniu",
     "close": "Uždaryti meniu",
-    "thumbnail": "Miniatiūros"
+    "thumbnail": "Miniatiūros",
+    "ai": "DI"
   },
   "theme": {
     "system": "Sistemos",
@@ -246,7 +247,10 @@
       "whisper": "Supranta kalbą ir rašo subtitrus dešimtimis kalbų",
       "sana": "Pagal sakinį piešia jūsų miniatiūrų vaizdus, iki 1344×768",
       "mediapipe": "Randa veidus, išlaiko juos kadre ir atskiria žmogų nuo fono",
-      "rnnoise": "Pašalina foninį triukšmą iš balso"
+      "rnnoise": "Pašalina foninį triukšmą iš balso",
+      "count": "DI modeliai, visi jūsų kompiuteryje",
+      "used": "Naudojami DI modeliai",
+      "note": "„SANA-Sprint“ reikia kompiuterio su „Chrome“ arba „Edge“ ir maždaug 8 GB grafinės atminties. Jo 3,1 GB atsisiunčiami vieną kartą iš „Hugging Face“ ir lieka jūsų naršyklėje, jūsų kompiuteryje"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "Atvirasis kodas ir trečiųjų šalių komponentai",
           "body": [
             "Pirminis kodas pasiekiamas pagal MIT licenciją [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo remiasi: Mediabunny (MPL-2.0), Transformers.js ir ONNX Runtime (Apache-2.0 ir MIT), OpenAI Whisper modeliais (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ir šriftais Inter bei Montserrat (SIL Open Font License).",
+            "LocalCutVideo remiasi: Mediabunny (MPL-2.0), Transformers.js ir ONNX Runtime (Apache-2.0 ir MIT), OpenAI Whisper modeliais (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ir šriftais Inter bei Montserrat (SIL Open Font License).",
             "DI vaizdų generatorius naudoja NVIDIA modelį „SANA-Sprint 0.6B“ (Apache-2.0), o jūsų aprašymui skaityti – „Google“ modelį „Gemma 2“. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [„Gemma“ naudojimo sąlygos](https://ai.google.dev/gemma/terms) ir [„Gemma“ draudžiamo naudojimo politika](https://ai.google.dev/gemma/prohibited_use_policy) taikomos jums ir yra šių sąlygų dalis: įsipareigojate nenaudoti generatoriaus draudžiamais tikslais ar pažeidžiant įstatymus. „Google“ nereiškia teisių į jūsų sukurtus vaizdus: už juos ir jų naudojimą atsakote tik jūs. Modeliai teikiami tokie, kokie yra, be garantijų."
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "Sukurti",
       "again": "Sukurti kitą",
-      "size": "Vienkartinis atsisiuntimas {{ size }}. Maždaug minutė vienam vaizdui",
+      "size": "Vienkartinis {{ size }} atsisiuntimas iš „Hugging Face“, saugomas šioje naršyklėje jūsų kompiuteryje. Maždaug minutė vienam vaizdui",
       "generating": "Kuriamas vaizdas…",
       "unsupported": "Reikia „Chrome“ arba „Edge“ kompiuteryje su nauja vaizdo plokšte",
-      "error": "Vaizdo sukurti nepavyko. Jūsų vaizdo plokštei gali trūkti atminties",
+      "error": "Vaizdo sukurti nepavyko. Jūsų vaizdo plokštei gali trūkti atminties: uždarykite kitus skirtukus bei programas ir bandykite dar kartą",
       "terms": "Kurdami vaizdą sutinkate su modelio naudojimo sąlygomis",
       "downloadError": "DI modelio atsisiųsti nepavyko. Bandykite dar kartą po kelių minučių",
-      "history": "Jūsų sukurti vaizdai"
+      "history": "Jūsų sukurti vaizdai",
+      "requirements": "Tik kompiuteryje: „Chrome“ arba „Edge“ ir vaizdo plokštė su maždaug 8 GB atminties"
     }
   },
   "seo": {

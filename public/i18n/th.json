@@ -20,7 +20,8 @@
     "open": "เปิดตัวตัดต่อ",
     "menu": "เปิดเมนู",
     "close": "ปิดเมนู",
-    "thumbnail": "ภาพปก"
+    "thumbnail": "ภาพปก",
+    "ai": "AI"
   },
   "theme": {
     "system": "ตามระบบ",
@@ -246,7 +247,10 @@
       "whisper": "เข้าใจเสียงพูดและเขียนคำบรรยายได้หลายสิบภาษา",
       "sana": "วาดภาพสำหรับภาพขนาดย่อจากประโยคเดียว สูงสุด 1344×768",
       "mediapipe": "ค้นหาใบหน้าเพื่อให้อยู่ในกรอบ และแยกบุคคลออกจากพื้นหลัง",
-      "rnnoise": "ลบเสียงรบกวนรอบข้างออกจากเสียงพูด"
+      "rnnoise": "ลบเสียงรบกวนรอบข้างออกจากเสียงพูด",
+      "count": "โมเดล AI ทั้งหมดอยู่บนคอมพิวเตอร์ของคุณ",
+      "used": "โมเดล AI ที่ใช้",
+      "note": "SANA-Sprint ต้องใช้คอมพิวเตอร์ที่มี Chrome หรือ Edge และหน่วยความจำกราฟิกประมาณ 8 GB ข้อมูล 3.1 GB จะดาวน์โหลดจาก Hugging Face ครั้งเดียวและเก็บไว้ในเบราว์เซอร์บนคอมพิวเตอร์ของคุณ"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "โอเพนซอร์สและส่วนประกอบของบุคคลที่สาม",
           "body": [
             "ซอร์สโค้ดเปิดให้ใช้ภายใต้สัญญาอนุญาต MIT บน [GitHub](https://github.com/ImMaxence/LocalCutVideo)",
-            "LocalCutVideo อาศัยสิ่งต่อไปนี้: Mediabunny (MPL-2.0), Transformers.js และ ONNX Runtime (Apache-2.0 และ MIT), โมเดล Whisper ของ OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) และฟอนต์ Inter กับ Montserrat (SIL Open Font License)",
+            "LocalCutVideo อาศัยสิ่งต่อไปนี้: Mediabunny (MPL-2.0), Transformers.js และ ONNX Runtime (Apache-2.0 และ MIT), โมเดล Whisper ของ OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) และฟอนต์ Inter กับ Montserrat (SIL Open Font License)",
             "เครื่องมือสร้างภาพด้วย AI ใช้โมเดล SANA-Sprint 0.6B ของ NVIDIA (Apache-2.0) และใช้ Gemma 2 ของ Google เพื่ออ่านคำอธิบายของคุณ Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [ข้อกำหนดการใช้งาน Gemma](https://ai.google.dev/gemma/terms) และ[นโยบายการใช้งานที่ต้องห้ามของ Gemma](https://ai.google.dev/gemma/prohibited_use_policy) มีผลกับคุณและเป็นส่วนหนึ่งของข้อกำหนดนี้: คุณตกลงว่าจะไม่ใช้เครื่องมือนี้เพื่อการใช้งานที่ต้องห้ามหรือละเมิดกฎหมาย Google ไม่อ้างสิทธิ์ใด ๆ ในภาพที่คุณสร้าง: คุณเท่านั้นที่ต้องรับผิดชอบต่อภาพและการใช้งานภาพเหล่านั้น โมเดลจัดให้ตามสภาพที่เป็นอยู่ โดยไม่มีการรับประกัน"
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "สร้าง",
       "again": "สร้างอีกภาพ",
-      "size": "ดาวน์โหลดครั้งเดียว {{ size }} ประมาณหนึ่งนาทีต่อภาพ",
+      "size": "ดาวน์โหลดครั้งเดียว {{ size }} จาก Hugging Face และเก็บไว้ในเบราว์เซอร์นี้บนคอมพิวเตอร์ของคุณ ประมาณหนึ่งนาทีต่อภาพ",
       "generating": "กำลังสร้างภาพ…",
       "unsupported": "ต้องใช้ Chrome หรือ Edge บนคอมพิวเตอร์ที่มีการ์ดจอรุ่นใหม่",
-      "error": "ไม่สามารถสร้างภาพได้ การ์ดจอของคุณอาจมีหน่วยความจำไม่พอ",
+      "error": "ไม่สามารถสร้างภาพได้ การ์ดจอของคุณอาจมีหน่วยความจำไม่พอ: ปิดแท็บและแอปอื่น แล้วลองอีกครั้ง",
       "terms": "การสร้างภาพถือว่าคุณยอมรับข้อกำหนดการใช้งานของโมเดล",
       "downloadError": "ไม่สามารถดาวน์โหลดโมเดล AI ได้ โปรดลองอีกครั้งในอีกไม่กี่นาที",
-      "history": "ภาพที่คุณสร้าง"
+      "history": "ภาพที่คุณสร้าง",
+      "requirements": "ใช้ได้บนคอมพิวเตอร์เท่านั้น: Chrome หรือ Edge และการ์ดจอที่มีหน่วยความจำประมาณ 8 GB"
     }
   },
   "seo": {

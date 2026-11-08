@@ -20,7 +20,8 @@
     "open": "Buka editor",
     "menu": "Buka menu",
     "close": "Tutup menu",
-    "thumbnail": "Thumbnail"
+    "thumbnail": "Thumbnail",
+    "ai": "AI"
   },
   "theme": {
     "system": "Sistem",
@@ -246,7 +247,10 @@
       "whisper": "Memahami ucapan dan menulis subtitel dalam puluhan bahasa",
       "sana": "Menggambar gambar thumbnail Anda dari satu kalimat, hingga 1344×768",
       "mediapipe": "Menemukan wajah agar tetap dalam bingkai dan memisahkan orang dari latar",
-      "rnnoise": "Menghapus derau latar dari suara"
+      "rnnoise": "Menghapus derau latar dari suara",
+      "count": "model AI, semuanya di komputer Anda",
+      "used": "Model AI yang digunakan",
+      "note": "SANA-Sprint memerlukan komputer dengan Chrome atau Edge dan memori grafis sekitar 8 GB. Data 3,1 GB-nya diunduh satu kali dari Hugging Face dan tetap berada di browser, di komputer Anda"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "Open source dan komponen pihak ketiga",
           "body": [
             "Kode sumber tersedia dengan lisensi MIT di [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo memakai: Mediabunny (MPL-2.0), Transformers.js dan ONNX Runtime (Apache-2.0 dan MIT), model Whisper dari OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT), serta font Inter dan Montserrat (SIL Open Font License).",
+            "LocalCutVideo memakai: Mediabunny (MPL-2.0), Transformers.js dan ONNX Runtime (Apache-2.0 dan MIT), model Whisper dari OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT), serta font Inter dan Montserrat (SIL Open Font License).",
             "Generator gambar AI menggunakan model SANA-Sprint 0.6B dari NVIDIA (Apache-2.0) dan, untuk membaca deskripsi Anda, Gemma 2 dari Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Ketentuan Penggunaan Gemma](https://ai.google.dev/gemma/terms) dan [Kebijakan Penggunaan Terlarang Gemma](https://ai.google.dev/gemma/prohibited_use_policy) berlaku bagi Anda dan merupakan bagian dari ketentuan ini: Anda setuju untuk tidak menggunakan generator untuk penggunaan terlarang atau melanggar hukum. Google tidak mengklaim hak apa pun atas gambar yang Anda buat: hanya Anda yang bertanggung jawab atas gambar tersebut dan penggunaannya. Model disediakan apa adanya, tanpa jaminan."
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "Buat",
       "again": "Buat lagi",
-      "size": "Unduhan satu kali {{ size }}. Sekitar satu menit per gambar",
+      "size": "Unduhan satu kali {{ size }} dari Hugging Face, disimpan di browser ini di komputer Anda. Sekitar satu menit per gambar",
       "generating": "Membuat gambar…",
       "unsupported": "Memerlukan Chrome atau Edge di komputer dengan kartu grafis terbaru",
-      "error": "Gambar tidak dapat dibuat. Memori kartu grafis Anda mungkin kurang",
+      "error": "Gambar tidak dapat dibuat. Memori kartu grafis Anda mungkin kurang: tutup tab dan aplikasi lain, lalu coba lagi",
       "terms": "Dengan membuat gambar, Anda menerima ketentuan penggunaan model",
       "downloadError": "Model AI tidak dapat diunduh. Coba lagi dalam beberapa menit",
-      "history": "Gambar yang Anda buat"
+      "history": "Gambar yang Anda buat",
+      "requirements": "Hanya di komputer: Chrome atau Edge dan kartu grafis dengan memori sekitar 8 GB"
     }
   },
   "seo": {

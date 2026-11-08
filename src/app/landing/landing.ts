@@ -3,7 +3,7 @@ import { RouterLink } from '@angular/router';
 import { TranslocoPipe } from '@jsverse/transloco';
 import { LANGUAGES } from '../core/languages';
 import { REPO_URL } from '../core/version';
-import { AI_MODELS } from '../core/ai-models';
+import { AI_MODELS, AI_NAMES } from '../core/ai-models';
 import { Icon } from '../shared/icon';
 import { LocalizePipe } from '../shared/localize';
 import { Logo } from '../shared/logo';
@@ -30,6 +30,7 @@ interface CompareRow {
 export class Landing {
   protected readonly repoUrl = REPO_URL;
   protected readonly aiModels = AI_MODELS;
+  protected readonly aiNames = AI_NAMES;
   protected readonly languageCount = LANGUAGES.length;
 
   protected readonly features: Feature[] = [

@@ -20,7 +20,8 @@
     "open": "Szerkesztő indítása",
     "menu": "Menü megnyitása",
     "close": "Menü bezárása",
-    "thumbnail": "Bélyegképek"
+    "thumbnail": "Bélyegképek",
+    "ai": "MI"
   },
   "theme": {
     "system": "Rendszer",
@@ -246,7 +247,10 @@
       "whisper": "Megérti a beszédet, és több tucat nyelven írja a feliratokat",
       "sana": "Egy mondat alapján megrajzolja a bélyegképeid képeit, akár 1344×768-ban",
       "mediapipe": "Megtalálja az arcokat, a képen tartja őket, és leválasztja a személyt a háttérről",
-      "rnnoise": "Eltávolítja a háttérzajt a hangból"
+      "rnnoise": "Eltávolítja a háttérzajt a hangból",
+      "count": "MI-modell, mind a számítógépeden",
+      "used": "Használt MI-modellek",
+      "note": "A SANA-Sprinthez Chrome-mal vagy Edge-dzsel ellátott számítógép és körülbelül 8 GB grafikus memória kell. A 3,1 GB-ot egyszer tölti le a Hugging Face-ről, és a böngésződben marad, a számítógépeden"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "Nyílt forráskód és külső komponensek",
           "body": [
             "A forráskód MIT-licenc alatt érhető el a [GitHubon](https://github.com/ImMaxence/LocalCutVideo).",
-            "A LocalCutVideo a következőkre épül: Mediabunny (MPL-2.0), Transformers.js és ONNX Runtime (Apache-2.0 és MIT), az OpenAI Whisper-modelljei (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT), valamint az Inter és a Montserrat betűtípus (SIL Open Font License).",
+            "A LocalCutVideo a következőkre épül: Mediabunny (MPL-2.0), Transformers.js és ONNX Runtime (Apache-2.0 és MIT), az OpenAI Whisper-modelljei (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT), valamint az Inter és a Montserrat betűtípus (SIL Open Font License).",
             "Az MI-képgenerátor az NVIDIA SANA-Sprint 0.6B modelljét (Apache-2.0), a leírásod értelmezéséhez pedig a Google Gemma 2 modelljét használja. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. A [Gemma használati feltételei](https://ai.google.dev/gemma/terms) és a [Gemma tiltott használatra vonatkozó szabályzata](https://ai.google.dev/gemma/prohibited_use_policy) rád is vonatkoznak, és ezen feltételek részét képezik: vállalod, hogy a generátort nem használod tiltott célra vagy jogszabályt sértve. A Google nem tart igényt az általad készített képekre: kizárólag te felelsz értük és a felhasználásukért. A modelleket jelen állapotukban, garancia nélkül biztosítjuk."
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "Készítés",
       "again": "Újabb készítése",
-      "size": "Egyszeri letöltés: {{ size }}. Képenként körülbelül egy perc",
+      "size": "Egyszeri, {{ size }} méretű letöltés a Hugging Face-ről, ebben a böngészőben marad a számítógépeden. Képenként körülbelül egy perc",
       "generating": "A kép készítése…",
       "unsupported": "Chrome vagy Edge és újabb videokártyával rendelkező számítógép szükséges",
-      "error": "A képet nem sikerült elkészíteni. Lehet, hogy kevés a videokártya memóriája",
+      "error": "A képet nem sikerült elkészíteni. Lehet, hogy kevés a videokártya memóriája: zárd be a többi lapot és alkalmazást, majd próbáld újra",
       "terms": "Kép készítésével elfogadod a modell használati feltételeit",
       "downloadError": "Az MI-modellt nem sikerült letölteni. Próbáld újra néhány perc múlva",
-      "history": "Az általad készített képek"
+      "history": "Az általad készített képek",
+      "requirements": "Csak számítógépen: Chrome vagy Edge és körülbelül 8 GB memóriával rendelkező videokártya"
     }
   },
   "seo": {

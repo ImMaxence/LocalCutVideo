@@ -20,7 +20,8 @@
     "open": "Otvori uređivač",
     "menu": "Otvori izbornik",
     "close": "Zatvori izbornik",
-    "thumbnail": "Minijature"
+    "thumbnail": "Minijature",
+    "ai": "AI"
   },
   "theme": {
     "system": "Sustav",
@@ -246,7 +247,10 @@
       "whisper": "Razumije govor i piše titlove na desecima jezika",
       "sana": "Prema rečenici crta slike za vaše minijature, do 1344×768",
       "mediapipe": "Pronalazi lica, drži ih u kadru i odvaja osobu od pozadine",
-      "rnnoise": "Uklanja pozadinsku buku iz glasa"
+      "rnnoise": "Uklanja pozadinsku buku iz glasa",
+      "count": "AI modela, svi na vašem računalu",
+      "used": "Korišteni AI modeli",
+      "note": "SANA-Sprint zahtijeva računalo s Chromeom ili Edgeom i oko 8 GB grafičke memorije. Njegovih 3,1 GB preuzima se jednom s Hugging Facea i ostaje u vašem pregledniku, na vašem računalu"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "Otvoreni kod i komponente trećih strana",
           "body": [
             "Izvorni kod dostupan je pod licencom MIT na [GitHubu](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo se oslanja na: Mediabunny (MPL-2.0), Transformers.js i ONNX Runtime (Apache-2.0 i MIT), OpenAI-jeve modele Whisper (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) te fontove Inter i Montserrat (SIL Open Font License).",
+            "LocalCutVideo se oslanja na: Mediabunny (MPL-2.0), Transformers.js i ONNX Runtime (Apache-2.0 i MIT), OpenAI-jeve modele Whisper (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) te fontove Inter i Montserrat (SIL Open Font License).",
             "Generator AI slika koristi model SANA-Sprint 0.6B tvrtke NVIDIA (Apache-2.0) i, za čitanje vašeg opisa, Gemma 2 tvrtke Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Uvjeti korištenja Gemme](https://ai.google.dev/gemma/terms) i [pravila o zabranjenoj upotrebi Gemme](https://ai.google.dev/gemma/prohibited_use_policy) primjenjuju se i na vas i dio su ovih uvjeta: obvezujete se da generator nećete koristiti za zabranjenu upotrebu ili protivno zakonu. Google ne polaže prava na slike koje izradite: isključivo ste vi odgovorni za njih i za način njihove upotrebe. Modeli se pružaju takvi kakvi jesu, bez jamstva."
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "Izradi",
       "again": "Izradi drugu",
-      "size": "Jednokratno preuzimanje {{ size }}. Otprilike minuta po slici",
+      "size": "Jednokratno preuzimanje od {{ size }} s Hugging Facea, čuva se u ovom pregledniku na vašem računalu. Otprilike minuta po slici",
       "generating": "Izrada slike…",
       "unsupported": "Potreban je Chrome ili Edge na računalu s novijom grafičkom karticom",
-      "error": "Sliku nije bilo moguće izraditi. Grafičkoj kartici možda nedostaje memorije",
+      "error": "Sliku nije bilo moguće izraditi. Grafičkoj kartici možda nedostaje memorije: zatvorite ostale kartice i aplikacije pa pokušajte ponovno",
       "terms": "Izradom slike prihvaćate uvjete korištenja modela",
       "downloadError": "AI model nije bilo moguće preuzeti. Pokušajte ponovno za nekoliko minuta",
-      "history": "Vaše izrađene slike"
+      "history": "Vaše izrađene slike",
+      "requirements": "Samo na računalu: Chrome ili Edge i grafička kartica s oko 8 GB memorije"
     }
   },
   "seo": {

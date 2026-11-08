@@ -20,7 +20,8 @@
     "open": "Відкрити редактор",
     "menu": "Відкрити меню",
     "close": "Закрити меню",
-    "thumbnail": "Обкладинки"
+    "thumbnail": "Обкладинки",
+    "ai": "ШІ"
   },
   "theme": {
     "system": "Системна",
@@ -246,7 +247,10 @@
       "whisper": "Розуміє мовлення та пише субтитри десятками мов",
       "sana": "Малює зображення для ваших мініатюр за реченням, до 1344×768",
       "mediapipe": "Знаходить обличчя, утримує їх у кадрі та відокремлює людину від фону",
-      "rnnoise": "Прибирає фоновий шум із голосу"
+      "rnnoise": "Прибирає фоновий шум із голосу",
+      "count": "моделей ШІ, усі на вашому комп’ютері",
+      "used": "Використані моделі ШІ",
+      "note": "SANA-Sprint потребує комп’ютера з Chrome або Edge і приблизно 8 ГБ відеопам’яті. Його 3,1 ГБ завантажуються один раз із Hugging Face і залишаються у вашому браузері, на вашому комп’ютері"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "Відкритий код і сторонні компоненти",
           "body": [
             "Вихідний код доступний за ліцензією MIT на [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo спирається на: Mediabunny (MPL-2.0), Transformers.js і ONNX Runtime (Apache-2.0 і MIT), моделі Whisper від OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) і шрифти Inter та Montserrat (SIL Open Font License).",
+            "LocalCutVideo спирається на: Mediabunny (MPL-2.0), Transformers.js і ONNX Runtime (Apache-2.0 і MIT), моделі Whisper від OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) і шрифти Inter та Montserrat (SIL Open Font License).",
             "Генератор зображень ШІ використовує модель SANA-Sprint 0.6B від NVIDIA (Apache-2.0), а для читання вашого опису — Gemma 2 від Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Умови використання Gemma](https://ai.google.dev/gemma/terms) і [політика заборонених видів використання Gemma](https://ai.google.dev/gemma/prohibited_use_policy) поширюються на вас і є частиною цих умов: ви зобов’язуєтеся не використовувати генератор для заборонених цілей або з порушенням закону. Google не претендує на права щодо створених вами зображень: лише ви відповідаєте за них і за їх використання. Моделі надаються «як є», без гарантій."
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "Створити",
       "again": "Створити ще",
-      "size": "Одноразове завантаження {{ size }}. Приблизно хвилина на зображення",
+      "size": "Одноразове завантаження {{ size }} із Hugging Face, зберігається в цьому браузері на вашому комп’ютері. Приблизно хвилина на зображення",
       "generating": "Створення зображення…",
       "unsupported": "Потрібен Chrome або Edge на комп’ютері з новою відеокартою",
-      "error": "Не вдалося створити зображення. Можливо, відеокарті бракує пам’яті",
+      "error": "Не вдалося створити зображення. Можливо, відеокарті бракує пам’яті: закрийте інші вкладки та програми й спробуйте ще раз",
       "terms": "Створюючи зображення, ви приймаєте умови використання моделі",
       "downloadError": "Не вдалося завантажити модель ШІ. Спробуйте ще раз за кілька хвилин",
-      "history": "Ваші створені зображення"
+      "history": "Ваші створені зображення",
+      "requirements": "Лише на комп’ютері: Chrome або Edge і відеокарта з приблизно 8 ГБ пам’яті"
     }
   },
   "seo": {

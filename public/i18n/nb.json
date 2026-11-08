@@ -20,7 +20,8 @@
     "open": "Åpne editoren",
     "menu": "Åpne menyen",
     "close": "Lukk menyen",
-    "thumbnail": "Miniatyrbilder"
+    "thumbnail": "Miniatyrbilder",
+    "ai": "KI"
   },
   "theme": {
     "system": "System",
@@ -246,7 +247,10 @@
       "whisper": "Forstår tale og skriver undertekstene, på dusinvis av språk",
       "sana": "Tegner bildene til miniatyrene dine ut fra en setning, opptil 1344×768",
       "mediapipe": "Finner ansikter for å holde dem i bildet og skiller personen fra bakgrunnen",
-      "rnnoise": "Fjerner bakgrunnsstøy fra stemmen"
+      "rnnoise": "Fjerner bakgrunnsstøy fra stemmen",
+      "count": "KI-modeller, alle på datamaskinen din",
+      "used": "KI-modeller som brukes",
+      "note": "SANA-Sprint krever en datamaskin med Chrome eller Edge og omtrent 8 GB grafikkminne. De 3,1 GB lastes ned én gang fra Hugging Face og blir i nettleseren din, på datamaskinen din"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "Åpen kildekode og tredjepartskomponenter",
           "body": [
             "Kildekoden er tilgjengelig under MIT-lisensen på [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo bygger på: Mediabunny (MPL-2.0), Transformers.js og ONNX Runtime (Apache-2.0 og MIT), Whisper-modellene fra OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) og skrifttypene Inter og Montserrat (SIL Open Font License).",
+            "LocalCutVideo bygger på: Mediabunny (MPL-2.0), Transformers.js og ONNX Runtime (Apache-2.0 og MIT), Whisper-modellene fra OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) og skrifttypene Inter og Montserrat (SIL Open Font License).",
             "KI-bildegeneratoren bruker modellen SANA-Sprint 0.6B fra NVIDIA (Apache-2.0) og, for å lese beskrivelsen din, Gemma 2 fra Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Bruksvilkårene for Gemma](https://ai.google.dev/gemma/terms) og [retningslinjene for forbudt bruk av Gemma](https://ai.google.dev/gemma/prohibited_use_policy) gjelder for deg og er en del av disse vilkårene: du forplikter deg til ikke å bruke generatoren til forbudt bruk eller i strid med loven. Google gjør ikke krav på bildene du lager: du alene er ansvarlig for dem og for hvordan du bruker dem. Modellene leveres som de er, uten garanti."
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "Lag",
       "again": "Lag et til",
-      "size": "Engangsnedlasting {{ size }}. Omtrent ett minutt per bilde",
+      "size": "Engangsnedlasting på {{ size }} fra Hugging Face, lagret i denne nettleseren på datamaskinen din. Omtrent ett minutt per bilde",
       "generating": "Lager bildet…",
       "unsupported": "Krever Chrome eller Edge på en datamaskin med nyere grafikkort",
-      "error": "Bildet kunne ikke lages. Grafikkortet ditt mangler kanskje minne",
+      "error": "Bildet kunne ikke lages. Grafikkortet ditt mangler kanskje minne: lukk andre faner og programmer, og prøv igjen",
       "terms": "Når du lager et bilde, godtar du modellens bruksvilkår",
       "downloadError": "KI-modellen kunne ikke lastes ned. Prøv igjen om noen minutter",
-      "history": "Bildene du har laget"
+      "history": "Bildene du har laget",
+      "requirements": "Bare på datamaskin: Chrome eller Edge og et grafikkort med omtrent 8 GB minne"
     }
   },
   "seo": {

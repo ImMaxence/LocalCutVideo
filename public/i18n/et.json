@@ -20,7 +20,8 @@
     "open": "Ava redaktor",
     "menu": "Ava menüü",
     "close": "Sulge menüü",
-    "thumbnail": "Pisipildid"
+    "thumbnail": "Pisipildid",
+    "ai": "TI"
   },
   "theme": {
     "system": "Süsteem",
@@ -246,7 +247,10 @@
       "whisper": "Mõistab kõnet ja kirjutab subtiitrid kümnetes keeltes",
       "sana": "Joonistab lause põhjal sinu pisipiltide pildid, kuni 1344×768",
       "mediapipe": "Leiab näod, hoiab need kaadris ja eraldab inimese taustast",
-      "rnnoise": "Eemaldab häälelt taustamüra"
+      "rnnoise": "Eemaldab häälelt taustamüra",
+      "count": "tehisintellekti mudelit, kõik sinu arvutis",
+      "used": "Kasutatud tehisintellekti mudelid",
+      "note": "SANA-Sprint vajab arvutit Chrome’i või Edge’iga ja umbes 8 GB graafikamälu. Selle 3,1 GB laaditakse Hugging Face’ist alla üks kord ja see jääb sinu brauserisse sinu arvutis"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "Avatud lähtekood ja kolmandate osapoolte komponendid",
           "body": [
             "Lähtekood on saadaval MIT-litsentsi alusel [GitHubis](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo tugineb järgmistele: Mediabunny (MPL-2.0), Transformers.js ja ONNX Runtime (Apache-2.0 ja MIT), OpenAI Whisperi mudelid (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ning fondid Inter ja Montserrat (SIL Open Font License).",
+            "LocalCutVideo tugineb järgmistele: Mediabunny (MPL-2.0), Transformers.js ja ONNX Runtime (Apache-2.0 ja MIT), OpenAI Whisperi mudelid (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ning fondid Inter ja Montserrat (SIL Open Font License).",
             "Tehisintellekti pildigeneraator kasutab NVIDIA mudelit SANA-Sprint 0.6B (Apache-2.0) ja sinu kirjelduse lugemiseks Google’i mudelit Gemma 2. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma kasutustingimused](https://ai.google.dev/gemma/terms) ja [Gemma keelatud kasutuse põhimõtted](https://ai.google.dev/gemma/prohibited_use_policy) kehtivad sinu suhtes ja on nende tingimuste osa: kohustud generaatorit mitte kasutama keelatud viisil ega seadust rikkudes. Google ei nõua õigusi sinu loodud piltidele: vastutad nende ja nende kasutamise eest ainult sina. Mudelid on saadaval olemasoleval kujul, ilma garantiita."
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "Loo",
       "again": "Loo veel üks",
-      "size": "Ühekordne allalaadimine {{ size }}. Umbes minut pildi kohta",
+      "size": "Ühekordne {{ size }} allalaadimine Hugging Face’ist, säilitatakse selles brauseris sinu arvutis. Umbes minut pildi kohta",
       "generating": "Pildi loomine…",
       "unsupported": "Vajab Chrome’i või Edge’i arvutis, millel on uuem graafikakaart",
-      "error": "Pilti ei õnnestunud luua. Sinu graafikakaardil võib mälu nappida",
+      "error": "Pilti ei õnnestunud luua. Sinu graafikakaardil võib mälu nappida: sulge teised vahekaardid ja rakendused ning proovi uuesti",
       "terms": "Pilti luues nõustud mudeli kasutustingimustega",
       "downloadError": "Tehisintellekti mudelit ei õnnestunud alla laadida. Proovi mõne minuti pärast uuesti",
-      "history": "Sinu loodud pildid"
+      "history": "Sinu loodud pildid",
+      "requirements": "Ainult arvutis: Chrome või Edge ja umbes 8 GB mäluga graafikakaart"
     }
   },
   "seo": {

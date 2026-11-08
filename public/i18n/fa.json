@@ -20,7 +20,8 @@
     "open": "باز کردن ویرایشگر",
     "menu": "باز کردن منو",
     "close": "بستن منو",
-    "thumbnail": "تصاویر بندانگشتی"
+    "thumbnail": "تصاویر بندانگشتی",
+    "ai": "هوش مصنوعی"
   },
   "theme": {
     "system": "سیستم",
@@ -246,7 +247,10 @@
       "whisper": "گفتار را می‌فهمد و زیرنویس‌ها را به ده‌ها زبان می‌نویسد",
       "sana": "تصاویر بندانگشتی شما را از روی یک جمله می‌کشد، تا ۱۳۴۴×۷۶۸",
       "mediapipe": "چهره‌ها را پیدا می‌کند تا در کادر بمانند و فرد را از پس‌زمینه جدا می‌کند",
-      "rnnoise": "نویز پس‌زمینه را از صدا حذف می‌کند"
+      "rnnoise": "نویز پس‌زمینه را از صدا حذف می‌کند",
+      "count": "مدل هوش مصنوعی، همه روی رایانهٔ شما",
+      "used": "مدل‌های هوش مصنوعی به‌کاررفته",
+      "note": "SANA-Sprint به رایانه‌ای با Chrome یا Edge و حدود ۸ گیگابایت حافظهٔ گرافیکی نیاز دارد. ۳٫۱ گیگابایت آن یک‌بار از Hugging Face دانلود می‌شود و در مرورگر شما، روی رایانهٔ شما می‌ماند"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "متن‌باز و اجزای شخص ثالث",
           "body": [
             "کد منبع تحت مجوز MIT در [GitHub](https://github.com/ImMaxence/LocalCutVideo) در دسترس است.",
-            "LocalCutVideo بر این‌ها تکیه دارد: Mediabunny ‏(MPL-2.0)، Transformers.js و ONNX Runtime ‏(Apache-2.0 و MIT)، مدل‌های Whisper از OpenAI ‏(MIT)، SANA-Sprint (NVIDIA, Apache-2.0)، Gemma 2 (Google)، MediaPipe ‏(Apache-2.0)، Wavesurfer.js ‏(BSD-3-Clause)، Dexie.js ‏(Apache-2.0)، Angular ‏(MIT) و قلم‌های Inter و Montserrat ‏(SIL Open Font License).",
+            "LocalCutVideo بر این‌ها تکیه دارد: Mediabunny ‏(MPL-2.0)، Transformers.js و ONNX Runtime ‏(Apache-2.0 و MIT)، مدل‌های Whisper از OpenAI ‏(MIT)، SANA-Sprint (NVIDIA, Apache-2.0)، Gemma 2 (Google)، MediaPipe ‏(Apache-2.0)، [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause)، Wavesurfer.js ‏(BSD-3-Clause)، Dexie.js ‏(Apache-2.0)، Angular ‏(MIT) و قلم‌های Inter و Montserrat ‏(SIL Open Font License).",
             "مولد تصویر هوش مصنوعی از مدل SANA-Sprint 0.6B شرکت NVIDIA (Apache-2.0) و برای خواندن توصیف شما از Gemma 2 شرکت Google استفاده می‌کند. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [شرایط استفاده از Gemma](https://ai.google.dev/gemma/terms) و [سیاست استفادهٔ ممنوع از Gemma](https://ai.google.dev/gemma/prohibited_use_policy) شامل شما نیز می‌شوند و بخشی از این شرایط هستند: متعهد می‌شوید از مولد برای استفادهٔ ممنوع یا برخلاف قانون استفاده نکنید. Google هیچ حقی نسبت به تصاویری که می‌سازید ادعا نمی‌کند: مسئولیت آن‌ها و نحوهٔ استفاده از آن‌ها فقط با شماست. مدل‌ها همان‌گونه که هستند و بدون ضمانت ارائه می‌شوند."
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "ساختن",
       "again": "ساختن یکی دیگر",
-      "size": "دانلود یک‌باره {{ size }}. حدود یک دقیقه برای هر تصویر",
+      "size": "دانلود یک‌بارهٔ {{ size }} از Hugging Face که در همین مرورگر روی رایانهٔ شما نگه داشته می‌شود. حدود یک دقیقه برای هر تصویر",
       "generating": "در حال ساخت تصویر…",
       "unsupported": "به Chrome یا Edge روی رایانه‌ای با کارت گرافیک جدید نیاز دارد",
-      "error": "ساخت تصویر ممکن نشد. شاید حافظهٔ کارت گرافیک شما کافی نباشد",
+      "error": "ساخت تصویر ممکن نشد. شاید حافظهٔ کارت گرافیک شما کافی نباشد: زبانه‌ها و برنامه‌های دیگر را ببندید و دوباره تلاش کنید",
       "terms": "با ساختن تصویر، شرایط استفاده از مدل را می‌پذیرید",
       "downloadError": "دانلود مدل هوش مصنوعی ممکن نشد. چند دقیقهٔ دیگر دوباره تلاش کنید",
-      "history": "تصاویر ساخته‌شدهٔ شما"
+      "history": "تصاویر ساخته‌شدهٔ شما",
+      "requirements": "فقط روی رایانه: Chrome یا Edge و کارت گرافیک با حدود ۸ گیگابایت حافظه"
     }
   },
   "seo": {

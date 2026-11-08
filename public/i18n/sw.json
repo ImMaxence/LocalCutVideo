@@ -20,7 +20,8 @@
     "open": "Fungua kihariri",
     "menu": "Fungua menyu",
     "close": "Funga menyu",
-    "thumbnail": "Picha za jalada"
+    "thumbnail": "Picha za jalada",
+    "ai": "AI"
   },
   "theme": {
     "system": "Mfumo",
@@ -246,7 +247,10 @@
       "whisper": "Inaelewa usemi na kuandika manukuu kwa lugha nyingi",
       "sana": "Inachora picha za vijipicha vyako kutoka kwa sentensi moja, hadi 1344×768",
       "mediapipe": "Inapata nyuso ili zibaki kwenye fremu na kumtenganisha mtu na mandharinyuma",
-      "rnnoise": "Inaondoa kelele za nyuma kwenye sauti"
+      "rnnoise": "Inaondoa kelele za nyuma kwenye sauti",
+      "count": "za AI, zote kwenye kompyuta yako",
+      "used": "Modeli za AI zinazotumika",
+      "note": "SANA-Sprint inahitaji kompyuta yenye Chrome au Edge na kumbukumbu ya michoro ya takriban GB 8. GB 3.1 zake zinapakuliwa mara moja kutoka Hugging Face na hubaki kwenye kivinjari chako, katika kompyuta yako"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "Chanzo huria na vipengele vya wahusika wengine",
           "body": [
             "Msimbo chanzo unapatikana chini ya leseni ya MIT kwenye [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo inategemea: Mediabunny (MPL-2.0), Transformers.js na ONNX Runtime (Apache-2.0 na MIT), modeli za Whisper za OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) na fonti za Inter na Montserrat (SIL Open Font License).",
+            "LocalCutVideo inategemea: Mediabunny (MPL-2.0), Transformers.js na ONNX Runtime (Apache-2.0 na MIT), modeli za Whisper za OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) na fonti za Inter na Montserrat (SIL Open Font License).",
             "Kitengeneza picha cha AI hutumia modeli ya SANA-Sprint 0.6B ya NVIDIA (Apache-2.0) na, kusoma maelezo yako, Gemma 2 ya Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Masharti ya Matumizi ya Gemma](https://ai.google.dev/gemma/terms) na [Sera ya Matumizi Yaliyopigwa Marufuku ya Gemma](https://ai.google.dev/gemma/prohibited_use_policy) yanakuhusu na ni sehemu ya masharti haya: unakubali kutotumia kitengeneza picha kwa matumizi yaliyopigwa marufuku au kwa kukiuka sheria. Google haidai haki zozote juu ya picha unazotengeneza: wewe pekee unawajibika kwazo na kwa jinsi unavyozitumia. Modeli zinatolewa kama zilivyo, bila dhamana."
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "Tengeneza",
       "again": "Tengeneza nyingine",
-      "size": "Upakuaji wa mara moja {{ size }}. Takriban dakika moja kwa kila picha",
+      "size": "Upakuaji wa mara moja wa {{ size }} kutoka Hugging Face, huhifadhiwa kwenye kivinjari hiki katika kompyuta yako. Takriban dakika moja kwa kila picha",
       "generating": "Inatengeneza picha…",
       "unsupported": "Inahitaji Chrome au Edge kwenye kompyuta yenye kadi mpya ya michoro",
-      "error": "Picha haikuweza kutengenezwa. Huenda kadi yako ya michoro haina kumbukumbu ya kutosha",
+      "error": "Picha haikuweza kutengenezwa. Huenda kadi yako ya michoro haina kumbukumbu ya kutosha: funga vichupo na programu nyingine, kisha ujaribu tena",
       "terms": "Kwa kutengeneza picha, unakubali masharti ya matumizi ya modeli",
       "downloadError": "Modeli ya AI haikuweza kupakuliwa. Jaribu tena baada ya dakika chache",
-      "history": "Picha ulizotengeneza"
+      "history": "Picha ulizotengeneza",
+      "requirements": "Kwenye kompyuta tu: Chrome au Edge na kadi ya michoro yenye kumbukumbu ya takriban GB 8"
     }
   },
   "seo": {

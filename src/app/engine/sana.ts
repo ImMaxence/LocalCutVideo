@@ -114,3 +114,35 @@ export function toPixels(image: Float32Array, width: number, height: number): Ui
   }
   return pixels;
 }
+
+/** Side of a piece and overlap between pieces of the decoding, in latents (32 pixels each). */
+export const TILE_SIZE = 16;
+export const TILE_OVERLAP = 4;
+
+/** Start of each piece along one side: evenly spread, the last one ending on the edge. */
+export function tileStarts(total: number, size = TILE_SIZE, overlap = TILE_OVERLAP): number[] {
+  if (total <= size) return [0];
+  const count = Math.ceil((total - size) / (size - overlap)) + 1;
+  return Array.from({ length: count }, (_, i) => Math.round((i * (total - size)) / (count - 1)));
+}
+
+/** The latents of one piece (channels first). */
+export function cropLatents(latents: Float32Array, channels: number, height: number, width: number, top: number, left: number, size: number): Float32Array {
+  const piece = new Float32Array(channels * size * size);
+  for (let c = 0; c < channels; c++) {
+    for (let y = 0; y < size; y++) {
+      const from = (c * height + top + y) * width + left;
+      piece.set(latents.subarray(from, from + size), (c * size + y) * size);
+    }
+  }
+  return piece;
+}
+
+/** Weight of each pixel along one side of a piece: fades in and out where it meets a neighbour. */
+export function featherWeights(length: number, feather: number, fadeStart: boolean, fadeEnd: boolean): Float32Array {
+  return Float32Array.from({ length }, (_, i) => {
+    const start = fadeStart ? Math.min(1, (i + 1) / (feather + 1)) : 1;
+    const end = fadeEnd ? Math.min(1, (length - i) / (feather + 1)) : 1;
+    return Math.min(start, end);
+  });
+}

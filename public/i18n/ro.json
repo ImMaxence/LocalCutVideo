@@ -20,7 +20,8 @@
     "open": "Deschide editorul",
     "menu": "Deschide meniul",
     "close": "Închide meniul",
-    "thumbnail": "Miniaturi"
+    "thumbnail": "Miniaturi",
+    "ai": "IA"
   },
   "theme": {
     "system": "Sistem",
@@ -246,7 +247,10 @@
       "whisper": "Înțelege vorbirea și scrie subtitrările, în zeci de limbi",
       "sana": "Desenează imaginile miniaturilor tale pornind de la o frază, până la 1344×768",
       "mediapipe": "Găsește fețele pentru a le ține în cadru și separă persoana de fundal",
-      "rnnoise": "Elimină zgomotul de fundal din voce"
+      "rnnoise": "Elimină zgomotul de fundal din voce",
+      "count": "modele IA, toate pe computerul tău",
+      "used": "Modele IA folosite",
+      "note": "SANA-Sprint are nevoie de un computer cu Chrome sau Edge și aproximativ 8 GB de memorie grafică. Cei 3,1 GB sunt descărcați o singură dată de pe Hugging Face și rămân în browserul tău, pe computerul tău"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "Open source și componente terțe",
           "body": [
             "Codul sursă este disponibil sub licența MIT pe [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo se bazează pe: Mediabunny (MPL-2.0), Transformers.js și ONNX Runtime (Apache-2.0 și MIT), modelele Whisper de la OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) și fonturile Inter și Montserrat (SIL Open Font License).",
+            "LocalCutVideo se bazează pe: Mediabunny (MPL-2.0), Transformers.js și ONNX Runtime (Apache-2.0 și MIT), modelele Whisper de la OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) și fonturile Inter și Montserrat (SIL Open Font License).",
             "Generatorul de imagini IA folosește modelul SANA-Sprint 0.6B de la NVIDIA (Apache-2.0) și, pentru a citi descrierea ta, Gemma 2 de la Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Condițiile de utilizare Gemma](https://ai.google.dev/gemma/terms) și [politica privind utilizările interzise Gemma](https://ai.google.dev/gemma/prohibited_use_policy) ți se aplică și fac parte din acești termeni: te angajezi să nu folosești generatorul pentru utilizări interzise sau cu încălcarea legii. Google nu revendică niciun drept asupra imaginilor pe care le generezi: doar tu ești responsabil pentru ele și pentru modul în care le folosești. Modelele sunt furnizate ca atare, fără garanție."
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "Generează",
       "again": "Generează alta",
-      "size": "Descărcare unică {{ size }}. Aproximativ un minut pe imagine",
+      "size": "Descărcare unică de {{ size }} de pe Hugging Face, păstrată în acest browser pe computerul tău. Aproximativ un minut pe imagine",
       "generating": "Se creează imaginea…",
       "unsupported": "Necesită Chrome sau Edge pe un computer cu placă video recentă",
-      "error": "Imaginea nu a putut fi generată. Poate plăcii tale video îi lipsește memoria",
+      "error": "Imaginea nu a putut fi generată. Poate plăcii tale video îi lipsește memoria: închide alte file și aplicații, apoi încearcă din nou",
       "terms": "Generând o imagine, accepți condițiile de utilizare ale modelului",
       "downloadError": "Modelul IA nu a putut fi descărcat. Încearcă din nou peste câteva minute",
-      "history": "Imaginile tale generate"
+      "history": "Imaginile tale generate",
+      "requirements": "Doar pe computer: Chrome sau Edge și o placă video cu aproximativ 8 GB de memorie"
     }
   },
   "seo": {

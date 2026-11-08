@@ -20,7 +20,8 @@
     "open": "打开编辑器",
     "menu": "打开菜单",
     "close": "关闭菜单",
-    "thumbnail": "封面图"
+    "thumbnail": "封面图",
+    "ai": "AI"
   },
   "theme": {
     "system": "跟随系统",
@@ -246,7 +247,10 @@
       "whisper": "理解语音并以数十种语言生成字幕",
       "sana": "根据一句话绘制缩略图图像，最高 1344×768",
       "mediapipe": "检测人脸并保持在画面内，将人物与背景分离",
-      "rnnoise": "去除语音中的背景噪音"
+      "rnnoise": "去除语音中的背景噪音",
+      "count": "个 AI 模型，全部在您的电脑上",
+      "used": "使用的 AI 模型",
+      "note": "SANA-Sprint 需要装有 Chrome 或 Edge 的电脑和约 8 GB 显存。其 3.1 GB 数据仅从 Hugging Face 下载一次，并保存在您电脑的浏览器中"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "开源与第三方组件",
           "body": [
             "源代码以 MIT 许可证发布在 [GitHub](https://github.com/ImMaxence/LocalCutVideo) 上。",
-            "LocalCutVideo 依赖以下组件：Mediabunny（MPL-2.0）、Transformers.js 和 ONNX Runtime（Apache-2.0 和 MIT）、OpenAI 的 Whisper 模型（MIT）、SANA-Sprint (NVIDIA, Apache-2.0)、Gemma 2 (Google)、MediaPipe（Apache-2.0）、Wavesurfer.js（BSD-3-Clause）、Dexie.js（Apache-2.0）、Angular（MIT），以及 Inter 和 Montserrat 字体（SIL Open Font License）。",
+            "LocalCutVideo 依赖以下组件：Mediabunny（MPL-2.0）、Transformers.js 和 ONNX Runtime（Apache-2.0 和 MIT）、OpenAI 的 Whisper 模型（MIT）、SANA-Sprint (NVIDIA, Apache-2.0)、Gemma 2 (Google)、MediaPipe（Apache-2.0）、[RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause)、Wavesurfer.js（BSD-3-Clause）、Dexie.js（Apache-2.0）、Angular（MIT），以及 Inter 和 Montserrat 字体（SIL Open Font License）。",
             "AI 图像生成器使用 NVIDIA 的 SANA-Sprint 0.6B 模型（Apache-2.0），并使用 Google 的 Gemma 2 读取您的描述。 Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma 使用条款](https://ai.google.dev/gemma/terms)和 [Gemma 禁止使用政策](https://ai.google.dev/gemma/prohibited_use_policy)同样适用于您，并构成本条款的一部分：您同意不将生成器用于任何被禁止的用途或违反法律。Google 对您生成的图像不主张任何权利：您须独自对图像及其使用负责。模型按原样提供，不作任何保证。"
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "生成",
       "again": "再生成一张",
-      "size": "仅需下载一次 {{ size }}。每张图片约一分钟",
+      "size": "从 Hugging Face 一次性下载 {{ size }}，保存在您电脑的此浏览器中。每张图片约一分钟",
       "generating": "正在生成图片…",
       "unsupported": "需要在配备较新显卡的电脑上使用 Chrome 或 Edge",
-      "error": "无法生成图片。您的显卡内存可能不足",
+      "error": "无法生成图片。您的显卡内存可能不足：请关闭其他标签页和应用后重试",
       "terms": "生成图像即表示您接受该模型的使用条款",
       "downloadError": "无法下载 AI 模型。请几分钟后重试",
-      "history": "您生成的图片"
+      "history": "您生成的图片",
+      "requirements": "仅限电脑：需要 Chrome 或 Edge，以及约 8 GB 显存的显卡"
     }
   },
   "seo": {

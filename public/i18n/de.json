@@ -20,7 +20,8 @@
     "open": "Editor öffnen",
     "menu": "Menü öffnen",
     "close": "Menü schließen",
-    "thumbnail": "Thumbnails"
+    "thumbnail": "Thumbnails",
+    "ai": "KI"
   },
   "theme": {
     "system": "System",
@@ -246,7 +247,10 @@
       "whisper": "Versteht Sprache und schreibt die Untertitel, in Dutzenden Sprachen",
       "sana": "Zeichnet die Bilder deiner Thumbnails aus einem Satz, bis zu 1344×768",
       "mediapipe": "Erkennt Gesichter, hält sie im Bild und trennt die Person vom Hintergrund",
-      "rnnoise": "Entfernt Hintergrundgeräusche aus der Stimme"
+      "rnnoise": "Entfernt Hintergrundgeräusche aus der Stimme",
+      "count": "KI-Modelle, alle auf deinem Computer",
+      "used": "Verwendete KI-Modelle",
+      "note": "SANA-Sprint braucht einen Computer mit Chrome oder Edge und etwa 8 GB Grafikspeicher. Die 3,1 GB werden einmalig von Hugging Face geladen und bleiben in deinem Browser auf deinem Computer"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "Open Source und Fremdkomponenten",
           "body": [
             "Der Quellcode ist unter der MIT-Lizenz auf [GitHub](https://github.com/ImMaxence/LocalCutVideo) verfügbar.",
-            "LocalCutVideo nutzt: Mediabunny (MPL-2.0), Transformers.js und ONNX Runtime (Apache-2.0 und MIT), die Whisper-Modelle von OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) sowie die Schriftarten Inter und Montserrat (SIL Open Font License).",
+            "LocalCutVideo nutzt: Mediabunny (MPL-2.0), Transformers.js und ONNX Runtime (Apache-2.0 und MIT), die Whisper-Modelle von OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) sowie die Schriftarten Inter und Montserrat (SIL Open Font License).",
             "Der KI-Bildgenerator verwendet das Modell SANA-Sprint 0.6B von NVIDIA (Apache-2.0) und, um deine Beschreibung zu lesen, Gemma 2 von Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. Die [Gemma-Nutzungsbedingungen](https://ai.google.dev/gemma/terms) und die [Gemma-Richtlinie zu verbotenen Nutzungen](https://ai.google.dev/gemma/prohibited_use_policy) gelten für dich und sind Teil dieser Bedingungen: Du verpflichtest dich, den Generator nicht für verbotene Zwecke oder unter Verstoß gegen Gesetze zu verwenden. Google beansprucht keine Rechte an den von dir erzeugten Bildern: Du allein bist für sie und ihre Nutzung verantwortlich. Die Modelle werden ohne Gewähr bereitgestellt."
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "Erzeugen",
       "again": "Noch eins erzeugen",
-      "size": "Einmaliger Download {{ size }}. Etwa eine Minute pro Bild",
+      "size": "Einmaliger Download von {{ size }} von Hugging Face, gespeichert in diesem Browser auf deinem Computer. Etwa eine Minute pro Bild",
       "generating": "Bild wird erstellt…",
       "unsupported": "Benötigt Chrome oder Edge auf einem Computer mit aktueller Grafikkarte",
-      "error": "Das Bild konnte nicht erzeugt werden. Deiner Grafikkarte fehlt vielleicht Speicher",
+      "error": "Das Bild konnte nicht erzeugt werden. Deiner Grafikkarte fehlt vielleicht Speicher: Schließe andere Tabs und Programme und versuche es erneut",
       "terms": "Mit dem Erzeugen eines Bildes akzeptierst du die Nutzungsbedingungen des Modells",
       "downloadError": "Das KI-Modell konnte nicht heruntergeladen werden. Versuche es in ein paar Minuten erneut",
-      "history": "Deine erzeugten Bilder"
+      "history": "Deine erzeugten Bilder",
+      "requirements": "Nur am Computer: Chrome oder Edge und eine Grafikkarte mit etwa 8 GB Speicher"
     }
   },
   "seo": {

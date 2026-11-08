@@ -20,7 +20,8 @@
     "open": "Düzenleyiciyi aç",
     "menu": "Menüyü aç",
     "close": "Menüyü kapat",
-    "thumbnail": "Kapak görselleri"
+    "thumbnail": "Kapak görselleri",
+    "ai": "Yapay zekâ"
   },
   "theme": {
     "system": "Sistem",
@@ -246,7 +247,10 @@
       "whisper": "Konuşmayı anlar ve onlarca dilde altyazı yazar",
       "sana": "Bir cümleden küçük resimlerinizin görsellerini çizer, 1344×768 boyutuna kadar",
       "mediapipe": "Yüzleri bulup kadrada tutar ve kişiyi arka plandan ayırır",
-      "rnnoise": "Sesten arka plan gürültüsünü temizler"
+      "rnnoise": "Sesten arka plan gürültüsünü temizler",
+      "count": "yapay zekâ modeli, hepsi bilgisayarınızda",
+      "used": "Kullanılan yapay zekâ modelleri",
+      "note": "SANA-Sprint, Chrome veya Edge yüklü bir bilgisayar ve yaklaşık 8 GB grafik belleği gerektirir. 3,1 GB'lik dosyaları Hugging Face'ten bir kez indirilir ve bilgisayarınızda, tarayıcınızda kalır"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "Açık kaynak ve üçüncü taraf bileşenler",
           "body": [
             "Kaynak kod, MIT lisansıyla [GitHub](https://github.com/ImMaxence/LocalCutVideo) üzerinde mevcuttur.",
-            "LocalCutVideo şunlara dayanır: Mediabunny (MPL-2.0), Transformers.js ve ONNX Runtime (Apache-2.0 ve MIT), OpenAI'ın Whisper modelleri (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ile Inter ve Montserrat yazı tipleri (SIL Open Font License).",
+            "LocalCutVideo şunlara dayanır: Mediabunny (MPL-2.0), Transformers.js ve ONNX Runtime (Apache-2.0 ve MIT), OpenAI'ın Whisper modelleri (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) ile Inter ve Montserrat yazı tipleri (SIL Open Font License).",
             "Yapay zekâ görsel oluşturucusu, NVIDIA'nın SANA-Sprint 0.6B modelini (Apache-2.0) ve açıklamanızı okumak için Google'ın Gemma 2 modelini kullanır. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemma Kullanım Koşulları](https://ai.google.dev/gemma/terms) ve [Gemma Yasaklanmış Kullanım Politikası](https://ai.google.dev/gemma/prohibited_use_policy) sizin için de geçerlidir ve bu koşulların parçasıdır: oluşturucuyu yasaklanmış amaçlarla veya yasalara aykırı şekilde kullanmamayı kabul edersiniz. Google, oluşturduğunuz görseller üzerinde hak iddia etmez: bunlardan ve kullanımlarından yalnızca siz sorumlusunuz. Modeller olduğu gibi, garantisiz sunulur."
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "Oluştur",
       "again": "Başka bir tane oluştur",
-      "size": "Tek seferlik indirme {{ size }}. Görsel başına yaklaşık bir dakika",
+      "size": "Hugging Face'ten tek seferlik {{ size }} indirme, bilgisayarınızda bu tarayıcıda saklanır. Görsel başına yaklaşık bir dakika",
       "generating": "Görsel oluşturuluyor…",
       "unsupported": "Yeni bir grafik kartına sahip bilgisayarda Chrome veya Edge gerekir",
-      "error": "Görsel oluşturulamadı. Grafik kartınızın belleği yetersiz olabilir",
+      "error": "Görsel oluşturulamadı. Grafik kartınızın belleği yetersiz olabilir: diğer sekmeleri ve uygulamaları kapatıp yeniden deneyin",
       "terms": "Bir görsel oluşturarak modelin kullanım koşullarını kabul edersiniz",
       "downloadError": "Yapay zekâ modeli indirilemedi. Birkaç dakika sonra yeniden deneyin",
-      "history": "Oluşturduğunuz görseller"
+      "history": "Oluşturduğunuz görseller",
+      "requirements": "Yalnızca bilgisayarda: Chrome veya Edge ve yaklaşık 8 GB belleğe sahip grafik kartı"
     }
   },
   "seo": {

@@ -20,7 +20,8 @@
     "open": "Mở trình chỉnh sửa",
     "menu": "Mở menu",
     "close": "Đóng menu",
-    "thumbnail": "Ảnh thu nhỏ"
+    "thumbnail": "Ảnh thu nhỏ",
+    "ai": "AI"
   },
   "theme": {
     "system": "Hệ thống",
@@ -246,7 +247,10 @@
       "whisper": "Hiểu giọng nói và viết phụ đề bằng hàng chục ngôn ngữ",
       "sana": "Vẽ ảnh cho hình thu nhỏ từ một câu, tối đa 1344×768",
       "mediapipe": "Tìm khuôn mặt để giữ trong khung hình và tách người khỏi nền",
-      "rnnoise": "Loại bỏ tiếng ồn nền khỏi giọng nói"
+      "rnnoise": "Loại bỏ tiếng ồn nền khỏi giọng nói",
+      "count": "mô hình AI, tất cả trên máy tính của bạn",
+      "used": "Các mô hình AI được sử dụng",
+      "note": "SANA-Sprint cần máy tính có Chrome hoặc Edge và khoảng 8 GB bộ nhớ đồ họa. 3,1 GB dữ liệu được tải một lần từ Hugging Face và nằm trong trình duyệt, trên máy tính của bạn"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "Mã nguồn mở và thành phần bên thứ ba",
           "body": [
             "Mã nguồn có sẵn theo giấy phép MIT trên [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo dựa trên: Mediabunny (MPL-2.0), Transformers.js và ONNX Runtime (Apache-2.0 và MIT), các mô hình Whisper của OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) và các phông chữ Inter và Montserrat (SIL Open Font License).",
+            "LocalCutVideo dựa trên: Mediabunny (MPL-2.0), Transformers.js và ONNX Runtime (Apache-2.0 và MIT), các mô hình Whisper của OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) và các phông chữ Inter và Montserrat (SIL Open Font License).",
             "Trình tạo ảnh AI sử dụng mô hình SANA-Sprint 0.6B của NVIDIA (Apache-2.0) và Gemma 2 của Google để đọc mô tả của bạn. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Điều khoản sử dụng Gemma](https://ai.google.dev/gemma/terms) và [Chính sách sử dụng bị cấm của Gemma](https://ai.google.dev/gemma/prohibited_use_policy) áp dụng cho bạn và là một phần của các điều khoản này: bạn cam kết không sử dụng trình tạo cho mục đích bị cấm hoặc vi phạm pháp luật. Google không yêu cầu quyền đối với ảnh bạn tạo: chỉ bạn chịu trách nhiệm về ảnh và cách sử dụng chúng. Các mô hình được cung cấp nguyên trạng, không có bảo đảm."
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "Tạo",
       "again": "Tạo ảnh khác",
-      "size": "Tải xuống một lần {{ size }}. Khoảng một phút mỗi ảnh",
+      "size": "Tải xuống một lần {{ size }} từ Hugging Face, lưu trong trình duyệt này trên máy tính của bạn. Khoảng một phút mỗi ảnh",
       "generating": "Đang tạo ảnh…",
       "unsupported": "Cần Chrome hoặc Edge trên máy tính có card đồ họa đời mới",
-      "error": "Không thể tạo ảnh. Card đồ họa của bạn có thể thiếu bộ nhớ",
+      "error": "Không thể tạo ảnh. Card đồ họa của bạn có thể thiếu bộ nhớ: hãy đóng các thẻ và ứng dụng khác rồi thử lại",
       "terms": "Khi tạo ảnh, bạn chấp nhận điều khoản sử dụng của mô hình",
       "downloadError": "Không thể tải mô hình AI. Hãy thử lại sau vài phút",
-      "history": "Ảnh bạn đã tạo"
+      "history": "Ảnh bạn đã tạo",
+      "requirements": "Chỉ trên máy tính: Chrome hoặc Edge và card đồ họa có khoảng 8 GB bộ nhớ"
     }
   },
   "seo": {

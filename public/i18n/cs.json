@@ -20,7 +20,8 @@
     "open": "Otevřít editor",
     "menu": "Otevřít nabídku",
     "close": "Zavřít nabídku",
-    "thumbnail": "Náhledy"
+    "thumbnail": "Náhledy",
+    "ai": "AI"
   },
   "theme": {
     "system": "Systém",
@@ -246,7 +247,10 @@
       "whisper": "Rozumí řeči a píše titulky v desítkách jazyků",
       "sana": "Podle věty kreslí obrázky pro vaše miniatury, až 1344×768",
       "mediapipe": "Najde obličeje, udrží je v záběru a oddělí osobu od pozadí",
-      "rnnoise": "Odstraní z hlasu hluk na pozadí"
+      "rnnoise": "Odstraní z hlasu hluk na pozadí",
+      "count": "modelů AI, všechny na vašem počítači",
+      "used": "Použité modely AI",
+      "note": "SANA-Sprint vyžaduje počítač s Chrome nebo Edge a přibližně 8 GB grafické paměti. Jeho 3,1 GB se jednou stáhne z Hugging Face a zůstane ve vašem prohlížeči, ve vašem počítači"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "Open source a komponenty třetích stran",
           "body": [
             "Zdrojový kód je k dispozici pod licencí MIT na [GitHubu](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo stojí na: Mediabunny (MPL-2.0), Transformers.js a ONNX Runtime (Apache-2.0 a MIT), modelech Whisper od OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) a písmech Inter a Montserrat (SIL Open Font License).",
+            "LocalCutVideo stojí na: Mediabunny (MPL-2.0), Transformers.js a ONNX Runtime (Apache-2.0 a MIT), modelech Whisper od OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) a písmech Inter a Montserrat (SIL Open Font License).",
             "Generátor obrázků AI používá model SANA-Sprint 0.6B od společnosti NVIDIA (Apache-2.0) a ke čtení vašeho popisu model Gemma 2 od společnosti Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Podmínky použití Gemma](https://ai.google.dev/gemma/terms) a [zásady zakázaného použití Gemma](https://ai.google.dev/gemma/prohibited_use_policy) se vztahují i na vás a jsou součástí těchto podmínek: zavazujete se, že generátor nepoužijete k zakázaným účelům ani v rozporu se zákonem. Google si nečiní nárok na obrázky, které vytvoříte: odpovídáte za ně i za jejich použití výhradně vy. Modely jsou poskytovány tak, jak jsou, bez záruky."
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "Vytvořit",
       "again": "Vytvořit další",
-      "size": "Jednorázové stažení {{ size }}. Asi minuta na obrázek",
+      "size": "Jednorázové stažení {{ size }} z Hugging Face, uložené v tomto prohlížeči ve vašem počítači. Asi minuta na obrázek",
       "generating": "Vytváření obrázku…",
       "unsupported": "Vyžaduje Chrome nebo Edge na počítači s novější grafickou kartou",
-      "error": "Obrázek se nepodařilo vytvořit. Grafické kartě možná chybí paměť",
+      "error": "Obrázek se nepodařilo vytvořit. Grafické kartě možná chybí paměť: zavřete ostatní karty a aplikace a zkuste to znovu",
       "terms": "Vytvořením obrázku přijímáte podmínky použití modelu",
       "downloadError": "Model AI se nepodařilo stáhnout. Zkuste to znovu za několik minut",
-      "history": "Vaše vytvořené obrázky"
+      "history": "Vaše vytvořené obrázky",
+      "requirements": "Pouze na počítači: Chrome nebo Edge a grafická karta s přibližně 8 GB paměti"
     }
   },
   "seo": {

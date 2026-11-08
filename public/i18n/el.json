@@ -20,7 +20,8 @@
     "open": "Άνοιγμα επεξεργαστή",
     "menu": "Άνοιγμα μενού",
     "close": "Κλείσιμο μενού",
-    "thumbnail": "Μικρογραφίες"
+    "thumbnail": "Μικρογραφίες",
+    "ai": "ΤΝ"
   },
   "theme": {
     "system": "Σύστημα",
@@ -246,7 +247,10 @@
       "whisper": "Κατανοεί την ομιλία και γράφει τους υπότιτλους σε δεκάδες γλώσσες",
       "sana": "Σχεδιάζει τις εικόνες των μικρογραφιών σας από μια πρόταση, έως 1344×768",
       "mediapipe": "Εντοπίζει τα πρόσωπα για να μένουν στο κάδρο και ξεχωρίζει το άτομο από το φόντο",
-      "rnnoise": "Αφαιρεί τον θόρυβο περιβάλλοντος από τη φωνή"
+      "rnnoise": "Αφαιρεί τον θόρυβο περιβάλλοντος από τη φωνή",
+      "count": "μοντέλα ΤΝ, όλα στον υπολογιστή σας",
+      "used": "Μοντέλα ΤΝ που χρησιμοποιούνται",
+      "note": "Το SANA-Sprint χρειάζεται υπολογιστή με Chrome ή Edge και περίπου 8 GB μνήμης γραφικών. Τα 3,1 GB του λαμβάνονται μία φορά από το Hugging Face και μένουν στο πρόγραμμα περιήγησής σας, στον υπολογιστή σας"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "Ανοιχτός κώδικας και στοιχεία τρίτων",
           "body": [
             "Ο πηγαίος κώδικας είναι διαθέσιμος με την άδεια MIT στο [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Το LocalCutVideo βασίζεται σε: Mediabunny (MPL-2.0), Transformers.js και ONNX Runtime (Apache-2.0 και MIT), τα μοντέλα Whisper της OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) και τις γραμματοσειρές Inter και Montserrat (SIL Open Font License).",
+            "Το LocalCutVideo βασίζεται σε: Mediabunny (MPL-2.0), Transformers.js και ONNX Runtime (Apache-2.0 και MIT), τα μοντέλα Whisper της OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) και τις γραμματοσειρές Inter και Montserrat (SIL Open Font License).",
             "Η γεννήτρια εικόνων ΤΝ χρησιμοποιεί το μοντέλο SANA-Sprint 0.6B της NVIDIA (Apache-2.0) και, για να διαβάσει την περιγραφή σας, το Gemma 2 της Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. Οι [όροι χρήσης του Gemma](https://ai.google.dev/gemma/terms) και η [πολιτική απαγορευμένης χρήσης του Gemma](https://ai.google.dev/gemma/prohibited_use_policy) ισχύουν και για εσάς και αποτελούν μέρος των παρόντων όρων: δεσμεύεστε να μην χρησιμοποιείτε τη γεννήτρια για απαγορευμένη χρήση ή κατά παράβαση του νόμου. Η Google δεν διεκδικεί δικαιώματα στις εικόνες που δημιουργείτε: μόνο εσείς είστε υπεύθυνοι για αυτές και για τη χρήση τους. Τα μοντέλα παρέχονται ως έχουν, χωρίς εγγύηση."
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "Δημιουργία",
       "again": "Δημιουργία άλλης",
-      "size": "Εφάπαξ λήψη {{ size }}. Περίπου ένα λεπτό ανά εικόνα",
+      "size": "Εφάπαξ λήψη {{ size }} από το Hugging Face, αποθηκεύεται σε αυτό το πρόγραμμα περιήγησης στον υπολογιστή σας. Περίπου ένα λεπτό ανά εικόνα",
       "generating": "Δημιουργία της εικόνας…",
       "unsupported": "Απαιτεί Chrome ή Edge σε υπολογιστή με πρόσφατη κάρτα γραφικών",
-      "error": "Η εικόνα δεν δημιουργήθηκε. Ίσως η κάρτα γραφικών σας δεν έχει αρκετή μνήμη",
+      "error": "Η εικόνα δεν δημιουργήθηκε. Ίσως η κάρτα γραφικών σας δεν έχει αρκετή μνήμη: κλείστε άλλες καρτέλες και εφαρμογές και δοκιμάστε ξανά",
       "terms": "Δημιουργώντας μια εικόνα, αποδέχεστε τους όρους χρήσης του μοντέλου",
       "downloadError": "Δεν ήταν δυνατή η λήψη του μοντέλου ΤΝ. Δοκιμάστε ξανά σε λίγα λεπτά",
-      "history": "Οι εικόνες που δημιουργήσατε"
+      "history": "Οι εικόνες που δημιουργήσατε",
+      "requirements": "Μόνο σε υπολογιστή: Chrome ή Edge και κάρτα γραφικών με περίπου 8 GB μνήμης"
     }
   },
   "seo": {

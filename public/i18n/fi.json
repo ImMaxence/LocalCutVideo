@@ -20,7 +20,8 @@
     "open": "Avaa editori",
     "menu": "Avaa valikko",
     "close": "Sulje valikko",
-    "thumbnail": "Pikkukuvat"
+    "thumbnail": "Pikkukuvat",
+    "ai": "Tekoäly"
   },
   "theme": {
     "system": "Järjestelmä",
@@ -246,7 +247,10 @@
       "whisper": "Ymmärtää puhetta ja kirjoittaa tekstitykset kymmenillä kielillä",
       "sana": "Piirtää pikkukuviesi kuvat lauseen perusteella, enintään 1344×768",
       "mediapipe": "Löytää kasvot, pitää ne kuvassa ja erottaa henkilön taustasta",
-      "rnnoise": "Poistaa taustamelun puheesta"
+      "rnnoise": "Poistaa taustamelun puheesta",
+      "count": "tekoälymallia, kaikki tietokoneellasi",
+      "used": "Käytetyt tekoälymallit",
+      "note": "SANA-Sprint vaatii tietokoneen, jossa on Chrome tai Edge ja noin 8 Gt näytönmuistia. Sen 3,1 Gt ladataan kerran Hugging Facesta ja säilyy selaimessasi tietokoneellasi"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "Avoin lähdekoodi ja kolmansien osapuolten komponentit",
           "body": [
             "Lähdekoodi on saatavilla MIT-lisenssillä [GitHubissa](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo perustuu seuraaviin: Mediabunny (MPL-2.0), Transformers.js ja ONNX Runtime (Apache-2.0 ja MIT), OpenAI:n Whisper-mallit (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) sekä Inter- ja Montserrat-fontit (SIL Open Font License).",
+            "LocalCutVideo perustuu seuraaviin: Mediabunny (MPL-2.0), Transformers.js ja ONNX Runtime (Apache-2.0 ja MIT), OpenAI:n Whisper-mallit (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) sekä Inter- ja Montserrat-fontit (SIL Open Font License).",
             "Tekoälykuvageneraattori käyttää NVIDIAn SANA-Sprint 0.6B -mallia (Apache-2.0) ja kuvauksesi lukemiseen Googlen Gemma 2 -mallia. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. [Gemman käyttöehdot](https://ai.google.dev/gemma/terms) ja [Gemman kielletyn käytön käytäntö](https://ai.google.dev/gemma/prohibited_use_policy) koskevat sinua ja ovat osa näitä ehtoja: sitoudut olemaan käyttämättä generaattoria kiellettyyn käyttöön tai lain vastaisesti. Google ei vaadi oikeuksia luomiisi kuviin: yksin sinä vastaat niistä ja niiden käytöstä. Mallit toimitetaan sellaisenaan ilman takuuta."
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "Luo",
       "again": "Luo toinen",
-      "size": "Kertalataus {{ size }}. Noin minuutti kuvaa kohden",
+      "size": "Kertalataus {{ size }} Hugging Facesta, säilytetään tässä selaimessa tietokoneellasi. Noin minuutti kuvaa kohden",
       "generating": "Luodaan kuvaa…",
       "unsupported": "Vaatii Chromen tai Edgen tietokoneella, jossa on uudehko näytönohjain",
-      "error": "Kuvaa ei voitu luoda. Näytönohjaimesi muisti saattaa loppua kesken",
+      "error": "Kuvaa ei voitu luoda. Näytönohjaimesi muisti saattaa loppua kesken: sulje muut välilehdet ja sovellukset ja yritä uudelleen",
       "terms": "Luomalla kuvan hyväksyt mallin käyttöehdot",
       "downloadError": "Tekoälymallia ei voitu ladata. Yritä uudelleen muutaman minuutin kuluttua",
-      "history": "Luomasi kuvat"
+      "history": "Luomasi kuvat",
+      "requirements": "Vain tietokoneella: Chrome tai Edge ja näytönohjain, jossa on noin 8 Gt muistia"
     }
   },
   "seo": {

@@ -20,7 +20,8 @@
     "open": "Buksan ang editor",
     "menu": "Buksan ang menu",
     "close": "Isara ang menu",
-    "thumbnail": "Mga thumbnail"
+    "thumbnail": "Mga thumbnail",
+    "ai": "AI"
   },
   "theme": {
     "system": "System",
@@ -246,7 +247,10 @@
       "whisper": "Nauunawaan ang pagsasalita at sumusulat ng subtitle sa dose-dosenang wika",
       "sana": "Iginuguhit ang mga larawan ng iyong thumbnail mula sa isang pangungusap, hanggang 1344×768",
       "mediapipe": "Hinahanap ang mga mukha para manatili sa frame at inihihiwalay ang tao sa background",
-      "rnnoise": "Inaalis ang ingay sa background ng boses"
+      "rnnoise": "Inaalis ang ingay sa background ng boses",
+      "count": "AI model, lahat nasa computer mo",
+      "used": "Mga AI model na ginagamit",
+      "note": "Kailangan ng SANA-Sprint ang computer na may Chrome o Edge at humigit-kumulang 8 GB na graphics memory. Isang beses dina-download ang 3.1 GB nito mula sa Hugging Face at nananatili sa iyong browser, sa iyong computer"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "Open source at mga third-party na component",
           "body": [
             "Available ang source code sa ilalim ng MIT license sa [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "Umaasa ang LocalCutVideo sa: Mediabunny (MPL-2.0), Transformers.js at ONNX Runtime (Apache-2.0 at MIT), ang mga Whisper model ng OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) at ang mga font na Inter at Montserrat (SIL Open Font License).",
+            "Umaasa ang LocalCutVideo sa: Mediabunny (MPL-2.0), Transformers.js at ONNX Runtime (Apache-2.0 at MIT), ang mga Whisper model ng OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) at ang mga font na Inter at Montserrat (SIL Open Font License).",
             "Ginagamit ng AI image generator ang SANA-Sprint 0.6B model ng NVIDIA (Apache-2.0) at, para basahin ang iyong paglalarawan, ang Gemma 2 ng Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. Saklaw ka ng [Mga Tuntunin sa Paggamit ng Gemma](https://ai.google.dev/gemma/terms) at ng [Patakaran sa Ipinagbabawal na Paggamit ng Gemma](https://ai.google.dev/gemma/prohibited_use_policy), at bahagi ang mga ito ng mga tuntuning ito: sumasang-ayon kang hindi gagamitin ang generator sa ipinagbabawal na paraan o nang labag sa batas. Walang inaangking karapatan ang Google sa mga larawang ginagawa mo: ikaw lang ang responsable sa mga ito at sa paggamit ng mga ito. Ibinibigay ang mga modelo kung ano ang mga ito, nang walang garantiya."
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "Gumawa",
       "again": "Gumawa ng isa pa",
-      "size": "Isang beses na pag-download {{ size }}. Mga isang minuto bawat larawan",
+      "size": "Isang beses na pag-download ng {{ size }} mula sa Hugging Face, itinatago sa browser na ito sa iyong computer. Mga isang minuto bawat larawan",
       "generating": "Ginagawa ang larawan…",
       "unsupported": "Kailangan ng Chrome o Edge sa computer na may bagong graphics card",
-      "error": "Hindi nagawa ang larawan. Maaaring kulang sa memory ang iyong graphics card",
+      "error": "Hindi nagawa ang larawan. Maaaring kulang sa memory ang iyong graphics card: isara ang ibang tab at app, saka subukang muli",
       "terms": "Sa paggawa ng larawan, tinatanggap mo ang mga tuntunin sa paggamit ng modelo",
       "downloadError": "Hindi na-download ang AI model. Subukang muli pagkalipas ng ilang minuto",
-      "history": "Ang mga nagawa mong larawan"
+      "history": "Ang mga nagawa mong larawan",
+      "requirements": "Sa computer lang: Chrome o Edge at graphics card na may humigit-kumulang 8 GB memory"
     }
   },
   "seo": {

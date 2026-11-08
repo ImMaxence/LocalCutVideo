@@ -37,6 +37,7 @@
             <button class="btn auto" type="button" [disabled]="!aiPrompt().trim()" (click)="generate()">
               <app-icon name="sparkles" [size]="16" /> {{ 'thumbnail.ai.run' | transloco }}
             </button>
+            <small class="faint">{{ 'thumbnail.ai.requirements' | transloco }}</small>
             <small class="faint">{{ 'thumbnail.ai.size' | transloco: { size: aiDownloadSize } }}</small>
             <small class="ai-model"><app-icon name="cpu" [size]="13" /> {{ 'editor.transcribe.model' | transloco }} · SANA-Sprint 0.6B (NVIDIA) · {{ aiOutputSize().width }}×{{ aiOutputSize().height }}</small>
             <small><a class="ai-terms" [routerLink]="'/terms' | localize">{{ 'thumbnail.ai.terms' | transloco }}</a></small>

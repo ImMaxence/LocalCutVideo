@@ -2,6 +2,16 @@
 
 All notable changes to LocalCutVideo. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning: [SemVer](https://semver.org/).
 
+## [1.1.1] - 2026-11-08
+
+### Changed
+- Home page puts the AI models first: link in the menu, badge and list at the top, highlighted section right after
+- AI images: what they need (computer, graphics memory) and where the model is stored are stated
+
+### Fixed
+- RNNoise credited in the terms of use, with its license notice
+- AI images failing at the last step when graphics memory is short: the picture is decoded in pieces, which is also faster
+
 ## [1.1.0] - 2026-11-08
 
 ### Added

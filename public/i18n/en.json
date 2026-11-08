@@ -20,7 +20,8 @@
     "open": "Open the editor",
     "menu": "Open menu",
     "close": "Close menu",
-    "thumbnail": "Thumbnails"
+    "thumbnail": "Thumbnails",
+    "ai": "AI"
   },
   "theme": {
     "system": "System",
@@ -246,7 +247,10 @@
       "whisper": "Understands speech and writes the subtitles, in dozens of languages",
       "sana": "Draws your thumbnail images from a sentence, up to 1344×768",
       "mediapipe": "Finds faces to keep them in frame and separates the person from the background",
-      "rnnoise": "Removes background noise from the voice"
+      "rnnoise": "Removes background noise from the voice",
+      "count": "AI models, all on your computer",
+      "used": "AI models used",
+      "note": "SANA-Sprint needs a computer with Chrome or Edge and about 8 GB of graphics memory. Its 3.1 GB are downloaded once from Hugging Face and stay in your browser, on your computer"
     }
   },
   "changelog": {
@@ -785,7 +789,7 @@
           "title": "Open source and third-party components",
           "body": [
             "The source code is available under the MIT license on [GitHub](https://github.com/ImMaxence/LocalCutVideo).",
-            "LocalCutVideo relies on: Mediabunny (MPL-2.0), Transformers.js and ONNX Runtime (Apache-2.0 and MIT), the Whisper models by OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) and the Inter and Montserrat fonts (SIL Open Font License).",
+            "LocalCutVideo relies on: Mediabunny (MPL-2.0), Transformers.js and ONNX Runtime (Apache-2.0 and MIT), the Whisper models by OpenAI (MIT), SANA-Sprint (NVIDIA, Apache-2.0), Gemma 2 (Google), MediaPipe (Apache-2.0), [RNNoise](https://github.com/ImMaxence/LocalCutVideo/blob/main/public/licenses/rnnoise.txt) (BSD-3-Clause), Wavesurfer.js (BSD-3-Clause), Dexie.js (Apache-2.0), Angular (MIT) and the Inter and Montserrat fonts (SIL Open Font License).",
             "The AI image generator uses the SANA-Sprint 0.6B model by NVIDIA (Apache-2.0) and, to read your description, Gemma 2 by Google. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms. The [Gemma Terms of Use](https://ai.google.dev/gemma/terms) and the [Gemma Prohibited Use Policy](https://ai.google.dev/gemma/prohibited_use_policy) apply to you and form part of these terms: you agree not to use the generator for any prohibited use or in violation of the law. Google claims no rights in the images you generate: you alone are responsible for them and for how you use them. The models are provided as is, without warranty."
           ]
         },
@@ -866,13 +870,14 @@
       "placeholder": "A bear in a pine forest at sunrise",
       "run": "Generate",
       "again": "Generate another",
-      "size": "One-time download {{ size }}. About a minute per image",
+      "size": "One-time download of {{ size }} from Hugging Face, kept in this browser on your computer. About a minute per image",
       "generating": "Drawing the image…",
       "unsupported": "Needs Chrome or Edge on a computer with a recent graphics card",
-      "error": "The image could not be generated. Your graphics card may be short on memory",
+      "error": "The image could not be generated. Your graphics card may be short on memory: close other tabs and applications, then try again",
       "terms": "By generating an image, you accept the model's terms of use",
       "downloadError": "The AI model could not be downloaded. Try again in a few minutes",
-      "history": "Your generated images"
+      "history": "Your generated images",
+      "requirements": "Computer only: Chrome or Edge and a graphics card with about 8 GB of memory"
     }
   },
   "seo": {

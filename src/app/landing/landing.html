@@ -4,6 +4,7 @@
     <div class="hero-copy">
       <div class="pills">
         <span class="badge alt"><app-icon name="sparkles" [size]="14" /> {{ 'landing.hero.badgeAlt' | transloco }}</span>
+        <a class="badge ai-pill" [routerLink]="'/' | localize" fragment="ai"><app-icon name="cpu" [size]="14" /> {{ aiNames.length }} {{ 'landing.ai.count' | transloco }}</a>
         <span class="badge"><app-icon name="lock" [size]="14" /> {{ 'landing.hero.badgeLocal' | transloco }}</span>
         <span class="badge"><app-icon name="github" [size]="14" /> {{ 'landing.hero.badgeOpen' | transloco }}</span>
       </div>
@@ -26,6 +27,14 @@
         </a>
       </div>
       <p class="hint faint">{{ 'landing.hero.hint' | transloco }}</p>
+      <a class="ai-strip" [routerLink]="'/' | localize" fragment="ai">
+        <small>{{ 'landing.ai.used' | transloco }}</small>
+        <span class="ai-chips" dir="ltr">
+          @for (name of aiNames; track name) {
+            <span>{{ name }}</span>
+          }
+        </span>
+      </a>
     </div>
 
     <div class="mockup" aria-hidden="true">
@@ -77,6 +86,36 @@
   </div>
 </section>
 
+<section class="section ai-section" id="ai">
+  <div class="container">
+    <div class="ai-band" appReveal>
+      <div class="ai-head">
+        <div>
+          <span class="eyebrow">{{ 'landing.ai.eyebrow' | transloco }}</span>
+          <h2>{{ 'landing.ai.title' | transloco }}</h2>
+          <p>{{ 'landing.ai.lead' | transloco }}</p>
+        </div>
+        <div class="ai-count">
+          <b>{{ aiNames.length }}</b>
+          <span>{{ 'landing.ai.count' | transloco }}</span>
+        </div>
+      </div>
+      <div class="ai-models">
+        @for (m of aiModels; track m.key) {
+          <a class="ai-model" [href]="m.url" target="_blank" rel="noopener">
+            <span class="ai-icon"><app-icon [name]="m.icon" [size]="22" /></span>
+            <h3 dir="ltr">{{ m.name }}</h3>
+            <span class="ai-maker" dir="ltr">{{ m.maker }}</span>
+            <p>{{ 'landing.ai.' + m.key | transloco }}</p>
+            <span class="ai-facts" dir="ltr"><i>{{ m.license }}</i><i>{{ m.size }}</i></span>
+          </a>
+        }
+      </div>
+      <p class="ai-note"><app-icon name="monitor" [size]="16" /> {{ 'landing.ai.note' | transloco }}</p>
+    </div>
+  </div>
+</section>
+
 <section class="section">
   <div class="container">
     <div class="section-head" appReveal>
@@ -109,27 +148,6 @@
           <h3>{{ 'landing.features.' + f.key + '.title' | transloco }}</h3>
           <p class="muted">{{ 'landing.features.' + f.key + '.text' | transloco: { count: languageCount } }}</p>
         </article>
-      }
-    </div>
-  </div>
-</section>
-
-<section class="section" id="ai">
-  <div class="container">
-    <div class="section-head" appReveal>
-      <span class="eyebrow">{{ 'landing.ai.eyebrow' | transloco }}</span>
-      <h2>{{ 'landing.ai.title' | transloco }}</h2>
-      <p class="muted">{{ 'landing.ai.lead' | transloco }}</p>
-    </div>
-    <div class="ai-models">
-      @for (m of aiModels; track m.key) {
-        <a class="card feature ai-model" [href]="m.url" target="_blank" rel="noopener" [appReveal]="$index % 4">
-          <span class="ficon"><app-icon [name]="m.icon" [size]="20" /></span>
-          <h3 dir="ltr">{{ m.name }}</h3>
-          <span class="ai-maker" dir="ltr">{{ m.maker }}</span>
-          <p class="muted">{{ 'landing.ai.' + m.key | transloco }}</p>
-          <span class="ai-facts" dir="ltr"><i>{{ m.license }}</i><i>{{ m.size }}</i></span>
-        </a>
       }
     </div>
   </div>

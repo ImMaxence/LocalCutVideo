@@ -31,6 +31,7 @@ export class App {
   protected readonly year = new Date().getFullYear();
   protected readonly menuOpen = signal(false);
   protected readonly navLinks = [
+    { fragment: 'ai', key: 'nav.ai' },
     { fragment: 'features', key: 'nav.features' },
     { fragment: 'privacy', key: 'nav.privacy' },
     { fragment: 'faq', key: 'nav.faq' },

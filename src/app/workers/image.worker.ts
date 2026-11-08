@@ -17,8 +17,12 @@ import {
   MAX_TOKENS,
   SCALE_BYTES,
   SIGMA_DATA,
+  TILE_OVERLAP,
+  TILE_SIZE,
   TIMESTEPS,
   VAE_SCALING,
+  cropLatents,
+  featherWeights,
   modelInput,
   modelOutput,
   nextLatents,
@@ -26,6 +30,7 @@ import {
   sanaSize,
   scmTime,
   selectedTokens,
+  tileStarts,
   toPixels,
   unpackEmbedding,
 } from '../engine/sana';
@@ -186,12 +191,43 @@ async function generateLatents(
   return clean;
 }
 
+/** Decodes overlapping pieces one by one and blends them: the whole picture at once runs out of graphics memory. */
+async function decodeInPieces(session: ort.InferenceSession, latents: Float32Array, dims: number[], width: number, height: number): Promise<Float32Array> {
+  const [channels, rows, columns] = dims;
+  const pixelCount = width * height;
+  const color = new Float32Array(pixelCount * 3);
+  const total = new Float32Array(pixelCount);
+  const side = TILE_SIZE * LATENT_SCALE;
+  const feather = TILE_OVERLAP * LATENT_SCALE;
+  const tops = tileStarts(rows);
+  const lefts = tileStarts(columns);
+  for (const [r, top] of tops.entries()) {
+    const across = featherWeights(side, feather, r > 0, r < tops.length - 1);
+    for (const [c, left] of lefts.entries()) {
+      throwIfCancelled();
+      const along = featherWeights(side, feather, c > 0, c < lefts.length - 1);
+      const piece = cropLatents(latents, channels, rows, columns, top, left, TILE_SIZE);
+      const output = await session.run({ [session.inputNames[0]]: new ort.Tensor('float32', piece, [1, channels, TILE_SIZE, TILE_SIZE]) });
+      const image = output[session.outputNames[0]].data as Float32Array;
+      for (let y = 0; y < side; y++) {
+        for (let x = 0; x < side; x++) {
+          const weight = across[y] * along[x];
+          const target = (top * LATENT_SCALE + y) * width + left * LATENT_SCALE + x;
+          total[target] += weight;
+          for (let channel = 0; channel < 3; channel++) color[channel * pixelCount + target] += image[(channel * side + y) * side + x] * weight;
+        }
+      }
+    }
+  }
+  for (let i = 0; i < pixelCount; i++) for (let channel = 0; channel < 3; channel++) color[channel * pixelCount + i] /= total[i];
+  return color;
+}
+
 async function decode(clean: Float32Array, dims: number[], width: number, height: number, file: Blob): Promise<Blob> {
   const session = await createSession(file);
   throwIfCancelled();
   const scale = SIGMA_DATA * VAE_SCALING;
-  const output = await session.run({ [session.inputNames[0]]: new ort.Tensor('float32', clean.map((v) => v / scale), [1, ...dims]) });
-  const pixels = toPixels(output[session.outputNames[0]].data as Float32Array, width, height);
+  const pixels = toPixels(await decodeInPieces(session, clean.map((v) => v / scale), dims, width, height), width, height);
   await session.release();
   const canvas = new OffscreenCanvas(width, height);
   canvas.getContext('2d')!.putImageData(new ImageData(pixels, width, height), 0, 0);
