@@ -6,7 +6,9 @@
     "close": "Sulge",
     "retry": "Proovi uuesti",
     "none": "Puudub",
-    "remove": "Eemalda"
+    "remove": "Eemalda",
+    "downloadStats": "{{ done }} / {{ total }} · {{ speed }} · jäänud {{ left }}",
+    "reportDownload": "Allalaadimine ebaõnnestub? Teata GitHubis"
   },
   "nav": {
     "features": "Funktsioonid",
@@ -733,7 +735,7 @@
           "title": "Kolmandad osapooled",
           "body": [
             "Cloudflare: kõik selle saidi päringud liiguvad läbi Cloudflare'i, mis kaitseb serverit ja krüpteerib ühenduse. Nagu iga võrguvahendaja, töötleb see lehtede edastamiseks sinu IP-aadressi ja tavapärast brauseriteavet ning võib turvalisuse huvides säilitada tehnilisi logisid; see ei saa kunagi sinu videoid ega heli, mis ei lahku kunagi sinu seadmest. Vaata Cloudflare'i [privaatsuspoliitikat](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: Whisperi mudelit pakub see sait nagu ka ülejäänud rakendust. Ainult siis, kui see pole siin saadaval, laaditakse see hoopis aadressilt huggingface.co; Hugging Face saab siis sinu IP-aadressi ja tavapärase brauseriteabe, kuid mitte kunagi sinu heli. Vaata nende [privaatsuspoliitikat](https://huggingface.co/privacy). Pisipiltide looja tehisintellekti pildimudel laaditakse alati alla saidilt huggingface.co ja ainult siis, kui seda kasutad: Hugging Face saab siis sinu IP-aadressi, kuid mitte kunagi sinu kirjeldust ega pilti.",
+            "Hugging Face: tehisintellekti mudelid (Whisper subtiitrite ja SANA-Sprint pisipiltide jaoks) laaditakse esmakasutusel otse saidilt huggingface.co ja hoitakse seejärel sinu brauseris. Hugging Face saab siis sinu IP-aadressi ja tavapärase brauseriteabe, kuid mitte kunagi sinu heli, kirjeldusi ega pilte. Vaata [privaatsuspoliitikat](https://huggingface.co/privacy).",
             "GitHub: ainult siis, kui järgid linki lähtekoodi hoidlasse.",
             "Ühegi teise kolmanda osapoolega ühendust ei võeta: range Content-Security-Policy takistab tehniliselt lehel kuhugi mujale ühendust looma."
           ]
@@ -879,7 +881,8 @@
       "terms": "Pilti luues nõustud mudeli kasutustingimustega",
       "downloadError": "Tehisintellekti mudelit ei õnnestunud alla laadida. Proovi mõne minuti pärast uuesti",
       "history": "Sinu loodud pildid",
-      "requirements": "Ainult arvutis: uuem WebGPU toega brauser ja umbes 8 GB mäluga graafikakaart"
+      "requirements": "Ainult arvutis: uuem WebGPU toega brauser ja umbes 8 GB mäluga graafikakaart",
+      "storageError": "Mudelit ei õnnestunud sellesse seadmesse salvestada. Vabasta kettaruumi või välju privaatsest sirvimisest ja proovi uuesti"
     }
   },
   "seo": {

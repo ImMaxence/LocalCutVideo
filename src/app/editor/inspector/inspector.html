@@ -230,6 +230,9 @@
               <span class="value">{{ (task.progress * 100).toFixed(0) }}%</span>
             </div>
             <div class="progress"><div [style.width.%]="task.progress * 100"></div></div>
+            @if (task.stage === 'download' && task.total) {
+              <app-download-progress [loaded]="task.loaded ?? 0" [total]="task.total" />
+            }
             <button class="btn sm ghost" type="button" (click)="store.cancelTranscription()">{{ 'common.cancel' | transloco }}</button>
           </div>
         } @else if (!p().words.length) {
@@ -247,6 +250,7 @@
           </button>
           <small class="faint">{{ 'editor.transcribe.rerunHint' | transloco }}</small>
         }
+        <app-report-download model="Whisper" />
         @if (store.aiDevice(); as device) {
           <span class="badge device"><app-icon name="cpu" [size]="13" /> {{ device === 'webgpu' ? 'WebGPU' : 'WASM (CPU)' }}</span>
         }

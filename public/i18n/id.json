@@ -6,7 +6,9 @@
     "close": "Tutup",
     "retry": "Coba lagi",
     "none": "Tidak ada",
-    "remove": "Hapus"
+    "remove": "Hapus",
+    "downloadStats": "{{ done }} dari {{ total }} · {{ speed }} · sisa {{ left }}",
+    "reportDownload": "Unduhan gagal? Laporkan di GitHub"
   },
   "nav": {
     "features": "Fitur",
@@ -733,7 +735,7 @@
           "title": "Pihak ketiga",
           "body": [
             "Cloudflare: semua permintaan ke situs ini melewati Cloudflare, yang melindungi server dan mengenkripsi koneksi. Seperti perantara jaringan lainnya, Cloudflare memproses alamat IP Anda dan informasi browser standar untuk mengirimkan halaman, dan dapat menyimpan log teknis untuk tujuan keamanan; Cloudflare tidak pernah menerima video atau audio Anda, yang tidak pernah meninggalkan perangkat Anda. Lihat [kebijakan privasi](https://www.cloudflare.com/privacypolicy/) mereka.",
-            "Hugging Face: model Whisper disediakan oleh situs ini, seperti bagian aplikasi lainnya. Hanya jika tidak tersedia di sini, model diunduh dari huggingface.co; Hugging Face lalu menerima alamat IP Anda dan informasi browser standar, tetapi tidak pernah audio Anda. Lihat [kebijakan privasi](https://huggingface.co/privacy) mereka. Model gambar AI pada pembuat thumbnail selalu diunduh dari huggingface.co, hanya jika Anda menggunakannya: Hugging Face lalu menerima alamat IP Anda, tetapi tidak pernah menerima deskripsi atau gambar Anda.",
+            "Hugging Face: model AI (Whisper untuk subtitel, SANA-Sprint untuk gambar thumbnail) diunduh langsung dari huggingface.co saat pertama kali digunakan, lalu disimpan di browser Anda. Hugging Face kemudian menerima alamat IP dan informasi browser standar Anda, tetapi tidak pernah menerima audio, deskripsi, atau gambar Anda. Lihat [kebijakan privasinya](https://huggingface.co/privacy).",
             "GitHub: hanya jika Anda membuka tautan ke repositori kode sumber.",
             "Tidak ada pihak ketiga lain yang dihubungi: Content-Security-Policy yang ketat secara teknis mencegah halaman terhubung ke mana pun."
           ]
@@ -879,7 +881,8 @@
       "terms": "Dengan membuat gambar, Anda menerima ketentuan penggunaan model",
       "downloadError": "Model AI tidak dapat diunduh. Coba lagi dalam beberapa menit",
       "history": "Gambar yang Anda buat",
-      "requirements": "Hanya di komputer: browser terbaru yang mendukung WebGPU dan kartu grafis dengan memori sekitar 8 GB"
+      "requirements": "Hanya di komputer: browser terbaru yang mendukung WebGPU dan kartu grafis dengan memori sekitar 8 GB",
+      "storageError": "Model tidak dapat disimpan di perangkat ini. Kosongkan ruang disk atau keluar dari penjelajahan pribadi, lalu coba lagi"
     }
   },
   "seo": {

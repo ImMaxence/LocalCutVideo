@@ -6,7 +6,9 @@
     "close": "Fermer",
     "retry": "Réessayer",
     "none": "Aucun",
-    "remove": "Retirer"
+    "remove": "Retirer",
+    "downloadStats": "{{ done }} sur {{ total }} · {{ speed }} · reste {{ left }}",
+    "reportDownload": "Le téléchargement échoue ? Signalez-le sur GitHub"
   },
   "nav": {
     "features": "Fonctionnalités",
@@ -733,7 +735,7 @@
           "title": "Tiers",
           "body": [
             "Cloudflare : toutes les requêtes vers ce site passent par Cloudflare, qui protège le serveur et chiffre la connexion. Comme tout intermédiaire réseau, il traite votre adresse IP et les informations standard de votre navigateur pour acheminer les pages, et peut conserver des journaux techniques à des fins de sécurité ; il ne reçoit jamais vos vidéos ni votre audio, qui ne quittent jamais votre appareil. Voir sa [politique de confidentialité](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face : le modèle Whisper est servi par ce site, comme le reste de l'application. S'il n'y est pas disponible, il est téléchargé depuis huggingface.co à la place ; Hugging Face reçoit alors votre adresse IP et les informations standard du navigateur, mais jamais votre audio. Voir leur [politique de confidentialité](https://huggingface.co/privacy). Le modèle d'image IA du créateur de miniatures est toujours téléchargé depuis huggingface.co, uniquement si vous l'utilisez : Hugging Face reçoit alors votre adresse IP, mais jamais votre description ni l'image.",
+            "Hugging Face : les modèles d'IA (Whisper pour les sous-titres, SANA-Sprint pour les images de miniatures) sont téléchargés directement depuis huggingface.co la première fois que vous les utilisez, puis conservés dans votre navigateur. Hugging Face reçoit alors votre adresse IP et les informations habituelles de votre navigateur, mais jamais votre audio, vos descriptions ni vos images. Consultez sa [politique de confidentialité](https://huggingface.co/privacy).",
             "GitHub : uniquement si vous suivez un lien vers le dépôt du code source.",
             "Aucun autre tiers n'est contacté : une Content-Security-Policy stricte empêche techniquement la page de se connecter ailleurs."
           ]
@@ -879,7 +881,8 @@
       "terms": "En générant une image, vous acceptez les conditions d'utilisation du modèle",
       "downloadError": "Le modèle IA n'a pas pu être téléchargé. Réessayez dans quelques minutes",
       "history": "Vos images générées",
-      "requirements": "Sur ordinateur uniquement : un navigateur récent compatible WebGPU et une carte graphique avec environ 8 Go de mémoire"
+      "requirements": "Sur ordinateur uniquement : un navigateur récent compatible WebGPU et une carte graphique avec environ 8 Go de mémoire",
+      "storageError": "Le modèle n'a pas pu être enregistré sur cet appareil. Libérez de la place sur le disque ou quittez la navigation privée, puis réessayez"
     }
   },
   "seo": {

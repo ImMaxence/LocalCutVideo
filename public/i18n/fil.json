@@ -6,7 +6,9 @@
     "close": "Isara",
     "retry": "Subukan ulit",
     "none": "Wala",
-    "remove": "Alisin"
+    "remove": "Alisin",
+    "downloadStats": "{{ done }} ng {{ total }} · {{ speed }} · natitira {{ left }}",
+    "reportDownload": "Pumapalya ang download? I-report sa GitHub"
   },
   "nav": {
     "features": "Mga feature",
@@ -733,7 +735,7 @@
           "title": "Mga third party",
           "body": [
             "Cloudflare: lahat ng request sa site na ito ay dumadaan sa Cloudflare, na nagpoprotekta sa server at nag-e-encrypt ng koneksyon. Gaya ng anumang network intermediary, pinoproseso nito ang IP address mo at karaniwang impormasyon ng browser para maihatid ang mga page, at maaaring magtago ng mga teknikal na log para sa seguridad; hindi nito kailanman natatanggap ang mga video o audio mo, na hindi kailanman umaalis sa device mo. Tingnan ang kanilang [patakaran sa privacy](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: ang Whisper model ay ibinibigay ng site na ito, gaya ng ibang bahagi ng app. Kung hindi lang ito available dito, saka ito dina-download mula sa huggingface.co; matatanggap noon ng Hugging Face ang IP address mo at karaniwang impormasyon ng browser, pero hindi kailanman ang audio mo. Tingnan ang kanilang [patakaran sa privacy](https://huggingface.co/privacy). Ang AI image model ng thumbnail maker ay palaging dina-download mula sa huggingface.co, kung gagamitin mo lang ito: matatanggap ng Hugging Face ang iyong IP address, pero hindi kailanman ang iyong paglalarawan o ang larawan.",
+            "Hugging Face: ang mga AI model (Whisper para sa subtitle, SANA-Sprint para sa mga larawan ng thumbnail) ay direktang dina-download mula sa huggingface.co sa unang paggamit, saka itinatago sa iyong browser. Matatanggap ng Hugging Face ang iyong IP address at karaniwang impormasyon ng browser, pero hindi kailanman ang iyong audio, mga paglalarawan o mga larawan. Tingnan ang kanilang [patakaran sa privacy](https://huggingface.co/privacy).",
             "GitHub: kung susundan mo lang ang link papunta sa source code repository.",
             "Walang ibang third party na kinokontak: teknikal na pinipigilan ng mahigpit na Content-Security-Policy ang page na kumonekta saanman."
           ]
@@ -879,7 +881,8 @@
       "terms": "Sa paggawa ng larawan, tinatanggap mo ang mga tuntunin sa paggamit ng modelo",
       "downloadError": "Hindi na-download ang AI model. Subukang muli pagkalipas ng ilang minuto",
       "history": "Ang mga nagawa mong larawan",
-      "requirements": "Sa computer lang: bagong browser na may WebGPU at graphics card na may humigit-kumulang 8 GB memory"
+      "requirements": "Sa computer lang: bagong browser na may WebGPU at graphics card na may humigit-kumulang 8 GB memory",
+      "storageError": "Hindi na-save ang modelo sa device na ito. Magbakante ng espasyo sa disk o umalis sa private browsing, saka subukang muli"
     }
   },
   "seo": {

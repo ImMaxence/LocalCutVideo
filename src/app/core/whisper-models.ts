@@ -1,7 +1,6 @@
 /**
  * Whisper models on Hugging Face, each pinned to a commit: a change upstream never reaches the
- * app or the Docker build unnoticed. Plain data without imports: scripts/download-models.mjs
- * reads it too. To update a model, take the new `sha` of
+ * app unnoticed. To update a model, take the new `sha` of
  * https://huggingface.co/api/models/<repo>.
  */
 export const WHISPER_REPOS = {

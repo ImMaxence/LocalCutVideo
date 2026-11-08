@@ -338,6 +338,9 @@
                       <span>{{ stepDetail(s.id) }}</span>
                       <time>{{ elapsed(s.startedAt) }}</time>
                     </div>
+                    @if (stepDownload(s.id); as bytes) {
+                      <app-download-progress [loaded]="bytes.loaded" [total]="bytes.total" />
+                    }
                     @if (s.id === 'transcribe' && store.heardWords(); as heard) {
                       <q class="step-heard" dir="auto">{{ heard }}</q>
                     }
@@ -435,6 +438,7 @@
               <app-icon name="sparkles" [size]="16" /> {{ 'editor.auto.start' | transloco }}
             </button>
           </div>
+          <app-report-download class="auto-report" model="Whisper" />
         }
       </div>
     </div>

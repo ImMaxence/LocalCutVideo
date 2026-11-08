@@ -2,6 +2,20 @@
 
 All notable changes to LocalCutVideo. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning: [SemVer](https://semver.org/).
 
+## [1.2.0] - 2026-11-08
+
+### Added
+- AI models show their download live: amount received, speed and what is left
+- Link below the buttons that download a model, to report a failed download on GitHub
+
+### Changed
+- Whisper models come straight from Hugging Face: the server no longer carries them
+
+### Fixed
+- "Downloading the model" shown when Whisper was already on the device
+- Whisper download sizes were too low with a graphics card
+- AI images: a clear message when the model cannot be stored (disk full, private window), instead of a graphics memory error
+
 ## [1.1.3] - 2026-11-08
 
 ### Changed

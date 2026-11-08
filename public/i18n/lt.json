@@ -6,7 +6,9 @@
     "close": "Uždaryti",
     "retry": "Bandyti dar kartą",
     "none": "Nėra",
-    "remove": "Pašalinti"
+    "remove": "Pašalinti",
+    "downloadStats": "{{ done }} iš {{ total }} · {{ speed }} · liko {{ left }}",
+    "reportDownload": "Nepavyksta atsisiųsti? Praneškite „GitHub“"
   },
   "nav": {
     "features": "Funkcijos",
@@ -733,7 +735,7 @@
           "title": "Trečiosios šalys",
           "body": [
             "Cloudflare: visos užklausos į šią svetainę eina per Cloudflare, kuri apsaugo serverį ir šifruoja ryšį. Kaip ir bet kuris tinklo tarpininkas, ji tvarko jūsų IP adresą ir įprastą naršyklės informaciją, kad pateiktų puslapius, ir saugumo tikslais gali saugoti techninius žurnalus; ji niekada negauna jūsų vaizdo įrašų ar garso, kurie niekada nepalieka jūsų įrenginio. Žr. Cloudflare [privatumo politiką](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: Whisper modelį teikia ši svetainė, kaip ir likusią programėlės dalį. Tik jei jis čia nepasiekiamas, jis atsisiunčiamas iš huggingface.co; tada Hugging Face gauna jūsų IP adresą ir įprastą naršyklės informaciją, bet niekada jūsų garso. Žr. jų [privatumo politiką](https://huggingface.co/privacy). Miniatiūrų kūrėjo DI vaizdų modelis visada atsisiunčiamas iš huggingface.co ir tik jį naudojant: tada „Hugging Face“ gauna jūsų IP adresą, bet niekada – jūsų aprašymo ar vaizdo.",
+            "„Hugging Face“: DI modeliai („Whisper“ subtitrams, „SANA-Sprint“ miniatiūrų vaizdams) pirmą kartą naudojant atsisiunčiami tiesiai iš huggingface.co ir vėliau laikomi jūsų naršyklėje. Tada „Hugging Face“ gauna jūsų IP adresą ir įprastą naršyklės informaciją, bet niekada – jūsų garso, aprašymų ar vaizdų. Žr. [privatumo politiką](https://huggingface.co/privacy).",
             "GitHub: tik jei paspaudžiate nuorodą į pirminio kodo saugyklą.",
             "Jokia kita trečioji šalis nekontaktuojama: griežta Content-Security-Policy techniškai neleidžia puslapiui jungtis niekur kitur."
           ]
@@ -879,7 +881,8 @@
       "terms": "Kurdami vaizdą sutinkate su modelio naudojimo sąlygomis",
       "downloadError": "DI modelio atsisiųsti nepavyko. Bandykite dar kartą po kelių minučių",
       "history": "Jūsų sukurti vaizdai",
-      "requirements": "Tik kompiuteryje: nauja naršyklė su WebGPU palaikymu ir vaizdo plokštė su maždaug 8 GB atminties"
+      "requirements": "Tik kompiuteryje: nauja naršyklė su WebGPU palaikymu ir vaizdo plokštė su maždaug 8 GB atminties",
+      "storageError": "Modelio nepavyko įrašyti šiame įrenginyje. Atlaisvinkite vietos diske arba išeikite iš privačios naršymo sesijos ir bandykite dar kartą"
     }
   },
   "seo": {

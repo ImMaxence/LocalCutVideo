@@ -6,7 +6,9 @@
     "close": "Zapri",
     "retry": "Poskusi znova",
     "none": "Brez",
-    "remove": "Odstrani"
+    "remove": "Odstrani",
+    "downloadStats": "{{ done }} od {{ total }} · {{ speed }} · preostane {{ left }}",
+    "reportDownload": "Prenos ne uspe? Prijavite na GitHubu"
   },
   "nav": {
     "features": "Funkcije",
@@ -733,7 +735,7 @@
           "title": "Tretje osebe",
           "body": [
             "Cloudflare: vse zahteve za to spletno mesto potekajo prek Cloudflara, ki ščiti strežnik in šifrira povezavo. Kot vsak omrežni posrednik obdeluje vaš naslov IP in običajne podatke o brskalniku, da dostavi strani, in lahko hrani tehnične dnevnike za varnostne namene; nikoli pa ne prejme vaših videoposnetkov ali zvoka, ki nikoli ne zapustijo vaše naprave. Oglejte si [politiko zasebnosti](https://www.cloudflare.com/privacypolicy/) podjetja Cloudflare.",
-            "Hugging Face: model Whisper zagotavlja to spletno mesto, tako kot preostanek aplikacije. Samo če tukaj ni na voljo, se namesto tega prenese s huggingface.co; Hugging Face takrat prejme vaš naslov IP in običajne podatke o brskalniku, nikoli pa vašega zvoka. Oglejte si njihovo [politiko zasebnosti](https://huggingface.co/privacy). Slikovni model UI v ustvarjalniku sličic se vedno prenese s huggingface.co, in sicer le, če ga uporabite: Hugging Face takrat prejme vaš naslov IP, nikoli pa vašega opisa ali slike.",
+            "Hugging Face: modeli UI (Whisper za podnapise, SANA-Sprint za slike sličic) se ob prvi uporabi prenesejo neposredno s huggingface.co in nato ostanejo v vašem brskalniku. Hugging Face takrat prejme vaš naslov IP in običajne podatke o brskalniku, nikoli pa vašega zvoka, opisov ali slik. Oglejte si [pravilnik o zasebnosti](https://huggingface.co/privacy).",
             "GitHub: samo če sledite povezavi do repozitorija izvorne kode.",
             "Nobena druga tretja oseba se ne kontaktira: stroga Content-Security-Policy strani tehnično prepreči povezavo kamor koli drugam."
           ]
@@ -879,7 +881,8 @@
       "terms": "Z ustvarjanjem slike sprejemate pogoje uporabe modela",
       "downloadError": "Modela UI ni bilo mogoče prenesti. Poskusite znova čez nekaj minut",
       "history": "Vaše ustvarjene slike",
-      "requirements": "Samo na računalniku: novejši brskalnik s podporo za WebGPU in grafična kartica s približno 8 GB pomnilnika"
+      "requirements": "Samo na računalniku: novejši brskalnik s podporo za WebGPU in grafična kartica s približno 8 GB pomnilnika",
+      "storageError": "Modela ni bilo mogoče shraniti v to napravo. Sprostite prostor na disku ali zapustite zasebno brskanje in poskusite znova"
     }
   },
   "seo": {

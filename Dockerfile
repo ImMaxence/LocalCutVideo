@@ -9,21 +9,10 @@ RUN npm ci --ignore-scripts --no-audit --no-fund
 COPY . .
 RUN npm run build
 
-# --- Whisper models, served by the site itself (about 1.5 GB for the three) ------------------
-# Its own stage: Docker keeps it in cache, so the models are only downloaded again when the
-# list changes. Build argument: WHISPER_MODELS=tiny,base,small (an empty list keeps Hugging Face).
-FROM node:24-alpine AS models
-ARG WHISPER_MODELS=tiny,base,small
-WORKDIR /models-build
-COPY scripts/download-models.mjs scripts/
-COPY src/app/core/whisper-models.ts src/app/core/
-RUN mkdir -p /models && if [ -n "$WHISPER_MODELS" ]; then node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/download-models.mjs --out /models --models "$WHISPER_MODELS"; fi
-
 # --- Serve the static files ----------------------------------------------------------------
 FROM nginx:1.29-alpine
 COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
 COPY docker/headers.conf /etc/nginx/snippets/headers.conf
-COPY --from=models /models /usr/share/nginx/html/models
 COPY --from=build /app/dist/localcutvideo/browser /usr/share/nginx/html
 EXPOSE 80
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \

@@ -50,5 +50,5 @@ Thumbs.db
 /test-results/
 /playwright-report/
 
-# Whisper models downloaded by scripts/download-models.mjs (served by the Docker image)
+# Old local copies of the Whisper models: they now come from Hugging Face
 /public/models/

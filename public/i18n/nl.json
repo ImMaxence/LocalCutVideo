@@ -6,7 +6,9 @@
     "close": "Sluiten",
     "retry": "Opnieuw proberen",
     "none": "Geen",
-    "remove": "Verwijderen"
+    "remove": "Verwijderen",
+    "downloadStats": "{{ done }} van {{ total }} · {{ speed }} · nog {{ left }}",
+    "reportDownload": "Mislukt de download? Meld het op GitHub"
   },
   "nav": {
     "features": "Functies",
@@ -733,7 +735,7 @@
           "title": "Derden",
           "body": [
             "Cloudflare: alle verzoeken aan deze site lopen via Cloudflare, dat de server beschermt en de verbinding versleutelt. Zoals elke netwerktussenpersoon verwerkt Cloudflare je IP-adres en standaard browsergegevens om de pagina's te leveren, en kan het om veiligheidsredenen technische logs bewaren; je video's of audio ontvangt het nooit, want die verlaten je apparaat nooit. Zie hun [privacybeleid](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: het Whisper-model wordt door deze site geleverd, net als de rest van de applicatie. Alleen als het hier niet beschikbaar is, wordt het in plaats daarvan van huggingface.co gedownload; Hugging Face ontvangt dan je IP-adres en standaard browsergegevens, maar nooit je audio. Zie hun [privacybeleid](https://huggingface.co/privacy). Het AI-beeldmodel van de thumbnailmaker wordt altijd gedownload van huggingface.co, alleen als je het gebruikt: Hugging Face ontvangt dan je IP-adres, maar nooit je beschrijving of de afbeelding.",
+            "Hugging Face: de AI-modellen (Whisper voor ondertitels, SANA-Sprint voor thumbnailafbeeldingen) worden bij het eerste gebruik rechtstreeks van huggingface.co gedownload en daarna in je browser bewaard. Hugging Face ontvangt dan je IP-adres en de gebruikelijke browserinformatie, maar nooit je audio, beschrijvingen of afbeeldingen. Zie het [privacybeleid](https://huggingface.co/privacy).",
             "GitHub: alleen als je een link naar de broncoderepository volgt.",
             "Er wordt geen andere derde partij gecontacteerd: een strikte Content-Security-Policy verhindert technisch dat de pagina ergens anders verbinding mee maakt."
           ]
@@ -879,7 +881,8 @@
       "terms": "Door een afbeelding te maken, accepteer je de gebruiksvoorwaarden van het model",
       "downloadError": "Het AI-model kon niet worden gedownload. Probeer het over een paar minuten opnieuw",
       "history": "Je gemaakte afbeeldingen",
-      "requirements": "Alleen op een computer: een recente browser met WebGPU en een videokaart met ongeveer 8 GB geheugen"
+      "requirements": "Alleen op een computer: een recente browser met WebGPU en een videokaart met ongeveer 8 GB geheugen",
+      "storageError": "Het model kon niet op dit apparaat worden opgeslagen. Maak schijfruimte vrij of verlaat privé browsen en probeer het opnieuw"
     }
   },
   "seo": {

@@ -6,7 +6,9 @@
     "close": "Zamknij",
     "retry": "Spróbuj ponownie",
     "none": "Brak",
-    "remove": "Usuń"
+    "remove": "Usuń",
+    "downloadStats": "{{ done }} z {{ total }} · {{ speed }} · pozostało {{ left }}",
+    "reportDownload": "Pobieranie się nie udaje? Zgłoś to na GitHubie"
   },
   "nav": {
     "features": "Funkcje",
@@ -733,7 +735,7 @@
           "title": "Podmioty zewnętrzne",
           "body": [
             "Cloudflare: wszystkie żądania do tej witryny przechodzą przez Cloudflare, który chroni serwer i szyfruje połączenie. Jak każdy pośrednik sieciowy przetwarza Twój adres IP i standardowe informacje o przeglądarce, aby dostarczyć strony, i może przechowywać logi techniczne do celów bezpieczeństwa; nigdy nie otrzymuje Twoich filmów ani dźwięku, które nigdy nie opuszczają Twojego urządzenia. Zobacz [politykę prywatności](https://www.cloudflare.com/privacypolicy/) Cloudflare.",
-            "Hugging Face: model Whisper jest udostępniany przez tę witrynę, tak jak reszta aplikacji. Tylko jeśli nie jest tu dostępny, zostaje pobrany z huggingface.co; Hugging Face otrzymuje wtedy Twój adres IP i standardowe informacje o przeglądarce, ale nigdy Twój dźwięk. Zobacz ich [politykę prywatności](https://huggingface.co/privacy). Model obrazów AI kreatora miniatur jest zawsze pobierany z huggingface.co i tylko wtedy, gdy z niego korzystasz: Hugging Face otrzymuje wówczas Twój adres IP, ale nigdy Twojego opisu ani obrazu.",
+            "Hugging Face: modele AI (Whisper do napisów, SANA-Sprint do obrazów miniatur) są pobierane bezpośrednio z huggingface.co przy pierwszym użyciu, a następnie przechowywane w przeglądarce. Hugging Face otrzymuje wówczas Twój adres IP i standardowe informacje o przeglądarce, ale nigdy Twojego dźwięku, opisów ani obrazów. Zobacz [politykę prywatności](https://huggingface.co/privacy).",
             "GitHub: tylko jeśli klikniesz link do repozytorium kodu źródłowego.",
             "Żaden inny podmiot nie jest kontaktowany: ścisła Content-Security-Policy technicznie uniemożliwia stronie łączenie się gdziekolwiek indziej."
           ]
@@ -879,7 +881,8 @@
       "terms": "Generując obraz, akceptujesz warunki korzystania z modelu",
       "downloadError": "Nie udało się pobrać modelu AI. Spróbuj ponownie za kilka minut",
       "history": "Twoje wygenerowane obrazy",
-      "requirements": "Tylko na komputerze: aktualna przeglądarka z obsługą WebGPU i karta graficzna z około 8 GB pamięci"
+      "requirements": "Tylko na komputerze: aktualna przeglądarka z obsługą WebGPU i karta graficzna z około 8 GB pamięci",
+      "storageError": "Nie udało się zapisać modelu na tym urządzeniu. Zwolnij miejsce na dysku lub wyjdź z trybu prywatnego i spróbuj ponownie"
     }
   },
   "seo": {

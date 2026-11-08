@@ -83,7 +83,7 @@ async function ensureFiles(onProgress: (p: ImageProgress) => void): Promise<Reco
   }
   for (const id of missing) {
     const { url } = FILES[id];
-    onProgress({ stage: 'download', progress: done / TOTAL_BYTES });
+    onProgress({ stage: 'download', progress: done / TOTAL_BYTES, loaded: done, total: TOTAL_BYTES });
     const response = await fetch(url);
     if (!response.ok || !response.body) throw new Error(`Error (${response.status}) downloading ${url}`);
     const [toCache, toCount] = response.body.tee();
@@ -97,7 +97,7 @@ async function ensureFiles(onProgress: (p: ImageProgress) => void): Promise<Reco
         throw new Error('CANCELLED');
       }
       done += value.length;
-      onProgress({ stage: 'download', progress: Math.min(0.999, done / TOTAL_BYTES) });
+      onProgress({ stage: 'download', progress: Math.min(0.999, done / TOTAL_BYTES), loaded: done, total: TOTAL_BYTES });
     }
     await saved;
     found[id] = await (await cache.match(url))!.blob();

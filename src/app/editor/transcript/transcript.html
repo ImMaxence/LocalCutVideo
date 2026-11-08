@@ -90,6 +90,7 @@
       <button class="btn ghost sm" type="button" (click)="transcribe.emit()" [disabled]="!store.analysis()">
         {{ 'editor.auto.transcribeOnly' | transloco }}
       </button>
+      <app-report-download model="Whisper" />
     }
   </div>
 }

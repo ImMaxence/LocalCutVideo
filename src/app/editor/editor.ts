@@ -9,10 +9,12 @@ import { SILENCE_PRESETS } from '../engine/audio-analysis';
 import type { AspectFormat, ExportSettings, Project } from '../engine/model';
 import { outputSize } from '../engine/render';
 import { formatTime } from '../engine/timeline-math';
+import { DownloadProgress } from '../shared/download-progress';
 import { Icon } from '../shared/icon';
 import { LangPicker } from '../shared/lang-picker';
 import { LocalizePipe } from '../shared/localize';
 import { Logo } from '../shared/logo';
+import { ReportDownload } from '../shared/report-download';
 import { Select, type SelectOption } from '../shared/select';
 import { type AutoEditOptions, type AutoStepId, EditorStore } from './editor.store';
 import { INSPECTOR_TABS, Inspector, type InspectorTab } from './inspector/inspector';
@@ -36,7 +38,7 @@ function readSessionFlag(key: string): boolean {
 
 @Component({
   selector: 'app-editor',
-  imports: [RouterLink, TranslocoPipe, Icon, Logo, LangPicker, Preview, Timeline, Transcript, Inspector, LocalizePipe, Tour, Select],
+  imports: [RouterLink, TranslocoPipe, Icon, Logo, LangPicker, Preview, Timeline, Transcript, Inspector, LocalizePipe, Tour, Select, DownloadProgress, ReportDownload],
   providers: [EditorStore],
   templateUrl: './editor.html',
   styleUrl: './editor.scss',
@@ -201,6 +203,13 @@ export class Editor {
     if (id === 'transcribe') return this.store.transcription()?.progress || null;
     if (id === 'framing') return this.store.faceProgress() || null;
     return null;
+  }
+
+  /** Bytes of the model the running step is downloading. */
+  protected stepDownload(id: AutoStepId): { loaded: number; total: number } | null {
+    if (id === 'voice') return this.store.voiceDownload();
+    const task = id === 'transcribe' ? this.store.transcription() : null;
+    return task?.stage === 'download' && task.total ? { loaded: task.loaded ?? 0, total: task.total } : null;
   }
 
   /** The steps long enough to need a progress bar. */

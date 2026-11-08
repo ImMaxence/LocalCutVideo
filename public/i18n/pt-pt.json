@@ -6,7 +6,9 @@
     "close": "Fechar",
     "retry": "Tentar novamente",
     "none": "Nenhum",
-    "remove": "Remover"
+    "remove": "Remover",
+    "downloadStats": "{{ done }} de {{ total }} · {{ speed }} · faltam {{ left }}",
+    "reportDownload": "A transferência falhou? Comunique no GitHub"
   },
   "nav": {
     "features": "Funcionalidades",
@@ -733,7 +735,7 @@
           "title": "Terceiros",
           "body": [
             "Cloudflare: todos os pedidos a este site passam pela Cloudflare, que protege o servidor e cifra a ligação. Como qualquer intermediário de rede, trata o seu endereço IP e as informações normais do navegador para entregar as páginas, e pode conservar registos técnicos para fins de segurança; nunca recebe os seus vídeos nem o seu áudio, que nunca saem do seu dispositivo. Consulte a [política de privacidade](https://www.cloudflare.com/privacypolicy/) da Cloudflare.",
-            "Hugging Face: o modelo Whisper é fornecido por este site, tal como o resto da aplicação. Só se não estiver disponível aqui é que é transferido de huggingface.co; nesse caso, o Hugging Face recebe o seu endereço IP e as informações normais do navegador, mas nunca o seu áudio. Consulte a respetiva [política de privacidade](https://huggingface.co/privacy). O modelo de imagem com IA do criador de miniaturas é sempre transferido de huggingface.co, apenas se o utilizar: a Hugging Face recebe então o seu endereço IP, mas nunca a sua descrição nem a imagem.",
+            "Hugging Face: os modelos de IA (Whisper para as legendas, SANA-Sprint para as imagens de miniaturas) são transferidos diretamente de huggingface.co na primeira utilização e depois ficam no seu navegador. A Hugging Face recebe então o seu endereço IP e as informações habituais do navegador, mas nunca o seu áudio, as suas descrições ou as suas imagens. Consulte a [política de privacidade](https://huggingface.co/privacy).",
             "GitHub: apenas se seguir uma ligação para o repositório do código-fonte.",
             "Nenhum outro terceiro é contactado: uma Content-Security-Policy rigorosa impede tecnicamente a página de se ligar a qualquer outro lado."
           ]
@@ -879,7 +881,8 @@
       "terms": "Ao gerar uma imagem, aceita os termos de utilização do modelo",
       "downloadError": "Não foi possível transferir o modelo de IA. Tente novamente dentro de alguns minutos",
       "history": "As suas imagens geradas",
-      "requirements": "Apenas em computador: um navegador recente compatível com WebGPU e uma placa gráfica com cerca de 8 GB de memória"
+      "requirements": "Apenas em computador: um navegador recente compatível com WebGPU e uma placa gráfica com cerca de 8 GB de memória",
+      "storageError": "Não foi possível guardar o modelo neste dispositivo. Liberte espaço em disco ou saia da navegação privada e tente novamente"
     }
   },
   "seo": {

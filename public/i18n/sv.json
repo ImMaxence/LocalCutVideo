@@ -6,7 +6,9 @@
     "close": "Stäng",
     "retry": "Försök igen",
     "none": "Ingen",
-    "remove": "Ta bort"
+    "remove": "Ta bort",
+    "downloadStats": "{{ done }} av {{ total }} · {{ speed }} · {{ left }} kvar",
+    "reportDownload": "Misslyckas nedladdningen? Rapportera på GitHub"
   },
   "nav": {
     "features": "Funktioner",
@@ -733,7 +735,7 @@
           "title": "Tredje parter",
           "body": [
             "Cloudflare: alla förfrågningar till den här webbplatsen går via Cloudflare, som skyddar servern och krypterar anslutningen. Som alla nätverksmellanhänder behandlar Cloudflare din IP-adress och vanlig webbläsarinformation för att leverera sidorna, och kan spara tekniska loggar av säkerhetsskäl; det tar aldrig emot dina videor eller ditt ljud, som aldrig lämnar din enhet. Se deras [integritetspolicy](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: Whisper-modellen levereras av den här webbplatsen, precis som resten av applikationen. Bara om den inte finns tillgänglig här laddas den i stället ned från huggingface.co; Hugging Face tar då emot din IP-adress och vanlig webbläsarinformation, men aldrig ditt ljud. Se deras [integritetspolicy](https://huggingface.co/privacy). Miniatyrverktygets AI-bildmodell laddas alltid ned från huggingface.co, bara om du använder den: Hugging Face får då din IP-adress, men aldrig din beskrivning eller bilden.",
+            "Hugging Face: AI-modellerna (Whisper för undertexter, SANA-Sprint för miniatyrbilder) laddas ned direkt från huggingface.co första gången du använder dem och sparas sedan i din webbläsare. Hugging Face får då din IP-adress och vanlig webbläsarinformation, men aldrig ditt ljud, dina beskrivningar eller dina bilder. Se deras [integritetspolicy](https://huggingface.co/privacy).",
             "GitHub: bara om du följer en länk till källkodsförrådet.",
             "Ingen annan tredje part kontaktas: en strikt Content-Security-Policy hindrar tekniskt sidan från att ansluta någon annanstans."
           ]
@@ -879,7 +881,8 @@
       "terms": "Genom att skapa en bild godkänner du modellens användarvillkor",
       "downloadError": "AI-modellen kunde inte laddas ned. Försök igen om några minuter",
       "history": "Dina skapade bilder",
-      "requirements": "Endast på dator: en modern webbläsare med WebGPU och ett grafikkort med cirka 8 GB minne"
+      "requirements": "Endast på dator: en modern webbläsare med WebGPU och ett grafikkort med cirka 8 GB minne",
+      "storageError": "Modellen kunde inte sparas på den här enheten. Frigör diskutrymme eller lämna privat surfning och försök igen"
     }
   },
   "seo": {

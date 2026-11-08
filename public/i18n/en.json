@@ -6,7 +6,9 @@
     "close": "Close",
     "retry": "Retry",
     "none": "None",
-    "remove": "Remove"
+    "remove": "Remove",
+    "downloadStats": "{{ done }} of {{ total }} · {{ speed }} · {{ left }} left",
+    "reportDownload": "Download failing? Report it on GitHub"
   },
   "nav": {
     "features": "Features",
@@ -733,7 +735,7 @@
           "title": "Third parties",
           "body": [
             "Cloudflare: every request to this site passes through Cloudflare, which protects the server and encrypts the connection. Like any network intermediary, it processes your IP address and standard browser information to deliver the pages, and may keep technical logs for security purposes; it never receives your videos or audio, which never leave your device. See their [privacy policy](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: the Whisper model is served by this site, like the rest of the application. Only if it is not available here is it downloaded from huggingface.co instead; Hugging Face then receives your IP address and standard browser information, but never your audio. See their [privacy policy](https://huggingface.co/privacy). The AI image model of the thumbnail maker is always downloaded from huggingface.co, only if you use it: Hugging Face then receives your IP address, but never your description or the image.",
+            "Hugging Face: the AI models (Whisper for subtitles, SANA-Sprint for thumbnail images) are downloaded directly from huggingface.co the first time you use them, then kept in your browser. Hugging Face then receives your IP address and standard browser information, but never your audio, your descriptions or your images. See their [privacy policy](https://huggingface.co/privacy).",
             "GitHub: only if you follow a link to the source code repository.",
             "No other third party is contacted: a strict Content-Security-Policy technically prevents the page from connecting anywhere else."
           ]
@@ -879,7 +881,8 @@
       "terms": "By generating an image, you accept the model's terms of use",
       "downloadError": "The AI model could not be downloaded. Try again in a few minutes",
       "history": "Your generated images",
-      "requirements": "Computer only: a recent browser with WebGPU and a graphics card with about 8 GB of memory"
+      "requirements": "Computer only: a recent browser with WebGPU and a graphics card with about 8 GB of memory",
+      "storageError": "The model could not be saved on this device. Free up disk space or leave private browsing, then try again"
     }
   },
   "seo": {

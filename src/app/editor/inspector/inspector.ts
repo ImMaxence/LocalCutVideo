@@ -19,7 +19,9 @@ import {
 import type { PlacedClip } from '../../engine/sequence';
 import { formatTime, nextKeptTime } from '../../engine/timeline-math';
 import { ConfirmService } from '../../shared/confirm';
+import { DownloadProgress } from '../../shared/download-progress';
 import { Icon } from '../../shared/icon';
+import { ReportDownload } from '../../shared/report-download';
 import { Select, type SelectOption } from '../../shared/select';
 import { EditorStore } from '../editor.store';
 
@@ -35,12 +37,12 @@ export const INSPECTOR_TABS: { id: InspectorTab; icon: string }[] = [
   { id: 'audio', icon: 'volume' },
 ];
 
-/** Approximate one-time download per model (WASM / WebGPU variants differ slightly). */
-const MODEL_SIZES: Record<WhisperModel, string> = { tiny: '≈ 40 MB', base: '≈ 80 MB', small: '≈ 250 MB' };
+/** Approximate one-time download per model: the smaller figure without a graphics card, the larger with one. */
+const MODEL_SIZES: Record<WhisperModel, string> = { tiny: '≈ 40–125 MB', base: '≈ 80–250 MB', small: '≈ 250–600 MB' };
 
 @Component({
   selector: 'app-inspector',
-  imports: [TranslocoPipe, Icon, Select],
+  imports: [TranslocoPipe, Icon, Select, DownloadProgress, ReportDownload],
   templateUrl: './inspector.html',
   styleUrl: './inspector.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

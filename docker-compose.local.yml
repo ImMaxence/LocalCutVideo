@@ -2,9 +2,5 @@
 #   docker compose -f docker-compose.yml -f docker-compose.local.yml up --build
 services:
   web:
-    build:
-      args:
-        # Two models are enough to test locally (about 500 MB); production serves the three.
-        WHISPER_MODELS: tiny,base
     ports:
       - '4280:80'

@@ -38,7 +38,9 @@ import {
 } from '../engine/thumbnail';
 import { formatTime } from '../engine/timeline-math';
 import { Icon } from '../shared/icon';
+import { DownloadProgress } from '../shared/download-progress';
 import { LocalizePipe } from '../shared/localize';
+import { ReportDownload } from '../shared/report-download';
 
 interface Source {
   kind: 'video' | 'image';
@@ -80,6 +82,9 @@ const AI_DOWNLOAD_SIZE = '≈ 3.1 GB';
 /** Generated pictures kept on this device. */
 const AI_HISTORY = 24;
 
+/** What the browser says when it cannot keep the model: disk full, or a private window. */
+const MODEL_STORAGE_FAILURE = /on 'Cache'|quota/i;
+
 /** What Transformers.js and the browser say when Hugging Face refuses or cannot serve the model. */
 const MODEL_DOWNLOAD_FAILURE = /huggingface\.co\/|Failed to fetch|NetworkError/i;
 
@@ -114,7 +119,7 @@ function seekTo(video: HTMLVideoElement, t: number): Promise<void> {
  */
 @Component({
   selector: 'app-thumbnail',
-  imports: [TranslocoPipe, Icon, RouterLink, NgTemplateOutlet, LocalizePipe],
+  imports: [TranslocoPipe, Icon, RouterLink, NgTemplateOutlet, LocalizePipe, DownloadProgress, ReportDownload],
   templateUrl: './thumbnail.html',
   styleUrl: './thumbnail.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -542,7 +547,8 @@ export class Thumbnail {
     } catch (e) {
       if (this.aiCancelled || String((e as Error)?.message).includes('CANCELLED')) return;
       console.error('Image generation failed', e);
-      this.error.set(MODEL_DOWNLOAD_FAILURE.test(String((e as Error)?.message ?? e)) ? 'thumbnail.ai.downloadError' : 'thumbnail.ai.error');
+      const message = String((e as Error)?.message ?? e);
+      this.error.set(MODEL_STORAGE_FAILURE.test(message) ? 'thumbnail.ai.storageError' : MODEL_DOWNLOAD_FAILURE.test(message) ? 'thumbnail.ai.downloadError' : 'thumbnail.ai.error');
     } finally {
       clearInterval(ticker);
       this.aiProgress.set(null);

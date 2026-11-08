@@ -6,7 +6,9 @@
     "close": "Funga",
     "retry": "Jaribu tena",
     "none": "Hakuna",
-    "remove": "Ondoa"
+    "remove": "Ondoa",
+    "downloadStats": "{{ done }} kati ya {{ total }} · {{ speed }} · zimebaki {{ left }}",
+    "reportDownload": "Upakuaji unashindwa? Ripoti kwenye GitHub"
   },
   "nav": {
     "features": "Vipengele",
@@ -733,7 +735,7 @@
           "title": "Wahusika wengine",
           "body": [
             "Cloudflare: maombi yote kwa tovuti hii hupitia Cloudflare, inayolinda seva na kusimba muunganisho. Kama mpatanishi yeyote wa mtandao, huchakata anwani yako ya IP na taarifa za kawaida za kivinjari ili kuwasilisha kurasa, na inaweza kuhifadhi kumbukumbu za kiufundi kwa madhumuni ya usalama; kamwe haipokei video au sauti yako, ambazo kamwe haziondoki kwenye kifaa chako. Tazama [sera yao ya faragha](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: modeli ya Whisper hutolewa na tovuti hii, kama sehemu nyingine ya programu. Ikiwa tu haipatikani hapa ndipo inapakuliwa kutoka huggingface.co; wakati huo Hugging Face hupokea anwani yako ya IP na taarifa za kawaida za kivinjari, lakini kamwe si sauti yako. Tazama [sera yao ya faragha](https://huggingface.co/privacy). Modeli ya picha ya AI ya kitengeneza vijipicha hupakuliwa kila mara kutoka huggingface.co, ukiitumia tu: Hugging Face hupokea anwani yako ya IP, lakini kamwe si maelezo yako wala picha.",
+            "Hugging Face: modeli za AI (Whisper kwa manukuu, SANA-Sprint kwa picha za vijipicha) hupakuliwa moja kwa moja kutoka huggingface.co unapozitumia kwa mara ya kwanza, kisha huhifadhiwa kwenye kivinjari chako. Hugging Face hupokea anwani yako ya IP na taarifa za kawaida za kivinjari, lakini kamwe si sauti yako, maelezo yako wala picha zako. Tazama [sera ya faragha](https://huggingface.co/privacy).",
             "GitHub: ikiwa tu utafuata kiungo cha hazina ya msimbo chanzo.",
             "Hakuna mhusika mwingine anayewasiliana naye: Content-Security-Policy kali kiufundi huzuia ukurasa kuunganishwa mahali pengine popote."
           ]
@@ -879,7 +881,8 @@
       "terms": "Kwa kutengeneza picha, unakubali masharti ya matumizi ya modeli",
       "downloadError": "Modeli ya AI haikuweza kupakuliwa. Jaribu tena baada ya dakika chache",
       "history": "Picha ulizotengeneza",
-      "requirements": "Kwenye kompyuta tu: kivinjari kipya chenye WebGPU na kadi ya michoro yenye kumbukumbu ya takriban GB 8"
+      "requirements": "Kwenye kompyuta tu: kivinjari kipya chenye WebGPU na kadi ya michoro yenye kumbukumbu ya takriban GB 8",
+      "storageError": "Modeli haikuweza kuhifadhiwa kwenye kifaa hiki. Futa nafasi kwenye diski au toka kwenye kuvinjari kwa faragha, kisha ujaribu tena"
     }
   },
   "seo": {

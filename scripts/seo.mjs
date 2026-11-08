@@ -197,7 +197,7 @@ LocalCutVideo is a web app (installable as a PWA, works offline), version ${vers
 ## Requirements
 
 - A recent Chrome or Edge on a computer gives every feature; Firefox and Safari work with some limits
-- The Whisper model (about 40 to 250 MB) is downloaded once on first use, then cached
+- The Whisper model (about 40 to 600 MB, depending on the model and the graphics card) is downloaded once on first use, then cached
 - AI thumbnail images need a computer with WebGPU; their model (SANA-Sprint 0.6B, about 3.1 GB) is downloaded from Hugging Face only if used, then cached
 
 ## Pages

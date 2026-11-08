@@ -6,7 +6,9 @@
     "close": "Fechar",
     "retry": "Tentar de novo",
     "none": "Nenhum",
-    "remove": "Remover"
+    "remove": "Remover",
+    "downloadStats": "{{ done }} de {{ total }} · {{ speed }} · faltam {{ left }}",
+    "reportDownload": "O download falhou? Avise no GitHub"
   },
   "nav": {
     "features": "Recursos",
@@ -733,7 +735,7 @@
           "title": "Terceiros",
           "body": [
             "Cloudflare: todas as solicitações a este site passam pela Cloudflare, que protege o servidor e criptografa a conexão. Como qualquer intermediário de rede, ela trata o seu endereço IP e as informações padrão do navegador para entregar as páginas, e pode manter registros técnicos para fins de segurança; ela nunca recebe os seus vídeos nem o seu áudio, que nunca saem do seu dispositivo. Veja a [política de privacidade](https://www.cloudflare.com/privacypolicy/) dela.",
-            "Hugging Face: o modelo Whisper é fornecido por este site, como o resto do aplicativo. Só se ele não estiver disponível aqui é que ele é baixado de huggingface.co; nesse caso, o Hugging Face recebe o seu endereço IP e as informações padrão do navegador, mas nunca o seu áudio. Veja a [política de privacidade](https://huggingface.co/privacy) deles. O modelo de imagem com IA do criador de miniaturas é sempre baixado de huggingface.co, somente se você o usar: o Hugging Face recebe então seu endereço IP, mas nunca sua descrição nem a imagem.",
+            "Hugging Face: os modelos de IA (Whisper para as legendas, SANA-Sprint para as imagens de miniaturas) são baixados diretamente de huggingface.co na primeira vez que você os usa e depois ficam no seu navegador. O Hugging Face recebe então seu endereço IP e as informações comuns do navegador, mas nunca seu áudio, suas descrições ou suas imagens. Veja a [política de privacidade](https://huggingface.co/privacy).",
             "GitHub: somente se você seguir um link para o repositório do código-fonte.",
             "Nenhum outro terceiro é contatado: uma Content-Security-Policy rígida impede tecnicamente a página de se conectar a qualquer outro lugar."
           ]
@@ -879,7 +881,8 @@
       "terms": "Ao gerar uma imagem, você aceita os termos de uso do modelo",
       "downloadError": "Não foi possível baixar o modelo de IA. Tente novamente em alguns minutos",
       "history": "Suas imagens geradas",
-      "requirements": "Somente no computador: um navegador recente compatível com WebGPU e uma placa de vídeo com cerca de 8 GB de memória"
+      "requirements": "Somente no computador: um navegador recente compatível com WebGPU e uma placa de vídeo com cerca de 8 GB de memória",
+      "storageError": "Não foi possível salvar o modelo neste dispositivo. Libere espaço em disco ou saia da navegação privada e tente novamente"
     }
   },
   "seo": {

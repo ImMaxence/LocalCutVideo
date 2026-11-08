@@ -6,7 +6,9 @@
     "close": "Chiudi",
     "retry": "Riprova",
     "none": "Nessuno",
-    "remove": "Rimuovi"
+    "remove": "Rimuovi",
+    "downloadStats": "{{ done }} di {{ total }} · {{ speed }} · restano {{ left }}",
+    "reportDownload": "Il download non riesce? Segnalalo su GitHub"
   },
   "nav": {
     "features": "Funzionalità",
@@ -733,7 +735,7 @@
           "title": "Terze parti",
           "body": [
             "Cloudflare: tutte le richieste a questo sito passano da Cloudflare, che protegge il server e cifra la connessione. Come ogni intermediario di rete, tratta il tuo indirizzo IP e le informazioni standard del browser per consegnare le pagine, e può conservare log tecnici per motivi di sicurezza; non riceve mai i tuoi video né il tuo audio, che non lasciano mai il tuo dispositivo. Consulta la sua [informativa sulla privacy](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: il modello Whisper è servito da questo sito, come il resto dell'applicazione. Solo se qui non è disponibile viene scaricato da huggingface.co; Hugging Face riceve allora il tuo indirizzo IP e le informazioni standard del browser, ma mai il tuo audio. Vedi la loro [informativa sulla privacy](https://huggingface.co/privacy). Il modello di immagini IA del creatore di miniature viene sempre scaricato da huggingface.co, solo se lo usi: Hugging Face riceve allora il tuo indirizzo IP, ma mai la tua descrizione né l'immagine.",
+            "Hugging Face: i modelli di IA (Whisper per i sottotitoli, SANA-Sprint per le immagini delle miniature) vengono scaricati direttamente da huggingface.co al primo utilizzo e poi conservati nel browser. Hugging Face riceve allora il tuo indirizzo IP e le normali informazioni del browser, ma mai il tuo audio, le tue descrizioni o le tue immagini. Consulta la [informativa sulla privacy](https://huggingface.co/privacy).",
             "GitHub: solo se segui un link al repository del codice sorgente.",
             "Nessun'altra terza parte viene contattata: una Content-Security-Policy rigorosa impedisce tecnicamente alla pagina di collegarsi altrove."
           ]
@@ -879,7 +881,8 @@
       "terms": "Generando un'immagine, accetti le condizioni d'uso del modello",
       "downloadError": "Impossibile scaricare il modello IA. Riprova tra qualche minuto",
       "history": "Le tue immagini generate",
-      "requirements": "Solo su computer: un browser recente compatibile con WebGPU e una scheda grafica con circa 8 GB di memoria"
+      "requirements": "Solo su computer: un browser recente compatibile con WebGPU e una scheda grafica con circa 8 GB di memoria",
+      "storageError": "Impossibile salvare il modello su questo dispositivo. Libera spazio su disco o esci dalla navigazione privata e riprova"
     }
   },
   "seo": {

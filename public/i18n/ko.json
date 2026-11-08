@@ -6,7 +6,9 @@
     "close": "닫기",
     "retry": "다시 시도",
     "none": "없음",
-    "remove": "삭제"
+    "remove": "삭제",
+    "downloadStats": "{{ done }} / {{ total }} · {{ speed }} · 남은 용량 {{ left }}",
+    "reportDownload": "다운로드가 실패하나요? GitHub에 알려 주세요"
   },
   "nav": {
     "features": "기능",
@@ -733,7 +735,7 @@
           "title": "제3자",
           "body": [
             "Cloudflare: 이 사이트에 대한 모든 요청은 서버를 보호하고 연결을 암호화하는 Cloudflare를 거칩니다. 다른 네트워크 중개자와 마찬가지로 페이지를 전달하기 위해 IP 주소와 일반적인 브라우저 정보를 처리하며, 보안 목적으로 기술 로그를 보관할 수 있습니다. 동영상이나 음성은 절대 받지 않으며, 이는 기기를 떠나지 않습니다. 해당 회사의 [개인정보 처리방침](https://www.cloudflare.com/privacypolicy/)을 참고하세요.",
-            "Hugging Face: Whisper 모델은 앱의 나머지 부분과 마찬가지로 이 사이트에서 제공합니다. 여기서 사용할 수 없을 때만 대신 huggingface.co에서 내려받으며, 이때 Hugging Face는 IP 주소와 일반적인 브라우저 정보를 받지만 음성은 절대 받지 않습니다. 해당 회사의 [개인정보 처리방침](https://huggingface.co/privacy)을 참고하세요. 썸네일 제작 도구의 AI 이미지 모델은 사용할 때만 항상 huggingface.co에서 다운로드됩니다. 이때 Hugging Face는 IP 주소를 받지만 설명이나 이미지는 절대 받지 않습니다.",
+            "Hugging Face: AI 모델(자막용 Whisper, 썸네일 이미지용 SANA-Sprint)은 처음 사용할 때 huggingface.co에서 직접 다운로드되며 이후 브라우저에 보관됩니다. 이때 Hugging Face는 IP 주소와 일반적인 브라우저 정보를 받지만 오디오, 설명, 이미지는 절대 받지 않습니다. [개인정보 처리방침](https://huggingface.co/privacy)을 참조하세요.",
             "GitHub: 소스 코드 저장소 링크를 따라갈 때만.",
             "그 밖의 제3자와는 연결하지 않습니다. 엄격한 Content-Security-Policy가 페이지가 다른 곳에 연결하는 것을 기술적으로 막습니다."
           ]
@@ -879,7 +881,8 @@
       "terms": "이미지를 생성하면 모델 이용 약관에 동의하는 것입니다",
       "downloadError": "AI 모델을 다운로드하지 못했습니다. 몇 분 후 다시 시도하세요",
       "history": "생성한 이미지",
-      "requirements": "컴퓨터 전용: WebGPU를 지원하는 최신 브라우저와 메모리 약 8GB의 그래픽 카드가 필요합니다"
+      "requirements": "컴퓨터 전용: WebGPU를 지원하는 최신 브라우저와 메모리 약 8GB의 그래픽 카드가 필요합니다",
+      "storageError": "이 기기에 모델을 저장하지 못했습니다. 디스크 공간을 확보하거나 시크릿 모드를 종료한 후 다시 시도하세요"
     }
   },
   "seo": {

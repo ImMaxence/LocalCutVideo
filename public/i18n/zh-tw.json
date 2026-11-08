@@ -6,7 +6,9 @@
     "close": "關閉",
     "retry": "重試",
     "none": "無",
-    "remove": "移除"
+    "remove": "移除",
+    "downloadStats": "{{ done }} / {{ total }} · {{ speed }} · 剩餘 {{ left }}",
+    "reportDownload": "下載失敗？請在 GitHub 上回報"
   },
   "nav": {
     "features": "功能",
@@ -733,7 +735,7 @@
           "title": "第三方",
           "body": [
             "Cloudflare：對本站的所有請求都會經過 Cloudflare，它負責保護伺服器並加密連線。與任何網路中介一樣，它會處理你的 IP 位址和一般瀏覽器資訊以傳送頁面，並可能基於安全目的保留技術記錄；它絕不會收到你的影片或音訊，因為它們從不離開你的裝置。詳見其[隱私權政策](https://www.cloudflare.com/privacypolicy/)。",
-            "Hugging Face：Whisper 模型與應用程式的其他部分一樣由本站提供。只有本站無法提供時，才會改從 huggingface.co 下載；此時 Hugging Face 會收到你的 IP 位址和一般瀏覽器資訊，但絕不會收到你的音訊。請參閱其[隱私權政策](https://huggingface.co/privacy)。 縮圖工具的 AI 影像模型一律從 huggingface.co 下載，且僅在您使用時下載：此時 Hugging Face 會收到您的 IP 位址，但絕不會收到您的描述或圖片。",
+            "Hugging Face：AI 模型（用於字幕的 Whisper、用於縮圖影像的 SANA-Sprint）在您首次使用時直接從 huggingface.co 下載，之後保存在您的瀏覽器中。此時 Hugging Face 會收到您的 IP 位址和一般瀏覽器資訊，但絕不會收到您的音訊、描述或影像。請參閱其[隱私權政策](https://huggingface.co/privacy)。",
             "GitHub：僅在你點擊指向原始碼儲存庫的連結時。",
             "不會連絡任何其他第三方：嚴格的 Content-Security-Policy 在技術上阻止頁面連線到其他任何地方。"
           ]
@@ -879,7 +881,8 @@
       "terms": "產生影像即表示您接受該模型的使用條款",
       "downloadError": "無法下載 AI 模型。請幾分鐘後再試",
       "history": "您產生的圖片",
-      "requirements": "僅限電腦：需要支援 WebGPU 的較新瀏覽器，以及約 8 GB 記憶體的顯示卡"
+      "requirements": "僅限電腦：需要支援 WebGPU 的較新瀏覽器，以及約 8 GB 記憶體的顯示卡",
+      "storageError": "無法在此裝置上儲存模型。請釋放磁碟空間或退出無痕瀏覽後再試"
     }
   },
   "seo": {

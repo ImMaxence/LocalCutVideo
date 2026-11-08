@@ -1,16 +1,15 @@
 /// <reference lib="webworker" />
 /**
  * AI worker: runs Whisper locally with Transformers.js (WebGPU when available and working, WASM
- * otherwise) and returns word-level timestamps. The model is downloaded once, from this site
- * when it hosts it (/models), otherwise from Hugging Face, then served from the browser cache,
- * so it works offline afterwards.
+ * otherwise) and returns word-level timestamps. The model is downloaded once from Hugging Face, then served from
+ * the browser cache, so it works offline afterwards.
  */
 import * as Comlink from 'comlink';
 import { env, pipeline, type AutomaticSpeechRecognitionPipeline } from '@huggingface/transformers';
 import { WHISPER_REPOS } from '../core/whisper-models';
 import { languagesToCheck, rankLanguages, settleLanguage } from '../engine/language';
 import type { WhisperModel } from '../engine/model';
-import { modelProgress } from './model-progress';
+import { modelProgress, whisperIsCached } from './model-progress';
 import type { AiDevice, AiWorkerApi, RawWord, SpeechSample, TranscribeProgress, WhisperChunk } from './worker-types';
 
 env.allowLocalModels = false;
@@ -47,29 +46,12 @@ async function detectDevice(): Promise<{ device: AiDevice; fp16: boolean }> {
   return { device: 'wasm', fp16: false };
 }
 
-/** Models this site serves itself (listed by scripts/download-models.mjs), null when unknown. */
-let hosted: Promise<string[]> | null = null;
-
-function hostedModels(): Promise<string[]> {
-  hosted ??= fetch(`${self.location.origin}/models/manifest.json`)
-    .then((r) => (r.ok ? r.json() : null))
-    .then((m: { models?: unknown } | null) => (Array.isArray(m?.models) ? (m.models as string[]) : []))
-    .catch(() => []);
-  return hosted;
-}
-
 /** The GPU check, made once (and again after a WebGPU failure). */
 let detected: Promise<{ device: AiDevice; fp16: boolean }> | null = null;
 
 async function load(model: WhisperModel, onProgress: (p: TranscribeProgress) => void): Promise<AiDevice> {
   detected ??= detectDevice();
   const target = await detected;
-  // Served here: no request to Hugging Face at all. Otherwise Hugging Face is the source.
-  const local = (await hostedModels()).includes(model);
-  env.allowLocalModels = local;
-  env.allowRemoteModels = !local;
-  // A path, not a full URL: Transformers.js only checks that local files exist for paths.
-  env.localModelPath = '/models/';
   const key = `${model}|${target.device}`;
   if (transcriber && loadedKey === key) return device;
   // A broken GPU may also fail to free its model: it is dropped anyway.
@@ -88,11 +70,12 @@ async function load(model: WhisperModel, onProgress: (p: TranscribeProgress) => 
       : { encoder_model: 'q8', decoder_model_merged: 'q8' };
 
   const { repo, revision } = WHISPER_REPOS[model];
+  const fromCache = await whisperIsCached(repo, revision, dtype);
   transcriber = (await pipeline('automatic-speech-recognition', repo, {
     revision,
     device,
     dtype: dtype as never,
-    progress_callback: modelProgress(onProgress) as never,
+    progress_callback: modelProgress(onProgress, fromCache) as never,
   })) as AutomaticSpeechRecognitionPipeline;
   loadedKey = key;
   return device;

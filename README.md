@@ -40,7 +40,7 @@
 | **Text-based editing** | Whisper word timestamps: delete words in the transcript to cut the video. Correct misheard words or sentences. Filler-word removal. |
 | **Manual cuts** | Drag on the waveform (or use Start / End, keys I and O) to select a part, then Cut (X). |
 | **Speed changes** | Speed up or slow down the selected part or transcript words (0.25× to 4×). Voices keep their pitch (WSOLA time stretch in the export). |
-| **Self-hosted AI** | The Whisper models are served by the site itself (downloaded at the Docker build): transcribing never contacts a third party. Hugging Face is only a backup when a model is missing. The optional image model is too large to self-host and always comes from Hugging Face. |
+| **AI on your device** | Whisper and SANA-Sprint come straight from Hugging Face, once, and then run in your browser. Hugging Face sees the download, never your audio, descriptions or images. A link below each button reports a failed download on GitHub. |
 | **GPU or CPU** | Whisper runs on the graphics card (WebGPU) and switches to the processor (WebAssembly) if the GPU fails; iPhone and iPad use the processor from the start. A failed transcription shows the error's detail. |
 | **Language detection** | The spoken language is detected automatically (Whisper language ID), or chosen by hand. |
 | **Karaoke subtitles** | Word-by-word animated captions burned into the video (karaoke, clean, boxed). |
@@ -196,17 +196,9 @@ docker compose -f docker-compose.yml -f docker-compose.local.yml up --build
 # → http://localhost:4280
 ```
 
-### Whisper models
+### AI models
 
-The Docker build downloads the Whisper models into the image (`scripts/download-models.mjs`), so visitors get them from your server and never from Hugging Face. The `WHISPER_MODELS` build argument in `docker-compose.yml` chooses them:
-
-| Model | In the app | Size |
-| --- | --- | --- |
-| `tiny` | Fast | ≈ 180 MB |
-| `base` | Balanced | ≈ 330 MB |
-| `small` | Accurate | ≈ 1 GB |
-
-The first build downloads them (about 1.5 GB for the three); Docker keeps that step in cache, so later builds are fast. Each visitor downloads a model once, then their browser keeps it. A model that is not in the image falls back to Hugging Face. Each model is pinned to a Hugging Face commit in [`src/app/core/whisper-models.ts`](src/app/core/whisper-models.ts), for the build and the app alike. For `npm start`, run `node scripts/download-models.mjs --models tiny` to serve one from `public/models` (ignored by Git).
+The server carries no AI model from Hugging Face. Whisper and SANA-Sprint are downloaded by each visitor's browser straight from Hugging Face, once, then kept in the browser. Each one is pinned to a commit (see [`src/app/core/whisper-models.ts`](src/app/core/whisper-models.ts) and `src/app/workers/image.worker.ts`). MediaPipe and RNNoise are small and ship with the site.
 
 ### Coolify
 

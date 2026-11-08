@@ -14,6 +14,7 @@ import { isFiller } from '../../engine/fillers';
 import type { Word } from '../../engine/model';
 import { formatTime } from '../../engine/timeline-math';
 import { Icon } from '../../shared/icon';
+import { ReportDownload } from '../../shared/report-download';
 import { EditorStore } from '../editor.store';
 import { SpeedMenu } from '../speed-menu';
 
@@ -29,7 +30,7 @@ interface Paragraph {
  */
 @Component({
   selector: 'app-transcript',
-  imports: [TranslocoPipe, Icon, SpeedMenu],
+  imports: [TranslocoPipe, Icon, SpeedMenu, ReportDownload],
   templateUrl: './transcript.html',
   styleUrl: './transcript.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

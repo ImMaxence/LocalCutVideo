@@ -6,7 +6,9 @@
     "close": "Zavrieť",
     "retry": "Skúsiť znova",
     "none": "Žiadne",
-    "remove": "Odstrániť"
+    "remove": "Odstrániť",
+    "downloadStats": "{{ done }} z {{ total }} · {{ speed }} · zostáva {{ left }}",
+    "reportDownload": "Sťahovanie zlyháva? Nahláste to na GitHube"
   },
   "nav": {
     "features": "Funkcie",
@@ -733,7 +735,7 @@
           "title": "Tretie strany",
           "body": [
             "Cloudflare: všetky požiadavky na tento web prechádzajú cez Cloudflare, ktorý chráni server a šifruje spojenie. Ako každý sieťový sprostredkovateľ spracúva vašu IP adresu a bežné informácie o prehliadači, aby doručil stránky, a môže uchovávať technické záznamy na účely zabezpečenia; nikdy však nedostáva vaše videá ani zvuk, ktoré nikdy neopustia vaše zariadenie. Pozrite si [zásady ochrany súkromia](https://www.cloudflare.com/privacypolicy/) spoločnosti Cloudflare.",
-            "Hugging Face: model Whisper poskytuje tento web, rovnako ako zvyšok aplikácie. Iba ak tu nie je k dispozícii, stiahne sa namiesto toho z huggingface.co; Hugging Face potom dostane vašu IP adresu a bežné informácie o prehliadači, ale nikdy váš zvuk. Pozrite si ich [zásady ochrany súkromia](https://huggingface.co/privacy). Obrazový model AI v tvorcovi miniatúr sa vždy sťahuje z huggingface.co, a to len ak ho použijete: Hugging Face potom dostane vašu IP adresu, ale nikdy váš opis ani obrázok.",
+            "Hugging Face: modely AI (Whisper pre titulky, SANA-Sprint pre obrázky miniatúr) sa pri prvom použití sťahujú priamo z huggingface.co a potom zostávajú vo vašom prehliadači. Hugging Face pritom dostane vašu IP adresu a bežné údaje o prehliadači, ale nikdy váš zvuk, opisy ani obrázky. Pozrite si [zásady ochrany súkromia](https://huggingface.co/privacy).",
             "GitHub: iba ak kliknete na odkaz do repozitára so zdrojovým kódom.",
             "Žiadna iná tretia strana sa nekontaktuje: prísna Content-Security-Policy technicky bráni stránke pripojiť sa kamkoľvek inam."
           ]
@@ -879,7 +881,8 @@
       "terms": "Vytvorením obrázka prijímate podmienky používania modelu",
       "downloadError": "Model AI sa nepodarilo stiahnuť. Skúste to znova o niekoľko minút",
       "history": "Vaše vytvorené obrázky",
-      "requirements": "Iba na počítači: aktuálny prehliadač s podporou WebGPU a grafická karta s približne 8 GB pamäte"
+      "requirements": "Iba na počítači: aktuálny prehliadač s podporou WebGPU a grafická karta s približne 8 GB pamäte",
+      "storageError": "Model sa na tomto zariadení nepodarilo uložiť. Uvoľnite miesto na disku alebo ukončite súkromné prehliadanie a skúste to znova"
     }
   },
   "seo": {

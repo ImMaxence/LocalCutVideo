@@ -6,7 +6,9 @@
     "close": "Kapat",
     "retry": "Yeniden dene",
     "none": "Yok",
-    "remove": "Kaldır"
+    "remove": "Kaldır",
+    "downloadStats": "{{ done }} / {{ total }} · {{ speed }} · kalan {{ left }}",
+    "reportDownload": "İndirme başarısız mı? GitHub’da bildirin"
   },
   "nav": {
     "features": "Özellikler",
@@ -733,7 +735,7 @@
           "title": "Üçüncü taraflar",
           "body": [
             "Cloudflare: bu siteye yapılan tüm istekler, sunucuyu koruyan ve bağlantıyı şifreleyen Cloudflare üzerinden geçer. Her ağ aracısı gibi, sayfaları iletmek için IP adresinizi ve standart tarayıcı bilgilerini işler ve güvenlik amacıyla teknik kayıtlar tutabilir; videolarınızı veya sesinizi asla almaz, bunlar cihazınızdan asla çıkmaz. Cloudflare'in [gizlilik politikasına](https://www.cloudflare.com/privacypolicy/) bakın.",
-            "Hugging Face: Whisper modeli, uygulamanın geri kalanı gibi bu site tarafından sunulur. Yalnızca burada mevcut değilse bunun yerine huggingface.co'dan indirilir; bu durumda Hugging Face IP adresinizi ve standart tarayıcı bilgilerini alır, ancak sesinizi asla almaz. Onların [gizlilik politikasına](https://huggingface.co/privacy) bakın. Küçük resim aracının yapay zekâ görsel modeli her zaman huggingface.co adresinden ve yalnızca kullandığınızda indirilir: Hugging Face bu durumda IP adresinizi alır, ancak açıklamanızı veya görseli asla almaz.",
+            "Hugging Face: yapay zekâ modelleri (altyazılar için Whisper, küçük resim görselleri için SANA-Sprint) ilk kullanımda doğrudan huggingface.co adresinden indirilir ve ardından tarayıcınızda saklanır. Hugging Face bu sırada IP adresinizi ve olağan tarayıcı bilgilerini alır, ancak sesinizi, açıklamalarınızı veya görsellerinizi asla almaz. [Gizlilik politikasına](https://huggingface.co/privacy) bakın.",
             "GitHub: yalnızca kaynak kod deposuna giden bir bağlantıyı izlerseniz.",
             "Başka hiçbir üçüncü tarafla iletişim kurulmaz: katı bir Content-Security-Policy, sayfanın başka herhangi bir yere bağlanmasını teknik olarak engeller."
           ]
@@ -879,7 +881,8 @@
       "terms": "Bir görsel oluşturarak modelin kullanım koşullarını kabul edersiniz",
       "downloadError": "Yapay zekâ modeli indirilemedi. Birkaç dakika sonra yeniden deneyin",
       "history": "Oluşturduğunuz görseller",
-      "requirements": "Yalnızca bilgisayarda: WebGPU destekli güncel bir tarayıcı ve yaklaşık 8 GB belleğe sahip grafik kartı"
+      "requirements": "Yalnızca bilgisayarda: WebGPU destekli güncel bir tarayıcı ve yaklaşık 8 GB belleğe sahip grafik kartı",
+      "storageError": "Model bu cihaza kaydedilemedi. Diskte yer açın veya gizli gezinmeden çıkın, ardından yeniden deneyin"
     }
   },
   "seo": {

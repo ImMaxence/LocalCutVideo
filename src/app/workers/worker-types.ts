@@ -29,11 +29,17 @@ export interface TranscribeProgress {
   next?: number;
   /** The language being transcribed, once known. */
   language?: string | null;
+  /** Bytes received and expected, during a model download. */
+  loaded?: number;
+  total?: number;
 }
 
 export interface ImageProgress {
   stage: 'download' | 'generate';
   progress: number;
+  /** Bytes received and expected, during a model download. */
+  loaded?: number;
+  total?: number;
 }
 
 export interface ImageWorkerApi {

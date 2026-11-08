@@ -6,7 +6,9 @@
     "close": "Tutup",
     "retry": "Cuba lagi",
     "none": "Tiada",
-    "remove": "Buang"
+    "remove": "Buang",
+    "downloadStats": "{{ done }} daripada {{ total }} · {{ speed }} · baki {{ left }}",
+    "reportDownload": "Muat turun gagal? Laporkan di GitHub"
   },
   "nav": {
     "features": "Ciri-ciri",
@@ -733,7 +735,7 @@
           "title": "Pihak ketiga",
           "body": [
             "Cloudflare: semua permintaan ke laman ini melalui Cloudflare, yang melindungi pelayan dan menyulitkan sambungan. Seperti mana-mana perantara rangkaian, ia memproses alamat IP anda dan maklumat pelayar biasa untuk menghantar halaman, dan mungkin menyimpan log teknikal bagi tujuan keselamatan; ia tidak pernah menerima video atau audio anda, yang tidak pernah meninggalkan peranti anda. Lihat [dasar privasi](https://www.cloudflare.com/privacypolicy/) mereka.",
-            "Hugging Face: model Whisper disediakan oleh laman ini, sama seperti bahagian lain aplikasi. Hanya jika ia tidak tersedia di sini, ia dimuat turun dari huggingface.co; Hugging Face kemudian menerima alamat IP anda dan maklumat pelayar biasa, tetapi tidak pernah audio anda. Lihat [dasar privasi](https://huggingface.co/privacy) mereka. Model imej AI pembuat lakaran kecil sentiasa dimuat turun dari huggingface.co, hanya jika anda menggunakannya: Hugging Face kemudian menerima alamat IP anda, tetapi tidak sekali-kali penerangan atau imej anda.",
+            "Hugging Face: model AI (Whisper untuk sari kata, SANA-Sprint untuk imej lakaran kecil) dimuat turun terus dari huggingface.co pada kali pertama digunakan, kemudian disimpan dalam pelayar anda. Hugging Face kemudian menerima alamat IP dan maklumat pelayar biasa anda, tetapi tidak sekali-kali audio, penerangan atau imej anda. Lihat [dasar privasinya](https://huggingface.co/privacy).",
             "GitHub: hanya jika anda mengikuti pautan ke repositori kod sumber.",
             "Tiada pihak ketiga lain dihubungi: Content-Security-Policy yang ketat secara teknikal menghalang halaman daripada bersambung ke tempat lain."
           ]
@@ -879,7 +881,8 @@
       "terms": "Dengan menjana imej, anda menerima terma penggunaan model",
       "downloadError": "Model AI tidak dapat dimuat turun. Cuba lagi dalam beberapa minit",
       "history": "Imej yang anda jana",
-      "requirements": "Pada komputer sahaja: pelayar terkini yang menyokong WebGPU dan kad grafik dengan memori kira-kira 8 GB"
+      "requirements": "Pada komputer sahaja: pelayar terkini yang menyokong WebGPU dan kad grafik dengan memori kira-kira 8 GB",
+      "storageError": "Model tidak dapat disimpan pada peranti ini. Kosongkan ruang cakera atau keluar daripada penyemakan imbas peribadi, kemudian cuba lagi"
     }
   },
   "seo": {

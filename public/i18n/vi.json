@@ -6,7 +6,9 @@
     "close": "Đóng",
     "retry": "Thử lại",
     "none": "Không có",
-    "remove": "Xóa"
+    "remove": "Xóa",
+    "downloadStats": "{{ done }} / {{ total }} · {{ speed }} · còn {{ left }}",
+    "reportDownload": "Tải xuống thất bại? Báo trên GitHub"
   },
   "nav": {
     "features": "Tính năng",
@@ -733,7 +735,7 @@
           "title": "Bên thứ ba",
           "body": [
             "Cloudflare: mọi yêu cầu tới trang web này đều đi qua Cloudflare, dịch vụ bảo vệ máy chủ và mã hóa kết nối. Như mọi bên trung gian mạng, Cloudflare xử lý địa chỉ IP và thông tin trình duyệt thông thường của bạn để phân phối các trang, và có thể lưu nhật ký kỹ thuật vì mục đích bảo mật; Cloudflare không bao giờ nhận video hay âm thanh của bạn, vốn không bao giờ rời khỏi thiết bị của bạn. Xem [chính sách quyền riêng tư](https://www.cloudflare.com/privacypolicy/) của họ.",
-            "Hugging Face: mô hình Whisper do trang web này cung cấp, giống như phần còn lại của ứng dụng. Chỉ khi không có sẵn ở đây, mô hình mới được tải từ huggingface.co; khi đó Hugging Face nhận địa chỉ IP và thông tin trình duyệt thông thường của bạn, nhưng không bao giờ nhận âm thanh của bạn. Xem [chính sách quyền riêng tư](https://huggingface.co/privacy) của họ. Mô hình ảnh AI của công cụ tạo hình thu nhỏ luôn được tải từ huggingface.co, chỉ khi bạn sử dụng: khi đó Hugging Face nhận địa chỉ IP của bạn, nhưng không bao giờ nhận mô tả hay ảnh của bạn.",
+            "Hugging Face: các mô hình AI (Whisper cho phụ đề, SANA-Sprint cho ảnh hình thu nhỏ) được tải trực tiếp từ huggingface.co trong lần sử dụng đầu tiên, sau đó lưu trong trình duyệt của bạn. Khi đó Hugging Face nhận địa chỉ IP và thông tin trình duyệt thông thường của bạn, nhưng không bao giờ nhận âm thanh, mô tả hay hình ảnh của bạn. Xem [chính sách quyền riêng tư](https://huggingface.co/privacy).",
             "GitHub: chỉ khi bạn nhấp vào liên kết đến kho mã nguồn.",
             "Không liên hệ bên thứ ba nào khác: Content-Security-Policy nghiêm ngặt ngăn trang kết nối đến bất cứ nơi nào khác về mặt kỹ thuật."
           ]
@@ -879,7 +881,8 @@
       "terms": "Khi tạo ảnh, bạn chấp nhận điều khoản sử dụng của mô hình",
       "downloadError": "Không thể tải mô hình AI. Hãy thử lại sau vài phút",
       "history": "Ảnh bạn đã tạo",
-      "requirements": "Chỉ trên máy tính: trình duyệt mới hỗ trợ WebGPU và card đồ họa có khoảng 8 GB bộ nhớ"
+      "requirements": "Chỉ trên máy tính: trình duyệt mới hỗ trợ WebGPU và card đồ họa có khoảng 8 GB bộ nhớ",
+      "storageError": "Không thể lưu mô hình trên thiết bị này. Hãy giải phóng dung lượng ổ đĩa hoặc thoát chế độ duyệt web riêng tư rồi thử lại"
     }
   },
   "seo": {

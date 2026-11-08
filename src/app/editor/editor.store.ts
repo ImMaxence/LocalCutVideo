@@ -92,6 +92,8 @@ export type ExportState =
 export interface TaskProgress {
   stage: 'audio' | TranscribeProgress['stage'];
   progress: number;
+  loaded?: number;
+  total?: number;
 }
 
 /** Audio analysis of the whole sequence, built from the cached per-clip analyses. */
@@ -177,6 +179,8 @@ export class EditorStore {
   readonly voiceProgress = signal<number | null>(null);
   /** What the voice detection is busy with. */
   readonly voiceStage = signal<TranscribeProgress['stage'] | null>(null);
+  /** Bytes of the model the voice detection is downloading. */
+  readonly voiceDownload = signal<{ loaded: number; total: number } | null>(null);
   /** Language of the running transcription, once known. */
   readonly heardLanguage = signal<string | null>(null);
   /** The last words heard by the running transcription. */
@@ -958,7 +962,7 @@ export class EditorStore {
             proxy((progress: TranscribeProgress) => {
               if (progress.language) this.heardLanguage.set(progress.language);
               if (progress.stage !== 'transcribe') {
-                this.transcription.set({ stage: progress.stage, progress: progress.progress });
+                this.transcription.set({ stage: progress.stage, progress: progress.progress, loaded: progress.loaded, total: progress.total });
                 return;
               }
               const overall = (p: number) => (doneSeconds + p * clipDuration) / totalSeconds;
@@ -1175,6 +1179,7 @@ export class EditorStore {
           this.whisperModel(),
           proxy((p: TranscribeProgress) => {
             this.voiceStage.set(p.stage);
+            this.voiceDownload.set(p.stage === 'download' && p.total ? { loaded: p.loaded ?? 0, total: p.total } : null);
             if (p.stage !== 'transcribe') {
               this.voiceProgress.set(p.progress);
               return;
@@ -1192,6 +1197,7 @@ export class EditorStore {
       clearInterval(ticker);
       this.voiceProgress.set(null);
       this.voiceStage.set(null);
+      this.voiceDownload.set(null);
     }
   }
 

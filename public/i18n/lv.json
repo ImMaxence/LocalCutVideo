@@ -6,7 +6,9 @@
     "close": "Aizvērt",
     "retry": "Mēģināt vēlreiz",
     "none": "Nav",
-    "remove": "Noņemt"
+    "remove": "Noņemt",
+    "downloadStats": "{{ done }} no {{ total }} · {{ speed }} · atlikuši {{ left }}",
+    "reportDownload": "Lejupielāde neizdodas? Ziņo GitHub"
   },
   "nav": {
     "features": "Funkcijas",
@@ -733,7 +735,7 @@
           "title": "Trešās puses",
           "body": [
             "Cloudflare: visi pieprasījumi šai vietnei iet caur Cloudflare, kas aizsargā serveri un šifrē savienojumu. Kā jebkurš tīkla starpnieks, tas apstrādā tavu IP adresi un parasto pārlūka informāciju, lai piegādātu lapas, un drošības nolūkos var glabāt tehniskus žurnālus; tas nekad nesaņem tavus video vai audio, kas nekad neatstāj tavu ierīci. Skati Cloudflare [privātuma politiku](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: Whisper modeli nodrošina šī vietne, tāpat kā pārējo lietotni. Tikai tad, ja tas šeit nav pieejams, tas tiek lejupielādēts no huggingface.co; tad Hugging Face saņem tavu IP adresi un parasto pārlūka informāciju, bet nekad tavu audio. Skati viņu [privātuma politiku](https://huggingface.co/privacy). Sīktēlu veidotāja AI attēlu modelis vienmēr tiek lejupielādēts no huggingface.co un tikai tad, ja to izmanto: Hugging Face saņem tavu IP adresi, bet nekad tavu aprakstu vai attēlu.",
+            "Hugging Face: AI modeļi (Whisper subtitriem, SANA-Sprint sīktēlu attēliem) tiek lejupielādēti tieši no huggingface.co pirmajā lietošanas reizē un pēc tam glabāti tavā pārlūkā. Hugging Face saņem tavu IP adresi un parasto pārlūka informāciju, bet nekad tavu audio, aprakstus vai attēlus. Skati [privātuma politiku](https://huggingface.co/privacy).",
             "GitHub: tikai tad, ja seko saitei uz pirmkoda repozitoriju.",
             "Neviena cita trešā puse netiek uzrunāta: stingra Content-Security-Policy tehniski neļauj lapai savienoties nekur citur."
           ]
@@ -879,7 +881,8 @@
       "terms": "Veidojot attēlu, tu piekrīti modeļa lietošanas noteikumiem",
       "downloadError": "AI modeli neizdevās lejupielādēt. Mēģini vēlreiz pēc dažām minūtēm",
       "history": "Tevis izveidotie attēli",
-      "requirements": "Tikai datorā: jauns pārlūks ar WebGPU atbalstu un videokarte ar aptuveni 8 GB atmiņas"
+      "requirements": "Tikai datorā: jauns pārlūks ar WebGPU atbalstu un videokarte ar aptuveni 8 GB atmiņas",
+      "storageError": "Modeli neizdevās saglabāt šajā ierīcē. Atbrīvo vietu diskā vai izej no privātās pārlūkošanas un mēģini vēlreiz"
     }
   },
   "seo": {

@@ -6,7 +6,9 @@
     "close": "Zatvori",
     "retry": "Pokušaj ponovno",
     "none": "Ništa",
-    "remove": "Ukloni"
+    "remove": "Ukloni",
+    "downloadStats": "{{ done }} od {{ total }} · {{ speed }} · preostalo {{ left }}",
+    "reportDownload": "Preuzimanje ne uspijeva? Prijavite na GitHubu"
   },
   "nav": {
     "features": "Značajke",
@@ -733,7 +735,7 @@
           "title": "Treće strane",
           "body": [
             "Cloudflare: svi zahtjevi prema ovoj web-lokaciji prolaze kroz Cloudflare, koji štiti poslužitelj i šifrira vezu. Kao i svaki mrežni posrednik, obrađuje vašu IP adresu i uobičajene podatke o pregledniku kako bi isporučio stranice te može čuvati tehničke zapise u sigurnosne svrhe; nikad ne prima vaše videozapise ni zvuk, koji nikad ne napuštaju vaš uređaj. Pogledajte [pravila privatnosti](https://www.cloudflare.com/privacypolicy/) tvrtke Cloudflare.",
-            "Hugging Face: model Whisper isporučuje ova web-lokacija, kao i ostatak aplikacije. Samo ako ovdje nije dostupan, preuzima se umjesto toga s huggingface.co; Hugging Face tada prima vašu IP adresu i uobičajene podatke o pregledniku, ali nikad vaš zvuk. Pogledajte njihova [pravila privatnosti](https://huggingface.co/privacy). AI model za slike u izrađivaču minijatura uvijek se preuzima s huggingface.co, samo ako ga koristite: Hugging Face tada prima vašu IP adresu, ali nikada vaš opis ni sliku.",
+            "Hugging Face: AI modeli (Whisper za titlove, SANA-Sprint za slike minijatura) preuzimaju se izravno s huggingface.co pri prvom korištenju, a zatim ostaju u vašem pregledniku. Hugging Face tada prima vašu IP adresu i uobičajene podatke o pregledniku, ali nikada vaš zvuk, opise ni slike. Pogledajte [pravila o privatnosti](https://huggingface.co/privacy).",
             "GitHub: samo ako slijedite poveznicu na repozitorij izvornog koda.",
             "Nijedna druga treća strana ne kontaktira se: stroga Content-Security-Policy tehnički sprječava stranicu da se poveže bilo gdje drugdje."
           ]
@@ -879,7 +881,8 @@
       "terms": "Izradom slike prihvaćate uvjete korištenja modela",
       "downloadError": "AI model nije bilo moguće preuzeti. Pokušajte ponovno za nekoliko minuta",
       "history": "Vaše izrađene slike",
-      "requirements": "Samo na računalu: noviji preglednik s podrškom za WebGPU i grafička kartica s oko 8 GB memorije"
+      "requirements": "Samo na računalu: noviji preglednik s podrškom za WebGPU i grafička kartica s oko 8 GB memorije",
+      "storageError": "Model nije bilo moguće spremiti na ovaj uređaj. Oslobodite prostor na disku ili izađite iz privatnog pregledavanja pa pokušajte ponovno"
     }
   },
   "seo": {

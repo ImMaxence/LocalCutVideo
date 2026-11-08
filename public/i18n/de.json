@@ -6,7 +6,9 @@
     "close": "Schließen",
     "retry": "Erneut versuchen",
     "none": "Keine",
-    "remove": "Entfernen"
+    "remove": "Entfernen",
+    "downloadStats": "{{ done }} von {{ total }} · {{ speed }} · noch {{ left }}",
+    "reportDownload": "Download fehlgeschlagen? Melde es auf GitHub"
   },
   "nav": {
     "features": "Funktionen",
@@ -733,7 +735,7 @@
           "title": "Dritte",
           "body": [
             "Cloudflare: Alle Anfragen an diese Website laufen über Cloudflare, das den Server schützt und die Verbindung verschlüsselt. Wie jeder Netzwerkvermittler verarbeitet Cloudflare deine IP-Adresse und die üblichen Browserinformationen, um die Seiten auszuliefern, und kann aus Sicherheitsgründen technische Protokolle speichern; deine Videos oder dein Audio erhält es nie, denn sie verlassen dein Gerät nie. Siehe die [Datenschutzerklärung](https://www.cloudflare.com/privacypolicy/) von Cloudflare.",
-            "Hugging Face: Das Whisper-Modell wird von dieser Website bereitgestellt, wie der Rest der Anwendung. Nur wenn es hier nicht verfügbar ist, wird es stattdessen von huggingface.co geladen; Hugging Face erhält dann deine IP-Adresse und die üblichen Browserinformationen, aber niemals dein Audio. Siehe deren [Datenschutzerklärung](https://huggingface.co/privacy). Das KI-Bildmodell des Thumbnail-Erstellers wird immer von huggingface.co heruntergeladen, nur wenn du es nutzt: Hugging Face erhält dann deine IP-Adresse, aber nie deine Beschreibung oder das Bild.",
+            "Hugging Face: Die KI-Modelle (Whisper für Untertitel, SANA-Sprint für Thumbnail-Bilder) werden bei der ersten Nutzung direkt von huggingface.co heruntergeladen und danach in deinem Browser gespeichert. Hugging Face erhält dabei deine IP-Adresse und die üblichen Browserinformationen, aber nie deine Audiodaten, Beschreibungen oder Bilder. Siehe die [Datenschutzerklärung](https://huggingface.co/privacy).",
             "GitHub: nur wenn du einem Link zum Quellcode-Repository folgst.",
             "Keine weiteren Dritten werden kontaktiert: Eine strenge Content-Security-Policy verhindert technisch, dass sich die Seite anderswohin verbindet."
           ]
@@ -879,7 +881,8 @@
       "terms": "Mit dem Erzeugen eines Bildes akzeptierst du die Nutzungsbedingungen des Modells",
       "downloadError": "Das KI-Modell konnte nicht heruntergeladen werden. Versuche es in ein paar Minuten erneut",
       "history": "Deine erzeugten Bilder",
-      "requirements": "Nur am Computer: ein aktueller Browser mit WebGPU und eine Grafikkarte mit etwa 8 GB Speicher"
+      "requirements": "Nur am Computer: ein aktueller Browser mit WebGPU und eine Grafikkarte mit etwa 8 GB Speicher",
+      "storageError": "Das Modell konnte nicht auf diesem Gerät gespeichert werden. Gib Speicherplatz frei oder verlasse den privaten Modus und versuche es erneut"
     }
   },
   "seo": {

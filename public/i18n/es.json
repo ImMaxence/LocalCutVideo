@@ -6,7 +6,9 @@
     "close": "Cerrar",
     "retry": "Reintentar",
     "none": "Ninguno",
-    "remove": "Quitar"
+    "remove": "Quitar",
+    "downloadStats": "{{ done }} de {{ total }} · {{ speed }} · quedan {{ left }}",
+    "reportDownload": "¿Falla la descarga? Avísanos en GitHub"
   },
   "nav": {
     "features": "Funciones",
@@ -733,7 +735,7 @@
           "title": "Terceros",
           "body": [
             "Cloudflare: todas las solicitudes a este sitio pasan por Cloudflare, que protege el servidor y cifra la conexión. Como cualquier intermediario de red, trata tu dirección IP y la información estándar del navegador para entregar las páginas, y puede conservar registros técnicos con fines de seguridad; nunca recibe tus vídeos ni tu audio, que nunca salen de tu dispositivo. Consulta su [política de privacidad](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: el modelo Whisper lo sirve este sitio, como el resto de la aplicación. Solo si no está disponible aquí se descarga desde huggingface.co; Hugging Face recibe entonces tu dirección IP y la información estándar del navegador, pero nunca tu audio. Consulta su [política de privacidad](https://huggingface.co/privacy). El modelo de imagen con IA del creador de miniaturas siempre se descarga de huggingface.co, solo si lo usas: Hugging Face recibe entonces tu dirección IP, pero nunca tu descripción ni la imagen.",
+            "Hugging Face: los modelos de IA (Whisper para los subtítulos, SANA-Sprint para las imágenes de miniaturas) se descargan directamente de huggingface.co la primera vez que los usas y luego se guardan en tu navegador. Hugging Face recibe entonces tu dirección IP y la información habitual del navegador, pero nunca tu audio, tus descripciones ni tus imágenes. Consulta su [política de privacidad](https://huggingface.co/privacy).",
             "GitHub: solo si sigues un enlace al repositorio del código fuente.",
             "No se contacta con ningún otro tercero: una Content-Security-Policy estricta impide técnicamente que la página se conecte a otro lugar."
           ]
@@ -879,7 +881,8 @@
       "terms": "Al generar una imagen, aceptas las condiciones de uso del modelo",
       "downloadError": "No se pudo descargar el modelo de IA. Inténtalo de nuevo en unos minutos",
       "history": "Tus imágenes generadas",
-      "requirements": "Solo en ordenador: un navegador reciente compatible con WebGPU y una tarjeta gráfica con unos 8 GB de memoria"
+      "requirements": "Solo en ordenador: un navegador reciente compatible con WebGPU y una tarjeta gráfica con unos 8 GB de memoria",
+      "storageError": "No se pudo guardar el modelo en este dispositivo. Libera espacio en el disco o sal de la navegación privada e inténtalo de nuevo"
     }
   },
   "seo": {

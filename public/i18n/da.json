@@ -6,7 +6,9 @@
     "close": "Luk",
     "retry": "Prøv igen",
     "none": "Ingen",
-    "remove": "Fjern"
+    "remove": "Fjern",
+    "downloadStats": "{{ done }} af {{ total }} · {{ speed }} · {{ left }} tilbage",
+    "reportDownload": "Mislykkes download? Rapportér det på GitHub"
   },
   "nav": {
     "features": "Funktioner",
@@ -733,7 +735,7 @@
           "title": "Tredjeparter",
           "body": [
             "Cloudflare: alle forespørgsler til dette websted går gennem Cloudflare, som beskytter serveren og krypterer forbindelsen. Som enhver netværksformidler behandler Cloudflare din IP-adresse og almindelige browseroplysninger for at levere siderne og kan gemme tekniske logfiler af sikkerhedshensyn; det modtager aldrig dine videoer eller din lyd, som aldrig forlader din enhed. Se deres [privatlivspolitik](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: Whisper-modellen leveres af dette websted, ligesom resten af applikationen. Kun hvis den ikke er tilgængelig her, hentes den i stedet fra huggingface.co; Hugging Face modtager så din IP-adresse og almindelige browseroplysninger, men aldrig din lyd. Se deres [privatlivspolitik](https://huggingface.co/privacy). Miniaturemagerens AI-billedmodel hentes altid fra huggingface.co, kun hvis du bruger den: Hugging Face modtager så din IP-adresse, men aldrig din beskrivelse eller billedet.",
+            "Hugging Face: AI-modellerne (Whisper til undertekster, SANA-Sprint til miniaturebilleder) hentes direkte fra huggingface.co første gang, du bruger dem, og gemmes derefter i din browser. Hugging Face modtager da din IP-adresse og almindelige browseroplysninger, men aldrig din lyd, dine beskrivelser eller dine billeder. Se deres [privatlivspolitik](https://huggingface.co/privacy).",
             "GitHub: kun hvis du følger et link til kildekodens repository.",
             "Ingen anden tredjepart kontaktes: en streng Content-Security-Policy forhindrer teknisk siden i at oprette forbindelse andre steder."
           ]
@@ -879,7 +881,8 @@
       "terms": "Når du laver et billede, accepterer du modellens brugsvilkår",
       "downloadError": "AI-modellen kunne ikke hentes. Prøv igen om et par minutter",
       "history": "Dine genererede billeder",
-      "requirements": "Kun på computer: en nyere browser med WebGPU og et grafikkort med omkring 8 GB hukommelse"
+      "requirements": "Kun på computer: en nyere browser med WebGPU og et grafikkort med omkring 8 GB hukommelse",
+      "storageError": "Modellen kunne ikke gemmes på denne enhed. Frigør diskplads, eller forlad privat browsing, og prøv igen"
     }
   },
   "seo": {

@@ -6,7 +6,9 @@
     "close": "Lukk",
     "retry": "Prøv igjen",
     "none": "Ingen",
-    "remove": "Fjern"
+    "remove": "Fjern",
+    "downloadStats": "{{ done }} av {{ total }} · {{ speed }} · {{ left }} igjen",
+    "reportDownload": "Mislykkes nedlastingen? Rapporter det på GitHub"
   },
   "nav": {
     "features": "Funksjoner",
@@ -733,7 +735,7 @@
           "title": "Tredjeparter",
           "body": [
             "Cloudflare: alle forespørsler til dette nettstedet går gjennom Cloudflare, som beskytter serveren og krypterer tilkoblingen. Som enhver nettverksformidler behandler Cloudflare IP-adressen din og vanlig nettleserinformasjon for å levere sidene, og kan lagre tekniske logger av sikkerhetshensyn; det mottar aldri videoene eller lyden din, som aldri forlater enheten din. Se deres [personvernerklæring](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: Whisper-modellen leveres av dette nettstedet, i likhet med resten av applikasjonen. Bare hvis den ikke er tilgjengelig her, lastes den i stedet ned fra huggingface.co; Hugging Face mottar da IP-adressen din og vanlig nettleserinformasjon, men aldri lyden din. Se deres [personvernerklæring](https://huggingface.co/privacy). KI-bildemodellen i miniatyrverktøyet lastes alltid ned fra huggingface.co, bare hvis du bruker den: Hugging Face mottar da IP-adressen din, men aldri beskrivelsen din eller bildet.",
+            "Hugging Face: KI-modellene (Whisper for undertekster, SANA-Sprint for miniatyrbilder) lastes ned direkte fra huggingface.co første gang du bruker dem, og lagres deretter i nettleseren din. Hugging Face mottar da IP-adressen din og vanlig nettleserinformasjon, men aldri lyden, beskrivelsene eller bildene dine. Se [personvernerklæringen](https://huggingface.co/privacy).",
             "GitHub: bare hvis du følger en lenke til kildekodelageret.",
             "Ingen andre tredjeparter kontaktes: en streng Content-Security-Policy hindrer teknisk siden i å koble til noe annet sted."
           ]
@@ -879,7 +881,8 @@
       "terms": "Når du lager et bilde, godtar du modellens bruksvilkår",
       "downloadError": "KI-modellen kunne ikke lastes ned. Prøv igjen om noen minutter",
       "history": "Bildene du har laget",
-      "requirements": "Bare på datamaskin: en nyere nettleser med WebGPU og et grafikkort med omtrent 8 GB minne"
+      "requirements": "Bare på datamaskin: en nyere nettleser med WebGPU og et grafikkort med omtrent 8 GB minne",
+      "storageError": "Modellen kunne ikke lagres på denne enheten. Frigjør diskplass eller avslutt privat nettlesing, og prøv igjen"
     }
   },
   "seo": {

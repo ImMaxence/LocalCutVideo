@@ -6,7 +6,9 @@
     "close": "Bezárás",
     "retry": "Újra",
     "none": "Nincs",
-    "remove": "Eltávolítás"
+    "remove": "Eltávolítás",
+    "downloadStats": "{{ done }} / {{ total }} · {{ speed }} · hátra van: {{ left }}",
+    "reportDownload": "Nem sikerül a letöltés? Jelezd a GitHubon"
   },
   "nav": {
     "features": "Funkciók",
@@ -733,7 +735,7 @@
           "title": "Harmadik felek",
           "body": [
             "Cloudflare: az oldalra érkező minden kérés a Cloudflare-en keresztül halad, amely védi a szervert és titkosítja a kapcsolatot. Mint minden hálózati közvetítő, az oldalak kézbesítéséhez kezeli az IP-címedet és a szokásos böngészőadatokat, és biztonsági okokból technikai naplókat őrizhet; a videóidat és a hangodat azonban soha nem kapja meg, mert azok soha nem hagyják el az eszközödet. Lásd a Cloudflare [adatvédelmi tájékoztatóját](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: a Whisper-modellt ez az oldal szolgáltatja, akárcsak az alkalmazás többi részét. Csak ha itt nem érhető el, akkor töltődik le helyette a huggingface.co-ról; ekkor a Hugging Face megkapja az IP-címedet és a szokásos böngészőadatokat, de a hangodat soha. Lásd az [adatvédelmi tájékoztatójukat](https://huggingface.co/privacy). A bélyegkép-készítő MI-képmodellje mindig a huggingface.co oldalról töltődik le, és csak ha használod: a Hugging Face ekkor megkapja az IP-címedet, de a leírásodat és a képet soha.",
+            "Hugging Face: az MI-modellek (Whisper a feliratokhoz, SANA-Sprint a bélyegképek képeihez) az első használatkor közvetlenül a huggingface.co oldalról töltődnek le, majd a böngésződben maradnak. A Hugging Face ekkor megkapja az IP-címedet és a szokásos böngészőadatokat, de a hangodat, a leírásaidat és a képeidet soha. Lásd az [adatvédelmi irányelveket](https://huggingface.co/privacy).",
             "GitHub: csak ha a forráskód-tárolóra mutató linkre kattintasz.",
             "Más harmadik féllel nem történik kapcsolatfelvétel: egy szigorú Content-Security-Policy technikailag megakadályozza, hogy a lap bárhová máshová csatlakozzon."
           ]
@@ -879,7 +881,8 @@
       "terms": "Kép készítésével elfogadod a modell használati feltételeit",
       "downloadError": "Az MI-modellt nem sikerült letölteni. Próbáld újra néhány perc múlva",
       "history": "Az általad készített képek",
-      "requirements": "Csak számítógépen: WebGPU-t támogató, friss böngésző és körülbelül 8 GB memóriával rendelkező videokártya"
+      "requirements": "Csak számítógépen: WebGPU-t támogató, friss böngésző és körülbelül 8 GB memóriával rendelkező videokártya",
+      "storageError": "A modellt nem sikerült menteni erre az eszközre. Szabadíts fel helyet a lemezen, vagy lépj ki a privát böngészésből, majd próbáld újra"
     }
   },
   "seo": {

@@ -6,7 +6,9 @@
     "close": "Sulje",
     "retry": "Yritä uudelleen",
     "none": "Ei mitään",
-    "remove": "Poista"
+    "remove": "Poista",
+    "downloadStats": "{{ done }} / {{ total }} · {{ speed }} · jäljellä {{ left }}",
+    "reportDownload": "Epäonnistuuko lataus? Ilmoita siitä GitHubissa"
   },
   "nav": {
     "features": "Ominaisuudet",
@@ -733,7 +735,7 @@
           "title": "Kolmannet osapuolet",
           "body": [
             "Cloudflare: kaikki tämän sivuston pyynnöt kulkevat Cloudflaren kautta, joka suojaa palvelinta ja salaa yhteyden. Kuten mikä tahansa verkon välittäjä, se käsittelee IP-osoitettasi ja tavanomaisia selaintietoja sivujen toimittamiseksi ja voi säilyttää teknisiä lokeja tietoturvasyistä; se ei koskaan saa videoitasi tai ääntäsi, sillä ne eivät koskaan poistu laitteeltasi. Katso Cloudflaren [tietosuojakäytäntö](https://www.cloudflare.com/privacypolicy/).",
-            "Hugging Face: Whisper-mallin toimittaa tämä sivusto, kuten muunkin sovelluksen. Vain jos malli ei ole täällä saatavilla, se ladataan sen sijaan osoitteesta huggingface.co; Hugging Face saa silloin IP-osoitteesi ja tavanomaiset selaintiedot, mutta ei koskaan ääntäsi. Katso heidän [tietosuojakäytäntönsä](https://huggingface.co/privacy). Pikkukuvatyökalun tekoälykuvamalli ladataan aina osoitteesta huggingface.co, vain jos käytät sitä: Hugging Face saa tällöin IP-osoitteesi, mutta ei koskaan kuvaustasi tai kuvaa.",
+            "Hugging Face: tekoälymallit (Whisper tekstityksiin, SANA-Sprint pikkukuvien kuviin) ladataan suoraan osoitteesta huggingface.co, kun käytät niitä ensimmäisen kerran, ja säilytetään sen jälkeen selaimessasi. Hugging Face saa tällöin IP-osoitteesi ja tavalliset selaintiedot, mutta ei koskaan ääntäsi, kuvauksiasi tai kuviasi. Katso [tietosuojakäytäntö](https://huggingface.co/privacy).",
             "GitHub: vain jos seuraat linkkiä lähdekoodin tietovarastoon.",
             "Muihin kolmansiin osapuoliin ei oteta yhteyttä: tiukka Content-Security-Policy estää teknisesti sivua muodostamasta yhteyttä minnekään muualle."
           ]
@@ -879,7 +881,8 @@
       "terms": "Luomalla kuvan hyväksyt mallin käyttöehdot",
       "downloadError": "Tekoälymallia ei voitu ladata. Yritä uudelleen muutaman minuutin kuluttua",
       "history": "Luomasi kuvat",
-      "requirements": "Vain tietokoneella: uudehko WebGPU-yhteensopiva selain ja näytönohjain, jossa on noin 8 Gt muistia"
+      "requirements": "Vain tietokoneella: uudehko WebGPU-yhteensopiva selain ja näytönohjain, jossa on noin 8 Gt muistia",
+      "storageError": "Mallia ei voitu tallentaa tälle laitteelle. Vapauta levytilaa tai poistu yksityisestä selaustilasta ja yritä uudelleen"
     }
   },
   "seo": {

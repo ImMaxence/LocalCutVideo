@@ -6,7 +6,9 @@
     "close": "Închide",
     "retry": "Reîncearcă",
     "none": "Niciunul",
-    "remove": "Elimină"
+    "remove": "Elimină",
+    "downloadStats": "{{ done }} din {{ total }} · {{ speed }} · mai sunt {{ left }}",
+    "reportDownload": "Descărcarea eșuează? Anunță pe GitHub"
   },
   "nav": {
     "features": "Funcții",
@@ -733,7 +735,7 @@
           "title": "Terți",
           "body": [
             "Cloudflare: toate cererile către acest site trec prin Cloudflare, care protejează serverul și criptează conexiunea. Ca orice intermediar de rețea, prelucrează adresa ta IP și informațiile obișnuite ale browserului pentru a livra paginile și poate păstra jurnale tehnice în scopuri de securitate; nu primește niciodată videoclipurile sau sunetul tău, care nu părăsesc niciodată dispozitivul tău. Vezi [politica de confidențialitate](https://www.cloudflare.com/privacypolicy/) a Cloudflare.",
-            "Hugging Face: modelul Whisper este furnizat de acest site, ca restul aplicației. Doar dacă nu este disponibil aici, este descărcat în schimb de pe huggingface.co; Hugging Face primește atunci adresa ta IP și informațiile obișnuite ale browserului, dar niciodată sunetul tău. Vezi [politica lor de confidențialitate](https://huggingface.co/privacy). Modelul de imagini IA al creatorului de miniaturi este descărcat întotdeauna de pe huggingface.co, doar dacă îl folosești: Hugging Face primește atunci adresa ta IP, dar niciodată descrierea ta sau imaginea.",
+            "Hugging Face: modelele IA (Whisper pentru subtitrări, SANA-Sprint pentru imaginile miniaturilor) sunt descărcate direct de pe huggingface.co la prima utilizare, apoi păstrate în browserul tău. Hugging Face primește atunci adresa ta IP și informațiile obișnuite ale browserului, dar niciodată sunetul, descrierile sau imaginile tale. Consultă [politica de confidențialitate](https://huggingface.co/privacy).",
             "GitHub: doar dacă urmezi un link către depozitul codului sursă.",
             "Niciun alt terț nu este contactat: o Content-Security-Policy strictă împiedică tehnic pagina să se conecteze în altă parte."
           ]
@@ -879,7 +881,8 @@
       "terms": "Generând o imagine, accepți condițiile de utilizare ale modelului",
       "downloadError": "Modelul IA nu a putut fi descărcat. Încearcă din nou peste câteva minute",
       "history": "Imaginile tale generate",
-      "requirements": "Doar pe computer: un browser recent compatibil cu WebGPU și o placă video cu aproximativ 8 GB de memorie"
+      "requirements": "Doar pe computer: un browser recent compatibil cu WebGPU și o placă video cu aproximativ 8 GB de memorie",
+      "storageError": "Modelul nu a putut fi salvat pe acest dispozitiv. Eliberează spațiu pe disc sau ieși din navigarea privată și încearcă din nou"
     }
   },
   "seo": {

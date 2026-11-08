@@ -41,6 +41,7 @@
             <small class="faint">{{ 'thumbnail.ai.size' | transloco: { size: aiDownloadSize } }}</small>
             <small class="ai-model"><app-icon name="cpu" [size]="13" /> {{ 'editor.transcribe.model' | transloco }} · SANA-Sprint 0.6B (NVIDIA) · {{ aiOutputSize().width }}×{{ aiOutputSize().height }}</small>
             <small><a class="ai-terms" [routerLink]="'/terms' | localize">{{ 'thumbnail.ai.terms' | transloco }}</a></small>
+            <app-report-download model="SANA-Sprint" />
           }
           <ng-container *ngTemplateOutlet="aiStatus" />
         } @else {
@@ -131,6 +132,7 @@
                 <button class="btn auto sm" type="button" [disabled]="!aiPrompt().trim()" (click)="generate()"><app-icon name="sparkles" [size]="15" /> {{ 'thumbnail.ai.again' | transloco }}</button>
               }
             </div>
+            <app-report-download model="SANA-Sprint" />
           </div>
         }
         <ng-container *ngTemplateOutlet="aiStatus" />
@@ -288,6 +290,9 @@
         }
       </div>
       <div class="progress" [class.indeterminate]="!task.progress"><div [style.width.%]="task.progress * 100"></div></div>
+      @if (task.stage === 'download' && task.total) {
+        <app-download-progress [loaded]="task.loaded ?? 0" [total]="task.total" />
+      }
       <button class="btn ghost sm" type="button" (click)="cancelGeneration()">{{ 'common.cancel' | transloco }}</button>
     </div>
   }
